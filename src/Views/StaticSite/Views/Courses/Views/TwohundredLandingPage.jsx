@@ -1,3 +1,967 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import InnerNavComponent from "../../../Components/InnerNavComponent";
+import "./TwohundredLandingPage.scss";
+import follower_m from './images/follower_m.svg'
+import tC_icon from './images/tc_icons_2.svg'
+import lotus_200_card from './images/lotus_200_card.png'
+import Post_1 from "./images/Post_1.svg"
+import Post_2 from "./images/Post_2.svg"
+import Post_3 from "./images/Post_3.svg"
+import Post_4 from "./images/Post_4.svg"
+import icon_TYI from "./images/icon_TYI.svg"
+import certificate_1 from "./images/certificate_1.svg"
+import certificate_2 from "./images/certificate_2.svg"
+import certificate_3 from "./images/certificate_3.svg"
+import close from "./images/close.svg"
+import enrollicon from "./images/enrollicon.svg"
+import Footer from "../../../Components/Footer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import slider_1 from './images/slider_1.svg'
+import { AllCourses } from '../Constants/courses'
+import { c200hr } from '../Constants/courses'
+
+const TwoHundredLandingPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [activeTab, setActiveTab] = useState(null);
+  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeButton, setActiveButton] = useState("benefits"); // Default active button
+  const [currentBatchDates, setCurrentBatchDates] = useState([]);
+  const [showFloatingEnroll, setShowFloatingEnroll] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedBatchId, setSelectedBatchId] = useState(null);
+
+  // Dynamic dates array
+  const dynamicDates = [
+    { date: "1st Mar to 31st Mar 2025", mode: "Online & On Campus", enrollLink: '/enrollment/one-month-ttc' },
+     { date: "1st Apr to 30th Apr 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "1st May to 31st May 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "2nd Jun to 30th Jun 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
+    { date:"1st Jul to 31st Jul 2025", mode: "Online & On Campus", },
+    { date:"1st Aug to 30th Aug 2025", mode: "Online & On Campus", },
+    { date:"1st Sep to 30th Sep 2025", mode: "Online & On Campus", },
+    { date:"1st Oct to 31st Oct 2025", mode: "Online & On Campus", },
+    { date:"1st Nov to 29th Nov 2025", mode: "Online & On Campus", },
+    { date:"1st Dec to 31st Dec 2025", mode: "Online & On Campus", },
+  ];
+
+  
+
+
+
+  // Add this useEffect to handle scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the current scroll position
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Get the hero section height
+      const heroSection = document.querySelector('.hero');
+      const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+      
+      // Get the footer position
+      const footer = document.querySelector('footer');
+      const footerPosition = footer ? footer.offsetTop : 9999;
+      
+      // Set a buffer value to hide the floating section before reaching the footer
+      const buffer = 300;
+      
+      // Show the floating section after scrolling past hero but before reaching footer
+      if (scrollPosition > heroHeight && scrollPosition < footerPosition - buffer) {
+        setShowFloatingEnroll(true);
+      } else {
+        setShowFloatingEnroll(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check when component mounts
+    handleScroll();
+    
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Handle date selection
+  const handleDateSelect = (index) => {
+    setActiveIndex(index);
+  };
+
+  // Open modal with batch id
+  const openBatchModal = (batchId) => {
+    setSelectedBatchId(batchId);
+    setShowModal(true);
+    setActiveIndex(null); // Reset active index when opening modal
+  };
+
+  const scrollToAvailableBatches = () => {
+    // Find the available batches section by ID
+    const availableBatchesSection = document.getElementById('available-batches');
+    
+    // If the section exists, scroll to it
+    if (availableBatchesSection) {
+      availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClick = (id) => {
+    setActiveButton(id);
+    console.log('activeButton',activeButton);
+    
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const Locate = {
+    title: 'Contact us',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
+
+  const batches = [
+    {
+      id: 1,
+      heading: "Batch-1",
+      title: "7 Months Advanced TTC",
+      duration: "07 Months",
+      mode: "Online & On Campus",
+      language: "English",
+      startDate: "03 Mar 2025",
+      timing: "Evening: 5pm - 8pm",
+      days: "Monday - Saturday",
+      bgcolor: '#F6D0C6',
+      viewDetailsLink: "/one-month-ttc",
+      enrollLink: '/enrollment/one-month-ttc'
+    },
+    {
+      id: 2,
+      heading: "Batch-2",
+      title: "1 Year Advanced TTC",
+      duration: "12 Months",
+      mode: "Online & On Campus",
+      language: "Hindi",
+      startDate: "13 Mar 2025",
+      timing: "Afternoon: 1:30pm - 4pm",
+      days: "Monday - Friday",
+      bgcolor: '#F6B4A4',
+      viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
+    },
+    {
+      id: 3,
+      heading: "Batch-3",
+      title: "2 Year Advanced TTC",
+      duration: "24 Months",
+      mode: "Online & On Campus",
+      language: "English",
+      startDate: "23 Mar 2025",
+      timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
+      days: "Saturday - Sunday",
+      bgcolor: '#F0A18D',
+      viewDetailsLink: "/200-hrs-part-time-ttc-online-english",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
+    },
+    {
+      id: 4,
+      heading: "Batch-4",
+      title: "4 Months Advanced TTC",
+      duration: "04 Months",
+      mode: "Online",
+      language: "English",
+      startDate: "03 Apr 2025",
+      timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
+      days: "Monday - Friday",
+      bgcolor: '#E89A87',
+      viewDetailsLink: "/200-hrs-part-time-ttc-online",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-online'
+    },
+    {
+      id: 5,
+      heading: "Batch-5",
+      title: "3 Months Advanced TTC",
+      duration: "03 Months",
+      mode: "On Campus",
+      language: "English",
+      startDate: "03 May 2025",
+      timing: "6:30am - 8:00pm",
+      days: "Monday - Saturday",
+      bgcolor: '#F68E73',
+      viewDetailsLink: "/weekend-teacher-training-course",
+      enrollLink: '/enrollment/weekend-teacher-training-course'
+    },
+  ];
+
+  const offeringsData = [
+    {
+      id: 1,
+      description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+      image: slider_1
+    },
+    {
+      id: 2,
+      description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+      image: slider_1
+    },
+    {
+      id: 3,
+      description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+      image: slider_1
+    },
+    {
+      id: 4,
+      description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+      image: slider_1
+    },
+    {
+      id: 5,
+      description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+      image: slider_1
+    }
+  ];
+
+  const faqData = [
+    {
+      question: "Lorem ipsum dolor sit amet consectetur. Nullam amet parturient.",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur. Laoreet venenatis sed et facilisis enim eu viverra mattis venenatis. Pretium wenerra hendrerit egestas dui tortor pharetra ut nulla odio. Varius.",
+    },
+    {
+      question: "Lorem ipsum dolor sit amet consectetur. Sed libero.",
+      answer: "",
+    },
+    {
+      question: "Lorem ipsum dolor sit amet consectetur. Nibh in mauris odio morbi netus.",
+      answer: "",
+    },
+    {
+      question: "Lorem ipsum dolor sit amet consectetur. Ultricies.",
+      answer: "",
+    },
+    {
+      question: "Lorem ipsum dolor sit amet consectetur. Id proin faucibus volutpat.",
+      answer: "",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Get batch enrollment link by id
+  const getBatchEnrollLink = (batchId) => {
+    const batch = batches.find(b => b.id === batchId);
+    return batch ? batch.enrollLink : '#';
+  };
+
+  return (
+    <div className="landing-page">
+      
+      {/* Hero Section */}
+     <section className="hero">
+     
+  <div className="hero-overlay">
+  <InnerNavComponent abc={Locate} />
+    <div className="hero-content">
+      <h1>
+        Become a Certified Yoga<br /> Teacher in <span className="hero_content-span">200 Hours</span>
+      </h1>
+      <p className="hero_content-para">
+        Join our immersive teacher training program.<br /> Learn, practice, and teach with confidence.
+      </p>
+
+      <div className="hero-info">
+        <div className="info-item_community ">
+          <img src={follower_m} alt="Community" />
+          <span className="follower_desc">100K + Yoga <br /> Member Community</span>
+        </div>
+       
+      </div>
+
+
+<button 
+      className="cta-button" 
+      onClick={scrollToAvailableBatches}
+    >
+      See Available Batches
+      <img src={icon_TYI} alt="Icon" className="TYIicon" />
+    </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+{/* Button Section */}
+
+<section className="btn-wrapper">
+
+<div className="btn_wrapper-container">
+
+  <button className={`btn_links ${activeButton === "benefits" ? "btn_link_active" : "btn_link_notactive"}`}
+        onClick={() => handleClick("benefits")}
+ 
+  >Student Benefits</button>
+  <button 
+  className={`btn_links ${activeButton === "available-batches" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("available-batches")}
+  
+  >Available batches</button>
+  <button 
+  className={`btn_links ${activeButton === "teach" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("teach")}
+  
+  >Teaching & Certification</button>
+  <button 
+className={`btn_links ${activeButton === "offerings" ? "btn_link_active" : "btn_link_notactive"}`}
+onClick={() => handleClick("offerings")}
+ 
+  >Our Unique Offerings</button>
+  <button 
+  className={`btn_links ${activeButton === "faq" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("faq")}
+ 
+  >FAQ</button>
+
+</div>
+
+</section>
+
+{/* end button sectgion */}
+
+
+      {/* Benefits Section */}
+      <section className="benefits" id="benefits">
+        <h2 className="section-title">
+          <span className="highlight">Student Benefits</span>
+          <br />
+          <span className="title2">What will you get from this Training?</span>
+        </h2>
+        <p className="section-description">
+        {`Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
+          skills, and confidence to teach yoga effectively. Here's what you'll get:`}
+        </p>
+        <div className="benefits-grid">
+          <div className="benefit-item">
+            <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Hands-on Asana Sessions</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="benefit-item">
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Personalized Mentorship</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="benefit-item">
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="benefit-item">
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Downloadable Material</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="benefit-item">
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Expert Faculty</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="benefit-item">
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+            <h3>Hands-on Asana Sessions</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Whom Can You Teach Section */}
+      <section className="teach" id="teach">
+        <h2 className="section-title1">
+          <span className="highlight">Student Benefits</span>
+          <br />
+          <span className="title2">Whom can you teach</span>
+        </h2>
+        <p className="section-description">
+          {`Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
+          skills, and confidence to teach yoga effectively. Here's what you'll get:`}
+        </p>
+        <div className="teach-grid">
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card} alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+          <div className="teach-item">
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+            <h3>Certification</h3>
+            <p>Practice and learn under expert supervision.</p>
+          </div>
+        </div>
+      </section>
+
+  {/* Available Batches */}
+
+
+<section id="available-batches">
+  <div className="available-batches">
+    <div className="batch-container">
+      <div className="batch-header">
+        <p className="available-text">Available Batches</p>
+        <h2 className="choose-text">Choose Your Ideal Batch</h2>
+        <p className="description-text">
+          Our flexible course schedule allows you to find a batch that fits your availability.<br />
+          Get started on your path to becoming a certified yoga instructor today.
+        </p>
+      </div>
+  {/* Adding separate div with all batch headings */}
+  <div className="all-batches-heading-container">
+        <div className="batch-logo-placeholder"></div>
+      
+      </div>
+
+      <div className="batch-grid">
+        {/* Header Row with Batch Names */}
+        <div className="batch-row header-row">
+          <div className="batch-cell logo-cell">
+            <div>
+            <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+            </div>
+          </div>
+
+          {batches.map((batch) => {
+            const titleParts = batch.title.split(" ");
+            const firstPart = titleParts.slice(0, 2).join(" ");
+            const secondPart = titleParts.slice(2).join(" ");
+
+            return (
+              <div key={batch.id} className="batch-cell header-cell">
+                <div key={batch.id} className="batch-heading-label">
+            <div className="batch-wrapper" style={{ backgroundColor: "#F0F0F0" }}>
+            {batch.heading}
+            </div>
+          </div>
+                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+                  <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Batch Details Rows */}
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Duration</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.duration}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Batch Mode</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.mode}
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Language</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.language}
+              </div>
+            </div>
+          ))}
+        </div>
+ 
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Starting Date</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.startDate}
+              <span 
+                className="view-batch-link" 
+                onClick={() => {
+                  setActiveTab(batch.id);
+                  setShowModal(true);
+                  setActiveIndex(null); // Reset active index when opening modal
+                }}
+              >
+                View upcoming batch
+              </span>
+            </div>
+          ))}
+        </div> 
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Timings</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.timing}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Days</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.days}
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell"></div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell button-cell">
+              <button className="enroll-now-btn"><a href={batch.enrollLink}>Enroll Now →</a></button>
+              <button 
+                className="view-details-btn"  
+                onClick={() => navigate(batch.viewDetailsLink)}
+              >
+                View Details
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal for All Available Dates */}
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-box">
+            <div className="modal-header">
+              <h3>Available Course Dates</h3>
+              <button 
+                className="close-modal" 
+                onClick={() => setShowModal(false)}
+              >
+                <img src={close} alt="Close" />
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="date-grid">
+                {dynamicDates.map((date, index) => (
+                  <div
+                    key={index}
+                    className={`date-item ${activeIndex === index ? "active" : ""}`}
+                    onClick={() => handleDateSelect(index)}
+                  >
+                    <div className="date-line">
+                      <span className="calendar-icon">
+                        <img src="/images/calender.svg" alt="Calendar Icon" />
+                      </span>
+                      <span className="date">{date.date}</span>
+                    </div>
+                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+                      <span className="computer-icon">
+                        <img src="/images/computer.svg" alt="Computer Icon" />
+                      </span>
+                      <span className="mode">{date.mode}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="enrollcourse">
+                <button
+                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+                  disabled={activeIndex === null}
+                  onClick={() => {
+                    if (activeIndex !== null && selectedBatchId) {
+                      console.log(`Enrolling for ${dynamicDates[activeIndex]} - Batch ${selectedBatchId}`);
+                      const enrollLink = getBatchEnrollLink(selectedBatchId);
+                      if (enrollLink) {
+                        window.location.href = `${enrollLink}?date=${encodeURIComponent(dynamicDates[activeIndex])}`;
+                      }
+                    }
+                  }}
+                >
+                  Enroll Course
+                  <span className="enrollimg">
+                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+      {/* Teaching & Certification */}
+      <section className="certification">
+      <h2 className="section-title">
+        <span className="highlight">Available Batches</span>
+        
+      </h2>
+      <div className="highlight_below">Teaching & Certification</div>
+     
+
+      <div className="certification-grid">
+        {/* Course Attendance Criteria */}
+        <div className="criteria">
+          <h3>Course Attendance Criteria</h3>
+          <ul>
+            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A student is required to have a minimum <span className="bold_points">80% attendance</span></li>
+            <li>
+            <img className="tc_icon" src={tC_icon} alt="" />
+            After qualifying the attendance criteria, students can appear for the exam 
+            (100 marks). Details below:
+            </li>
+            <table>
+            <thead>
+              <tr>
+                <th>Course Details</th>
+                <th>Marks</th>
+                <th>Minimum Score Req.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Theory Component</td>
+                <td>50 marks</td>
+                <td>50%</td>
+              </tr>
+            </tbody>
+          </table>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by <span className="bold_points">The Yoga Institute</span></li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />This Certificate is recognized by <span className="bold_points">Yoga Certification Board (AYUSH Level-1) and 
+          Yoga Alliance USA (RYT 200).</span></li>
+          </ul>
+          
+        </div>
+
+        {/* Post Qualification Opportunities */}
+        <div className="opportunities">
+          <h3>Post Qualification Opportunities</h3>
+          <div className="images">
+            <div className="top_image">
+            <img src={Post_1} alt="Post Qualification" />
+            </div>
+            <div className="below_images">
+            <img src={Post_2} alt="Post Qualification" />
+            <img src={Post_3} alt="Post Qualification" />
+            <img src={Post_4} alt="Post Qualification" />
+            </div>
+         
+          </div>
+        </div>
+
+         {/* Exam Schedule */}
+         <div className="exam-schedule">
+          <h3>Exam Schedule</h3>
+          <ul>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.</li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Theory exams will be conducted online at 5pm (IST)</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.</li>
+            
+            </ul></li>
+            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students, after submission, can log out /leave only with the explicit permission of the examiner
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>For practical’s - students will have to wait till the exams of all students are completed</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>The examiner may call out students at random and not necessarily in alphabetic order</li>
+            
+            </ul></li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process</li>
+          
+          </ul>
+        </div>
+
+      
+    
+
+
+
+        {/* Exam Schedule */}
+        <div className="exam-schedule">
+          <h3>Exam Schedule</h3>
+          <ul>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.</li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Theory exams will be conducted online at 5pm (IST)</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.</li>
+            
+            </ul></li>
+            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students, after submission, can log out /leave only with the explicit permission of the examiner
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>For practical’s - students will have to wait till the exams of all students are completed</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>The examiner may call out students at random and not necessarily in alphabetic order</li>
+            
+            </ul></li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process</li>
+          
+          </ul>
+        </div>
+
+      
+      </div>
+
+        {/* Post Course Certification */}
+        <div className="post-certification_wrapper">
+          <span>What you will get on post course</span>
+       
+          <div className="img_certificates-wrapper">
+              <div className="first_left_wrapper">
+                <img style={{marginRight: '90px'}} src={certificate_1} alt="" />
+                <img src={certificate_2} alt="" />
+              </div>
+              <div className="first_right_wrapper">
+                <img src={certificate_3} alt="" />
+              </div>
+          </div>
+        </div>
+    </section>
+
+      {/* Unique Offerings */}
+     
+
+<section className="offerings-container" id="offerings">
+      <div className="section-header">
+        <h2 className="section-title">
+          <span className="highlight">Available Batches</span>
+        </h2>
+        <h3 className="section-main-title">Our Unique Offerings</h3>
+      </div>
+      
+      <div className="carousel-container">
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false, // Consider turning off shadows if they don't match your design
+          }}
+          // coverflowEffect={{
+          //   rotate: 0,
+          //   stretch: 0,
+          //   depth: 100,
+          //   modifier: 2.5,
+          // }}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper-container"
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        >
+          {offeringsData.map((offering, index) => (
+            <SwiperSlide key={offering.id}>
+              <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+                <div>
+                <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
+                </div>
+                <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+                  <h2>Special Interaction with <span className="slide-title">Dr. Hansaji Yogendra</span></h2>
+                  <p>{offering.description}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        
+        <div className="slider-controler">
+        <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+            <div className="swiper-button-next slider-arrow">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </div>
+      </div>
+    </section>
+
+      {/* FAQ Section */}
+ <section className="faq" id="faq">
+      <h3 className="faq-heading">FAQ</h3>
+      <h2 className="faq-title">Frequently Asked Question</h2>
+
+      <div className="faq-list">
+        {faqData.map((item, index) => (
+          <div
+            key={index}
+            className={`faq-item ${openIndex === index ? "open" : ""}`}
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className="faq-question">
+              {item.question}
+              <span className="faq-icon">
+  {openIndex === index ? (
+    <img src="/images/arrowup.svg" alt="" />
+  ) : (
+    <img src="/images/arrowdown.svg" alt="" />
+  )}
+</span>
+
+            </div>
+            {openIndex === index && <p className="faq-answer">{item.answer}</p>}
+          </div>
+        ))}
+      </div>
+
+      <div className="refund-policy">
+        
+      <img src="/images/yogalogorefund.svg" alt="The Yoga Institute" className="logorefund" />
+        <h3>Refund Policy</h3>
+        <p>
+          The Yoga Institute has a strict no-refund policy for all its programs. The only exception is if a program is canceled by the institute, in which case the student will be offered a credit for any other program or a refund of the event fee.
+        </p>
+      </div>
+    </section>
+
+    {/* Enroll Container */}
+
+     {showFloatingEnroll && (
+        <div className="enroll-wrapper floating">
+          <div className="enroll-container">
+            <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+            <button className="enroll-button" onClick={() => scrollToAvailableBatches()}>
+              Enroll Now 
+              <span className="arrow-icon">
+                <img src={enrollicon} alt="icon" className="enrollicon"></img>
+              </span>
+            </button>
+          </div>
+        </div>
+      )}
+     
+     
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default TwoHundredLandingPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React, { useState }  from 'react';
 
 
@@ -1255,1893 +2219,1853 @@
 
 
 
-import React, { useState, useEffect  }  from "react";
-import { useNavigate } from "react-router-dom";
-// import InnerNavComponent from '../InnerNavComponent'
-import InnerNavComponent from "../../../Components/InnerNavComponent";
-import "./TwohundredLandingPage.scss";
-import follower_m from './images/follower_m.svg'
-import tC_icon from './images/tc_icons_2.svg'
-import lotus_200_card from './images/lotus_200_card.png'
-import Post_1 from "./images/Post_1.svg"
-import Post_2 from "./images/Post_2.svg"
-import Post_3 from "./images/Post_3.svg"
-import Post_4 from "./images/Post_4.svg"
-import icon_TYI from "./images/icon_TYI.svg"
-import certificate_1 from "./images/certificate_1.svg"
-import certificate_2 from "./images/certificate_2.svg"
-import certificate_3 from "./images/certificate_3.svg"
-import close from "./images/close.svg"
-import enrollicon from "./images/enrollicon.svg"
-import Footer from "../../../Components/Footer";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import slider_1 from './images/slider_1.svg'
-import { AllCourses } from '../Constants/courses'
-import { c200hr } from '../Constants/courses'
+// import React, { useState, useEffect  }  from "react";
+// import { useNavigate } from "react-router-dom";
+// // import InnerNavComponent from '../InnerNavComponent'
+// import InnerNavComponent from "../../../Components/InnerNavComponent";
+// import "./TwohundredLandingPage.scss";
+// import follower_m from './images/follower_m.svg'
+// import tC_icon from './images/tc_icons_2.svg'
+// import lotus_200_card from './images/lotus_200_card.png'
+// import Post_1 from "./images/Post_1.svg"
+// import Post_2 from "./images/Post_2.svg"
+// import Post_3 from "./images/Post_3.svg"
+// import Post_4 from "./images/Post_4.svg"
+// import icon_TYI from "./images/icon_TYI.svg"
+// import certificate_1 from "./images/certificate_1.svg"
+// import certificate_2 from "./images/certificate_2.svg"
+// import certificate_3 from "./images/certificate_3.svg"
+// import close from "./images/close.svg"
+// import enrollicon from "./images/enrollicon.svg"
+// import Footer from "../../../Components/Footer";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css'
+// import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
+// import slider_1 from './images/slider_1.svg'
 
-const TwoHundredLandingPage = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [activeTab, setActiveTab] = useState(null);
-  const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [activeButton, setActiveButton] = useState("benefits"); // Default active button
-  const [currentBatchDates, setCurrentBatchDates] = useState([]);
-  const [showFloatingEnroll, setShowFloatingEnroll] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+// const TwoHundredLandingPage = () => {
+//   const [showModal, setShowModal] = useState(false);
+//   const [activeTab, setActiveTab] = useState(null);
+//   const navigate = useNavigate();
+//   const [activeIndex, setActiveIndex] = useState(null);
+//   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
+//   const [currentBatchDates, setCurrentBatchDates] = useState([]);
+//   const [showFloatingEnroll, setShowFloatingEnroll] = useState(false);
+//   const [currentSlide, setCurrentSlide] = useState(0);
 
 
-    // Add this useEffect to handle scroll events
-    useEffect(() => {
-      const handleScroll = () => {
-        // Get the current scroll position
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+//     // Add this useEffect to handle scroll events
+//     useEffect(() => {
+//       const handleScroll = () => {
+//         // Get the current scroll position
+//         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Get the hero section height
-        const heroSection = document.querySelector('.hero');
-        const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+//         // Get the hero section height
+//         const heroSection = document.querySelector('.hero');
+//         const heroHeight = heroSection ? heroSection.offsetHeight : 0;
         
-        // Get the footer position
-        const footer = document.querySelector('footer');
-        const footerPosition = footer ? footer.offsetTop : 9999;
+//         // Get the footer position
+//         const footer = document.querySelector('footer');
+//         const footerPosition = footer ? footer.offsetTop : 9999;
         
-        // Set a buffer value to hide the floating section before reaching the footer
-        const buffer = 300;
+//         // Set a buffer value to hide the floating section before reaching the footer
+//         const buffer = 300;
         
-        // Show the floating section after scrolling past hero but before reaching footer
-        if (scrollPosition > heroHeight && scrollPosition < footerPosition - buffer) {
-          setShowFloatingEnroll(true);
-        } else {
-          setShowFloatingEnroll(false);
-        }
-      };
+//         // Show the floating section after scrolling past hero but before reaching footer
+//         if (scrollPosition > heroHeight && scrollPosition < footerPosition - buffer) {
+//           setShowFloatingEnroll(true);
+//         } else {
+//           setShowFloatingEnroll(false);
+//         }
+//       };
   
-      // Add scroll event listener
-      window.addEventListener('scroll', handleScroll);
+//       // Add scroll event listener
+//       window.addEventListener('scroll', handleScroll);
       
-      // Initial check when component mounts
-      handleScroll();
+//       // Initial check when component mounts
+//       handleScroll();
       
-      // Clean up the event listener on component unmount
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+//       // Clean up the event listener on component unmount
+//       return () => {
+//         window.removeEventListener('scroll', handleScroll);
+//       };
+//     }, []);
 
-   // Handle date selection
-   const handleDateSelect = (index) => {
-    setActiveIndex(index);
-  };
+//    // Handle date selection
+//    const handleDateSelect = (index) => {
+//     setActiveIndex(index);
+//   };
 
 
-  const scrollToAvailableBatches = () => {
-    // Find the available batches section by ID
-    const availableBatchesSection = document.getElementById('available-batches');
+//   const scrollToAvailableBatches = () => {
+//     // Find the available batches section by ID
+//     const availableBatchesSection = document.getElementById('available-batches');
     
-    // If the section exists, scroll to it
-    if (availableBatchesSection) {
-      availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+//     // If the section exists, scroll to it
+//     if (availableBatchesSection) {
+//       availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
 
-  // const scrollToBenefits = () => {
-  //   const benefitsSection = document.querySelector('.benefits-section');
-  //   if (benefitsSection) {
-  //     benefitsSection.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
+//   // const scrollToBenefits = () => {
+//   //   const benefitsSection = document.querySelector('.benefits-section');
+//   //   if (benefitsSection) {
+//   //     benefitsSection.scrollIntoView({ behavior: 'smooth' });
+//   //   }
+//   // };
 
-  const handleClick = (id) => {
-    setActiveButton(id);
-    console.log('activeButton',activeButton);
+//   const handleClick = (id) => {
+//     setActiveButton(id);
+//     console.log('activeButton',activeButton);
     
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+//     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+//   };
 
-  const Locate = {
-    title: 'Contact us',
-    color: 'white',
-    menuColor: 'white',
-    menuItems: [],
-  }
+//   const Locate = {
+//     title: 'Contact us',
+//     color: 'white',
+//     menuColor: 'white',
+//     menuItems: [],
+//   }
 
 
-  const batches = [
-    {
-      id: 1,
-      heading: "Batch-1",
-      title: "7 Months Advanced TTC",
-      duration: "07 Months",
-      mode: "Online & On Campus",
-      language: "English",
-      startDate: "03 Mar 2025",
-      timing: "Evening: 5pm - 8pm",
-      days: "Monday - Saturday",
-      bgcolor: '#F6D0C6',
-      viewDetailsLink: "/one-month-ttc",
-      enrollLink: '/enrollment/one-month-ttc'
-    },
-    {
-      id: 2,
-      heading: "Batch-2",
-      title: "1 Year Advanced TTC",
-      duration: "12 Months",
-      mode: "Online & On Campus",
-      language: "Hindi",
-      startDate: "13 Mar 2025",
-      timing: "Afternoon: 1:30pm - 4pm",
-      days: "Monday - Friday",
-      bgcolor: '#F6B4A4',
-      viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english",
-      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
-    },
-    {
-      id: 3,
-      heading: "Batch-3",
-      title: "2 Year Advanced TTC",
-      duration: "24 Months",
-      mode: "Online & On Campus",
-      language: "English",
-      startDate: "23 Mar 2025",
-      timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
-      days: "Saturday - Sunday",
-      bgcolor: '#F0A18D',
-      viewDetailsLink: "/200-hrs-part-time-ttc-online-english",
-      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
-    },
-    {
-      id: 4,
-      heading: "Batch-4",
-      title: "4 Months Advanced TTC",
-      duration: "04 Months",
-      mode: "Online",
-      language: "English",
-      startDate: "03 Apr 2025",
-      timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
-      days: "Monday - Friday",
-      bgcolor: '#E89A87',
-      viewDetailsLink: "/200-hrs-part-time-ttc-online",
-      enrollLink: '/enrollment/200-hrs-part-time-ttc-online'
-    },
-    {
-      id: 5,
-      heading: "Batch-5",
-      title: "3 Months Advanced TTC",
-      duration: "03 Months",
-      mode: "On Campus",
-      language: "English",
-      startDate: "03 May 2025",
-      timing: "6:30am - 8:00pm",
-      days: "Monday - Saturday",
-      bgcolor: '#F68E73',
-      viewDetailsLink: "/weekend-teacher-training-course",
-      enrollLink: '/enrollment/weekend-teacher-training-course'
-    },
-  ];
+//   const batches = [
+//     {
+//       id: 1,
+//       heading: "Batch-1",
+//       title: "7 Months Advanced TTC",
+//       duration: "07 Months",
+//       mode: "Online & On Campus",
+//       language: "English",
+//       startDate: "03 Mar 2025",
+//       timing: "Evening: 5pm - 8pm",
+//       days: "Monday - Saturday",
+//       bgcolor: '#F6D0C6',
+//       viewDetailsLink: "/one-month-ttc",
+//       enrollLink: '/enrollment/one-month-ttc'
+//     },
+//     {
+//       id: 2,
+//       heading: "Batch-2",
+//       title: "1 Year Advanced TTC",
+//       duration: "12 Months",
+//       mode: "Online & On Campus",
+//       language: "Hindi",
+//       startDate: "13 Mar 2025",
+//       timing: "Afternoon: 1:30pm - 4pm",
+//       days: "Monday - Friday",
+//       bgcolor: '#F6B4A4',
+//       viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english",
+//       enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
+//     },
+//     {
+//       id: 3,
+//       heading: "Batch-3",
+//       title: "2 Year Advanced TTC",
+//       duration: "24 Months",
+//       mode: "Online & On Campus",
+//       language: "English",
+//       startDate: "23 Mar 2025",
+//       timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
+//       days: "Saturday - Sunday",
+//       bgcolor: '#F0A18D',
+//       viewDetailsLink: "/200-hrs-part-time-ttc-online-english",
+//       enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
+//     },
+//     {
+//       id: 4,
+//       heading: "Batch-4",
+//       title: "4 Months Advanced TTC",
+//       duration: "04 Months",
+//       mode: "Online",
+//       language: "English",
+//       startDate: "03 Apr 2025",
+//       timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
+//       days: "Monday - Friday",
+//       bgcolor: '#E89A87',
+//       viewDetailsLink: "/200-hrs-part-time-ttc-online",
+//       enrollLink: '/enrollment/200-hrs-part-time-ttc-online'
+//     },
+//     {
+//       id: 5,
+//       heading: "Batch-5",
+//       title: "3 Months Advanced TTC",
+//       duration: "03 Months",
+//       mode: "On Campus",
+//       language: "English",
+//       startDate: "03 May 2025",
+//       timing: "6:30am - 8:00pm",
+//       days: "Monday - Saturday",
+//       bgcolor: '#F68E73',
+//       viewDetailsLink: "/weekend-teacher-training-course",
+//       enrollLink: '/enrollment/weekend-teacher-training-course'
+//     },
+//   ];
 
   
-  // const batches = [
-  //   {
-  //     id: 1,
-  //     title: "7 Months Advanced TTC",
-  //     duration: "07 Months",
-  //     mode: "Online & On Campus",
-  //     language: "English",
-  //     startDate: "03 Mar 2025",
-  //     timing: "Evening: 5pm - 8pm",
-  //     days: "Monday - Saturday",
-  //     bgcolor: '#F6D0C6'
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "1 Year Advanced TTC",
-  //     duration: "12 Months",
-  //     mode: "Online & On Campus",
-  //     language: "Hindi",
-  //     startDate: "13 Mar 2025",
-  //     timing: "Afternoon: 1:30pm - 4pm",
-  //     days: "Monday - Friday",
-  //     bgcolor: '#F6B4A4'
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "2 Year Advanced TTC",
-  //     duration: "24 Months",
-  //     mode: "Online & On Campus",
-  //     language: "English",
-  //     startDate: "23 Mar 2025",
-  //     timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
-  //     days: "Saturday - Sunday",
-  //     bgcolor: '#F0A18D'
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "4 Months Advanced TTC",
-  //     duration: "04 Months",
-  //     mode: "Online",
-  //     language: "English",
-  //     startDate: "03 Apr 2025",
-  //     timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
-  //     days: "Monday - Friday",
-  //     bgcolor: '#E89A87'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "3 Months Advanced TTC",
-  //     duration: "03 Months",
-  //     mode: "On Campus",
-  //     language: "English",
-  //     startDate: "03 May 2025",
-  //     timing: "6:30am - 8:00pm",
-  //     days: "Monday - Saturday",
-  //     bgcolor: '#F68E73'
-  //   },
-  // ];
+//   // const batches = [
+//   //   {
+//   //     id: 1,
+//   //     title: "7 Months Advanced TTC",
+//   //     duration: "07 Months",
+//   //     mode: "Online & On Campus",
+//   //     language: "English",
+//   //     startDate: "03 Mar 2025",
+//   //     timing: "Evening: 5pm - 8pm",
+//   //     days: "Monday - Saturday",
+//   //     bgcolor: '#F6D0C6'
+//   //   },
+//   //   {
+//   //     id: 2,
+//   //     title: "1 Year Advanced TTC",
+//   //     duration: "12 Months",
+//   //     mode: "Online & On Campus",
+//   //     language: "Hindi",
+//   //     startDate: "13 Mar 2025",
+//   //     timing: "Afternoon: 1:30pm - 4pm",
+//   //     days: "Monday - Friday",
+//   //     bgcolor: '#F6B4A4'
+//   //   },
+//   //   {
+//   //     id: 3,
+//   //     title: "2 Year Advanced TTC",
+//   //     duration: "24 Months",
+//   //     mode: "Online & On Campus",
+//   //     language: "English",
+//   //     startDate: "23 Mar 2025",
+//   //     timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
+//   //     days: "Saturday - Sunday",
+//   //     bgcolor: '#F0A18D'
+//   //   },
+//   //   {
+//   //     id: 4,
+//   //     title: "4 Months Advanced TTC",
+//   //     duration: "04 Months",
+//   //     mode: "Online",
+//   //     language: "English",
+//   //     startDate: "03 Apr 2025",
+//   //     timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
+//   //     days: "Monday - Friday",
+//   //     bgcolor: '#E89A87'
+//   //   },
+//   //   {
+//   //     id: 5,
+//   //     title: "3 Months Advanced TTC",
+//   //     duration: "03 Months",
+//   //     mode: "On Campus",
+//   //     language: "English",
+//   //     startDate: "03 May 2025",
+//   //     timing: "6:30am - 8:00pm",
+//   //     days: "Monday - Saturday",
+//   //     bgcolor: '#F68E73'
+//   //   },
+//   // ];
 
-  const upcomingDates = [
-    { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/one-month-ttc' },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
-  ];
+//   const upcomingDates = [
+//     { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/one-month-ttc' },
+//     { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+//     { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+//     { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
+//   ];
 
-    // Function to generate dates dynamically
-    // const getUpcomingDates = (batchId) => {
-    //   const batch = batches.find(b => b.id === batchId);
-    //   if (!batch) return [];
+//     // Function to generate dates dynamically
+//     // const getUpcomingDates = (batchId) => {
+//     //   const batch = batches.find(b => b.id === batchId);
+//     //   if (!batch) return [];
       
-    //   const dates = [];
-    //   const currentDate = new Date();
+//     //   const dates = [];
+//     //   const currentDate = new Date();
       
-    //   // Generate 4 upcoming monthly batch dates
-    //   for (let i = 0; i < 4; i++) {
-    //     const startDate = new Date(currentDate);
-    //     startDate.setMonth(currentDate.getMonth() + i);
-    //     startDate.setDate(1); // First day of month
+//     //   // Generate 4 upcoming monthly batch dates
+//     //   for (let i = 0; i < 4; i++) {
+//     //     const startDate = new Date(currentDate);
+//     //     startDate.setMonth(currentDate.getMonth() + i);
+//     //     startDate.setDate(1); // First day of month
         
-    //     const endDate = new Date(startDate);
-    //     endDate.setMonth(startDate.getMonth() + 1);
-    //     endDate.setDate(0); // Last day of month
+//     //     const endDate = new Date(startDate);
+//     //     endDate.setMonth(startDate.getMonth() + 1);
+//     //     endDate.setDate(0); // Last day of month
         
-    //     const dateString = `1st ${startDate.toLocaleString('default', { month: 'short' })} to ${endDate.getDate()}${getDaySuffix(endDate.getDate())} ${endDate.toLocaleString('default', { month: 'short' })} ${startDate.getFullYear()}`;
+//     //     const dateString = `1st ${startDate.toLocaleString('default', { month: 'short' })} to ${endDate.getDate()}${getDaySuffix(endDate.getDate())} ${endDate.toLocaleString('default', { month: 'short' })} ${startDate.getFullYear()}`;
         
-    //     dates.push({
-    //       date: dateString,
-    //       mode: batch.mode,
-    //       enrollLink: batch.enrollLink
-    //     });
-    //   }
+//     //     dates.push({
+//     //       date: dateString,
+//     //       mode: batch.mode,
+//     //       enrollLink: batch.enrollLink
+//     //     });
+//     //   }
       
-    //   return dates;
-    // };
+//     //   return dates;
+//     // };
     
-    // // Helper function to get day suffix (1st, 2nd, 3rd, etc.)
-    // const getDaySuffix = (day) => {
-    //   if (day > 3 && day < 21) return 'th';
-    //   switch (day % 10) {
-    //     case 1: return 'st';
-    //     case 2: return 'nd';
-    //     case 3: return 'rd';
-    //     default: return 'th';
-    //   }
-    // };
+//     // // Helper function to get day suffix (1st, 2nd, 3rd, etc.)
+//     // const getDaySuffix = (day) => {
+//     //   if (day > 3 && day < 21) return 'th';
+//     //   switch (day % 10) {
+//     //     case 1: return 'st';
+//     //     case 2: return 'nd';
+//     //     case 3: return 'rd';
+//     //     default: return 'th';
+//     //   }
+//     // };
   
-    // const handleDateSelect = (index) => {
-    //   setActiveIndex(index);
-    // };
+//     // const handleDateSelect = (index) => {
+//     //   setActiveIndex(index);
+//     // };
   
-    // const openBatchModal = (batchId) => {
-    //   const dates = getUpcomingDates(batchId);
-    //   setCurrentBatchDates(dates);
-    //   setActiveTab(batchId);
-    //   setShowModal(true);
-    //   setActiveIndex(null);
-    // };
+//     // const openBatchModal = (batchId) => {
+//     //   const dates = getUpcomingDates(batchId);
+//     //   setCurrentBatchDates(dates);
+//     //   setActiveTab(batchId);
+//     //   setShowModal(true);
+//     //   setActiveIndex(null);
+//     // };
   
 
-    // const offeringsData = [
-    //   {
-    //     id: 1,
-    //     title: "Special Interaction with Dr. Hansaji Yogendra",
-    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-    //     image: slider_1 // Replace with your actual image path
-    //   },
-    //   {
-    //     id: 2,
-    //     title: "Special Interaction with Dr. Hansaji Yogendra",
-    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-    //     image: slider_1
-    //   },
-    //   {
-    //     id: 3,
-    //     title: "Special Interaction with Dr. Hansaji Yogendra",
-    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-    //     image: slider_1
-    //   },
-    //   {
-    //     id: 4,
-    //     title: "Special Interaction with Dr. Hansaji Yogendra",
-    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-    //     image: slider_1
-    //   },
-    //   {
-    //     id: 5,
-    //     title: "Special Interaction with Dr. Hansaji Yogendra",
-    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-    //     image: slider_1
-    //   }
-    // ];
-    const offeringsData = [
-      {
-        id: 1,
-        // title: "Special Interaction with Dr. Hansaji Yogendra",
-        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-        image: slider_1 // Replace with your actual image path
-      },
-      {
-        id: 2,
-        // title: "Special Interaction with Dr. Hansaji Yogendra",
-        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-        image: slider_1
-      },
-      {
-        id: 3,
-        // title: "Special Interaction with Dr. Hansaji Yogendra",
-        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-        image: slider_1
-      },
-      {
-        id: 4,
-        // title: "Special Interaction with Dr. Hansaji Yogendra",
-        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-        image: slider_1
-      },
-      {
-        id: 5,
-        // title: "Special Interaction with Dr. Hansaji Yogendra",
-        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-        image: slider_1
-      }
-    ];
+//     const offeringsData = [
+//       {
+//         id: 1,
+//         title: "Special Interaction with Dr. Hansaji Yogendra",
+//         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//         image: slider_1 // Replace with your actual image path
+//       },
+//       {
+//         id: 2,
+//         title: "Special Interaction with Dr. Hansaji Yogendra",
+//         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//         image: slider_1
+//       },
+//       {
+//         id: 3,
+//         title: "Special Interaction with Dr. Hansaji Yogendra",
+//         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//         image: slider_1
+//       },
+//       {
+//         id: 4,
+//         title: "Special Interaction with Dr. Hansaji Yogendra",
+//         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//         image: slider_1
+//       },
+//       {
+//         id: 5,
+//         title: "Special Interaction with Dr. Hansaji Yogendra",
+//         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//         image: slider_1
+//       }
+//     ];
 
     
 
-// const offerings = [
+// // const offerings = [
+// //   {
+// //     image: "offering1.jpg",
+// //     title: "Special Interaction with Dr. Hansaji Yogendra",
+// //     description:
+// //       "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+// //   },
+// //   {
+// //     image: "offering2.jpg",
+// //     title: "Live Interactive Classes",
+// //     description: "Engage with experienced instructors in real-time sessions.",
+// //   },
+// //   {
+// //     image: "offering3.jpg",
+// //     title: "One-on-One Mentorship",
+// //     description: "Personalized mentorship to guide your learning journey.",
+// //   },
+// //   {
+// //     image: "offering4.jpg",
+// //     title: "Exclusive Study Material",
+// //     description: "Get access to premium yoga learning resources.",
+// //   },
+// // ];
+
+
+// const faqData = [
 //   {
-//     image: "offering1.jpg",
-//     title: "Special Interaction with Dr. Hansaji Yogendra",
-//     description:
-//       "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//     question: "Lorem ipsum dolor sit amet consectetur. Nullam amet parturient.",
+//     answer:
+//       "Lorem ipsum dolor sit amet consectetur. Laoreet venenatis sed et facilisis enim eu viverra mattis venenatis. Pretium wenerra hendrerit egestas dui tortor pharetra ut nulla odio. Varius.",
 //   },
 //   {
-//     image: "offering2.jpg",
-//     title: "Live Interactive Classes",
-//     description: "Engage with experienced instructors in real-time sessions.",
+//     question: "Lorem ipsum dolor sit amet consectetur. Sed libero.",
+//     answer: "",
 //   },
 //   {
-//     image: "offering3.jpg",
-//     title: "One-on-One Mentorship",
-//     description: "Personalized mentorship to guide your learning journey.",
+//     question: "Lorem ipsum dolor sit amet consectetur. Nibh in mauris odio morbi netus.",
+//     answer: "",
 //   },
 //   {
-//     image: "offering4.jpg",
-//     title: "Exclusive Study Material",
-//     description: "Get access to premium yoga learning resources.",
+//     question: "Lorem ipsum dolor sit amet consectetur. Ultricies.",
+//     answer: "",
+//   },
+//   {
+//     question: "Lorem ipsum dolor sit amet consectetur. Id proin faucibus volutpat.",
+//     answer: "",
 //   },
 // ];
 
 
-const faqData = [
-  {
-    question: "Lorem ipsum dolor sit amet consectetur. Nullam amet parturient.",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. Laoreet venenatis sed et facilisis enim eu viverra mattis venenatis. Pretium wenerra hendrerit egestas dui tortor pharetra ut nulla odio. Varius.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur. Sed libero.",
-    answer: "",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur. Nibh in mauris odio morbi netus.",
-    answer: "",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur. Ultricies.",
-    answer: "",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur. Id proin faucibus volutpat.",
-    answer: "",
-  },
-];
+//   const [openIndex, setOpenIndex] = useState(null);
+
+//   const toggleFAQ = (index) => {
+//     setOpenIndex(openIndex === index ? null : index);
+//   };
 
 
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  console.log(c200hr)
-
-
-  return (
-    <div className="landing-page">
+//   return (
+//     <div className="landing-page">
       
-      {/* Hero Section */}
-     <section className="hero">
+//       {/* Hero Section */}
+//      <section className="hero">
      
-  <div className="hero-overlay">
-  <InnerNavComponent abc={Locate} />
-    <div className="hero-content">
-      <h1>
-        Become a Certified Yoga<br /> Teacher in <span className="hero_content-span">200 Hours</span>
-      </h1>
-      <p className="hero_content-para">
-        Join our immersive teacher training program.<br /> Learn, practice, and teach with confidence.
-      </p>
+//   <div className="hero-overlay">
+//   <InnerNavComponent abc={Locate} />
+//     <div className="hero-content">
+//       <h1>
+//         Become a Certified Yoga<br /> Teacher in <span className="hero_content-span">200 Hours</span>
+//       </h1>
+//       <p className="hero_content-para">
+//         Join our immersive teacher training program.<br /> Learn, practice, and teach with confidence.
+//       </p>
 
-      <div className="hero-info">
-        <div className="info-item_community ">
-          <img src={follower_m} alt="Community" />
-          <span className="follower_desc">100K + Yoga <br /> Member Community</span>
-        </div>
-        {/* <div className="info-item">21 Days Duration</div>
-        <div className="info-item">English, Regional Languages</div> */}
-      </div>
-{/* 
-      <button className="cta-button">See Available Batches
-      <img src={icon_TYI} alt="Icon" className="TYIicon" />
-      </button> */}
+//       <div className="hero-info">
+//         <div className="info-item_community ">
+//           <img src={follower_m} alt="Community" />
+//           <span className="follower_desc">100K + Yoga <br /> Member Community</span>
+//         </div>
+//         {/* <div className="info-item">21 Days Duration</div>
+//         <div className="info-item">English, Regional Languages</div> */}
+//       </div>
+// {/* 
+//       <button className="cta-button">See Available Batches
+//       <img src={icon_TYI} alt="Icon" className="TYIicon" />
+//       </button> */}
 
-<button 
-      className="cta-button" 
-      onClick={scrollToAvailableBatches}
-    >
-      See Available Batches
-      <img src={icon_TYI} alt="Icon" className="TYIicon" />
-    </button>
-    </div>
-  </div>
-</section>
-
-
+// <button 
+//       className="cta-button" 
+//       onClick={scrollToAvailableBatches}
+//     >
+//       See Available Batches
+//       <img src={icon_TYI} alt="Icon" className="TYIicon" />
+//     </button>
+//     </div>
+//   </div>
+// </section>
 
 
-{/* Button Section */}
-
-<section className="btn-wrapper">
-
-<div className="btn_wrapper-container">
-
-  <button className={`btn_links ${activeButton === "benefits" ? "btn_link_active" : "btn_link_notactive"}`}
-        onClick={() => handleClick("benefits")}
-  // onClick={() => {
-  //   document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" });
-  // }}
-  >Student Benefits</button>
-  <button 
-  className={`btn_links ${activeButton === "available-batches" ? "btn_link_active" : "btn_link_notactive"}`}
-  onClick={() => handleClick("available-batches")}
-  // className="btn_links btn_link_active" 
-  // onClick={() => {
-  //   document.getElementById("available-batches")?.scrollIntoView({ behavior: "smooth" });
-  // }}
-  >Available batches</button>
-  <button 
-  className={`btn_links ${activeButton === "teach" ? "btn_link_active" : "btn_link_notactive"}`}
-  onClick={() => handleClick("teach")}
-  // className="btn_links" 
-  // onClick={() => {
-  //   document.getElementById("teach")?.scrollIntoView({ behavior: "smooth" });
-  // }}
-  >Teaching & Certification</button>
-  <button 
-className={`btn_links ${activeButton === "offerings" ? "btn_link_active" : "btn_link_notactive"}`}
-onClick={() => handleClick("offerings")}
-  // className="btn_links" 
-  // onClick={() => {
-  //   document.getElementById("offerings")?.scrollIntoView({ behavior: "smooth" });
-  // }}
-  >Our Unique Offerings</button>
-  <button 
-  className={`btn_links ${activeButton === "faq" ? "btn_link_active" : "btn_link_notactive"}`}
-  onClick={() => handleClick("faq")}
-  // className="btn_links" 
-  // onClick={() => {
-  //   document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
-  // }}
-  >FAQ</button>
-
-</div>
-
-</section>
-
-{/* end button sectgion */}
 
 
-      {/* Benefits Section */}
-      <section className="benefits" id="benefits">
-        <h2 className="section-title">
-          <span className="highlight">Student Benefits</span>
-          <br />
-          <span className="title2">What will you get from this Training?</span>
-        </h2>
-        <p className="section-description">
-          Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
-          skills, and confidence to teach yoga effectively. Here’s what you’ll get:
-        </p>
-        <div className="benefits-grid">
-          <div className="benefit-item">
-            <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Hands-on Asana Sessions</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="benefit-item">
-          <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Personalized Mentorship</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="benefit-item">
-          <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="benefit-item">
-          <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Downloadable Material</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="benefit-item">
-          <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Expert Faculty</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="benefit-item">
-          <span className="icon">
-              <img src="/images/benefits.svg" alt="Benefits Icon" />
-            </span>
-            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
-            <h3>Hands-on Asana Sessions</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-        </div>
-      </section>
+// {/* Button Section */}
 
-      {/* Whom Can You Teach Section */}
-      <section className="teach" id="teach">
-        <h2 className="section-title1">
-          <span className="highlight">Student Benefits</span>
-          <br />
-          <span className="title2">Whom can you teach</span>
-        </h2>
-        <p className="section-description">
-          Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
-          skills, and confidence to teach yoga effectively. Here’s what you’ll get:
-        </p>
-        <div className="teach-grid">
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card} alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-          <div className="teach-item">
-          <span className="icon">
-          <img src="/images/teach.svg" alt="Teach Icon" />
-          </span>
-          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
-            <h3>Certification</h3>
-            <p>Practice and learn under expert supervision.</p>
-          </div>
-        </div>
-      </section>
+// <section className="btn-wrapper">
 
-  {/* Available Batches */}
-{/* <section id="available-batches">
-  <div className="available-batches">
-      <div className="batch-container">
-        <div className="batch-header">
-          <p className="available-text">Available Batches</p>
-          <h2 className="choose-text">Choose Your Ideal Batch</h2>
-          <p className="description-text">
-            Our flexible course schedule allows you to find a batch that fits your availability.<br />
-            Get started on your path to becoming a certified yoga instructor today.
-          </p>
-        </div>
+// <div className="btn_wrapper-container">
+
+//   <button className={`btn_links ${activeButton === "benefits" ? "btn_link_active" : "btn_link_notactive"}`}
+//         onClick={() => handleClick("benefits")}
+//   // onClick={() => {
+//   //   document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" });
+//   // }}
+//   >Student Benefits</button>
+//   <button 
+//   className={`btn_links ${activeButton === "available-batches" ? "btn_link_active" : "btn_link_notactive"}`}
+//   onClick={() => handleClick("available-batches")}
+//   // className="btn_links btn_link_active" 
+//   // onClick={() => {
+//   //   document.getElementById("available-batches")?.scrollIntoView({ behavior: "smooth" });
+//   // }}
+//   >Available batches</button>
+//   <button 
+//   className={`btn_links ${activeButton === "teach" ? "btn_link_active" : "btn_link_notactive"}`}
+//   onClick={() => handleClick("teach")}
+//   // className="btn_links" 
+//   // onClick={() => {
+//   //   document.getElementById("teach")?.scrollIntoView({ behavior: "smooth" });
+//   // }}
+//   >Teaching & Certification</button>
+//   <button 
+// className={`btn_links ${activeButton === "offerings" ? "btn_link_active" : "btn_link_notactive"}`}
+// onClick={() => handleClick("offerings")}
+//   // className="btn_links" 
+//   // onClick={() => {
+//   //   document.getElementById("offerings")?.scrollIntoView({ behavior: "smooth" });
+//   // }}
+//   >Our Unique Offerings</button>
+//   <button 
+//   className={`btn_links ${activeButton === "faq" ? "btn_link_active" : "btn_link_notactive"}`}
+//   onClick={() => handleClick("faq")}
+//   // className="btn_links" 
+//   // onClick={() => {
+//   //   document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+//   // }}
+//   >FAQ</button>
+
+// </div>
+
+// </section>
+
+// {/* end button sectgion */}
+
+
+//       {/* Benefits Section */}
+//       <section className="benefits" id="benefits">
+//         <h2 className="section-title">
+//           <span className="highlight">Student Benefits</span>
+//           <br />
+//           <span className="title2">What will you get from this Training?</span>
+//         </h2>
+//         <p className="section-description">
+//           Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
+//           skills, and confidence to teach yoga effectively. Here’s what you’ll get:
+//         </p>
+//         <div className="benefits-grid">
+//           <div className="benefit-item">
+//             <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Hands-on Asana Sessions</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="benefit-item">
+//           <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Personalized Mentorship</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="benefit-item">
+//           <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="benefit-item">
+//           <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Downloadable Material</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="benefit-item">
+//           <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Expert Faculty</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="benefit-item">
+//           <span className="icon">
+//               <img src="/images/benefits.svg" alt="Benefits Icon" />
+//             </span>
+//             <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
+//             <h3>Hands-on Asana Sessions</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Whom Can You Teach Section */}
+//       <section className="teach" id="teach">
+//         <h2 className="section-title1">
+//           <span className="highlight">Student Benefits</span>
+//           <br />
+//           <span className="title2">Whom can you teach</span>
+//         </h2>
+//         <p className="section-description">
+//           Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
+//           skills, and confidence to teach yoga effectively. Here’s what you’ll get:
+//         </p>
+//         <div className="teach-grid">
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card} alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//           <div className="teach-item">
+//           <span className="icon">
+//           <img src="/images/teach.svg" alt="Teach Icon" />
+//           </span>
+//           <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
+//             <h3>Certification</h3>
+//             <p>Practice and learn under expert supervision.</p>
+//           </div>
+//         </div>
+//       </section>
+
+//   {/* Available Batches */}
+// {/* <section id="available-batches">
+//   <div className="available-batches">
+//       <div className="batch-container">
+//         <div className="batch-header">
+//           <p className="available-text">Available Batches</p>
+//           <h2 className="choose-text">Choose Your Ideal Batch</h2>
+//           <p className="description-text">
+//             Our flexible course schedule allows you to find a batch that fits your availability.<br />
+//             Get started on your path to becoming a certified yoga instructor today.
+//           </p>
+//         </div>
         
-        <div className="batch-grid">
-          <div className="batch-row header-row">
+//         <div className="batch-grid">
+//           <div className="batch-row header-row">
           
-            <div className="batch-cell logo-cell">
-              <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
-            </div>
+//             <div className="batch-cell logo-cell">
+//               <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+//             </div>
 
-            {batches.map((batch) => {
-              const titleParts = batch.title.split(" ");
-              const firstPart = titleParts.slice(0, 2).join(" ");
-              const secondPart = titleParts.slice(2).join(" ");
+//             {batches.map((batch) => {
+//               const titleParts = batch.title.split(" ");
+//               const firstPart = titleParts.slice(0, 2).join(" ");
+//               const secondPart = titleParts.slice(2).join(" ");
               
-              return (
-                <div key={batch.id} className="batch-cell header-cell">
-                  <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
-                    <div className="batch-name">{firstPart}<br /> {secondPart}</div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+//               return (
+//                 <div key={batch.id} className="batch-cell header-cell">
+//                   <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+//                     <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Duration</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                  {batch.duration}
-                </div>
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Duration</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                   {batch.duration}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Batch Mode</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                {batch.mode}
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Batch Mode</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 {batch.mode}
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Language</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                  {batch.language}
-                </div>
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Language</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                   {batch.language}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Starting Date</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                {batch.startDate}
-                <span 
-                  className="view-batch-link" 
-                  onClick={() => {
-                    setActiveTab(batch.id);
-                    setShowModal(true);
-                    setActiveIndex(null); // Reset active index when opening modal
-                  }}
-                >
-                  View upcoming batch
-                </span>
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Starting Date</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 {batch.startDate}
+//                 <span 
+//                   className="view-batch-link" 
+//                   onClick={() => {
+//                     setActiveTab(batch.id);
+//                     setShowModal(true);
+//                     setActiveIndex(null); // Reset active index when opening modal
+//                   }}
+//                 >
+//                   View upcoming batch
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Timings</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                  {batch.timing}
-                </div>
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Timings</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                   {batch.timing}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell">Days</div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell data-cell">
-                {batch.days}
-              </div>
-            ))}
-          </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell">Days</div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell data-cell">
+//                 {batch.days}
+//               </div>
+//             ))}
+//           </div>
           
-          <div className="batch-row">
-            <div className="batch-cell label-cell"></div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell button-cell">
-                <button className="enroll-now-btn">Enroll Now →</button>
-                <button className="view-details-btn"  onClick={() => navigate("/one-month-ttc")}
-    >View Details</button>
-              </div>
-            ))}
-          </div>
-        </div>
+//           <div className="batch-row">
+//             <div className="batch-cell label-cell"></div>
+//             {batches.map((batch) => (
+//               <div key={batch.id} className="batch-cell button-cell">
+//                 <button className="enroll-now-btn">Enroll Now →</button>
+//                 <button className="view-details-btn"  onClick={() => navigate("/one-month-ttc")}
+//     >View Details</button>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
 
-        {showModal && (
-          <div className="modal-overlay">
-            <div className="modal-box">
-              <div className="modal-header">
-                <h3>Upcoming Dates</h3>
-                <button 
-                  className="close-modal" 
-                  onClick={() => setShowModal(false)}
-                >
-                  <img src={close} alt="" />
-                </button>
-              </div>
-              <div className="modal-body">
-                <div className="date-grid">
-                  {upcomingDates.map((date, index) => (
-                    <div
-                      key={index}
-                      className={`date-item ${activeIndex === index ? "active" : ""}`}
-                      onClick={() => handleDateSelect(index)}
-                    >
-                      <div className="date-line">
-                        <span className="calendar-icon">
-                          <img src="/images/calender.svg" alt="Calendar Icon" />
-                        </span>
-                        <span className="date">{date.date}</span>
-                      </div>
-                      <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
-                        <span className="computer-icon">
-                          <img src="/images/computer.svg" alt="Computer Icon" />
-                        </span>
-                        <span className="mode">{date.mode}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+//         {showModal && (
+//           <div className="modal-overlay">
+//             <div className="modal-box">
+//               <div className="modal-header">
+//                 <h3>Upcoming Dates</h3>
+//                 <button 
+//                   className="close-modal" 
+//                   onClick={() => setShowModal(false)}
+//                 >
+//                   <img src={close} alt="" />
+//                 </button>
+//               </div>
+//               <div className="modal-body">
+//                 <div className="date-grid">
+//                   {upcomingDates.map((date, index) => (
+//                     <div
+//                       key={index}
+//                       className={`date-item ${activeIndex === index ? "active" : ""}`}
+//                       onClick={() => handleDateSelect(index)}
+//                     >
+//                       <div className="date-line">
+//                         <span className="calendar-icon">
+//                           <img src="/images/calender.svg" alt="Calendar Icon" />
+//                         </span>
+//                         <span className="date">{date.date}</span>
+//                       </div>
+//                       <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+//                         <span className="computer-icon">
+//                           <img src="/images/computer.svg" alt="Computer Icon" />
+//                         </span>
+//                         <span className="mode">{date.mode}</span>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
                 
-                <div className="enrollcourse">
-                  <button
-                    className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-                    disabled={activeIndex === null}
-                    onClick={() => {
-                      if (activeIndex !== null) {
-                        // Handle enrollment logic here
-                        console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
-                        // You could redirect here with window.location.href = "/enrollment-page";
-                      }
-                    }}
-                  >
-                    Enroll Course
-                    <span className="enrollimg">
-                      <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-    </section> */}
+//                 <div className="enrollcourse">
+//                   <button
+//                     className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+//                     disabled={activeIndex === null}
+//                     onClick={() => {
+//                       if (activeIndex !== null) {
+//                         // Handle enrollment logic here
+//                         console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+//                         // You could redirect here with window.location.href = "/enrollment-page";
+//                       }
+//                     }}
+//                   >
+//                     Enroll Course
+//                     <span className="enrollimg">
+//                       <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+//                     </span>
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//     </section> */}
 
-<section id="available-batches">
-  <div className="available-batches">
-    <div className="batch-container">
-      <div className="batch-header">
-        <p className="available-text">Available Batches</p>
-        <h2 className="choose-text">Choose Your Ideal Batch</h2>
-        <p className="description-text">
-          Our flexible course schedule allows you to find a batch that fits your availability.<br />
-          Get started on your path to becoming a certified yoga instructor today.
-        </p>
-      </div>
-  {/* Adding separate div with all batch headings */}
-  <div className="all-batches-heading-container">
-        <div className="batch-logo-placeholder"></div>
-        {/* {batches.map((batch) => (
-          // <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: batch.bgcolor }}>
-          <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: "#F0F0F0" }}>
-            {batch.heading}
-          </div>
-        ))} */}
-      </div>
+// <section id="available-batches">
+//   <div className="available-batches">
+//     <div className="batch-container">
+//       <div className="batch-header">
+//         <p className="available-text">Available Batches</p>
+//         <h2 className="choose-text">Choose Your Ideal Batch</h2>
+//         <p className="description-text">
+//           Our flexible course schedule allows you to find a batch that fits your availability.<br />
+//           Get started on your path to becoming a certified yoga instructor today.
+//         </p>
+//       </div>
+//   {/* Adding separate div with all batch headings */}
+//   <div className="all-batches-heading-container">
+//         <div className="batch-logo-placeholder"></div>
+//         {/* {batches.map((batch) => (
+//           // <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: batch.bgcolor }}>
+//           <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: "#F0F0F0" }}>
+//             {batch.heading}
+//           </div>
+//         ))} */}
+//       </div>
 
-      <div className="batch-grid">
-        {/* Header Row with Batch Names */}
-        <div className="batch-row header-row">
-          <div className="batch-cell logo-cell">
-            <div>
-            <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
-            </div>
-          </div>
+//       <div className="batch-grid">
+//         {/* Header Row with Batch Names */}
+//         <div className="batch-row header-row">
+//           <div className="batch-cell logo-cell">
+//             <div>
+//             <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+//             </div>
+//           </div>
 
-          {batches.map((batch) => {
-            const titleParts = batch.title.split(" ");
-            const firstPart = titleParts.slice(0, 2).join(" ");
-            const secondPart = titleParts.slice(2).join(" ");
+//           {batches.map((batch) => {
+//             const titleParts = batch.title.split(" ");
+//             const firstPart = titleParts.slice(0, 2).join(" ");
+//             const secondPart = titleParts.slice(2).join(" ");
 
-            return (
-              <div key={batch.id} className="batch-cell header-cell">
-                <div key={batch.id} className="batch-heading-label">
-            <div className="batch-wrapper" style={{ backgroundColor: "#F0F0F0" }}>
-            {batch.heading}
-            </div>
-          </div>
-                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
-                  <div className="batch-name">{firstPart}<br /> {secondPart}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+//             return (
+//               <div key={batch.id} className="batch-cell header-cell">
+//                 <div key={batch.id} className="batch-heading-label">
+//             <div className="batch-wrapper" style={{ backgroundColor: "#F0F0F0" }}>
+//             {batch.heading}
+//             </div>
+//           </div>
+//                 <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+//                   <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
 
-        {/* Batch Details Rows */}
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Duration</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.duration}
-              </div>
-            </div>
-          ))}
-        </div>
+//         {/* Batch Details Rows */}
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Duration</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.duration}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Batch Mode</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.mode}
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Batch Mode</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.mode}
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Language</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.language}
-              </div>
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Language</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.language}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
  
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Starting Date</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.startDate}
-              <span 
-                className="view-batch-link" 
-                onClick={() => {
-                  setActiveTab(batch.id);
-                  setShowModal(true);
-                  setActiveIndex(null); // Reset active index when opening modal
-                }}
-              >
-                View upcoming batch
-              </span>
-            </div>
-          ))}
-        </div> 
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Starting Date</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.startDate}
+//               <span 
+//                 className="view-batch-link" 
+//                 onClick={() => {
+//                   setActiveTab(batch.id);
+//                   setShowModal(true);
+//                   setActiveIndex(null); // Reset active index when opening modal
+//                 }}
+//               >
+//                 View upcoming batch
+//               </span>
+//             </div>
+//           ))}
+//         </div> 
 
-{/* <div className="batch-row">
-              <div className="batch-cell label-cell">Starting Date</div>
-              {batches.map((batch) => (
-                <div key={batch.id} className="batch-cell data-cell">
-                  {batch.startDate}
-                  <span 
-                    className="view-batch-link" 
-                    onClick={() => openBatchModal(batch.id)}
-                  >
-                    View upcoming batch
-                  </span>
-                </div>
-              ))}
-            </div> */}
+// {/* <div className="batch-row">
+//               <div className="batch-cell label-cell">Starting Date</div>
+//               {batches.map((batch) => (
+//                 <div key={batch.id} className="batch-cell data-cell">
+//                   {batch.startDate}
+//                   <span 
+//                     className="view-batch-link" 
+//                     onClick={() => openBatchModal(batch.id)}
+//                   >
+//                     View upcoming batch
+//                   </span>
+//                 </div>
+//               ))}
+//             </div> */}
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Timings</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.timing}
-              </div>
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Timings</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.timing}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Days</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.days}
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Days</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.days}
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell"></div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell button-cell">
-              <button className="enroll-now-btn"><a href={batch.enrollLink}>Enroll Now →</a></button>
-              <button 
-                className="view-details-btn"  
-                onClick={() => navigate(batch.viewDetailsLink)}
-              >
-                View Details
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell"></div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell button-cell">
+//               <button className="enroll-now-btn"><a href={batch.enrollLink}>Enroll Now →</a></button>
+//               <button 
+//                 className="view-details-btn"  
+//                 onClick={() => navigate(batch.viewDetailsLink)}
+//               >
+//                 View Details
+//               </button>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
 
-      {/* Modal for Upcoming Batches */}
-      {/* {showModal && (
-            <div className="modal-overlay">
-              <div className="modal-box">
-                <div className="modal-header">
-                  <h3>Upcoming Dates</h3>
-                  <button 
-                    className="close-modal" 
-                    onClick={() => setShowModal(false)}
-                  >
-                    <img src={close} alt="" />
-                  </button>
-                </div>
-                <div className="modal-body">
-                  <div className="date-grid">
-                    {currentBatchDates.map((date, index) => (
-                      <div
-                        key={index}
-                        className={`date-item ${activeIndex === index ? "active" : ""}`}
-                        onClick={() => handleDateSelect(index)}
-                      >
-                        <div className="date-line">
-                          <span className="calendar-icon">
-                            <img src="/images/calender.svg" alt="Calendar Icon" />
-                          </span>
-                          <span className="date">{date.date}</span>
-                        </div>
-                        <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
-                          <span className="computer-icon">
-                            <img src="/images/computer.svg" alt="Computer Icon" />
-                          </span>
-                          <span className="mode">{date.mode}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+//       {/* Modal for Upcoming Batches */}
+//       {/* {showModal && (
+//             <div className="modal-overlay">
+//               <div className="modal-box">
+//                 <div className="modal-header">
+//                   <h3>Upcoming Dates</h3>
+//                   <button 
+//                     className="close-modal" 
+//                     onClick={() => setShowModal(false)}
+//                   >
+//                     <img src={close} alt="" />
+//                   </button>
+//                 </div>
+//                 <div className="modal-body">
+//                   <div className="date-grid">
+//                     {currentBatchDates.map((date, index) => (
+//                       <div
+//                         key={index}
+//                         className={`date-item ${activeIndex === index ? "active" : ""}`}
+//                         onClick={() => handleDateSelect(index)}
+//                       >
+//                         <div className="date-line">
+//                           <span className="calendar-icon">
+//                             <img src="/images/calender.svg" alt="Calendar Icon" />
+//                           </span>
+//                           <span className="date">{date.date}</span>
+//                         </div>
+//                         <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+//                           <span className="computer-icon">
+//                             <img src="/images/computer.svg" alt="Computer Icon" />
+//                           </span>
+//                           <span className="mode">{date.mode}</span>
+//                         </div>
+//                       </div>
+//                     ))}
+//                   </div>
                   
-                  <div className="enrollcourse">
-                    <button
-                      className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-                      disabled={activeIndex === null}
-                      onClick={() => {
-                        if (activeIndex !== null) {
-                          window.location.href = currentBatchDates[activeIndex].enrollLink;
-                        }
-                      }}
-                    >
-                      <a href={activeIndex !== null ? currentBatchDates[activeIndex].enrollLink : ''}>
-                        Enroll Course
-                        <span className="enrollimg">
-                          <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-                        </span>
-                      </a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section> */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-box">
-            <div className="modal-header">
-              <h3>Upcoming Dates</h3>
-              <button 
-                className="close-modal" 
-                onClick={() => setShowModal(false)}
-              >
-                <img src={close} alt="" />
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="date-grid">
-                {c200hr.map((date, index) => (
-                  <div
-                    key={index}
-                    className={`date-item ${activeIndex === index ? "active" : ""}`}
-                    onClick={() => handleDateSelect(index)}
-                  >
-                    <div className="date-line">
-                      <span className="calendar-icon">
-                        <img src="/images/calender.svg" alt="Calendar Icon" />
-                      </span>
-
-                      
-                      <span className="date">{date.dates}</span>
-                    </div>
-                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
-                      <span className="computer-icon">
-                        <img src="/images/computer.svg" alt="Computer Icon" />
-                      </span>
-                      <span className="mode">{date.mode}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+//                   <div className="enrollcourse">
+//                     <button
+//                       className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+//                       disabled={activeIndex === null}
+//                       onClick={() => {
+//                         if (activeIndex !== null) {
+//                           window.location.href = currentBatchDates[activeIndex].enrollLink;
+//                         }
+//                       }}
+//                     >
+//                       <a href={activeIndex !== null ? currentBatchDates[activeIndex].enrollLink : ''}>
+//                         Enroll Course
+//                         <span className="enrollimg">
+//                           <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+//                         </span>
+//                       </a>
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           )}
+//         </div>
+//       </div>
+//     </section> */}
+//       {showModal && (
+//         <div className="modal-overlay">
+//           <div className="modal-box">
+//             <div className="modal-header">
+//               <h3>Upcoming Dates</h3>
+//               <button 
+//                 className="close-modal" 
+//                 onClick={() => setShowModal(false)}
+//               >
+//                 <img src={close} alt="" />
+//               </button>
+//             </div>
+//             <div className="modal-body">
+//               <div className="date-grid">
+//                 {upcomingDates.map((date, index) => (
+//                   <div
+//                     key={index}
+//                     className={`date-item ${activeIndex === index ? "active" : ""}`}
+//                     onClick={() => handleDateSelect(index)}
+//                   >
+//                     <div className="date-line">
+//                       <span className="calendar-icon">
+//                         <img src="/images/calender.svg" alt="Calendar Icon" />
+//                       </span>
+//                       <span className="date">{date.date}</span>
+//                     </div>
+//                     <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+//                       <span className="computer-icon">
+//                         <img src="/images/computer.svg" alt="Computer Icon" />
+//                       </span>
+//                       <span className="mode">{date.mode}</span>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
               
-              <div className="enrollcourse">
-                <button
-                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-                  disabled={activeIndex === null}
-                  onClick={() => {
-                    if (activeIndex !== null) {
-                      console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
-                    }
-                  }}
-                >
-                  <a href=''>
-                  Enroll Course
-                  <span className="enrollimg">
-                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-                  </span>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  </div>
-</section>
+//               <div className="enrollcourse">
+//                 <button
+//                   className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+//                   disabled={activeIndex === null}
+//                   onClick={() => {
+//                     if (activeIndex !== null) {
+//                       console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+//                     }
+//                   }}
+//                 >
+//                   <a href=''>
+//                   Enroll Course
+//                   <span className="enrollimg">
+//                     <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+//                   </span>
+//                   </a>
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   </div>
+// </section>
 
-      {/* <div className="batch-grid">
-        {/* Header Row with Batch Names */}
-        {/* <div className="batch-row header-row">
-          <div className="batch-cell logo-cell">
-            <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
-          </div>
+//       {/* <div className="batch-grid">
+//         {/* Header Row with Batch Names */}
+//         {/* <div className="batch-row header-row">
+//           <div className="batch-cell logo-cell">
+//             <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+//           </div>
 
-          {batches.map((batch) => {
-            const titleParts = batch.title.split(" ");
-            const firstPart = titleParts.slice(0, 2).join(" ");
-            const secondPart = titleParts.slice(2).join(" ");
+//           {batches.map((batch) => {
+//             const titleParts = batch.title.split(" ");
+//             const firstPart = titleParts.slice(0, 2).join(" ");
+//             const secondPart = titleParts.slice(2).join(" ");
 
-            return (
-              <div key={batch.id} className="batch-cell header-cell">
-                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
-                  <div className="batch-heading">{batch.heading}</div> {/* Adding Batch-1, Batch-2, etc. */}
-                  {/* <div className="batch-name">{firstPart}<br /> {secondPart}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div> */} 
+//             return (
+//               <div key={batch.id} className="batch-cell header-cell">
+//                 <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+//                   <div className="batch-heading">{batch.heading}</div> {/* Adding Batch-1, Batch-2, etc. */}
+//                   {/* <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div> */} 
 
-        {/* Batch Details Rows */}
-        {/* <div className="batch-row">
-          <div className="batch-cell label-cell">Duration</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.duration}
-              </div>
-            </div>
-          ))}
-        </div>
+//         {/* Batch Details Rows */}
+//         {/* <div className="batch-row">
+//           <div className="batch-cell label-cell">Duration</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.duration}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Batch Mode</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.mode}
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Batch Mode</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.mode}
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Language</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.language}
-              </div>
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Language</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.language}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Starting Date</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.startDate}
-              <span 
-                className="view-batch-link" 
-                onClick={() => {
-                  setActiveTab(batch.id);
-                  setShowModal(true);
-                  setActiveIndex(null); // Reset active index when opening modal
-                }}
-              >
-                View upcoming batch
-              </span>
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Starting Date</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.startDate}
+//               <span 
+//                 className="view-batch-link" 
+//                 onClick={() => {
+//                   setActiveTab(batch.id);
+//                   setShowModal(true);
+//                   setActiveIndex(null); // Reset active index when opening modal
+//                 }}
+//               >
+//                 View upcoming batch
+//               </span>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Timings</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
-                {batch.timing}
-              </div>
-            </div>
-          ))}
-        </div>
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Timings</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+//                 {batch.timing}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <div className="batch-row">
-          <div className="batch-cell label-cell">Days</div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell data-cell">
-              {batch.days}
-            </div>
-          ))}
-        </div> */}
+//         <div className="batch-row">
+//           <div className="batch-cell label-cell">Days</div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell data-cell">
+//               {batch.days}
+//             </div>
+//           ))}
+//         </div> */}
 
-        {/* <div className="batch-row">
-          <div className="batch-cell label-cell"></div>
-          {batches.map((batch) => (
-            <div key={batch.id} className="batch-cell button-cell">
-              <button className="enroll-now-btn">Enroll Now →</button>
-              <button className="view-details-btn" onClick={() => navigate("/one-month-ttc")}>
-                View Details
-              </button>
-            </div>
-          ))}
-        </div> */}
+//         {/* <div className="batch-row">
+//           <div className="batch-cell label-cell"></div>
+//           {batches.map((batch) => (
+//             <div key={batch.id} className="batch-cell button-cell">
+//               <button className="enroll-now-btn">Enroll Now →</button>
+//               <button className="view-details-btn" onClick={() => navigate("/one-month-ttc")}>
+//                 View Details
+//               </button>
+//             </div>
+//           ))}
+//         </div> */}
 
-        {/* <div className="batch-row">
-  <div className="batch-cell label-cell"></div>
-  {batches.map((batch) => (
-    <div key={batch.id} className="batch-cell button-cell">
-      <button className="enroll-now-btn">Enroll Now →</button>
-      <button 
-        className="view-details-btn"  
-        onClick={() => navigate(batch.viewDetailsLink)}
-      >
-        View Details
-      </button>
-    </div>
-  ))}
-</div>
+//         {/* <div className="batch-row">
+//   <div className="batch-cell label-cell"></div>
+//   {batches.map((batch) => (
+//     <div key={batch.id} className="batch-cell button-cell">
+//       <button className="enroll-now-btn">Enroll Now →</button>
+//       <button 
+//         className="view-details-btn"  
+//         onClick={() => navigate(batch.viewDetailsLink)}
+//       >
+//         View Details
+//       </button>
+//     </div>
+//   ))}
+// </div>
 
-      </div> */} 
+//       </div> */} 
 
 
-      {/* Modal for Upcoming Batches */}
-      {/* {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-box">
-            <div className="modal-header">
-              <h3>Upcoming Dates</h3>
-              <button 
-                className="close-modal" 
-                onClick={() => setShowModal(false)}
-              >
-                <img src={close} alt="" />
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="date-grid">
-                {upcomingDates.map((date, index) => (
-                  <div
-                    key={index}
-                    className={`date-item ${activeIndex === index ? "active" : ""}`}
-                    onClick={() => handleDateSelect(index)}
-                  >
-                    <div className="date-line">
-                      <span className="calendar-icon">
-                        <img src="/images/calender.svg" alt="Calendar Icon" />
-                      </span>
-                      <span className="date">{date.date}</span>
-                    </div>
-                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
-                      <span className="computer-icon">
-                        <img src="/images/computer.svg" alt="Computer Icon" />
-                      </span>
-                      <span className="mode">{date.mode}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+//       {/* Modal for Upcoming Batches */}
+//       {/* {showModal && (
+//         <div className="modal-overlay">
+//           <div className="modal-box">
+//             <div className="modal-header">
+//               <h3>Upcoming Dates</h3>
+//               <button 
+//                 className="close-modal" 
+//                 onClick={() => setShowModal(false)}
+//               >
+//                 <img src={close} alt="" />
+//               </button>
+//             </div>
+//             <div className="modal-body">
+//               <div className="date-grid">
+//                 {upcomingDates.map((date, index) => (
+//                   <div
+//                     key={index}
+//                     className={`date-item ${activeIndex === index ? "active" : ""}`}
+//                     onClick={() => handleDateSelect(index)}
+//                   >
+//                     <div className="date-line">
+//                       <span className="calendar-icon">
+//                         <img src="/images/calender.svg" alt="Calendar Icon" />
+//                       </span>
+//                       <span className="date">{date.date}</span>
+//                     </div>
+//                     <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+//                       <span className="computer-icon">
+//                         <img src="/images/computer.svg" alt="Computer Icon" />
+//                       </span>
+//                       <span className="mode">{date.mode}</span>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
               
-              <div className="enrollcourse">
-                <button
-                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-                  disabled={activeIndex === null}
-                  onClick={() => {
-                    if (activeIndex !== null) {
-                      console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
-                    }
-                  }}
-                >
-                  Enroll Course
-                  <span className="enrollimg">
-                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  </div>
-</section> */}
+//               <div className="enrollcourse">
+//                 <button
+//                   className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+//                   disabled={activeIndex === null}
+//                   onClick={() => {
+//                     if (activeIndex !== null) {
+//                       console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+//                     }
+//                   }}
+//                 >
+//                   Enroll Course
+//                   <span className="enrollimg">
+//                     <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+//                   </span>
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   </div>
+// </section> */}
 
 
 
 
-      {/* Teaching & Certification */}
-      <section className="certification">
-      <h2 className="section-title">
-        <span className="highlight">Available Batches</span>
+//       {/* Teaching & Certification */}
+//       <section className="certification">
+//       <h2 className="section-title">
+//         <span className="highlight">Available Batches</span>
         
-      </h2>
-      <div className="highlight_below">Teaching & Certification</div>
-      {/* <p className="section-description">
-        Our 200-hour yoga teacher training is globally recognized.
-      </p> */}
+//       </h2>
+//       <div className="highlight_below">Teaching & Certification</div>
+//       {/* <p className="section-description">
+//         Our 200-hour yoga teacher training is globally recognized.
+//       </p> */}
 
-      <div className="certification-grid">
-        {/* Course Attendance Criteria */}
-        <div className="criteria">
-          <h3>Course Attendance Criteria</h3>
-          <ul>
-            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A student is required to have a minimum <span className="bold_points">80% attendance</span></li>
-            <li>
-            <img className="tc_icon" src={tC_icon} alt="" />
-            After qualifying the attendance criteria, students can appear for the exam 
-            (100 marks). Details below:
-            </li>
-            <table>
-            <thead>
-              <tr>
-                <th>Course Details</th>
-                <th>Marks</th>
-                <th>Minimum Score Req.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Theory Component</td>
-                <td>50 marks</td>
-                <td>50%</td>
-              </tr>
-            </tbody>
-          </table>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by <span className="bold_points">The Yoga Institute</span></li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />This Certificate is recognized by <span className="bold_points">Yoga Certification Board (AYUSH Level-1) and 
-          Yoga Alliance USA (RYT 200).</span></li>
-          </ul>
+//       <div className="certification-grid">
+//         {/* Course Attendance Criteria */}
+//         <div className="criteria">
+//           <h3>Course Attendance Criteria</h3>
+//           <ul>
+//             <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A student is required to have a minimum <span className="bold_points">80% attendance</span></li>
+//             <li>
+//             <img className="tc_icon" src={tC_icon} alt="" />
+//             After qualifying the attendance criteria, students can appear for the exam 
+//             (100 marks). Details below:
+//             </li>
+//             <table>
+//             <thead>
+//               <tr>
+//                 <th>Course Details</th>
+//                 <th>Marks</th>
+//                 <th>Minimum Score Req.</th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               <tr>
+//                 <td>Theory Component</td>
+//                 <td>50 marks</td>
+//                 <td>50%</td>
+//               </tr>
+//             </tbody>
+//           </table>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by <span className="bold_points">The Yoga Institute</span></li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />This Certificate is recognized by <span className="bold_points">Yoga Certification Board (AYUSH Level-1) and 
+//           Yoga Alliance USA (RYT 200).</span></li>
+//           </ul>
           
-          {/* <p>
-            Upon passing the exam, students will receive a{" "}
-            <strong>Basic Teacher Training Certificate (200 Hours)</strong> by
-            The Yoga Institute.
-          </p> */}
-        </div>
+//           {/* <p>
+//             Upon passing the exam, students will receive a{" "}
+//             <strong>Basic Teacher Training Certificate (200 Hours)</strong> by
+//             The Yoga Institute.
+//           </p> */}
+//         </div>
 
-        {/* Post Qualification Opportunities */}
-        <div className="opportunities">
-          <h3>Post Qualification Opportunities</h3>
-          <div className="images">
-            <div className="top_image">
-            <img src={Post_1} alt="Post Qualification" />
-            </div>
-            <div className="below_images">
-            <img src={Post_2} alt="Post Qualification" />
-            <img src={Post_3} alt="Post Qualification" />
-            <img src={Post_4} alt="Post Qualification" />
-            </div>
-            {/* <img src="post2.svg" alt="Post Qualification" />
-            <img src="post3.svg" alt="Post Qualification" />
-            <img src="post4.svg" alt="Post Qualification" /> */}
-          </div>
-        </div>
+//         {/* Post Qualification Opportunities */}
+//         <div className="opportunities">
+//           <h3>Post Qualification Opportunities</h3>
+//           <div className="images">
+//             <div className="top_image">
+//             <img src={Post_1} alt="Post Qualification" />
+//             </div>
+//             <div className="below_images">
+//             <img src={Post_2} alt="Post Qualification" />
+//             <img src={Post_3} alt="Post Qualification" />
+//             <img src={Post_4} alt="Post Qualification" />
+//             </div>
+//             {/* <img src="post2.svg" alt="Post Qualification" />
+//             <img src="post3.svg" alt="Post Qualification" />
+//             <img src="post4.svg" alt="Post Qualification" /> */}
+//           </div>
+//         </div>
 
-        {/* Exam Details */}
-        <div className="exam-details">
-          <h3>Exam Details</h3>
-          <ul>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Yoga Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance</li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will have to appear for the final exams within 60 days from the course end date</li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.
-          <ul>
+//         {/* Exam Details */}
+//         <div className="exam-details">
+//           <h3>Exam Details</h3>
+//           <ul>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Yoga Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance</li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will have to appear for the final exams within 60 days from the course end date</li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.
+//           <ul>
             
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.</li>
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>They will have to appear for both in case of a 3rd attempt.</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>They will have to appear for both in case of a 3rd attempt.</li>
             
-            </ul></li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams.</li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams. Once finalized, students will not be permitted to switch from online to on-campus and vice versa.</li>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Examiners will evaluate students only as per the final approved list.</li>
+//             </ul></li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams.</li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams. Once finalized, students will not be permitted to switch from online to on-campus and vice versa.</li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Examiners will evaluate students only as per the final approved list.</li>
           
-          </ul>
-        </div>
+//           </ul>
+//         </div>
 
-        {/* Exam Schedule */}
-        <div className="exam-schedule">
-          <h3>Exam Schedule</h3>
-          <ul>
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.</li>
+//         {/* Exam Schedule */}
+//         <div className="exam-schedule">
+//           <h3>Exam Schedule</h3>
+//           <ul>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.</li>
           
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.
-          <ul>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.
+//           <ul>
             
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Theory exams will be conducted online at 5pm (IST)</li>
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>Theory exams will be conducted online at 5pm (IST)</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.</li>
             
-            </ul></li>
-            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students, after submission, can log out /leave only with the explicit permission of the examiner
-          <ul>
+//             </ul></li>
+//             <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students, after submission, can log out /leave only with the explicit permission of the examiner
+//           <ul>
             
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>For practical’s - students will have to wait till the exams of all students are completed</li>
-            <li style={{listStyle: 'circle', marginLeft: '70px'}}>The examiner may call out students at random and not necessarily in alphabetic order</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>For practical’s - students will have to wait till the exams of all students are completed</li>
+//             <li style={{listStyle: 'circle', marginLeft: '70px'}}>The examiner may call out students at random and not necessarily in alphabetic order</li>
             
-            </ul></li>
+//             </ul></li>
           
-          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process</li>
+//           <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process</li>
           
-          </ul>
-        </div>
+//           </ul>
+//         </div>
 
       
-      </div>
+//       </div>
 
-        {/* Post Course Certification */}
-        <div className="post-certification_wrapper">
-          <span>What you will get on post course</span>
-          {/* <div className="certificates">
-            <div className="certificate-item">
-              <p>RYT - 200 Certificate</p>
-            </div>
-            <div className="certificate-item">
-              <p>YCB Level - 3 Certificate</p>
-            </div>
-          </div> */}
-          {/* <img src={certificateImg} alt="Certificate" className="certificate-image" /> */}
-          <div className="img_certificates-wrapper">
-              <div className="first_left_wrapper">
-                <img style={{marginRight: '90px'}} src={certificate_1} alt="" />
-                <img src={certificate_2} alt="" />
-              </div>
-              <div className="first_right_wrapper">
-                <img src={certificate_3} alt="" />
-              </div>
-          </div>
-        </div>
-    </section>
+//         {/* Post Course Certification */}
+//         <div className="post-certification_wrapper">
+//           <span>What you will get on post course</span>
+//           {/* <div className="certificates">
+//             <div className="certificate-item">
+//               <p>RYT - 200 Certificate</p>
+//             </div>
+//             <div className="certificate-item">
+//               <p>YCB Level - 3 Certificate</p>
+//             </div>
+//           </div> */}
+//           {/* <img src={certificateImg} alt="Certificate" className="certificate-image" /> */}
+//           <div className="img_certificates-wrapper">
+//               <div className="first_left_wrapper">
+//                 <img style={{marginRight: '90px'}} src={certificate_1} alt="" />
+//                 <img src={certificate_2} alt="" />
+//               </div>
+//               <div className="first_right_wrapper">
+//                 <img src={certificate_3} alt="" />
+//               </div>
+//           </div>
+//         </div>
+//     </section>
 
-      {/* Unique Offerings */}
-      {/* <section className="offerings container" id="offerings">
-      <h2 className="section-title" style={{ marginBottom: '0px' }}>
-        <span className="highlight">Available Batches</span>
-        <br />
+//       {/* Unique Offerings */}
+//       {/* <section className="offerings container" id="offerings">
+//       <h2 className="section-title" style={{ marginBottom: '0px' }}>
+//         <span className="highlight">Available Batches</span>
+//         <br />
         
-      </h2>
-      <h3 className="sec_main">Our Unique Offerings</h3>
+//       </h2>
+//       <h3 className="sec_main">Our Unique Offerings</h3>
 
-      {/* <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={
-          {
-            rotate: 0,
-            stretch: 0,
-            depth:100,
-            modifier:2.5
-          }
-        }
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider_1} alt="" />
-          <div className="slide-content">
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
-            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div>
-        </SwiperSlide>
+//       {/* <Swiper
+//         effect={'coverflow'}
+//         grabCursor={true}
+//         centeredSlides={true}
+//         loop={true}
+//         slidesPerView={'auto'}
+//         coverflowEffect={
+//           {
+//             rotate: 0,
+//             stretch: 0,
+//             depth:100,
+//             modifier:2.5
+//           }
+//         }
+//         pagination={{ el: '.swiper-pagination', clickable: true }}
+//         navigation={{
+//           nextEl: '.swiper-button-next',
+//           prevEl: '.swiper-button-prev',
+//           clickable: true,
+//         }}
+//         modules={[EffectCoverflow, Pagination, Navigation]}
+//         className="swiper_container"
+//       >
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={slider_1} alt="" />
+//           <div className="slide-content">
+//             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+//             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+//           </div>
+//         </SwiperSlide>
 
 
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
+//         <div className="slider-controler">
+//           <div className="swiper-button-prev slider-arrow">
+//             <ion-icon name="arrow-back-outline"></ion-icon>
+//           </div>
+//           <div className="swiper-pagination"></div>
+//           <div className="swiper-button-next slider-arrow">
+//             <ion-icon name="arrow-forward-outline"></ion-icon>
+//           </div>
          
-        </div>
-      </Swiper> */}
-{/* 
-<Swiper
-      effect={'coverflow'}
-      grabCursor={true}
-      centeredSlides={true}
-      loop={true}
-      slidesPerView={'auto'}
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2.5,
-      }}
-      pagination={{ clickable: true }} // Corrected
-      navigation={{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        clickable: true,
-      }}
-      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      modules={[EffectCoverflow, Pagination, Navigation]}
-      className="swiper_container"
-    >
-      {[...Array(8)].map((_, index) => (
-        <SwiperSlide key={index}>
-          <img src={slider_1} alt="" />
-          <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-            <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
-            <p>
-              Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
-            </p>
-          </div>
-        </SwiperSlide>
-      ))}
+//         </div>
+//       </Swiper> */}
+// {/* 
+// <Swiper
+//       effect={'coverflow'}
+//       grabCursor={true}
+//       centeredSlides={true}
+//       loop={true}
+//       slidesPerView={'auto'}
+//       coverflowEffect={{
+//         rotate: 0,
+//         stretch: 0,
+//         depth: 100,
+//         modifier: 2.5,
+//       }}
+//       pagination={{ clickable: true }} // Corrected
+//       navigation={{
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//         clickable: true,
+//       }}
+//       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+//       modules={[EffectCoverflow, Pagination, Navigation]}
+//       className="swiper_container"
+//     >
+//       {[...Array(8)].map((_, index) => (
+//         <SwiperSlide key={index}>
+//           <img src={slider_1} alt="" />
+//           <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+//             <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
+//             <p>
+//               Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
+//             </p>
+//           </div>
+//         </SwiperSlide>
+//       ))}
 
 
 
       
-    </Swiper>
+//     </Swiper>
 
-    <div className="slider-controler">
-        <div className="swiper-button-prev slider-arrow">
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </div>
-        <div className="swiper-pagination">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div className="swiper-button-next slider-arrow">
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-      </div> */}
+//     <div className="slider-controler">
+//         <div className="swiper-button-prev slider-arrow">
+//           <ion-icon name="arrow-back-outline"></ion-icon>
+//         </div>
+//         <div className="swiper-pagination">
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//         </div>
+//         <div className="swiper-button-next slider-arrow">
+//           <ion-icon name="arrow-forward-outline"></ion-icon>
+//         </div>
+//       </div> */}
 
- {/* <div className="carousel-container">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ 
-          el: '.swiper-pagination',
-          clickable: true,
-          dynamicBullets: true
-        }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        {[...Array(8)].map((_, index) => (
-          <SwiperSlide key={index}>
-            <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
-              <img src={slider_1} alt={`Slide ${index + 1}`} />
-              <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-                <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
-                <p>
-                  Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+//  {/* <div className="carousel-container">
+//       <Swiper
+//         effect={'coverflow'}
+//         grabCursor={true}
+//         centeredSlides={true}
+//         loop={true}
+//         slidesPerView={'auto'}
+//         coverflowEffect={{
+//           rotate: 0,
+//           stretch: 0,
+//           depth: 100,
+//           modifier: 2.5,
+//         }}
+//         pagination={{ 
+//           el: '.swiper-pagination',
+//           clickable: true,
+//           dynamicBullets: true
+//         }}
+//         navigation={{
+//           nextEl: '.swiper-button-next',
+//           prevEl: '.swiper-button-prev',
+//         }}
+//         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+//         modules={[EffectCoverflow, Pagination, Navigation]}
+//         className="swiper_container"
+//       >
+//         {[...Array(8)].map((_, index) => (
+//           <SwiperSlide key={index}>
+//             <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+//               <img src={slider_1} alt={`Slide ${index + 1}`} />
+//               <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+//                 <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
+//                 <p>
+//                   Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
+//                 </p>
+//               </div>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
       
-      <div className="slider-controler">
-        <div className="swiper-button-prev slider-arrow">
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next slider-arrow">
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-      </div>
-    </div> */}
+//       <div className="slider-controler">
+//         <div className="swiper-button-prev slider-arrow">
+//           <ion-icon name="arrow-back-outline"></ion-icon>
+//         </div>
+//         <div className="swiper-pagination"></div>
+//         <div className="swiper-button-next slider-arrow">
+//           <ion-icon name="arrow-forward-outline"></ion-icon>
+//         </div>
+//       </div>
+//     </div> */}
     
 
-      {/* <div className="carousel">
-        <button className="carousel-button left">
+//       {/* <div className="carousel">
+//         <button className="carousel-button left">
          
-        </button>
-        <div className="carousel-track">
-          {offerings.map((offering, index) => (
-            <div className="carousel-item" key={index}>
-              <img src={offering.image} alt={offering.title} />
-            </div>
-          ))}
-        </div>
-        <button className="carousel-button right">
+//         </button>
+//         <div className="carousel-track">
+//           {offerings.map((offering, index) => (
+//             <div className="carousel-item" key={index}>
+//               <img src={offering.image} alt={offering.title} />
+//             </div>
+//           ))}
+//         </div>
+//         <button className="carousel-button right">
          
-        </button>
-      </div>
+//         </button>
+//       </div>
 
-      <div className="offering-details">
-        <h3>{offerings[0].title}</h3>
-        <p>{offerings[0].description}</p>
-      </div>
+//       <div className="offering-details">
+//         <h3>{offerings[0].title}</h3>
+//         <p>{offerings[0].description}</p>
+//       </div>
 
-      <div className="carousel-dots">
-        {offerings.map((_, index) => (
-          <span key={index} className={`dot ${index === 0 ? "active" : ""}`} />
-        ))}
-      </div> */}
+//       <div className="carousel-dots">
+//         {offerings.map((_, index) => (
+//           <span key={index} className={`dot ${index === 0 ? "active" : ""}`} />
+//         ))}
+//       </div> */}
 
-{/* 
-    </section>  */}
+// {/* 
+//     </section>  */}
 
 
-<section className="offerings-container" id="offerings">
-      <div className="section-header">
-        <h2 className="section-title">
-          <span className="highlight">Available Batches</span>
-        </h2>
-        <h3 className="section-main-title">Our Unique Offerings</h3>
-      </div>
+// <section className="offerings-container" id="offerings">
+//       <div className="section-header">
+//         <h2 className="section-title">
+//           <span className="highlight">Available Batches</span>
+//         </h2>
+//         <h3 className="section-main-title">Our Unique Offerings</h3>
+//       </div>
       
-      <div className="carousel-container">
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true
-          }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper-container"
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        >
-          {offeringsData.map((offering, index) => (
-            <SwiperSlide key={offering.id}>
-              <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
-                <div>
-                <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
-                </div>
-                <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-                  <h2>Special Interaction with <span className="slide-title">Dr. Hansaji Yogendra</span></h2>
-                  <p>{offering.description}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+//       <div className="carousel-container">
+//         <Swiper
+//           effect={'coverflow'}
+//           grabCursor={true}
+//           centeredSlides={true}
+//           loop={true}
+//           slidesPerView={'auto'}
+//           coverflowEffect={{
+//             rotate: 0,
+//             stretch: 0,
+//             depth: 100,
+//             modifier: 2.5,
+//           }}
+//           pagination={{
+//             el: '.swiper-pagination',
+//             clickable: true,
+//             dynamicBullets: true
+//           }}
+//           navigation={{
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//           }}
+//           modules={[EffectCoverflow, Pagination, Navigation]}
+//           className="swiper-container"
+//           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+//         >
+//           {offeringsData.map((offering, index) => (
+//             <SwiperSlide key={offering.id}>
+//               <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+//                 <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
+//                 <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+//                   <h2>Special Interaction with <span className="slide-title">{offering.title}</span></h2>
+//                   <p>{offering.description}</p>
+//                 </div>
+//               </div>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
         
-        <div className="slider-controler">
-        <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-            <div className="swiper-button-next slider-arrow">
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        </div>
-      </div>
-    </section>
+//         <div className="slider-controler">
+//         <div className="swiper-button-prev slider-arrow">
+//             <ion-icon name="arrow-back-outline"></ion-icon>
+//           </div>
+//           <div className="swiper-pagination"></div>
+//             <div className="swiper-button-next slider-arrow">
+//           <ion-icon name="arrow-forward-outline"></ion-icon>
+//         </div>
+//         </div>
+//       </div>
+//     </section>
 
-      {/* FAQ Section */}
- <section className="faq" id="faq">
-      <h3 className="faq-heading">FAQ</h3>
-      <h2 className="faq-title">Frequently Asked Question</h2>
+//       {/* FAQ Section */}
+//  <section className="faq" id="faq">
+//       <h3 className="faq-heading">FAQ</h3>
+//       <h2 className="faq-title">Frequently Asked Question</h2>
 
-      <div className="faq-list">
-        {faqData.map((item, index) => (
-          <div
-            key={index}
-            className={`faq-item ${openIndex === index ? "open" : ""}`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className="faq-question">
-              {item.question}
-              <span className="faq-icon">
-  {openIndex === index ? (
-    <img src="/images/arrowup.svg" alt="" />
-  ) : (
-    <img src="/images/arrowdown.svg" alt="" />
-  )}
-</span>
+//       <div className="faq-list">
+//         {faqData.map((item, index) => (
+//           <div
+//             key={index}
+//             className={`faq-item ${openIndex === index ? "open" : ""}`}
+//             onClick={() => toggleFAQ(index)}
+//           >
+//             <div className="faq-question">
+//               {item.question}
+//               <span className="faq-icon">
+//   {openIndex === index ? (
+//     <img src="/images/arrowup.svg" alt="" />
+//   ) : (
+//     <img src="/images/arrowdown.svg" alt="" />
+//   )}
+// </span>
 
-            </div>
-            {openIndex === index && <p className="faq-answer">{item.answer}</p>}
-          </div>
-        ))}
-      </div>
+//             </div>
+//             {openIndex === index && <p className="faq-answer">{item.answer}</p>}
+//           </div>
+//         ))}
+//       </div>
 
-      <div className="refund-policy">
+//       <div className="refund-policy">
         
-      <img src="/images/yogalogorefund.svg" alt="The Yoga Institute" className="logorefund" />
-        <h3>Refund Policy</h3>
-        <p>
-          The Yoga Institute has a strict no-refund policy for all its programs. The only exception is if a program is canceled by the institute, in which case the student will be offered a credit for any other program or a refund of the event fee.
-        </p>
-        {/* <img src="logo.png" alt="The Yoga Institute" className="refund-logo" /> */}
-      </div>
-    </section>
+//       <img src="/images/yogalogorefund.svg" alt="The Yoga Institute" className="logorefund" />
+//         <h3>Refund Policy</h3>
+//         <p>
+//           The Yoga Institute has a strict no-refund policy for all its programs. The only exception is if a program is canceled by the institute, in which case the student will be offered a credit for any other program or a refund of the event fee.
+//         </p>
+//         {/* <img src="logo.png" alt="The Yoga Institute" className="refund-logo" /> */}
+//       </div>
+//     </section>
 
-    {/* Enroll Container */}
-    {/* <section className="enroll-wrapper">
-    <div className="enroll-container">
-      <span className="course-title">200-Hour Yoga Teacher Training Course</span>
-      <button className="enroll-button">
-        Enroll Now 
-        {/* <FiArrowRight className="arrow-icon" /> */} 
-      {/* </button>
-    </div>
-    </section> */} 
-      {/* Footer */}
-      {/* <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-left">
-          <img src="/images/logo.svg" alt="The Yoga Institute" className="logo" />
-          <p>
-            The Yoga Institute, Santacruz East, Mumbai, India was founded in 1918 by Shri Yogendraji and is the oldest
-            center of yoga in the world.
-          </p>
-          <div className="social-icons">
+//     {/* Enroll Container */}
+//     {/* <section className="enroll-wrapper">
+//     <div className="enroll-container">
+//       <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+//       <button className="enroll-button">
+//         Enroll Now 
+//         {/* <FiArrowRight className="arrow-icon" /> */} 
+//       {/* </button>
+//     </div>
+//     </section> */} 
+//       {/* Footer */}
+//       {/* <footer className="footer">
+//       <div className="footer-container">
+//         <div className="footer-left">
+//           <img src="/images/logo.svg" alt="The Yoga Institute" className="logo" />
+//           <p>
+//             The Yoga Institute, Santacruz East, Mumbai, India was founded in 1918 by Shri Yogendraji and is the oldest
+//             center of yoga in the world.
+//           </p>
+//           <div className="social-icons">
            
-          </div>
-        </div>
+//           </div>
+//         </div>
 
-        <div className="footer-center">
-          <div className="stats">
-            <div>
-              <span>105+</span>
-              <p>Number of Years</p>
-            </div>
-            <div>
-              <span>10Cr+</span>
-              <p>Lives Touched</p>
-            </div>
-            <div>
-              <span>1L+</span>
-              <p>Teachers Certified</p>
-            </div>
-            <div>
-              <span>500+</span>
-              <p>Professors</p>
-            </div>
-          </div>
-        </div>
+//         <div className="footer-center">
+//           <div className="stats">
+//             <div>
+//               <span>105+</span>
+//               <p>Number of Years</p>
+//             </div>
+//             <div>
+//               <span>10Cr+</span>
+//               <p>Lives Touched</p>
+//             </div>
+//             <div>
+//               <span>1L+</span>
+//               <p>Teachers Certified</p>
+//             </div>
+//             <div>
+//               <span>500+</span>
+//               <p>Professors</p>
+//             </div>
+//           </div>
+//         </div>
 
-        <div className="footer-right">
-          <ul>
-            <li>Corporate Wellness</li>
-            <li>Affiliations</li>
-            <li>Careers</li>
-            <li>CSR</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Locate Us</li>
-          </ul>
-          <address>
-            Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India
-            <br />
-            <a href="tel:+917738155500">+91-7738155500</a>, <a href="tel:+912226105066">+91-22-26105066</a>,
-            <a href="tel:+912226105181">+91-22-26105181</a>
-            <br />
-            <a href="mailto:info@theyogainstitute.org">info@theyogainstitute.org</a>
-          </address>
-          <p>© 2024 The Yoga Institute. All rights reserved.</p>
-        </div>
-      </div>
-    </footer> */}
+//         <div className="footer-right">
+//           <ul>
+//             <li>Corporate Wellness</li>
+//             <li>Affiliations</li>
+//             <li>Careers</li>
+//             <li>CSR</li>
+//             <li>Terms & Conditions</li>
+//             <li>Privacy Policy</li>
+//             <li>Locate Us</li>
+//           </ul>
+//           <address>
+//             Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India
+//             <br />
+//             <a href="tel:+917738155500">+91-7738155500</a>, <a href="tel:+912226105066">+91-22-26105066</a>,
+//             <a href="tel:+912226105181">+91-22-26105181</a>
+//             <br />
+//             <a href="mailto:info@theyogainstitute.org">info@theyogainstitute.org</a>
+//           </address>
+//           <p>© 2024 The Yoga Institute. All rights reserved.</p>
+//         </div>
+//       </div>
+//     </footer> */}
      
-     {/* Floating version of the enroll section */}
-     {/* {showFloatingEnroll && (
-  <div className="enroll-wrapper floating">
-    <div className="enroll-container">
-      <span className="course-title">200-Hour Yoga Teacher Training Course</span>
-      <button className="enroll-button" onClick={() => scrollToBenefits()}>
-        Enroll Now 
-        <span className="arrow-icon">
-          <img src={enrollicon} alt="icon" className="enrollicon"></img>
-        </span>
-      </button>
-    </div>
-  </div>
-)} */}
+//      {/* Floating version of the enroll section */}
+//      {/* {showFloatingEnroll && (
+//   <div className="enroll-wrapper floating">
+//     <div className="enroll-container">
+//       <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+//       <button className="enroll-button" onClick={() => scrollToBenefits()}>
+//         Enroll Now 
+//         <span className="arrow-icon">
+//           <img src={enrollicon} alt="icon" className="enrollicon"></img>
+//         </span>
+//       </button>
+//     </div>
+//   </div>
+// )} */}
 
-     {showFloatingEnroll && (
-        <div className="enroll-wrapper floating">
-          <div className="enroll-container">
-            <span className="course-title">200-Hour Yoga Teacher Training Course</span>
-            <button className="enroll-button" onClick={() => scrollToAvailableBatches()}>
-              Enroll Now 
-              <span className="arrow-icon">
-                <img src={enrollicon} alt="icon" className="enrollicon"></img>
-              </span>
-            </button>
-          </div>
-        </div>
-      )}
+//      {showFloatingEnroll && (
+//         <div className="enroll-wrapper floating">
+//           <div className="enroll-container">
+//             <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+//             <button className="enroll-button" onClick={() => scrollToAvailableBatches()}>
+//               Enroll Now 
+//               <span className="arrow-icon">
+//                 <img src={enrollicon} alt="icon" className="enrollicon"></img>
+//               </span>
+//             </button>
+//           </div>
+//         </div>
+//       )}
      
      
       
-      <Footer />
-    </div>
-  );
-};
+//       <Footer />
+//     </div>
+//   );
+// };
 
-export default TwoHundredLandingPage;
+// export default TwoHundredLandingPage;
 
 //       <Footer />
 //     </div>

@@ -1084,7 +1084,8 @@
 
 .modal-box {
   width: 494px;
-  height: 296.3203125px;
+  // height: 296.3203125x;
+  height: 58%;
   top: 370px;
   left: 473px;
   gap: 10px;
@@ -1123,7 +1124,8 @@
 @media (max-width: 480px) {
   .modal-box {
     width: 85%;
-    height: 50%;
+    // height: 50%;
+    height: 103%;
     padding: 10px;
     border-radius: 10px;
   }
@@ -1249,7 +1251,7 @@
 .date {
   width: 163px;
   height: 19px;
-  font-size: 14px;
+  // font-size: 14px;
   font-weight: 500;
   line-height: 19.07px;
   font-family: 'Open Sans';
@@ -3374,7 +3376,7 @@ swiper-slide img {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -3432,7 +3434,8 @@ swiper-slide img {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-top: 85px !important;
+  // margin-top: 85px !important;
+  margin-top: 45px !important;
 }
 
 .swiper-button-prev,
@@ -3516,5 +3519,31 @@ swiper-slide img {
   .slide-content {
     padding: 20px;
   }
+}
+
+.slide-wrapper {
+  transition: all 0.3s ease;
+}
+
+.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.inactive {
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+.slide-content {
+  transition: opacity 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }
 
