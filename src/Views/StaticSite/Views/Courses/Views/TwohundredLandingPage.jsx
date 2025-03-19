@@ -1281,6 +1281,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import slider_1 from './images/slider_1.svg'
+import { AllCourses } from '../Constants/courses'
+import { c200hr } from '../Constants/courses'
 
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -1561,34 +1563,66 @@ const TwoHundredLandingPage = () => {
     // };
   
 
+    // const offeringsData = [
+    //   {
+    //     id: 1,
+    //     title: "Special Interaction with Dr. Hansaji Yogendra",
+    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+    //     image: slider_1 // Replace with your actual image path
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Special Interaction with Dr. Hansaji Yogendra",
+    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+    //     image: slider_1
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Special Interaction with Dr. Hansaji Yogendra",
+    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+    //     image: slider_1
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Special Interaction with Dr. Hansaji Yogendra",
+    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+    //     image: slider_1
+    //   },
+    //   {
+    //     id: 5,
+    //     title: "Special Interaction with Dr. Hansaji Yogendra",
+    //     description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+    //     image: slider_1
+    //   }
+    // ];
     const offeringsData = [
       {
         id: 1,
-        title: "Special Interaction with Dr. Hansaji Yogendra",
+        // title: "Special Interaction with Dr. Hansaji Yogendra",
         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
         image: slider_1 // Replace with your actual image path
       },
       {
         id: 2,
-        title: "Special Interaction with Dr. Hansaji Yogendra",
+        // title: "Special Interaction with Dr. Hansaji Yogendra",
         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
         image: slider_1
       },
       {
         id: 3,
-        title: "Special Interaction with Dr. Hansaji Yogendra",
+        // title: "Special Interaction with Dr. Hansaji Yogendra",
         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
         image: slider_1
       },
       {
         id: 4,
-        title: "Special Interaction with Dr. Hansaji Yogendra",
+        // title: "Special Interaction with Dr. Hansaji Yogendra",
         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
         image: slider_1
       },
       {
         id: 5,
-        title: "Special Interaction with Dr. Hansaji Yogendra",
+        // title: "Special Interaction with Dr. Hansaji Yogendra",
         description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
         image: slider_1
       }
@@ -1651,6 +1685,8 @@ const faqData = [
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  console.log(c200hr)
 
 
   return (
@@ -2282,7 +2318,7 @@ onClick={() => handleClick("offerings")}
             </div>
             <div className="modal-body">
               <div className="date-grid">
-                {upcomingDates.map((date, index) => (
+                {c200hr.map((date, index) => (
                   <div
                     key={index}
                     className={`date-item ${activeIndex === index ? "active" : ""}`}
@@ -2292,7 +2328,9 @@ onClick={() => handleClick("offerings")}
                       <span className="calendar-icon">
                         <img src="/images/calender.svg" alt="Calendar Icon" />
                       </span>
-                      <span className="date">{date.date}</span>
+
+                      
+                      <span className="date">{date.dates}</span>
                     </div>
                     <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
                       <span className="computer-icon">
@@ -2940,7 +2978,7 @@ onClick={() => handleClick("offerings")}
                 <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
                 </div>
                 <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-                  <h2>Special Interaction with <span className="slide-title">{offering.title}</span></h2>
+                  <h2>Special Interaction with <span className="slide-title">Dr. Hansaji Yogendra</span></h2>
                   <p>{offering.description}</p>
                 </div>
               </div>
