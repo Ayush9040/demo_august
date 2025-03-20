@@ -83,6 +83,7 @@ const TyiLandingPage7Months = lazy(() => import('../Views/LandingPage/NewLanding
 const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index'))
 const Hours200 = lazy(() => import('../Components/200Hours/200Hours'))
 const TwohundredLandingPage = lazy(() => import('../Views/Courses/Views/TwohundredLandingPage'))
+const Nutridiet = lazy(() => import('../Views/Courses/Views/Nutridiet'))
 
 const staticSiteRoutes = [
   //Home
@@ -127,6 +128,14 @@ const staticSiteRoutes = [
     id: 'statisSiteCoursesBrowse',
     routePath: '/200-allcourses',
     name: 'Courses',
+  },
+  {
+    Component: Nutridiet,
+    path: '/nutri-diet',
+    exact: true,
+    id: 'statisSiteCoursesBrowse',
+    routePath: '/nutri-diet',
+    name: 'Nutri Diet',
   },
   //About
   {
