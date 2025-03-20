@@ -38,18 +38,18 @@ const TwoHundredLandingPage = () => {
   const [selectedBatchId, setSelectedBatchId] = useState(null);
 
   // // Dynamic dates array
-  // const dynamicDates = [
-  //   { date: "1st Mar to 31st Mar 2025", mode: "Online & On Campus", enrollLink: '/enrollment/one-month-ttc' },
-  //    { date: "1st Apr to 30th Apr 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-  //   { date: "1st May to 31st May 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-  //   { date: "2nd Jun to 30th Jun 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
-  //   { date:"1st Jul to 31st Jul 2025", mode: "Online & On Campus", },
-  //   { date:"1st Aug to 30th Aug 2025", mode: "Online & On Campus", },
-  //   { date:"1st Sep to 30th Sep 2025", mode: "Online & On Campus", },
-  //   { date:"1st Oct to 31st Oct 2025", mode: "Online & On Campus", },
-  //   { date:"1st Nov to 29th Nov 2025", mode: "Online & On Campus", },
-  //   { date:"1st Dec to 31st Dec 2025", mode: "Online & On Campus", },
-  // ];
+  const dynamicDates = [
+    { date: "1st Mar to 31st Mar 2025", mode: "Online & On Campus", enrollLink: '/enrollment/one-month-ttc' },
+     { date: "1st Apr to 30th Apr 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "1st May to 31st May 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "2nd Jun to 30th Jun 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
+    { date:"1st Jul to 31st Jul 2025", mode: "Online & On Campus", },
+    { date:"1st Aug to 30th Aug 2025", mode: "Online & On Campus", },
+    { date:"1st Sep to 30th Sep 2025", mode: "Online & On Campus", },
+    { date:"1st Oct to 31st Oct 2025", mode: "Online & On Campus", },
+    { date:"1st Nov to 29th Nov 2025", mode: "Online & On Campus", },
+    { date:"1st Dec to 31st Dec 2025", mode: "Online & On Campus", },
+  ];
 
   
 // Handle date selection
@@ -686,7 +686,7 @@ onClick={() => handleClick("offerings")}
       </div>
       <div className="modal-body">
         <div className="date-grid">
-          {pageDate?.dates.map((item, index) => (
+          {dynamicDates?.map((item, index) => (
             <div key={index} className="cards_new_popup_dates">
               <div className="wrapper_center">
                 <label 
@@ -728,12 +728,12 @@ onClick={() => handleClick("offerings")}
             disabled={activeIndex === null}
             onClick={() => {
               if (activeIndex !== null && selectedBatchId) {
-                const selectedDate = pageDate.dates[activeIndex];
-                const enrollLink = selectedDate.enrollLink || getBatchEnrollLink(selectedBatchId);
+                // const selectedDate = pageDate.dates[activeIndex];
+                // const enrollLink = selectedDate.enrollLink || getBatchEnrollLink(selectedBatchId);
                 
-                if (enrollLink) {
-                  window.location.href = `${enrollLink}?date=${encodeURIComponent(selectedDate.date)}&mode=${encodeURIComponent(selectedDate.mode)}`;
-                }
+                // if (enrollLink) {
+                //   window.location.href = `${enrollLink}?date=${encodeURIComponent(selectedDate.date)}&mode=${encodeURIComponent(selectedDate.mode)}`;
+                // }
               }
             }}
           >
