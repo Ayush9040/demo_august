@@ -62,7 +62,7 @@ const ttc200hr = {
       // '2nd Dec to 31st Dec 2024',
       // '1st Jan to 31st Jan 2025',
       // '1st Feb to 28th Feb 2025',
-      '1st Mar to 31st Mar 2025',
+      // '1st Mar to 31st Mar 2025',
       '1st Apr to 30th Apr 2025',
       '1st May to 31st May 2025',
       '2nd Jun to 30th Jun 2025',
@@ -4274,8 +4274,8 @@ const ttc900hr = {
       // '1st Dec 2024',
       // '1st Jan 2025',
       // '3rd Feb 2025',
-      '3rd Mar 2025',
-      '1st Arp 2025',
+      // '3rd Mar 2025',
+      '1st Apr 2025',
       '1st May 2025',
       '2nd Jun 2025',
       '1st Jul 2025',
@@ -6454,8 +6454,8 @@ const ttc900hr = {
       // '2nd Dec 2024',
       // '1st Jan 2025',
       // '1st Feb 2025',
-      '1st Mar 2025',
-      '1st Arp 2025',
+      // '1st Mar 2025',
+      '1st Apr 2025',
       '1st May 2025',
       '2nd Jun 2025',
       '1st Jul 2025',
@@ -7315,7 +7315,7 @@ const camps = {
       'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['2nd Mar 2025', '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
+    dates: [ '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -8444,7 +8444,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th Mar 2025', '11th May 2025', '13th Jul 2025', '14th Sep 2025', '9th Nov 2025'],
+    dates: ['11th May 2025', '13th Jul 2025', '14th Sep 2025', '9th Nov 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -9199,7 +9199,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
+    dates: ['13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9381,7 +9381,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['1st Mar 2025', '5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
+    dates: ['5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -9756,7 +9756,7 @@ const camps = {
     },
     dates: [
       // '23rd Feb 2025',
-       '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
+      '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
       '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
     mostPopular: false,
@@ -10724,7 +10724,7 @@ const camps = {
       // '1st Dec to 21st Dec 2024',
       // '5th Jan to 25th Jan 2025',
       // '2nd Feb to 22nd Feb 2025',
-      '2nd Mar to 22nd Mar 2025',
+      // '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
       '4th May to 24th May 2025',
       '1st Jun to 21st Jun 2025',
@@ -11154,7 +11154,7 @@ const camps = {
       // '1st Dec to 21st Dec 2024',
       // '5th Jan to 25th Jan 2025',
       // '2nd Feb to 22nd Feb 2025',
-      '2nd Mar to 22nd Mar 2025',
+      // '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
       '4th May to 24th May 2025',
       '1st Jun to 21st Jun 2025',
@@ -11953,7 +11953,7 @@ const camps = {
       },
     },
     dates: [
-      '8th Mar 2025', '10th May 2025', '12th Jul 2025', '13th Sep 2025',
+      '10th May 2025', '12th Jul 2025', '13th Sep 2025',
       '8th Nov 2025'
 
     ],
@@ -12745,7 +12745,7 @@ const camps = {
       },
     },
     dates: [
-      '16th Mar 2025', '18th May 2025'
+      '18th May 2025'
       , '20th Jul 2025', '21st Sep 2025', '16th Nov 2025'],
     online: false,
     onCampus: true,
@@ -14557,7 +14557,7 @@ const classes = {
       // '2nd Dec to 27th Dec 2024',
       // '6th Jan to 31st Jan 2025',
       // '3rd Feb to 28th Feb 2025',
-      '3rd Mar to 28th Mar 2025',
+      // '3rd Mar to 28th Mar 2025',
       '7th Apr to 2nd May 2025',
       '5th May to 30th May 2025',
       '2nd Jun to 12th Jun 2025',
@@ -14898,7 +14898,7 @@ const classes = {
     dates: [
       // '9th Feb 2025', '16th Feb 2025', 
       // '23rd Feb 2025',
-      '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
+      '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
     onCampus: true,
@@ -15406,7 +15406,7 @@ const classes = {
     dates: [
       // '8th Feb 2025', '15th Feb 2025', 
       // '22nd Feb 2025', 
-      '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+      '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
@@ -16114,9 +16114,9 @@ const classes = {
             {
               listItem: 'Semester - I',
               subItems: [
-                'Fundamentals Of Indian Philosophy - 1', 
-                'Yoga Tradition', 
-                'Research Methodology', 
+                'Fundamentals Of Indian Philosophy - 1',
+                'Yoga Tradition',
+                'Research Methodology',
                 'Yoga Practical I',
                 'Hathayoga Texts'
               ],
@@ -16124,30 +16124,30 @@ const classes = {
             {
               listItem: 'Semester - II',
               subItems: [
-                'Indian Philosophy & Yogasutra', 
-                'Yoga-Upanishad and Modern Yoga', 
-                'Internship', 
-                'Yoga Practical II', 
+                'Indian Philosophy & Yogasutra',
+                'Yoga-Upanishad and Modern Yoga',
+                'Internship',
+                'Yoga Practical II',
                 'Dietetics, Nutrition and Yogic Diet'
               ],
             },
             {
               listItem: 'Semester - III',
               subItems: [
-                'Classical Yoga Texts', 
-                'Yoga & Allied Sciences', 
-                'Research Project', 
-                'Yoga Practical III', 
+                'Classical Yoga Texts',
+                'Yoga & Allied Sciences',
+                'Research Project',
+                'Yoga Practical III',
                 'Yoga Application'
               ],
             },
             {
               listItem: 'Semester - IV',
               subItems: [
-                'Traditional Yoga Texts', 
-                'Western Psychology', 
-                'Dissertation', 
-                'Yoga Practical IV', 
+                'Traditional Yoga Texts',
+                'Western Psychology',
+                'Dissertation',
+                'Yoga Practical IV',
                 'Yoga Therapy and Other Therapies'
               ],
             },
@@ -16203,7 +16203,7 @@ const classes = {
           ],
         },
       },
-      
+
       {
         type: 'u-list',
         content: {
@@ -16662,7 +16662,7 @@ const classes = {
     timing: '',
     fees: {
       // onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 33000  },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 33000 },
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
@@ -16803,7 +16803,7 @@ const classes = {
       //     ],
       //   },
       // },
-      
+
       // {
       //   type: 'u-list',
       //   content: {
@@ -16821,7 +16821,7 @@ const classes = {
         content: {
           title: 'How to Apply',
           text: [
-            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India. ','For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
+            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India. ', 'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
           ],
         },
       },
@@ -18444,12 +18444,12 @@ const alibaug = {
     },
     category: 'classes',
     dates: [
-    // '1st Feb 2025 to 2nd Feb 2025', 
-    // '22nd Feb 2025 to 23rd Feb 2025', 
-    '8th Mar 2025 to 9th Mar 2025', 
-    '22nd Mar 2025 to 23rd Mar 2025',
-    '5th April 2025 to 6th April 2025',
-    '19th April 2025 to 20th April 2025'
+      // '1st Feb 2025 to 2nd Feb 2025', 
+      // '22nd Feb 2025 to 23rd Feb 2025', 
+      '8th Mar 2025 to 9th Mar 2025',
+      '22nd Mar 2025 to 23rd Mar 2025',
+      '5th April 2025 to 6th April 2025',
+      '19th April 2025 to 20th April 2025'
     ],
     online: false,
     onCampus: false,
@@ -18832,8 +18832,8 @@ const specialEvents = {
     category: 'classes',
     dates: [
       // '12th Feb 2025',
-       '13th Mar 2025', 
-       '13th Apr 2025'
+      '13th Mar 2025',
+      '13th Apr 2025'
       , '11th Jun 2025'
     ],
     online: true,
@@ -18916,7 +18916,7 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
+    dates: ['30th Mar 2025', '27th Apr 2025'
       , '25th May 2025', '29th Jun 2025', '27th Jul 2025', '31st Aug 2025', '28th Sep 2025', '26th Oct 2025'
       , '30th Nov 2025', '28th Dec 2025'
     ],
