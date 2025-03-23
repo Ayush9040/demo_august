@@ -645,6 +645,13 @@ import follower from './images/follower.svg'
 import saladPlateImage from './images/saladPlateImage.svg'
 import icon_TYI from "./images/icon_TYI.svg"
 import timeline from './images/timeline.svg';
+import benefitcard from './images/benefitcard.svg'
+import Nutritionist from './images/Nutritionist.svg'
+import Dietician from './images/Dietician.svg'
+import insta from './images/insta.svg'
+import fb from './images/fb.svg'
+import footericon from './images/footericon.svg'
+import phoneicon from './images/phone.svg'
 
 const NutriDietHero = () => {
   const navigate = useNavigate();
@@ -764,6 +771,90 @@ const NutriDietHero = () => {
     }
   ];
 
+
+  const healthPrograms = [
+    {
+      program: "Shape up program",
+      conditions: ["Weight loss", "Weight gain / Muscle gain"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Hormonal imbalance program",
+      conditions: ["PCOS/ PCOD", "Infertility/ Thyroid"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Gut Health program",
+      conditions: ["GERD, Heartburn, Acidity", "Digestion issues/ Constipation", "Bloating Gas & Flatulence"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Metabolic disorder program",
+      conditions: ["Type 2 Diabetes, Mellitus", "Cholesterol, Hypertension"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Maternal Program",
+      conditions: ["Pregnancy, Lactation,", "Pregnancy induced diabetes"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Client specific diet",
+      conditions: ["Vegan diet, Ketogenic diet,", "Lactose intolerant/ Gluten free"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Neurological Disorders",
+      conditions: ["Alzheimer's/ Parkinson"],
+      oneMonth: "Rs 3999/-",
+      threeMonth: "Rs 8999/-",
+      sixMonth: "Rs 12999/-"
+    },
+    {
+      program: "Clinical Plans",
+      conditions: [
+        "Diabetes on Insulin/ BS,", 
+        "IBD (Crohn's & Ulcerative", 
+        "Colitis), Peptic & Duodenal", 
+        "Ulcers, Bile reflux,", 
+        "Malabsorption, Pancreatitis,", 
+        "Cancer, COPD, Kidney", 
+        "disorders, Liver disorders,", 
+        "Epilepsy"
+      ],
+      oneMonth: "Rs 4999/-",
+      threeMonth: "Rs 9999/-",
+      sixMonth: "Rs 14999/-"
+    },
+    {
+      program: "Auto-Immune Disorders",
+      conditions: [
+        "Rheumatoid Arthritis,", 
+        "Ankylosing Spondylitis,", 
+        "Psoriasis, Lupus", 
+        "Sjogren's syndrome,", 
+        "Multiple Sclerosis (MS)"
+      ],
+      oneMonth: "Rs 4999/-",
+      threeMonth: "Rs 9999/-",
+      sixMonth: "Rs 14999/-"
+    }
+  ];
+
+
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
   };
@@ -795,7 +886,7 @@ const NutriDietHero = () => {
           <h1 className="hero-title">
             Transform Your Health
             <br />
-            with Personalized Nutrition <span className="heart-icon">❤️</span>
+            with Personalized Nutrition❤️
           </h1>
           <p className="hero-subtitle">
             {`Balance your diet effortlessly with TYI's Nutri Diet Clinic`}
@@ -806,8 +897,8 @@ const NutriDietHero = () => {
           <div className="customers-badge">
             <div className="customer-avatars">
               <img src={follower} alt="Community" />
-            </div>
             <span className="customer-count">430+ Happy Customers</span>
+          </div>
           </div>
           
           <button className="pricing-button">
@@ -832,7 +923,9 @@ const NutriDietHero = () => {
       <div className="benefits-grid">
         <div className="benefit-card">
           <div className="icon-container">
-            <div className="icon"></div>
+          <div className="benefitcard">
+              <img src={benefitcard} alt="" />
+            </div>
           </div>
           <h3>Holistic Approach:</h3>
           <p>
@@ -843,7 +936,9 @@ const NutriDietHero = () => {
         
         <div className="benefit-card">
           <div className="icon-container">
-            <div className="icon"></div>
+            <div className="benefitcard">
+              <img src={benefitcard} alt="" />
+            </div>
           </div>
           <h3>Personalized Plans:</h3>
           <p>
@@ -854,7 +949,9 @@ const NutriDietHero = () => {
         
         <div className="benefit-card">
           <div className="icon-container">
-            <div className="icon"></div>
+          <div className="benefitcard">
+              <img src={benefitcard} alt="" />
+            </div>
           </div>
           <h3>Sustainable Habits:</h3>
           <p>
@@ -865,7 +962,9 @@ const NutriDietHero = () => {
         
         <div className="benefit-card">
           <div className="icon-container">
-            <div className="icon"></div>
+          <div className="benefitcard">
+              <img src={benefitcard} alt="" />
+            </div>
           </div>
           <h3>Affordable for All:</h3>
           <p>
@@ -876,7 +975,9 @@ const NutriDietHero = () => {
         
         <div className="benefit-card centered-card">
           <div className="icon-container">
-            <div className="icon"></div>
+          <div className="benefitcard">
+              <img src={benefitcard} alt="" />
+            </div>
           </div>
           <h3>Balanced and Practical Solutions:</h3>
           <p>
@@ -952,7 +1053,7 @@ const NutriDietHero = () => {
 
 <div className="highlights-container">
       <h2 className="highlights-title">
-        Highlight of <span className="highlights-clinic-name">Nutri - Diet Clinic</span>
+        Highlight of  <span className="highlights-clinic-name"> Nutri - Diet Clinic</span>
       </h2>
       <div className="highlights-grid">
         {highlightsData.map((item, index) => (
@@ -1100,7 +1201,104 @@ const NutriDietHero = () => {
           </div>
         </div>
       </div>
+
+      <div className="transformation-footer">
+      <div className="footer-intro">
+        <p className="intro-text">
+          By following this structured, holistic process, we offer a comprehensive and 
+          client-focused approach to achieving <span className="highlight">optimal health and wellness</span>.
+        </p>
+      </div>
+
+
+      <button className="contact-button">Contact US</button>
+
+       
+        
+        {/* <div className="contact-details">
+          <div className="contact-item">
+            <div className="icon-wrapper">
+              <i className="contact-icon phone-icon">📞</i>
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">For Appointments:</span>
+              <span className="contact-value">+91-9967429896</span>
+            </div>
+          </div>
+          
+          <div className="contact-item">
+            <div className="icon-wrapper">
+              <i className="contact-icon email-icon">✉️</i>
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">Email ID:</span>
+              <span className="contact-value">nutrition@myprogrowth.in</span>
+            </div>
+          </div>
+          
+          <div className="contact-item">
+            <div className="icon-wrapper">
+              <i className="contact-icon calendar-icon">📅</i>
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">Working Days:</span>
+              <span className="contact-value">Monday to Saturday<br />(Sunday is closed)</span>
+            </div>
+          </div>
+          
+          <div className="contact-item">
+            <div className="icon-wrapper">
+              <i className="contact-icon clock-icon">🕒</i>
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">Working Timings:</span>
+              <span className="contact-value">10 am to 6 pm IST</span>
+            </div>
+          </div>
+        </div> */}
+      <div className="contact-container">
+      <div className="contact-item">
+      <span className="icon"><img src={phoneicon} alt="" /></span>
+        <span className="label">For Appointments :</span>
+        <span className="value">+91-9967429596</span>
+      </div>
+
+      <div className="contact-item">
+      <span className="icon"><img src={phoneicon} alt="" /></span>
+        <span className="label">Email ID :</span>
+        <a href="mailto:nutridiet@theyogainstitute.in" className="value">
+          nutridiet@theyogainstitute.in
+        </a>
+      </div>
+
+      <div className="contact-item">
+      <span className="icon"><img src={phoneicon} alt="" /></span>
+        <span className="label">Working Days :</span>
+        <span className="value">Monday to Saturday</span>
+        <span className="note">(Sunday is closed)</span>
+      </div>
+
+      <div className="contact-item">
+      <span className="icon"><img src={phoneicon} alt="" /></span>
+        <span className="label">Working Timings :</span>
+        <span className="value">10 am to 6 pm IST</span>
+      </div>
     </div>
+     
+      </div>
+
+      <div className="footer-terms">
+        <h3 className="terms-heading">+ Terms and conditions:</h3>
+        
+        <ol className="terms-list">
+          <li>We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.</li>
+          <li>Please note that all fees are non-refundable and non-transferable under any circumstances.</li>
+          <li>The results may vary according to the age, genetics, medical conditions, physical activity and gender, and diet compliance.</li>
+          <li>For the successful execution of the program, we kindly advocate to timely adherence, as we may not be able to accommodate any gaps/inconveniences due to non-compliance.</li>
+        </ol>
+      </div>
+    </div>
+  
   
       {/* <div className="transformation-container">
       <div className="journey-header">
@@ -1128,12 +1326,12 @@ const NutriDietHero = () => {
       </div>
     </div> */}
 
-      <div className="health-plan-container">
+      {/* <div className="health-plan-container">
         <div className="health-plan-header">
           <div className="logo-container">
             {/* <div className="logo-circle t">T</div>
             <div className="logo-circle s">S</div> */}
-          </div>
+          {/* </div>
           <h2 className="health-plan-title">Health plan Investments</h2>
         </div>
 
@@ -1263,7 +1461,62 @@ const NutriDietHero = () => {
             <button className="btn btn-enroll">Enroll Now</button>
           </div>
         </div>
+      </div> */} 
+
+
+<div className="health-plan-container">
+      <div className="health-plan-header">
+       
+        <h2 className="health-plan-title">Health plan Investments</h2>
       </div>
+
+      <div className="health-plan-table-container">
+        <table className="health-plan-table">
+          <thead>
+            <tr>
+              <th className="program-column">Programs</th>
+              <th className="conditions-column">Health Conditions</th>
+              <th className="plan-column">1 Month plan</th>
+              <th className="plan-column">3 Month plan</th>
+              <th className="plan-column">6 Month plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            {healthPrograms.map((program, index) => (
+              <tr key={index}>
+                <td>{program.program}</td>
+                <td>
+                  {typeof program.conditions === 'string' ? 
+                    program.conditions.split('\n').map((condition, condIndex) => (
+                      <div key={condIndex} className="condition-line">{condition}</div>
+                    ))
+                    : 
+                    // Fallback if conditions is not a string
+                    <div className="condition-line">{String(program.conditions)}</div>
+                  }
+                </td>
+                <td>{program.oneMonth}</td>
+                <td>{program.threeMonth}</td>
+                <td>{program.sixMonth}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    
+      <div className="health-plan-footer">
+        <div className="footer-cta">
+          <span className="heart-icon">❤️</span>
+          <p>Start Your Personalized Health Journey!</p> <br />
+          <span>Select your program & package to begin your transformation.</span>
+        </div>
+        <div className="footer-buttons">
+          <button className="btn btn-select">Choose Your Package<span className="arrow-down">▼</span></button>
+          <button className="btn btn-select">Choose Your Program<span className="arrow-down">▼</span></button>
+          <button className="btn btn-enroll">Enroll Now</button>
+        </div>
+      </div>
+    </div>
 
       <div className="client-reviews-container">
         <h2 className="reviews-title">our <span className="highlight">Client Reviews</span></h2>
@@ -1302,6 +1555,7 @@ const NutriDietHero = () => {
         </div>
       </div>
 
+<div className='diet-container'>
       <div className="nutritionist-container">
         <div className="header">
           <div className="logo-container">
@@ -1317,6 +1571,9 @@ const NutriDietHero = () => {
 
         <div className="cards-container">
           <div className="profile-card">
+            <div className='nurtition'>
+            <img src={Nutritionist} alt='' />
+            </div>
             <div className="profile-details">
               <h2 className="profile-name">Vinita Ashok Salunke (Sr. Nutritionist)</h2>
               <h3 className="profile-title">Qualifications</h3>
@@ -1332,8 +1589,11 @@ const NutriDietHero = () => {
           </div>
 
           <div className="profile-card"> 
+          <div className='dietician'>
+            <img src={Dietician} alt='' />
+            </div>
             <div className="profile-details">
-              <h2 className="profile-name">Samma Sanjay Nagda (Clinical Dietician)</h2>
+              <h2 className="profile-name">Samma Sanjay Nagda <br /> (Clinical Dietician)</h2>
               <h3 className="profile-title">Qualifications</h3>
               <ul className="qualifications-list">
                 <li>BHMS, Certified Nutrition and Dietetics</li>
@@ -1346,20 +1606,29 @@ const NutriDietHero = () => {
           </div>
         </div>
       </div> 
+      </div>
 
       <div className="social-proof-container">
         <h2 className="social-proof-title">our <span className="highlight">Social Proof</span></h2>
         
+
+       
         <div className="social-proof-card">
+        <img src={footericon} alt="" className='footericon' />
           <div className="social-proof-content">
-            <h3 className="social-proof-heading">Fuel Your Body. Transform Your Life.</h3>
+          
+            <h3 className="social-proof-heading">Fuel Your Body. Transform Your Life.</h3> 
             <p className="social-proof-text">Join the thousands of people who have found better health and a new lease on life today.</p>
             <div className="social-icons">
               <a href="#" className="social-icon facebook">
-                <i className="fab fa-facebook-f"></i>
+                
+                  <img src={fb} alt="" />
+                
               </a>
               <a href="#" className="social-icon instagram">
-                <i className="fab fa-instagram"></i>
+                
+                  <img src={insta} alt="" />
+                
               </a>
             </div>
           </div>
