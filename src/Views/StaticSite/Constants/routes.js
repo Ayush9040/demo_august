@@ -131,10 +131,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Nutridiet,
-    path: '/nutri-diet',
+    path: '/nutri-diet_landing',
     exact: true,
     id: 'statisSiteCoursesBrowse',
-    routePath: '/nutri-diet',
+    routePath: '/nutri-diet_landing',
     name: 'Nutri Diet',
   },
   //About
