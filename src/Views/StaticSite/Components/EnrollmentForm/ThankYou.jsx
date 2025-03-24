@@ -13,7 +13,17 @@ const Thankyou = () => {
   useEffect(() => {
     setCourseDetails({ courseName: localStorage.getItem('courseName'), courseFee: localStorage.getItem('courseFee'), courseStartDate: localStorage.getItem('courseStartDate') })
   }, [courseDetails])
-
+  useEffect(() => {
+    const whatsappWidget = document.getElementById('whatsapp-chat-widget');//hide whatsapp
+    if (whatsappWidget) {
+      whatsappWidget.style.display = 'none';
+    }
+    return () => {
+      if (whatsappWidget) {
+        whatsappWidget.style.display = ''; // Reset the display if needed
+      }
+    };
+  }, []);
   // const getMessage = () => {
   //   if (currentPath.includes("/enrollment_thankyou/one-month-ttc")) {
   //     return (

@@ -1863,11 +1863,11 @@ input[type='radio']:checked::before {
   border-radius: 30px;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  // right: 0;
+  // bottom: 0;
   background-color: rgba(160, 98, 116, 0.8);
   z-index: 2;
-  width: 100% !important;
+  width: 90% !important;
 
   button {
     float: right;
@@ -1912,6 +1912,7 @@ input[type='radio']:checked::before {
   background-image: url('https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/Offerings/7dayscamp.jpg');
   height: 80vh;
   margin: 7rem 10rem;
+  width: 90%;
   border-radius: 30px;
   background-size: cover;
   background-repeat: no-repeat;
