@@ -636,12 +636,15 @@
 
 // export default NutriDietHero;
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import InnerNavComponent from "../../../Components/InnerNavComponent";
 import './Nutridiet.scss';
 import nutridiet_img from './images/nutridiet_img.svg'
@@ -664,10 +667,12 @@ import greenbackground from './images/greenbackground.svg'
 const NutriDietHero = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0); // Track active slide index
+  const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  
 
   const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.realIndex); // Update active index, realIndex gives the correct index in loop
+    setActiveIndex(swiper.realIndex);
   };
 
   const Locate = {
@@ -912,14 +917,14 @@ const NutriDietHero = () => {
   return (
     <div className="nutri-diet-container">
       <nav className="navbar">
-      <button className="menu-btn">
+        <button className="menu-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-        
+
         <div className="logo-container">
           <div className="lotus-logo">
             {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -929,19 +934,19 @@ const NutriDietHero = () => {
               <path d="M19.07 4.93C15.54 4.93 13.5 7.5 12 12C10.5 16.5 11.21 19.07 7.68 19.07C11.21 19.07 13.5 16.5 15 12C16.5 7.5 15.54 4.93 19.07 4.93Z" fill="white"/>
             </svg> */}
           </div>
-          
+
           <div className="nutri-logo">
             <img src={headericon} alt="Nutri Diet Clinic Logo" />
           </div>
         </div>
-        
+
         <button className="profile-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </button>
-      
+
         {/* <button className="menu-toggle">
           <span className="menu-icon"></span>
         </button>
@@ -1143,37 +1148,37 @@ const NutriDietHero = () => {
                 <p className="highlight-tagline">{`"${item.tagline}"`}</p>
                 <p className="highlight-description">({item.description})</p>
                 {/* <img src={highlightunderline} alt="Underline" className="highlight-underline" /> */}
-                 {/* <img src={highlightunderline} alt="" classname="highlightunderline"/>   */}
-              {/* </div>
+      {/* <img src={highlightunderline} alt="" classname="highlightunderline"/>   */}
+      {/* </div>
               <div className='highlights-line'></div>
            
-            </div> */} 
-              <div className="highlights-container">
-      <h2 className="highlights-title">
-        Highlight of <span className="highlights-clinic-name">Nutri - Diet Clinic</span>
-      </h2>
-      <div className="highlights-grid">
-        {highlightsData.map((item, index) => (
-          <div key={index} className="highlight-card">
-            <div className="highlight-image-container">
-            <img src={saladPlateImage} alt="Healthy salad plate" className="saladPlateImage" />
-            </div>
-            <div className="highlight-content">
-              <div className="highlight-category">
-                {item.category} {item.subcategory}
+            </div> */}
+      <div className="highlights-container">
+        <h2 className="highlights-title">
+          Highlight of <span className="highlights-clinic-name">Nutri - Diet Clinic</span>
+        </h2>
+        <div className="highlights-grid">
+          {highlightsData.map((item, index) => (
+            <div key={index} className="highlight-card">
+              <div className="highlight-image-container">
+                <img src={saladPlateImage} alt="Healthy salad plate" className="saladPlateImage" />
               </div>
-              <h3 className="highlight-title">{item.title}</h3>
-              <p className="highlight-description">({item.description})</p>
-              <div className="highlight-underline"></div>
+              <div className="highlight-content">
+                <div className="highlight-category">
+                  {item.category} {item.subcategory}
+                </div>
+                <h3 className="highlight-title">{item.title}</h3>
+                <p className="highlight-description">({item.description})</p>
+                <div className="highlight-underline"></div>
+              </div>
             </div>
-          </div>
           ))}
         </div>
-       {/* Wave background at the bottom */}
-      
-    </div>
-      
-    <div className="highlights-wave">
+        {/* Wave background at the bottom */}
+
+      </div>
+
+      <div className="highlights-wave">
         <img src={greenbackground} alt="Wave background" />
       </div>
 
@@ -1684,22 +1689,23 @@ const NutriDietHero = () => {
         <h2 className="reviews-title">our <span className="highlightreview">Client Reviews</span></h2>
 
         <div className="reviews-slider-container">
-        <Swiper
-      spaceBetween={10}
-      slidesPerView={3} // Adjust slidesPerView for better readability
-      loop={true}
-      onSlideChange={handleSlideChange}
-    >
-      {reviews.map((review, index) => (
+          {/* <Swiper
+            spaceBetween={10}
+            slidesPerView={3} // Adjust slidesPerView for better readability
+            loop={true}
+            onSlideChange={handleSlideChange}
+            
+          >
+            {reviews.map((review, index) => (
         <SwiperSlide
           key={review.id}
           className={`swiper-slide ${
             activeIndex === index
               ? 'fade'
-              : activeIndex === (index - 1 + reviews.length) % reviews.length ||
-                activeIndex === (index + 1) % reviews.length
+              : activeIndex === (index - 1 )  ||
+                activeIndex === (index + 1) 
               ? 'active'
-              : 'fade'
+              : 'fade-right'
           }`}
         >
           <div className="review-card">
@@ -1707,8 +1713,33 @@ const NutriDietHero = () => {
             <p className="review-details">{review.details}</p>
           </div>
         </SwiperSlide>
-      ))}
-    </Swiper>
+            ))}
+          </Swiper> */}
+            <Swiper
+        ref={swiperRef}
+        spaceBetween={10}
+        slidesPerView={3}
+        loop={true}
+        onSlideChange={handleSlideChange}
+      >
+        {reviews.map((review, index) => (
+          <SwiperSlide
+            key={review.id}
+            className={`swiper-slide ${
+              activeIndex === index
+                ? "fade"
+                : activeIndex === index - 1 || activeIndex === index + 1
+                ? "active"
+                : "fade-right"
+            }`}
+          >
+            <div className="review-card">
+              <p className="review-text">{review.text}</p>
+              <p className="review-details">{review.details}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
           {/* <div className="reviews-slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             {reviews.map((review) => (
               <div className="review-card" key={review.id}>
@@ -1740,6 +1771,26 @@ const NutriDietHero = () => {
             &#10095;
           </button>
         </div> */}
+        <div className="slider-controls">
+        <button className="slider-arrow prev" onClick={() => swiperRef.current.swiper.slidePrev()}>
+          &#10094;
+        </button>
+        <div className="slider-dots">
+          {reviews.map((_, index) => (
+            <span
+              key={index}
+              className={`slider-dot ${index === activeIndex ? "active" : ""}`}
+              onClick={() => swiperRef.current.swiper.slideTo(index)}
+            >
+              {index === activeIndex ? "•••••" : "•"}
+            </span>
+          ))}
+        </div>
+        <button className="slider-arrow next" onClick={() => swiperRef.current.swiper.slideNext()}>
+          &#10095;
+        </button>
+      </div>
+    
       </div>
 
       <div className="client-wave">
