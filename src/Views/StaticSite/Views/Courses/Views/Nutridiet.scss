@@ -390,7 +390,7 @@ p {
 
 
 .highlights-container {
-  background-color: #004445;
+  // background-color: #004445;
   color: #fff;
   padding: 30px 15px;
   font-family: 'Urbanist', sans-serif;
@@ -421,18 +421,25 @@ p {
   grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
-  max-width: 1000px;
+  // max-width: 1000px;
   margin: 0 auto;
 }
 
 .highlight-card {
+  // background-color: #065d5d;
+  border-radius: 10px;
   display: flex;
-  // flex-direction: column;
   align-items: center;
-  width: 558px;
-  height: 180px;
-  gap: 30px;
-  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 569px;
+  // display: flex;
+  // // flex-direction: column;
+  // align-items: center;
+  // width: 558px;
+  // height: 180px;
+  // gap: 30px;
+  // text-align: center;
 }
 
 .highlight-image-container {
@@ -450,7 +457,7 @@ p {
   width: 100%;
 }
 
-.highlight-heading {
+.highlight-category {
   color: #FFFFFF;
   // margin: 0 0 8px 0;
   font-size: 20px;
@@ -458,7 +465,7 @@ p {
   font-family: 'Urbanist';
 }
 
-.highlight-tagline {
+.highlight-title {
   color: #CBEA7B;
   margin: 0 0 5px 0;
   font-style: italic;
@@ -476,13 +483,78 @@ p {
   font-family: 'Urbanist';
 }
 
+.highlights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  // background-color: #044747;
+  // color: white;
+  // font-family: Arial, sans-serif;
+}
+
+.highlights-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.highlights-clinic-name {
+  color: #4caf50;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+// .highlight-card {
+//   background-color: #065d5d;
+//   border-radius: 10px;
+//   display: flex;
+//   align-items: center;
+//   padding: 20px;
+//   position: relative;
+// }
+
+.highlight-image-container {
+  margin-right: 20px;
+}
+
+.salad-plate-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.highlight-content {
+  flex-grow: 1;
+}
+
+// .highlight-category {
+//   color: #4caf50;
+//   font-size: 0.9rem;
+//   margin-bottom: 10px;
+// }
+
+// .highlight-title {
+//   font-size: 1.3rem;
+//   margin-bottom: 10px;
+//   color: #4caf50;
+// }
+
+// .highlight-description {
+//   color: #b0bec5;
+// }
+
 .highlight-underline {
-  position: absolute;
-  width: 80%;
-  max-width: 180px;
-  height: auto;
-  left: 0;
-  bottom: -15px;
+  height: 3px;
+  // background-color: #4caf50;
+  background: radial-gradient(50% 50% at 50% 50%, #599C68 0%, rgba(89, 156, 104, 0) 100%);
+
+  // width: 50px;
+  margin-top: 10px;
 }
 // .highlight-underline {
 //   display: block;
@@ -490,11 +562,11 @@ p {
 //   width: 569px; /* Adjust as needed */
 // }
 
-.highlights-line{
-  // width: 569px;
-height: 4px;
+// .highlights-line{
+//   // width: 569px;
+// height: 4px;
 
-}
+// }
 // .highlights-wave {
 //   // img{width: 100%; height: 30px}
 //   // position: absolute;
@@ -528,13 +600,13 @@ height: 4px;
 .highlights-wave {
   position: absolute;
   // bottom: 0;
-  bottom: 77.8%;
+  bottom: 77%;
   left: 0;
   width: 100%;
 }
 
 .highlights-wave img {
-  width: 100%;
+  // width: 100%;
   display: block;
 }
 
@@ -2269,10 +2341,46 @@ left: 26px;
 }
 
 .reviews-slider-container {
-  width: 100%;
+  // width: 100%;
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
+  position: relative;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 400px; /* Card width */
+  height: 200px; /* Card height, adjust as needed */
+  background-color: #fff; /* Set background color of the card */
+  border-radius: 10px; /* Optional rounded corners */
+  overflow: hidden; /* Prevent content from overflowing */
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2); /* Optional inner shadow */
+}
+
+.swiper-slide.fade {
+  /* Apply gradient to the edges for fading effect */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Optional: For smooth transition */
+.swiper-slide {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-slide.active {
+  opacity: 1;
+}
+
+.swiper-slide.fade {
+  opacity: 0.3;
 }
 
 .reviews-slider {
@@ -2411,6 +2519,7 @@ gap: 4px;
   width: 100%;
   display: block;
 }
+
 
 
 /* Responsive styles */

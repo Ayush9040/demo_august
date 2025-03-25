@@ -638,6 +638,10 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+
 import InnerNavComponent from "../../../Components/InnerNavComponent";
 import './Nutridiet.scss';
 import nutridiet_img from './images/nutridiet_img.svg'
@@ -660,6 +664,11 @@ import greenbackground from './images/greenbackground.svg'
 const NutriDietHero = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Track active slide index
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex); // Update active index, realIndex gives the correct index in loop
+  };
 
   const Locate = {
     title: 'Contact us',
@@ -669,29 +678,55 @@ const NutriDietHero = () => {
   }
 
 
-
   const highlightsData = [
     {
-      title: "Ahar (Diet & Nutrition)",
-      tagline: "Fuel for the Soul",
-      description: "Emphasizing food as nourishment beyond just the body",
+      category: 'Ahar',
+      subcategory: '(Diet & Nutrition)',
+      title: 'Fuel for the Soul',
+      description: 'Emphasizing food as nourishment beyond just the body'
     },
     {
-      title: "Vihar (Lifestyle & Routine)",
-      tagline: "Flow of Life",
-      description: "Capturing the essence of movement, relaxation, and daily habits",
+      category: 'Vihar',
+      subcategory: '(Lifestyle & Routine)',
+      title: 'Flow of Life',
+      description: 'Capturing the essence of movement, relaxation and daily habits'
     },
     {
-      title: "Achar (Discipline & Conduct)",
-      tagline: "Rhythm of Actions",
-      description: "Highlighting the impact of daily behavior and ethics",
+      category: 'Achar',
+      subcategory: '(Discipline & Conduct)',
+      title: 'Rhythm of Actions',
+      description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
-      title: "Vichar (Thoughts & Mindset)",
-      tagline: "Echoes of the Mind",
-      description: "Reflecting on how thoughts shape our reality",
-    },
+      category: 'Vihar',
+      subcategory: '(Thoughts & Mindset)',
+      title: 'Echoes of the Mind',
+      description: 'Reflecting on how thoughts shape our reality'
+    }
   ];
+
+  // const highlightsData = [
+  //   {
+  //     title: "Ahar (Diet & Nutrition)",
+  //     tagline: "Fuel for the Soul",
+  //     description: "Emphasizing food as nourishment beyond just the body",
+  //   },
+  //   {
+  //     title: "Vihar (Lifestyle & Routine)",
+  //     tagline: "Flow of Life",
+  //     description: "Capturing the essence of movement, relaxation, and daily habits",
+  //   },
+  //   {
+  //     title: "Achar (Discipline & Conduct)",
+  //     tagline: "Rhythm of Actions",
+  //     description: "Highlighting the impact of daily behavior and ethics",
+  //   },
+  //   {
+  //     title: "Vichar (Thoughts & Mindset)",
+  //     tagline: "Echoes of the Mind",
+  //     description: "Reflecting on how thoughts shape our reality",
+  //   },
+  // ];
 
   // const journeySteps = [
   //   {
@@ -1093,7 +1128,7 @@ const NutriDietHero = () => {
         <div className="highlights-wave"></div>
       </div> */}
 
-      <div className="highlights-container">
+      {/* <div className="highlights-container">
         <h2 className="highlights-title">
           Highlight of  <span className="highlights-clinic-name"> Nutri - Diet Clinic</span>
         </h2>
@@ -1109,10 +1144,29 @@ const NutriDietHero = () => {
                 <p className="highlight-description">({item.description})</p>
                 {/* <img src={highlightunderline} alt="Underline" className="highlight-underline" /> */}
                  {/* <img src={highlightunderline} alt="" classname="highlightunderline"/>   */}
-              </div>
+              {/* </div>
               <div className='highlights-line'></div>
            
+            </div> */} 
+              <div className="highlights-container">
+      <h2 className="highlights-title">
+        Highlight of <span className="highlights-clinic-name">Nutri - Diet Clinic</span>
+      </h2>
+      <div className="highlights-grid">
+        {highlightsData.map((item, index) => (
+          <div key={index} className="highlight-card">
+            <div className="highlight-image-container">
+            <img src={saladPlateImage} alt="Healthy salad plate" className="saladPlateImage" />
             </div>
+            <div className="highlight-content">
+              <div className="highlight-category">
+                {item.category} {item.subcategory}
+              </div>
+              <h3 className="highlight-title">{item.title}</h3>
+              <p className="highlight-description">({item.description})</p>
+              <div className="highlight-underline"></div>
+            </div>
+          </div>
           ))}
         </div>
        {/* Wave background at the bottom */}
@@ -1630,7 +1684,32 @@ const NutriDietHero = () => {
         <h2 className="reviews-title">our <span className="highlightreview">Client Reviews</span></h2>
 
         <div className="reviews-slider-container">
-          <div className="reviews-slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        <Swiper
+      spaceBetween={10}
+      slidesPerView={3} // Adjust slidesPerView for better readability
+      loop={true}
+      onSlideChange={handleSlideChange}
+    >
+      {reviews.map((review, index) => (
+        <SwiperSlide
+          key={review.id}
+          className={`swiper-slide ${
+            activeIndex === index
+              ? 'fade'
+              : activeIndex === (index - 1 + reviews.length) % reviews.length ||
+                activeIndex === (index + 1) % reviews.length
+              ? 'active'
+              : 'fade'
+          }`}
+        >
+          <div className="review-card">
+            <p className="review-text">{review.text}</p>
+            <p className="review-details">{review.details}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+          {/* <div className="reviews-slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             {reviews.map((review) => (
               <div className="review-card" key={review.id}>
                 <div className="review-content">
@@ -1639,10 +1718,10 @@ const NutriDietHero = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
-        <div className="slider-controls">
+        {/* <div className="slider-controls">
           <button className="slider-arrow prev" onClick={prevSlide}>
             &#10094;
           </button>
@@ -1660,7 +1739,7 @@ const NutriDietHero = () => {
           <button className="slider-arrow next" onClick={nextSlide}>
             &#10095;
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="client-wave">
