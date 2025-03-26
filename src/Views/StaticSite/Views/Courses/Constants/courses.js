@@ -16075,7 +16075,7 @@ const classes = {
       'The Master of Arts (MA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
+    timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) - On Campus 9:00 am to 3:00 pm (Saturday) - Online',
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
@@ -16200,6 +16200,10 @@ const classes = {
               listItem: 'Aadhaar Card',
               subItems: [],
             },
+            {
+              listItem: 'ABC ID (Students can create their ABC ID using the link: https://www.abc.gov.in/)',
+              subItems: [],
+            },
           ],
         },
       },
@@ -16221,8 +16225,8 @@ const classes = {
         content: {
           title: 'How to Apply',
           text: [
-            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
-            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506, +91-22-26103568. '
+            'Interested candidates can apply by clicking in the apply now button above or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
+            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568 '
           ],
         },
       },
@@ -16659,7 +16663,7 @@ const classes = {
       'The Bachelor of Arts (BA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive four-year undergraduate program designed to build a strong foundation in the philosophy, science, and practice of yoga.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: '',
+    timing: '10:00 am - 2:00 pm (Monday to Friday) - On Campus',
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 33000 },
@@ -16769,10 +16773,40 @@ const classes = {
         },
       },
       {
+        type: 'u-list',
+        content: {
+          title: 'Documents Required:',
+          points: [
+            {
+              listItem: '12th Pass Certificate',
+              subItems: [],
+            },
+            {
+              listItem: '12th Pass Marksheet',
+              subItems: [],
+            },
+            {
+              listItem: 'Transfer Certificate (TC)',
+              subItems: [],
+            },
+            {
+              listItem: 'Aadhaar Card',
+              subItems: [],
+            },
+            {
+              listItem: 'ABC ID (Students can create their ABC ID using the link: https://www.abc.gov.in/)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
         type: 'paragraph',
         content: {
           title: 'Pricing',
-          text: ['For Indian National Students: Rs. 33,000 per year'],
+          text: ['For Indian National Students: Rs. 33,000 per year',
+                  'For International Students : $2950 per year'
+          ],
         },
       },
       // {
@@ -16821,7 +16855,8 @@ const classes = {
         content: {
           title: 'How to Apply',
           text: [
-            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India. ', 'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
+            'Interested candidates can apply by clicking in the apply now button above or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
+            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568 '
           ],
         },
       },
