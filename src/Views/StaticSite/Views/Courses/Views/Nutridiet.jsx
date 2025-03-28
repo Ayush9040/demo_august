@@ -675,7 +675,7 @@ const NutriDietHero = () => {
               </div>
 
 
-              <div style={{display: 'flex'}}>
+              <div className='contact-name' style={{display: 'flex'}}>
               <span>+91-9967429596 <img src={copy} alt="" /></span>
               </div>
             </div>
@@ -685,26 +685,12 @@ const NutriDietHero = () => {
               <img src={phoneicon} alt="" />
               </span>
              
-              <span>For Appointments: </span>
+              <span>Email ID : </span>
               </div>
 
 
-              <div style={{display: 'flex'}}>
-              <span>+91-9967429596 <img src={copy} alt="" /></span>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className='contact_social_wrapper'>
-              <span className="contact-icon">
-              <img src={phoneicon} alt="" />
-              </span>
-             
-              <span>For Appointments: </span>
-              </div>
-
-
-              <div style={{display: 'flex'}}>
-              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>nutridiet@theyogainstitute.in <img src={copy} alt="" /></span>
               </div>
             </div>
             <div className="contact-item">
@@ -713,12 +699,26 @@ const NutriDietHero = () => {
               <img src={phoneicon} alt="" />
               </span>
              
-              <span>For Appointments: </span>
+              <span>Working Days : </span>
               </div>
 
 
-              <div style={{display: 'flex'}}>
-              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>Monday to Saturday <br /> (Sunday is closed) </span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className='contact_social_wrapper'>
+              <span className="contact-icon">
+              <img src={phoneicon} alt="" />
+              </span>
+             
+              <span>Working Timings : </span>
+              </div>
+
+
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>10 am to 6 pm IST </span>
               </div>
             </div>
             
@@ -728,7 +728,7 @@ const NutriDietHero = () => {
       
       <div className="terms-container" type="a">
         <h3>→ Terms and conditions:</h3>
-        <ol>
+        <ol type="a">
           <li>
             We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.
           </li>
@@ -855,6 +855,8 @@ const NutriDietHero = () => {
             </div>
           </main>
         </section>
+
+        
 
         <div className="health-plan-container">
           <div className="health-plan-header">
