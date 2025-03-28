@@ -25,6 +25,8 @@ import {
 import { Link } from 'react-router-dom'
 const MegaMenu = lazy(() => import('../MegaMenu'))
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
+import nutri_diet_logo from '../../Views/Courses/Views/images/nutri_diet_logo.svg'
+import User_nutri_diet from '../../Views/Courses/Views/images/user_nutri_diet.svg'
 
 const InnerNavComponent = ({ abc }) => {
   const navigate = useNavigate()
@@ -35,6 +37,8 @@ const InnerNavComponent = ({ abc }) => {
   const [cartItems, setCartItems] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
+  
+  
 
   const { cart } = useSelector((state) => state.shop)
 
@@ -65,6 +69,11 @@ const InnerNavComponent = ({ abc }) => {
     }
   }, [cart])
 
+  
+  
+
+  const isNutriDietLanding = location.pathname.includes("/nutri-diet_landing");
+
   // console.log(bold,'bold')
   return (
     <>
@@ -77,18 +86,53 @@ const InnerNavComponent = ({ abc }) => {
                 ? CommonHamburger
                 : Hamburger}
           </div>
+
           <div className="main-logo" id={`${abc.color}`} >
+
+          {isNutriDietLanding && (
+              <div className='nutri_diet_nav_modify'>
+
+                    <Link to="/">
+                    {abc.color === 'orange'
+                      ? legacy1
+                      : abc.color === 'black'
+                        ? MainLogo1
+                        : MainLogo}
+                  </Link>
+
+                      <div className='vertical_line'></div>
+
+                  <div>
+                  <img src={nutri_diet_logo} alt="" />
+                  </div>
+
+            </div>
+          )
+      }
+
             <span className='mobile-search' onClick={() => { navigate('/') }} >{abc.color === 'orange' ? Search : abc.color === 'black' ? SearchBlack : SearchWhite}</span>
+
             <Link className='mobile-search mobile-cart' style={{ marginLeft: '15px' }} to='/shop/cart'>
               {abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></Link>
 
-            <Link to="/">
+            {
+              !isNutriDietLanding && (
+                
+                
+
+                <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
                 : abc.color === 'black'
                   ? MainLogo1
                   : MainLogo}
-            </Link>
+                </Link> 
+
+                
+
+            
+              )
+            }
           </div>
           <div className="career-navigation-sm">
             <ul>
@@ -115,7 +159,11 @@ const InnerNavComponent = ({ abc }) => {
           <div className="user-container">
             {/* <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div> */}
 
-            <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
+            {
+              !isNutriDietLanding && (
+                <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
+              )
+            }
 
 
             {hasItems && (
@@ -198,7 +246,7 @@ const InnerNavComponent = ({ abc }) => {
                     </ul>
                   </div>
                 </div>
-              ) : <Link to={'/user/sign-in'}>{User}</Link>
+              ) : (isNutriDietLanding ? (<Link to={'/user/sign-in'}><img src={User_nutri_diet} /></Link>) :( <Link to={'/user/sign-in'}>{User}</Link>))
             }
 
 

@@ -350,3 +350,18 @@
         border: none;
     }
 }
+
+.nutri_diet_nav_modify {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.vertical_line::before {
+    content: "";                  /* Empty content for the line */
+    display: inline-block;        /* Makes it behave like an element */
+    width: 2px;                   /* Line thickness */
+    height: 40px;                 /* Line height */
+    background-color: #ccc;       /* Line color */
+    margin: 0 18px;               /* Spacing around the line */
+  }
