@@ -666,30 +666,62 @@ const NutriDietHero = () => {
           <button className="contact-button">Contact US</button>
           <div className="contact-details">
             <div className="contact-item">
+              <div className='contact_social_wrapper'>
               <span className="contact-icon">
               <img src={phoneicon} alt="" />
               </span>
              
-              <span>For Appointments: +91-9967429596 <img src={copy} alt="" /></span>
+              <span>For Appointments: </span>
+              </div>
+
+
+              <div style={{display: 'flex'}}>
+              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              </div>
             </div>
             <div className="contact-item">
+              <div className='contact_social_wrapper'>
               <span className="contact-icon">
               <img src={phoneicon} alt="" />
               </span>
-              <span>Email ID: nutrident@theyogainstitute.in <img src={copy} alt="" /></span>
+             
+              <span>For Appointments: </span>
+              </div>
+
+
+              <div style={{display: 'flex'}}>
+              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              </div>
             </div>
             <div className="contact-item">
+              <div className='contact_social_wrapper'>
               <span className="contact-icon">
               <img src={phoneicon} alt="" />
               </span>
-              <span>Working days: Monday to Saturday  <br /> (Sunday is closed)</span>
+             
+              <span>For Appointments: </span>
+              </div>
+
+
+              <div style={{display: 'flex'}}>
+              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              </div>
             </div>
             <div className="contact-item">
+              <div className='contact_social_wrapper'>
               <span className="contact-icon">
               <img src={phoneicon} alt="" />
               </span>
-              <span>Working Timings: 10 am to 6 pm IST</span>
+             
+              <span>For Appointments: </span>
+              </div>
+
+
+              <div style={{display: 'flex'}}>
+              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
