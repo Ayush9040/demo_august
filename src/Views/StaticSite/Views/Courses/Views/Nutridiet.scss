@@ -1690,13 +1690,30 @@ border-bottom-width: 1px;
 /* HealthPlanInvestments.css */
 .health-plan-container {
   font-family: 'Urbanist', sans-serif;
-  max-width: 1440px;
+  // max-width: 1440px;
+      /* width: 1280px; */
+      width: 1440px;
+      /* height: 2184px; */
+      /* top: 6907px; */
+      /* height: 1855px; */
+      /* background-color: #fff; */
+      /* position: relative; */
+      /* top: 50%;*/
+//   width: 1280px;
+//   background-color: #fff;
+//   // height: 1855px;
+//   position: relative;
+//   top: 60px;
+//   left: 0%;
+// gap: 50px;
+
   margin: 0 auto;
   background-color: #f7f9ef;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
+
 
 /* Header Styles */
 .health-plan-header {
@@ -1761,12 +1778,14 @@ border-bottom-width: 1px;
 .health-plan-table-container {
   overflow-x: auto;
   margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #1E9688;
   width: 100%;
 }
 
 .health-plan-table {
   width: 100%;
-  border: 1px solid #1E9688;
+  // border: 1px solid #1E9688;
   border-radius: 12px;
   border-collapse: collapse;
   min-width: 600px;
@@ -1893,122 +1912,138 @@ border-bottom-width: 1px;
 
 /* Responsive Styles */
 /* Large devices (laptops/desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .health-plan-container {
-    padding: 30px;
-    display: none;
-  }
+// @media (min-width: 1200px) {
+//   .health-plan-container {
+//     padding: 30px;
+//     display: none;
+//   }
 
-  .health-plan-title {
-    font-size: 28px;
-  }
-}
+//   .health-plan-title {
+//     font-size: 28px;
+//   }
+// }
 
-/* Medium devices (tablets, 769px to 1199px) */
-@media (min-width: 769px) and (max-width: 1199px) {
-  .health-plan-container {
-    padding: 25px;
-    display: none;
-  }
+// /* Medium devices (tablets, 769px to 1199px) */
+// @media (min-width: 769px) and (max-width: 1199px) {
+//   .health-plan-container {
+//     padding: 25px;
+//     display: none;
+//   }
 
-  .health-plan-title {
-    font-size: 22px;
-  }
-}
+//   .health-plan-title {
+//     font-size: 22px;
+//   }
+// }
 
-/* Small devices (landscape tablets, 481px to 768px) */
-@media (max-width: 768px) {
-  .health-plan-container {
-    padding: 15px;
-    display: none;
-  }
+// /* Small devices (landscape tablets, 481px to 768px) */
+// @media (max-width: 768px) {
+//   .health-plan-container {
+//     padding: 15px;
+//     display: none;
+//   }
 
-  .health-plan-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+//   .health-plan-header {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
 
-  .health-plan-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+//   .health-plan-footer {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
 
-  .footer-cta {
-    margin-bottom: 15px;
-    width: 100%;
-  }
+//   .footer-cta {
+//     margin-bottom: 15px;
+//     width: 100%;
+//   }
 
-  .footer-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
+//   .footer-buttons {
+//     flex-direction: column;
+//     width: 100%;
+//   }
 
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
+//   .btn {
+//     width: 100%;
+//     justify-content: center;
+//   }
+// }
 
-/* Extra small devices (phones, 480px and down) */
-@media (max-width: 480px) {
-  .health-plan-container {
-    padding: 10px;
-    display: none;
-  }
+// /* Extra small devices (phones, 480px and down) */
+// @media (max-width: 480px) {
+//   .health-plan-container {
+//     padding: 10px;
+//     display: none;
+//   }
 
-  .health-plan-title {
-    font-size: 20px;
-  }
+//   .health-plan-title {
+//     font-size: 20px;
+//   }
 
-  .logo-container {
-    width: 40px;
-    height: 40px;
-  }
+//   .logo-container {
+//     width: 40px;
+//     height: 40px;
+//   }
 
-  .logo-circle {
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
-  }
+//   .logo-circle {
+//     width: 25px;
+//     height: 25px;
+//     font-size: 14px;
+//   }
 
-  .logo-circle.s {
-    left: 12px;
-    top: 8px;
-  }
+//   .logo-circle.s {
+//     left: 12px;
+//     top: 8px;
+//   }
 
-  .health-plan-table th,
-  .health-plan-table td {
-    padding: 8px 5px;
-    font-size: 13px;
-  }
+//   .health-plan-table th,
+//   .health-plan-table td {
+//     padding: 8px 5px;
+//     font-size: 13px;
+//   }
 
-  .health-plan-table td p {
-    font-size: 12px;
-  }
+//   .health-plan-table td p {
+//     font-size: 12px;
+//   }
 
-  .footer-cta {
-    gap: 5px;
-  }
+//   .footer-cta {
+//     gap: 5px;
+//   }
 
-  .heart-icon {
-    font-size: 16px;
-  }
+//   .heart-icon {
+//     font-size: 16px;
+//   }
 
-  .footer-cta p {
-    font-size: 14px;
-  }
+//   .footer-cta p {
+//     font-size: 14px;
+//   }
 
-  .btn {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-}
+//   .btn {
+//     padding: 8px 15px;
+//     font-size: 14px;
+//   }
+// }
 
 /* HealthPlanInvestments.css */
 .health-plan-container {
   font-family: 'Urbanist', sans-serif;
-  max-width: 1440px;
-
+  // max-width: 1440px;
+  // width: 1280px;
+  // height: 1855px;
+  // background-color: #fff;
+    // height: 1855px;
+    position: relative;
+    // top: 60px;
+    left: 0%;
+      /* width: 1280px; */
+      width: 1440px;
+      /* height: 2184px; */
+      /* top: 6907px; */
+      /* height: 1855px; */
+      /* background-color: #fff; */
+      /* position: relative; */
+      /* top: 50%;*/
+  gap: 50px;
+  
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -2017,9 +2052,10 @@ border-bottom-width: 1px;
 .health-plan-table-container {
   width: 100%;
   overflow-x: auto;
-  width: 1280px;
-  height: 1742px;
-
+  // width: 1280px;
+  // height: 1742px;
+border-radius: 12px;
+border: 1px solid #1E9688;
   margin-bottom: 20px;
 }
 
@@ -2027,8 +2063,8 @@ border-bottom-width: 1px;
   width: 100%;
   border-collapse: collapse;
   background-color: #F6FBE9;
-  width: 1280px;
-  height: 1703px;
+  // width: 1280px;
+  // height: 1703px;
   border: 1px solid #1E9688;
   border-radius: 12px;
   // min-width: 600px; 
