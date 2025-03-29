@@ -34,6 +34,7 @@ import right_5 from './images/right_5.png'
 import frame_timeline_new from './images/frame_timeline_new.png'
 import timeline from './images/timeline.png'
 import copy from './images/copy.png'
+import right_fruit_new_3 from './images/right_fruit_new_3.png'
 
 const NutriDietHero = () => {
   const navigate = useNavigate();
@@ -648,108 +649,17 @@ const NutriDietHero = () => {
           <div className="right_fruit_container">
             <img src={right_top_1} alt="" className='right_fruit_1' />
             <img src={right_2} alt="" className='right_fruit_2' />
-            <img src={right_fruit_1} alt="" className='right_fruit_3' />
-            <img src={right_fruit_1} alt="" className='right_fruit_4' />
+            <img src={right_fruit_new_3} alt="" className='right_fruit_3' />
+            <img src={right_fruit_new_3} alt="" className='right_fruit_4' />
             <img src={right_5} alt="" className='right_fruit_5' />
           </div>
         </section>
-
-
-        <div className="contact-wrapper">
-          
-      <div className="contact-container">
-      <div className="page-header">
-        <p>By following this structured, holistic process, we offer a comprehensive and client-focused approach to achieving <span className="highlight-contact">optimal health</span> and <span className="highlight-contact"> wellness.</span></p>
-      </div>
-      <div className="highlight-underline_top_contact"></div>
-        <div className="contact-box">
-          <button className="contact-button">Contact US</button>
-          <div className="contact-details">
-            <div className="contact-item">
-              <div className='contact_social_wrapper'>
-              <span className="contact-icon">
-              <img src={phoneicon} alt="" />
-              </span>
-             
-              <span>For Appointments: </span>
-              </div>
-
-
-              <div className='contact-name' style={{display: 'flex'}}>
-              <span>+91-9967429596 <img src={copy} alt="" /></span>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className='contact_social_wrapper'>
-              <span className="contact-icon">
-              <img src={phoneicon} alt="" />
-              </span>
-             
-              <span>Email ID : </span>
-              </div>
-
-
-              <div className='contact-name' style={{display: 'flex'}}>
-              <span>nutridiet@theyogainstitute.in <img src={copy} alt="" /></span>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className='contact_social_wrapper'>
-              <span className="contact-icon">
-              <img src={phoneicon} alt="" />
-              </span>
-             
-              <span>Working Days : </span>
-              </div>
-
-
-              <div className='contact-name' style={{display: 'flex'}}>
-              <span>Monday to Saturday <br /> (Sunday is closed) </span>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className='contact_social_wrapper'>
-              <span className="contact-icon">
-              <img src={phoneicon} alt="" />
-              </span>
-             
-              <span>Working Timings : </span>
-              </div>
-
-
-              <div className='contact-name' style={{display: 'flex'}}>
-              <span>10 am to 6 pm IST </span>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-      
-      <div className="terms-container" type="a">
-        <h3>→ Terms and conditions:</h3>
-        <ol type="a">
-          <li>
-            We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.
-          </li>
-          <li>
-            Please note that all fees are non-refundable and non-transferable under any circumstances.
-          </li>
-          <li>
-            The results may vary according to the age, genetics, medical conditions, physical activity and gender and diet compliance.
-          </li>
-          <li>
-            For the seamless execution of the program, we kindly request timely adherence, as we may not be able to accommodate any gaps/inconsistencies due to non-compliance.
-          </li>
-        </ol>
-      </div>
-    </div>
 
         <section className="journey_wrapper">
           <main className="center_journey">
 
             <h2 style={{ textAlign: 'center' }}>
-              <span className="title">Your Structured Health</span> <span className="highlight">Transformation journey</span>
+              <span className="title">Your Structured Health</span><br /> <span className="highlight">Transformation journey</span>
             </h2>
 
             <div className="health-journey-container1">
@@ -856,6 +766,99 @@ const NutriDietHero = () => {
           </main>
         </section>
 
+
+
+        <div className="contact-wrapper">
+          
+      <div className="contact-container">
+      <div className="page-header">
+        <p>By following this structured, holistic process, we offer a comprehensive and client-focused approach to achieving <span className="highlight-contact">optimal health</span> and <span className="highlight-contact"> wellness.</span></p>
+      </div>
+      <div className="highlight-underline_top_contact"></div>
+        <div className="contact-box">
+          <button className="contact-button">Contact US</button>
+          <div className="contact-details">
+            <div className="contact-item">
+              <div className='contact_social_wrapper'>
+              <span className="contact-icon">
+              <img src={phoneicon} alt="" />
+              </span>
+             
+              <span>For Appointments: </span>
+              </div>
+
+
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>+91-9967429596 <img src={copy} alt="" /></span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className='contact_social_wrapper'>
+              <span className="contact-icon">
+              <img src={phoneicon} alt="" />
+              </span>
+             
+              <span>Email ID : </span>
+              </div>
+
+
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>nutridiet@theyogainstitute.in <img src={copy} alt="" /></span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className='contact_social_wrapper'>
+              <span className="contact-icon">
+              <img src={phoneicon} alt="" />
+              </span>
+             
+              <span>Working Days : </span>
+              </div>
+
+
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>Monday to Saturday <br /> (Sunday is closed) </span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className='contact_social_wrapper'>
+              <span className="contact-icon">
+              <img src={phoneicon} alt="" />
+              </span>
+             
+              <span>Working Timings : </span>
+              </div>
+
+
+              <div className='contact-name' style={{display: 'flex'}}>
+              <span>10 am to 6 pm IST </span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div className="terms-container" type="a">
+        <h3>→ Terms and conditions:</h3>
+        <ol type="a">
+          <li>
+            We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.
+          </li>
+          <li>
+            Please note that all fees are non-refundable and non-transferable under any circumstances.
+          </li>
+          <li>
+            The results may vary according to the age, genetics, medical conditions, physical activity and gender and diet compliance.
+          </li>
+          <li>
+            For the seamless execution of the program, we kindly request timely adherence, as we may not be able to accommodate any gaps/inconsistencies due to non-compliance.
+          </li>
+        </ol>
+      </div>
+    </div>
+
+       
         
 
         <div className="health-plan-container">

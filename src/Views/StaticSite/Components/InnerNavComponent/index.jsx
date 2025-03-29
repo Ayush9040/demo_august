@@ -27,6 +27,7 @@ const MegaMenu = lazy(() => import('../MegaMenu'))
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import nutri_diet_logo from '../../Views/Courses/Views/images/nutri_diet_logo.svg'
 import User_nutri_diet from '../../Views/Courses/Views/images/user_nutri_diet.svg'
+import Nutridiet_logo_landing from '../../Views/Courses/Views/images/Nutridiet_logo_landing.png'
 
 const InnerNavComponent = ({ abc }) => {
   const navigate = useNavigate()
@@ -102,8 +103,8 @@ const InnerNavComponent = ({ abc }) => {
 
                       <div className='vertical_line'></div>
 
-                  <div>
-                  <img src={nutri_diet_logo} alt="" />
+                  <div style={{width: '117px', flexShrink: '0'}}>
+                  <img src={nutri_diet_logo} alt="" style={{width: '100%'}} />
                   </div>
 
             </div>

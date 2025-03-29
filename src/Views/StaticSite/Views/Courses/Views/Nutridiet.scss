@@ -3598,8 +3598,9 @@ align-items: center;
 .page-header {
   color: #FFFFFF;
   padding: 20px;
+  padding-bottom: 0px;
   text-align: center;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 
 .page-header p {
@@ -3676,6 +3677,7 @@ border-width: 1px;
 padding: 20px;
 background: #F6FBE9;
   border: 1px solid #356554;
+  margin-top: 20px;
 
 }
 
@@ -3931,11 +3933,11 @@ background: #fff;
 
     display: flex;
     // align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .center_journey {
-  width: 75%;
+  width: 100%;
 }
 
 
@@ -3958,8 +3960,8 @@ background: #fff;
 .health-journey-container1 {
   padding: 20px;
   max-width: 100%;
-  top: 15px;
-  position: relative;
+  padding-top: 32px;
+  
 }
 
 // .timeline-mobile {
@@ -3974,9 +3976,9 @@ background: #fff;
   flex-direction: column;
   gap: 20px;
   // position: relative;
-  position: relative;
+  // position: relative;
   z-index: 2;
-  padding: 0 20px;
+  // padding: 0 20px;
   width: 310px;
   // left: 15%;
   
@@ -4182,7 +4184,7 @@ letter-spacing: 0%;
 }
 
 .contact-container {
-  width: 353px;
+  width: 100%;
   height: 654px;
   top: 5387px;
   left: 20px;
@@ -4199,8 +4201,9 @@ letter-spacing: 0%;
 .page-header {
   color: #FFFFFF;
   padding: 20px;
+  padding-bottom: 0px;
   text-align: center;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 
 }
 
@@ -4222,7 +4225,7 @@ letter-spacing: 0%;
   font-weight: bold;
 }
 .highlight-underline_top_contact{
-  width: 569px;
+  width: 100%;
 height: 4px;
 
   background: radial-gradient(50% 50% at 50% 50%, #599C68 0%, rgba(89, 156, 104, 0) 100%);
@@ -4259,8 +4262,8 @@ gap: 20px;
 
 .contact-details {
   width: 306px;
-  height: 388px;
-  gap: 24px;
+  height: 100%;
+  gap: 0px;
   border-radius: 8px;
   border-width: 1px;
   padding: 20px;
@@ -4273,10 +4276,10 @@ gap: 20px;
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
-  padding: 20px;
-  // gap: 77px;
+  padding: 10px;
+  gap: 0px;
 }
 
 .contact_social_wrapper {
