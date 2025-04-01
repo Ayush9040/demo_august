@@ -1,6 +1,6 @@
 
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -35,12 +35,21 @@ import frame_timeline_new from './images/frame_timeline_new.png'
 import timeline from './images/timeline.png'
 import copy from './images/copy.png'
 import right_fruit_new_3 from './images/right_fruit_new_3.png'
+import SelectDropDown from '../../../Components/Select Dropdown';
+import CommonBtn from '../../../Components/commonbtn';
+import ReactGA from 'react-ga4';
+import SubcriptionForm from '../../NutriDiet/Subscription';
 
 const NutriDietHero = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null);
+  const [price, setPrice] = useState()
+  const [openForm, setOpenForm] = useState(false)
+    const [err, setErr] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0);
+  const [plan, setPlan] = useState('')
+    const [program, setProgram] = useState('')
 
 
   const handleSlideChange = (swiper) => {
@@ -163,6 +172,163 @@ const NutriDietHero = () => {
     }
   ];
 
+  const options = ['1 month', '3 months', '6 months']
+  const options1 = ['Shape up', 'Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic', 'Other types', 'Nutrition for kids', 'Clinical Plans']
+
+  const selectStyles1 = {
+    cursor: 'pointer',
+    // background: 'rgba(255, 255, 254, 0.3)',
+    borderColor: 'rgba(50, 104, 86, 1)',
+    color: 'rgba(255, 255, 255, 1)',
+    fontSize: '16px',
+    fontWeight: '500',
+    fontFamily: 'Urbanist',
+    borderWidth: '0.25rem',
+    borderRadius: '6px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+    // width: '230px',
+    // marginTop: '2rem',
+    marginRight: '20px',
+    height: '100%'
+  }
+
+  useEffect(() => {
+      if (openForm) {
+        document.body.style.overflow = 'hidden'
+      } else {
+  
+        document.body.style.overflow = 'auto'
+      }
+    }, [openForm])
+
+   const enrollForm2 = () => {
+      if (plan === '' || program === '') {
+        setErr(true)
+      } else {
+        switch (plan) {
+          case '1 month':
+            setPrice(4999); setErr(false); setOpenForm(true)
+            break
+          case '3 months':
+            setPrice(9999); setErr(false); setOpenForm(true)
+            break
+          case '6 months':
+            setPrice(14999); setErr(false); setOpenForm(true)
+            break
+          // case 'Single Visit':
+          //   setPrice(1000);setErr(false);setOpenForm(true)
+          //   break
+  
+  
+          default:
+            break
+        }
+      }
+    }
+    const updateGA4 = (amnt, program) => {
+      ReactGA.event('add_to_cart', {
+        currency: 'INR',
+        value: amnt,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: program,
+          price: amnt,
+          quantity: 1
+        }]
+      });
+      console.log('add_to_cart', {
+        currency: 'INR',
+        value: amnt,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: program,
+          price: amnt,
+          quantity: 1
+        }]
+      });
+      if (window?.clevertap) {
+        window.clevertap.event.push("Course_Enroll_Click", {
+          "Course_name": 'Nutri Diet Clinic',
+          "Page_name": 'nutri-diet',
+          "Page_Url": window.location.href,
+          "Tenure": plan,
+          "date_time_timestamp": new Date().toISOString()
+        });
+  
+        console.log("Course_Clicked event tracked", window.clevertap);
+      } else {
+        console.error("CleverTap is not initialized.");
+      }
+  
+  
+    }
+    const enrollFrom = () => {
+      if (plan === '' || program === '') {
+        setErr(true)
+      } else {
+        switch (plan) {
+          case '1 month':
+            setPrice(3999); setErr(false); setOpenForm(true)
+            updateGA4(3999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '1 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          case '3 months':
+            setPrice(8999); setErr(false); setOpenForm(true)
+            updateGA4(8999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '3 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          case '6 months':
+            setPrice(13999); setErr(false); setOpenForm(true)
+            updateGA4(13999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '6 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          // case 'Single Visit':
+          //   setPrice(1000);setErr(false);setOpenForm(true)
+          //   break
+          default:
+            break
+        }
+        if (program === 'Clinical Plans') {
+          enrollForm2()
+        }
+  
+      }
+    }
+
 
 
 
@@ -180,8 +346,19 @@ const NutriDietHero = () => {
     setCurrentSlide(index);
   };
 
+  const scrollToPricing = () => {
+    // Find the available batches section by ID
+    const availableBatchesSection = document.getElementById('available-batches');
+    
+    // If the section exists, scroll to it
+    if (availableBatchesSection) {
+      availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="nutri-diet-wrapper">
+    <div className="diet_whole_wrapper">
+      <div className="nutri-diet-wrapper">
       <InnerNavComponent abc={Locate} />
       {/* <nav className="navbar">
         <button className="menu-btn">
@@ -234,7 +411,7 @@ const NutriDietHero = () => {
 
             </div>
 
-            <button className="pricing-btn">
+            <button className="pricing-btn" onClick={scrollToPricing}>
               See our pricing plan
               <div style={{ display: 'flex' }}>
                 <img src={nutri_diet_hero_wrapper} alt="" />
@@ -861,10 +1038,10 @@ const NutriDietHero = () => {
        
         
 
-        <div className="health-plan-container">
+        <div className="health-plan-container" id='available-batches'>
           <div className="health-plan-header">
 
-            <h2 className="health-plan-title">check our<span className='plantitle'>Health plan Investments </span></h2>
+            <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
           </div>
 
           <div className="health-plan-table-container">
@@ -903,7 +1080,7 @@ const NutriDietHero = () => {
 
 
 
-          <div className="health-plan-footer">
+          {/* <div className="health-plan-footer">
             <div className="footer-cta">
               <span className="heart-icon">❤️</span>
               <p>Start Your Personalized Health Journey!</p> <br />
@@ -914,9 +1091,47 @@ const NutriDietHero = () => {
               <button className="btn btn-select">Choose Your Program<span className="arrow-down">▼</span></button>
               <button className="btn btn-enroll">Enroll Now</button>
             </div>
-          </div>
+          </div> */}
+
+          <div className='health_wrapper_bottom'>
+
+            <div>
+              <p className='desc_health_first'>🎯 Start Your Personalized Health Journey!</p>
+              <p className='des_health_second'>Select your program & package to begin your transformation.</p>
+            </div>
+
+            <div
+                        id="date-select-mobile"
+                        style={{ display: 'flex', alignItems: 'center' }}
+                      >
+                        <SelectDropDown
+                          currentValue={plan}
+                          changeCurrentValue={setPlan}
+                          text={'Select Package'}
+                          isStyles={selectStyles1}
+                          dates={options}
+                        />{' '}
+                        <SelectDropDown
+                          currentValue={program}
+                          changeCurrentValue={setProgram}
+                          text={'Select Program'}
+                          isStyles={selectStyles1}
+                          dates={options1}
+                        />
+                        <CommonBtn text='Enroll Now' buttonAction={enrollFrom}  />
+                      {err && <small> Please select package/program* </small>}
+
+                      {openForm && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm} />}
+                      </div>
+                      
+
+
         </div>
 
+
+          </div>
+
+          
 
 
         <div className='diet-container'>
@@ -982,11 +1197,19 @@ const NutriDietHero = () => {
                   key={review.id}
                   className={`swiper-slide ${activeIndex === index
                       ? "fade"
-                      : activeIndex === index - 1 || activeIndex === index + 1
+                      : activeIndex === (index - 1) ||
+                      activeIndex === (index + 1)
                         ? "active"
                         : "fade-right"
                     }`}
+                    
                 >
+                  {console.log(activeIndex, 'ai')
+                    }
+                    {console.log(index, 'i')
+                    }
+                    {console.log( 'completed')
+                    }
                   <div className="review-card">
                     <p className="review-text">{review.text}</p>
                     <p className="review-details">{review.details}</p>
@@ -999,7 +1222,14 @@ const NutriDietHero = () => {
 
 
           <div className="slider-controls">
-            <button className="slider-arrow prev" onClick={() => swiperRef.current.swiper.slidePrev()}>
+            <button className="slider-arrow prev" onClick={() => {
+              if (swiperRef.current && swiperRef.current.swiper) {
+                swiperRef.current.swiper.slidePrev();
+              }
+      
+            }}>
+            {activeIndex}
+            {swiperRef.current?.swiper?.realIndex}
               &#10094;
             </button>
             <div className="slider-dots">
@@ -1013,16 +1243,27 @@ const NutriDietHero = () => {
                 </span>
               ))}
             </div>
-            <button className="slider-arrow next" onClick={() => swiperRef.current.swiper.slideNext()}>
+            <button className="slider-arrow next" onClick={() => {
+              if (swiperRef.current && swiperRef.current.swiper) {
+                swiperRef.current.swiper.slideNext();
+              }
+            }}>
+              {swiperRef.current?.swiper?.realIndex}
               &#10095;
             </button>
           </div>
 
+          
+
         </div>
 
+        <div className='bg_wrapper_client'>
         <div className="client-wave">
           <img src={greenbackground} alt="Wave background" />
         </div>
+        </div>
+
+        
 
         <div className="social-proof-container">
           <h2 className="social-proof-title">our <span className="highlight">Social Proof</span></h2>
@@ -1036,12 +1277,12 @@ const NutriDietHero = () => {
               <h3 className="social-proof-heading">Fuel Your Body. Transform Your Life.</h3>
               <p className="social-proof-text">Join the thousands of people who have found better health and a new lease on life today.</p>
               <div className="social-icons">
-                <a href="#" className="social-icon facebook">
+                <a href="https://www.facebook.com/theyogainstituteofficial/." className="social-icon facebook">
 
                   <img src={fb} alt="" />
 
                 </a>
-                <a href="#" className="social-icon instagram">
+                <a href="https://www.instagram.com/theyogainstituteofficial/" className="social-icon instagram">
 
                   <img src={insta} alt="" />
 
@@ -1058,7 +1299,7 @@ const NutriDietHero = () => {
         <div className="health-journey-container">
           <h2 className="journey-title">Start Your Personalized Health Journey!</h2>
 
-          <div className="journey-buttons">
+          {/* <div className="journey-buttons">
             <button className="journey-button outline">
               Choose Your Package
             </button>
@@ -1068,9 +1309,38 @@ const NutriDietHero = () => {
             <button className="journey-button accent">
               Email Now
             </button>
-          </div>
+          </div> */}
+          <div
+                        id="date-select-mobile"
+                        style={{ display: 'flex', alignItems: 'center' }}
+                        className='select_wrapper'
+                      >
+                        <div className='fixes_mobile'>
+                        <SelectDropDown
+                          currentValue={plan}
+                          changeCurrentValue={setPlan}
+                          text={'Select Package'}
+                          isStyles={selectStyles1}
+                          dates={options}
+                        />{' '}
+                        <SelectDropDown
+                          currentValue={program}
+                          changeCurrentValue={setProgram}
+                          text={'Select Program'}
+                          isStyles={selectStyles1}
+                          dates={options1}
+                        />
+                        </div>
+                        <div className="btn_enroll">
+                        <CommonBtn text='Enroll Now' buttonAction={enrollFrom}   />
+                        </div>
+                      {err && <small> Please select package/program* </small>}
+
+                      {openForm && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm} />}
+                      </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
