@@ -4634,6 +4634,46 @@
     }
   }
 
+<<<<<<< HEAD
+=======
+  .highlights-wave {
+    position: absolute;
+    bottom: -1.2%;
+    left: 0;
+    width: 100%;
+  }
+  }
+
+  .swiperButtonNext,
+.swiperButtonPrev,
+.customPagination,
+.swiper-pagination-bullet {
+  top: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+  right: unset !important;
+  /* width: auto !important; */
+  position: unset !important;
+
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+  border: 2px solid var(--Prussian-Blue);
+  padding: 18px;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+  color: var(--Prussian-Blue);
+  font-size: 17px;
+  font-weight: 900;
+}
+  
+>>>>>>> 12335472a41be135eaafedced2113a55a0957822
   // .timeline-mobile-cards {
   //   position: relative;
   //   z-index: 2;

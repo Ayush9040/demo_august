@@ -39,6 +39,7 @@ import SelectDropDown from '../../../Components/Select Dropdown';
 import CommonBtn from '../../../Components/commonbtn';
 import ReactGA from 'react-ga4';
 import SubcriptionForm from '../../NutriDiet/Subscription';
+import { Pagination, Scrollbar, A11y } from "swiper/modules";
 
 const NutriDietHero = () => {
   const navigate = useNavigate();
@@ -107,7 +108,18 @@ const NutriDietHero = () => {
       id: 3,
       text: "A 35 year old client wanted to improve athletic performance and recovery times.",
       details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
-    }
+    },
+    {
+      id: 2,
+      text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
+      details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
+    },
+    {
+      id: 3,
+      text: "A 35 year old client wanted to improve athletic performance and recovery times.",
+      details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
+    },
+    
   ];
 
 
@@ -354,6 +366,15 @@ const NutriDietHero = () => {
     if (availableBatchesSection) {
       availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const goToNext = () => {
+    swiperRef.current.swiper.slideNext();
+  };
+
+  // Function to move to previous slide
+  const goToPrev = () => {
+    swiperRef.current.swiper.slidePrev();
   };
 
   return (
@@ -1193,6 +1214,25 @@ const NutriDietHero = () => {
               spaceBetween={10}
               slidesPerView={3}
               loop={true}
+              modules={[Pagination, Scrollbar, A11y]}
+        scrollbar={{ draggable: true }}
+        draggable={true}
+        speed={1000}
+        navigation={{
+          nextEl: `swiperButtonNext`,
+          prevEl: `swiperButtonPrev`,
+        }}
+        pagination={{
+          clickable: true,
+          el: `customPagination`,
+          type: "bullets",
+        }}
+        // breakpoints={{
+        //   1430: { slidesPerView: 3, slidesPerGroup: 3 },
+        //   1015: { slidesPerView: 2, slidesPerGroup: 2, centeredSlides: false },
+        //   350: { slidesPerView: 1, slidesPerGroup: 1, centeredSlides: true },
+        // }}
+        // style={{ "--swiper-scrollbar-size": "0px", display: "none !important" }}
               onSlideChange={handleSlideChange}
             >
               {reviews.map((review, index) => (
@@ -1229,7 +1269,6 @@ const NutriDietHero = () => {
               if (swiperRef.current && swiperRef.current.swiper) {
                 swiperRef.current.swiper.slidePrev();
               }
-      
             }}>
             {activeIndex}
             {swiperRef.current?.swiper?.realIndex}
@@ -1247,9 +1286,9 @@ const NutriDietHero = () => {
               ))}
             </div>
             <button className="slider-arrow next" onClick={() => {
-              if (swiperRef.current && swiperRef.current.swiper) {
-                swiperRef.current.swiper.slideNext();
-              }
+                if (swiperRef.current && swiperRef.current.swiper) {
+                  swiperRef.current.swiper.slideNext();
+                }
             }}>
               {swiperRef.current?.swiper?.realIndex}
               &#10095;
