@@ -68,25 +68,25 @@ const NutriDietHero = () => {
     {
       category: 'Ahar',
       subcategory: '(Diet & Nutrition)',
-      title: 'Fuel for the Soul',
+      title: '"Fuel for the Soul"',
       description: 'Emphasizing food as nourishment beyond just the body'
     },
     {
       category: 'Vihar',
       subcategory: '(Lifestyle & Routine)',
-      title: 'Flow of Life',
+      title: '"Flow of Life"',
       description: 'Capturing the essence of movement, relaxation and daily habits'
     },
     {
       category: 'Achar',
       subcategory: '(Discipline & Conduct)',
-      title: 'Rhythm of Actions',
+      title: '"Rhythm of Actions"',
       description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
       category: 'Vihar',
       subcategory: '(Thoughts & Mindset)',
-      title: 'Echoes of the Mind',
+      title: '"Echoes of the Mind"',
       description: 'Reflecting on how thoughts shape our reality'
     }
   ];
@@ -736,7 +736,7 @@ const NutriDietHero = () => {
                 <div className="journey_card-content">
                   <h3>Consultation Call</h3>
                   <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional needs for holistic health.</p>
-                  <p>(Mode: Offline | Online)</p>
+                  <span className='card_p'><strong>(Mode: Offline | Online)</strong></span>
                 </div>
               </div>
 
@@ -744,9 +744,9 @@ const NutriDietHero = () => {
                 <div className="journey_card-content">
                   <h3>Body Analysis</h3>
                   <p><strong>For offline consultations:</strong></p>
-                  <p>Body composition analysis to understand the weight, muscle mass & fat mass %, visceral fat, body age and more.</p>
+                  <p><li>Body composition analysis to understand the weight, muscle mass & fat mass %, visceral fat, body age and more.</li></p>
                   <p><strong>For online clients:</strong></p>
-                  <p>Body measurements: height, weight, waist, and hip circumference, BMI</p>
+                  <p><li>Body measurements: height, weight, waist, and hip circumference, BMI</li></p>
                 </div>
               </div>
 
@@ -783,7 +783,8 @@ const NutriDietHero = () => {
               <div className="journey_eigth_content_wrapper">
                 <div className="journey_card-content">
                   <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                  <p>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</p>
+                  <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p> <br/>
+                  <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                 </div>
               </div>
 
@@ -853,15 +854,17 @@ const NutriDietHero = () => {
                 <div className="timeline-card step-2">
                   <div className="card-content">
                     <h3>Consultation Call</h3>
-                    <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health. <br /> (Mode: Offline / Online)</p>
+                    <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health. <br /> <span className='cardmobile'>(Mode: Offline / Online)</span></p>
                   </div>
                 </div>
 
                 <div className="timeline-card step-3">
                   <div className="card-content">
                     <h3>Body Analysis</h3>
-                    <p><strong>For offline consultations:</strong> Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age, and more.</p> <br />
-                    <p><strong>For online consultations:</strong> Body measurements - height, weight, waist, and hip circumference, BMI.</p>
+                    <p><strong>For offline consultations:</strong> </p>
+                    <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age, and more.</li></p> <br />
+                    <p><strong>For online consultations:</strong></p>
+                    <p><li>Body measurements - height, weight, waist, and hip circumference, BMI.</li> </p>
                   </div>
                 </div>
 
@@ -903,8 +906,8 @@ const NutriDietHero = () => {
                 <div className="timeline-card step-8">
                   <div className="card-content">
                     <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                    <p>Customized diet plan based on your nutritional needs, health goals, and food preferences.</p>  <br />
-                    <p>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</p>
+                    <p><li>Customized diet plan based on your nutritional needs, health goals, and food preferences.</li></p>  <br />
+                    <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                   </div>
                 </div>
 
@@ -1148,15 +1151,15 @@ const NutriDietHero = () => {
                   <img src={Nutritionist} alt='' />
                 </div>
                 <div className="profile-details">
-                  <h2 className="profile-name">Vinita Ashok Salunke (Sr. Nutritionist)</h2>
+                  <h2 className="profile-name">Vinita Ashok Sakpal (Sr. Nutritionist) </h2>
                   <h3 className="profile-title">Qualifications</h3>
                   <ul className="qualifications-list">
                     <li>MSc. Food Science and Nutrition</li>
-                    <li>PG Diploma in Sports and Dietetics</li>
-                    <li>Certified Diabetes Educator</li>
-                    <li>NESTA Advance Nutrition Training program course</li>
-                    <li>VLCC Level 2 Weight Management and Wellness</li>
-                    <li>Experience: 5+ years</li>
+                    <li>Bsc. Food Nutrition and Dietetics</li>
+                    <li>Diabetes Educator </li>
+                    <li>900 hrs Advance teacher training yoga course </li>
+                    <li>YCB Level 3 Yoga Instructor and Evaluator </li>
+                    <li>Experience: 5+ years </li>
                   </ul>
                 </div>
               </div>
@@ -1166,14 +1169,14 @@ const NutriDietHero = () => {
                   <img src={Dietician} alt='' />
                 </div>
                 <div className="profile-details">
-                  <h2 className="profile-name">Samma Sanjay Nagda <br /> (Clinical Dietician)</h2>
+                  <h2 className="profile-name">Kreena Sanjay Nagda <br /> (Clinical Dietician)</h2>
                   <h3 className="profile-title">Qualifications</h3>
                   <ul className="qualifications-list">
-                    <li>BHMS, Certified Nutrition and Dietetics</li>
-                    <li>Psychonutrition Practitioner</li>
+                    <li>MSc Clinical Nutrition and Dietetics</li>
+                    <li>Functional Nutritionist</li>
                     <li>Certified Diabetes Educator</li>
-                    <li>ICMR, NESA Diet Coach</li>
-                    <li>Experience: 3+ years</li>
+                    <li>Holistic Nutrition Coach</li>
+                    <li>Experience: 3+ years </li>
                   </ul>
                 </div>
               </div>
@@ -1274,8 +1277,9 @@ const NutriDietHero = () => {
             <img src={footericon} alt="" className='footericon' />
             <div className="social-proof-content">
 
-              <h3 className="social-proof-heading">Fuel Your Body. Transform Your Life.</h3>
-              <p className="social-proof-text">Join the thousands of people who have found better health and a new lease on life today.</p>
+              <h3 className="social-proof-heading">Fuel Your Body, Transform Your Life</h3>
+              {/* <p className="social-proof-text">Join the thousands of people who have found better health and a new lease on life today.</p> */}
+              <p className="social-proof-text">Science-backed nutrition tailored to your lifestyle. Start your journey today.</p>
               <div className="social-icons">
                 <a href="https://www.facebook.com/theyogainstituteofficial/." className="social-icon facebook">
 
