@@ -1260,15 +1260,10 @@ const NutriDietHero = () => {
                   className={`swiper-slide ${isActive ? "active" : activeIndex === index ? "fade" : "fade-right"}`}
                     
                 >
-                  {console.log(activeIndex, 'ai')
-                    }
-                    {console.log(index, 'i')
-                    }
-                    {console.log( 'completed')
-                    }
+                  
                   <div className="review-card">
-                    <p className="review-text">{review.text}{index-1}{index+1}</p>
-                    <p className="review-details">{review.details}{isActive}</p>
+                    <p className="review-text">{review.text}</p>
+                    <p className="review-details">{review.details}</p>
                   </div>
                 </SwiperSlide>
                 )
@@ -1285,7 +1280,7 @@ const NutriDietHero = () => {
                 swiperRef.current.swiper.slidePrev();
               }
             }}>
-            {activeIndex}
+            {/* {activeIndex} */}
             {/* {index} */}
             {/* {swiperRef.current?.swiper?.realIndex} */}
               &#10094;
@@ -1307,7 +1302,7 @@ const NutriDietHero = () => {
                   swiperRef.current.swiper.slideNext();
                 }
             }}>
-              {swiperRef.current?.swiper?.realIndex}
+              {/* {swiperRef.current?.swiper?.realIndex} */}
               &#10095;
             </button>
           </div>
