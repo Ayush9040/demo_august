@@ -10,7 +10,7 @@
 
   .nutri-diet-container {
     width: 100%;
-    // max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #03393F;
     // overflow: hidden;
@@ -3919,13 +3919,15 @@
   }
 
   .Dates-dropdown .Select-dropdown {
-    padding: 0.8rem 0.8rem;
-    font-size: 1.5rem;
-    font-weight: 900;
+    padding: 14px;
+    font-family: 'Urbanist';
+    font-size: 16px;
+    font-weight: 500;
     border: none;
     color: white;
-    border-radius: 15% / 50%;
-    background: transparent;
+    border: 1px solid rgba(50, 104, 86, 1);
+    border-radius: 0%;
+    background: rgba(255, 255, 254, 0.3);
   }
 
   .Dates-dropdown .Select-dropdown option {
@@ -3942,6 +3944,17 @@
 
   .fixes_mobile {
     display: flex;
+  }
+
+  .highlight-image-container {
+    width: 200px;
+    height: 180px;
+  }
+
+  .highlight-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
 

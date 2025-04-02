@@ -40,6 +40,13 @@ import CommonBtn from '../../../Components/commonbtn';
 import ReactGA from 'react-ga4';
 import SubcriptionForm from '../../NutriDiet/Subscription';
 import { Pagination, Scrollbar, A11y } from "swiper/modules";
+import Vihar from './images/Vihar.png'
+import VICHAR from './images/VICHAR.png'
+import Ahar from './images/Ahar.png'
+import ACHAAR from './images/ACHAAR.png'
+
+
+
 
 const NutriDietHero = () => {
   const navigate = useNavigate();
@@ -51,10 +58,13 @@ const NutriDietHero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [plan, setPlan] = useState('')
     const [program, setProgram] = useState('')
+    const [prevActiveIndex, setPrevActiveIndex] = useState(null);
+    const [direction, setDirection] = useState("next");
 
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
+    setPrevActiveIndex(activeIndex);
   };
 
   const Locate = {
@@ -68,24 +78,28 @@ const NutriDietHero = () => {
   const highlightsData = [
     {
       category: 'Ahar',
+      img: Ahar,
       subcategory: '(Diet & Nutrition)',
       title: '"Fuel for the Soul"',
       description: 'Emphasizing food as nourishment beyond just the body'
     },
     {
       category: 'Vihar',
+      img: Vihar,
       subcategory: '(Lifestyle & Routine)',
       title: '"Flow of Life"',
       description: 'Capturing the essence of movement, relaxation and daily habits'
     },
     {
       category: 'Achar',
+      img: ACHAAR,
       subcategory: '(Discipline & Conduct)',
       title: '"Rhythm of Actions"',
       description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
       category: 'Vihar',
+      img: VICHAR,
       subcategory: '(Thoughts & Mindset)',
       title: '"Echoes of the Mind"',
       description: 'Reflecting on how thoughts shape our reality'
@@ -114,11 +128,7 @@ const NutriDietHero = () => {
       text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
       details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
     },
-    {
-      id: 3,
-      text: "A 35 year old client wanted to improve athletic performance and recovery times.",
-      details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
-    },
+   
     
   ];
 
@@ -189,7 +199,7 @@ const NutriDietHero = () => {
 
   const selectStyles1 = {
     cursor: 'pointer',
-    // background: 'rgba(255, 255, 254, 0.3)',
+    // background: 'transparent',
     borderColor: 'rgba(50, 104, 86, 1)',
     color: 'rgba(255, 255, 255, 1)',
     fontSize: '16px',
@@ -534,7 +544,7 @@ const NutriDietHero = () => {
               {highlightsData.map((item, index) => (
                 <div key={index} className="highlight-card">
                   <div className="highlight-image-container">
-                    <img src={saladPlateImage} alt="Healthy salad plate" className="saladPlateImage" />
+                    <img src={item.img} alt="Healthy salad plate" className="saladPlateImage" />
                   </div>
                   <div className="highlight-content">
                     <div className="highlight-category">
@@ -804,7 +814,7 @@ const NutriDietHero = () => {
               <div className="journey_eigth_content_wrapper">
                 <div className="journey_card-content">
                   <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                  <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p> <br/>
+                  <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p>
                   <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                 </div>
               </div>
@@ -1235,16 +1245,19 @@ const NutriDietHero = () => {
         // style={{ "--swiper-scrollbar-size": "0px", display: "none !important" }}
               onSlideChange={handleSlideChange}
             >
-              {reviews.map((review, index) => (
-                <SwiperSlide
+              {reviews.map((review, index) => {
+                const isActive = direction === "next" ? index === activeIndex + 1 : index === activeIndex - 1;
+                return (
+                  <SwiperSlide
                   key={review.id}
-                  className={`swiper-slide ${activeIndex === index
-                      ? "fade"
-                      : activeIndex === (index - 1) ||
-                      activeIndex === (index + 1)
-                        ? "active"
-                        : "fade-right"
-                    }`}
+                  // className={`swiper-slide ${activeIndex === index
+                  //     ? "fade"
+                  //     : activeIndex === (index - 1) ||
+                  //     activeIndex === (index + 1)
+                  //       ? "active"
+                  //       : "fade-right"
+                  //   }`}
+                  className={`swiper-slide ${isActive ? "active" : activeIndex === index ? "fade" : "fade-right"}`}
                     
                 >
                   {console.log(activeIndex, 'ai')
@@ -1254,11 +1267,12 @@ const NutriDietHero = () => {
                     {console.log( 'completed')
                     }
                   <div className="review-card">
-                    <p className="review-text">{review.text}</p>
-                    <p className="review-details">{review.details}</p>
+                    <p className="review-text">{review.text}{index-1}{index+1}</p>
+                    <p className="review-details">{review.details}{isActive}</p>
                   </div>
                 </SwiperSlide>
-              ))}
+                )
+              })}
             </Swiper>
 
           </div>
@@ -1267,11 +1281,13 @@ const NutriDietHero = () => {
           <div className="slider-controls">
             <button className="slider-arrow prev" onClick={() => {
               if (swiperRef.current && swiperRef.current.swiper) {
+                setDirection("prev");
                 swiperRef.current.swiper.slidePrev();
               }
             }}>
             {activeIndex}
-            {swiperRef.current?.swiper?.realIndex}
+            {/* {index} */}
+            {/* {swiperRef.current?.swiper?.realIndex} */}
               &#10094;
             </button>
             <div className="slider-dots">
@@ -1287,6 +1303,7 @@ const NutriDietHero = () => {
             </div>
             <button className="slider-arrow next" onClick={() => {
                 if (swiperRef.current && swiperRef.current.swiper) {
+                  setDirection("next");
                   swiperRef.current.swiper.slideNext();
                 }
             }}>
