@@ -2169,6 +2169,7 @@
   .condition-line {
     margin: 3px 0;
     padding: 2px 0;
+    line-height: 150%;
   }
 
   /* Responsive Styles */
@@ -2221,6 +2222,7 @@
     .condition-line {
       font-size: 11px;
       margin: 1px 0;
+      line-height: 150%;
       padding: 1px 0;
     }
   }
@@ -2351,15 +2353,18 @@
   .nurtition img,
   .dietician img {
     width: 100%;
+    border-radius: 20px;
   }
 
   .profile-details {
-    padding: 20px;
+    padding: 24px;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 24px;
+    // right:15px;
+    right: 20px;
     padding-top: 50px;
   }
 
@@ -2371,6 +2376,14 @@
     margin-bottom: 10px;
     // width: 100%;
     width: 414px;
+  }
+
+  .profile-list {
+    width: 414px;
+    height: 226px;
+    gap: 12px;
+display: flex;
+flex-direction: column;
   }
 
   .profile-title {
@@ -2499,6 +2512,8 @@
 
     .profile-details {
       padding: 15px;
+      gap: 16px;
+      right: 16px;
     }
 
     .profile-name {
@@ -3016,7 +3031,7 @@
     color: #000000;
     font-size: 16px;
     font-weight: 500;
-    width: 523px;
+    // width: 523px;
     height: 24px;
 
     line-height: 1.5;
@@ -3999,12 +4014,12 @@
       position: fixed;
       bottom: 0;
       left: 50%;
-      height: 174px;
+      // height: 174px;
       transform: translateX(-50%);
       // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
-  
+
 
     .fixes_mobile {
       display: flex;
@@ -4218,6 +4233,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      position: absolute;
+      top: 33%;
       // position: relative;
       // position: relative;
       z-index: 2;
@@ -4679,9 +4696,9 @@
     left: 0;
     width: 100%;
   }
-  }
+}
 
-  .swiperButtonNext,
+.swiperButtonNext,
 .swiperButtonPrev,
 .customPagination,
 .swiper-pagination-bullet {
@@ -4709,114 +4726,110 @@
   font-size: 17px;
   font-weight: 900;
 }
-  
-  // .timeline-mobile-cards {
-  //   position: relative;
-  //   z-index: 2;
-  //   padding: 0 20px;
-  //   width: 80%;
-  //   left: 15%;
-  // }
 
-  // .timeline-mobile-card {
-  //   display: flex;
-  //   align-items: flex-start;
-  //   margin-bottom: 20px;
-  //   background: white;
-  //   border-radius: 10px;
-  //   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  //   padding: 15px;
-  //   position: relative;
-  // }
+// .timeline-mobile-cards {
+//   position: relative;
+//   z-index: 2;
+//   padding: 0 20px;
+//   width: 80%;
+//   left: 15%;
+// }
 
-  //   /* Specific height variations for each card */
-  //   .timeline-mobile-card[data-number="1"] {
-  //     height: 86px;
-  //   }
+// .timeline-mobile-card {
+//   display: flex;
+//   align-items: flex-start;
+//   margin-bottom: 20px;
+//   background: white;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   padding: 15px;
+//   position: relative;
+// }
 
-  //   .timeline-mobile-card[data-number="2"] {
-  //     height: 179px;
-  //         gap: 10px;
-  //   }
+//   /* Specific height variations for each card */
+//   .timeline-mobile-card[data-number="1"] {
+//     height: 86px;
+//   }
 
-  //   .timeline-mobile-card[data-number="3"] {
-  //     min-height: 200px;
-  //   }
+//   .timeline-mobile-card[data-number="2"] {
+//     height: 179px;
+//         gap: 10px;
+//   }
 
-  //   .timeline-mobile-card[data-number="4"] {
-  //     min-height: 250px;
-  //   }
+//   .timeline-mobile-card[data-number="3"] {
+//     min-height: 200px;
+//   }
 
-
-
-
-  // .timeline-mobile-card-content {
-  //   flex-grow: 1;
-  // }
-
-  // .timeline-mobile-card-content h3 {
-  //   margin-top: 0;
-  //   color: #00a86b;
-  //   font-size: 18px;
-  // }
-
-  // .timeline-mobile-card-content p {
-  //   margin: 10px 0 0;
-  //   font-size: 14px;
-  //   color: #333;
-  //   white-space: pre-wrap;
-  // }
-
-  // .timeline-mobile-cards {
-  //   position: relative;
-  //   z-index: 2;
-  //   padding: 0 20px;
-  // }
-
-  // .timeline-mobile-card {
-  //   display: flex;
-  //   align-items: flex-start;
-  //   margin-bottom: 20px;
-  //   background: white;
-  //   border-radius: 10px;
-  //   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  //   padding: 15px;
-  //   position: relative;
-  // }
-
-  // .timeline-mobile-card-number {
-  //   width: 40px;
-  //   height: 40px;
-  //   background-color: #00a86b;
-  //   color: white;
-  //   border-radius: 50%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   font-weight: bold;
-  //   margin-right: 15px;
-  //   flex-shrink: 0;
-  // }
-
-  // .timeline-mobile-card-content {
-  //   flex-grow: 1;
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // .timeline-mobile-card-content h3 {
-  //   margin-top: 0;
-  //   color: #00a86b;
-  //   font-size: 18px;
-  // }
-
-  // .timeline-mobile-card-content p {
-  //   margin: 10px 0 0;
-  //   font-size: 14px;
-  //   color: #333;
-  //   white-space: pre-wrap;
-  // }
+//   .timeline-mobile-card[data-number="4"] {
+//     min-height: 250px;
+//   }
 
 
 
 
+// .timeline-mobile-card-content {
+//   flex-grow: 1;
+// }
+
+// .timeline-mobile-card-content h3 {
+//   margin-top: 0;
+//   color: #00a86b;
+//   font-size: 18px;
+// }
+
+// .timeline-mobile-card-content p {
+//   margin: 10px 0 0;
+//   font-size: 14px;
+//   color: #333;
+//   white-space: pre-wrap;
+// }
+
+// .timeline-mobile-cards {
+//   position: relative;
+//   z-index: 2;
+//   padding: 0 20px;
+// }
+
+// .timeline-mobile-card {
+//   display: flex;
+//   align-items: flex-start;
+//   margin-bottom: 20px;
+//   background: white;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   padding: 15px;
+//   position: relative;
+// }
+
+// .timeline-mobile-card-number {
+//   width: 40px;
+//   height: 40px;
+//   background-color: #00a86b;
+//   color: white;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-weight: bold;
+//   margin-right: 15px;
+//   flex-shrink: 0;
+// }
+
+// .timeline-mobile-card-content {
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .timeline-mobile-card-content h3 {
+//   margin-top: 0;
+//   color: #00a86b;
+//   font-size: 18px;
+// }
+
+// .timeline-mobile-card-content p {
+//   margin: 10px 0 0;
+//   font-size: 14px;
+//   color: #333;
+//   white-space: pre-wrap;
+// }

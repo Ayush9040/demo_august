@@ -46,6 +46,7 @@ import Ahar from './images/Ahar.png'
 import ACHAAR from './images/ACHAAR.png'
 import Vinita from './images/Vinita.JPG'
 import Kreena from './images/Kreena.JPG'
+import TYI_Mobile_v2 from './images/TYI_Mobile_v2.png'
 
 
 
@@ -701,6 +702,7 @@ const NutriDietHero = () => {
 
             <div className="health-journey-container1">
               {/* <img src={timeline} alt="Journey Timeline" className='timeline-mobile' /> */}
+              <img src={TYI_Mobile_v2} alt ="Journey TImeline" />
 
               <div className="health-timeline-cards">
                 <div className="timeline-card step-1">
@@ -997,6 +999,7 @@ const NutriDietHero = () => {
                 </div>
                 <div className="profile-details">
                   <h2 className="profile-name">Vinita Ashok Sakpal (Sr. Nutritionist) </h2>
+                  <div className="profile-list">
                   <h3 className="profile-title">Qualifications</h3>
                   <ul className="qualifications-list">
                     <li>MSc. Food Science and Nutrition</li>
@@ -1006,6 +1009,7 @@ const NutriDietHero = () => {
                     <li>YCB Level 3 Yoga Instructor and Evaluator </li>
                     <li>Experience: 5+ years </li>
                   </ul>
+                  </div>
                 </div>
               </div>
 
@@ -1015,6 +1019,7 @@ const NutriDietHero = () => {
                 </div>
                 <div className="profile-details">
                   <h2 className="profile-name">Kreena Sanjay Nagda <br /> (Clinical Dietician)</h2>
+                  <div className="profile-list">
                   <h3 className="profile-title">Qualifications</h3>
                   <ul className="qualifications-list">
                     <li>MSc Clinical Nutrition and Dietetics</li>
@@ -1023,6 +1028,7 @@ const NutriDietHero = () => {
                     <li>Holistic Nutrition Coach</li>
                     <li>Experience: 3+ years </li>
                   </ul>
+                  </div>
                 </div>
               </div>
             </div>
