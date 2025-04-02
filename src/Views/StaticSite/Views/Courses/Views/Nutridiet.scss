@@ -2865,6 +2865,7 @@ flex-direction: column;
   @media (max-width: 768px) {
     .client-reviews-container {
       padding: 35px 15px;
+      margin-bottom: 200px;
     }
 
     .reviews-title {
@@ -2962,6 +2963,7 @@ flex-direction: column;
     background-color: #f9f9f9;
     background-image: linear-gradient(to bottom, #0a3c3f, #0a3c3f 10px, #f9f9f9 10px, #f9f9f9);
     box-sizing: border-box;
+    margin-bottom: 100px;
   }
 
   .social-proof-title {

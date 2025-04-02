@@ -322,11 +322,13 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           )}
         </div>
       </form>
+      <div style={{display:'flex',justifyContent:'center'}}>
       <CommonBtn
         isColor='#ca4625'
         text='Continue'
         buttonAction={handleEnrollment}
       />
+      </div>
     </div>
   )
 }
