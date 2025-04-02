@@ -56,16 +56,18 @@ const Experience = () => {
               <h4>Honorable Prime Minister of India</h4>
               <p>
                 <q>
-                Yoga has been a traditional lifestyle in every household of our country since ancient times. It enhances inner calm, peace, and brotherhood among the people. Heartiest congratulations and best wishes to The Yoga Institute.
+                  Yoga has been a traditional lifestyle in every household of our country since ancient times. It enhances inner calm, peace, and brotherhood among the people. Heartiest congratulations and best wishes to The Yoga Institute.
                 </q>
               </p>
             </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
+
           </div>
           <div className="carousel-image">
             <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt="Modiji" />
+            <div style={{ float: 'right' }}>
+              <Link to="/testimonials">
+                <CommonBtn text={'View All'} />
+              </Link></div>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -79,18 +81,21 @@ const Experience = () => {
               <h3>Shri Ram Nath Kovind</h3>
               <h4>Former President of India</h4>
               <p>
-              We are aware that ”Lifestyle diseases are increasing in India. Those who do Yoga from childhood (in school or college) will build up strength and immunity.” I wish The Yoga Institute all the best in their efforts to spread the goodness of Yoga. 
+                We are aware that ”Lifestyle diseases are increasing in India. Those who do Yoga from childhood (in school or college) will build up strength and immunity.” I wish The Yoga Institute all the best in their efforts to spread the goodness of Yoga.
               </p>
             </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
+
           </div>
           <div className="carousel-image">
             <img
               src={`${baseDomain}${homeAssets.homeAsset55}`}
               alt="Shri Ramnath Kovid"
             />
+            <div style={{ float: 'right' }}>
+              <Link to="/testimonials">
+                <CommonBtn text={'View All'} />
+              </Link>
+            </div>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -105,16 +110,18 @@ const Experience = () => {
               <h4>Former Vice President of India</h4>
               <p>
                 <q>
-                It gives me immense joy to see the stupendous work done by the Institute in the last 100 years which has brought them great laurels and accolades. I congratulate the entire Yogendra Family for living up to this noble task of spreading Yoga across the globe.
+                  It gives me immense joy to see the stupendous work done by the Institute in the last 100 years which has brought them great laurels and accolades. I congratulate the entire Yogendra Family for living up to this noble task of spreading Yoga across the globe.
                 </q>
               </p>
             </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
+
           </div>
           <div className="carousel-image">
             <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
+            <div style={{ float: 'right' }}>
+              <Link to="/testimonials">
+                <CommonBtn text={'View All'} />
+              </Link></div>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -133,15 +140,18 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
+
           </div>
           <div className="carousel-image">
             <img
               src={`${baseDomain}${homeAssets.homeAsset58}`}
               alt="Amitabh Bachchan"
             />
+            <div style={{ float: 'right' }}>
+              <Link to="/testimonials">
+                <CommonBtn text={'View All'} />
+              </Link>
+            </div>
           </div>
         </div>
       </Slider>

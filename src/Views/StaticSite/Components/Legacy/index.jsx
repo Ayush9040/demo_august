@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from '../Heading'
 import { legacy, filler } from '../../assets/icons/icon'
-import baseDomain,{ homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import './style.scss'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
@@ -16,7 +16,7 @@ const Legacy = () => {
           smallText={'World’s Oldest'}
           largeText={'Yoga Institute'}
         />
-       
+
         <div className="legacy-text">
           <p>
             {`The Yoga Institute, world's first yoga center, was established in
@@ -31,52 +31,64 @@ const Legacy = () => {
         </div>
         <div className="photo-container global-top-margin">
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset1}`} alt='Madhavdasji the yoga institute'/>
-            <div className="legacy-card-content">
-              <h4>Paramhamsa Madhavdasji</h4>
-              <h5>Founder&apos;s Guru</h5>
-              <h6>1798-1921</h6>
-            </div>
+            <Link to="/our-legacy/paramhamsa-madhavadas-ji">
+              <img src={`${baseDomain}${homeAssets.homeAsset1}`} alt='Madhavdasji the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Paramhamsa Madhavdasji</h4>
+                <h5>Founder&apos;s Guru</h5>
+                <h6>1798-1921</h6>
+              </div>
+            </Link>
           </div>
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset2}`} alt='Shri Yogendraji the yoga institute' />
-            <div className="legacy-card-content">
-              <h4>Shri Yogendra ji</h4>
-              <h5>Founder</h5>
-              <h6>1897 - 1989</h6>
-            </div>
+            <Link to="/our-legacy/shree-yogendra-ji">
+              <img src={`${baseDomain}${homeAssets.homeAsset2}`} alt='Shri Yogendraji the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Shri Yogendra ji</h4>
+                <h5>Founder</h5>
+                <h6>1897 - 1989</h6>
+              </div>
+            </Link>
           </div>
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset3}`} alt='Sitadevi the yoga institute' />
-            <div className="legacy-card-content">
-              <h4>Smt. Sitadevi Yogendra</h4>
-              <h5>Mother</h5>
-              <h6>1912 - 2008</h6>
-            </div>
+            <Link to="/our-legacy/smt-sitadevi-ji">
+              <img src={`${baseDomain}${homeAssets.homeAsset3}`} alt='Sitadevi the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Smt. Sitadevi Yogendra</h4>
+                <h5>Mother</h5>
+                <h6>1912 - 2008</h6>
+              </div>
+            </Link>
           </div>
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset4}`} alt='Jayadeva Yogendra the yoga institute' />
-            <div className="legacy-card-content">
-              <h4>Dr. Jayadeva Yogendra</h4>
-              <h5>President</h5>
-              <h6>1929 - 2018</h6>
-            </div>
+            <Link to="/our-legacy/dr-jayadeva-yogendra">
+              <img src={`${baseDomain}${homeAssets.homeAsset4}`} alt='Jayadeva Yogendra the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Dr. Jayadeva Yogendra</h4>
+                <h5>President</h5>
+                <h6>1929 - 2018</h6>
+              </div>
+            </Link>
           </div>
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset5}`} alt='Dr. Hansaji Yogendra the yoga institute' />
-            <div className="legacy-card-content">
-              <h4>Smt. Hansaji J Yogendra</h4>
-              <h5>Director</h5>
-              <h6>1947</h6>
-            </div>
+            <Link to="/our-legacy/dr-hansaji-yogendra">
+              <img src={`${baseDomain}${homeAssets.homeAsset5}`} alt='Dr. Hansaji Yogendra the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Smt. Hansaji J Yogendra</h4>
+                <h5>Director</h5>
+                <h6>1947</h6>
+              </div>
+            </Link>
           </div>
           <div className="legacy-card">
-            <img src={`${baseDomain}${homeAssets.homeAsset6}`} alt='Hrishi Yogendra the yoga institute' />
-            <div className="legacy-card-content">
-              <h4>Shri Hrishi J Yogendra</h4>
-              <h5>Assistant Director</h5>
-              <h6>1988</h6>
-            </div>
+            <Link to="/our-legacy/hrishi-ji">
+              <img src={`${baseDomain}${homeAssets.homeAsset6}`} alt='Hrishi Yogendra the yoga institute' />
+              <div className="legacy-card-content">
+                <h4>Shri Hrishi J Yogendra</h4>
+                <h5>Assistant Director</h5>
+                <h6>1988</h6>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="filler-logo">{filler}</div>

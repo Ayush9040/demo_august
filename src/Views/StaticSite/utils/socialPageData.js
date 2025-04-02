@@ -12,6 +12,19 @@ export const socialPageData = [
     image: `${baseDomain}${socialResponsibilityAssets.annamBrahma}`,
   },
   {
+    title: 'Police',
+    description: `We understand the holistic health requirements for those
+    who deal with terror, anti-social elements, and other
+    disturbing situations on a daily basis. Paying tribute to
+    their indomitable spirit, we have provided these special
+    task forces with free yoga sessions for over a decade. We
+    have trained over 10,000 personnel in yoga techniques
+    through these programmes to enhance their ability to
+    manage and eventually overcome PTSD and similar
+    psychological and physical ailments.`,
+    image: `${baseDomain}${socialResponsibilityAssets.police}`,
+  },
+  {
     title: 'Truckasana',
     description: `The trucking industry is the backbone of our nation’s
     economy, however the stressful and demanding nature of
@@ -24,16 +37,6 @@ export const socialPageData = [
     Truck Aasana, a unique Yoga regime that truckers can do
     easily with their routine as well as on the move.`,
     image: `${baseDomain}${socialResponsibilityAssets.truckAsana}`,
-  },
-  {
-    title: 'Yoga for transgender community',
-    description: `Transgender people are at increased risk for certain types of
-    chronic diseases, cancers, hormone issues, and mental
-    health problems. They face stigmatization, discrimination,
-    and also lack of access to quality care. Yoga encourages
-    them to derive enormous benefits and experience a sense of
-    well-being for a lifetime.`,
-    image: `${baseDomain}${socialResponsibilityAssets.transgender}`,
   },
   {
     title: 'Yoga for special need kids',
@@ -49,6 +52,17 @@ export const socialPageData = [
     image: `${baseDomain}${socialResponsibilityAssets.specialChildren}`,
   },
   {
+    title: 'Yoga for transgender community',
+    description: `Transgender people are at increased risk for certain types of
+    chronic diseases, cancers, hormone issues, and mental
+    health problems. They face stigmatization, discrimination,
+    and also lack of access to quality care. Yoga encourages
+    them to derive enormous benefits and experience a sense of
+    well-being for a lifetime.`,
+    image: `${baseDomain}${socialResponsibilityAssets.transgender}`,
+  },
+
+  {
     title: 'Tree Plantation drive',
     description: `We are aware of the immediate need to protect our
     environment. Campaigns are conducted throughout the
@@ -58,17 +72,5 @@ export const socialPageData = [
     work to preserve our environment for generations to come.`,
     image:`${baseDomain}${socialResponsibilityAssets.palnting}`,
   },
-  {
-    title: 'Police',
-    description: `We understand the holistic health requirements for those
-    who deal with terror, anti-social elements, and other
-    disturbing situations on a daily basis. Paying tribute to
-    their indomitable spirit, we have provided these special
-    task forces with free yoga sessions for over a decade. We
-    have trained over 10,000 personnel in yoga techniques
-    through these programmes to enhance their ability to
-    manage and eventually overcome PTSD and similar
-    psychological and physical ailments.`,
-    image: `${baseDomain}${socialResponsibilityAssets.police}`,
-  },
+  
 ]
