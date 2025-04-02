@@ -44,7 +44,8 @@ import Vihar from './images/Vihar.png'
 import VICHAR from './images/VICHAR.png'
 import Ahar from './images/Ahar.png'
 import ACHAAR from './images/ACHAAR.png'
-
+import Vinita from './images/Vinita.JPG'
+import Kreena from './images/Kreena.JPG'
 
 
 
@@ -387,37 +388,32 @@ const NutriDietHero = () => {
     swiperRef.current.swiper.slidePrev();
   };
 
+
+  const [isFloating, setIsFloating] = useState(false);
+  const benefitsRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (benefitsRef.current) {
+        const rect = benefitsRef.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.3) {
+          setIsFloating(true);
+        } else {
+          setIsFloating(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
     <div className="diet_whole_wrapper">
       <div className="nutri-diet-wrapper">
       <InnerNavComponent abc={Locate} />
-      {/* <nav className="navbar">
-        <button className="menu-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
 
-        <div className="logo-container">
-          <div className="lotus-logo">
-          </div>
-
-          <div className="nutri-logo">
-            <img src={headericon} alt="Nutri Diet Clinic Logo" />
-          </div>
-        </div>
-
-        <button className="profile-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
-
-      
-      </nav> */}
 
       <div className="nutri-diet-container">
         <div className="hero-section">
@@ -458,7 +454,9 @@ const NutriDietHero = () => {
         </div>
 
 
-        <div className="nutri-diet-benefit">
+        {/* <div className="nutri-diet-benefit"> */}
+        <div ref={benefitsRef} className="nutri-diet-benefit">
+
 
           <h2 style={{ textAlign: 'center' }}>
             <span className="title">Why Choose the</span> <span className="highlight">Nutri - Diet Clinic</span>
@@ -564,177 +562,7 @@ const NutriDietHero = () => {
           </div>
         </div>
 
-        {/* <div className="transformation-container">
-        <div className="journey-header">
-          <h2>Your Structured Health <span className="highlight-text">Transformation journey</span></h2>
-        </div>
-
-        <div className="journey-content">
-        
-          <div className="timeline-svg-container">
-            <img src={timeline} alt="Journey Timeline" className="timeline-svg" />
-          </div>
-
-         
-          <div className="journey-cards-container">
-        
-            <div className="journey-card left-card" id="card-1">
-              <div className="card-content">
-                <h3>Enrollment</h3>
-                <p>Enrollment and Appointment Scheduling</p>
-              </div>
-            </div>
-
-            <div className="journey-card right-card" id="card-2">
-              <div className="card-content">
-                <h3>Consultation Call</h3>
-                <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional needs for holistic health.</p>
-                <p>(Mode: Offline | Online)</p>
-              </div>
-            </div>
-
-            
-            <div className="journey-card left-card" id="card-3">
-              <div className="card-content">
-                <h3>Body Analysis</h3>
-                <p><strong>For offline consultations:</strong></p>
-                <p>Body composition analysis to understand the weight, muscle mass & fat mass %, visceral fat, body age and more.</p>
-                <p><strong>For online clients:</strong></p>
-                <p>Body measurements: height, weight, waist, and hip circumference, BMI</p>
-              </div>
-            </div>
-
-           
-            <div className="journey-card right-card" id="card-4">
-              <div className="card-content">
-                <h3>Biomedical Insights</h3>
-                <p>Review medical reports including CBC, Lipid Profile, Liver Function Tests, Iron Function Tests, Vitamin D, and Vitamin B12 levels.</p>
-                <p>If recent medical examinations have not been taken, health plan options should ideally be couple within three to six months.</p>
-                <p><em>Disclaimer: Pathological tests are not included in our service and must be conducted independently by client.</em></p>
-              </div>
-            </div>
-
-           
-            <div className="journey-card left-card" id="card-5">
-              <div className="card-content">
-                <h3>Detailed Client History</h3>
-                <p>Health background, Medical history (e.g. past illness), allergies, or chronic conditions, Dietary preferences, and Current medication use.</p>
-              </div>
-            </div>
-
-            
-            <div className="journey-card right-card" id="card-6">
-              <div className="card-content">
-                <h3>Holistic Health Assessment</h3>
-                <p>Lifestyle factors, Sleep patterns, Stress levels, Physical Activities, Hydration, Eating habits and food preferences.</p>
-              </div>
-            </div>
-
-      
-            <div className="journey-card left-card" id="card-7">
-              <div className="card-content">
-                <h3>Dietary Habits Analysis</h3>
-                <p>Detailed record of dietary choices and processing meal timing, portion sizes, and frequency of nutrient-dense versus processed foods to identify gaps and areas for improvement.</p>
-              </div>
-            </div>
-
-         
-            <div className="journey-card right-card" id="card-8">
-              <div className="card-content">
-                <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                <p>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</p>
-              </div>
-            </div>
-
-         
-            <div className="journey-card left-card" id="card-9">
-              <div className="card-content">
-                <h3>Supplement Review & Recommendations</h3>
-                <p>Evaluation of current supplements and recommendations for additional supplements based on nutritional needs and health goals.</p>
-              </div>
-            </div>
-
-            <div className="journey-card right-card" id="card-10">
-              <div className="card-content">
-                <h3>Lifestyle Modification Strategies</h3>
-                <p>Personalized recommendations for sleep improvement, stress management techniques, physical activity guidelines, and mindfulness practices.</p>
-              </div>
-            </div>
-
-            <div className="journey-card left-card" id="card-11">
-              <div className="card-content">
-                <h3>Progress Tracking & Follow-up Sessions</h3>
-                <p>Regular check-ins to monitor progress, address challenges, celebrate successes, and adjust recommendations as needed to ensure continued progress.</p>
-              </div>
-            </div>
-
-           
-            <div className="journey-card right-card" id="card-12">
-              <div className="card-content">
-                <h3>Long-term Maintenance Plan</h3>
-                <p>Development of sustainable strategies and habits to maintain results after the initial program ends, including ongoing support options and resources.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="transformation-footer">
-          <div className="footer-intro">
-            <p className="intro-text">
-              By following this structured, holistic process, we offer a comprehensive and
-              client-focused approach to achieving <span className="highlightintro">optimal health and wellness</span>.
-            </p>
-          </div>
-
-
-          <button className="contact-button">Contact US</button>
-
-
-
-         
-          <div className="contact-container">
-            <div className="contact-item">
-              <span className="icon"><img src={phoneicon} alt="" /></span>
-              <span className="label">For Appointments :</span>
-              <span className="value">+91-9967429596</span>
-            </div>
-
-            <div className="contact-item">
-              <span className="icon"><img src={phoneicon} alt="" /></span>
-              <span className="label">Email ID :</span>
-              <a href="mailto:nutridiet@theyogainstitute.in" className="value">
-                nutridiet@theyogainstitute.in
-              </a>
-            </div>
-
-            <div className="contact-item">
-              <span className="icon"><img src={phoneicon} alt="" /></span>
-              <span className="label">Working Days :</span>
-              <span className="value">Monday to Saturday <br /> (Sunday is closed) </span>
-            </div>
-
-            <div className="contact-item">
-              <span className="icon"><img src={phoneicon} alt="" /></span>
-              <span className="label">Working Timings :</span>
-              <span className="value">10 am to 6 pm IST</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="footer-terms">
-          <h3 className="terms-heading">→ Terms and conditions:</h3>
-
-          <ol className="terms-list" type="a">
-            <li>We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.</li>
-            <li>Please note that all fees are non-refundable and non-transferable under any circumstances.</li>
-            <li>The results may vary according to the age, genetics, medical conditions, physical activity and gender, and diet compliance.</li>
-            <li>For the successful execution of the program, we kindly advocate to timely adherence, as we may not be able to accommodate any gaps/inconveniences due to non-compliance.</li>
-          </ol>
-        </div>
-      </div> */}
-
-
+     
         <section className="transform_wrapper">
 
           <div className="left_fruit_container">
@@ -1113,20 +941,6 @@ const NutriDietHero = () => {
           </div>
 
 
-
-          {/* <div className="health-plan-footer">
-            <div className="footer-cta">
-              <span className="heart-icon">❤️</span>
-              <p>Start Your Personalized Health Journey!</p> <br />
-              <span>Select your program & package to begin your transformation.</span>
-            </div>
-            <div className="footer-buttons">
-              <button className="btn btn-select">Choose Your Package<span className="arrow-down">▼</span></button>
-              <button className="btn btn-select">Choose Your Program<span className="arrow-down">▼</span></button>
-              <button className="btn btn-enroll">Enroll Now</button>
-            </div>
-          </div> */}
-
           <div className='health_wrapper_bottom'>
 
             <div>
@@ -1179,7 +993,7 @@ const NutriDietHero = () => {
             <div className="cards-container">
               <div className="profile-card">
                 <div className='nurtition'>
-                  <img src={Nutritionist} alt='' />
+                  <img src={Vinita} alt='' />
                 </div>
                 <div className="profile-details">
                   <h2 className="profile-name">Vinita Ashok Sakpal (Sr. Nutritionist) </h2>
@@ -1197,7 +1011,7 @@ const NutriDietHero = () => {
 
               <div className="profile-card">
                 <div className='dietician'>
-                  <img src={Dietician} alt='' />
+                  <img src={Kreena} alt='' />
                 </div>
                 <div className="profile-details">
                   <h2 className="profile-name">Kreena Sanjay Nagda <br /> (Clinical Dietician)</h2>
@@ -1351,20 +1165,10 @@ const NutriDietHero = () => {
           </div>
         </div>
 
-        <div className="health-journey-container">
+       {/* Floating Health Journey Section */}
+       <div className={`health-journey-container ${isFloating ? 'floating' : ''}`}>
           <h2 className="journey-title">Start Your Personalized Health Journey!</h2>
 
-          {/* <div className="journey-buttons">
-            <button className="journey-button outline">
-              Choose Your Package
-            </button>
-            <button className="journey-button filled">
-              Choose Your Program
-            </button>
-            <button className="journey-button accent">
-              Email Now
-            </button>
-          </div> */}
           <div
                         id="date-select-mobile"
                         style={{ display: 'flex', alignItems: 'center' }}
@@ -1394,6 +1198,7 @@ const NutriDietHero = () => {
                       {openForm && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm} />}
                       </div>
         </div>
+     
       </div>
     </div>
     </div>
