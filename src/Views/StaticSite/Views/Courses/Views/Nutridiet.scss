@@ -2382,8 +2382,8 @@
     width: 414px;
     height: 226px;
     gap: 12px;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .profile-title {
@@ -4835,3 +4835,724 @@ flex-direction: column;
 //   color: #333;
 //   white-space: pre-wrap;
 // }
+
+
+/* --- Review Slider Styles --- */
+.reviews-slider-container {
+  width: 100%;
+  position: relative;
+  margin: 40px 0;
+}
+
+.slider-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews-swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.review-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.review-details {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* --- Navigation Buttons --- */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-button-prev {
+  left: -40px;
+}
+
+.slider-button-next {
+  right: -40px;
+}
+
+/* --- Pagination Dots --- */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #333 !important;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff5733 !important;
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 95%;
+  }
+
+  .slider-button-prev {
+    left: -20px;
+  }
+
+  .slider-button-next {
+    right: -20px;
+  }
+
+  .slider-button {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+}
+
+.client-reviews-section {
+  background-color: #0a403d;
+  /* Dark teal background */
+  padding: 60px 0 0 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviews-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reviews-title {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.reviews-highlight {
+  border-bottom: 3px solid #c1e54e;
+  /* Lime green underline */
+  padding-bottom: 2px;
+}
+
+/* --- Swiper Styles --- */
+.reviews-slider-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.reviews-swiper {
+  overflow: visible;
+  padding-bottom: 60px;
+}
+
+.review-slide {
+  transition: all 0.4s ease;
+  opacity: 0.6;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.review-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.review-details {
+  font-size: 16px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.custom-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.custom-button {
+  background-color: white;
+  color: #0a403d;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 15px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #c1e54e;
+}
+
+/* --- Pagination --- */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.custom-bullet-active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* ReviewSlider.css */
+// .review-slider-container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 40px 0;
+//   position: relative;
+// }
+
+// .slider-container {
+//   position: relative;
+//   overflow: hidden;
+//   padding: 20px 0;
+// }
+
+// .slider-track {
+//   display: flex;
+//   transition: transform 0.5s ease;
+// }
+
+// .slider-card {
+//   min-width: 80%;
+//   padding: 25px;
+//   background: #F6FBE9;
+//   border: 1px solid #E5F5BD;
+//   border-radius: 10px;
+//   /* margin: 0 10%; */
+//   transform: scale(0.8);
+//   opacity: 0.6;
+//   transition: all 0.5s ease;
+// }
+
+// .slider-card.active {
+//   transform: scale(1);
+//   opacity: 1;
+// }
+
+// .slider-card h3 {
+//   margin-bottom: 15px;
+//   color: #262626;
+//   font-family: 'Urbanist';
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 150%;
+//   letter-spacing: 0%;
+//   vertical-align: middle;
+
+
+// }
+
+// .slider-card p {
+//   font-family: 'Urbanist';
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 150%;
+//   letter-spacing: 0%;
+//   color:  #333333;
+
+
+// }
+
+// .slider-nav {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 20px;
+
+
+// }
+
+// .slider-nav button {
+//   background: #F6FBE9;
+//   border: 1px solid #EEF8D3;
+//   width: 58px;
+//   height: 58px;
+//   border-radius: 8px;
+//   border-width: 1px;
+//   padding: 12px;
+//   gap: 10px;
+//   // width: 40px;
+//   // height: 40px;
+//   // border-radius: 8px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 10px;
+//   transition: background 0.3s ease;
+// }
+
+// .slider-nav button:hover {
+//   background: #F6FBE9;
+// }
+
+// .slider-nav button svg {
+//   width: 34px;
+//   height: 34px;
+//   // fill: white;
+//   color: #333333;
+// }
+
+// .slider-pagination {
+//   display: flex;
+//   justify-content: center;
+//   margin: 0 15px;
+//   gap: 4px;
+// }
+
+// .pagination-dot {
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 50%;
+//   background: #E5F5BD;
+
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+// }
+
+// .pagination-dot.active {
+//   background: #356554;
+
+//   transform: scale(1.2);
+// }
+
+/* REVIEW SLIDER */
+// .review-slider-container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 40px 0;
+//   position: relative;
+// }
+
+// .slider-container {
+//   position: relative;
+//   overflow: hidden;
+//   padding: 20px 0;
+//   // margin: 0 -20px;
+// }
+
+// .slider-track {
+//   display: flex;
+//   transition: transform 0.5s ease;
+//   padding: 0 15%;
+// }
+
+// .slider-card {
+//   min-width: 90%;
+//   padding: 25px;
+//   background: #F6FBE9;
+//   border: 1px solid #E5F5BD;
+//   border-radius: 10px;
+//   margin: 0 15px;
+//   transform: scale(0.9);
+//   opacity: 0.7;
+//   transition: all 0.5s ease;
+// }
+
+// .slider-card.active {
+//   transform: scale(1);
+//   opacity: 1;
+//   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+// }
+
+// .slider-card h3 {
+//   margin-bottom: 15px;
+//   color: #262626;
+//   font-family: 'Urbanist';
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 150%;
+// }
+
+// .slider-card p {
+//   font-family: 'Urbanist';
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 150%;
+//   color: #333333;
+// }
+
+// .slider-nav {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 20px;
+// }
+
+// .slider-nav button {
+//   background: #F6FBE9;
+//   border: 1px solid #EEF8D3;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 10px;
+// }
+
+// .slider-nav button svg {
+//   width: 24px;
+//   height: 24px;
+//   fill: #333333;
+// }
+
+// .slider-pagination {
+//   display: flex;
+//   justify-content: center;
+//   margin: 0 15px;
+//   gap: 8px;
+// }
+
+// .pagination-dot {
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 50%;
+//   background: #E5F5BD;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+// }
+
+// .pagination-dot.active {
+//   background: #356554;
+//   transform: scale(1.2);
+// }
+
+
+/* REVIEW SLIDER */
+
+// .review-slider-container {
+//   // max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 40px 0;
+//   position: relative;
+// }
+
+// .slider-container {
+//   position: relative;
+//   overflow: hidden;
+//   padding: 30px 0;
+// }
+
+// .slider-track {
+//   display: flex;
+//   transition: transform 0.5s ease;
+//   align-items: center; /* This will vertically center the cards */
+//   padding: 0 10%;
+// }
+
+// .slider-card {
+//   min-width: 80%;
+//   padding: 25px;
+//   background: #F6FBE9;
+//   border: 1px solid #E5F5BD;
+//   border-radius: 10px;
+//   margin: 0 10px;
+//   transform: scale(0.8);
+//   opacity: 0.6;
+//   height: 120px; /* Base height for inactive slides */
+//   transition: all 0.5s ease;
+// }
+
+// .slider-card.active {
+//   transform: scale(1);
+//   opacity: 1;
+//   height: 160px; /* Increased height for active slide */
+//   z-index: 2;
+// }
+
+// .slider-card h3 {
+//   margin-bottom: 15px;
+//   color: #262626;
+//   font-family: 'Urbanist';
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 150%;
+// }
+
+// .slider-card p {
+//   font-family: 'Urbanist';
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 150%;
+//   color: #333333;
+// }
+
+// .slider-nav {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 20px;
+// }
+
+// .slider-nav button {
+//   background: #F6FBE9;
+//   border: 1px solid #EEF8D3;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 10px;
+// }
+
+// .slider-nav button svg {
+//   width: 24px;
+//   height: 24px;
+//   fill: #333333;
+// }
+
+// .slider-pagination {
+//   display: flex;
+//   justify-content: center;
+//   margin: 0 15px;
+//   gap: 8px;
+// }
+
+// .pagination-dot {
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 50%;
+//   background: #E5F5BD;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+// }
+
+// .pagination-dot.active {
+//   background: #356554;
+//   transform: scale(1.2);
+// }
+
+
+/* REVIEW SLIDER */
+
+.review-slider-container {
+  // max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: relative;
+}
+
+.slider-container {
+  position: relative;
+  overflow: visible;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  align-items: center;
+}
+
+.slider-card {
+  flex: 0 0 60%;
+  padding: 25px;
+  background: #F6FBE9;
+  border: 1px solid #E5F5BD;
+  border-radius: 10px;
+  margin: 0 5px;
+  /* Reduced space between cards */
+  transform: scale(0.85);
+  opacity: 0.6;
+  width: 250px;
+  border-radius: 12px;
+  height: 167.44px;
+  /* Smaller height for inactive */
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+.slider-card.active {
+  transform: scale(1);
+  opacity: 1;
+  width: 742px;
+  height: 210px;
+  /* Larger height for active */
+  z-index: 2;
+}
+
+.slider-card h3 {
+  margin-bottom: 15px;
+  color: #262626;
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider-card p {
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slider-nav button {
+  background: #F6FBE9;
+  border: 1px solid #EEF8D3;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.slider-nav button svg {
+  width: 24px;
+  height: 24px;
+  fill: #333333;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0 15px;
+  gap: 8px;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E5F5BD;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+  background: #356554;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .slider-card {
+    //     min-width: 100%;
+    //     margin: 0 -20%;
+    //     height: 100%;
+    // flex: 0 1;
+    // min-width: 90%;
+    // margin: 0 5%;
+    // height: 100%;
+    width: 353px;
+    height: 272px;
+    gap: 24px;
+
+  }
+
+  .slider-card.active {
+    transform: scale(1);
+    opacity: 1;
+    // width: 742px;
+    // height: 210px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .reviews-slider-container {
+    padding: 0 15px;
+  }
+}
