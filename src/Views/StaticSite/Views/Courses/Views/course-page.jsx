@@ -1037,7 +1037,7 @@ const Courses = () => {
               </AccordionItem>
             </Accordion>
           </div></div>
-
+<div></div>
         {/* <div className="courses-introduction">
           <div className="intro-text">
             <h1>More than just learning</h1>
