@@ -55,7 +55,8 @@ const NutriDietHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null);
   const [price, setPrice] = useState()
-  const [openForm, setOpenForm] = useState(false)
+  const [openForm1, setOpenForm1] = useState(false)
+  const [openForm2, setOpenForm2] = useState(false)
     const [err, setErr] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0);
   const [plan, setPlan] = useState('')
@@ -218,13 +219,22 @@ const NutriDietHero = () => {
   }
 
   useEffect(() => {
-      if (openForm) {
+      if (openForm1) {
         document.body.style.overflow = 'hidden'
       } else {
   
         document.body.style.overflow = 'auto'
       }
-    }, [openForm])
+    }, [openForm1])
+
+    useEffect(() => {
+      if (openForm2) {
+        document.body.style.overflow = 'hidden'
+      } else {
+  
+        document.body.style.overflow = 'auto'
+      }
+    }, [openForm2])
 
    const enrollForm2 = () => {
       if (plan === '' || program === '') {
@@ -232,13 +242,41 @@ const NutriDietHero = () => {
       } else {
         switch (plan) {
           case '1 month':
-            setPrice(4999); setErr(false); setOpenForm(true)
+            setPrice(4999); setErr(false); setOpenForm1(true)
             break
           case '3 months':
-            setPrice(9999); setErr(false); setOpenForm(true)
+            setPrice(9999); setErr(false); setOpenForm1(true)
             break
           case '6 months':
-            setPrice(14999); setErr(false); setOpenForm(true)
+            setPrice(14999); setErr(false); setOpenForm1(true)
+            break
+          // case 'Single Visit':
+          //   setPrice(1000);setErr(false);setOpenForm(true)
+          //   break
+  
+  
+          default:
+            break
+        }
+      }
+    }
+
+    const belowenrollForm2 = () => {
+      if (plan === '' || program === '') {
+        setErr(true)
+      } else {
+        switch (plan) {
+          case '1 month':
+            setPrice(4999); setErr(false);
+             setOpenForm2(true)
+            break
+          case '3 months':
+            setPrice(9999); setErr(false);
+            setOpenForm2(true)
+            break
+          case '6 months':
+            setPrice(14999); setErr(false);
+            setOpenForm2(true)
             break
           // case 'Single Visit':
           //   setPrice(1000);setErr(false);setOpenForm(true)
@@ -293,7 +331,7 @@ const NutriDietHero = () => {
       } else {
         switch (plan) {
           case '1 month':
-            setPrice(3999); setErr(false); setOpenForm(true)
+            setPrice(3999); setErr(false); setOpenForm1(true)
             updateGA4(3999, program)
             // handleCTEnquireNutriDietInitiated({
             //   Name: '',
@@ -309,7 +347,7 @@ const NutriDietHero = () => {
             // })
             break
           case '3 months':
-            setPrice(8999); setErr(false); setOpenForm(true)
+            setPrice(8999); setErr(false); setOpenForm1(true)
             updateGA4(8999, program)
             // handleCTEnquireNutriDietInitiated({
             //   Name: '',
@@ -325,7 +363,7 @@ const NutriDietHero = () => {
             // })
             break
           case '6 months':
-            setPrice(13999); setErr(false); setOpenForm(true)
+            setPrice(13999); setErr(false); setOpenForm1(true)
             updateGA4(13999, program)
             // handleCTEnquireNutriDietInitiated({
             //   Name: '',
@@ -348,6 +386,74 @@ const NutriDietHero = () => {
         }
         if (program === 'Clinical Plans') {
           enrollForm2()
+        }
+  
+      }
+    }
+
+
+
+    const belowEnrollFrom = () => {
+      if (plan === '' || program === '') {
+        setErr(true)
+      } else {
+        switch (plan) {
+          case '1 month':
+            setPrice(3999); setErr(false); setOpenForm2(true)
+            updateGA4(3999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '1 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          case '3 months':
+            setPrice(8999); setErr(false); setOpenForm2(true)
+            updateGA4(8999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '3 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          case '6 months':
+            setPrice(13999); setErr(false); setOpenForm2(true)
+            updateGA4(13999, program)
+            // handleCTEnquireNutriDietInitiated({
+            //   Name: '',
+            // Email_ID: '',
+            // Phone_No: '',
+            // Country: '',
+            // City: '',
+            // Payment_Mode: '',
+            // Month: '6 Month',
+            // Program_Type: program,
+            // Status: '',
+            // Amount: '',
+            // })
+            break
+          // case 'Single Visit':
+          //   setPrice(1000);setErr(false);setOpenForm(true)
+          //   break
+          default:
+            break
+        }
+        if (program === 'Clinical Plans') {
+          belowenrollForm2()
         }
   
       }
@@ -971,7 +1077,7 @@ const NutriDietHero = () => {
                         <CommonBtn text='Enroll Now' buttonAction={enrollFrom}  />
                       {err && <small> Please select package/program* </small>}
 
-                      {openForm && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm} />}
+                      {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}
                       </div>
                       
 
@@ -1197,13 +1303,15 @@ const NutriDietHero = () => {
                         />
                         </div>
                         <div className="btn_enroll">
-                        <CommonBtn text='Enroll Now' buttonAction={enrollFrom}   />
+                        <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom}   />
                         </div>
                       {err && <small> Please select package/program* </small>}
 
-                      {openForm && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm} />}
+                      
                       </div>
         </div>
+
+        {openForm2 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm2} />}
      
       </div>
     </div>
