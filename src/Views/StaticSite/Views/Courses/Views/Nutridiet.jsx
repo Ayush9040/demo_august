@@ -47,6 +47,7 @@ import ACHAAR from './images/ACHAAR.png'
 import Vinita from './images/Vinita.JPG'
 import Kreena from './images/Kreena.JPG'
 import TYI_Mobile_v2 from './images/TYI_Mobile_v2.png'
+import frame_left_client from './images/frame_left_client.png'
 
 
 
@@ -1246,6 +1247,9 @@ const NutriDietHero = () => {
               </div>
 
               <div className="slider-wrapper">
+                {/* <div>
+                <img src={frame_left_client} />
+                </div> */}
                 <div className="slider-track">
                   {reviews.map((review, index) => {
                     // Calculate the position relative to current
