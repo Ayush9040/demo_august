@@ -2311,10 +2311,11 @@
 
   .cards-container {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
     width: 100%;
+    
     border-radius: 10px;
     padding: 40px 0;
     padding-bottom: 0px;
@@ -2375,7 +2376,7 @@
     font-family: 'Urbanist', sans-serif;
     margin-bottom: 10px;
     // width: 100%;
-    width: 414px;
+    // width: 414px;
   }
 
   .profile-list {
@@ -2472,6 +2473,8 @@
 
     .cards-container {
       padding: 10px 0;
+      flex-wrap: wrap;
+      display: flex;
     }
   }
 
@@ -2937,35 +2940,45 @@
     // width: 100%;
     height: 300px;
     position: relative;
-
-
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 
   }
 
   .slide {
     position: absolute;
-    // width: 260px;
-    // height: 220px;
     transition: all 0.5s ease;
-    opacity: 0.5;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: auto;
   }
 
   .slide.active {
-    transform: translateX(0);
-    z-index: 10;
-    // width: 340px;
+    position: relative;
+    width: 740px;
     height: 270px;
     opacity: 1;
+    filter: none;
+    transform: scale(1);
+    z-index: 10;
   }
 
   .slide.prev {
-    transform: translateX(-280px);
+    left: 0;
+    opacity: 0.9;
+    transform: translateX(-60%) scale(0.8);
     z-index: 5;
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
   }
 
   .slide.next {
-    transform: translateX(280px);
+    right: 0;
+    opacity: 0.9;
+    transform: translateX(60%) scale(0.8);
     z-index: 5;
+    mask-image: linear-gradient(to left, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 40%);
   }
 
   .card {
@@ -3014,7 +3027,7 @@
 
   .navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: absolute;
     width: 100%;
     top: 80%;
@@ -3035,6 +3048,7 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(40px)
   }
 
   .nav-btn:hover {
@@ -3055,14 +3069,14 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: white;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
   .pagination-dot.active {
-    background-color: white;
+    background-color: rgba(229, 245, 189, 0.5);
   }
 
 
@@ -5177,6 +5191,89 @@
       font-weight: 600;
       // display: inline;
     }
+    .slide {
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: auto;
+
+
+  }
+
+  .slide.active {
+    position: relative;
+    width: 740px;
+    height: 270px;
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+    z-index: 10;
+  }
+
+  .slide.prev {
+    left: 0;
+    opacity: 0;
+    transform: translateX(-60%) scale(0.8);
+    z-index: 5;
+    // mask-image: linear-gradient(to right, transparent 100%, black 40%);
+    // -webkit-mask-image: linear-gradient(to right, transparent 100%, black 40%);
+  }
+
+  .slide.next {
+    right: 0;
+    opacity: 0;
+    transform: translateX(60%) scale(0.8);
+    z-index: 5;
+    // mask-image: linear-gradient(to left, transparent 100%, black 40%);
+    // -webkit-mask-image: linear-gradient(to left, transparent 100%, black 40%)!important;
+  }
+  .slider-track {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // width: 100%;
+    height: 300px;
+    mask-image: none;
+    position: relative;
+    // mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    // -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+
+  }
+
+.card{
+  width: 353px;
+  height: 219px;
+  gap: 10px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 16px;
+  position: relative;
+  left: 5%;
+}
+
+.card h3{
+  font-family: 'Urbanist';
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0%;
+vertical-align: middle;
+width: 321px;
+height: 72px;
+}
+.card p{
+  font-family: 'Urbanist';
+font-weight: 500;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0%;
+color: #333333;
+width: 321px;
+height: 105px;
+
+
+}
 
     .plantitle {
       font-size: 20px;
