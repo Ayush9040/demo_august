@@ -18879,8 +18879,8 @@ const specialEvents = {
     dates: [
       // '12th Feb 2025',
       // '13th Mar 2025',
-      '13th Apr 2025'
-      , '11th Jun 2025'
+      // '13th Apr 2025',
+       '11th Jun 2025'
     ],
     online: true,
     onCampus: true,
