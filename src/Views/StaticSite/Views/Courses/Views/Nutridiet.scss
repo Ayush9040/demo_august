@@ -3027,13 +3027,16 @@
 
   .navigation {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     top: 80%;
     transform: translateY(-50%);
     padding: 0 10px;
     z-index: 20;
+    gap: 50px;
+    margin-top: 30px;
   }
 
   .nav-btn {
@@ -3048,7 +3051,7 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(40px)
+    // transform: translateY(40px)
   }
 
   .nav-btn:hover {
@@ -3062,7 +3065,7 @@
   .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
 
   .pagination-dot {

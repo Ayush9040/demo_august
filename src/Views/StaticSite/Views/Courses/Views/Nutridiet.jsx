@@ -130,7 +130,8 @@ const NutriDietHero = () => {
       id: 4,
       text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
       details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
-    }
+    },
+    
   ];
 
 
@@ -1241,10 +1242,7 @@ const NutriDietHero = () => {
             <h2 className="reviews-title">our <span className="highlightreview">Client Reviews</span></h2>
 
             <div className="slider-container">
-              <div className="navigation">
-                <button className="nav-btn prev-btn" onClick={prevSlide}>&#10094;</button>
-                <button className="nav-btn next-btn" onClick={nextSlide}>&#10095;</button>
-              </div>
+              
 
               <div className="slider-wrapper">
                 {/* <div>
@@ -1274,7 +1272,9 @@ const NutriDietHero = () => {
                 </div>
               </div>
 
-              <div className="pagination">
+              <div className="navigation">
+                <button className="nav-btn prev-btn" onClick={prevSlide}>&#10094;</button>
+                <div className="pagination">
                 {reviews.map((_, index) => (
                   <div
                     key={index}
@@ -1283,6 +1283,10 @@ const NutriDietHero = () => {
                   />
                 ))}
               </div>
+                <button className="nav-btn next-btn" onClick={nextSlide}>&#10095;</button>
+              </div>
+
+              
 
               {/* <div className="hug-counter">
         <span>742 Hug</span>
