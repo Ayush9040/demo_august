@@ -12,7 +12,6 @@ import nutridiet_img from './images/nutri_diet_new_img.webp'
 import headericon from './images/headericon.svg'
 import follower from './images/follower.svg'
 import saladPlateImage from './images/saladPlateImage.svg'
-// import timeline from './images/timeline.svg';
 import benefitcard from './images/benefitcard.svg'
 import Nutritionist from './images/Nutritionist.svg'
 import Dietician from './images/Dietician.svg'
@@ -131,103 +130,192 @@ const NutriDietHero = () => {
       text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
       details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
     },
-    
+
   ];
-
-
-  // const reviews = [
-  //   {
-  //     id: 1,
-  //     text: "A 24 year old client presented with high bilirubin, liver fat, and alcohol BP issues with a goal of fat loss and restored health.",
-  //     details: "I work (place)exercise, nutrition and stress management top into our recommendations and this is allowing her to control their lifestyle habits. The program was designed for her individual needs with diet and nutrition."
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
-  //     details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
-  //   },
-  //   {
-  //     id: 3,
-  //     text: "A 35 year old client wanted to improve athletic performance and recovery times.",
-  //     details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
-  //     details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
-  //   },
-
-
-  // ];
 
 
   const healthPrograms = [
     {
       program: "Shape up program",
-      conditions: ["Weight loss", "Weight gain , Muscle gain"],
+      conditions: "Weight loss\nWeight gain, Muscle gain",
       oneMonth: "Rs 3999/-",
       threeMonth: "Rs 8999/-",
       sixMonth: "Rs 13999/-"
     },
     {
       program: "Hormonal imbalance program",
-      conditions: ["PCOS/ PCOD", "Infertility , Thyroid"],
+      conditions: "PCOS / PCOD\nInfertility, Thyroid",
+      
     },
     {
       program: "Gut Health program",
-      conditions: ["GERD, Heartburn, Acidity", "Digestion issues/ Constipation", "Bloating Gas & Flatulence"],
+      conditions: "GERD, Heartburn, Acidity\nDigestion issues / Constipation\nBloating, Gas & Flatulence",
+      
     },
     {
       program: "Metabolic disorder program",
-      conditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"],
+      conditions: "Type 2 Diabetes Mellitus\nCholesterol, Hypertension",
+      
     },
     {
       program: "Maternal Program",
-      conditions: ["Pregnancy, Lactation", "Pregnancy induced diabetes"],
+      conditions: "Pregnancy, Lactation\nPregnancy-induced diabetes",
+     
     },
     {
       program: "Client specific diet",
-      conditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant/ Gluten free"],
+      conditions: "Vegan diet, Ketogenic diet\nLactose intolerant / Gluten free",
+     
     },
     {
       program: "Neurological Disorders",
-      conditions: ["Alzheimer's/ Parkinson"],
+      conditions: "Alzheimer's / Parkinson's",
+    
     },
     {
       program: "Clinical Plans",
-      conditions: [
-        "Diabetes on Insulin/ BS",
-        "IBD (Crohn's & Ulcerative",
-        "Colitis), Peptic & Duodenal",
-        "Ulcers, Bile reflux",
-        "Malabsorption, Pancreatitis",
-        "Cancer, COPD, Kidney",
-        "disorders, Liver disorders",
-        "Epilepsy"
-      ],
+      conditions: "Diabetes on Insulin / BS\nIBD (Crohn's & Ulcerative Colitis)\nPeptic & Duodenal Ulcers\nBile reflux\nMalabsorption, Pancreatitis\nCancer, COPD, Kidney disorders\nLiver disorders\nEpilepsy",
       oneMonth: "Rs 4999/-",
       threeMonth: "Rs 9999/-",
       sixMonth: "Rs 14999/-"
     },
     {
       program: "Auto-Immune Disorders",
-      conditions: [
-        "Rheumatoid Arthritis",
-        "Ankylosing Spondylitis",
-        "Psoriasis, Lupus",
-        "Sjogren's syndrome",
-        "Multiple Sclerosis (MS)"
-      ],
-
+      conditions: "Rheumatoid Arthritis\nAnkylosing Spondylitis\nPsoriasis, Lupus\nSjogren's syndrome\nMultiple Sclerosis (MS)",
+     
     }
   ];
+
+  // const healthPrograms = [
+  //   {
+  //     program: "Shape up program",
+  //     conditions: ["Weight loss", "Weight gain, Muscle gain"],
+  //     oneMonth: "Rs 3999/-",
+  //     threeMonth: "Rs 8999/-",
+  //     sixMonth: "Rs 13999/-"
+  //   },
+  //   {
+  //     program: "Hormonal imbalance program",
+  //     conditions: ["PCOS / PCOD", "Infertility, Thyroid"]
+  //   },
+  //   {
+  //     program: "Gut Health program",
+  //     conditions: [
+  //       "GERD, Heartburn, Acidity",
+  //       "Digestion issues / Constipation",
+  //       "Bloating, Gas & Flatulence"
+  //     ]
+  //   },
+  //   {
+  //     program: "Metabolic disorder program",
+  //     conditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"]
+  //   },
+  //   {
+  //     program: "Maternal Program",
+  //     conditions: ["Pregnancy, Lactation", "Pregnancy-induced diabetes"]
+  //   },
+  //   {
+  //     program: "Client specific diet",
+  //     conditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant / Gluten free"]
+  //   },
+  //   {
+  //     program: "Neurological Disorders",
+  //     conditions: ["Alzheimer's / Parkinson's"]
+  //   },
+  //   {
+  //     program: "Clinical Plans",
+  //     conditions: [
+  //       "Diabetes on Insulin / BS",
+  //       "IBD (Crohn's & Ulcerative Colitis)",
+  //       "Peptic & Duodenal Ulcers",
+  //       "Bile reflux",
+  //       "Malabsorption, Pancreatitis",
+  //       "Cancer, COPD, Kidney disorders",
+  //       "Liver disorders",
+  //       "Epilepsy"
+  //     ],
+  //     oneMonth: "Rs 4999/-",
+  //     threeMonth: "Rs 9999/-",
+  //     sixMonth: "Rs 14999/-"
+  //   },
+  //   {
+  //     program: "Auto-Immune Disorders",
+  //     conditions: [
+  //       "Rheumatoid Arthritis",
+  //       "Ankylosing Spondylitis",
+  //       "Psoriasis, Lupus",
+  //       "Sjogren's syndrome",
+  //       "Multiple Sclerosis (MS)"
+  //     ]
+  //   }
+  // ];
+
+  // const healthPrograms = [
+  //   {
+  //     program: "Shape up program",
+  //     conditions: ["Weight loss", "Weight gain , Muscle gain"],
+  //     oneMonth: "Rs 3999/-",
+  //     threeMonth: "Rs 8999/-",
+  //     sixMonth: "Rs 13999/-"
+  //   },
+  //   {
+  //     program: "Hormonal imbalance program",
+  //     conditions: ["PCOS/ PCOD", "Infertility , Thyroid"],
+  //   },
+  //   {
+  //     program: "Gut Health program",
+  //     conditions: ["GERD, Heartburn, Acidity", "Digestion issues/ Constipation", "Bloating Gas & Flatulence"],
+  //   },
+  //   {
+  //     program: "Metabolic disorder program",
+  //     conditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"],
+  //   },
+  //   {
+  //     program: "Maternal Program",
+  //     conditions: ["Pregnancy, Lactation", "Pregnancy induced diabetes"],
+  //   },
+  //   {
+  //     program: "Client specific diet",
+  //     conditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant/ Gluten free"],
+  //   },
+  //   {
+  //     program: "Neurological Disorders",
+  //     conditions: ["Alzheimer's/ Parkinson"],
+  //   },
+  //   {
+  //     program: "Clinical Plans",
+  //     conditions: [
+  //       "Diabetes on Insulin/ BS",
+  //       "IBD (Crohn's & Ulcerative",
+  //       "Colitis), Peptic & Duodenal",
+  //       "Ulcers, Bile reflux",
+  //       "Malabsorption, Pancreatitis",
+  //       "Cancer, COPD, Kidney",
+  //       "disorders, Liver disorders",
+  //       "Epilepsy"
+  //     ],
+  //     oneMonth: "Rs 4999/-",
+  //     threeMonth: "Rs 9999/-",
+  //     sixMonth: "Rs 14999/-"
+  //   },
+  //   {
+  //     program: "Auto-Immune Disorders",
+  //     conditions: [
+  //       "Rheumatoid Arthritis",
+  //       "Ankylosing Spondylitis",
+  //       "Psoriasis, Lupus",
+  //       "Sjogren's syndrome",
+  //       "Multiple Sclerosis (MS)"
+  //     ],
+
+  //   }
+  // ];
 
   const options = ['1 month', '3 months', '6 months']
   const options1 = ['Shape up', 'Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic', 'Other types', 'Nutrition for kids', 'Clinical Plans']
 
   const selectStyles1 = {
     cursor: 'pointer',
-    // background: 'transparent',
     borderColor: 'rgba(50, 104, 86, 1)',
     color: 'rgba(255, 255, 255, 1)',
     fontSize: '16px',
@@ -237,8 +325,6 @@ const NutriDietHero = () => {
     borderRadius: '6px',
     borderStyle: 'solid',
     maxWidth: 'fit-content',
-    // width: '230px',
-    // marginTop: '2rem',
     marginRight: '20px',
     height: '100%'
   }
@@ -275,11 +361,6 @@ const NutriDietHero = () => {
         case '6 months':
           setPrice(14999); setErr(false); setOpenForm1(true)
           break
-        // case 'Single Visit':
-        //   setPrice(1000);setErr(false);setOpenForm(true)
-        //   break
-
-
         default:
           break
       }
@@ -303,11 +384,6 @@ const NutriDietHero = () => {
           setPrice(14999); setErr(false);
           setOpenForm2(true)
           break
-        // case 'Single Visit':
-        //   setPrice(1000);setErr(false);setOpenForm(true)
-        //   break
-
-
         default:
           break
       }
@@ -358,54 +434,15 @@ const NutriDietHero = () => {
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm1(true)
           updateGA4(3999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '1 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
         case '3 months':
           setPrice(8999); setErr(false); setOpenForm1(true)
           updateGA4(8999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '3 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
         case '6 months':
           setPrice(13999); setErr(false); setOpenForm1(true)
           updateGA4(13999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '6 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
-        // case 'Single Visit':
-        //   setPrice(1000);setErr(false);setOpenForm(true)
-        //   break
         default:
           break
       }
@@ -426,54 +463,15 @@ const NutriDietHero = () => {
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm2(true)
           updateGA4(3999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '1 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
         case '3 months':
           setPrice(8999); setErr(false); setOpenForm2(true)
           updateGA4(8999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '3 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
         case '6 months':
           setPrice(13999); setErr(false); setOpenForm2(true)
           updateGA4(13999, program)
-          // handleCTEnquireNutriDietInitiated({
-          //   Name: '',
-          // Email_ID: '',
-          // Phone_No: '',
-          // Country: '',
-          // City: '',
-          // Payment_Mode: '',
-          // Month: '6 Month',
-          // Program_Type: program,
-          // Status: '',
-          // Amount: '',
-          // })
           break
-        // case 'Single Visit':
-        //   setPrice(1000);setErr(false);setOpenForm(true)
-        //   break
         default:
           break
       }
@@ -485,22 +483,6 @@ const NutriDietHero = () => {
   }
 
 
-
-
-
-
-  // const nextSlide = () => {
-  //   setCurrentSlide((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
-  // };
-
-  // const prevSlide = () => {
-  //   setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
-  // };
-
-  // const goToSlide = (index) => {
-  //   setCurrentSlide(index);
-  // };
-
   const scrollToPricing = () => {
     // Find the available batches section by ID
     const availableBatchesSection = document.getElementById('available-batches');
@@ -510,15 +492,6 @@ const NutriDietHero = () => {
       availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  // const goToNext = () => {
-  //   swiperRef.current.swiper.slideNext();
-  // };
-
-  // // Function to move to previous slide
-  // const goToPrev = () => {
-  //   swiperRef.current.swiper.slidePrev();
-  // };
 
 
   const [isFloating, setIsFloating] = useState(false);
@@ -557,61 +530,19 @@ const NutriDietHero = () => {
   };
 
 
+    //CONTACT US
+  const phoneNumber = '+91-9967429596';
+  const email = 'nutridiet@theyogainstitute.in';
 
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  // const nextSlide = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-  // };
-
-  // const prevSlide = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
-  // };
-
-  // const goToSlide = (index) => {
-  //   setCurrentIndex(index);
-  // };
-
-
-
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const trackRef = useRef(null);
-
-  // const goToPrev = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
-  // };
-
-  // const goToNext = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-  // };
-
-  // const goToSlide = (index) => {
-  //   setCurrentIndex(index);
-  // };
-
-  // useEffect(() => {
-  //   const updateCarouselPosition = () => {
-  //     if (trackRef.current) {
-  //       const slides = trackRef.current.querySelectorAll('.carousel-slide');
-  //       if (slides.length > 0) {
-  //         const slideWidth = slides[0].offsetWidth + 40; // include margins
-  //         const offset = -currentIndex * slideWidth + (window.innerWidth - slideWidth) / 2 - slideWidth / 2;
-  //         trackRef.current.style.transform = `translateX(${offset}px)`;
-  //       }
-  //     }
-  //   };
-
-  //   updateCarouselPosition();
-  //   window.addEventListener('resize', updateCarouselPosition);
-
-  //   return () => {
-  //     window.removeEventListener('resize', updateCarouselPosition);
-  //   };
-  // }, [currentIndex]);
-
-
-
-
+  const handleCopy = (text, label) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert(`${label} copied!`);
+      })
+      .catch(err => {
+        console.error(`Failed to copy ${label}: `, err);
+      });
+  };
 
   return (
     <div className="diet_whole_wrapper">
@@ -658,7 +589,6 @@ const NutriDietHero = () => {
           </div>
 
 
-          {/* <div className="nutri-diet-benefit"> */}
           <div ref={benefitsRef} className="nutri-diet-benefit">
 
 
@@ -807,9 +737,13 @@ const NutriDietHero = () => {
                   <div className="journey_card-content">
                     <h3>Body Analysis</h3>
                     <p><strong>For offline consultations:</strong></p>
-                    <p><li>Body composition analysis to understand the weight, muscle mass & fat mass %, visceral fat, body age and more.</li></p>
+                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
+                    <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more;</li></p>
+                    </div>
                     <p><strong>For online clients:</strong></p>
+                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
                     <p><li>Body measurements: height, weight, waist, and hip circumference, BMI</li></p>
+                    </div>
                   </div>
                 </div>
 
@@ -846,8 +780,10 @@ const NutriDietHero = () => {
                 <div className="journey_eigth_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                    <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p>
+                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
+                    <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p> <br/>
                     <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
+                  </div>
                   </div>
                 </div>
 
@@ -881,10 +817,7 @@ const NutriDietHero = () => {
                     <p>These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
                   </div>
                 </div>
-
-
               </div>
-
             </main>
 
             <div className="right_fruit_container">
@@ -904,7 +837,6 @@ const NutriDietHero = () => {
               </h2>
 
               <div className="health-journey-container1">
-                {/* <img src={timeline} alt="Journey Timeline" className='timeline-mobile' /> */}
                 <img src={TYI_Mobile_v2} alt="Journey TImeline" />
 
                 <div className="health-timeline-cards">
@@ -1027,53 +959,66 @@ const NutriDietHero = () => {
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
                       </span>
-
                       <span>For Appointments: </span>
                     </div>
 
-
-                    <div className='contact-name' style={{ display: 'flex' }}>
-                      <span>+91-9967429596 <img src={copy} alt="" /></span>
+                    <div className='contact-name' style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+                      <span>{phoneNumber}</span>
+                      <img
+                        src={copy}
+                        alt="Copy Phone"
+                        onClick={() => handleCopy(phoneNumber, 'Phone number')}
+                        style={{ cursor: 'pointer', marginLeft: '8px', width: '16px', height: '16px' }}
+                        title="Copy phone number"
+                      />
                     </div>
                   </div>
+
                   <div className="contact-item">
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
                       </span>
-
                       <span>Email ID : </span>
                     </div>
 
-
-                    <div className='contact-name' style={{ display: 'flex' }}>
-                      <span>nutridiet@theyogainstitute.in <img src={copy} alt="" /></span>
+                    <div className='contact-name' style={{ display: 'flex', alignItems: 'center' }}>
+                      <a
+                        href={`mailto:${email}`}
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                        title="Send an email"
+                      >
+                        {email}
+                      </a>
+                      <img
+                        src={copy}
+                        alt="Copy Email"
+                        onClick={() => handleCopy(email, 'Email')}
+                        style={{ cursor: 'pointer', marginLeft: '8px', width: '16px', height: '16px' }}
+                        title="Copy email"
+                      />
                     </div>
                   </div>
+
                   <div className="contact-item">
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
                       </span>
-
                       <span>Working Days : </span>
                     </div>
-
-
                     <div className='contact-name' style={{ display: 'flex' }}>
                       <span>Monday to Saturday <br /> (Sunday is closed) </span>
                     </div>
                   </div>
+
                   <div className="contact-item">
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
                       </span>
-
                       <span>Working Timings : </span>
                     </div>
-
-
                     <div className='contact-name' style={{ display: 'flex' }}>
                       <span>10 am to 6 pm IST </span>
                     </div>
@@ -1104,7 +1049,7 @@ const NutriDietHero = () => {
 
 
 
-
+{/* 
           <div className="health-plan-container" id='available-batches'>
             <div className="health-plan-header">
 
@@ -1125,8 +1070,8 @@ const NutriDietHero = () => {
                 <tbody>
                   {healthPrograms.map((program, index) => (
                     <tr key={index}>
-                      <td>{program.program}</td>
-                      <td>
+                      <td>{program.program}</td> */}
+                      {/* <td>
                         {typeof program.conditions === 'string' ?
                           program.conditions.split('\n').map((condition, condIndex) => (
                             <div key={condIndex} className="condition-line">{condition}</div>
@@ -1135,7 +1080,13 @@ const NutriDietHero = () => {
                           // Fallback if conditions is not a string
                           <div className="condition-line">{String(program.conditions)}</div>
                         }
-                      </td>
+                      </td> */}
+
+{/* <td>
+  {program.conditions.split('\n').map((condition, condIndex) => (
+    <div key={condIndex} className="condition-line">{condition}</div>
+  ))}
+</td>
                       <td>{program.oneMonth}</td>
                       <td>{program.threeMonth}</td>
                       <td>{program.sixMonth}</td>
@@ -1143,7 +1094,41 @@ const NutriDietHero = () => {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </div> */}
+
+<div className="health-plan-container" id='available-batches'>
+  <div className="health-plan-header">
+    <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
+  </div>
+  <div className="health-plan-table-container">
+    <table className="health-plan-table">
+      <thead>
+        <tr>
+          <th className="program-column">Programs</th>
+          <th className="conditions-column">Health Conditions</th>
+          <th className="plan-column">1 Month plan</th>
+          <th className="plan-column">3 Month plan</th>
+          <th className="plan-column">6 Month plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        {healthPrograms.map((program, index) => (
+          <tr key={index}>
+            <td>{program.program}</td>
+            <td>
+              {program.conditions.split('\n').map((condition, condIndex) => (
+                <div key={condIndex} className="condition-line">{condition}</div>
+              ))}
+            </td>
+            <td>{program.oneMonth}</td>
+            <td>{program.threeMonth}</td>
+            <td>{program.sixMonth}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
 
 
             <div className='health_wrapper_bottom'>
@@ -1172,20 +1157,13 @@ const NutriDietHero = () => {
                   dates={options1}
                 />
                 <CommonBtn text='Enroll Now' buttonAction={enrollFrom} />
+                <div style={{ justifyContent: 'end', display: 'flex', margin:'2px', color: '#FF3B30', fontSize: '14px', fontWeight:'600'}}>
                 {err && <small> Please select package/program* </small>}
-
+                </div>
                 {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}
               </div>
-
-
-
             </div>
-
-
           </div>
-
-
-
 
           <div className='diet-container'>
             <div className="nutritionist-container">
@@ -1242,12 +1220,9 @@ const NutriDietHero = () => {
             <h2 className="reviews-title">our <span className="highlightreview">Client Reviews</span></h2>
 
             <div className="slider-container">
-              
+
 
               <div className="slider-wrapper">
-                {/* <div>
-                <img src={frame_left_client} />
-                </div> */}
                 <div className="slider-track">
                   {reviews.map((review, index) => {
                     // Calculate the position relative to current
@@ -1275,193 +1250,18 @@ const NutriDietHero = () => {
               <div className="navigation">
                 <button className="nav-btn prev-btn" onClick={prevSlide}>&#10094;</button>
                 <div className="pagination">
-                {reviews.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`pagination-dot ${index === currentIndex ? 'active' : ''}`}
-                    onClick={() => goToSlide(index)}
-                  />
-                ))}
-              </div>
+                  {reviews.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`pagination-dot ${index === currentIndex ? 'active' : ''}`}
+                      onClick={() => goToSlide(index)}
+                    />
+                  ))}
+                </div>
                 <button className="nav-btn next-btn" onClick={nextSlide}>&#10095;</button>
               </div>
 
-              
-
-              {/* <div className="hug-counter">
-        <span>742 Hug</span>
-        <span>210 Hug</span>
-      </div> */}
             </div>
-            {/* 
-         <div className="reviews-slider-container">
-            <Swiper
-              ref={swiperRef}
-              spaceBetween={10}
-              slidesPerView={3}
-              loop={true}
-              modules={[Pagination, Scrollbar, A11y]}
-        scrollbar={{ draggable: true }}
-        draggable={true}
-        speed={1000}
-        navigation={{
-          nextEl: `swiperButtonNext`,
-          prevEl: `swiperButtonPrev`,
-        }}
-        pagination={{
-          clickable: true,
-          el: `customPagination`,
-          type: "bullets",
-        }}
-        // breakpoints={{
-        //   1430: { slidesPerView: 3, slidesPerGroup: 3 },
-        //   1015: { slidesPerView: 2, slidesPerGroup: 2, centeredSlides: false },
-        //   350: { slidesPerView: 1, slidesPerGroup: 1, centeredSlides: true },
-        // }}
-        // style={{ "--swiper-scrollbar-size": "0px", display: "none !important" }}
-              onSlideChange={handleSlideChange}
-            >
-              {reviews.map((review, index) => {
-                const isActive = direction === "next" ? index === activeIndex + 1 : index === activeIndex - 1;
-                return (
-                  <SwiperSlide
-                  key={review.id}
-                  // className={`swiper-slide ${activeIndex === index
-                  //     ? "fade"
-                  //     : activeIndex === (index - 1) ||
-                  //     activeIndex === (index + 1)
-                  //       ? "active"
-                  //       : "fade-right"
-                  //   }`}
-                  className={`swiper-slide ${isActive ? "active" : activeIndex === index ? "fade" : "fade-right"}`}
-                    
-                >
-                  
-                  <div className="review-card">
-                    <p className="review-text">{review.text}</p>
-                    <p className="review-details">{review.details}</p>
-                  </div>
-                </SwiperSlide>
-                )
-              })}
-            </Swiper>
-
-          </div>
-
-
-          <div className="slider-controls">
-            <button className="slider-arrow prev" onClick={() => {
-              if (swiperRef.current && swiperRef.current.swiper) {
-                setDirection("prev");
-                swiperRef.current.swiper.slidePrev();
-              }
-            }}>
-            {/* {activeIndex} */}
-            {/* {index} */}
-            {/* {swiperRef.current?.swiper?.realIndex} */}
-            {/* &#10094;
-            </button>
-            <div className="slider-dots">
-              {reviews.map((_, index) => (
-                <span
-                  key={index}
-                  className={`slider-dot ${index === activeIndex ? "active" : ""}`}
-                  onClick={() => swiperRef.current.swiper.slideTo(index)}
-                >
-                  {index === activeIndex ? "•••••" : "•"}
-                </span>
-              ))}
-            </div>
-            <button className="slider-arrow next" onClick={() => {
-                if (swiperRef.current && swiperRef.current.swiper) {
-                  setDirection("next");
-                  swiperRef.current.swiper.slideNext();
-                }
-            }}>
-              {/* {swiperRef.current?.swiper?.realIndex} */}
-            {/* &#10095;
-            </button>
-          </div>   */}
-
-            {/* <div className="slider-container">
-      <div className="navigation">
-        <button className="nav-btn prev-btn" onClick={prevSlide}>&#10094;</button>
-        <button className="nav-btn next-btn" onClick={nextSlide}>&#10095;</button>
-      </div>
-      
-      <div className="slider-track" style={{ transform: `translateX(${-currentIndex * 33.333}%)` }}>
-        {reviews.map((review, index) => (
-          <div 
-            key={index} 
-            className={`slide ${index === currentIndex ? 'active' : ''}`}
-          >
-            <div className="card">
-              <h3>{review.text}</h3>
-              <p>{review.details}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      <div className="pagination">
-        {reviews.map((_, index) => (
-          <div 
-            key={index}
-            className={`pagination-dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
-      
-      <div className="hug-counter">
-        <span>742 Hug</span>
-        <span>210 Hug</span>
-      </div>
-    </div> */}
-
-            {/* <div className="carousel-container">
-      <div className="carousel-track" ref={trackRef}>
-        {reviews.map((review, index) => (
-          <div
-            key={review.id}
-            className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
-          >
-            <div className="carousel-content">
-              <div className="carousel-title">
-                {review.text}
-              </div>
-              <div className="carousel-details">
-                {review.details}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="carousel-nav">
-        <button
-          className="carousel-button prev"
-          onClick={goToPrev}
-        >
-          ←
-        </button>
-        <div className="carousel-dots">
-          {reviews.map((_, index) => (
-            <div
-              key={index}
-              className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
-        <button
-          className="carousel-button next"
-          onClick={goToNext}
-        >
-          →
-        </button>
-      </div>
-    </div> */}
 
           </div>
 
@@ -1483,7 +1283,6 @@ const NutriDietHero = () => {
               <div className="social-proof-content">
 
                 <h3 className="social-proof-heading">Fuel Your Body, Transform Your Life</h3>
-                {/* <p className="social-proof-text">Join the thousands of people who have found better health and a new lease on life today.</p> */}
                 <p className="social-proof-text">Science-backed nutrition tailored to your lifestyle. Start your journey today.</p>
                 <div className="social-icons">
                   <a href="https://www.facebook.com/share/18ew37fDqZ/ " className="social-icon facebook">
@@ -1533,7 +1332,7 @@ const NutriDietHero = () => {
               <div className="btn_enroll">
                 <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
               </div>
-              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px' }}>
+              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600'}}>
                 {err && <small> Please select package/program* </small>}
               </div>
 
