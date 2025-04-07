@@ -1,6 +1,7 @@
 
 
 import React, { useRef, useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -32,7 +33,6 @@ import right_2 from './images/right_2.png'
 import right_5 from './images/right_5.png'
 import frame_timeline_new from './images/frame_timeline_new.png'
 import timeline from './images/timeline.png'
-import copy from './images/copy.png'
 import right_fruit_new_3 from './images/right_fruit_new_3.png'
 import SelectDropDown from '../../../Components/Select Dropdown';
 import CommonBtn from '../../../Components/commonbtn';
@@ -47,6 +47,7 @@ import Vinita from './images/Vinita.JPG'
 import Kreena from './images/Kreena.JPG'
 import TYI_Mobile_v2 from './images/TYI_Mobile_v2.png'
 import frame_left_client from './images/frame_left_client.png'
+import copy from './images/copy.svg'
 
 
 
@@ -186,130 +187,7 @@ const NutriDietHero = () => {
     }
   ];
 
-  // const healthPrograms = [
-  //   {
-  //     program: "Shape up program",
-  //     conditions: ["Weight loss", "Weight gain, Muscle gain"],
-  //     oneMonth: "Rs 3999/-",
-  //     threeMonth: "Rs 8999/-",
-  //     sixMonth: "Rs 13999/-"
-  //   },
-  //   {
-  //     program: "Hormonal imbalance program",
-  //     conditions: ["PCOS / PCOD", "Infertility, Thyroid"]
-  //   },
-  //   {
-  //     program: "Gut Health program",
-  //     conditions: [
-  //       "GERD, Heartburn, Acidity",
-  //       "Digestion issues / Constipation",
-  //       "Bloating, Gas & Flatulence"
-  //     ]
-  //   },
-  //   {
-  //     program: "Metabolic disorder program",
-  //     conditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"]
-  //   },
-  //   {
-  //     program: "Maternal Program",
-  //     conditions: ["Pregnancy, Lactation", "Pregnancy-induced diabetes"]
-  //   },
-  //   {
-  //     program: "Client specific diet",
-  //     conditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant / Gluten free"]
-  //   },
-  //   {
-  //     program: "Neurological Disorders",
-  //     conditions: ["Alzheimer's / Parkinson's"]
-  //   },
-  //   {
-  //     program: "Clinical Plans",
-  //     conditions: [
-  //       "Diabetes on Insulin / BS",
-  //       "IBD (Crohn's & Ulcerative Colitis)",
-  //       "Peptic & Duodenal Ulcers",
-  //       "Bile reflux",
-  //       "Malabsorption, Pancreatitis",
-  //       "Cancer, COPD, Kidney disorders",
-  //       "Liver disorders",
-  //       "Epilepsy"
-  //     ],
-  //     oneMonth: "Rs 4999/-",
-  //     threeMonth: "Rs 9999/-",
-  //     sixMonth: "Rs 14999/-"
-  //   },
-  //   {
-  //     program: "Auto-Immune Disorders",
-  //     conditions: [
-  //       "Rheumatoid Arthritis",
-  //       "Ankylosing Spondylitis",
-  //       "Psoriasis, Lupus",
-  //       "Sjogren's syndrome",
-  //       "Multiple Sclerosis (MS)"
-  //     ]
-  //   }
-  // ];
 
-  // const healthPrograms = [
-  //   {
-  //     program: "Shape up program",
-  //     conditions: ["Weight loss", "Weight gain , Muscle gain"],
-  //     oneMonth: "Rs 3999/-",
-  //     threeMonth: "Rs 8999/-",
-  //     sixMonth: "Rs 13999/-"
-  //   },
-  //   {
-  //     program: "Hormonal imbalance program",
-  //     conditions: ["PCOS/ PCOD", "Infertility , Thyroid"],
-  //   },
-  //   {
-  //     program: "Gut Health program",
-  //     conditions: ["GERD, Heartburn, Acidity", "Digestion issues/ Constipation", "Bloating Gas & Flatulence"],
-  //   },
-  //   {
-  //     program: "Metabolic disorder program",
-  //     conditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"],
-  //   },
-  //   {
-  //     program: "Maternal Program",
-  //     conditions: ["Pregnancy, Lactation", "Pregnancy induced diabetes"],
-  //   },
-  //   {
-  //     program: "Client specific diet",
-  //     conditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant/ Gluten free"],
-  //   },
-  //   {
-  //     program: "Neurological Disorders",
-  //     conditions: ["Alzheimer's/ Parkinson"],
-  //   },
-  //   {
-  //     program: "Clinical Plans",
-  //     conditions: [
-  //       "Diabetes on Insulin/ BS",
-  //       "IBD (Crohn's & Ulcerative",
-  //       "Colitis), Peptic & Duodenal",
-  //       "Ulcers, Bile reflux",
-  //       "Malabsorption, Pancreatitis",
-  //       "Cancer, COPD, Kidney",
-  //       "disorders, Liver disorders",
-  //       "Epilepsy"
-  //     ],
-  //     oneMonth: "Rs 4999/-",
-  //     threeMonth: "Rs 9999/-",
-  //     sixMonth: "Rs 14999/-"
-  //   },
-  //   {
-  //     program: "Auto-Immune Disorders",
-  //     conditions: [
-  //       "Rheumatoid Arthritis",
-  //       "Ankylosing Spondylitis",
-  //       "Psoriasis, Lupus",
-  //       "Sjogren's syndrome",
-  //       "Multiple Sclerosis (MS)"
-  //     ],
-
-  //   }
-  // ];
 
   const options = ['1 month', '3 months', '6 months']
   const options1 = ['Shape up', 'Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic', 'Other types', 'Nutrition for kids', 'Clinical Plans']
@@ -537,10 +415,11 @@ const NutriDietHero = () => {
   const handleCopy = (text, label) => {
     navigator.clipboard.writeText(text)
       .then(() => {
-        alert(`${label} copied!`);
+        toast.success(`${label} copied!`);
       })
       .catch(err => {
         console.error(`Failed to copy ${label}: `, err);
+        toast.error(`Failed to copy ${label}`);
       });
   };
 
@@ -736,11 +615,11 @@ const NutriDietHero = () => {
                 <div className="journey_third_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Body Analysis</h3>
-                    <p><strong>For offline consultations:</strong></p>
+                    <span className='card_p'><p><strong>For offline consultations:</strong></p></span>
                     <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
                     <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more;</li></p>
                     </div>
-                    <p><strong>For online clients:</strong></p>
+                    <span className='card_p'><p><strong>For online clients:</strong></p></span>
                     <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
                     <p><li>Body measurements: height, weight, waist, and hip circumference, BMI</li></p>
                     </div>
@@ -780,7 +659,7 @@ const NutriDietHero = () => {
                 <div className="journey_eigth_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
+                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500', color: '#333333'}}>
                     <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p> <br/>
                     <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                   </div>
@@ -857,9 +736,9 @@ const NutriDietHero = () => {
                   <div className="timeline-card step-3">
                     <div className="card-content">
                       <h3>Body Analysis</h3>
-                      <p><strong>For offline consultations:</strong> </p>
+                      <span className='card_p'><p><strong>For offline consultations:</strong> </p></span>
                       <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age, and more.</li></p> <br />
-                      <p><strong>For online consultations:</strong></p>
+                      <span className='card_p'><p><strong>For online consultations:</strong></p></span>
                       <p><li>Body measurements - height, weight, waist, and hip circumference, BMI.</li> </p>
                     </div>
                   </div>
@@ -1157,7 +1036,7 @@ const NutriDietHero = () => {
                   dates={options1}
                 />
                 <CommonBtn text='Enroll Now' buttonAction={enrollFrom} />
-                <div style={{ justifyContent: 'end', display: 'flex', margin:'2px', color: '#FF3B30', fontSize: '14px', fontWeight:'600'}}>
+                <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600'}}>
                 {err && <small> Please select package/program* </small>}
                 </div>
                 {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}

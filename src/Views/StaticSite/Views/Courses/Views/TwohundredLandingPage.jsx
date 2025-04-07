@@ -98,11 +98,7 @@ const handleDateSelect = (index) => {
     };
   }, []);
 
-  // // Handle date selection
-  // const handleDateSelect = (index) => {
-  //   setActiveIndex(index);
-  // };
-
+  
   // Open modal with batch id
   const openBatchModal = (batchId) => {
     setSelectedBatchId(batchId);
@@ -345,7 +341,7 @@ onClick={() => handleClick("offerings")}
 
 </section>
 
-{/* end button sectgion */}
+{/* end button section */}
 
 
       {/* Benefits Section */}
@@ -609,68 +605,6 @@ onClick={() => handleClick("offerings")}
           ))}
         </div>
       </div>
-
-      {/* Modal for All Available Dates */}
-      {/* {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-box">
-            <div className="modal-header">
-              <h3>Available Course Dates</h3>
-              <button 
-                className="close-modal" 
-                onClick={() => setShowModal(false)}
-              >
-                <img src={close} alt="Close" />
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="date-grid">
-                {dynamicDates.map((date, index) => (
-                  <div
-                    key={index}
-                    className={`date-item ${activeIndex === index ? "active" : ""}`}
-                    onClick={() => handleDateSelect(index)}
-                  >
-                    <div className="date-line">
-                      <span className="calendar-icon">
-                        <img src="/images/calender.svg" alt="Calendar Icon" />
-                      </span>
-                      <span className="date">{date.date}</span>
-                    </div>
-                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
-                      <span className="computer-icon">
-                        <img src="/images/computer.svg" alt="Computer Icon" />
-                      </span>
-                      <span className="mode">{date.mode}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="enrollcourse">
-                <button
-                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-                  disabled={activeIndex === null}
-                  onClick={() => {
-                    if (activeIndex !== null && selectedBatchId) {
-                      console.log(`Enrolling for ${dynamicDates[activeIndex]} - Batch ${selectedBatchId}`);
-                      const enrollLink = getBatchEnrollLink(selectedBatchId);
-                      if (enrollLink) {
-                        window.location.href = `${enrollLink}?date=${encodeURIComponent(dynamicDates[activeIndex])}`;
-                      }
-                    }
-                  }}
-                >
-                  Enroll Course
-                  <span className="enrollimg">
-                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )} */}
       {/* Modal for All Available Dates */}
       {showModal && (
   <div className="modal-overlay">
@@ -903,52 +837,7 @@ onClick={() => handleClick("offerings")}
       </div>
       
       <div className="carousel-container">
-        {/* <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-            slideShadows: false, // Consider turning off shadows if they don't match your design
-          }}
-          // coverflowEffect={{
-          //   rotate: 0,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 2.5,
-          // }}
-          pagination={{
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true
-          }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper-container"
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        >
-          {offeringsData.map((offering, index) => (
-            <SwiperSlide key={offering.id}>
-              <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
-                <div>
-                <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
-                </div>
-                <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-                  <h2>Special Interaction with <span className="slide-title">Dr. Hansaji Yogendra</span></h2>
-                  <p>{offering.description}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
+       
 
 <Swiper
         effect={'coverflow'}
