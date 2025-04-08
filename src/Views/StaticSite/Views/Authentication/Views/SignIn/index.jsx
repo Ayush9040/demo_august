@@ -709,7 +709,7 @@ const SignIn = () => {
   // create user after the final step validation
   const verifySignupOTP = async (userDetails, type, token) => {
     console.log("User Details from verifySign ", userDetails, type, token, getemail)
-    alert(type)
+    // alert(type)
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -2427,7 +2427,7 @@ const SignIn = () => {
                         {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
                     </div>}
 
-                  <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+                  <button type='click' className={isBtnLoad ? 'primary-btn' : 'primary-btn '} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
                   {/* {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                       <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
