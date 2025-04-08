@@ -18492,10 +18492,13 @@ const alibaug = {
     dates: [
       // '1st Feb 2025 to 2nd Feb 2025', 
       // '22nd Feb 2025 to 23rd Feb 2025', 
-      '8th Mar 2025 to 9th Mar 2025',
-      '22nd Mar 2025 to 23rd Mar 2025',
-      '5th April 2025 to 6th April 2025',
-      '19th April 2025 to 20th April 2025'
+      // '8th Mar 2025 to 9th Mar 2025',
+      // '22nd Mar 2025 to 23rd Mar 2025',
+      // '5th April 2025 to 6th April 2025',
+      '19th April 2025 to 20th April 2025',
+      '3rd May 2025 to 4th May 2025',
+      '10th May 2025 to 11th May 2025',
+      '25th May 2025 to 26th May 2025'
     ],
     online: false,
     onCampus: false,
@@ -18622,10 +18625,11 @@ const alibaug = {
     dates: [
       // '25th Jan 2025 to 26th Jan 2025', 
       // '8th Feb 2025 to 9th Feb 2025', 
-      '15th Mar 2025 to 16th Mar 2025',
-      '29th Mar 2025 to 30th Mar 2025',
+      // '15th Mar 2025 to 16th Mar 2025',
+      // '29th Mar 2025 to 30th Mar 2025',
       '12th Apr 2025 to 13th Apr 2025',
-      '26th Apr 2025 to 27th Apr 2025'
+      '26th Apr 2025 to 27th Apr 2025',
+      '17th May 2025 to 18th May 2025'
     ],
     online: false,
     onCampus: false,
