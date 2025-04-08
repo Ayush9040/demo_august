@@ -2487,6 +2487,22 @@
       flex-wrap: wrap;
       display: flex;
     }
+
+    .profile-card {
+      // flex: 1 1 400px;
+      // width: 47%;
+      display: flex;
+      flex-direction: column;
+      background-color: #F6FBE9;
+      // border-radius: 8px;
+      // overflow: hidden;
+      margin-bottom: 20px;
+      padding: 26px;
+      width: 353px;
+      height: 551px;
+      border-radius: 24px;
+
+    }
   }
 
   @media (max-width: 576px) {
@@ -3367,7 +3383,7 @@
   }
 
   .btn_enroll {
-    width: 98%;
+    // width: 98%;
     margin-top: 0px;
   }
 
@@ -3381,6 +3397,7 @@
     border: 1px solid rgb(44, 84, 70);
     font-weight: 600;
     font-size: 16px;
+    // width: 155px;
     width: 100%;
   }
 
@@ -4147,6 +4164,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
   }
 
 
@@ -4475,9 +4493,7 @@
   }
 
   .health_wrapper_bottom div .global-common-btn {
-  margin: 0px;
-    font-weight: 600;
-    font-size: 16px;
+    // margin-top: 0px;
     margin-top: 0;
     padding: 14px;
     background-color: rgb(203, 234, 123);
@@ -4488,6 +4504,10 @@
     font-size: 16px;
     width: 100%;
 
+  }
+
+  .health_wrapper_bottom div .global-common-btn-content {
+    text-align: center;
   }
 
   .desc_health_first {
@@ -4568,15 +4588,52 @@
 
     }
 
-    .health-journey-container.floating {
+    .card1 {
+      
       position: fixed;
       bottom: 0;
-      left: 50%;
-      // height: 174px;
-      transform: translateX(-50%);
-      // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0px -10px 30px 0px #00000066;
+      background: linear-gradient(360deg, #03393F 0%, #007885 100%);
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
       z-index: 800;
     }
+
+    .card1 h2 {
+
+      margin-bottom: 10px;
+      color: #FFFFFF;
+      font-family: 'Open Sans';
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
+    }
+
+
+    // .health-journey-container.floating {
+    //   position: fixed;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;            
+    //   padding: 20px;
+    // }
+    //   position: fixed;
+    //   bottom: 0;
+    //   // left: 50%;
+    //   left: 45%;
+    //   // width: 418px;
+    //   overflow-x: hidden;
+    //   max-width: 100vw;
+    //   // height: 174px;
+    //   transform: translateX(-50%);
+    //   // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    //   z-index: 800;
+    // }
 
 
     .fixes_mobile {
@@ -4792,7 +4849,7 @@
       flex-direction: column;
       gap: 20px;
       position: absolute;
-      top: 31.3%;
+      top: 32%;
       // position: relative;
       // position: relative;
       z-index: 2;

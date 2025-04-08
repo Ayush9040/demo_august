@@ -1,7 +1,9 @@
 
 
 import React, { useRef, useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -415,7 +417,18 @@ const NutriDietHero = () => {
   const handleCopy = (text, label) => {
     navigator.clipboard.writeText(text)
       .then(() => {
-        toast.success(`${label} copied!`);
+        // toast.success(`${label} copied!`);
+        toast.success('Copied Successfully!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        })
+      
       })
       .catch(err => {
         console.error(`Failed to copy ${label}: `, err);
@@ -616,7 +629,7 @@ const NutriDietHero = () => {
                   <div className="journey_card-content">
                     <h3>Body Analysis</h3>
                     <span className='card_p'><p><strong>For offline consultations:</strong></p></span>
-                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
+                    <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500', marginBottom: '20px'}}>
                     <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more;</li></p>
                     </div>
                     <span className='card_p'><p><strong>For online clients:</strong></p></span>
@@ -822,7 +835,7 @@ const NutriDietHero = () => {
           </section>
 
 
-
+          <ToastContainer />
           <div className="contact-wrapper">
 
             <div className="contact-container">
@@ -851,6 +864,7 @@ const NutriDietHero = () => {
                         title="Copy phone number"
                       />
                     </div>
+                  
                   </div>
 
                   <div className="contact-item">
@@ -877,6 +891,7 @@ const NutriDietHero = () => {
                         title="Copy email"
                       />
                     </div>
+                    {/* <ToastContainer /> */}
                   </div>
 
                   <div className="contact-item">
@@ -928,54 +943,9 @@ const NutriDietHero = () => {
 
 
 
-{/* 
-          <div className="health-plan-container" id='available-batches'>
-            <div className="health-plan-header">
 
-              <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
-            </div>
 
-            <div className="health-plan-table-container">
-              <table className="health-plan-table">
-                <thead>
-                  <tr>
-                    <th className="program-column">Programs</th>
-                    <th className="conditions-column">Health Conditions</th>
-                    <th className="plan-column">1 Month plan</th>
-                    <th className="plan-column">3 Month plan</th>
-                    <th className="plan-column">6 Month plan</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {healthPrograms.map((program, index) => (
-                    <tr key={index}>
-                      <td>{program.program}</td> */}
-                      {/* <td>
-                        {typeof program.conditions === 'string' ?
-                          program.conditions.split('\n').map((condition, condIndex) => (
-                            <div key={condIndex} className="condition-line">{condition}</div>
-                          ))
-                          :
-                          // Fallback if conditions is not a string
-                          <div className="condition-line">{String(program.conditions)}</div>
-                        }
-                      </td> */}
-
-{/* <td>
-  {program.conditions.split('\n').map((condition, condIndex) => (
-    <div key={condIndex} className="condition-line">{condition}</div>
-  ))}
-</td>
-                      <td>{program.oneMonth}</td>
-                      <td>{program.threeMonth}</td>
-                      <td>{program.sixMonth}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div> */}
-
-<div className="health-plan-container" id='available-batches'>
+{/* <div className="health-plan-container" id='available-batches'>
   <div className="health-plan-header">
     <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
   </div>
@@ -1006,11 +976,141 @@ const NutriDietHero = () => {
         ))}
       </tbody>
     </table>
+  </div> */}
+
+
+
+           
+
+
+<div className="health-plan-container" id='available-batches'>
+  <div className="health-plan-header">
+    <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
+  </div>
+  <div className="health-plan-table-container">
+    <table className="health-plan-table">
+      <thead>
+        <tr>
+          <th className="program-column">Programs</th>
+          <th className="conditions-column">Health Conditions</th>
+          <th className="plan-column">1 Month plan</th>
+          <th className="plan-column">3 Month plan</th>
+          <th className="plan-column">6 Month plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{marginBottom: '60px'}}>
+          <td>Shape up program</td>
+          <td>
+            <div className="condition-line">{`Weight loss`}</div>
+            <div className="condition-line">{`Weight gain, Muscle gain`}</div>
+          </td>
+          <td>Rs 3999/-</td>
+          <td>Rs 8999/-</td>
+          <td>Rs 13999/-</td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Hormonal imbalance program</td>
+          <td>
+            <div className="condition-line">{`PCOS / PCOD`}</div>
+            <div className="condition-line">{`Infertility, Thyroid`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Gut Health program</td>
+          <td>
+            <div className="condition-line">{`GERD, Heartburn, Acidity,`}</div>
+            <div className="condition-line">{`Digestion issues , Constipation`}</div>
+            <div className="condition-line">{`Bloating, Gas & Flatulence`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Metabolic disorder program</td>
+          <td>
+            <div className="condition-line">Type 2 Diabetes Mellitus</div>
+            <div className="condition-line">{`Cholesterol, Hypertension`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Maternal Program</td>
+          <td>
+            <div className="condition-line">{`Pregnancy, Lactation,`}</div>
+            <div className="condition-line">{`Pregnancy induced diabetes`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Client specific diet</td>
+          <td>
+            <div className="condition-line">{`Vegan diet, Ketogenic diet,`}</div>
+            <div className="condition-line">{`Lactose intolerant  Gluten free`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Neurological Disorders</td>
+          <td>
+            <div className="condition-line">{`Alzheimer's Parkinson`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Clinical Plans</td>
+          <td>
+            <div className="condition-line">{`Diabetes on insulin BS,`}</div>
+            <div className="condition-line">{`IBD (Crohn's & Ulcerative Colitis),`}</div>
+            <div className="condition-line">{`Peptic & Duodenal Ulcers,`}</div>
+            <div className="condition-line">Piles Gall bladderstones, </div>
+            <div className="condition-line">{`Pancreatitis Cancer,`}</div>
+            <div className="condition-line">{`COPD, Kidney disorders,`}</div>
+            <div className="condition-line">Liver disorders,</div>
+            <div className="condition-line">Epilepsy</div>
+          </td>
+          <td>Rs 4999/-</td>
+          <td>Rs 9999/-</td>
+          <td>Rs 14999/-</td>
+        </tr>
+        
+        <tr style={{marginBottom: '60px'}}>
+          <td>Auto-Immune Disorders</td>
+          <td>
+            <div className="condition-line">Rheumatoid Arthritis,</div>
+            <div className="condition-line">Ankylosing Spondylitis,</div>
+            <div className="condition-line">{`Psoriasis, Lupus`}</div>
+            <div className="condition-line">{`Sjogren's syndrome,`}</div>
+            <div className="condition-line">{`Multiple Sclerosis (MS)`}</div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-
-
-            <div className='health_wrapper_bottom'>
+ <div className='health_wrapper_bottom'>
 
               <div>
                 <p className='desc_health_first'>🎯 Start Your Personalized Health Journey!</p>
@@ -1042,7 +1142,7 @@ const NutriDietHero = () => {
                 {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}
               </div>
             </div>
-          </div>
+          </div> 
 
           <div className='diet-container'>
             <div className="nutritionist-container">
@@ -1184,7 +1284,7 @@ const NutriDietHero = () => {
           </div>
 
           {/* Floating Health Journey Section */}
-          <div className={`health-journey-container ${isFloating ? 'floating' : ''}`}>
+          {/* <div className={`health-journey-container ${isFloating ? 'floating' : ''}`}>
             <h2 className="journey-title">Start Your Personalized Health Journey!</h2>
 
             <div
@@ -1211,12 +1311,46 @@ const NutriDietHero = () => {
               <div className="btn_enroll">
                 <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
               </div>
-              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600'}}>
+              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
                 {err && <small> Please select package/program* </small>}
               </div>
 
             </div>
-          </div>
+          </div> */}
+
+<div class={`card1 ${isFloating ? 'floating' : ''}`}>
+<h2 >Start Your Personalized Health Journey!</h2>
+    
+        <div
+              id="date-select-mobile"
+              style={{ display: 'flex', alignItems: 'center' }}
+              className='select_wrapper'
+            >
+              <div className='fixes_mobile'>
+                <SelectDropDown
+                  currentValue={plan}
+                  changeCurrentValue={setPlan}
+                  text={'Select Package'}
+                  isStyles={selectStyles1}
+                  dates={options}
+                />{' '}
+                <SelectDropDown
+                  currentValue={program}
+                  changeCurrentValue={setProgram}
+                  text={'Select Program'}
+                  isStyles={selectStyles1}
+                  dates={options1}
+                />
+              </div>
+                <div className="btn_enroll">
+                  <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
+                </div>
+              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
+                {err && <small> Please select package/program* </small>}
+              </div>
+              </div>
+
+            </div>
 
           {openForm2 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm2} />}
 
