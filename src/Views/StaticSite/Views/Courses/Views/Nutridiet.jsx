@@ -416,6 +416,10 @@ const NutriDietHero = () => {
   const email = 'nutridiet@theyogainstitute.in';
 
   const handleCopy = (text, label) => {
+
+    // Dismiss any existing toasts first
+  toast.dismiss();
+  
     navigator.clipboard.writeText(text)
       .then(() => {
         // toast.success(`${label} copied!`);
@@ -1137,7 +1141,7 @@ const NutriDietHero = () => {
                   dates={options1}
                 />
                 <CommonBtn text='Enroll Now' buttonAction={enrollFrom} />
-                <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600'}}>
+                <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600', margin:'10px'}}>
                 {err && <small> Please select package/program* </small>}
                 </div>
                 {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}

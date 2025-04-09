@@ -6328,3 +6328,111 @@
 //     padding: 0 15px;
 //   }
 // }
+
+//css responsiveness
+
+@media (max-width: 380px){
+  .diet_whole_wrapper .health-timeline-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 33%;
+    z-index: 2;
+    width: 310px;
+}
+}
+
+@media (max-width: 520px){
+  .diet_whole_wrapper .hero-title {
+    font-size: 24px;
+}
+.diet_whole_wrapper .hero-subtitle {
+  font-size: 16px;
+  margin-top: 19px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: "Urbanist", sans-serif;
+  opacity: 0.9;
+  color: #FFFFFF;
+  text-align: left;
+  margin-bottom: 24px;
+}
+  .diet_whole_wrapper .highlights-wave {
+    position: absolute;
+    bottom: -1%;
+    left: 0;
+    width: 100%;
+}
+  .diet_whole_wrapper .health-timeline-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 33.5%;
+    z-index: 2;
+    width: 310px;
+}
+
+.diet_whole_wrapper .card {
+  width: 353px;
+  height: 219px;
+  gap: 10px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 16px;
+  position: relative;
+  left: 0;
+}
+.diet_whole_wrapper .btn_enroll {
+  width: 90%;
+  margin-top: 16px;
+}
+}
+
+// @media (max-width: 850px){
+//   .diet_whole_wrapper .hero-title {
+//     font-size: 24px;
+// }
+// .diet_whole_wrapper .hero-subtitle {
+//   font-size: 16px;
+//   margin-top: 19px;
+//   font-weight: 400;
+//   line-height: 150%;
+//   font-family: "Urbanist", sans-serif;
+//   opacity: 0.9;
+//   color: #FFFFFF;
+//   text-align: left;
+//   margin-bottom: 24px;
+// }
+//   .diet_whole_wrapper .highlights-wave {
+//     position: absolute;
+//     bottom: -1%;
+//     left: 0;
+//     width: 100%;
+// }
+//   .diet_whole_wrapper .health-timeline-cards {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+//     position: absolute;
+//     top: 33%;
+//     z-index: 2;
+//     width: 310px;
+// }
+
+// .diet_whole_wrapper .card {
+//   width: 353px;
+//   height: 219px;
+//   gap: 10px;
+//   border-radius: 12px;
+//   border-width: 1px;
+//   padding: 16px;
+//   position: relative;
+//   left: 0;
+// }
+// .diet_whole_wrapper .btn_enroll {
+//   width: 90%;
+//   margin-top: 16px;
+// }
+// }
