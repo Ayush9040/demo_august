@@ -4582,6 +4582,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    box-shadow: 0px -10px 30px 0px #00000066;
+    background: linear-gradient(360deg, #03393F 0%, #007885 100%);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 
   }
 
