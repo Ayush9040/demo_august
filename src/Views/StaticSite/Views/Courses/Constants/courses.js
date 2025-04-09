@@ -1102,7 +1102,7 @@ const ttc200hr = {
       // '17th Jun - 5th Oct 2024',
       // '14th Oct - 1st Feb 2025',
       // '20th Jan - 15th Mar 2025',
-      '24th Mar - 17th May 2025',
+      // '24th Mar - 17th May 2025',
       '26th May - 19th Jul 2025',
       '28th Jul - 20th Sep 2025',
       '29th Sep - 22nd Nov 2025',
@@ -2178,7 +2178,7 @@ const ttc200hr = {
       // '6th Jul to 22nd Sep 2024',
       // '28th Sep to 15th Dec 2024 ',
       // '5th Oct to 22nd Dec 2024 ',
-      "22nd Mar to 8th Jun 2025",
+      // "22nd Mar to 8th Jun 2025",
       "14th Jun to 31st Aug 2025",
       "6th Sep to 23rd Nov 2025",
       "29th Nov to 15th Feb 2026",
@@ -8634,7 +8634,7 @@ const camps = {
       // '14th Dec & 15th Dec 2024',
       // '20th Jan & 21st Jan 2025',
       // '15th Feb & 16th Feb 2025',
-      '17th Mar & 18th Mar 2025',
+      // '17th Mar & 18th Mar 2025',
       '19th Apr & 20th Apr 2025',
       '19th May & 20th May 2025',
       '21st Jun & 22nd Jun 2025',
@@ -9756,7 +9756,8 @@ const camps = {
     },
     dates: [
       // '23rd Feb 2025',
-      '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
+      // '23rd Mar 2025', 
+      '27th Apr 2025', '25th May 2025',
       '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
     mostPopular: false,
@@ -9945,7 +9946,7 @@ const camps = {
       // '14th Sep to 20th Sep 2024',
       // '9th Nov to 15th Nov 2024',
       // '11th Jan to 17th Jan 2025',
-      '8th Mar to 14th Mar 2025',
+      // '8th Mar to 14th Mar 2025',
       '10th May to 16th May 2025',
       '12th Jul to 18th Jul 2025',
       '13th Sep to 19th Sep 2025',
@@ -10332,7 +10333,7 @@ const camps = {
       // '28th Dec to 3rd Jan 2025',
       // '25th Jan to 31st Jan 2025',
       // '22nd Feb to 28th Feb 2025',
-      '22nd Mar to 28th Mar 2025',
+      // '22nd Mar to 28th Mar 2025',
       '26th Apr to 2nd May 2025',
       '24th May to 30th May 2025',
       '28th Jun to 4th Jul 2025',
@@ -12428,7 +12429,8 @@ const camps = {
       },
     },
     dates: [
-      '22nd Mar 2025', '24th May 2025'
+      // '22nd Mar 2025', 
+      '24th May 2025'
       , '26th Jul 2025', '27th Sep 2025', '22nd Nov 2025'],
     online: false,
     onCampus: true,
@@ -14898,7 +14900,13 @@ const classes = {
     dates: [
       // '9th Feb 2025', '16th Feb 2025', 
       // '23rd Feb 2025',
-      '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
+      // '16th Mar 2025', 
+      // '23rd Mar 2025', 
+      // '30th Mar 2025', 
+      '6th Apr 2025', 
+      '13th Apr 2025', 
+      '20th Apr 2025', 
+      '27th April 2025'
     ],
     online: true,
     onCampus: true,
@@ -15406,7 +15414,10 @@ const classes = {
     dates: [
       // '8th Feb 2025', '15th Feb 2025', 
       // '22nd Feb 2025', 
-      '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+      // '15th Mar 2025', 
+      // '22nd Mar 2025', 
+      // '29th Mar 2025'
+    ],
     category: 'classes',
 
     online: false,
@@ -18481,10 +18492,13 @@ const alibaug = {
     dates: [
       // '1st Feb 2025 to 2nd Feb 2025', 
       // '22nd Feb 2025 to 23rd Feb 2025', 
-      '8th Mar 2025 to 9th Mar 2025',
-      '22nd Mar 2025 to 23rd Mar 2025',
-      '5th April 2025 to 6th April 2025',
-      '19th April 2025 to 20th April 2025'
+      // '8th Mar 2025 to 9th Mar 2025',
+      // '22nd Mar 2025 to 23rd Mar 2025',
+      // '5th April 2025 to 6th April 2025',
+      '19th April 2025 to 20th April 2025',
+      '3rd May 2025 to 4th May 2025',
+      '10th May 2025 to 11th May 2025',
+      '25th May 2025 to 26th May 2025'
     ],
     online: false,
     onCampus: false,
@@ -18611,10 +18625,11 @@ const alibaug = {
     dates: [
       // '25th Jan 2025 to 26th Jan 2025', 
       // '8th Feb 2025 to 9th Feb 2025', 
-      '15th Mar 2025 to 16th Mar 2025',
-      '29th Mar 2025 to 30th Mar 2025',
+      // '15th Mar 2025 to 16th Mar 2025',
+      // '29th Mar 2025 to 30th Mar 2025',
       '12th Apr 2025 to 13th Apr 2025',
-      '26th Apr 2025 to 27th Apr 2025'
+      '26th Apr 2025 to 27th Apr 2025',
+      '17th May 2025 to 18th May 2025'
     ],
     online: false,
     onCampus: false,
@@ -18867,9 +18882,9 @@ const specialEvents = {
     category: 'classes',
     dates: [
       // '12th Feb 2025',
-      '13th Mar 2025',
-      '13th Apr 2025'
-      , '11th Jun 2025'
+      // '13th Mar 2025',
+      // '13th Apr 2025',
+       '11th Jun 2025'
     ],
     online: true,
     onCampus: true,
