@@ -50,6 +50,7 @@ import Kreena from './images/Kreena.JPG'
 import TYI_Mobile_v2 from './images/TYI_Mobile_v2.png'
 import frame_left_client from './images/frame_left_client.png'
 import copy from './images/copy.svg'
+import nutri_diet_mobile_footer_arrow from './images/nutri_diet_mobile_footer_arrow.svg'
 
 
 
@@ -1323,7 +1324,7 @@ const NutriDietHero = () => {
     
         <div
               id="date-select-mobile"
-              style={{ display: 'flex', alignItems: 'center' }}
+              style={{ display: 'flex' }}
               className='select_wrapper'
             >
               <div className='fixes_mobile'>
@@ -1344,6 +1345,7 @@ const NutriDietHero = () => {
               </div>
                 <div className="btn_enroll">
                   <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
+                  {/* <img src={nutri_diet_mobile_footer_arrow} alt="" /> */}
                 </div>
               <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
                 {err && <small> Please select package/program* </small>}

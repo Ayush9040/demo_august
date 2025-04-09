@@ -3434,7 +3434,7 @@
   @media (max-width: 768px) {
     .client-reviews-container {
       padding: 35px 15px;
-      margin-bottom: 200px;
+      margin-bottom: 140px;
     }
 
     .reviews-title {
@@ -4604,7 +4604,7 @@
 
     .card1 h2 {
 
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       color: #FFFFFF;
       font-family: 'Open Sans';
       font-weight: 600;
@@ -5390,6 +5390,37 @@
       left: 0;
       width: 100%;
     }
+
+    .profile-list {
+      width: 100%;
+      height: 100%;
+    }
+
+    .Dates-dropdown .Select-dropdown {
+      font-size: 14px;
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .btn_enroll .global-common-btn {
+      margin-left: 0px;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn_enroll .global-common-btn .global-common-btn-content {
+      font-size: 16px;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .btn_enroll .global-common-btn {
+      padding: 10px;
+    }
   }
 
   .highlights-wave {
@@ -5398,6 +5429,8 @@
     left: 0;
     width: 100%;
   }
+
+  
 }
 
 .swiperButtonNext,
@@ -5428,6 +5461,8 @@
   font-size: 17px;
   font-weight: 900;
 }
+
+
 
 // .timeline-mobile-cards {
 //   position: relative;
