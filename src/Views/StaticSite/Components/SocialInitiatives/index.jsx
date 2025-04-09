@@ -79,10 +79,11 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
 
               return (
                 <div key={i} className="social-initiative-wrap">
-                  <h1>{item.title}</h1>
+
+                  {item.url ? <Link to={item.url}><h1>{item.title}</h1></Link> : <h1>{item.title}</h1>}
 
                   <p>{item.description}</p>
-                  {item.url}
+                  {/* {item.url} */}
                 </div>
               )
             })}

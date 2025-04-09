@@ -20,7 +20,9 @@ const SectionComponent = ({
           <div className="text-part">
             <div className="banner-heading">
               <h1>
-                {title}
+                {url ? <Link to={url}>{title}</Link> : <>{title}</>}
+
+                {/* {title} */}
                 <div className="bottom-line"></div>
               </h1>
             </div>

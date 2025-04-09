@@ -58,7 +58,7 @@ const Home = () => {
       <Activity />
       <SocialInitiatives />
       <Nispand />
-      <Facts />
+      
       <Experience />
       <Blog />
       <VideosSection />

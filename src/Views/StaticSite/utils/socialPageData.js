@@ -10,6 +10,7 @@ export const socialPageData = [
     citizens of the country without discrimination. The food is
     served to over 1000 people daily, 365 days a year.`,
     image: `${baseDomain}${socialResponsibilityAssets.annamBrahma}`,
+    url: 'https://www.annambrahma.org/'
   },
   {
     title: 'Police',
@@ -70,7 +71,7 @@ export const socialPageData = [
     undertaken to plant more trees and to expand the green
     cover. Through these efforts, we raise awareness locally and
     work to preserve our environment for generations to come.`,
-    image:`${baseDomain}${socialResponsibilityAssets.palnting}`,
+    image: `${baseDomain}${socialResponsibilityAssets.palnting}`,
   },
-  
+
 ]

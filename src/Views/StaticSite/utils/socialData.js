@@ -3,7 +3,7 @@ export const socialData = [
     title: 'Annam Brahma',
     description:
       'Annam Brahma (Food is God) was established in the loving memory of Dr. Jayadeva Yogendra in 2018. Every day, fresh, nutritious, healthy Sattvik food is served twice a day for 365 days to underprivileged and poor people.',
-    url: '',
+    url: 'https://www.annambrahma.org/',
   },
   
   {

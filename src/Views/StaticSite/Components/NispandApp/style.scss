@@ -1,106 +1,132 @@
-.nispand-app-container{
+.nispand-app-container {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
-    .nispand-content{
+
+    .nispand-content {
         margin-top: 10rem;
-       .heading-container{
-           width: 70%;
-           .heading-content{
-               align-items: center;
-           }
-           .heading-logo{
-               img{
-                   width: 90px;
-                   height: 80px;
-               }
-           }
-        .custom-border{
-            background: linear-gradient(90deg,white,#015BA1,#015BA1,#015BA1,white);
+
+        .heading-container {
             width: 70%;
+
+            .heading-content {
+                align-items: center;
+            }
+
+            .heading-logo {
+                img {
+                    width: 90px;
+                    height: 80px;
+                }
+            }
+
+            .custom-border {
+                background: linear-gradient(90deg, white, #015BA1, #015BA1, #015BA1, white);
+                width: 70%;
+            }
         }
-       }
-        .app-description{
+
+        .app-description {
             margin: 3rem auto 2rem;
             width: 70%;
         }
-        .global-common-btn{
+
+        .global-common-btn {
             margin: 2rem 15%;
         }
-        .download-options{
+
+        .download-options {
             margin: 2rem 10.5rem;
-            h4{
+
+            h4 {
                 font-weight: 700;
                 margin-top: 5rem;
             }
-            .google-app-store{
-            display: grid;
-            grid-template-columns: 30% 30%;
-            align-items: center;
-            gap: 20px;
-            margin-top: 1rem;
-            img{
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-                margin-bottom: 4rem;
-            }
-            .apple{
-                width: 95.5%;
-                margin: auto;
-            }
+
+            .google-app-store {
+                display: grid;
+                grid-template-columns: 30% 30%;
+                align-items: center;
+                gap: 20px;
+                margin-top: 1rem;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                    margin-bottom: 4rem;
+                }
+
+                .apple {
+                    width: 95.5%;
+                    margin: auto;
+                }
             }
         }
     }
-    .app-preview{
+
+    .app-preview {
         width: 80%;
-        img{
+
+        img {
             width: 100%;
             height: auto;
         }
     }
 }
-@media(max-wdth:1800px){
-   .nispand-app-container{
-       .nispand-content{
-           .custom-border{
-               margin-top: 3rem;
-           }
-       }
-   }
+
+@media(max-wdth:1800px) {
+    .nispand-app-container {
+        .nispand-content {
+            .custom-border {
+                margin-top: 3rem;
+            }
+        }
+    }
 }
 
-@media (max-width:900px){
-    .nispand-app-container{
+@media (max-width:900px) {
+    .nispand-app-container {
         grid-template-columns: 100%;
-        .nispand-content{
-            .heading-container{
-                .heading-logo{
-                    img{
+
+        .nispand-content {
+            .heading-container {
+                .heading-logo {
+                    img {
                         width: 70px;
                         height: 70px;
                     }
                 }
             }
-            .download-options{
-                margin: 2rem auto;
-                h4{
+
+            .download-options {
+                margin: 1rem auto;
+                gap: 10px !important;
+
+                h4 {
                     text-align: center;
+                    margin-top: -1.5rem;
                 }
-                .google-app-store{
+
+                .google-app-store {
                     justify-content: center;
+                    gap: 10px;
+                    margin: -3rem 0 -2rem 0 !important;
                 }
             }
         }
     }
+
     .nispand-app-container .nispand-content .app-description {
         width: 80%;
         text-align: justify;
     }
+
     .nispand-app-container .app-preview {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
+
     .nispand-app-container .nispand-content .global-common-btn {
         margin: 5rem 10%;
     }

@@ -137,7 +137,7 @@ const MegaMenu = ({ setNav }) => {
     ],
   }
   return (
-    <div className="mega-menu-container">
+    <div className="mega-menu-container"  onClick={() => { setNav(false) }}>
       <div className="left-menu">
         <div
           className="cross"
