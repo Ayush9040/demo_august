@@ -65,79 +65,7 @@
     width: 90%;
   }
 
-  /* Navbar styles */
-  // .navbar {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 1rem;
-  //   width: 100%;
-  // }
-
-  // .menu-toggle {
-  //   background: none;
-  //   border: none;
-  //   cursor: pointer;
-  // }
-
-  // .menu-icon {
-  //   display: block;
-  //   width: 24px;
-  //   height: 2px;
-  //   background-color: var(--text-white);
-  //   position: relative;
-  // }
-
-  // .menu-icon::before,
-  // .menu-icon::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 24px;
-  //   height: 2px;
-  //   background-color: var(--text-white);
-  //   left: 0;
-  // }
-
-  // .menu-icon::before {
-  //   top: -8px;
-  // }
-
-  // .menu-icon::after {
-  //   bottom: -8px;
-  // }
-
-  // .logo-container {
-  //   display: flex;
-  //   align-items: center;
-  //   gap: 0.5rem;
-  // }
-
-  // .lotus-logo {
-  //   height: 30px;
-  // }
-
-  // .nutri-logo {
-  //   height: 30px;
-  // }
-
-  // .logo-divider {
-  //   height: 20px;
-  //   width: 1px;
-  //   background-color: var(--text-white);
-  // }
-
-  // .account-button {
-  //   background: none;
-  //   border: none;
-  //   cursor: pointer;
-  // }
-
-  // .account-button img {
-  //   width: 20px;
-  //   height: 20px;
-  //   filter: invert(1);
-  // }
-
+ 
   /* Hero section styles */
   .hero-section {
     display: flex;
@@ -228,31 +156,8 @@
     background-color: #ff6b6b;
   }
 
-  // .customer-count {
-  //   font-size: 1rem;
-  //   font-weight: 500;
-  //   font-family: 'Urbanist', sans-serif;
-  //   color: #FFFFFF;
-  //   width: 100%;
-  //   max-width: 208px;
-  //   margin: 0 auto 1.5rem auto;
-  // }
 
-  // .pricing-button {
-  //   background-color: var(--light-green);
-  //   color: var(--primary-dark-teal);
-  //   border: none;
-  //   border-radius: 30px;
-  //   padding: 0.6rem 1.2rem;
-  //   font-size: 0.9rem;
-  //   font-weight: 600;
-  //   cursor: pointer;
-  //   display: inline-flex;
-  //   align-items: center;
-  //   gap: 0.5rem;
-  //   transition: all 0.3s ease;
-  //   margin: 0 auto;
-  // }
+
 
   .customer-count {
     font-weight: 600;
@@ -298,20 +203,7 @@
     margin-top: 1rem;
   }
 
-  // .food-plate {
-  //   width: 100%;
-  //   max-width: 280px;
-  //   height: auto;
-  //   position: relative;
-  //   z-index: 1;
-  // }
-
-  // .food-plate img {
-  //   width: 100%;
-  //   height: auto;
-  //   max-width: 280px;
-  // }
-
+  
   /* Benefits Section */
   .nutri-diet-benefit {
     width: 100%;
@@ -544,14 +436,6 @@
     gap: 30px;
   }
 
-  // .highlight-card {
-  //   background-color: #065d5d;
-  //   border-radius: 10px;
-  //   display: flex;
-  //   align-items: center;
-  //   padding: 20px;
-  //   position: relative;
-  // }
 
   .highlight-image-container {
     margin-right: 20px;
@@ -578,22 +462,7 @@
     flex-grow: 1;
   }
 
-  // .highlight-category {
-  //   color: #4caf50;
-  //   font-size: 0.9rem;
-  //   margin-bottom: 10px;
-  // }
-
-  // .highlight-title {
-  //   font-size: 1.3rem;
-  //   margin-bottom: 10px;
-  //   color: #4caf50;
-  // }
-
-  // .highlight-description {
-  //   color: #b0bec5;
-  // }
-
+  
   .highlight-underline {
     height: 3px;
     // background-color: #4caf50;
@@ -603,40 +472,7 @@
     margin-top: 10px;
   }
 
-  // .highlight-underline {
-  //   display: block;
-  //   margin-top: 5px;
-  //   width: 569px; /* Adjust as needed */
-  // }
-
-  // .highlights-line{
-  //   // width: 569px;
-  // height: 4px;
-
-  // }
-  // .highlights-wave {
-  //   // img{width: 100%; height: 30px}
-  //   // position: absolute;
-  //   // bottom: 0;
-  //   // left: 0;
-  //   // width: 100%;
-  //   // height: 20px;
-  //   /* Replace with actual wave SVG if needed */
-  //   // background-size: cover;
-  //   // background-repeat: no-repeat;
-  // }
-
-  // .highlights-wave {
-  //   position: relative;
-  //   width: 100%;
-  //   overflow: hidden;
-  //   // padding-bottom: 50px; 
-  // }
-
-  // .highlights-wave img {
-  //   width: 100%;
-  //   display: block;
-  // }
+  
   .highlights-container {
     // position: relative;
     padding-bottom: 60px;
@@ -659,337 +495,7 @@
   }
 
 
-  /* Tablet Devices */
-  // @media (min-width: 768px) {
-  //   .navbar {
-  //     padding: 1.25rem;
-  //   }
-
-  //   .logo-container {
-  //     gap: 0.75rem;
-  //   }
-
-  //   .lotus-logo,
-  //   .nutri-logo {
-  //     height: 35px;
-  //   }
-
-  //   .hero-section {
-  //     padding: 1.5rem;
-  //     gap: 1.5rem;
-  //   }
-
-  //   .hero-title {
-  //     font-size: 2.2rem;
-  //     margin-bottom: 1.25rem;
-  //   }
-
-  //   .hero-subtitle {
-  //     font-size: 1rem;
-  //   }
-
-  //   .customer-count {
-  //     font-size: 1.1rem;
-  //   }
-
-  //   .pricing-button {
-  //     padding: 0.7rem 1.3rem;
-  //     font-size: 1rem;
-  //   }
-
-  //   // .food-plate {
-  //   //   max-width: 350px;
-  //   // }
-
-  //   .food-plate img {
-  //     max-width: 350px;
-  //   }
-
-  //   .title {
-  //     // font-size: 24px;
-  //     margin-bottom: 25px;
-  //   }
-
-  //   .highlight {
-  //     // font-size: 22px;
-  //   }
-
-  //   .benefits-grid {
-  //     grid-template-columns: 1fr 1fr;
-  //     gap: 20px;
-  //   }
-
-  //   .centered-card {
-  //     grid-column: 1 / span 2;
-  //     width: 70%;
-  //   }
-
-  //   .icon-container {
-  //     width: 60px;
-  //     height: 60px;
-  //   }
-
-  //   .icon {
-  //     width: 18px;
-  //     height: 18px;
-  //   }
-
-  //   h3 {
-  //     font-size: 22px;
-  //   }
-
-  //   p {
-  //     font-size: 15px;
-  //   }
-
-  //   .highlights-grid {
-  //     grid-template-columns: 1fr 1fr;
-  //     gap: 25px;
-  //   }
-
-  //   .highlight-card {
-  //     flex-direction: row;
-  //     text-align: left;
-  //   }
-
-  //   .highlight-image {
-  //     width: 110px;
-  //     height: 110px;
-  //   }
-  // }
-
-  // /* Small Desktop Devices */
-  // @media (min-width: 992px) {
-  //   .navbar {
-  //     padding: 1.5rem 2rem;
-  //   }
-
-  //   .logo-container {
-  //     gap: 1rem;
-  //   }
-
-  //   .lotus-logo,
-  //   .nutri-logo {
-  //     height: 40px;
-  //   }
-
-  //   .logo-divider {
-  //     height: 30px;
-  //   }
-
-  //   .hero-section {
-  //     flex-direction: row;
-  //     text-align: left;
-  //     padding: 2rem;
-  //     gap: 2rem;
-  //   }
-
-  //   .hero-content {
-  //     padding-left: 2rem;
-  //   }
-
-  //   .customer-count {
-  //     margin: 0 0 2rem 0;
-  //   }
-
-  //   .pricing-button {
-  //     margin: 0;
-  //   }
-
-  //   .hero-title {
-  //     font-size: 2.5rem;
-  //     margin-bottom: 1.5rem;
-  //   }
-
-  //   .hero-subtitle {
-  //     font-size: 1rem;
-  //     margin-bottom: 2rem;
-  //   }
-
-  //   // .food-plate {
-  //   //   max-width: 400px;
-  //   // }
-
-  //   .food-plate img {
-  //     max-width: 400px;
-  //   }
-
-  //   .nutri-diet-benefit {
-  //     max-width: 960px;
-  //   }
-
-  //   .title {
-  //     // font-size: 26px;
-  //   }
-
-  //   .highlight {
-  //     // font-size: 23px;
-  //   }
-
-  //   .benefit-card {
-  //     min-height: 230px;
-  //   }
-
-  //   .icon-container {
-  //     width: 64px;
-  //     height: 64px;
-  //   }
-
-  //   .icon {
-  //     width: 19px;
-  //     height: 19px;
-  //   }
-
-  //   h3 {
-  //     font-size: 23px;
-  //     margin-bottom: 18px;
-  //   }
-
-  //   p {
-  //     font-size: 16px;
-  //   }
-
-  //   .highlights-container {
-  //     padding: 40px 20px;
-  //   }
-
-  //   .highlights-title {
-  //     // font-size: 20px;
-  //     margin-bottom: 40px;
-  //   }
-
-  //   .highlights-clinic-name {
-  //     // font-size: 22px;
-  //   }
-
-  //   .highlights-grid {
-  //     gap: 28px;
-  //   }
-
-  //   .highlight-image {
-  //     width: 110px;
-  //     height: 110px;
-  //   }
-
-  //   .highlight-heading {
-  //     // font-size: 20px;
-  //   }
-
-  //   .highlight-tagline {
-  //     // font-size: 17px;
-  //   }
-
-  //   .highlight-description {
-  //     // font-size: 16px;
-  //   }
-  // }
-
-  // /* Large Desktop Devices */
-  // @media (min-width: 1200px) {
-  //   .nutri-diet-container {
-  //     // padding: 0 20px;
-  //   }
-
-  //   .hero-title {
-  //     font-size: 40px;
-  //   }
-
-  //   .hero-subtitle {
-  //     font-size: 1.1rem;
-  //   }
-
-  //   // .food-plate {
-  //   //   max-width: 500px;
-  //   // }
-
-  //   .food-plate img {
-  //     max-width: 440px;
-  //   }
-
-  //   .nutri-diet-benefit {
-  //     max-width: 1140px;
-  //     padding: 30px;
-  //   }
-
-  //   .title {
-  //     // font-size: 28px;
-  //     margin-bottom: 30px;
-  //   }
-
-  //   .highlight {
-  //     // font-size: 24px;
-  //   }
-
-  //   .benefits-grid {
-  //     gap: 20px;
-  //   }
-
-  //   .benefit-card {
-  //     min-height: 244px;
-  //     padding: 20px;
-  //   }
-
-  //   .icon-container {
-  //     width: 68px;
-  //     height: 68px;
-  //     margin-bottom: 15px;
-  //   }
-
-  //   .icon {
-  //     width: 20px;
-  //     height: 20px;
-  //   }
-
-  //   h3 {
-  //     font-size: 24px;
-  //     margin-bottom: 20px;
-  //   }
-
-  //   p {
-  //     font-size: 16px;
-  //   }
-
-  //   .highlights-container {
-  //     padding: 50px 30px;
-  //   }
-
-  //   .highlights-grid {
-  //     gap: 30px;
-  //   }
-
-  //   .highlight-image {
-  //     width: 120px;
-  //     height: 120px;
-  //   }
-
-  //   .highlight-heading {
-  //     // font-size: 22px;
-  //   }
-
-  //   .highlight-tagline {
-  //     // font-size: 18px;
-  //   }
-
-  //   .highlight-description {
-  //     // font-size: 18px;
-  //   }
-  // }
-
-  // /* Extra Large Desktop Devices */
-  // @media (min-width: 1400px) {
-  //   .nutri-diet-benefit {
-  //     max-width: 1440px;
-  //   }
-
-  //   .benefits-grid {
-  //     max-width: 1280px;
-  //     margin: 0 auto;
-  //   }
-
-  //   .hero-title {
-  //     font-size: 42px;
-  //   }
-  // }
+  
 
   /* Timeline SVG container */
   .transformation-container {
@@ -1276,419 +782,7 @@
     }
   }
 
-  /* Contact section */
-  // .footer-contact {
-  //   background-color: #f5f5f0;
-  //   border-radius: 8px;
-  //   padding: 20px;
-  //   margin-bottom: 20px;
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // .contact-button {
-  //   background-color: #F6FBE9;
-  //   color: #000;
-  //   border: 1px solid #356554;
-  //   padding: 10px 20px;
-  //   font-size: 22px;
-  //   font-weight: 700;
-  //   // position: relative;
-  //   // left: 13%;
-  //   width: 548px;
-  //   // height: 325px;
-  //   gap: 20px;
-  //   // top: 15%;
-  //   border-radius: 4px;
-  //   cursor: pointer;
-  //   // width: 100%;
-  //   // max-width: 300px;
-  //   margin-bottom: 20px;
-  //   transition: background-color 0.3s;
-  // }
-
-  // .contact-button:hover {
-  //   background-color: #f0f0f0;
-  // }
-
-  // .contact-details {
-  //   display: grid;
-  //   grid-template-columns: 1fr;
-  //   gap: 15px;
-  //   width: 100%;
-  // }
-
-  // .contact-item {
-  //   display: flex;
-  //   align-items: flex-start;
-  // }
-
-  // .icon-wrapper {
-  //   min-width: 30px;
-  //   display: flex;
-  //   justify-content: center;
-  //   margin-right: 10px;
-  // }
-
-  // .contact-icon {
-  //   font-style: normal;
-  // }
-
-  // .contact-text {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // .contact-label {
-  //   font-weight: bold;
-  //   margin-bottom: 5px;
-  // }
-
-  // .contact-value {
-  //   color: #333;
-  // }
-
-  // /* Contact Section Styling */
-  // .contact-container {
-  //   background-color: #F6FBE9;
-  //   padding: 20px;
-  //   border-radius: 12px;
-  //   // max-width: 450px;
-  //   width: 548px;
-  //   // height: 325px;
-  //   gap: 20px;
-  //   border: 1px solid #356554;
-  //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  //   margin: auto;
-  //   display: flex;
-  //   top: 15%;
-  //   flex-direction: column;
-  //   position: relative;
-  //   // gap: 15px;
-  // }
-
-  /* Each Contact Item */
-  // .contact-item {
-  //   display: flex;
-  //   align-items: flex-start;
-  //   gap: 10px;
-  //   font-size: 16px;
-  //   color: #333;
-  //   flex-wrap: wrap;
-  // }
-
-  // /* Icons */
-  // .icon {
-  //   font-size: 18px;
-  //   flex-shrink: 0;
-  // }
-
-  // /* Labels */
-  // .label {
-  //   font-weight: bold;
-  //   flex-shrink: 0;
-  //   min-width: 120px;
-  // }
-
-  // /* Values */
-  // .value {
-  //   color: #555;
-  //   word-break: break-word;
-  //   flex: 1;
-  // }
-
-  // .value a {
-  //   text-decoration: none;
-  //   color: #007bff;
-  // }
-
-  // .value a:hover {
-  //   text-decoration: underline;
-  // }
-
-  // /* Extra Note (For Sunday Closed) */
-  // .note {
-  //   font-size: 14px;
-  //   color: #888;
-  //   margin-left: 5px;
-  // }
-
-  /* Responsive breakpoints */
-  // @media screen and (max-width: 480px) {
-  //   .contact-item {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //   }
-
-  //   .contact-button {
-  //     background-color: #F6FBE9;
-  //   color: #000;
-  //   border: 1px solid #356554;
-  //   padding: 10px 20px;
-  //   font-size: 22px;
-  //   font-weight: 700;
-  //   position: relative;
-  //   left: 13%;
-  //   width: 70%;
-  //   // width: 548px;
-  //   // height: 325px;
-  //   gap: 20px;
-  //   top: 20%;
-  //   border-radius: 4px;
-  //   cursor: pointer;
-  //   // width: 100%;
-  //   // max-width: 300px;
-  //   margin-bottom: 20px;
-  //   transition: background-color 0.3s;
-
-  //   }
-
-  //   .label {
-  //     margin-bottom: 5px;
-  //     min-width: 100%;
-  //   }
-
-  //   .contact-container {
-  //     padding: 15px;
-  //     background-color: #F6FBE9;
-  //     color: #000;
-  //     border: 1px solid #356554;
-  //     padding: 10px 20px;
-  //     font-size: 22px;
-  //     font-weight: 700;
-  //     position: relative;
-  //     // left: 18%;
-  //     /* width: 548px; */
-  //     width: 95%;
-  //     gap: 20px;
-  //     top: 15%;
-  //     border-radius: 4px;
-  //     cursor: pointer;
-  //     margin-bottom: 20px;
-  //     transition: background-color 0.3s;
-  //   }
-  // }
-
-  // @media screen and (min-width: 481px) and (max-width: 767px) {
-  //   .contact-content {
-  //     flex-direction: row;
-  //     align-items: center;
-  //     flex-wrap: wrap;
-  //   }
-
-  //   .label {
-  //     margin-right: 8px;
-  //     margin-bottom: 0;
-  //     min-width: 100px;
-  //   }
-
-  //   .working-days .contact-content {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //   }
-
-  //   .working-days .label-value {
-  //     display: flex;
-  //   }
-  // }
-
-  // @media screen and (min-width: 768px) {
-  //   .footer-contact {
-  //     flex-direction: row;
-  //     align-items: flex-start;
-  //   }
-
-  //   .card-header p {
-  //     font-size: 18px;
-  //   }
-
-  //   .contact-details {
-  //     padding: 24px;
-  //   }
-
-  //   .contact-item {
-  //     align-items: center;
-  //   }
-
-  //   .label {
-  //     min-width: 140px;
-  //   }
-  // }
-
-  // // @media screen and (min-width: 1024px) {
-  // //   .contact-container {
-  // //     max-width: 600px;
-  // //   }
-
-  // //   .contact-details {
-  // //     grid-template-columns: repeat(2, 1fr);
-  // //   }
-  // // }
-
-  // /* Terms section */
-  // .footer-terms {
-  //   background-color: #F6FBE9;
-  //   border: 1px solid #E5F5BD;
-  //   border-radius: 8px;
-  //   padding: 20px;
-  //   width: 100%;
-  //   box-sizing: border-box;
-  //   margin-bottom: 20px;
-  //   background-color: #F6FBE9;
-  //   border: 1px solid #E5F5BD;
-  //   border-radius: 8px;
-  //   padding: 20px;
-  //   width: 100%;
-  //   box-sizing: border-box;
-  //   margin-bottom: 20px;
-  //   width: 1025px;
-  //   height: 374px;
-  //   margin-top: 25px;
-  //   bottom: 15%;
-  //   left: 13%;
-  //   gap: 20px;
-  //   position: relative;
-  //   border-width: 1px;
-  //   border-radius: 12px;
-  //   padding: 24px;
-  // }
-
-  // .terms-heading {
-  //   // color: #333;
-  //   // font-size: 18px;
-  //   // margin-top: 0;
-  //   margin-bottom: 15px;
-  //   font-family: Urbanist;
-  //   font-weight: 700;
-  //   font-size: 24px;
-  //   color: #000000;
-
-  // }
-
-  // .terms-list {
-  //   margin: 0;
-  //   padding-left: 20px;
-  //   width: 977px;
-  //   height: 270px;
-
-  // }
-
-  // .terms-list li {
-  //   margin-bottom: 10px;
-  //   color: #000000;
-  //   line-height: 1.5;
-  //   font-family: Urbanist;
-  //   font-weight: 500;
-  //   font-size: 18px;
-
-
-  // }
-
-  // /* Responsive styles - Mobile first approach */
-  // /* Extra small devices (phones, 480px and down) */
-  // @media (max-width: 480px) {
-
-  //   .footer-intro,
-  //   .footer-contact
-  //    {
-  //     padding: 15px;
-
-  //   }
-
-  //   .footer-terms{
-  // width:95%;
-  // left: 10px;
-  // height: 457px;
-  //   }
-
-  //   .intro-text {
-  //     font-size: 14px;
-  //   }
-  //   .terms-list{
-  //     width: 95%;
-  //   }
-  //   .terms-list li {
-  //     font-size: 13px;
-  //   }
-
-  //   .contact-item {
-  //     margin-bottom: 15px;
-  //   }
-  // }
-
-  // /* Small devices (landscape phones, 481px to 767px) */
-  // @media (min-width: 481px) and (max-width: 767px) {
-  //   .footer-terms {
-  //     padding: 20px;
-  //   }
-
-  //   .terms-heading {
-  //     font-size: 16px;
-  //   }
-  // }
-
-  // /* Medium devices (tablets, 768px to 991px) */
-  // @media (min-width: 768px) and (max-width: 991px) {
-  //   .contact-details {
-  //     grid-template-columns: 1fr 1fr;
-  //   }
-
-  //   .footer-intro,
-  //   .footer-contact {
-  //     padding: 30px;
-  //     width: 100%;
-  //     max-width: 80%;
-  //     margin: 0 auto 20px;
-  //   }
-
-  //   .footer-terms {
-  //     padding: 30px;
-  //     width: 80%;
-  //     margin: 0 auto;
-  //   }
-
-  //   .terms-heading {
-  //     font-size: 17px;
-  //   }
-  // }
-
-  // /* Large devices (desktops, 992px and up) */
-  // @media (min-width: 992px) {
-  //   .intro-text {
-  //     font-size: 18px;
-  //   }
-
-  //   .footer-intro {
-  //     padding: 25px 40px;
-  //     // width: 80%;
-  //     margin: 0 auto 20px;
-  //   }
-
-  //   .footer-contact {
-  //     padding: 30px 40px;
-  //     width: 80%;
-  //     margin: 0 auto 20px;
-  //   }
-
-  //   .contact-details {
-  //     grid-template-columns: repeat(2, 1fr);
-  //     gap: 20px;
-  //   }
-
-  //   .footer-terms {
-  //     // padding: 30px;
-  //     // width: 60%;
-  //     // margin: 0 auto;
-  //   }
-
-  //   .terms-heading {
-  //     // font-size: 20px;
-  //   }
-
-  //   .terms-list li {
-  //     // font-size: 15px;
-  //   }
-  // }
+ 
 
   /* HealthPlanInvestments.css */
   .health-plan-container {
@@ -1914,118 +1008,7 @@
     font-size: 10px;
   }
 
-  /* Responsive Styles */
-  /* Large devices (laptops/desktops, 1200px and up) */
-  // @media (min-width: 1200px) {
-  //   .health-plan-container {
-  //     padding: 30px;
-  //     display: none;
-  //   }
-
-  //   .health-plan-title {
-  //     font-size: 28px;
-  //   }
-  // }
-
-  // /* Medium devices (tablets, 769px to 1199px) */
-  // @media (min-width: 769px) and (max-width: 1199px) {
-  //   .health-plan-container {
-  //     padding: 25px;
-  //     display: none;
-  //   }
-
-  //   .health-plan-title {
-  //     font-size: 22px;
-  //   }
-  // }
-
-  // /* Small devices (landscape tablets, 481px to 768px) */
-  // @media (max-width: 768px) {
-  //   .health-plan-container {
-  //     padding: 15px;
-  //     display: none;
-  //   }
-
-  //   .health-plan-header {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //   }
-
-  //   .health-plan-footer {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //   }
-
-  //   .footer-cta {
-  //     margin-bottom: 15px;
-  //     width: 100%;
-  //   }
-
-  //   .footer-buttons {
-  //     flex-direction: column;
-  //     width: 100%;
-  //   }
-
-  //   .btn {
-  //     width: 100%;
-  //     justify-content: center;
-  //   }
-  // }
-
-  // /* Extra small devices (phones, 480px and down) */
-  // @media (max-width: 480px) {
-  //   .health-plan-container {
-  //     padding: 10px;
-  //     display: none;
-  //   }
-
-  //   .health-plan-title {
-  //     font-size: 20px;
-  //   }
-
-  //   .logo-container {
-  //     width: 40px;
-  //     height: 40px;
-  //   }
-
-  //   .logo-circle {
-  //     width: 25px;
-  //     height: 25px;
-  //     font-size: 14px;
-  //   }
-
-  //   .logo-circle.s {
-  //     left: 12px;
-  //     top: 8px;
-  //   }
-
-  //   .health-plan-table th,
-  //   .health-plan-table td {
-  //     padding: 8px 5px;
-  //     font-size: 13px;
-  //   }
-
-  //   .health-plan-table td p {
-  //     font-size: 12px;
-  //   }
-
-  //   .footer-cta {
-  //     gap: 5px;
-  //   }
-
-  //   .heart-icon {
-  //     font-size: 16px;
-  //   }
-
-  //   .footer-cta p {
-  //     font-size: 14px;
-  //   }
-
-  //   .btn {
-  //     padding: 8px 15px;
-  //     font-size: 14px;
-  //   }
-  // }
+  
 
   /* HealthPlanInvestments.css */
   .health-plan-container {
@@ -2692,17 +1675,7 @@
   }
 
 
-  // .swiper-slide.fade::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: -10px;
-  //   width: 50px; 
-  //   height: 100%;
-  //   // background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
-  //   background: linear-gradient(90deg, rgba(3, 57, 63, 0) 0%, #03393F 100%);
-
-  // }
+ 
 
 
   .swiper-slide.fade::before {
@@ -2835,117 +1808,7 @@
     letter-spacing: 2px;
   }
 
-  // .slider-container {
-  //   position: relative;
-  //   width: 100%;
-  //   max-width: 1200px;
-  //   margin: 0 auto;
-  //   overflow: hidden;
-  // }
-
-  // .slider-track {
-  //   display: flex;
-  //   transition: transform 0.5s ease;
-  // }
-
-  // .slide {
-  //   min-width: 33.333%;
-  //   padding: 15px;
-  //   transition: all 0.3s ease;
-  //   opacity: 0.5;
-  //   transform: scale(0.9);
-  // }
-
-  // .slide.active {
-  //   opacity: 1;
-  //   transform: scale(1);
-  // }
-
-  // .card {
-  //   background-color: white;
-  //   border-radius: 8px;
-  //   padding: 20px;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  //   height: 100%;
-  // }
-
-  // .card h3 {
-  //   margin-bottom: 10px;
-  //   color: #333;
-  //   font-size: 16px;
-  //   font-weight: bold;
-  //   line-height: 1.4;
-  // }
-
-  // .card p {
-  //   color: #555;
-  //   font-size: 14px;
-  //   line-height: 1.6;
-  // }
-
-  // .navigation {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   position: absolute;
-  //   width: 100%;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   padding: 0 10px;
-  //   z-index: 10;
-  // }
-
-  // .nav-btn {
-  //   background-color: white;
-  //   border: none;
-  //   width: 40px;
-  //   height: 40px;
-  //   border-radius: 50%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   cursor: pointer;
-  //   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  // }
-
-  // .nav-btn:focus {
-  //   outline: none;
-  // }
-
-  // .pagination {
-  //   display: flex;
-  //   justify-content: center;
-  //   margin-top: 20px;
-  // }
-
-  // .pagination-dot {
-  //   width: 8px;
-  //   height: 8px;
-  //   border-radius: 50%;
-  //   background-color: rgba(255, 255, 255, 0.5);
-  //   margin: 0 5px;
-  //   cursor: pointer;
-  //   transition: background-color 0.3s ease;
-  // }
-
-  // .pagination-dot.active {
-  //   background-color: white;
-  // }
-
-  // .hug-counter {
-  //   display: flex;
-  //   justify-content: center;
-  //   margin-top: 15px;
-  //   color: white;
-  // }
-
-  // .hug-counter span {
-  //   background-color: #007bff;
-  //   padding: 5px 12px;
-  //   border-radius: 20px;
-  //   margin: 0 5px;
-  //   font-size: 14px;
-  // }
-
+ 
 
   .slider-container {
     position: relative;
@@ -3110,142 +1973,6 @@
   }
 
 
-
-  // .reviews-slider-container {
-  //   width: 100%;
-  //   overflow: hidden;
-  //   position: relative;
-  //   margin-bottom: 20px;
-  //   height: 100%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   background-color: #03393F; /* Dark teal background as shown in image */
-  // }
-
-  // .swiper-slide {
-  //   position: relative;
-  //   width: 742px !important; /* Card width matching the "742 Hug" label */
-  //   height: 200px;
-  //   background-color: #fff;
-  //   border-radius: 10px;
-  //   overflow: hidden;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  //   transition: opacity 0.3s ease, transform 0.3s ease;
-  // }
-
-  // .swiper-slide.active {
-  //   opacity: 1;
-  // }
-
-  // .review-card {
-  //   padding: 22px;
-  //   box-sizing: border-box;
-  //   background-color: #fff; /* White background as shown in image */
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   width: 100%;
-  //   height: 100%;
-  //   gap: 10px;
-  //   border-radius: 12px;
-  //   border-width: 1px;
-  // }
-
-  // /* Fade effect slides */
-  // .swiper-slide.fade {
-  //   background-color: transparent !important;
-  //   width: 210px !important; /* Matching the "210 Hug" label */
-  //   height: 160px;
-  //   margin-top: 18px;
-  //   opacity: 0.6; /* Semi-transparent as shown in image */
-  // }
-
-  // .swiper-slide.fade-left::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100px;
-  //   height: 100%;
-  //   background: linear-gradient(270deg, rgba(3, 57, 63, 0) 0%, #03393F 100%);
-  // }
-
-  // .swiper-slide.fade-right::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   width: 100px;
-  //   height: 100%;
-  //   background: linear-gradient(90deg, rgba(3, 57, 63, 0) 0%, #03393F 100%);
-  // }
-
-  // .review-text {
-  //   color: #262626;
-  //   font-size: 18px; /* Adjusted based on image */
-  //   font-family: 'Urbanist', sans-serif;
-  //   font-weight: 700;
-  //   line-height: 1.4;
-  //   margin-bottom: 8px;
-  // }
-
-  // .review-details {
-  //   color: #333333;
-  //   font-size: 14px; /* Adjusted based on image */
-  //   font-weight: 500;
-  //   line-height: 1.5;
-  // }
-
-  // /* Navigation dots */
-  // .slider-dots {
-  //   display: flex;
-  //   gap: 4px;
-  //   align-items: center;
-  //   justify-content: center;
-  //   margin-top: 10px;
-  // }
-
-  // .slider-dot {
-  //   width: 8px;
-  //   height: 8px;
-  //   background-color: rgba(255, 255, 255, 0.3);
-  //   border-radius: 50%;
-  //   cursor: pointer;
-  //   transition: background-color 0.3s ease;
-  // }
-
-  // .slider-dot.active {
-  //   background-color: #fff;
-  // }
-
-  // /* Navigation arrows */
-  // .slider-controls {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   gap: 100px; /* Wide gap as shown in image */
-  //   margin-top: 10px;
-  // }
-
-  // .slider-arrow {
-  //   background-color: rgba(255, 255, 255, 0.2);
-  //   color: #fff;
-  //   border: none;
-  //   width: 40px;
-  //   height: 40px;
-  //   border-radius: 50%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   cursor: pointer;
-  //   font-size: 20px;
-  //   transition: background-color 0.3s ease;
-  // }
-
-  // .slider-arrow:hover {
-  //   background-color: rgba(255, 255, 255, 0.3);
-  // }
 
 
   .carousel-container {
@@ -5501,834 +4228,6 @@
 
 
 
-// .timeline-mobile-cards {
-//   position: relative;
-//   z-index: 2;
-//   padding: 0 20px;
-//   width: 80%;
-//   left: 15%;
-// }
-
-// .timeline-mobile-card {
-//   display: flex;
-//   align-items: flex-start;
-//   margin-bottom: 20px;
-//   background: white;
-//   border-radius: 10px;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   padding: 15px;
-//   position: relative;
-// }
-
-//   /* Specific height variations for each card */
-//   .timeline-mobile-card[data-number="1"] {
-//     height: 86px;
-//   }
-
-//   .timeline-mobile-card[data-number="2"] {
-//     height: 179px;
-//         gap: 10px;
-//   }
-
-//   .timeline-mobile-card[data-number="3"] {
-//     min-height: 200px;
-//   }
-
-//   .timeline-mobile-card[data-number="4"] {
-//     min-height: 250px;
-//   }
-
-
-
-
-// .timeline-mobile-card-content {
-//   flex-grow: 1;
-// }
-
-// .timeline-mobile-card-content h3 {
-//   margin-top: 0;
-//   color: #00a86b;
-//   font-size: 18px;
-// }
-
-// .timeline-mobile-card-content p {
-//   margin: 10px 0 0;
-//   font-size: 14px;
-//   color: #333;
-//   white-space: pre-wrap;
-// }
-
-// .timeline-mobile-cards {
-//   position: relative;
-//   z-index: 2;
-//   padding: 0 20px;
-// }
-
-// .timeline-mobile-card {
-//   display: flex;
-//   align-items: flex-start;
-//   margin-bottom: 20px;
-//   background: white;
-//   border-radius: 10px;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   padding: 15px;
-//   position: relative;
-// }
-
-// .timeline-mobile-card-number {
-//   width: 40px;
-//   height: 40px;
-//   background-color: #00a86b;
-//   color: white;
-//   border-radius: 50%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-weight: bold;
-//   margin-right: 15px;
-//   flex-shrink: 0;
-// }
-
-// .timeline-mobile-card-content {
-//   flex-grow: 1;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .timeline-mobile-card-content h3 {
-//   margin-top: 0;
-//   color: #00a86b;
-//   font-size: 18px;
-// }
-
-// .timeline-mobile-card-content p {
-//   margin: 10px 0 0;
-//   font-size: 14px;
-//   color: #333;
-//   white-space: pre-wrap;
-// }
-
-
-/* --- Review Slider Styles --- */
-// .reviews-slider-container {
-//   width: 100%;
-//   position: relative;
-//   margin: 40px 0;
-// }
-
-// .slider-container {
-//   width: 80%;
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   position: relative;
-// }
-
-// .reviews-swiper {
-//   width: 100%;
-//   padding-bottom: 50px;
-// }
-
-// .swiper-slide {
-//   background: #fff;
-//   padding: 20px;
-//   border-radius: 10px;
-//   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-//   opacity: 0.5;
-//   transform: scale(0.9);
-//   transition: 0.5s;
-// }
-
-// .swiper-slide-active {
-//   transform: scale(1);
-//   opacity: 1;
-// }
-
-// .review-text {
-//   font-size: 18px;
-//   font-weight: bold;
-//   color: #333;
-// }
-
-// .review-details {
-//   font-size: 14px;
-//   color: #666;
-//   margin-top: 10px;
-// }
-
-// /* --- Navigation Buttons --- */
-// .slider-button {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   background: rgba(0, 0, 0, 0.5);
-//   color: white;
-//   border: none;
-//   padding: 10px 15px;
-//   cursor: pointer;
-//   z-index: 10;
-//   font-size: 24px;
-//   border-radius: 50%;
-//   transition: 0.3s;
-// }
-
-// .slider-button:hover {
-//   background: rgba(0, 0, 0, 0.8);
-// }
-
-// .slider-button-prev {
-//   left: -40px;
-// }
-
-// .slider-button-next {
-//   right: -40px;
-// }
-
-// /* --- Pagination Dots --- */
-// .swiper-pagination {
-//   bottom: 10px !important;
-// }
-
-// .swiper-pagination-bullet {
-//   background: #333 !important;
-//   opacity: 0.5;
-//   transition: 0.3s;
-// }
-
-// .swiper-pagination-bullet-active {
-//   background: #ff5733 !important;
-//   opacity: 1;
-//   transform: scale(1.3);
-// }
-
-// /* Responsive adjustments */
-// @media (max-width: 768px) {
-//   .slider-container {
-//     width: 95%;
-//   }
-
-//   .slider-button-prev {
-//     left: -20px;
-//   }
-
-//   .slider-button-next {
-//     right: -20px;
-//   }
-
-//   .slider-button {
-//     padding: 8px 12px;
-//     font-size: 18px;
-//   }
-// }
-
-// .client-reviews-section {
-//   background-color: #0a403d;
-//   /* Dark teal background */
-//   padding: 60px 0 0 0;
-//   position: relative;
-//   width: 100%;
-//   overflow: hidden;
-// }
-
-// .reviews-container {
-//   width: 100%;
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 0 20px;
-// }
-
-// .reviews-title {
-//   color: white;
-//   text-align: center;
-//   font-size: 32px;
-//   margin-bottom: 50px;
-//   font-weight: 600;
-//   text-transform: capitalize;
-// }
-
-// .reviews-highlight {
-//   border-bottom: 3px solid #c1e54e;
-//   /* Lime green underline */
-//   padding-bottom: 2px;
-// }
-
-// /* --- Swiper Styles --- */
-// .reviews-slider-container {
-//   width: 100%;
-//   position: relative;
-//   margin-bottom: 60px;
-// }
-
-// .reviews-swiper {
-//   overflow: visible;
-//   padding-bottom: 60px;
-// }
-
-// .review-slide {
-//   transition: all 0.4s ease;
-//   opacity: 0.6;
-// }
-
-// .swiper-slide-active {
-//   opacity: 1;
-// }
-
-// .review-content {
-//   background-color: white;
-//   border-radius: 12px;
-//   padding: 25px;
-//   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .review-title {
-//   font-size: 18px;
-//   font-weight: 600;
-//   color: #333;
-//   margin-bottom: 15px;
-//   line-height: 1.4;
-// }
-
-// .review-details {
-//   font-size: 16px;
-//   color: #555;
-//   font-style: italic;
-//   line-height: 1.6;
-// }
-
-// /* --- Navigation --- */
-// .custom-navigation {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 30px;
-// }
-
-// .custom-button {
-//   background-color: white;
-//   color: #0a403d;
-//   border: none;
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 50%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-//   margin: 0 15px;
-//   font-size: 18px;
-//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-//   transition: all 0.3s;
-// }
-
-// .custom-button:hover {
-//   background-color: #c1e54e;
-// }
-
-// /* --- Pagination --- */
-// .custom-pagination {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .custom-bullet {
-//   width: 8px;
-//   height: 8px;
-//   border-radius: 50%;
-//   background: rgba(255, 255, 255, 0.5);
-//   margin: 0 5px;
-//   cursor: pointer;
-//   transition: all 0.3s;
-// }
-
-// .custom-bullet-active {
-//   background: white;
-//   transform: scale(1.2);
-// }
-
-// /* ReviewSlider.css */
-// // .review-slider-container {
-// //   max-width: 1200px;
-// //   margin: 0 auto;
-// //   padding: 40px 0;
-// //   position: relative;
-// // }
-
-// // .slider-container {
-// //   position: relative;
-// //   overflow: hidden;
-// //   padding: 20px 0;
-// // }
-
-// // .slider-track {
-// //   display: flex;
-// //   transition: transform 0.5s ease;
-// // }
-
-// // .slider-card {
-// //   min-width: 80%;
-// //   padding: 25px;
-// //   background: #F6FBE9;
-// //   border: 1px solid #E5F5BD;
-// //   border-radius: 10px;
-// //   /* margin: 0 10%; */
-// //   transform: scale(0.8);
-// //   opacity: 0.6;
-// //   transition: all 0.5s ease;
-// // }
-
-// // .slider-card.active {
-// //   transform: scale(1);
-// //   opacity: 1;
-// // }
-
-// // .slider-card h3 {
-// //   margin-bottom: 15px;
-// //   color: #262626;
-// //   font-family: 'Urbanist';
-// //   font-weight: 700;
-// //   font-size: 24px;
-// //   line-height: 150%;
-// //   letter-spacing: 0%;
-// //   vertical-align: middle;
-
-
-// // }
-
-// // .slider-card p {
-// //   font-family: 'Urbanist';
-// //   font-weight: 500;
-// //   font-size: 16px;
-// //   line-height: 150%;
-// //   letter-spacing: 0%;
-// //   color:  #333333;
-
-
-// // }
-
-// // .slider-nav {
-// //   display: flex;
-// //   justify-content: center;
-// //   align-items: center;
-// //   margin-top: 20px;
-
-
-// // }
-
-// // .slider-nav button {
-// //   background: #F6FBE9;
-// //   border: 1px solid #EEF8D3;
-// //   width: 58px;
-// //   height: 58px;
-// //   border-radius: 8px;
-// //   border-width: 1px;
-// //   padding: 12px;
-// //   gap: 10px;
-// //   // width: 40px;
-// //   // height: 40px;
-// //   // border-radius: 8px;
-// //   cursor: pointer;
-// //   display: flex;
-// //   align-items: center;
-// //   justify-content: center;
-// //   margin: 0 10px;
-// //   transition: background 0.3s ease;
-// // }
-
-// // .slider-nav button:hover {
-// //   background: #F6FBE9;
-// // }
-
-// // .slider-nav button svg {
-// //   width: 34px;
-// //   height: 34px;
-// //   // fill: white;
-// //   color: #333333;
-// // }
-
-// // .slider-pagination {
-// //   display: flex;
-// //   justify-content: center;
-// //   margin: 0 15px;
-// //   gap: 4px;
-// // }
-
-// // .pagination-dot {
-// //   width: 8px;
-// //   height: 8px;
-// //   border-radius: 50%;
-// //   background: #E5F5BD;
-
-// //   cursor: pointer;
-// //   transition: all 0.3s ease;
-// // }
-
-// // .pagination-dot.active {
-// //   background: #356554;
-
-// //   transform: scale(1.2);
-// // }
-
-// /* REVIEW SLIDER */
-// // .review-slider-container {
-// //   max-width: 1200px;
-// //   margin: 0 auto;
-// //   padding: 40px 0;
-// //   position: relative;
-// // }
-
-// // .slider-container {
-// //   position: relative;
-// //   overflow: hidden;
-// //   padding: 20px 0;
-// //   // margin: 0 -20px;
-// // }
-
-// // .slider-track {
-// //   display: flex;
-// //   transition: transform 0.5s ease;
-// //   padding: 0 15%;
-// // }
-
-// // .slider-card {
-// //   min-width: 90%;
-// //   padding: 25px;
-// //   background: #F6FBE9;
-// //   border: 1px solid #E5F5BD;
-// //   border-radius: 10px;
-// //   margin: 0 15px;
-// //   transform: scale(0.9);
-// //   opacity: 0.7;
-// //   transition: all 0.5s ease;
-// // }
-
-// // .slider-card.active {
-// //   transform: scale(1);
-// //   opacity: 1;
-// //   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-// // }
-
-// // .slider-card h3 {
-// //   margin-bottom: 15px;
-// //   color: #262626;
-// //   font-family: 'Urbanist';
-// //   font-weight: 700;
-// //   font-size: 24px;
-// //   line-height: 150%;
-// // }
-
-// // .slider-card p {
-// //   font-family: 'Urbanist';
-// //   font-weight: 500;
-// //   font-size: 16px;
-// //   line-height: 150%;
-// //   color: #333333;
-// // }
-
-// // .slider-nav {
-// //   display: flex;
-// //   justify-content: center;
-// //   align-items: center;
-// //   margin-top: 20px;
-// // }
-
-// // .slider-nav button {
-// //   background: #F6FBE9;
-// //   border: 1px solid #EEF8D3;
-// //   width: 40px;
-// //   height: 40px;
-// //   border-radius: 8px;
-// //   cursor: pointer;
-// //   display: flex;
-// //   align-items: center;
-// //   justify-content: center;
-// //   margin: 0 10px;
-// // }
-
-// // .slider-nav button svg {
-// //   width: 24px;
-// //   height: 24px;
-// //   fill: #333333;
-// // }
-
-// // .slider-pagination {
-// //   display: flex;
-// //   justify-content: center;
-// //   margin: 0 15px;
-// //   gap: 8px;
-// // }
-
-// // .pagination-dot {
-// //   width: 8px;
-// //   height: 8px;
-// //   border-radius: 50%;
-// //   background: #E5F5BD;
-// //   cursor: pointer;
-// //   transition: all 0.3s ease;
-// // }
-
-// // .pagination-dot.active {
-// //   background: #356554;
-// //   transform: scale(1.2);
-// // }
-
-
-// /* REVIEW SLIDER */
-
-// // .review-slider-container {
-// //   // max-width: 1200px;
-// //   margin: 0 auto;
-// //   padding: 40px 0;
-// //   position: relative;
-// // }
-
-// // .slider-container {
-// //   position: relative;
-// //   overflow: hidden;
-// //   padding: 30px 0;
-// // }
-
-// // .slider-track {
-// //   display: flex;
-// //   transition: transform 0.5s ease;
-// //   align-items: center; /* This will vertically center the cards */
-// //   padding: 0 10%;
-// // }
-
-// // .slider-card {
-// //   min-width: 80%;
-// //   padding: 25px;
-// //   background: #F6FBE9;
-// //   border: 1px solid #E5F5BD;
-// //   border-radius: 10px;
-// //   margin: 0 10px;
-// //   transform: scale(0.8);
-// //   opacity: 0.6;
-// //   height: 120px; /* Base height for inactive slides */
-// //   transition: all 0.5s ease;
-// // }
-
-// // .slider-card.active {
-// //   transform: scale(1);
-// //   opacity: 1;
-// //   height: 160px; /* Increased height for active slide */
-// //   z-index: 2;
-// // }
-
-// // .slider-card h3 {
-// //   margin-bottom: 15px;
-// //   color: #262626;
-// //   font-family: 'Urbanist';
-// //   font-weight: 700;
-// //   font-size: 24px;
-// //   line-height: 150%;
-// // }
-
-// // .slider-card p {
-// //   font-family: 'Urbanist';
-// //   font-weight: 500;
-// //   font-size: 16px;
-// //   line-height: 150%;
-// //   color: #333333;
-// // }
-
-// // .slider-nav {
-// //   display: flex;
-// //   justify-content: center;
-// //   align-items: center;
-// //   margin-top: 20px;
-// // }
-
-// // .slider-nav button {
-// //   background: #F6FBE9;
-// //   border: 1px solid #EEF8D3;
-// //   width: 40px;
-// //   height: 40px;
-// //   border-radius: 8px;
-// //   cursor: pointer;
-// //   display: flex;
-// //   align-items: center;
-// //   justify-content: center;
-// //   margin: 0 10px;
-// // }
-
-// // .slider-nav button svg {
-// //   width: 24px;
-// //   height: 24px;
-// //   fill: #333333;
-// // }
-
-// // .slider-pagination {
-// //   display: flex;
-// //   justify-content: center;
-// //   margin: 0 15px;
-// //   gap: 8px;
-// // }
-
-// // .pagination-dot {
-// //   width: 8px;
-// //   height: 8px;
-// //   border-radius: 50%;
-// //   background: #E5F5BD;
-// //   cursor: pointer;
-// //   transition: all 0.3s ease;
-// // }
-
-// // .pagination-dot.active {
-// //   background: #356554;
-// //   transform: scale(1.2);
-// // }
-
-
-// /* REVIEW SLIDER */
-
-// .review-slider-container {
-//   // max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 40px 0;
-//   position: relative;
-// }
-
-// .slider-container {
-//   position: relative;
-//   overflow: visible;
-//   padding: 20px 0;
-//   width: 100%;
-// }
-
-// .slider-track {
-//   display: flex;
-//   transition: transform 0.5s ease;
-//   width: 100%;
-//   align-items: center;
-// }
-
-// .slider-card {
-//   flex: 0 0 60%;
-//   padding: 25px;
-//   background: #F6FBE9;
-//   border: 1px solid #E5F5BD;
-//   border-radius: 10px;
-//   margin: 0 5px;
-//   /* Reduced space between cards */
-//   transform: scale(0.85);
-//   opacity: 0.6;
-//   width: 250px;
-//   border-radius: 12px;
-//   height: 167.44px;
-//   /* Smaller height for inactive */
-//   transition: all 0.5s ease;
-//   box-sizing: border-box;
-// }
-
-// .slider-card.active {
-//   transform: scale(1);
-//   opacity: 1;
-//   width: 742px;
-//   height: 210px;
-//   /* Larger height for active */
-//   z-index: 2;
-// }
-
-// .slider-card h3 {
-//   margin-bottom: 15px;
-//   color: #262626;
-//   font-family: 'Urbanist';
-//   font-weight: 700;
-//   font-size: 24px;
-//   line-height: 150%;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-
-// .slider-card p {
-//   font-family: 'Urbanist';
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 150%;
-//   color: #333333;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-
-// .slider-nav {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 20px;
-// }
-
-// .slider-nav button {
-//   background: #F6FBE9;
-//   border: 1px solid #EEF8D3;
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 8px;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0 10px;
-// }
-
-// .slider-nav button svg {
-//   width: 24px;
-//   height: 24px;
-//   fill: #333333;
-// }
-
-// .slider-pagination {
-//   display: flex;
-//   justify-content: center;
-//   margin: 0 15px;
-//   gap: 8px;
-// }
-
-// .pagination-dot {
-//   width: 8px;
-//   height: 8px;
-//   border-radius: 50%;
-//   background: #E5F5BD;
-//   cursor: pointer;
-//   transition: all 0.3s ease;
-// }
-
-// .pagination-dot.active {
-//   background: #356554;
-//   transform: scale(1.2);
-// }
-
-// @media (max-width: 768px) {
-//   .slider-card {
-//     //     min-width: 100%;
-//     //     margin: 0 -20%;
-//     //     height: 100%;
-//     // flex: 0 1;
-//     // min-width: 90%;
-//     // margin: 0 5%;
-//     // height: 100%;
-//     width: 353px;
-//     height: 272px;
-//     gap: 24px;
-
-//   }
-
-//   .slider-card.active {
-//     transform: scale(1);
-//     opacity: 1;
-//     // width: 742px;
-//     // height: 210px;
-//     height: 100%;
-//     z-index: 2;
-//   }
-
-//   .reviews-slider-container {
-//     padding: 0 15px;
-//   }
-// }
-
 //css responsiveness
 
 @media (max-width: 380px){
@@ -6369,7 +4268,7 @@
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    top: 33.5%;
+    top: 32% !important;
     z-index: 2;
     width: 310px;
 }
@@ -6390,49 +4289,272 @@
 }
 }
 
-// @media (max-width: 850px){
-//   .diet_whole_wrapper .hero-title {
-//     font-size: 24px;
-// }
-// .diet_whole_wrapper .hero-subtitle {
-//   font-size: 16px;
-//   margin-top: 19px;
-//   font-weight: 400;
-//   line-height: 150%;
-//   font-family: "Urbanist", sans-serif;
-//   opacity: 0.9;
-//   color: #FFFFFF;
-//   text-align: left;
-//   margin-bottom: 24px;
-// }
-//   .diet_whole_wrapper .highlights-wave {
-//     position: absolute;
-//     bottom: -1%;
-//     left: 0;
-//     width: 100%;
-// }
-//   .diet_whole_wrapper .health-timeline-cards {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 20px;
-//     position: absolute;
-//     top: 33%;
-//     z-index: 2;
-//     width: 310px;
+@media (max-width: 850px){
+  .diet_whole_wrapper .hero-title {
+    font-size: 24px;
+}
+.diet_whole_wrapper .hero-subtitle {
+  font-size: 16px;
+  margin-top: 19px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: "Urbanist", sans-serif;
+  opacity: 0.9;
+  color: #FFFFFF;
+  text-align: left;
+  margin-bottom: 24px;
+}
+  .diet_whole_wrapper .highlights-wave {
+    position: absolute;
+    bottom: -1%;
+    left: 0;
+    width: 100%;
+}
+  .diet_whole_wrapper .health-timeline-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 33%;
+    z-index: 2;
+    width: 310px;
+}
+
+.diet_whole_wrapper .card {
+  width: 353px;
+  height: 219px;
+  gap: 10px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 16px;
+  position: relative;
+  left: 0;
+}
+.diet_whole_wrapper .btn_enroll {
+  width: 90%;
+  margin-top: 16px;
+}
+}
+
+
+/* Base styles */
+// .journey_wrapper {
+//   background: #fff;
+//   padding-top: 60px;
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
 // }
 
-// .diet_whole_wrapper .card {
-//   width: 353px;
-//   height: 219px;
-//   gap: 10px;
-//   border-radius: 12px;
-//   border-width: 1px;
-//   padding: 16px;
+// .center_journey {
+//   width: 100%;
+//   max-width: 1200px;
 //   position: relative;
-//   left: 0;
 // }
-// .diet_whole_wrapper .btn_enroll {
-//   width: 90%;
-//   margin-top: 16px;
+
+// .health-journey-container1 {
+//   padding: 20px;
+//   max-width: 100%;
+//   padding-top: 32px;
+//   position: relative;
 // }
+
+// /* Timeline track styling */
+// .timeline-mobile {
+//   width: 100%;
+//   height: auto;
+//   position: relative;
+//   z-index: 1;
+//   max-width: 100%;
 // }
+
+// /* Cards container */
+// .health-timeline-cards {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 32px;
+//   position: relative;
+//   z-index: 2;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+
+/* Base card styling */
+// .timeline-card {
+//   background: #F6FBE9;
+//   border-radius: 12px;
+//   border: 1px solid #E5F5BD;
+//   padding: 16px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   position: relative;
+//   z-index: 10;
+//   max-width: 310px;
+//   margin: 0 auto;
+// }
+
+// .card-content {
+//   z-index: 20;
+// }
+
+// .card-content h3 {
+//   margin: 0 0 10px 0;
+//   color: #262626;
+//   font-family: 'Urbanist', sans-serif;
+//   font-weight: 700;
+//   font-size: 18px;
+//   line-height: 150%;
+//  }
+
+// .card-content p {
+//   margin: 0;
+//   color: #333333;
+//   font-family: 'Urbanist', sans-serif;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 150%;
+// }
+
+// .cardmobile {
+//   font-family: 'Urbanist', sans-serif;  
+//  font-weight: 600;
+  
+// font-size: 16px;
+//   line-height: 150%;
+// }
+
+
+
+/* Mobile styles (default) */
+@media screen and (max-width: 767px) {
+  .health-timeline-cards {
+    width: 310px;
+    margin: 0 auto;
+    gap: 20px;
+        position: absolute;
+        top: 33% !important;
+        z-index: 2;
+        width: 310px;
+  }
+  
+  /* Specific step heights on mobile */
+  .step-1 { height: 86px; }
+  .step-2 { height: 179px; }
+  .step-3 { height: 233px; }
+  .step-4 { height: 338px; }
+  .step-5 { height: 149px; }
+  .step-6 { height: 128px; }
+  .step-7 { height: 170px; }
+  .step-8 { height: 308px; }
+  .step-9 { height: 170px; }
+  .step-10 { height: 107px; }
+  .step-11 { height: 176px; }
+  .step-12 { height: 296px; }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .health-journey-container1 {
+    padding: 40px;
+  }
+  
+  .health-timeline-cards {
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .timeline-card {
+    max-width: 450px;
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+  }
+  
+  /* Alternate cards left and right */
+  .timeline-card:nth-child(odd) {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  .timeline-card:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .health-journey-container1 {
+    padding: 60px;
+  }
+  
+  .health-timeline-cards {
+    width: 80%;
+    max-width: 1000px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .timeline-card {
+    width: calc(50% - 60px);
+    max-width: none;
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-content h3 {
+    font-size: 22px;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+  }
+  
+  /* Allow cards to grow based on content */
+  .step-1, .step-2, .step-3, .step-4, .step-5, 
+  .step-6, .step-7, .step-8, .step-9, .step-10, 
+  .step-11, .step-12 {
+    height: auto;
+  }
+  
+  /* Timeline visualization adjustment for desktop */
+  .timeline-mobile {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Large desktop styles */
+@media screen and (min-width: 1400px) {
+  .health-timeline-cards {
+    max-width: 1200px;
+  }
+  
+  .timeline-card {
+    padding: 30px;
+  }
+  
+  .card-content h3 {
+    font-size: 24px;
+  }
+  
+  .card-content p {
+    font-size: 18px;
+  }
+}
+
+/* Hidden elements */
+.transform_wrapper {
+  display: none;
+}
