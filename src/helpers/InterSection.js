@@ -1,19 +1,48 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 
-export default function useOnScreen(ref,options) {
-  const [isIntersecting, setIntersecting] = useState(false)
+// export default function useOnScreen(ref,options) {
+//   const [isIntersecting, setIntersecting] = useState(false)
 
-  const observer = new IntersectionObserver(
-    ([entry]) => setIntersecting(entry.isIntersecting),
-    options
-  )
+//   const observer = new IntersectionObserver(
+//     ([entry]) => setIntersecting(entry.isIntersecting),
+//     options
+//   )
+
+//   useEffect(() => {
+//     observer.observe(ref.current)
+//     // Remove the observer as soon as the component is unmounted
+//     return () => {
+//       observer.disconnect()
+//     }
+//   }, [])
+//   return isIntersecting
+// }
+
+import { useState, useEffect } from 'react';
+
+export default function useOnScreen(ref, options) {
+  const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
-    observer.observe(ref.current)
-    // Remove the observer as soon as the component is unmounted
+    // Exit if ref is not assigned yet
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIntersecting(entry.isIntersecting),
+      options
+    );
+
+    observer.observe(ref.current);
+
+    // Cleanup
     return () => {
-      observer.disconnect()
-    }
-  }, [])
-  return isIntersecting
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+      observer.disconnect();
+    };
+  }, [ref, options]); // Run this effect again if ref or options change
+
+  return isIntersecting;
 }
+

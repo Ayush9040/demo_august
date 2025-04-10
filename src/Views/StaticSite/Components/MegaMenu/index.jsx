@@ -16,7 +16,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     // { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
     { name: 'FACILITIES', link: '/facilities', id: 6, key: 'FACILITIES' },
-    { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 7, key: 'MUSEUM' },
+    // { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 7, key: 'MUSEUM' },
     { name: 'BLOGS', link: '/blogs', id: '14', key: 'BLOGS' },
     { name: 'DONATE', link: '/donation-form', id: 8, key: 'DONATION' },
     // { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
@@ -80,6 +80,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Gazebo', link: '/gazebo/#gazebo' },
       { menu: 'Kailashpati Tree', link: '/kailaspati-tree/#kailaspati-tree' },
       { menu: 'Rules and Regulations', link: '/Rules-and-Regulations/#information' },
+      { menu: 'Museum', link: '/museum-of-classical-yoga' },
     ],
     SHOP: [
       // { menu: 'All Categories', link: '/shop' },

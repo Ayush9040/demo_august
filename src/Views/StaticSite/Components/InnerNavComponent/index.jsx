@@ -33,6 +33,7 @@ const InnerNavComponent = ({ abc }) => {
   const [dropdown, setDropdown] = useState(false)
   const [bold, setBold] = useState(0)  // eslint-disable-line
   const [cartItems, setCartItems] = useState(0)
+  const [showSearch, setShowSearch] = useState(false)
   const location = useLocation()
   const dispatch = useDispatch()
 
@@ -64,6 +65,14 @@ const InnerNavComponent = ({ abc }) => {
       setBold(0)
     }
   }, [cart])
+
+  useEffect(() => {
+      if (location.pathname === '/blogs') {
+        setShowSearch(true)
+      } else {
+        setShowSearch(false)
+      }
+    }, [showSearch])
 
   // console.log(bold,'bold')
   return (
@@ -115,7 +124,11 @@ const InnerNavComponent = ({ abc }) => {
           <div className="user-container">
             {/* <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div> */}
 
-            <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
+            {
+              showSearch && (
+                <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
+              )
+            }
 
 
             {hasItems && (

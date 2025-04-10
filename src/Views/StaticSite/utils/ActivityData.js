@@ -1,5 +1,6 @@
 import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
 import BA_yoga_1 from './images/BA_yoga_1.jpeg'
+import sattvik_img from './images/sattvik_img.jpg'
 
 export const activityData = [
 
@@ -94,7 +95,7 @@ export const activityData = [
     title: 'Sattvik Cooking Book',
     description:
       'This book, written by Dr. Hansaji Yogendra, contains easy-to-find Sattvik ingredient-based recipes that are both nutritious and delicious.',
-    image: `${baseDomain}${homeAssets.homeAsset18}`,
+    image: `${sattvik_img}`,
     url: '/sattvik-cooking',
   },
   // {

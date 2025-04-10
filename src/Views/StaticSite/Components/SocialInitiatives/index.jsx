@@ -31,7 +31,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${socialInitiativeNew.socialNew1}`
   const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
   const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
-  let images = [social_1, Police, social_3]
+  let images = [social_1, social_3, Police]
   let ALT = ['Annam Brahma', 'Police', 'BMC']
 
   const [image, setImage] = useState(AnnamBrahma)
