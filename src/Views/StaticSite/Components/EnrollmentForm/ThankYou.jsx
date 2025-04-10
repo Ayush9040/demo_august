@@ -157,7 +157,7 @@ const Thankyou = () => {
     } else if (currentPath.includes("/enrollment_thankyou/seven-month-ttc")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 4 Months Advanced Hybrid Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Manijaji (Email:  7mttc@theyogainstitute.in or send a WhatsApp message on +919820560142)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 7 Months Advanced Hybrid Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Manijaji (Email:  7mttc@theyogainstitute.in or send a WhatsApp message on +919820560142)
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/one-year-ttc")) {

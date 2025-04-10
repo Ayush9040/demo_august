@@ -14906,7 +14906,16 @@ const classes = {
       '6th Apr 2025', 
       '13th Apr 2025', 
       '20th Apr 2025', 
-      '27th April 2025'
+      '27th Apr 2025',
+      '4th May 2025', 
+      '11th May 2025', 
+      '18th May 2025', 
+      '25th May 2025', 
+      '1st Jun 2025', 
+      '8th Jun 2025', 
+      '15th Jun 2025', 
+      '22nd Jun 2025', 
+      '29th Jun 2025'
     ],
     online: true,
     onCampus: true,
@@ -15416,7 +15425,20 @@ const classes = {
       // '22nd Feb 2025', 
       // '15th Mar 2025', 
       // '22nd Mar 2025', 
-      // '29th Mar 2025'
+      // '29th Mar 2025',
+      '5th Apr 2025',
+      '12th Apr 2025', 
+      '19th Apr 2025', 
+      '26th Apr 2025', 
+      '3rd May 2025', 
+      '10th May 2025', 
+      '17th May 2025', 
+      '24th May 2025', 
+      '31st May 2025', 
+      '7th June 2025', 
+      '14th Jun 2025', 
+      '21st Jun 2025', 
+      '28th Jun 2025'
     ],
     category: 'classes',
 
@@ -18884,7 +18906,9 @@ const specialEvents = {
       // '12th Feb 2025',
       // '13th Mar 2025',
       // '13th Apr 2025',
+      '12th Apr 2025',
        '11th Jun 2025'
+       
     ],
     online: true,
     onCampus: true,
