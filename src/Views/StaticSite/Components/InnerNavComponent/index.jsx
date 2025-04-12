@@ -86,7 +86,7 @@ const InnerNavComponent = ({ abc }) => {
                 ? CommonHamburger
                 : Hamburger}
           </div>
-          <div className="main-logo" id={`${abc.color}`} >
+          <div className={isLoggedIn ? "main-logo main-logo-2" : 'main-logo'} id={`${abc.color}`} >
             <span className='mobile-search' onClick={() => { navigate('/') }} >{abc.color === 'orange' ? Search : abc.color === 'black' ? SearchBlack : SearchWhite}</span>
             <Link className='mobile-search mobile-cart' style={{ marginLeft: '15px' }} to='/shop/cart'>
               {abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></Link>

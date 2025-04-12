@@ -1,6 +1,7 @@
 import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
-import BA_yoga_1 from './images/BA_yoga_1.jpeg'
-import sattvik_img from './images/sattvik_img.jpg'
+import BA_yoga_1 from './images/Ba_new.jpg'
+import sattvik_img from './images/bestselling.jpg'
+import MA from './images/Ma_BA.jpg'
 
 export const activityData = [
 
@@ -9,7 +10,7 @@ export const activityData = [
     title: 'MA Yoga Shastra',
     description:
         'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
-    image:`${extraImage.mayogaImg}`,
+    image:`${MA}`,
     url: '/ma-yoga-shastra'
   },
   {
@@ -20,29 +21,14 @@ export const activityData = [
     image:`${BA_yoga_1}`,
     url: '/ba-yoga-shastra'
   },
-  {
-    id: 10,
-    title: 'Sattvik Kitchen',
-    description:
-        'A curation of Sattvik recipes by Spiritual Guru Dr. Hansaji Yogendra, these are carefully designed to ensure nutrition and balance in the body.',
-    image:`${baseDomain}${homeAssets.homeAsset099}`,
-    url: '/shop/product/65a8f78181ad17001903ab5e'
-  },
-  {
-    id: 5,
-    title: 'Full Moon Meditation',
-    description:
-      'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
-    image: `${baseDomain}${homeAssets.homeAsset14}`,
-    url: '/fullmoon-meditation',
-  },
-  {
-    id: 1,
-    title:'7 Rules to Reset Mind and Body',
-    description:'A definite manual for joy and harmony throughout everyday life. Achieve balance and fulfillment through power-packed lessons.',
-    image:`${baseDomain}${homeAssets.homeAsset26}`,
-    url:'/shop/product/63e9c6acbd45e500128569ac',
-  },
+  // {
+  //   id: 10,
+  //   title: 'Sattvik Kitchen',
+  //   description:
+  //       'A curation of Sattvik recipes by Spiritual Guru Dr. Hansaji Yogendra, these are carefully designed to ensure nutrition and balance in the body.',
+  //   image:`${baseDomain}${homeAssets.homeAsset099}`,
+  //   url: '/shop/product/65a8f78181ad17001903ab5e'
+  // },
   {
     id: 2,
     title: 'Nutri Diet Clinic',
@@ -51,28 +37,12 @@ export const activityData = [
     url: '/nutri-diet',
   },
   {
-    id: 3,
-    title: 'Yoga by the bay',
+    id: 9,
+    title: 'Best Selling books',
     description:
-      'Practice Yoga amidst the mesmerizing symphony of crashing waves, chirping birds, whistling winds and serenity of the sea at Marine Drive',
-    image: `${baseDomain}${homeAssets.homeAsset12}`,
-    url: '/yoga-by-the-bay',
-  },
-  {
-    id: 4,
-    title: 'Couple’s class',
-    description:
-      'This class will help couples fortify their bond, support the relationship, build intimacy and trust among couples. Join our year-long sessions.',
-    image: `${baseDomain}${homeAssets.homeAsset13}`,
-    url: '/couples-classes',
-  },
-  {
-    id: 6,
-    title: '1:1 home tuition',
-    description:
-      ' The institute offers the opportunity for individuals or groups to receive personalized and quality yoga education within the comfort of their homes',
-    image: `${baseDomain}${homeAssets.homeAsset15}`,
-    url: '/home-tuitions',
+      'Explore 500+ books and national bestsellers that guide you to a happy, balanced, and disease-free life—rooted in timeless yogic wisdom. ',
+    image: `${sattvik_img}`,
+    url: '/shop',
   },
   {
     id: 7,
@@ -83,21 +53,55 @@ export const activityData = [
     url: '/samattvam',
   },
   {
-    id: 8,
-    title: 'Corporate workshops',
+    id: 5,
+    title: 'Full Moon Meditation',
     description:
-      'This workshop is designed to boost productivity, happiness, achieve work-life balance, reduce stress, enhance leadership skills at the workplace.',
-    image: `${baseDomain}${homeAssets.homeAsset17}`,
-    url: '/corporate-workshops',
+      'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
+    image: `${baseDomain}${homeAssets.homeAsset14}`,
+    url: '/fullmoon-meditation',
   },
-  {
-    id: 9,
-    title: 'Sattvik Cooking Book',
-    description:
-      'This book, written by Dr. Hansaji Yogendra, contains easy-to-find Sattvik ingredient-based recipes that are both nutritious and delicious.',
-    image: `${sattvik_img}`,
-    url: '/sattvik-cooking',
-  },
+  // {
+  //   id: 1,
+  //   title:'7 Rules to Reset Mind and Body',
+  //   description:'A definite manual for joy and harmony throughout everyday life. Achieve balance and fulfillment through power-packed lessons.',
+  //   image:`${baseDomain}${homeAssets.homeAsset26}`,
+  //   url:'/shop/product/63e9c6acbd45e500128569ac',
+  // },
+  
+  // {
+  //   id: 3,
+  //   title: 'Yoga by the bay',
+  //   description:
+  //     'Practice Yoga amidst the mesmerizing symphony of crashing waves, chirping birds, whistling winds and serenity of the sea at Marine Drive',
+  //   image: `${baseDomain}${homeAssets.homeAsset12}`,
+  //   url: '/yoga-by-the-bay',
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Couple’s class',
+  //   description:
+  //     'This class will help couples fortify their bond, support the relationship, build intimacy and trust among couples. Join our year-long sessions.',
+  //   image: `${baseDomain}${homeAssets.homeAsset13}`,
+  //   url: '/couples-classes',
+  // },
+  // {
+  //   id: 6,
+  //   title: '1:1 home tuition',
+  //   description:
+  //     ' The institute offers the opportunity for individuals or groups to receive personalized and quality yoga education within the comfort of their homes',
+  //   image: `${baseDomain}${homeAssets.homeAsset15}`,
+  //   url: '/home-tuitions',
+  // },
+  
+  // {
+  //   id: 8,
+  //   title: 'Corporate workshops',
+  //   description:
+  //     'This workshop is designed to boost productivity, happiness, achieve work-life balance, reduce stress, enhance leadership skills at the workplace.',
+  //   image: `${baseDomain}${homeAssets.homeAsset17}`,
+  //   url: '/corporate-workshops',
+  // },
+  
   // {
   //   id: 10,
   //   title: 'Sattvik Kitchen',

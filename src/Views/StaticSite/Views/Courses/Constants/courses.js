@@ -5,6 +5,7 @@ import baseDomain, {
   nutriDiet,
 } from '../../../assets/images/imageAsset'
 import BA_yoga_1 from '../../../../StaticSite/utils/images/BA_yoga_1.jpeg'
+import deailsPage_3_ttc from '../images/deailsPage_3_ttc.jpg'
 
 
 const ttc200hr = {
@@ -3265,7 +3266,7 @@ const ttc500hr = {
     },
     category: 'ttc',
     title: '500-Hour Yoga Teacher Training Online Course - 3 Months Yoga TTC - English',
-    image: `${baseDomain}${courseAssets.courseAsset39}`,
+    image: `${deailsPage_3_ttc}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
     dates: [
       // '12th Feb  - 4th May 2024',

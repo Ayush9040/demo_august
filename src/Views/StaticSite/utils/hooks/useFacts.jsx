@@ -6,7 +6,7 @@ const useFacts = () => {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const range = Number(searchParams.get('range'))
-  const rangeGroupLength = 4
+  const rangeGroupLength = 5
   const totalRanges = Math.ceil(factsImagesWithDateRange.length / rangeGroupLength)
 
   const handleNavigate = (index) => {

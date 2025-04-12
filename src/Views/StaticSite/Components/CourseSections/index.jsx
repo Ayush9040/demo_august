@@ -681,7 +681,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       </div>
 
       {showRangeSlider && showRangeSlider === true && (
-        <div className="vertical-scrollbar">
+        <div className="vertical-scrollbar" style={{ display: 'none'}}>
           <Slider
             min={1}
             max={sliderRange}

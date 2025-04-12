@@ -57,7 +57,7 @@
 
     .main-logo {
         display: block;
-        width: 0%;
+        // width: 0%;
 
         .mobile-search {
             display: none;
@@ -349,4 +349,8 @@
         padding: 2px 2px 0px 2px;
         border: none;
     }
+}
+
+.main-logo-2 {
+    width: 0%;
 }
