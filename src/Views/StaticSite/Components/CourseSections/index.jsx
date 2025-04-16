@@ -324,7 +324,28 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       url: '/IBY-course',
       text: 'IBY classes - On Campus & Online',
       onCampus: true, online: true, weekDays: true, isRegular: true
-    }]
+    },
+    {
+      url: '/meditation-foundation-course-online',
+      text: 'Online Meditation Course (Foundation Course)',
+      onCampus: false, online: true, weekDays: true, isRegular: true
+    },
+    {
+      url: '/regular-meditation-classes-online',
+      text: 'Regular Online Meditation Classes',
+      onCampus: false, online: true, weekDays: true, weekends: true, isRegular: true
+    },
+    {
+      url: '/couples-classes',
+      text: 'Couples Classes - Online',
+      onCampus: false, online: true, weekDays: false, weekends: true, isRegular: true
+    },
+    {
+      url: '/home-tuitions',
+      text:'ONLINE HOME TUITIONS (YOGA TUITIONS)',
+      onCampus: false, online: true, weekDays: true, weekends: true, isRegular: true
+    }
+  ]
 
     const campsWroskshopStatic = [{
       url: '/corporate-workshops',
@@ -371,7 +392,48 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       url: '/pranayama-workshop',
       text: 'Pranayama Workshop',
       onCampus: true, online: true, weekDays: true, days1: true
-    }]
+    },
+    {
+      url: '/deep-sleep-workshop',
+      text: 'Deep Sleep Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/emotional-wellness-workshop',
+      text: 'Emotional Wellness Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/gut-health-workshop',
+      text: 'Gut Health Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/healthy-sattvik-cooking-workshop',
+      text: 'Healthy & Sattvik Cooking Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/menopause-wellness-workshop',
+      text: 'Menopause Wellness Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/pcod-pcos-wellness-workshop',
+      text: 'PCOD & PCOS Wellness Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/total-body-detox-workshop',
+      text: 'Total Body Detox Workshop',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    },
+    {
+      url: '/diabetes-camp',
+      text: 'Diabetes Yoga Camp - On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true
+    }
+  ]
 
     const mostPopularStatic = [{
       url: '/7-days-camp-english',
@@ -397,7 +459,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       url: '/pregnancy-camp-for-ante-post-natal',
       text: 'Pregnancy Camp',
       onCampus: true, weekDays: true, days2: true
-    }]
+    },
+    {
+      url: '/samattvam',
+      text: 'Samattvam',
+      onCampus: true, weekends: true, days1: true
+    }
+  ]
     const specialEventsStatic = [
       {
         url: '/satsang',
@@ -421,6 +489,39 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       }
     ]
 
+    const  additionalCertifications= [
+      {
+        url: '/certificate-yoga-therapy-course-online',
+        text: 'Certificate Yoga Therapy Course - Online & On Campus',
+        onCampus: true, online: true, weekends: false, weekDays: true
+      },
+      {
+        url: '/certificate-program-on-yoga-for-cancer',
+        text: 'Certificate Program on Yoga for Cancer - Online',
+        onCampus: false, online: true, weekends: true, weekDays: true
+      },
+      {
+        url: '/certification-program-on-yoga-for-lung-cancer-online',
+        text: 'Certificate Program on Yoga for Lung Cancer - Online',
+        onCampus: false, online: true, weekends: true, weekDays: true
+      },
+      {
+        url: '/certificate-course-on-advanced-pranayama-techniques',
+        text: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
+        onCampus: false, online: true, weekends: true, weekDays: true
+      },
+      {
+        url: '/ma-yoga-shastra',
+        text: 'MA Yogashastra',
+        onCampus: true, online: true, weekends: true, weekDays: true, year2: true
+      },
+      {
+        url: '/ba-yoga-shastra',
+        text: 'BA Yogashastra',
+        onCampus: true, online: false, weekends: false, weekDays: true
+      }
+    ]
+
 
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
@@ -437,7 +538,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         )
       case 'Regular Yoga Classes':
         return (
-          <div className="course-list-content" >
+          <div className="course-list-content fixing_scroll" >
             <br />
             <div>
               {/* <h4> */}
@@ -494,7 +595,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         )
       case 'Camps & Workshops':
         return (
-          <div className="camp_course-list-content">
+          <div className="camp_course-list-content fixing_scroll">
             <br />
             {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
@@ -640,6 +741,24 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               </ul></div>
           </>
         )
+        case 'Additional Certifications':
+        return (
+          <>
+            <div style={{ marginTop: '40px' }} id="mobileDiv">
+              <ul>
+                {/*  id='therapy-course'  */}
+                {additionalCertifications.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+              </ul></div>
+          </>
+        )
     }
 
   }
@@ -654,6 +773,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     else if (title == 'Camps & Workshops') { return '#ce9b51' }
     else if (title == 'Special Certificate Courses (For Yoga Teachers)') { return '#ba7e7e' }
     else if (title == 'Special Events') { return '#c8705f' }
+    else if (title == 'Additional Certifications') { return '#c8705f' }
     else { return '' }
     // if (i === 0) { return '#94B1B2' }
     // else if (i === 1) { return '#7C999B' }
@@ -713,11 +833,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                     key={i}
                     color={selectColor(i, title)}
                     index={i}
-                    courseTitle={item.title}
-                    pageName={item.key}
-                    tenure={item.tenure}
-                    courseCategory={item.courseCategory}
-                    courseSubType={item.courseSubType}
+                    courseTitle={item?.title}
+                    pageName={item?.key}
+                    tenure={item?.tenure}
+                    courseCategory={item?.courseCategory}
+                    courseSubType={item?.courseSubType}
                     onlineMode={item?.onlineInfo?.courseMode}
                     residentialMode={item?.residentialInfo?.courseMode}
                     nonResidentialMode={item?.nonResidentialInfo?.courseMode}
@@ -725,15 +845,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                     nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
                     courseType={item?.courseType}
                     language={item?.language}
-                    description={item.metaDescription}
-                    path={item.key}
-                    img={item.cardImage}
-                    rating={item.rating}
-                    dates={item.dates}
-                    online={item.online}
-                    onCampus={item.onCampus}
-                    residential={item.residential}
-                    nonResidential={item.nonResidential}
+                    description={item?.metaDescription}
+                    path={item?.key}
+                    img={item?.cardImage}
+                    rating={item?.rating}
+                    dates={item?.dates}
+                    online={item?.online}
+                    onCampus={item?.onCampus}
+                    residential={item?.residential}
+                    nonResidential={item?.nonResidential}
                     weekends={item?.weekends}
                   />)
                 // )
@@ -742,7 +862,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               })
             :
             data.map((item, i) => {
-              if (item.key == 'samattvam') {
+              if (item?.key == 'samattvam') {
                 console.log(item);
               }
 
@@ -753,12 +873,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   key={i}
                   color={selectColor(i, title)}
                   index={i}
-                  courseTitle={item.title}
-                  description={item.metaDescription}
-                  path={item.key}
-                  img={item.cardImage}
-                  rating={item.rating}
-                  dates={item.dates}
+                  courseTitle={item?.title}
+                  description={item?.metaDescription}
+                  path={item?.key}
+                  img={item?.cardImage}
+                  rating={item?.rating}
+                  dates={item?.dates}
                   fees={item?.fees}
                   timing={item?.timing}
                   tenure={item?.tenure}
