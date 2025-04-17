@@ -206,7 +206,7 @@ const NutriDietHero = () => {
     borderRadius: '6px',
     borderStyle: 'solid',
     maxWidth: 'fit-content',
-    marginRight: '20px',
+    marginRight: '10px',
     height: '100%'
   }
 
@@ -458,7 +458,7 @@ const NutriDietHero = () => {
               <div className="highlight-underline_top"></div>
               <p className="hero-subtitle">
                 {`Balance your diet effortlessly with TYI's Nutri Diet Clinic`}
-                <br />
+                <div className='no_mobile'><br /></div>
                 where yogic wisdom meets modern nutrition for a healthier you.
               </p>
 
@@ -1351,7 +1351,7 @@ const NutriDietHero = () => {
                   <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
                   {/* <img src={nutri_diet_mobile_footer_arrow} alt="" /> */}
                 </div>
-              <div style={{ justifyContent: 'end', display: 'flex', margin: '10px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
+              <div style={{ justifyContent: 'end', display: 'flex', margin: '0px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
                 {err && <small> Please select package/program* </small>}
               </div>
               </div>

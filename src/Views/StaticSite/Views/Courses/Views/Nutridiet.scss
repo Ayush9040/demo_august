@@ -1406,6 +1406,10 @@
     font-family: 'Urbanist', sans-serif;
   }
 
+  .no_mobile {
+    display: inline;
+  }
+
   .qualifications-list li:before {
     // content: "•";
     // color: #3498db;
@@ -1454,6 +1458,20 @@
 
     .meet-our {
       font-size: 16px;
+    }
+
+    .avatars {
+      width: 120px;
+      height: 50px;
+    }
+
+    .avatars img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .no_mobile {
+      display: none;
     }
 
     .logo {
@@ -1534,7 +1552,7 @@
       font-weight: 700;
       line-height: 150%;
       font-family: 'Urbanist';
-      width: 327px;
+      width: 100%;
     }
 
     .profile-title {
@@ -2169,7 +2187,7 @@
   @media (max-width: 768px) {
     .client-reviews-container {
       padding: 35px 15px;
-      margin-bottom: 140px;
+      margin-bottom: 125px;
     }
 
     .fixes_des_footer_img {
@@ -2326,6 +2344,7 @@
     position: relative;
     top: 2px;
     right: 20%;
+    margin-bottom: 60px;
 
 
   }
@@ -3241,7 +3260,8 @@
     border: 1px solid rgb(44, 84, 70);
     font-weight: 600;
     font-size: 16px;
-    width: 100%;
+    // width: 100%;
+    border-radius: 5rem;
 
   }
 
@@ -3334,6 +3354,7 @@
     // }
     .select_wrapper {
       flex-direction: column;
+      width: 100%;
     }
 
 
@@ -3358,7 +3379,7 @@
       background: linear-gradient(360deg, #03393F 0%, #007885 100%);
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
-      z-index: 800;
+      z-index: 98;
       display: flex;
               flex-direction: column;
               justify-content: center;
@@ -3409,7 +3430,7 @@
     }
 
     .hero-content {
-      width: 100%;
+      width: 98%;
       display: flex;
       flex-direction: column;
       padding-left: 20px;
@@ -3598,7 +3619,8 @@
       padding: 20px;
       max-width: 100%;
       padding-top: 32px;
-
+      display: flex;
+      gap: 11px;
     }
 
     // .timeline-mobile {
@@ -3611,14 +3633,14 @@
     .health-timeline-cards {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      position: absolute;
+      gap: 5px;
+      // position: absolute;
       top: 32%;
       // position: relative;
       // position: relative;
       z-index: 2;
       // padding: 0 20px;
-      width: 310px;
+      width: 100%;
       // left: 15%;
 
     }
@@ -3631,7 +3653,7 @@
       border: 1px solid #E5F5BD;
       padding: 15px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
+      // position: relative;
       z-index: 10;
 
     }
@@ -3642,7 +3664,7 @@
 
     .card-content h3 {
       margin: 0 0 10px 0;
-      width: 278px;
+      width: 100%;
       color: #262626;
       font-family: 'Urbanist';
       font-weight: 700;
@@ -3818,7 +3840,7 @@
     .step-12 {
       // margin-top: 140px;
       width: 310px;
-      height: 296px;
+      height: 325px;
       left: 43px;
       gap: 10px;
       border-width: 1px;
@@ -4162,6 +4184,7 @@
 
     .Dates-dropdown .Select-dropdown {
       font-size: 14px;
+      width: 100%;
       border-radius: 6px;
       padding: 8px;
     }
@@ -4234,11 +4257,11 @@
   .diet_whole_wrapper .health-timeline-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: absolute;
+    gap: 5px;
+    // position: absolute;
     top: 33%;
     z-index: 2;
-    width: 310px;
+    width: 100%;
 }
 }
 
@@ -4266,11 +4289,11 @@
   .diet_whole_wrapper .health-timeline-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: absolute;
+    gap: 5px;
+    // position: absolute;
     top: 32% !important;
     z-index: 2;
-    width: 310px;
+    width: 100%;
 }
 
 .diet_whole_wrapper .card {
@@ -4284,7 +4307,7 @@
   left: 0;
 }
 .diet_whole_wrapper .btn_enroll {
-  width: 90%;
+  width: 95%;
   margin-top: 16px;
 }
 }
@@ -4312,11 +4335,11 @@
   .diet_whole_wrapper .health-timeline-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: absolute;
+    gap: 5px;
+    // position: absolute;
     top: 33.3% !important;
     z-index: 2;
-    width: 310px;
+    width: 100%;
     height: 86px;
     left: 15%;
 }
@@ -4428,10 +4451,10 @@
 /* Mobile styles (default) */
 @media screen and (max-width: 767px) {
   .health-timeline-cards {
-    width: 310px;
+    width: 100%;
     margin: 0 auto;
-    gap: 20px;
-        position: absolute;
+    gap: 5px;
+        // position: absolute;
         top: 33% !important;
         z-index: 2;
         width: 310px;
@@ -4449,7 +4472,7 @@
   .step-9 { height: 170px; }
   .step-10 { height: 107px; }
   .step-11 { height: 176px; }
-  .step-12 { height: 296px; }
+  .step-12 { height: 325px; }
 }
 
 /* Tablet styles */
@@ -5014,13 +5037,13 @@
   
   .card1.floating {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    width: 350px;
-    padding: 15px;
+    // bottom: 20px;
+    // right: 20px;
+    z-index: 998;
+    width: 100%;
+    padding: 24px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    // border-radius: 8px;
     background-color: #fff;
     transition: all 0.3s ease;
   }
@@ -5042,9 +5065,9 @@
 /* Fix for floating card on smaller screens */
 @media only screen and (max-width: 767px) {
   .card1.floating {
-    width: 90%;
-    left: 5%;
-    bottom: 10px;
+    width: 100%;
+    left: 0%;
+    bottom: 0px;
     right: auto;
   }
 }
@@ -5055,7 +5078,7 @@
 @media screen and (max-width: 375px) {
   .health-timeline-cards .timeline-card {
     margin-bottom: 20px;
-    width: 90%;
+    width: 95%;
     padding: 10px;
   }
   
@@ -5262,18 +5285,18 @@
 /* Specific adjustments for step positioning based on the image */
 @media screen and (max-width: 768px) {
   /* For mobile devices, adjust the positioning of each step */
-  .timeline-card.step-1 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-2 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-3 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-4 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-5 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-6 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-7 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-8 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-9 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-10 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-11 { margin-top: 10%; left: 5%; }
-  .timeline-card.step-12 { margin-top: 10%; left: 5%; }
+  .timeline-card.step-1 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-2 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-3 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-4 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-5 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-6 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-7 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-8 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-9 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-10 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-11 { margin-top: 0%; left: 5%; }
+  .timeline-card.step-12 { margin-top: 0%; left: 5%; }
 }
 
 /* iPad and similar devices */
