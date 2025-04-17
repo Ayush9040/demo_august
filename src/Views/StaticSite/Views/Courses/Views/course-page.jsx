@@ -78,7 +78,7 @@ const Courses = () => {
     [...campsArr, ...convertedClasses],
   [certificateArr[3], certificateArr[1], certificateArr[0]], 
   [classesArr[9], classesArr[12], ...sepecialEventArr],
-  [certificateArr[4], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[21], classesArr[23]]
+  [certificateArr[4], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[14], classesArr[16]]
 ]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
@@ -330,7 +330,7 @@ const Courses = () => {
     }
     else if (title === 'Additional Certifications') {
 
-      return { path: '', sliderVal: 3 }
+      return { path: 'additional-certificates', sliderVal: 3 }
     }
     else {
 

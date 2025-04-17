@@ -33,7 +33,7 @@ const ttc200hr = {
     weekDays: true,
     batch: 1,
     metaDescription:
-      'Master your physical, mental, and spiritual well-being by learning the skills',
+      'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: true,
@@ -3254,7 +3254,7 @@ const ttc500hr = {
     },
     batch: 1,
     metaDescription:
-      'Learn and witness marked improvement in your life, relationships, and work',
+      'Advanced training, deepen practice with in-depth teaching skills.',
     mostPopular: true,
     rating: 5,
     colorCode: '#D88068',
@@ -3661,7 +3661,7 @@ const ttc900hr = {
     batch: 1,
 
     metaDescription:
-      'Achieve balance and fulfillment in life through yogic tools and techniques.',
+      'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 3 Months Teacher Training Course On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -7313,7 +7313,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
+      'Specialized yoga camp for heart health & hypertension management.',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
     dates: [ '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
@@ -7492,7 +7492,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Holistic approach with wholesome tools and technique for managing diabetes',
+      'Specialized yoga camp to manage diabetes with guided practices.',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset105}`,
     online: false,
@@ -8456,7 +8456,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
+      'Deepen your breathwork practice with guided pranayama training.',
     image: `${baseDomain}${courseAssets.courseAsset37}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset37}`,
     online: true,
@@ -8655,7 +8655,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2000 },
     },
     category: 'camps',
-    metaDescription: 'Insightful session with a medical specialists.',
+    metaDescription: 'Expert-guided yoga for prenatal care, childbirth & postnatal healing.',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset11}`,
     online: false,
@@ -9211,7 +9211,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
+      'Master pranayama, asanas & relaxation techniques to manage stress effectively.',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset13}`,
     online: false,
@@ -9392,7 +9392,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
-    metaDescription: 'Low-calorie diet recipe',
+    metaDescription: 'Lose weight naturally with yoga techniques that energize & restore.',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset15}`,
     online: false,
@@ -9770,7 +9770,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
-    metaDescription: 'Insightful session with an ortho-specialist',
+    metaDescription: 'Ease back & joint pain with targeted yoga therapy & mobility practices.',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
     online: false,
@@ -10399,7 +10399,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Yoga Camp reshape your life and health.',
+      'Experience TYI’s signature 7-day health camp for total mind-body wellness.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -10808,7 +10808,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2500 },
     },
     category: 'camps',
-    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+    metaDescription: 'Embrace a healthier lifestyle in 21 days with our signature program. ',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12009,7 +12009,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: 'Discover the art of deep relaxation and rejuvenation. In this workshop, learn proven techniques to unwind, de-stress, and achieve restorative sleep for a healthier, more peaceful life. Transform your nights and energize your days!',
+    metaDescription: 'Unlock deep, restful sleep with yoga, breathwork & guided meditation.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12165,7 +12165,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Unlock the power of emotional well-being with our Emotional Wellness Workshop. This session is designed to help you manage stress, enhance emotional resilience, and cultivate a positive mindset. Through mindful practices, yoga, and self-reflection, you’ll learn techniques to better navigate life's challenges and foster a sense of inner peace and emotional balance. ",
+    metaDescription: "Balance your mind & emotions with proven yogic tools & practices.  ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12322,7 +12322,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Transform your digestive health with our Gut Health Workshop. This session focuses on the vital connection between your gut and overall well-being, offering practical tips and holistic practices to support a balanced digestive system. Learn about gut-friendly nutrition, the importance of gut flora, and effective techniques to enhance digestion and boost immunity.",
+    metaDescription: "Improve digestion, reduce bloating & boost gut health with yoga.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12483,7 +12483,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Nourish your body with wholesome, Sattvik-inspired meals that promote vitality and well-being. In this workshop, you’ll learn how to prepare simple, nutritious, and balanced dishes using fresh, plant-based ingredients. Embrace the principles of Sattvik cooking, which focus on purity, mindfulness, and healing, to support a healthier lifestyle from the inside out.",
+    metaDescription: "Learn to cook nourishing sattvik meals for health, balance & vitality.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12644,7 +12644,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Navigate the changes of menopause with confidence and ease in our Menopause Wellness Workshop. This session offers holistic practices and expert guidance to support you through this transformative phase. Learn how to manage symptoms, balance hormones, and improve overall health through yoga, mindful nutrition, and stress-reducing techniques, empowering you to embrace this new chapter of life with vitality.",
+    metaDescription: "Relieve hot flashes, stress & fatigue with yoga for menopause care. ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12800,7 +12800,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Take charge of your health with our specialized PCOD & PCOS Wellness Workshop. This session offers natural, holistic practices to help manage symptoms, balance hormones, and improve overall well-being. Learn effective yoga, nutrition tips, and stress-reduction techniques to support your journey toward better health and a more balanced life.",
+    metaDescription: "Improve hormonal health & well-being with yoga for PCOD/PCOS.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -12960,7 +12960,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
-    metaDescription: "Refresh, energize, and revitalize your body and mind! This workshop offers powerful techniques, mindful practices, and holistic approaches to cleanse toxins, improve digestion, boost energy levels, and promote overall well-being. Achieve balance and rejuvenation from within for a healthier, more vibrant you. ",
+    metaDescription: "Detox naturally with powerful yogic techniques for total well-being. ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -13434,7 +13434,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    metaDescription: 'Stay connected with your practices of the advanced Yoga asanas at TYI',
+    metaDescription: 'Dedicated advanced asana sessions for TYI teachers post-TTC.',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
     dates: ['6:30 a.m. to 8:00 a.m', '5:30 p.m. to 7:00 p.m'],
@@ -13684,7 +13684,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: true,
     metaDescription:
-      'Explore the world of Yoga asanas, practices from the comfort of your own home',
+      'Daily online yoga classes to enhance flexibility, strength & well-being.',
     rating: 5,
     colorCode: '#B77E7E',
     join: true,
@@ -13972,7 +13972,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
     mostPopular: true,
     metaDescription:
-      'This is a special men-only regular asana class conducted by The Yoga Institute',
+      'Regular yoga sessions for men with asanas, kriyas, breathwork & health tips.',
     rating: 5,
     colorCode: '#D3A29D',
     join: true,
@@ -14139,7 +14139,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
     mostPopular: true,
     metaDescription:
-      'This is a special women-only regular asana class conducted by The Yoga Institute',
+      'Regular yoga sessions for women with asanas, kriyas, breathwork & health tips.',
     rating: 5,
     colorCode: '#C48E8C',
     join: true,
@@ -14334,7 +14334,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
     metaDescription:
-      'Use the power of Yoga to improve your child’s focus, memory, discipline, determination, and value system.',
+      'Yoga for kids to enhance mindfulness, focus, discipline & well-being.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri)',
@@ -14459,7 +14459,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
     metaDescription:
-      'The course covers simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle',
+      'Weekend yoga for kids to build focus, discipline & mindfulness.',
     rating: 5,
     colorCode: '#B77E7E',
     join: true,
@@ -14538,7 +14538,7 @@ const classes = {
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: true,
-    metaDescription: 'The science behind meditation',
+    metaDescription: '12-session course to build a strong foundation in meditation practice.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am (IST)',
@@ -14704,7 +14704,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: true,
     metaDescription:
-      'Click now if you want to make bliss and calm a part of your life daily.',
+      'Join expert-led live meditation classes for daily practice & growth.',
     rating: 5,
     colorCode: '#C48E8C',
     join: true,
@@ -14889,7 +14889,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
     mostPopular: false,
     metaDescription:
-      'Towards the end, there is an enlightening question and answer session. ',
+      'Experience life lessons through skits, discourse & wisdom by Dr. Hansaji.',
     rating: 5,
     colorCode: '#DDAB58',
     timing: 'Every Sunday between 9.30 am and 10.30am',
@@ -15038,7 +15038,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
     mostPopular: true,
     metaDescription:
-      'Towards the end, there is an enlightening question and answer session.',
+      'Weekend yoga to boost strength, flexibility & inner balance.',
     rating: 5,
     colorCode: '#D3A29D',
     timing:
@@ -15413,7 +15413,7 @@ const classes = {
     cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
     mostPopular: false,
     metaDescription:
-      'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
+      'Free yoga OPD & health checkups for holistic healing & well-being.',
     rating: 5,
     colorCode: '#DDAB58',
     timing: 'Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)',
@@ -15577,7 +15577,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
     mostPopular: false,
     metaDescription:
-      'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
+      'Yoga for couples—grow together in love, balance & mindful partnership.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: 'Third Sunday of every month from 5.00 p.m. to 7.00 p.m.',
@@ -15811,7 +15811,7 @@ const classes = {
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: true,
     metaDescription:
-      'Weekend Yoga Regular Class is an excellent course for daily yoga practice.',
+      'Weekend online yoga to enhance flexibility, strength & inner calm.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
@@ -15936,7 +15936,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     mostPopular: false,
     metaDescription:
-      'Begin your pregnancy journey with The Yoga Institute. We will get you ready to welcome your little bundle of joy in a healthy and happy way!',
+      'Holistic prenatal yoga for a smooth & joyful pregnancy journey.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '8:30 am to 9:30 am (Monday, Wednesday, Friday)',
@@ -16106,7 +16106,7 @@ const classes = {
     cardImage: `${extraImage.mayogaImg}`,
     mostPopular: false,
     metaDescription:
-      'The Master of Arts (MA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
+      'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) - On Campus 9:00 am to 3:00 pm (Saturday) - Online',
@@ -16404,7 +16404,7 @@ const classes = {
     cardImage: courseAssets.courseAssetPhysio,
     mostPopular: false,
     metaDescription:
-      'At The Yoga Institute, we believe in the power of healing through holistic care. Our new Department of Rehabilitation and Physiotherapy is dedicated to helping individuals recover, regain independence, and lead healthier, more fulfilling lives.',
+      'Personalized physiotherapy & rehab solutions for better recovery. ',
     rating: 5,
     colorCode: '#DDAB58',
     timing: 'Starting 2nd January 2025. Monday to Saturday between 9:30 am and 1:30pm',
@@ -16694,7 +16694,7 @@ const classes = {
     cardImage: `${BA_yoga_1}`,
     mostPopular: false,
     metaDescription:
-      'The Bachelor of Arts (BA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive four-year undergraduate program designed to build a strong foundation in the philosophy, science, and practice of yoga.',
+      'Comprehensive 4-year B.A. in Yogashastra covering theory & practice.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '10:00 am - 2:00 pm (Monday to Friday) - On Campus',
@@ -16960,7 +16960,7 @@ const extra = {
     mostPopular: true,
     colorCode: '#B77E7E',
     dates: [],
-    metaDescription: 'Get customized diet plans and holistic approach to health and wellness'
+    metaDescription: 'Nutri Diet Clinic blends science & yogic wisdom to create customized diet plans for weight loss, PCOS, diabetes, gut health or any fitness goal of yours. Achieve balance & long-term wellness with expert-guided nutritional support.'
   }
 }
 
@@ -16990,7 +16990,7 @@ const certificate = {
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
-    metaDescription: 'Knowledge of nadi system and energy channels',
+    metaDescription: 'Deepen pranayama practice with advanced breathwork techniques for teachers.',
     mostPopular: true,
     rating: 5,
     colorCode: '#B77E7E',
@@ -17325,7 +17325,7 @@ const certificate = {
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
-      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+      'Equip yourself with yogic tools to support cancer patients effectively.',
     mostPopular: true,
     rating: 5,
     colorCode: '#C48E8C',
@@ -17493,7 +17493,7 @@ const certificate = {
     cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
     mostPopular: false,
     metaDescription:
-      'The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
+      'Master therapeutic yoga tools to aid lung cancer care & well-being.',
     rating: 5,
     colorCode: '#B77E7E',
     timing: 'Tuesdays to Saturday: 5:00 p.m. - 7:00 p.m. (IST)',
@@ -17618,7 +17618,7 @@ const certificate = {
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: true,
     metaDescription:
-      'Become a certified Yoga therapist through The Yoga Institute.',
+      'Comprehensive yoga therapy training for 110+ diseases and conditions.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
@@ -18099,7 +18099,7 @@ const certificate = {
     image: `${baseDomain}${courseAssets.courseAsset117}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset117}`,
     metaDescription:
-      'Surviving to Thriving: Embracing Life After Cancer',
+      'Holistic yoga training to enhance healing and recovery for survivors.',
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
@@ -18894,7 +18894,7 @@ const specialEvents = {
     cardImage: `${homeAssets.fullmoonCard}`,//${baseDomain}
     mostPopular: false,
     metaDescription:
-      '',
+      'Harness the full moon’s energy with our free meditation event/session. ',
     rating: 5,
     colorCode: '#DDAB58',
     timing: '',
@@ -18982,7 +18982,7 @@ const specialEvents = {
     cardImage: `${baseDomain}${homeAssets.homeAsset12}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'Experience refreshing yoga by the bay—free, open, and rejuvenating!',
     rating: 5,
     colorCode: '#DDAB58',
     timing: '',

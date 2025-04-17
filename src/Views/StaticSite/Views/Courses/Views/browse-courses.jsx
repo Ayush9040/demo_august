@@ -64,9 +64,15 @@ const BrowseCourses = () => {
     } else if (type === 'special-certificate-courses') {
       setCategory([certificateArr[3], certificateArr[1], certificateArr[0]])
       setBreadcrumbs('Special Certificate Courses (For Yoga Teachers)')
+    } else if (type === 'additional-certificates') {
+      setCategory([certificateArr[4], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[14], classesArr[16]])
+      setBreadcrumbs('Additional Certificate Courses')
     }
     return breadcrumbs
   }
+
+  // certificateArr[4], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[21], classesArr[23]
+
   const location = useLocation();
   useEffect(() => {
     if (type === 'ttc') {
@@ -291,6 +297,21 @@ const BrowseCourses = () => {
                   <AccordionItemButton>
                     <Link to="/courses/browse/special-certificate-courses">
                       <p>Special Certificate Courses (For Yoga Teachers)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem
+                style={{
+                  border: breadcrumbs == 'Additional Certificate Courses' && '2px solid #CA4625',
+                  borderRadius: breadcrumbs == 'Additional Certificate Courses' && '8px'
+                }}
+              >
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/additional-certificates">
+                      <p>Additional Certificates</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
