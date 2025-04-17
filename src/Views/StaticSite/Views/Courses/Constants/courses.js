@@ -6,6 +6,7 @@ import baseDomain, {
 } from '../../../assets/images/imageAsset'
 import BA_yoga_1 from '../../../../StaticSite/utils/images/BA_yoga_1.jpeg'
 import deailsPage_3_ttc from '../images/deailsPage_3_ttc.jpg'
+import card_ba from '../images/card_ba.jpg'
 
 
 const ttc200hr = {
@@ -16691,7 +16692,7 @@ const classes = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${BA_yoga_1}`,
-    cardImage: `${BA_yoga_1}`,
+    cardImage: `${card_ba}`,
     mostPopular: false,
     metaDescription:
       'Comprehensive 4-year B.A. in Yogashastra covering theory & practice.',
