@@ -1,3 +1,5 @@
+
+
 export const courseCardData = [
 
   {
@@ -54,6 +56,19 @@ export const courseCardData = [
       , { title: 'Samattvam' },
     { title: 'Full Moon Meditation' },
     { title: 'Yoga by the bay' }]
+  },
+
+  {
+    title: 'Additional Certifications',
+    color: '#B77E7E',
+    cardData: [{ title: 'Certificate Yoga Therapy Course - Online & On Campus' }
+      , { title: 'Certificate Program on Yoga for Cancer - Online' },
+    { title: 'Certificate Program on Yoga for Lung Cancer - Online' },
+    { title: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)' },
+  {title: 'MA Yogashastra'},
+  {title: 'BA Yogashastra'}]
   }
+  
 
 ]
+

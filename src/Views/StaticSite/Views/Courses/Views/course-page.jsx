@@ -53,7 +53,7 @@ const Courses = () => {
     setIsFilterOpened(false)
     setFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
     setSelectedFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
-    setData([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3), dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3), dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), dataMaster[6].slice(0, 3)])
+    setData([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3), dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3), dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), dataMaster[6].slice(0, 3), dataMaster[7].slice(0,3)])
 
   }
 
@@ -70,14 +70,24 @@ const Courses = () => {
   const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
 
   let convertedClasses = classesArr.filter((_, index) => index !== 9 && index !== 12);//used to remove satsand and samatvam in other blocks
-  let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
+  let dataMaster = [
+    [c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
   [campsArr[10], campsArr[8], campsArr[11], campsArr[9], campsArr[12]],
-    convertedClasses, mostPopular, [...campsArr, ...convertedClasses],
-  [certificateArr[3], certificateArr[1], certificateArr[0]], [classesArr[9], classesArr[12], ...sepecialEventArr]]
+    convertedClasses, 
+    [campsArr[9], campsArr[10], c200hr[0], c900hr[4], campsArr[3], classesArr[10]], 
+    [...campsArr, ...convertedClasses],
+  [certificateArr[3], certificateArr[1], certificateArr[0]], 
+  [classesArr[9], classesArr[12], ...sepecialEventArr],
+  [certificateArr[3], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[14], classesArr[16]]
+]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
   dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3),
-  dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), dataMaster[6].slice(0, 3)])
+  dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), 
+  dataMaster[6].slice(0, 3),
+  dataMaster[7].slice(0,3)
+]
+)
   // Convert shouldDisplayCard to async for handling any async logic
 
   function shouldDisplayCardNew(points, filters) {
@@ -159,6 +169,7 @@ const Courses = () => {
       let rawArr5 = dataMaster[4]
       let rawArr6 = dataMaster[5]
       let rawArr7 = dataMaster[6]
+      let rawArr8 = dataMaster[7]
       let arr1 = []
       let arr2 = []
       let arr3 = []
@@ -166,6 +177,7 @@ const Courses = () => {
       let arr5 = []
       let arr6 = []
       let arr7 = []
+      let arr8 = []
       let count1 = 0
       for (let j1 = 0; j1 < rawArr1.length; j1++) {
         const shouldDisplay = await shouldDisplayCardNew(rawArr1[j1], selectedValues);
@@ -253,9 +265,21 @@ const Courses = () => {
           break;
         }
       }
+
+      let count8 = 0
+      for (let j8 = 0; j8 < rawArr8.length; j8++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr8[j8], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr8.push(rawArr8[j8]);
+          count8 += 1
+        }
+        if (count8 > 3) {
+          break;
+        }
+      }
       let finalArr = [arr1?.length > 0 ? arr1.slice(0, 3) : [], arr2?.length > 0 ? arr2.slice(0, 3) : [],
       arr3?.length > 0 ? arr3.slice(0, 3) : [], arr4?.length > 0 ? arr4.slice(0, 3) : [],
-      arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : [], arr7?.length > 0 ? arr7.slice(0, 3) : []]
+      arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : [], arr7?.length > 0 ? arr7.slice(0, 3) : [], arr8?.length > 0 ? arr8.slice(0,3) : []]
       console.log(finalArr);
       setData(finalArr)
     }
@@ -303,6 +327,10 @@ const Courses = () => {
     else if (title === 'Special Certificate Courses (For Yoga Teachers)') {
 
       return { path: 'special-certificate-courses', sliderVal: 3 }
+    }
+    else if (title === 'Additional Certifications') {
+
+      return { path: 'additional-certificates', sliderVal: 3 }
     }
     else {
 
@@ -630,6 +658,40 @@ const Courses = () => {
           online: true, onCampus: true, days1: true
         }]
       }
+      else if (index == 7) {
+        points = [
+          {
+            url: '/certificate-yoga-therapy-course-online',
+            text: 'Certificate Yoga Therapy Course - Online & On Campus',
+            onCampus: true, online: true, weekends: false, weekDays: true
+          },
+          {
+            url: '/certificate-program-on-yoga-for-cancer',
+            text: 'Certificate Program on Yoga for Cancer - Online',
+            onCampus: false, online: true, weekends: true, weekDays: true
+          },
+          {
+            url: '/certification-program-on-yoga-for-lung-cancer-online',
+            text: 'Certificate Program on Yoga for Lung Cancer - Online',
+            onCampus: false, online: true, weekends: true, weekDays: true
+          },
+          {
+            url: '/certificate-course-on-advanced-pranayama-techniques',
+            text: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
+            onCampus: false, online: true, weekends: true, weekDays: true
+          },
+          {
+            url: '/ma-yoga-shastra',
+            text: 'MA Yogashastra',
+            onCampus: true, online: true, weekends: true, weekDays: true, year2: true
+          },
+          {
+            url: '/ba-yoga-shastra',
+            text: 'BA Yogashastra',
+            onCampus: true, online: false, weekends: false, weekDays: true
+          }
+        ]
+      }
 
       // Create an array to store conditions for filtering
 
@@ -948,7 +1010,7 @@ const Courses = () => {
         <div className="popular-courses">
           <div className="course-accordian">
             <Accordion allowZeroExpanded>
-              <AccordionItem>
+              {/* <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/most-popular">
@@ -956,7 +1018,7 @@ const Courses = () => {
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
-              </AccordionItem>
+              </AccordionItem> */}
 
               {/* <AccordionItem>
                 <AccordionItemHeading>
@@ -1035,7 +1097,20 @@ const Courses = () => {
                   </AccordionItemButton>
                 </AccordionItemHeading>
               </AccordionItem>
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/additional-certificates">
+                      <p>Additional Certifications</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
             </Accordion>
+
+           
+           
           </div></div>
 <div></div>
         {/* <div className="courses-introduction">
@@ -1066,13 +1141,13 @@ const Courses = () => {
               {shouldDisplayMainBlock(i) &&
                 <CourseSection
                   key={i}
-                  title={item.title}
+                  title={item?.title}
                   // color={item.color}
                   data={data[i]}
                   showRangeSlider={(item?.title === 'Yoga Teacher Training Courses (YTTC)') ? true : false}
-                  pathParam={setPathParam(item.title).path}
-                  cardData={item.cardData}
-                  sliderRange={setPathParam(item.title).sliderVal}
+                  pathParam={setPathParam(item?.title)?.path}
+                  cardData={item?.cardData}
+                  sliderRange={setPathParam(item?.title)?.sliderVal}
                   selectedFilters={selectedFilters}
                 />}</>
           )
