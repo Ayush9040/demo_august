@@ -340,11 +340,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Couples Classes - Online',
       onCampus: false, online: true, weekDays: false, weekends: true, isRegular: true
     },
-    {
-      url: '/home-tuitions',
-      text:'ONLINE HOME TUITIONS (YOGA TUITIONS)',
-      onCampus: false, online: true, weekDays: true, weekends: true, isRegular: true
-    }
+    // {
+    //   url: '/home-tuitions',
+    //   text:'ONLINE HOME TUITIONS (YOGA TUITIONS)',
+    //   onCampus: false, online: true, weekDays: true, weekends: true, isRegular: true
+    // }
   ]
 
     const campsWroskshopStatic = [{
@@ -358,11 +358,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: "Couple's classes - Online",
       online: true, weekends: true, days1: true
     },
-    {
-      url: '/home-tuitions',
-      text: 'Home Tuitions',
-      online: true, weekDays: true
-    },
+    // {
+    //   url: '/home-tuitions',
+    //   text: 'Home Tuitions',
+    //   online: true, weekDays: true
+    // },
     {
       url: '/stress-management-camp',
       text: 'Stress Management Camp - On Campus',

@@ -74,11 +74,11 @@ const Courses = () => {
     [c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
   [campsArr[10], campsArr[8], campsArr[11], campsArr[9], campsArr[12]],
     convertedClasses, 
-    mostPopular, 
+    [campsArr[9], campsArr[10], c200hr[0], c900hr[4], campsArr[3], classesArr[10]], 
     [...campsArr, ...convertedClasses],
   [certificateArr[3], certificateArr[1], certificateArr[0]], 
   [classesArr[9], classesArr[12], ...sepecialEventArr],
-  [certificateArr[4], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[14], classesArr[16]]
+  [certificateArr[3], certificateArr[2], certificateArr[1], certificateArr[0], classesArr[14], classesArr[16]]
 ]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
@@ -1101,7 +1101,7 @@ const Courses = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/special-certificate-courses">
+                    <Link to="/courses/browse/additional-certificates">
                       <p>Additional Certifications</p>
                     </Link>
                   </AccordionItemButton>

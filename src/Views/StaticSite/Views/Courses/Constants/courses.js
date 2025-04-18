@@ -7,6 +7,7 @@ import baseDomain, {
 import BA_yoga_1 from '../../../../StaticSite/utils/images/BA_yoga_1.jpeg'
 import deailsPage_3_ttc from '../images/deailsPage_3_ttc.jpg'
 import card_ba from '../images/card_ba.jpg'
+import Ma_New_card from '../images/MA_card.jpg'
 
 
 const ttc200hr = {
@@ -599,7 +600,7 @@ const ttc200hr = {
       },
     },
     batch: 2,
-    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+    metaDescription: 'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: false,
@@ -1078,7 +1079,7 @@ const ttc200hr = {
     },
     batch: 3,
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being.',
+      'Comprehensive training to build a strong foundation in yoga teaching.',
     textDescription: 'You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
@@ -1635,7 +1636,7 @@ const ttc200hr = {
       },
     },
     batch: 4,
-    metaDescription: 'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
+    metaDescription: 'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: false,
@@ -2160,7 +2161,7 @@ const ttc200hr = {
     },
     batch: 5,
     metaDescription:
-      ' Learn the yogic principles and practices for a balanced life',
+      'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: true,
@@ -4247,7 +4248,7 @@ const ttc900hr = {
     },
     batch: 1,
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 1 Year Advanced Yoga Teacher Training Course Online & On-Campus - Hindi',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -5006,7 +5007,7 @@ const ttc900hr = {
     batch: 1,
 
     metaDescription:
-      'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
+      'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours YTTC - 2 Years Advanced Yoga Teacher Training Certificate Course Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -5741,7 +5742,7 @@ const ttc900hr = {
     batch: 1,
 
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 4 Months Online Yoga Teacher Training Course - English',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -6426,7 +6427,7 @@ const ttc900hr = {
     batch: 1,
 
     metaDescription:
-      'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
+      'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 7 Months Yoga Teacher Training Course Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -10008,7 +10009,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Yoga Camp reshape your life and health.',
+      'Experience TYI’s signature 7-day health camp for total mind-body wellness.',
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
     details: [
@@ -11217,8 +11218,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Yoga Course.¿
-      Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.`,
+      `Embrace a healthier lifestyle in 21 days with our signature program.`,
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
     details: [
@@ -11619,7 +11619,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2500 },
     },
     category: 'camps',
-    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. ',
+    metaDescription: 'Embrace a healthier lifestyle in 21 days with our signature program. ',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -16104,7 +16104,7 @@ const classes = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${extraImage.mayogaImg}`,
-    cardImage: `${extraImage.mayogaImg}`,
+    cardImage: `${Ma_New_card}`,
     mostPopular: false,
     metaDescription:
       'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
