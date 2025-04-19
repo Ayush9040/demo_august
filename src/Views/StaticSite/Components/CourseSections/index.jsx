@@ -435,34 +435,70 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     }
   ]
 
-    const mostPopularStatic = [{
-      url: '/7-days-camp-english',
-      text: '7 Days Health Camp',
-      onCampus: true, weekDays: true, days7: true
+    const mostPopularStatic = [
+      {
+      // url: '/7-days-camp-english',
+      title: '7 Days Health Camp',
+      onCampus: true, weekDays: true, days7: true, online: false,
+      subItems: [
+        {
+          url: '/7-days-camp',
+          text: '7 Days Health Camp - On Campus - Hindi',
+          onCampus: true, weekDays: true, days7: true, online: false
+        },
+        {
+          url: '/7-days-camp-english',
+          text: '7 Days Health Camp - On Campus - English',
+          onCampus: true, weekDays: true, days7: true, online: false
+        },
+      ],
     },
+
     {
-      url: '/21-days-better-living-course',
-      text: '21 Days Better Living Course',
-      onCampus: true, weekDays: true, days21: true
+      // url: '/7-days-camp-english',
+      title: '21 Days Better Living Course',
+      onCampus: true, weekDays: true, days21: true, online: true,
+      subItems: [
+        {
+          url: '/21-days-better-living-course',
+          text: 'Morning Online & On Campus – English - Batch 1',
+          onCampus: true, weekDays: true, days21: true, online: true,
+        },
+        {
+          url: '/21-days-better-living-course-batch-2',
+          text: 'Evening - Online & On Campus – English - Batch 2',
+          onCampus: true, online: true, weekDays: true, days21: true
+        },
+        {
+          url: '/21-days-better-living-course-batch-3',
+          text: 'Evening - Online & On Campus – Hindi - Batch 3',
+          onCampus: true, online: true, weekDays: true, days21: true
+        },
+      ],
     },
-    {
-      url: '/one-month-ttc',
-      text: '200 Hours 1 Month YTTC Basic Course',
-      onCampus: true, online: true, month1: true, weekDays: true
-    },
-    {
-      url: '/seven-month-ttc',
-      text: "900 Hours 3 Months YTTC Advanced Course",
-      onCampus: true, online: true, month3: true, weekDays: true
-    },
-    {
-      url: '/pregnancy-camp-for-ante-post-natal',
-      text: 'Pregnancy Camp',
-      onCampus: true, weekDays: true, days2: true
-    },
+    // {
+    //   url: '/21-days-better-living-course',
+    //   text: '21 Days Better Living Course',
+    //   onCampus: true, weekDays: true, days21: true
+    // },
+    // {
+    //   url: '/one-month-ttc',
+    //   text: '200 Hours 1 Month YTTC Basic Course',
+    //   onCampus: true, online: true, month1: true, weekDays: true
+    // },
+    // {
+    //   url: '/seven-month-ttc',
+    //   text: "900 Hours 3 Months YTTC Advanced Course",
+    //   onCampus: true, online: true, month3: true, weekDays: true
+    // },
+    // {
+    //   url: '/pregnancy-camp-for-ante-post-natal',
+    //   text: 'Pregnancy Camp',
+    //   onCampus: true, weekDays: true, days2: true
+    // },
     {
       url: '/samattvam',
-      text: 'Samattvam',
+      title: 'Samattvam',
       onCampus: true, weekends: true, days1: true
     }
   ]
@@ -669,38 +705,36 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         return (
           <div className="course-list-content">
             <div>
-              {/* <h4> */}
-              <ul>
-                {mostPopularStatic.map((item, i) => (
-                  shouldDisplayLink(item) && (
-                    <div key={i}>
-                      <Link to={item.url}>
-                        <li className="text-bold">
-                          {item.text}
-                        </li>
-                      </Link></div>))
-                )}
-                {/* <Link to="/7-days-camp-english">
-                    <li>7 Days Health Camp</li>
-                  </Link>
-                  <Link to="/21-days-better-living-course">
-                    <li>21 Days Better Living Course</li>
-                  </Link>
-                  <Link to="/one-month-ttc">
-                    <li>200 Hour 1 Month BTTC Course</li>
-                  </Link>
-                  <Link to="/seven-month-ttc">
-                    <li>900 Hour 3 Month ATTC Course</li>
-                  </Link>
-                  <Link to="/pregnancy-camp-for-ante-post-natal">
-                    <li> Pregnancy Camp</li>
-                  </Link> */}
-              </ul>
-              {/* </h4> */}
-            </div>
-            {/* <Link to="/courses/browse/most-popular">
-            <CommonBtn text={'Explore all'} />
-          </Link> */}
+    <ul>
+      {mostPopularStatic.map((item, i) => (
+        shouldDisplayLink(item) &&
+       (
+        <li key={i}>
+        {/* Only clickable if item.url exists */}
+        {item.url ? (
+          <Link to={item.url}>
+            <strong>{item.title}</strong>
+          </Link>
+        ) : (
+          <strong>{item.title}</strong>
+        )}
+
+        {/* Map over subItems if available */}
+        {item.subItems?.length > 0 && (
+          <ul>
+            {item.subItems.map((subItem, j) => (
+              <li key={j}>
+                <Link to={subItem.url}>{subItem.text}</Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+       )
+      ))}
+    </ul>
+  </div>
+           
           </div>
         )
       case 'Special Certificate Courses (For Yoga Teachers)':

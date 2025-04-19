@@ -50,7 +50,7 @@ const BrowseCourses = () => {
         setBreadcrumbs('900 hours YTTC (Advanced)')
       }
     } else if (type === 'most-popular') {
-      setCategory([campsArr[9], campsArr[10], c200hr[0], c900hr[4], campsArr[3], classesArr[10]])
+      setCategory([campsArr[8], campsArr[9], campsArr[10], campsArr[11], campsArr[12], classesArr[10]])
       setBreadcrumbs('Most Popular Yoga Courses')
     } else if (type === 'camps-workshops') {
       setCategory([...campsArr])
@@ -192,18 +192,7 @@ const BrowseCourses = () => {
               </AccordionItem>
             </Accordion> */}
             <Accordion allowZeroExpanded>
-              <AccordionItem style={{
-                border: breadcrumbs == 'Most Popular Yoga Courses' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Most Popular Yoga Courses' && '8px'
-              }}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    <Link to="/courses/browse/most-popular">
-                      <p> Most Popular Yoga Courses</p>
-                    </Link>
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-              </AccordionItem>
+              
 
 
               <AccordionItem style={{
@@ -220,6 +209,7 @@ const BrowseCourses = () => {
                   </AccordionItemButton>
                 </AccordionItemHeading>
               </AccordionItem>
+
               <AccordionItem style={{
                 border: breadcrumbs == '500 hours YTTC (Intermediate)' && '2px solid #CA4625',
                 borderRadius: breadcrumbs == '500 hours YTTC (Intermediate)' && '8px'
@@ -249,7 +239,22 @@ const BrowseCourses = () => {
                 </AccordionItemHeading>
               </AccordionItem>
 
-              <AccordionItem style={{
+              <AccordionItem
+                style={{
+                  border: breadcrumbs == 'Additional Certificate Courses' && '2px solid #CA4625',
+                  borderRadius: breadcrumbs == 'Additional Certificate Courses' && '8px'
+                }}
+              >
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/additional-certificates">
+                      <p>Additional Certificates</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              {/* <AccordionItem style={{
                 border: breadcrumbs == 'Certified Yoga Courses' && '2px solid #CA4625',
                 borderRadius: breadcrumbs == 'Certified Yoga Courses' && '8px'
               }}>
@@ -260,7 +265,7 @@ const BrowseCourses = () => {
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
-              </AccordionItem>
+              </AccordionItem> */}
               <AccordionItem style={{
                 border: breadcrumbs == 'Regular Yoga Classes' && '2px solid #CA4625',
                 borderRadius: breadcrumbs == 'Regular Yoga Classes' && '8px'
@@ -269,6 +274,19 @@ const BrowseCourses = () => {
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
                       <p>Regular Yoga Classes</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem style={{
+                border: breadcrumbs == 'Most Popular Yoga Courses' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Most Popular Yoga Courses' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular Yoga Courses</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -289,7 +307,7 @@ const BrowseCourses = () => {
                 </AccordionItemHeading>
               </AccordionItem>
 
-              <AccordionItem
+              {/* <AccordionItem
                 style={{
                   border: breadcrumbs == 'Special Certificate Courses (For Yoga Teachers)' && '2px solid #CA4625',
                   borderRadius: breadcrumbs == 'Special Certificate Courses (For Yoga Teachers)' && '8px'
@@ -302,22 +320,9 @@ const BrowseCourses = () => {
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
-              </AccordionItem>
+              </AccordionItem> */}
 
-              <AccordionItem
-                style={{
-                  border: breadcrumbs == 'Additional Certificate Courses' && '2px solid #CA4625',
-                  borderRadius: breadcrumbs == 'Additional Certificate Courses' && '8px'
-                }}
-              >
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    <Link to="/courses/browse/additional-certificates">
-                      <p>Additional Certificates</p>
-                    </Link>
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-              </AccordionItem>
+              
             </Accordion>
           </div>
           <div className="course-grid">
