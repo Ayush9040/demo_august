@@ -153,10 +153,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             url: '/courses/browse/ttc?type=200',//200-Hours
             text: 'View all 200 hours YTTC (Basic)',
           },
-          {
-            url: '/200-allcourses',//200-Hours
-            text: 'View all',
-          },
+          // {
+          //   url: '/200-allcourses',//200-Hours
+          //   text: 'View all',
+          // },
           // /200-hrs-part-time-ttc-online-english-batch-5
         ],
       },

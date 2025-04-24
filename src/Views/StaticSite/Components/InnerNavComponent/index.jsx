@@ -96,7 +96,7 @@ const InnerNavComponent = ({ abc }) => {
                 : Hamburger}
           </div>
 
-          <div className="main-logo" id={`${abc.color}`} >
+          <div className={isLoggedIn ? 'main-logo main-logo-2' : 'main-logo'} id={`${abc.color}`} >
 
           {isNutriDietLanding && (
               <div className='nutri_diet_nav_modify'>

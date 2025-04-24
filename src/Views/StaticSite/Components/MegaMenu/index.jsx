@@ -12,7 +12,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'YOGA RETREAT', link: '/alibaug', id: 17, key: 'RETREAT' },
     // { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
-    { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
+    { name: 'NUTRI DIET CLINIC', link: '/nutri-diet_landing', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     // { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
     { name: 'FACILITIES', link: '/facilities', id: 6, key: 'FACILITIES' },
@@ -453,7 +453,7 @@ const MegaMenu = ({ setNav }) => {
                 {/* <Link onClick={() => { setNav(false) }} to='/senior-citizen-workshop'><li>Senior Citizen Yoga Workshop - On Campus</li></Link> */}
                 <Link onClick={() => { setNav(false) }} to='/diabetes-camp'><li>Diabetes Yoga Camp - On Campus</li></Link>
               </ul>
-              <Link onClick={() => { setNav(false) }} to='/nutri-diet'>
+              <Link onClick={() => { setNav(false) }} to='/nutri-diet_landing'>
                 <h3 style={{ marginTop: '0.75rem' }} >NUTRI DIET CLINIC</h3></Link>
               <Link onClick={() => { setNav(false) }} to='/corporate-workshops'>
                 <h3 style={{ marginTop: '0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
