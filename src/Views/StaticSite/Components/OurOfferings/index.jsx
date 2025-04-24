@@ -13,6 +13,7 @@ import CommonBtn from '../commonbtn'
 import { Link, useNavigate } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
+import month_ttc from './images/3_month_ttc.jpg'
 
 const OurOfferings = () => {
 
@@ -33,6 +34,25 @@ const OurOfferings = () => {
   }, [isInteracting])
 
   const carouselData = [
+    {
+      name: '3-Month TTC',
+      description:
+        'Learn and witness marked improvement in your life, relationships, and work',
+      redirect: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
+      timeline: '3-month',
+      price: '40,000',
+      imgSrc: month_ttc,
+      height: '376px',
+    },
+    {
+      name: '7-month TTC',
+      description:
+        'With this course, you will acquire the skills necessary to master your mental, spiritual, and physical health and lead a fulfilling life.',
+      redirect: '/seven-month-ttc',
+      timeline: '7-month',
+      price: '60,000',
+      imgSrc: baseDomain + homeAssets.homeAsset11,
+    },
     {
       name: '7-day Yoga Health Camp',
       description:
@@ -69,15 +89,7 @@ const OurOfferings = () => {
       price: '1100',
       imgSrc: baseDomain + homeAssets.homeAsset10,
     },
-    {
-      name: '7-month TTC',
-      description:
-        'With this course, you will acquire the skills necessary to master your mental, spiritual, and physical health and lead a fulfilling life.',
-      redirect: '/seven-month-ttc',
-      timeline: '7-month',
-      price: '60,000',
-      imgSrc: baseDomain + homeAssets.homeAsset11,
-    },
+    
   ]
 
   const [smallDescription, setSmallDescription] = useState(
@@ -151,7 +163,7 @@ const OurOfferings = () => {
             {
               carouselData?.map((data, index) => (
                 <div className="course-offered" key={index} dataSettings={JSON.stringify(settings)}>
-                  <Link to={data?.redirect}>
+                  <Link to={data?.redirect} className={data?.height ? 'apply_this' : ''}>
                     <img src={data?.imgSrc} placeholder="none" alt="7-days-camp" />
                     <div className='image-overlay'></div>
                   </Link>

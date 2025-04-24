@@ -1143,13 +1143,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       setFormData2((prev) => ({
         ...prev,
         ...formData2, // Already contains the updated values
-        phone: phoneValue
+        phone: `${selectedCountryList.value}${phoneValue}`
       }));
 
       setFormData(prevFormData => ({
         ...prevFormData,
         ...formData2,
-
+        phone: `${selectedCountryList.value}${phoneValue}`
       }));
       // alert(JSON.stringify(formData2));
       // alert(JSON.stringify(formData));

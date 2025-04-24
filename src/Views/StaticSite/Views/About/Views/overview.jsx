@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { trackPageView } from '../../../../../CleverTap/pageViewEvents'
 import { idleMode } from '../../../../../CleverTap/pageViewEvents'
+import Facts from '../../../Components/Facts'
 
 const AboutUs = () => {
 
@@ -227,6 +228,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+      <Facts />
     </>
   )
 }

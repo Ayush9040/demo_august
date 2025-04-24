@@ -223,3 +223,113 @@
     text-align: justify;
   }
 }
+
+
+
+
+
+
+
+
+
+.experience-container{
+  background-color: #EBB38A87;
+  margin-top: 20px;
+  .experience-carousel{
+  display: grid!important;
+  grid-template-columns: 45% 45%;
+  width: auto!important;
+  align-items:flex-start;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  .heading-container{
+      margin-left: 10rem;
+  }
+  .carousel-content{
+      .name-status{
+          width: 70%;
+          margin: 3rem 10rem 2rem;
+          h3{
+              font-size: 2.5rem;
+              font-weight: 700;
+              margin-bottom: 00.5rem;
+          }
+          h4{
+              font-size: 2rem;
+              font-weight: 700;
+              color: var(--brick-red);
+              margin-bottom: 2rem;
+          }
+      }
+      .global-common-btn{
+          margin: 3rem 10rem;
+      }
+  }
+  .carousel-image{
+      width: 60%;
+      img{
+          width: 100%;
+      }
+  }
+  .custom-border{
+      margin-top: 1rem;
+  }
+}
+.slick-dots{
+  bottom: 0px!important;
+  li{
+      button{
+          &::before{
+              color: #fff;
+              opacity: 1;
+          }
+      }
+  }
+  .slick-active{
+      button{
+          &::before{
+              color: var(--brick-red-1)!important;
+          }
+      }
+  }
+}
+}
+
+
+
+
+
+
+
+@media (max-width:900px){
+  .experience-container{
+      .experience-carousel{
+          grid-template-columns: 100%;
+          min-height: 500px;
+          .carousel-content{
+              .heading-container{
+                  margin-left: auto;
+              }
+              .name-status{
+              width: 80%;
+              margin: 2rem auto;
+              p{
+                  text-align: justify;
+              }
+              }
+          }
+          .carousel-image{
+              width: 80%;
+              margin: 0 auto;
+              margin-top: auto;
+              margin-bottom: 0;
+          }
+      }
+  }
+  .experience-container .experience-carousel .carousel-content .global-common-btn{
+      margin: 5rem 10%;
+  }
+  .experience-container .experience-carousel {
+      margin-bottom: 5rem;
+  }
+  }

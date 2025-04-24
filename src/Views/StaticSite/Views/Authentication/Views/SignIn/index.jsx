@@ -709,6 +709,7 @@ const SignIn = () => {
   // create user after the final step validation
   const verifySignupOTP = async (userDetails, type, token) => {
     console.log("User Details from verifySign ", userDetails, type, token, getemail)
+    // alert(type)
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -772,14 +773,15 @@ const SignIn = () => {
     else if ((validatePhoneNumber(`${phoneNumber.dialCode}${details.phoneNumber}`).length > 0) && signUpType != 'mobile') {
       // console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
-      setIsToast(true)
+      // setIsToast(true)
     }
-    else if (signUpType != 'mobile' && !isMobileVerified) {
-      // setFormData({ ...details, errorIndex: 11 });
-      setIsToast(true)
-    }
+    // else if (signUpType != 'mobile' && !isMobileVerified) {
+    //   // setFormData({ ...details, errorIndex: 11 });
+    //   // setIsToast(true)
+    //   // alert("Hello")
+    // }
     else {
-      if (userDetails?.otp?.length == 4 && type != 'mobile') {//valid OTP
+      if (userDetails?.otp?.length == 4 || type == 'email') {//valid OTP
         // alert("From otp ")
         setIsBtnLoad(true)
         setFormData({ ...formData, errorIndex: 0 });
@@ -854,7 +856,7 @@ const SignIn = () => {
           else {//google user
             try {
               let response = await axios.post(//send OTP for mobile
-                `${authBaseDomain}/authdoor/google/signup`,
+                `${authBaseDomain}/authdoor/email/verify-otp`,
                 payload,
                 {
                   headers: {
@@ -927,6 +929,7 @@ const SignIn = () => {
       else {
         console.log("User details from Email ", userDetails)
         console.log(isMobileVerified);
+        // alert("Hello this is google signup")
 
         // if (isMobileVerified) {
         //   const number = parsePhoneNumber(userDetails.phoneNumber);
@@ -1159,7 +1162,7 @@ const SignIn = () => {
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
-
+            // SetIsAlreadyRegistered(true)
             // alert('failed')
           }
 
@@ -1196,6 +1199,7 @@ const SignIn = () => {
           }
           else {
             setErrorMessage(err.data.error)
+            SetIsAlreadyRegistered(true)
           }
           setIsBtnLoad(false)
         }
@@ -1866,7 +1870,8 @@ const SignIn = () => {
                 <path d="M11.8334 1.84199L10.6584 0.666992L6.00008 5.32533L1.34175 0.666992L0.166748 1.84199L4.82508 6.50033L0.166748 11.1587L1.34175 12.3337L6.00008 7.67533L10.6584 12.3337L11.8334 11.1587L7.17508 6.50033L11.8334 1.84199Z" fill="#C0C1C2" />
               </svg>
             </div>
-          </div>}
+          </div>
+          }
 
         <div className={pageIndex <= 2 ? 'signin-details' : 'signin-details f-height'}>
 
@@ -2321,7 +2326,7 @@ const SignIn = () => {
                           {/* {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>} */}
                           {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                         </div >
-                        {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>}
+                        {/* {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>} */}
                       </div>
                       {isCountryContainer &&
                         <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
@@ -2422,7 +2427,7 @@ const SignIn = () => {
                         {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
                     </div>}
 
-                  <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+                  <button type='click' className={isBtnLoad ? 'primary-btn' : 'primary-btn '} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
                   {/* {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                       <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
@@ -2634,7 +2639,7 @@ const SignIn = () => {
                         {/* {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>} */}
                         {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                       </div >
-                      {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>}
+                      {/* {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>} */}
                     </div>
 
                     {isCountryContainer &&

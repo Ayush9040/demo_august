@@ -221,6 +221,17 @@ const Facilities = () => {
               </span>
             </Link>
           </li>
+
+          <li
+            onClick={() => {
+              slider.current.slickGoTo(8, false)
+            }}
+          >
+            <Link to="/museum-of-classical-yoga">
+              <span>Museum</span>
+              {/* <span className={activeSlide === 8 && 'active'}>Gazebo</span> */}
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="facilities-info" id="preview">

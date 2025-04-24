@@ -65,10 +65,14 @@ h4{
 .card-content-activity .explore {
     display: block;
     cursor: pointer;
+ 
 }
 
 .card-container:hover .card-content-activity .explore {
     display: block;
+    @media(max-width:900px) {
+        margin-top: 70px;
+    }
 }
 
 .card-container h1 {

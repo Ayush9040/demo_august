@@ -4,7 +4,7 @@ import SectionComponent from '../../../Components/SectionComponent'
 import { socialPageData } from '../../../utils/socialPageData'
 import './style.scss'
 // import GiftingImg from '../../../assets/images/gifting2a-02.png'
-import baseDomain,{ socialResponsibilityAssets } from '../../../assets/images/imageAsset'
+import baseDomain, { socialResponsibilityAssets } from '../../../assets/images/imageAsset'
 // import { homeAssets } from '../../../assets/images/imageAsset'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -15,11 +15,11 @@ const SocialResponsibility = () => {
 
   const location = useLocation()
 
-  const social = { 
-    title:'social-responsibility',
-    color:'white',
-    menuColor:'white',
-    menuItems:[]
+  const social = {
+    title: 'social-responsibility',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: []
   }
 
   useEffect(() => {
@@ -27,10 +27,10 @@ const SocialResponsibility = () => {
   }, [])
   return (
     <>
-      { metaDataObj[location.pathname] && 
-    <Helmet
-      title={metaDataObj[location.pathname || '']?.title || ''}
-    /> }
+      {metaDataObj[location.pathname] &&
+        <Helmet
+          title={metaDataObj[location.pathname || '']?.title || ''}
+        />}
       <div className="social-res-internal">
         <CommonBanner
           isLeftContent={false}
@@ -48,7 +48,7 @@ const SocialResponsibility = () => {
           bannerImg={`${baseDomain}${socialResponsibilityAssets.schoolChildren}`}
           overlay="#61829DD4"
         >
-          <InnerNavComponent abc={ social } />
+          <InnerNavComponent abc={social} />
         </CommonBanner>
         <div className="social-res-sections">
           {socialPageData.map((item, i) => (
@@ -57,6 +57,7 @@ const SocialResponsibility = () => {
               title={item.title}
               image={item.image}
               description={item.description}
+              url={item.url}
             />
           ))}
         </div>

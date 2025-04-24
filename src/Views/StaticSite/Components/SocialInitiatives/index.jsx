@@ -31,7 +31,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${socialInitiativeNew.socialNew1}`
   const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
   const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
-  let images = [social_1, Police, social_3]
+  let images = [social_1, social_3, Police]
   let ALT = ['Annam Brahma', 'Police', 'BMC']
 
   const [image, setImage] = useState(AnnamBrahma)
@@ -79,10 +79,11 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
 
               return (
                 <div key={i} className="social-initiative-wrap">
-                  <h1>{item.title}</h1>
+
+                  {item.url ? <Link to={item.url}><h1>{item.title}</h1></Link> : <h1>{item.title}</h1>}
 
                   <p>{item.description}</p>
-                  {item.url}
+                  {/* {item.url} */}
                 </div>
               )
             })}

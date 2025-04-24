@@ -2,6 +2,7 @@ import React from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import nispand_1 from './images/nispand_1.png'
 //import { Link } from 'react-router-dom'
 
 const Nispand = () => {
@@ -49,7 +50,7 @@ const Nispand = () => {
         </div>
       </div>
       <div className='app-preview'>
-        <img src={`${baseDomain}${homeAssets.homeAsset24}`} alt='Nispand-app'/>
+        <img src={nispand_1} alt='Nispand-app'/>
       </div>
     </div>
   )

@@ -5,11 +5,22 @@ import baseDomain, {
 export const socialPageData = [
   {
     title: 'Annam Brahma',
-    description: `Annam Brahma is a social initiative aimed at serving
-    fresh, nutritious, and healthy food to the underprivileged
-    citizens of the country without discrimination. The food is
-    served to over 1000 people daily, 365 days a year.`,
+    description: `Annambramha is a movement rooted in service, ensuring sattvik meals reach those who need them most. Since 2018, we have served 40+ lakh meals, bringing nourishment with dignity. Today, we provide meals daily at VN Desai & Bhabha hospitals, and with an ambitious vision, we are expanding to more hospitals and slums, striving to serve 1.5 lakh meals per month in 2025. Hunger should never be a barrier to well-being. Stand with us in this mission to serve, uplift, and transform lives.`,
     image: `${baseDomain}${socialResponsibilityAssets.annamBrahma}`,
+    url: 'https://www.annambrahma.org/'
+  },
+  {
+    title: 'Police',
+    description: `We understand the holistic health requirements for those
+    who deal with terror, anti-social elements, and other
+    disturbing situations on a daily basis. Paying tribute to
+    their indomitable spirit, we have provided these special
+    task forces with free yoga sessions for over a decade. We
+    have trained over 10,000 personnel in yoga techniques
+    through these programmes to enhance their ability to
+    manage and eventually overcome PTSD and similar
+    psychological and physical ailments.`,
+    image: `${baseDomain}${socialResponsibilityAssets.police}`,
   },
   {
     title: 'Police',
@@ -70,7 +81,7 @@ export const socialPageData = [
     undertaken to plant more trees and to expand the green
     cover. Through these efforts, we raise awareness locally and
     work to preserve our environment for generations to come.`,
-    image:`${baseDomain}${socialResponsibilityAssets.palnting}`,
+    image: `${baseDomain}${socialResponsibilityAssets.palnting}`,
   },
-  
+
 ]

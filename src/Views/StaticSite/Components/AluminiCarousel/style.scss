@@ -1,36 +1,43 @@
 .alumni-main-div {
   background-color: #edb58c;
-  padding: 10rem ;
+  padding: 10rem;
+
   //padding-right: 5rem;
   .alumni-grid {
     width: 100%;
-    .slick-slider{
-      .slick-arrow{
-       &.slick-prev{
+
+    .slick-slider {
+      .slick-arrow {
+        &.slick-prev {
           margin-top: -7rem !important;
         }
       }
     }
   }
+
   .global-common-btn {
     margin: 0 auto;
   }
+
   .alumini-carousel-heading {
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 3rem;
     padding-left: 20rem;
-    
+
   }
+
   .alumini-carousel-info {
     display: flex;
     // padding-left: 10rem;
     //padding-right: 10rem;
     padding: 2rem 20rem;
+
     .alluminiImg {
       width: 300px;
       height: 280px;
       border-radius: 20px;
+
       // padding-left: 5rem;
       // padding-right: 5rem;
       img {
@@ -39,18 +46,23 @@
         object-fit: contain;
       }
     }
+
     .alumini-carousel-details {
       padding-left: 5rem;
+
       .alumini-carousel-title {
         font-size: 2.5rem;
         font-weight: bold;
       }
+
       p {
         padding-top: 2rem;
       }
     }
   }
+
   .slick-dots {
+
     //bottom: 0px !important;
     li {
       button {
@@ -60,6 +72,7 @@
         }
       }
     }
+
     .slick-active {
       button {
         &::before {
@@ -71,28 +84,49 @@
 }
 
 @media (max-width: 1300px) {
-  .alumni-main-div{
-    .alumini-carousel-info{
+  .alumni-main-div {
+    .alumini-carousel-info {
       padding: 2rem 10rem;
     }
   }
 }
+
 @media (max-width: 900px) {
   .alumni-main-div {
-    padding: 2rem;
+    padding: 2rem 6rem;
+
     .alumini-carousel-info {
       width: 100%;
       display: block;
       padding-right: 0;
+      padding-left: 10px !important;
+
       .alluminiImg {
         margin: 0 auto;
+        width: 100% !important;
       }
-      .alumini-carousel-details {padding-left: 0px;
+
+      // width: 300px;
+      // height: 280px;
+      // border-radius: 20px;
+      // img {
+      //   width: 100%;
+      //   height: 100%;
+      //   object-fit: contain;
+      // }
+      .alumini-carousel-details {
+        padding-left: 0px;
+
         .alumini-carousel-title {
           width: 100%;
           margin-top: 2rem;
         }
       }
     }
+
+    .alumini-carousel-heading {
+      padding-left: 14rem;
+    }
+
   }
 }

@@ -20,6 +20,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
   const [dropdown, setDropdown] = useState(false)
   const [scrollClass, setScrollClass] = useState(false)
   const [scrollImg, setScrollClImg] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
   const dispatch = useDispatch()
   const [bold, setBold] = useState(0)
   const [cartItems, setCartItems] = useState(0)
@@ -63,6 +64,14 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
     }
   }, [cart])
 
+  useEffect(() => {
+    if (location.pathname === '/blogs') {
+      setShowSearch(true)
+    } else {
+      setShowSearch(false)
+    }
+  }, [showSearch])
+
 
   console.log('hasItems', hasItems);
   console.log('cartItems from Nav', cartItems);
@@ -96,8 +105,12 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              <Link to='/search'>
+              {
+                showSearch && (
+                  <Link to='/search'>
                 <li onClick={() => { navigate('/') }} >{<img src='/images/search.svg' alt='' className='down-arrow' loading='lazy' />}</li></Link>
+                )
+              }
               {/* <Link to="/shop">
                 <li>{Cart}</li>
               </Link> */}

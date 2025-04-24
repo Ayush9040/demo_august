@@ -36,6 +36,7 @@ const InnerNavComponent = ({ abc }) => {
   const [dropdown, setDropdown] = useState(false)
   const [bold, setBold] = useState(0)  // eslint-disable-line
   const [cartItems, setCartItems] = useState(0)
+  const [showSearch, setShowSearch] = useState(false)
   const location = useLocation()
   const dispatch = useDispatch()
   
@@ -74,6 +75,13 @@ const InnerNavComponent = ({ abc }) => {
   
 
   const isNutriDietLanding = location.pathname.includes("/nutri-diet_landing");
+  useEffect(() => {
+      if (location.pathname === '/blogs') {
+        setShowSearch(true)
+      } else {
+        setShowSearch(false)
+      }
+    }, [showSearch])
 
   // console.log(bold,'bold')
   return (
@@ -162,8 +170,9 @@ const InnerNavComponent = ({ abc }) => {
 
             {
               !isNutriDietLanding && (
+              showSearch && (
                 <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
-              )
+              ))
             }
 
 

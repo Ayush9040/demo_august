@@ -7,7 +7,7 @@ const Thankyou = () => {
 
   const navigate = useNavigate()
   const location = useLocation();
-  const [ showp, setShowp] = useState(false);
+  const [showp, setShowp] = useState(false);
   const currentPath = location.pathname;
   const [courseDetails, setCourseDetails] = useState({ courseName: '', courseFee: '', courseStartDate: '' });
   useEffect(() => {
@@ -86,11 +86,11 @@ const Thankyou = () => {
         currentPath.includes("/enrollment_thankyou/200-hrs-part-time-ttc-online-english") ||
         currentPath.includes("/enrollment_thankyou/200-hrs-part-time-ttc-online") ||
         currentPath.includes("/enrollment_thankyou/weekend-teacher-training-course") ||
-        currentPath.includes("/enrollment_thankyou/500-hrs-online-yoga-teacher-training-course-intermediate-level") || 
-        currentPath.includes("/enrollment_thankyou/3-months-advanced-teacher-training-course") || 
-        currentPath.includes("/enrollment_thankyou/900-hours-advanced-teacher-training-course") || 
-        currentPath.includes("/enrollment_thankyou/seven-month-ttc") || 
-        currentPath.includes("/enrollment_thankyou/one-year-ttc") || 
+        currentPath.includes("/enrollment_thankyou/500-hrs-online-yoga-teacher-training-course-intermediate-level") ||
+        currentPath.includes("/enrollment_thankyou/3-months-advanced-teacher-training-course") ||
+        currentPath.includes("/enrollment_thankyou/900-hours-advanced-teacher-training-course") ||
+        currentPath.includes("/enrollment_thankyou/seven-month-ttc") ||
+        currentPath.includes("/enrollment_thankyou/one-year-ttc") ||
         currentPath.includes("/enrollment_thankyou/two-year-ttc")
       )
     ) {
@@ -99,77 +99,77 @@ const Thankyou = () => {
       setShowp(false);
     }
   }, [currentPath]); // Dependency ensures effect runs when `currentPath` changes
-  
+
   const getMessage = () => {
     if (currentPath.includes("/enrollment_thankyou/one-month-ttc")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 1 Month Yoga Teacher Training Course - Batch 1</b> (1st April to 30th April 2025).
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 1 Month Yoga Teacher Training Course - Batch 1</b> ({localStorage.getItem('courseStartDate')}).
           For any further queries, you can connect with your Course Coordinator Manijaji (Email: <b>1mttc@theyogainstitute.org</b> or send a WhatsApp message on <b>+91 9820560142</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/200-hrs-part-time-ttc-on-campus-english")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 2</b> (14th April to 7th June 2025).
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 2</b> ({localStorage.getItem('courseStartDate')}).
           For any further queries, you can connect with your Course Coordinator Igaji (Email: <b>enquiry@theyogainstitute.org</b> or send a WhatsApp message on <b>+91 9599804100</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/200-hrs-part-time-ttc-online-english")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 3</b> (24th March to 17th May 2025).
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 3</b> ({localStorage.getItem('courseStartDate')}).
           For any further queries, you can connect with your Course Coordinator Manijaji (Email: <b>1mttc@theyogainstitute.org</b> or send a WhatsApp message on <b>+91 9820560142</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/200-hrs-part-time-ttc-online")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course (Hindi)- Batch 4</b>  (5th May to 28th June 2025). 
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course (Hindi)- Batch 4</b>  ({localStorage.getItem('courseStartDate')}).
           For any further queries, you can connect with your Course Coordinator Madhuji (Email: <b>1mttchindityi@gmail.com</b> or send a WhatsApp message on <b>+91 9820560142</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/weekend-teacher-training-course")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 4</b> (22nd March to 8th June 2025).
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course - Batch 4</b> ({localStorage.getItem('courseStartDate')}).
           For any further queries, you can connect with your Course Coordinator Igaji (Email: <b>enquiry@theyogainstitute.org</b> or send a WhatsApp message on <b>+91 9599804100</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/500-hrs-online-yoga-teacher-training-course-intermediate-level")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>500-Hours 3 Months Intermediate Online Yoga Teacher Training Course</b> (19th May-9th August 2025). For any further queries,you can connect with your Course Coordinator Manjuji (Email:  manjjumkhatri.tyi@gmail.com or send a WhatsApp message on +91 8286027999).
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>500-Hours 3 Months Intermediate Online Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Manjuji (Email:  manjjumkhatri.tyi@gmail.com or send a WhatsApp message on +91 8286027999).
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/3-months-advanced-teacher-training-course")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for 900-Hours <b>3 Months Advanced Yoga Teacher Training Course</b> (26th April-20th July 2025). For any further queries,you can connect with your Course Coordinator Diptiji (Email:  3mttc@theyogainstitute.in or send a WhatsApp message on +919969338132)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for 900-Hours <b>3 Months Advanced Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Diptiji (Email:  3mttc@theyogainstitute.in or send a WhatsApp message on +919969338132)
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/900-hours-advanced-teacher-training-course")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 4 Months Advanced Online Yoga Teacher Training Course</b> (9th June-27th Sep 2025). For any further queries,you can connect with your Course Coordinator Jaisriji (Email:  4mttc@theyogainstitute.org or send a WhatsApp message on +919821426018)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 4 Months Advanced Online Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Jaisriji (Email:  4mttc@theyogainstitute.org or send a WhatsApp message on +919821426018)
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/seven-month-ttc")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 4 Months Advanced Hybrid Yoga Teacher Training Course</b> (1st April, 2025). For any further queries,you can connect with your Course Coordinator Manijaji (Email:  7mttc@theyogainstitute.in or send a WhatsApp message on +919820560142)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 7 Months Advanced Hybrid Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Manijaji (Email:  7mttc@theyogainstitute.in or send a WhatsApp message on +919820560142)
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/one-year-ttc")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 1 Year Advanced Hybrid Yoga Teacher Training Course</b> (1st April, 2025). For any further queries,you can connect with your Course Coordinator Omprakashji (Email:  1yearttc@theyogainstitute.in or send a WhatsApp message on +919892064706)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 1 Year Advanced Hybrid Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Omprakashji (Email:  1yearttc@theyogainstitute.in or send a WhatsApp message on +919892064706)
         </p>
       )
     } else if (currentPath.includes("/enrollment_thankyou/two-year-ttc")) {
       return (
         <p className="message">
-          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 2 Years Advanced Hybrid Yoga Teacher Training Course</b> (5th April, 2025). For any further queries,you can connect with your Course Coordinator Shilpaji (Email:  2yearsttc@theyogainstitute.in or send a WhatsApp message on +918169484486)
+          Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world.You have been successfully enrolled for <b>900-Hours 2 Years Advanced Hybrid Yoga Teacher Training Course</b> ({localStorage.getItem('courseStartDate')}). For any further queries,you can connect with your Course Coordinator Shilpaji (Email:  2yearsttc@theyogainstitute.in or send a WhatsApp message on +918169484486)
         </p>
       )
     } else {

@@ -29,7 +29,7 @@
 }
 .decades{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     justify-content: space-around;
 }
 
@@ -127,10 +127,11 @@
     }
     .decades {
         margin-top: 5rem;
+        gap: 10px;
     }
     .decades-option {
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
     }
 }
 

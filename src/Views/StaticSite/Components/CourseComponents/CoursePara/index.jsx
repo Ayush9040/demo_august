@@ -22,7 +22,14 @@ const CoursePara = ({ content }) => {
           onClick={handleTitleClick}
           style={{ cursor: content?.title === 'Apply Now' ? 'pointer' : 'default' }}
         >
-          {(isSatsangPage || isBAPage) && content?.title === 'Apply Now' ? ' ' : content.title} 
+          {(isSatsangPage || isBAPage) && (content?.title === 'Apply Now' || content?.title === 'link') ? ' ' : content.title} 
+          {(isSatsangPage) && content?.title === 'link' && (
+            <>Click <a href="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/MA+Yoga+Shastra+TYI+syllabus.pdf" target="_blank" rel="noopener noreferrer" style={{color: 'blue', textDecoration: 'underline'}}>here</a> to view the syllabus</>
+          ) } 
+
+{(isBAPage) && content?.title === 'link' && (
+            <>Click <a href="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/UpdatedBAYogashastraNEP20Final1.pdf" target="_blank" rel="noopener noreferrer" style={{color: 'blue', textDecoration: 'underline'}}>here</a> to view the syllabus</>
+          ) } 
          
           {isSatsangPage && content?.title === 'How to Apply' && (
   <>

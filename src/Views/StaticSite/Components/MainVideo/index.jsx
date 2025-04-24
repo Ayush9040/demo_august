@@ -14,8 +14,8 @@ const MainVideo = () => {
   const isInView = window.innerWidth < 500;
   const videoSrc =
     isInView ?
-      "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/PlayVideo/tyi-home-bg-mobile.mp4"
-      : "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/PlayVideo/tyi-home-bs.mp4";
+      "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/mobile-home-video-TYI.mp4"
+      : "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/desktop-home-video-TYI.mp4";
 
 
       const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);

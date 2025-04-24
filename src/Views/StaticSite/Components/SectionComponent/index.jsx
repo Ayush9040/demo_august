@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { Link } from 'react-router-dom'
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SectionComponent = ({
   page,
@@ -10,6 +11,15 @@ const SectionComponent = ({
   url,
   sectionId,
 }) => {
+
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/donation-form");
+  };
+
   return (
     <div id={`${sectionId}`}>
       <div className="content-container pd-career">
@@ -19,11 +29,39 @@ const SectionComponent = ({
         <div className="text-content-right right-container">
           <div className="text-part">
             <div className="banner-heading">
+              <div className='donate_fixes'>
+              <div>
               <h1>
-                {title}
-                <div className="bottom-line"></div>
+                {url ? <Link to={url}>{title}</Link> : <>{title}</>}
+                
+
+                {/* {title} */}
+                
               </h1>
+              <div className="bottom-line"></div>
             </div>
+            {location.pathname === "/social-initiatives" && (
+                  <button
+                    onClick={handleClick}
+                    className='donate_btn'
+                    style={{
+                      backgroundColor: '#CA4625',
+                      color: '#FFFFFF',
+                      padding: '0.5rem 1.25rem',
+                      fontSize: '1.8rem',
+                      marginLeft: '1rem',
+                      borderRadius: '5rem',
+                      fontWeight: 'bold',
+                      borderColor: '#CA4625',
+                      border: 'none'
+
+                    }}
+                  >
+                    Donate
+                  </button>
+                )}
+              </div>
+              </div>
             <p>{description}</p>
           </div>
           {page === 'donation' ? (
