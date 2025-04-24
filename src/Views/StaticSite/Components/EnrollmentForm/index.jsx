@@ -268,11 +268,16 @@ const Enrollment = () => {
       setEmpty(19);
     } else {
       setIsLoad(true);
+      const identityKey = `+${user.data.dialCode}${user.data.phoneNumber}`;
+      // const identityKey = '++919035435720';
+      const identityVerified = identityKey.includes('++')
+  ? `+${user.data.dialCode}${user.data.phoneNumber}`
+  : `+${user.data.dialCode}${user.data.phoneNumber}`;
       let body = {
         personalDetails: {
           name: formData.name,
           emailId: formData.email,
-          phone: formData.phone,
+          phone: identityVerified,
           addressLane1: formData.address1,
           addressLane2: formData.address2,
           country: formData.country,
@@ -282,7 +287,7 @@ const Enrollment = () => {
           gender: formData.gender?.toUpperCase(),
           age: formData.AGE,
           nationality: formData.nationality,
-          identity:`+${user.data.dialCode}${user.data.phoneNumber}`
+          identity: identityVerified
         },
         startDate: formData.startDate,
         // endDate: formData.endDateFormat,
@@ -311,7 +316,7 @@ const Enrollment = () => {
         personalDetails: {
           name: formData.name,
           emailId: formData.email,
-          phone: formData.phone,
+          phone: identityVerified,
           addressLane1: formData.address1,
           addressLane2: formData.address2,
           country: formData.country,
@@ -321,7 +326,7 @@ const Enrollment = () => {
           gender: formData.gender?.toUpperCase(),
           age: formData.AGE,
           nationality: formData.nationality,
-          identity:`+${user.data.dialCode}${user.data.phoneNumber}`
+          identity:identityVerified
         },
         startDate: formData.startDate,
         endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null,
