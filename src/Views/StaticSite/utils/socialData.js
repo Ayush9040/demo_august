@@ -13,12 +13,12 @@ export const socialData = [
     url: '',
   },
   
-  {
-    title: 'Underprivileged Children and BMC',
-    description:
-      'Since 1994, Yoga Education program for BMC School Students has been successfully running. The sessions are a mix of Yoga Asanas, Pranayamas, Kriyas and Philosophy and Yogic Games, for holistic development of the students.',
-    url: '',
-  },
+  // {
+  //   title: 'Underprivileged Children and BMC',
+  //   description:
+  //     'Since 1994, Yoga Education program for BMC School Students has been successfully running. The sessions are a mix of Yoga Asanas, Pranayamas, Kriyas and Philosophy and Yogic Games, for holistic development of the students.',
+  //   url: '',
+  // },
   {
     title: 'Police',
     description:
