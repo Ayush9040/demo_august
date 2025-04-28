@@ -41,10 +41,10 @@ import CommonBtn from '../../../Components/commonbtn';
 import ReactGA from 'react-ga4';
 import SubcriptionForm from '../../NutriDiet/Subscription';
 import { Pagination, Scrollbar, A11y } from "swiper/modules";
-import Vihar from './images/Vihar.webp'
-import VICHAR from './images/VICHAR.webp'
-import Ahar from './images/Ahar.webp'
-import ACHAAR from './images/ACHAAR.webp'
+import Vihar from './images/new_vihar.png'
+import VICHAR from './images/new_vichaar.png'
+import Ahar from './images/new_ahar.png'
+import ACHAAR from './images/new_achaar.png'
 import Vinita from './images/Vinita.webp'
 import Kreena from './images/Kreena.webp'
 import TYI_Mobile_v2 from './images/TYI_Mobile_v2.webp'
@@ -105,7 +105,7 @@ const NutriDietHero = () => {
       description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
-      category: 'Vihar',
+      category: 'Vichaar',
       img: VICHAR,
       subcategory: '(Thoughts & Mindset)',
       title: '"Echoes of the Mind"',
@@ -466,7 +466,7 @@ const NutriDietHero = () => {
                 <div className="avatars">
                   <img src={follower} alt="Community" />
                 </div>
-                <span className="customer-count">430+ Happy Customers</span>
+                <span className="customer-count">1000+ Happy Customers</span>
 
               </div>
 
