@@ -303,7 +303,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             Terms & Conditions
             <li>Fees are non- refundable and non-transferable.</li>
             <li>
-              Call on +91 9967429596 for appointments between 10:00 am to 6:30 pm IST
+              Call on +91 9967429596 for appointments between 10:00 am to 6:00 pm IST
               (Monday to Saturday).
             </li>
           </ol>

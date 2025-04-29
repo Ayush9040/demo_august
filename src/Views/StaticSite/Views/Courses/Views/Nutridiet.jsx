@@ -45,8 +45,8 @@ import Vihar from './images/new_vihar.png'
 import VICHAR from './images/new_vichaar.png'
 import Ahar from './images/new_ahar.png'
 import ACHAAR from './images/new_achaar.png'
-import Vinita from './images/Vinita.webp'
-import Kreena from './images/Kreena.webp'
+import Vinita from './images/Vinita_new.jpg'
+import Kreena from './images/Kreena_new.jpg'
 import TYI_Mobile_v2 from './images/TYI_Mobile_v2.webp'
 import frame_left_client from './images/frame_left_client.png'
 import copy from './images/copy.svg'
@@ -95,17 +95,17 @@ const NutriDietHero = () => {
       img: Vihar,
       subcategory: '(Lifestyle & Routine)',
       title: '"Flow of Life"',
-      description: 'Capturing the essence of movement, relaxation and daily habits'
+      description: 'Capturing the essence of movement, relaxation, and daily habits'
     },
     {
-      category: 'Achar',
+      category: 'Aachar',
       img: ACHAAR,
       subcategory: '(Discipline & Conduct)',
       title: '"Rhythm of Actions"',
       description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
-      category: 'Vichaar',
+      category: 'Vichar',
       img: VICHAR,
       subcategory: '(Thoughts & Mindset)',
       title: '"Echoes of the Mind"',
@@ -503,8 +503,8 @@ const NutriDietHero = () => {
                 <h3 className='benefit-card_spacing'>Holistic Approach:</h3>
 
                 <span className='benefitp'>
-                  This 100-year legacy of holistic health meets contemporary nutrition practices,
-                  focusing on the well-being of your body, mind, and spirit.
+                TYI’s 105-year legacy of holistic health meets contemporary nutrition practices, focusing on the well-being of your body, mind, and spirit.
+
                 </span>
               </div>
 
@@ -516,8 +516,7 @@ const NutriDietHero = () => {
                 </div>
                 <h3 className='benefit-card_spacing'>Personalized Plans:</h3>
                 <span className='benefitp'>
-                  Our experts craft customized nutrition strategies tailored to your unique health
-                  goals and lifestyle.
+                Our experts craft customized nutrition strategies tailored to your unique health goals and lifestyle.
                 </span>
               </div>
 
@@ -529,8 +528,7 @@ const NutriDietHero = () => {
                 </div>
                 <h3 className='benefit-card_spacing'>Sustainable Habits:</h3>
                 <span className='benefitp'>
-                  We go beyond temporary diets, emphasizing lasting, practical eating habits
-                  that can easily become part of your daily life.
+                We go beyond temporary diets, emphasizing lasting, practical eating habits that can easily become part of your daily life.
                 </span>
               </div>
 
@@ -542,8 +540,7 @@ const NutriDietHero = () => {
                 </div>
                 <h3 className='benefit-card_spacing'>Affordable for All:</h3>
                 <span className='benefitp'>
-                  {` Good health shouldn't be a luxury. Our budget-friendly plans ensure wellness is
-            accessible to everyone. `}
+                  {` Good health shouldn’t be a luxury. Our budget-friendly plans ensure wellness is accessible to everyone. `}
                 </span>
               </div>
 
@@ -555,9 +552,7 @@ const NutriDietHero = () => {
                 </div>
                 <h3 className='benefit-card_spacing'>Balanced and Practical Solutions:</h3>
                 <span className='benefitp'>
-                  Seamlessly blending traditional recipes with simple, homemade solutions, our
-                  approach fits even the busiest schedule, making healthy choices both realistic
-                  and achievable.
+                Seamlessly blending traditional recipes with simple, homemade solutions, our approach fits even the busiest schedules, making healthy choices both realistic and achievable.
                 </span>
               </div>
             </div>
@@ -625,7 +620,7 @@ const NutriDietHero = () => {
                 <div className="journey_second_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Consultation Call</h3>
-                    <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional needs for holistic health.</p>
+                    <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health</p>
                     <span className='card_p'><strong>(Mode: Offline | Online)</strong></span>
                   </div>
                 </div>
@@ -635,11 +630,11 @@ const NutriDietHero = () => {
                     <h3>Body Analysis</h3>
                     <span className='card_p'><p><strong>For offline consultations:</strong></p></span>
                     <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500', marginBottom: '20px'}}>
-                    <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more;</li></p>
+                    <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more</li></p>
                     </div>
                     <span className='card_p'><p><strong>For online clients:</strong></p></span>
                     <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500'}}>
-                    <p><li>Body measurements: height, weight, waist, and hip circumference, BMI</li></p>
+                    <p><li>Body measurements- height, weight, waist, and hip circumference, BMI</li></p>
                     </div>
                   </div>
                 </div>
@@ -647,30 +642,34 @@ const NutriDietHero = () => {
                 <div className="journey_fourth_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Biomedical Insights</h3>
-                    <p>Review medical reports including CBC, Lipid Profile, Liver Function Tests, Iron Function Tests, Vitamin D, and Vitamin B12 levels.</p>
-                    <p>If recent medical examinations have not been taken, health plan options should ideally be couple within three to six months.</p>
-                    <p>(Disclaimer: Pathological tests are not included in our service and must be conducted independently by client.)</p>
+                    <p>Review medical reports, including CBC, Lipid Profile, Kidney Function, Thyroid Profile, Liver Function Tests, Vitamin D, and Vitamin B12 levels.
+                    </p>
+                    <p>If necessary, recommend additional tests for a clearer health picture (reports should ideally be recent, within three to six months).</p>
+                    <p>(Disclaimer: Pathological tests are not included in our services and must be conducted independently by clients.)
+                    </p>
                   </div>
                 </div>
 
                 <div className="journey_fifth_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Detailed Client History</h3>
-                    <p>Health background, Medical history (e.g. past illness), allergies, or chronic conditions, Dietary preferences, and Current medication use.</p>
+                    <p>Health Background, Medical history (e.g., past illnesses, surgeries, or chronic conditions), Present issues, Family history & Nutrient Deficiencies 
+                    </p>
                   </div>
                 </div>
 
                 <div className="journey_sixth_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Holistic Health Assessment</h3>
-                    <p>Lifestyle factors, Sleep patterns, Stress levels, Physical Activities, Hydration, Eating habits and food preferences.</p>
+                    <p>Lifestyle Factors: Sleep patterns, Stress levels, Mindset, Emotions, Hydration, Eating habits and food preferences.
+                    </p>
                   </div>
                 </div>
 
                 <div className="journey_seventh_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Dietary Habits Analysis</h3>
-                    <p>Detailed record of dietary choices and processing meal timing, portion sizes, and frequency of nutrient-dense versus processed foods to identify gaps and areas for improvement.</p>
+                    <p>Detailed recall of dietary intake and assessing meal timing, portion sizes, and frequency of nutrient-dense versus processed foods to identify gaps and areas for improvement.</p>
                   </div>
                 </div>
 
@@ -678,7 +677,7 @@ const NutriDietHero = () => {
                   <div className="journey_card-content">
                     <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
                     <div style={{marginLeft: '15px', fontSize: '16px', fontWeight:'500', color: '#333333'}}>
-                    <p><li>Custom nutrition guidance based on your health goals, preferences, and specific dietary requirements to optimize your wellbeing.</li></p> <br/>
+                    <p><li>Customized diet plan based on your nutritional needs, health goals, and food preferences.</li></p> <br/>
                     <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                   </div>
                   </div>
@@ -694,7 +693,7 @@ const NutriDietHero = () => {
                 <div className="journey_ten_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Exercise Recommendations</h3>
-                    <p> Resources of exercises suited to  your fitness level and health objectives will be shared. </p>
+                    <p> Resources of exercises suited to  your fitness level and health objectives will be shared.  </p>
                   </div>
                 </div>
 
@@ -708,7 +707,8 @@ const NutriDietHero = () => {
                 <div className="journey_twelve_content_wrapper">
                   <div className="journey_card-content">
                     <h3>Follow-ups & Progress Monitoring</h3>
-                    <p> Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being.
+                    <p> Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being. 
+
 
                     </p>
                     <p>These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
@@ -740,14 +740,15 @@ const NutriDietHero = () => {
                   <div className="timeline-card step-1">
                     <div className="card-content">
                       <h3>Enrollment</h3>
-                      <p>Enrollment and Appointment Scheduling</p>
+                      <p>Enrollment and Appointment Scheduling </p>
                     </div>
                   </div>
 
                   <div className="timeline-card step-2">
                     <div className="card-content">
                       <h3>Consultation Call</h3>
-                      <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health. <br /> <span className='cardmobile'>(Mode: Offline / Online)</span></p>
+                      <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health 
+                      <br /> <span className='cardmobile'>(Mode: Offline / Online)</span></p>
                     </div>
                   </div>
 
@@ -755,9 +756,9 @@ const NutriDietHero = () => {
                     <div className="card-content">
                       <h3>Body Analysis</h3>
                       <span className='card_p'><p><strong>For offline consultations:</strong> </p></span>
-                      <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age, and more.</li></p> <br />
+                      <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more</li></p> <br />
                       <span className='card_p'><p><strong>For online consultations:</strong></p></span>
-                      <p><li>Body measurements - height, weight, waist, and hip circumference, BMI.</li> </p>
+                      <p><li>Body measurements- height, weight, waist, and hip circumference, BMI           </li> </p>
                     </div>
                   </div>
 
@@ -766,9 +767,10 @@ const NutriDietHero = () => {
                   <div className="timeline-card step-4">
                     <div className="card-content">
                       <h3>Biomedical Insights</h3>
-                      <p>Review medical reports including CBC, Lipid Profile, Liver Function Tests, Iron Function Tests, Vitamin D, and Vitamin B12 levels.</p> <br />
-                      <p>If recent medical examinations have not been taken, health plan options should ideally be couple within three to six months.</p> <br />
-                      <p>(Disclaimer: Pathological tests are not included in our service and must be conducted independently by client.)</p>
+                      <p>Review medical reports, including CBC, Lipid Profile, Kidney Function, Thyroid Profile, Liver Function Tests, Vitamin D, and Vitamin B12 levels.</p> <br />
+                      <p>If necessary, recommend additional tests for a clearer health picture (reports should ideally be recent, within three to six months).</p> <br />
+                      <p>(Disclaimer: Pathological tests are not included in our services and must be conducted independently by clients.)
+                      </p>
                     </div>
                   </div>
 
@@ -777,7 +779,7 @@ const NutriDietHero = () => {
                   <div className="timeline-card step-5">
                     <div className="card-content">
                       <h3>Detailed Client History</h3>
-                      <p>Health background, Medical history (e.g. past illness), allergies, or chronic conditions, Dietary preferences, and Current medication use.</p>
+                      <p>Health Background, Medical history (e.g., past illnesses, surgeries, or chronic conditions), Present issues, Family history & Nutrient Deficiencies</p>
                     </div>
                   </div>
 
@@ -814,7 +816,7 @@ const NutriDietHero = () => {
                   <div className="timeline-card step-10">
                     <div className="card-content">
                       <h3>Exercise Recommendations</h3>
-                      <p>Resources of exercises suited to your fitness level and health objectives will be shared.</p>
+                      <p>Resources of exercises suited to  your fitness level and health objectives will be shared.</p>
                     </div>
                   </div>
 
@@ -827,13 +829,13 @@ const NutriDietHero = () => {
                   </div>
 
 
-                  <div className="timeline-card step-12">
+                  {/* <div className="timeline-card step-12">
                     <div className="card-content">
                       <h3>Follow-ups & Progress Monitoring</h3>
-                      <p>Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being.</p> <br />
+                      <p>Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being. </p> <br />
                       <p> These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </main>
@@ -851,7 +853,7 @@ const NutriDietHero = () => {
               <div className="contact-box">
                 <button className="contact-button">Contact US</button>
                 <div className="contact-details">
-                  <div className="contact-item">
+                  <div className="contact-item" style={{ justifyContent: 'start'}}>
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
@@ -899,7 +901,7 @@ const NutriDietHero = () => {
                     {/* <ToastContainer /> */}
                   </div>
 
-                  <div className="contact-item">
+                  <div className="contact-item wd" style={{ justifyContent: 'start'}}>
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
@@ -911,7 +913,7 @@ const NutriDietHero = () => {
                     </div>
                   </div>
 
-                  <div className="contact-item">
+                  <div className="contact-item wt" style={{ justifyContent: 'start'}}>
                     <div className='contact_social_wrapper'>
                       <span className="contact-icon">
                         <img src={phoneicon} alt="" />
@@ -931,16 +933,16 @@ const NutriDietHero = () => {
               <h3>→ Terms and conditions:</h3>
               <ol type="a">
                 <li>
-                  We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.
+                We kindly request our overseas clients to schedule consultation calls in alignment with Indian business hours for seamless communication and support. Thank you for your understanding and cooperation.
                 </li>
                 <li>
-                  Please note that all fees are non-refundable and non-transferable under any circumstances.
+                Please note that all fees are non-refundable and non-transferable under any circumstances.
                 </li>
                 <li>
-                  The results may vary according to the age, genetics, medical conditions, physical activity and gender and diet compliance.
+                The results may vary according to the age, genetics, medical conditions, physical activity and gender and diet compliance.
                 </li>
                 <li>
-                  For the seamless execution of the program, we kindly request timely adherence, as we may not be able to accommodate any gaps/inconsistencies due to non-compliance.
+                For the seamless execution of the program, we kindly request timely adherence, as we may not be able to accommodate any gaps/ inconsistencies due to non-compliance.
                 </li>
               </ol>
             </div>
@@ -1008,7 +1010,8 @@ const NutriDietHero = () => {
           <td>Shape up program</td>
           <td>
             <div className="condition-line">{`Weight loss`}</div>
-            <div className="condition-line">{`Weight gain, Muscle gain`}</div>
+            <div className="condition-line">{`Weight gain/ Muscle gain
+`}</div>
           </td>
           <td>Rs 3999/-</td>
           <td>Rs 8999/-</td>
@@ -1084,7 +1087,7 @@ const NutriDietHero = () => {
         <tr style={{marginBottom: '60px'}}>
           <td>Clinical Plans</td>
           <td>
-            <div className="condition-line">{`Diabetes on insulin BS,`}</div>
+            <div className="condition-line">{`Diabetes on insulin IBS,`}</div>
             <div className="condition-line">{`IBD (Crohn's & Ulcerative Colitis),`}</div>
             <div className="condition-line">{`Peptic & Duodenal Ulcers,`}</div>
             <div className="condition-line">Piles Gall bladderstones, </div>
@@ -1191,7 +1194,7 @@ const NutriDietHero = () => {
                         <li>Functional Nutritionist</li>
                         <li>Certified Diabetes Educator</li>
                         <li>Holistic Nutrition Coach</li>
-                        <li>Experience: 3+ years </li>
+                        <li>Experience: 2+ years </li>
                       </ul>
                     </div>
                   </div>
