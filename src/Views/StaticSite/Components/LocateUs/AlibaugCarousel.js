@@ -186,13 +186,13 @@ const AlibaugCarousel = () => {
               {/* <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 1 - 19th April 2025 to 20th April 2025 (1 Night, 2 Days)</span><br /> */}
               <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 1 - 3rd May 2025 to 4th May 2025 ( 1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 10th May 2025 to 11th May 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 24th May 2025 to 25th May 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 7th June 2025 to 8th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 5 - 14th June 2025 to 15th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 6 - 28th June 2025 to 29th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 7 - 5th July 2025 to 6th July 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 8 - 12th July 2025 to 13th July 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 9 - 26th July 2025 to 27th July 2025 ( 1 NIght, 2 Days)</span>
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 24th May 2025 to 25th May 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 7th June 2025 to 8th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 5 - 14th June 2025 to 15th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 6 - 28th June 2025 to 29th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 7 - 5th July 2025 to 6th July 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 8 - 12th July 2025 to 13th July 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 9 - 26th July 2025 to 27th July 2025 ( 1 Night, 2 Days)</span>
             </h5> :
               <h5>Dates: 
                 {/* <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
@@ -202,13 +202,13 @@ const AlibaugCarousel = () => {
                 {/* <span style={{ fontWeight: '400' }}> Retreat 1 - 19th April 2025 to 20th April 2025 (1 Night, 2 Days)</span><br /> */}
                 <span style={{ fontWeight: '400' }}> Retreat 1 - 3rd May 2025 to 4th May 2025 ( 1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 10th May 2025 to 11th May 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 24th May 2025 to 25th May 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 7th June 2025 to 8th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 5 - 14th June 2025 to 15th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 6 - 28th June 2025 to 29th June 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 7 - 5th July 2025 to 6th July 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 8 - 12th July 2025 to 13th July 2025 ( 1 NIght, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 9 - 26th July 2025 to 27th July 2025 ( 1 NIght, 2 Days)</span>
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 24th May 2025 to 25th May 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 7th June 2025 to 8th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 5 - 14th June 2025 to 15th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 6 - 28th June 2025 to 29th June 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 7 - 5th July 2025 to 6th July 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 8 - 12th July 2025 to 13th July 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 9 - 26th July 2025 to 27th July 2025 ( 1 Night, 2 Days)</span>
               </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
