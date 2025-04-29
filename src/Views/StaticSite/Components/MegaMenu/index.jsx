@@ -338,11 +338,29 @@ const MegaMenu = ({ setNav }) => {
                     Certificate Course on Advanced Pranayama Techniques
                   </li>
                 </Link>
-                {/* <Link onClick={() => {setNav(false)}}  to="/certification-course-on-yoga-sutra-online">
-                  <li className="text-bold" >
-                    Certificate Course on Yoga Sutra-Online
+                <li className="text-bold">
+                  Personal Development Programs
+                </li>
+                {/* <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing">
+                  <li >
+                  Emo-Energy Rebalancing Workshop
                   </li>
                 </Link> */}
+                <Link onClick={() => {setNav(false)}}  to="/swadhyay">
+                  <li >
+                  Swadhyay - on Campus
+                  </li>
+                </Link>
+                <Link onClick={() => {setNav(false)}}  to="/swadhyay-online">
+                  <li >
+                  Swadhyay - online
+                  </li>
+                </Link>
+                <Link onClick={() => {setNav(false)}}  to="/integral-chakra-psychology">
+                  <li >
+                  Integral Chakra Psychology
+                  </li>
+                </Link>
               </ul>
             </div>
             <div className="single-menu">

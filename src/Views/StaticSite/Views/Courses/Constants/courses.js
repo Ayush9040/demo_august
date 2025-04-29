@@ -8,6 +8,8 @@ import BA_yoga_1 from '../../../../StaticSite/utils/images/BA_yoga_1.jpeg'
 import deailsPage_3_ttc from '../images/deailsPage_3_ttc.jpg'
 import card_ba from '../images/card_ba.jpg'
 import Ma_New_card from '../images/MA_card.jpg'
+import swadhyay from '../images/swadhyay.jpg'
+import integral_chakra from '../images/integral_chakra.png'
 
 
 const ttc200hr = {
@@ -16960,6 +16962,7 @@ const classes = {
       },
     ],
   },
+  
 }
 
 const extra = {
@@ -18245,6 +18248,559 @@ const certificate = {
       },
     ],
   },
+  7: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Emo-Energy Rebalancing',
+    key: 'emo-energy-rebalancing',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${BA_yoga_1}`,
+    cardImage: `${card_ba}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '9:00 am - 6:00 pm (Monday to Friday) - On Campus',
+    fees: {
+      // onlineFee: 1500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 5000 },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      'April 19th – April 20th 2025',
+      'May 17th – May 18th 2025'
+    ],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    details: [
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'About The Class:',
+      //     text: [
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            '●	Understand and learn the fundamentals of emotional management, energy balancing and master the practical ways to achieve emotional and energy balance.',
+            '●	This 5 day Emo Energy Balancing Workshop is designed to prepare the ground for introspection. It helps you to go inwards, connect with your own self, and learn and understand the techniques used to interact with the outside world.',
+            '●	The course is well-equipped with games, guided activities, and homework for experiencing first hand the effects of these simple emotion and energy balancing techniques.',
+            
+          ],
+        },
+      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'The MA Yoga Shastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
+      //     points: [
+      //       {
+      //         listItem: 'Semester - I',
+      //         subItems: [
+      //           'Fundamentals Of Indian Philosophy - 1', 
+      //           'Yoga Tradition', 
+      //           'Research Methodology', 
+      //           'Yoga Practical I',
+      //           'Hathayoga Texts'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - II',
+      //         subItems: [
+      //           'Indian Philosophy & Yogasutra', 
+      //           'Yoga-Upanishad and Modern Yoga', 
+      //           'Internship', 
+      //           'Yoga Practical II', 
+      //           'Dietetics, Nutrition and Yogic Diet'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - III',
+      //         subItems: [
+      //           'Classical Yoga Texts', 
+      //           'Yoga & Allied Sciences', 
+      //           'Research Project', 
+      //           'Yoga Practical III', 
+      //           'Yoga Application'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - IV',
+      //         subItems: [
+      //           'Traditional Yoga Texts', 
+      //           'Western Psychology', 
+      //           'Dissertation', 
+      //           'Yoga Practical IV', 
+      //           'Yoga Therapy and Other Therapies'
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Syllabus',
+          text: ['The syllabus covers various essential topics, including the history and evolution of Yoga, human anatomy and physiology, Indian philosophy, Patanjali’s Yogasutras, Hatha Yoga traditions, applied yoga therapy, and modern research methodologies. Students also gain hands-on experience through practical sessions, internships, and field projects, ensuring a well-rounded understanding of Yogic science and its contemporary applications.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course Duration: 4 Years (8 Semesters)',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility Criteria',
+          text: ['Applicants must have completed their Higher Secondary Certificate (HSC) or 10+2 or an equivalent examination from a recognized education board.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Admission Process',
+          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Documents Required:',
+          points: [
+            {
+              listItem: '12th Pass Certificate',
+              subItems: [],
+            },
+            {
+              listItem: '12th Pass Marksheet',
+              subItems: [],
+            },
+            {
+              listItem: 'Transfer Certificate (TC)',
+              subItems: [],
+            },
+            {
+              listItem: 'Aadhaar Card',
+              subItems: [],
+            },
+            {
+              listItem: 'ABC ID (Students can create their ABC ID using the link: https://www.abc.gov.in/)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pricing',
+          text: ['For Indian National Students: Rs. 33,000 per year',
+                  'For International Students : $2950 per year'
+          ],
+        },
+      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Documents Required:',
+      //     points: [
+      //       {
+      //         listItem: 'Graduation Marksheet (Last Semester)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Leaving Certificate (From the last college attended)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Migration Certificate (From the last university attended)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Marriage Certificate/ Proof of Name Change (in case of name change)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Aadhaar Card',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
+
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Career Opportunities',
+      //     points: [
+      //       {
+      //         listItem: 'Graduates of the MA Yoga Shastra program can pursue careers as:',
+      //         subItems: ['Yoga Instructors', 'Yoga Advisors', 'Academic Professors in Yoga Studies', 'Yoga Researchers',],
+      //       },
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'How to Apply',
+          text: [
+            'Interested candidates can apply by clicking in the apply now button above or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
+            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568 '
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Why Study BA Yogashastra at The Yoga Institute?',
+          text: [
+            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center',
+            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars',
+            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects',
+            '●	Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers',
+            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques',
+            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature',
+            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge',
+            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses',
+            'Join us to embark on a transformative journey in the world of Yogashastra!'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Us',
+          text: [
+            'The Yoga Institute',
+            'Santacruz East',
+            'Mumbai, Maharashtra 400055',
+            'Email id - info@theyogainstitute.org',
+            'Phone - +91-22-26110506 / +91-22-26103568'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Apply Now',
+          text: [
+            ' ',
+            '',
+            // '* Affiliation: This course is affiliated with Kavikulaguru Kalidas Sanskrit University (KKSU) Ramtek, Nagpur, awarded with "A+" grade by the National Assessment and Accreditation Council (NAAC).'
+          ],
+        },
+      },
+    ],
+  },
+  8: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Swadhyay',
+    key: 'swadhyay',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${swadhyay}`,
+    cardImage: `${swadhyay}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '9:00 am - 6:00 pm - On Campus',
+    fees: {
+      // onlineFee: 1500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 18000 },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      'May 7th – May 11th 2025',
+      'July 9th – July 13th 2025',
+      'Sept 10th – Sept 14th 2025',
+      'Nov 5th – Nov 9th 2025'
+    ],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Learn',
+          text: [
+            '●	The difference between Anxiety and Fear',
+            '●	Yogic concepts like chitta bhoomi, avidya, and kleshas',
+            '●	Our current belief systems and how they have been shaped',
+            '●	Finding out what it is that is creating an imbalance within',
+            '●	The purpose of behaviour',
+            '●	How to create positive affirmations for our individualised needs',
+            '●	How to set focused and meaningful goals',
+            '●	The tools for developing self-awareness',
+            '●	Guided meditations',
+            '●	Asana practice',
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is This Course for ?',
+          text: ['This is a program for those who want to create a shift in their awareness and use that to find their answers. It is suitable for complete beginners as well as those already on the path of yoga. All you need is the courage to look within, an openness to question long held beliefs, and faith in your potentials.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pre – Requisite',
+          text: [
+            '●	You don’t have to do an Emo-Energy Balancing workshop to Join Swadhyay (Level 1)',
+            '●	If you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay both courses are mandatory',
+            
+          ],
+        },
+      },
+      
+    ],
+  },
+  9: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Swadhyay',
+    key: 'swadhyay-online',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${swadhyay}`,
+    cardImage: `${swadhyay}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '10.00 am to 1.00 pm, 5.30 pm to 8.30 pm (Join any one batch time) - Online',
+    fees: {
+      onlineFee: 14000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      'June 9th – June 20th 2025',
+      'Oct 6th – Oct 17th 2025',
+      'Dec 8th – Dec 19th 2025',
+    ],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Learn',
+          text: [
+            '●	The difference between Anxiety and Fear',
+            '●	Yogic concepts like chitta bhoomi, avidya, and kleshas',
+            '●	Our current belief systems and how they have been shaped',
+            '●	Finding out what it is that is creating an imbalance within',
+            '●	The purpose of behaviour',
+            '●	How to create positive affirmations for our individualised needs',
+            '●	How to set focused and meaningful goals',
+            '●	The tools for developing self-awareness',
+            '●	Guided meditations',
+            '●	Asana practice',
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is This Course for ?',
+          text: ['This is a program for those who want to create a shift in their awareness and use that to find their answers. It is suitable for complete beginners as well as those already on the path of yoga. All you need is the courage to look within, an openness to question long held beliefs, and faith in your potentials.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pre – Requisite',
+          text: [
+            '●	You don’t have to do an Emo-Energy Balancing workshop to Join Swadhyay (Level 1)',
+            '●	If you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay both courses are mandatory',
+            
+          ],
+        },
+      },
+      
+    ],
+  },
+  10: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Integral Chakra Psychology',
+    key: 'integral-chakra-psychology',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${integral_chakra}`,
+    cardImage: `${integral_chakra}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '9:00 am – 6:00 pm - Online',
+    fees: {
+      onlineFee: 30000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      'July 21st – August 22nd 2025',
+      'Nov 10th – Dec 12th 2025'
+    ],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+    
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'This 5 weeks/75 hours program is designed to help you achieve deeper balancing and healing of each Chakra to attain your goals. This program is well-equipped with a detailed study of each Chakra in context with certain Yoga concepts that will help you learn and understand better the laws of creation.'
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Learn',
+          text: [
+            '●	Samskaras responsible for the activation of sensitivities and expectations of each Chakra',
+            '●	Behavioural expressions of each Chakra',
+            '●	Relation of each Chakra with the others, leading to further behavioural patterns',
+            '●	Health conditions in relation to each Chakra',
+            '●	The logical concept of working on the emotions related to each Chakra',
+            '●	Introducing the concept of Transcending Homeostasis',
+          
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is This Course for?',
+          text: ['This is a program for those who want to create a shift in their awareness and use that to find their answers. It is suitable for complete beginners as well as those already on the path of yoga. All you need is the courage to look within, an openness to question long held beliefs, and faith in your potentials.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pre–Requisite',
+          text: ['Emo-Energy Balancing Workshop and Swadhyay (Level 1) ​Minimum attendance required for certificate:- 80%. (2 full sessions / 75 hrs)'],
+        },
+      },
+    ],
+  },
 }
 const alibaug = {
   // 1: {
@@ -18540,10 +19096,16 @@ const alibaug = {
       // '8th Mar 2025 to 9th Mar 2025',
       // '22nd Mar 2025 to 23rd Mar 2025',
       // '5th April 2025 to 6th April 2025',
-      '19th April 2025 to 20th April 2025',
+      // '19th April 2025 to 20th April 2025',
       '3rd May 2025 to 4th May 2025',
       '10th May 2025 to 11th May 2025',
-      '25th May 2025 to 26th May 2025'
+      '24th May 2025 to 25th May 2025',
+      '7th June 2025 to 8th June 2025',
+      '14th June 2025 to 15th June 2025',
+      '28th June 2025 to 29th June 2025',
+      '5th July 2025 to 6th July 2025',
+      '12th July 2025 to 13th July 2025',
+      '26th July 2025 to 27th July 2025',
     ],
     online: false,
     onCampus: false,
@@ -18672,9 +19234,11 @@ const alibaug = {
       // '8th Feb 2025 to 9th Feb 2025', 
       // '15th Mar 2025 to 16th Mar 2025',
       // '29th Mar 2025 to 30th Mar 2025',
-      '12th Apr 2025 to 13th Apr 2025',
+      // '12th Apr 2025 to 13th Apr 2025',
       '26th Apr 2025 to 27th Apr 2025',
-      '17th May 2025 to 18th May 2025'
+      '17th May 2025 to 18th May 2025',
+      '21th June 2025 to 22th June 2025',
+      '19th July 2025 to 20th July 2025'
     ],
     online: false,
     onCampus: false,
