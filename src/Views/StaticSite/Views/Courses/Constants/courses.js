@@ -10,6 +10,7 @@ import card_ba from '../images/card_ba.jpg'
 import Ma_New_card from '../images/MA_card.jpg'
 import swadhyay from '../images/swadhyay.jpg'
 import integral_chakra from '../images/integral_chakra.png'
+import Emo_energy from '../images/Emo_energy.jpg'
 
 
 const ttc200hr = {
@@ -16699,10 +16700,10 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'BA_YOGA_SHASTRA',
+      templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
-        templateResidential: 'BA_YOGA_SHASTRA',
-        templateNonResidential: 'BA_YOGA_SHASTRA',
+        templateResidential: 'GENERAL_AUTO_EMAIL',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
@@ -18266,33 +18267,41 @@ const certificate = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: '',
+      templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
-    image: `${BA_yoga_1}`,
-    cardImage: `${card_ba}`,
+    image: `${Emo_energy}`,
+    cardImage: `${Emo_energy}`,
     mostPopular: false,
     metaDescription:
       '',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: '9:00 am - 6:00 pm (Monday to Friday) - On Campus',
+    timing: '9:00 am - 6:00 pm - On Campus & Online',
     fees: {
-      // onlineFee: 1500,
+      onlineFee: 5000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 5000 },
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
     dates: [
       'April 19th – April 20th 2025',
-      'May 17th – May 18th 2025'
+      'May 17th – May 18th 2025',
+      'June 21th – June 22th 2025',
+      'July 19th – July 20th 2025',
+      'Aug 16th – Aug 17th 2025',
+      'Sept 20th – Sept 21th 2025',
+      'Oct 18th – Oct 19th 2025',
+      'Nov 15th – Nov 16th 2025',
+      'Dec 20th – Dec 21th 2025',
+      
     ],
-    online: false,
+    online: true,
     onCampus: true,
     nonResidential: true,
     residential: false,
@@ -18311,219 +18320,54 @@ const certificate = {
         content: {
           title: 'Overview',
           text: [
-            '●	Understand and learn the fundamentals of emotional management, energy balancing and master the practical ways to achieve emotional and energy balance.',
-            '●	This 5 day Emo Energy Balancing Workshop is designed to prepare the ground for introspection. It helps you to go inwards, connect with your own self, and learn and understand the techniques used to interact with the outside world.',
-            '●	The course is well-equipped with games, guided activities, and homework for experiencing first hand the effects of these simple emotion and energy balancing techniques.',
+            '● Understand and learn the fundamentals of emotional management, energy balancing and master the practical ways to achieve emotional and energy balance.',
+            '● This 5 day Emo Energy Balancing Workshop is designed to prepare the ground for introspection. It helps you to go inwards, connect with your own self, and learn and understand the techniques used to interact with the outside world.',
+            '● The course is well-equipped with games, guided activities, and homework for experiencing first hand the effects of these simple emotion and energy balancing techniques.',
             
           ],
         },
       },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'The MA Yoga Shastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
-      //     points: [
-      //       {
-      //         listItem: 'Semester - I',
-      //         subItems: [
-      //           'Fundamentals Of Indian Philosophy - 1', 
-      //           'Yoga Tradition', 
-      //           'Research Methodology', 
-      //           'Yoga Practical I',
-      //           'Hathayoga Texts'
-      //         ],
-      //       },
-      //       {
-      //         listItem: 'Semester - II',
-      //         subItems: [
-      //           'Indian Philosophy & Yogasutra', 
-      //           'Yoga-Upanishad and Modern Yoga', 
-      //           'Internship', 
-      //           'Yoga Practical II', 
-      //           'Dietetics, Nutrition and Yogic Diet'
-      //         ],
-      //       },
-      //       {
-      //         listItem: 'Semester - III',
-      //         subItems: [
-      //           'Classical Yoga Texts', 
-      //           'Yoga & Allied Sciences', 
-      //           'Research Project', 
-      //           'Yoga Practical III', 
-      //           'Yoga Application'
-      //         ],
-      //       },
-      //       {
-      //         listItem: 'Semester - IV',
-      //         subItems: [
-      //           'Traditional Yoga Texts', 
-      //           'Western Psychology', 
-      //           'Dissertation', 
-      //           'Yoga Practical IV', 
-      //           'Yoga Therapy and Other Therapies'
-      //         ],
-      //       },
-      //     ],
-      //   },
-      // },
       {
         type: 'paragraph',
         content: {
-          title: 'Syllabus',
-          text: ['The syllabus covers various essential topics, including the history and evolution of Yoga, human anatomy and physiology, Indian philosophy, Patanjali’s Yogasutras, Hatha Yoga traditions, applied yoga therapy, and modern research methodologies. Students also gain hands-on experience through practical sessions, internships, and field projects, ensuring a well-rounded understanding of Yogic science and its contemporary applications.'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Course Duration: 4 Years (8 Semesters)',
-          text: [''],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility Criteria',
-          text: ['Applicants must have completed their Higher Secondary Certificate (HSC) or 10+2 or an equivalent examination from a recognized education board.'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Documents Required:',
-          points: [
-            {
-              listItem: '12th Pass Certificate',
-              subItems: [],
-            },
-            {
-              listItem: '12th Pass Marksheet',
-              subItems: [],
-            },
-            {
-              listItem: 'Transfer Certificate (TC)',
-              subItems: [],
-            },
-            {
-              listItem: 'Aadhaar Card',
-              subItems: [],
-            },
-            {
-              listItem: 'ABC ID (Students can create their ABC ID using the link: https://www.abc.gov.in/)',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Pricing',
-          text: ['For Indian National Students: Rs. 33,000 per year',
-                  'For International Students : $2950 per year'
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Documents Required:',
-      //     points: [
-      //       {
-      //         listItem: 'Graduation Marksheet (Last Semester)',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Leaving Certificate (From the last college attended)',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Migration Certificate (From the last university attended)',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Marriage Certificate/ Proof of Name Change (in case of name change)',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Aadhaar Card',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Career Opportunities',
-      //     points: [
-      //       {
-      //         listItem: 'Graduates of the MA Yoga Shastra program can pursue careers as:',
-      //         subItems: ['Yoga Instructors', 'Yoga Advisors', 'Academic Professors in Yoga Studies', 'Yoga Researchers',],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'How to Apply',
+          title: 'Learn',
           text: [
-            'Interested candidates can apply by clicking in the apply now button above or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
-            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568 '
+            '● Yogic concepts like the Pancha koshas, Bhavas, Parikarmas',
+            '● The sequential stages of stress',
+            '● How to create internal silence',
+            '● Identify your need for communication',
+            '● Patterns of communication as energy exchanges',
+            '● Yogic techniques like Nishpanda bhava and Pratipaksha bhavana',
+            '● The 4 pillars of yogic life',
+            '● An Introduction to chakra healing',
+            '● Asana practice',
+            '● Pranayama practice',
+            '● Guided meditations',
+            
+            
           ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Why Study BA Yogashastra at The Yoga Institute?',
-          text: [
-            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center',
-            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars',
-            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects',
-            '●	Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
-            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers',
-            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques',
-            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature',
-            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge',
-            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses',
-            'Join us to embark on a transformative journey in the world of Yogashastra!'
-          ],
+          title: 'WHO IS THIS COURSE FOR ?',
+          text: ['This program is ideal for beginners as well as those who are already on the path of yoga. All you need is a willingness to question your beliefs, openness to exploring a new perspective on stress and anxiety, and an inclination to jumpstart your journey towards a happier and healthier self.'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Contact Us',
+          title: 'Pre – Requisite',
           text: [
-            'The Yoga Institute',
-            'Santacruz East',
-            'Mumbai, Maharashtra 400055',
-            'Email id - info@theyogainstitute.org',
-            'Phone - +91-22-26110506 / +91-22-26103568'
+            '● You don’t have to do Swadhyay (Level 1) to Join Emo-Energy Balancing workshop.',
+            '● IF you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay',
+            '(Level 1) both courses are mandatory.',
+            
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Apply Now',
-          text: [
-            ' ',
-            '',
-            // '* Affiliation: This course is affiliated with Kavikulaguru Kalidas Sanskrit University (KKSU) Ramtek, Nagpur, awarded with "A+" grade by the National Assessment and Accreditation Council (NAAC).'
-          ],
-        },
-      },
+     
     ],
   },
   8: {
@@ -18547,7 +18391,7 @@ const certificate = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
@@ -18639,7 +18483,7 @@ const certificate = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
@@ -18730,7 +18574,7 @@ const certificate = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
