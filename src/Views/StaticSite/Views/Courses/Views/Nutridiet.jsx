@@ -11,7 +11,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Nutridiet.scss';
-import nutridiet_img from './images/nutri_diet_new_img.webp'
+import nutridiet_img from './images/hero_banner.jpg'
 import headericon from './images/headericon.svg'
 import follower from './images/follower.webp'
 import saladPlateImage from './images/saladPlateImage.svg'
@@ -119,21 +119,21 @@ const NutriDietHero = () => {
       text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
       details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
     },
-    {
-      id: 2,
-      text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
-      details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
-    },
-    {
-      id: 3,
-      text: "A 35 year old client wanted to improve athletic performance and recovery times.",
-      details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
-    },
-    {
-      id: 4,
-      text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
-      details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
-    },
+    // {
+    //   id: 2,
+    //   text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
+    //   details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
+    // },
+    // {
+    //   id: 3,
+    //   text: "A 35 year old client wanted to improve athletic performance and recovery times.",
+    //   details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
+    // },
+    // {
+    //   id: 4,
+    //   text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
+    //   details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
+    // },
 
   ];
 
@@ -734,7 +734,7 @@ const NutriDietHero = () => {
               </h2>
 
               <div className="health-journey-container1">
-                <img src={TYI_Mobile_v2} alt="Journey TImeline" />
+                {/* <img src={TYI_Mobile_v2} alt="Journey TImeline" /> */}
 
                 <div className="health-timeline-cards">
                   <div className="timeline-card step-1">
@@ -829,13 +829,13 @@ const NutriDietHero = () => {
                   </div>
 
 
-                  {/* <div className="timeline-card step-12">
+                  <div className="timeline-card step-12">
                     <div className="card-content">
                       <h3>Follow-ups & Progress Monitoring</h3>
                       <p>Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being. </p> <br />
                       <p> These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </main>
@@ -1234,7 +1234,9 @@ const NutriDietHero = () => {
                 </div>
               </div>
 
-              <div className="navigation">
+              {
+                reviews.length > 1 && 
+                  <div className="navigation">
                 <button className="nav-btn prev-btn" onClick={prevSlide}>&#10094;</button>
                 <div className="pagination">
                   {reviews.map((_, index) => (
@@ -1246,7 +1248,10 @@ const NutriDietHero = () => {
                   ))}
                 </div>
                 <button className="nav-btn next-btn" onClick={nextSlide}>&#10095;</button>
-              </div>
+                </div>
+              
+              }
+              
 
             </div>
 
