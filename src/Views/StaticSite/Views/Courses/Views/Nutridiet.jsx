@@ -51,6 +51,7 @@ import TYI_Mobile_v2 from './images/TYI_Mobile_v2.webp'
 import frame_left_client from './images/frame_left_client.png'
 import copy from './images/copy.svg'
 import nutri_diet_mobile_footer_arrow from './images/nutri_diet_mobile_footer_arrow.svg'
+import MessageReview from './MessageReview';
 
 
 
@@ -68,6 +69,19 @@ const NutriDietHero = () => {
   
   const [prevActiveIndex, setPrevActiveIndex] = useState(null);
   const [direction, setDirection] = useState("next");
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedReview, setSelectedReview] = useState(null);
+
+  const openModal = (review) => {
+    setSelectedReview(review);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedReview(null);
+  };
 
 
   const handleSlideChange = (swiper) => {
@@ -120,21 +134,21 @@ const NutriDietHero = () => {
       text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
       details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
     },
-    // {
-    //   id: 2,
-    //   text: "A 45 year old client presented with severe fatigue, severe with a goal of increasing energy.",
-    //   details: "By working on inflammation, food allergies, and nutrient absorption, we were able to increase energy levels. A custom diet plan focusing on gut health and inflammation reduction proved very effective."
-    // },
-    // {
-    //   id: 3,
-    //   text: "A 35 year old client wanted to improve athletic performance and recovery times.",
-    //   details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
-    // },
-    // {
-    //   id: 4,
-    //   text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
-    //   details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
-    // },
+    {
+      id: 2,
+      text: "A 59 year old man with a history of Type 2 diabetes went through Angioplasty, experienced low energy levels, muscle wasting and deranged lipid levels, came with a goal of improving lipid profile, energy level and diabetes management. ",
+      details: "Our three month long association with NutriDiet Clinic by The Yoga Institute has been  a wonderful experience. I want to take this opportunity to express our sincere gratitude for all the nutritional and dietary advice you have provided .Your personalised approach and encouragement have helped in adopting healthy eating  habits and making positive changes in our daily life Have noticed improvements in energy levels and overall well-being ,medication has been reduced after following this diet plan for the last 2 months.We truly appreciate the time you took to address our specific needs .Our entire family has adopted this nutrient rich diet to have a healthy and balanced life.Your expert guidance to my husband and son have helped them to achieve their health goals.Thank you once again for your support."
+    },
+    {
+      id: 3,
+      text: "A 35 year old client wanted to improve athletic performance and recovery times.",
+      details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
+    },
+    {
+      id: 4,
+      text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
+      details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
+    },
 
   ];
 
@@ -464,6 +478,11 @@ const NutriDietHero = () => {
         toast.error(`Failed to copy ${label}`);
       });
   };
+
+  const handleClose = () => {
+    setShowModal(false);
+  setSelectedReview(null);
+  }
 
   return (
     <div className="diet_whole_wrapper">
@@ -1246,20 +1265,57 @@ const NutriDietHero = () => {
                     if (position < -1) position = reviews.length - Math.abs(position);
                     if (position > 1) position = position - reviews.length;
 
+                    const isLongText = review.details.length > 150;
+                    const isLongTitle = review.text.length > 150;
+
                     return (
+                      
                       <div
                         key={index}
                         className={`slide ${position === 0 ? 'active' : position === -1 ? 'prev' : position === 1 ? 'next' : ''}`}
                       >
+                        
                         <div className="card">
-                          <h3>{review.text}</h3>
-                          <p>{review.details}</p>
+                          <h3>{isLongTitle ? (
+                            <>
+                             {review.text.slice(0, 150)}...
+                             <span className="read-more" onClick={() => openModal(review)}> Read More</span>
+                            </>
+                          ) : (
+                            review.text
+                          )}</h3>
+                          <p>
+                          {isLongText ? (
+                              <>
+                                {review.details.slice(0, 150)}...
+                                <span className="read-more" onClick={() => openModal(review)}> Read More</span>
+                              </>
+                            ) : (
+                              review.details
+                          )}
+                         
+                          </p>
                         </div>
+                       
                       </div>
                     );
+
+                   
                   })}
                 </div>
               </div>
+
+              {showModal && selectedReview && (
+        <MessageReview
+          type={selectedReview.text}
+          message={selectedReview.details}
+          closePopup={closeModal}
+          button="Close"
+          buttonAction={closeModal}
+        />
+      )}
+
+              
 
               {
                 reviews.length > 1 && 
