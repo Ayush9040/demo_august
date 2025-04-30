@@ -18453,7 +18453,7 @@ const certificate = {
         content: {
           title: 'Pre – Requisite',
           text: [
-            '●	You don’t have to do an Emo-Energy Balancing workshop to Join Swadhyay (Level 1)',
+            '●	The only pre-requisite for joining this program is a high sense of Responsibility  Motivation towards Self-Growth',
             '●	If you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay both courses are mandatory',
             
           ],
@@ -18544,7 +18544,7 @@ const certificate = {
         content: {
           title: 'Pre – Requisite',
           text: [
-            '●	You don’t have to do an Emo-Energy Balancing workshop to Join Swadhyay (Level 1)',
+            '●	The only pre-requisite for joining this program is a high sense of Responsibility  Motivation towards Self-Growth',
             '●	If you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay both courses are mandatory',
             
           ],

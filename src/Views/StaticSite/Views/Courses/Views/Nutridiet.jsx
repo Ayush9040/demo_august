@@ -11,7 +11,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Nutridiet.scss';
-import nutridiet_img from './images/hero_banner.jpg'
+import nutridiet_img from './images/home_banner_new.png'
 import headericon from './images/headericon.svg'
 import follower from './images/follower.webp'
 import saladPlateImage from './images/saladPlateImage.svg'
@@ -65,6 +65,7 @@ const NutriDietHero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [plan, setPlan] = useState('')
   const [program, setProgram] = useState('')
+  
   const [prevActiveIndex, setPrevActiveIndex] = useState(null);
   const [direction, setDirection] = useState("next");
 
@@ -192,8 +193,21 @@ const NutriDietHero = () => {
 
 
 
-  const options = ['1 month', '3 months', '6 months']
-  const options1 = ['Shape up', 'Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic', 'Other types', 'Nutrition for kids', 'Clinical Plans']
+  const options = ['1 week','1 month', '3 months', '6 months']
+  const options1 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Client specific diet', 'Neurological Disorders', 'Clinical Plans', 'Auto-Immune Disorders']
+  const options2 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Client specific diet', 'Neurological Disorders'];
+
+  const [programOptions, setProgramOptions] = useState(options1);
+
+  useEffect(() => {
+    if (plan === '1 week') {
+      setProgramOptions(options2);
+    } else {
+      setProgramOptions(options1);
+    }
+    // Reset selected program when plan changes
+    setProgram('');
+  }, [plan]);
 
   const selectStyles1 = {
     cursor: 'pointer',
@@ -308,10 +322,16 @@ const NutriDietHero = () => {
 
   }
   const enrollFrom = () => {
+    
     if (plan === '' || program === '') {
       setErr(true)
     } else {
       switch (plan) {
+        case '1 week':
+          setPrice(1000); setErr(false); setOpenForm1(true)
+          updateGA4(1000, program)
+          // console.log('programs ', program)
+          break
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm1(true)
           updateGA4(3999, program)
@@ -341,6 +361,10 @@ const NutriDietHero = () => {
       setErr(true)
     } else {
       switch (plan) {
+        case '1 week':
+          setPrice(1000); setErr(false); setOpenForm2(true)
+          updateGA4(1000, program)
+          break
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm2(true)
           updateGA4(3999, program)
@@ -1000,6 +1024,7 @@ const NutriDietHero = () => {
         <tr>
           <th className="program-column">Programs</th>
           <th className="conditions-column">Health Conditions</th>
+          <th className="plan-column">1 Week plan</th>
           <th className="plan-column">1 Month plan</th>
           <th className="plan-column">3 Month plan</th>
           <th className="plan-column">6 Month plan</th>
@@ -1013,6 +1038,7 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Weight gain/ Muscle gain
 `}</div>
           </td>
+          <td>Rs 1000/-</td>
           <td>Rs 3999/-</td>
           <td>Rs 8999/-</td>
           <td>Rs 13999/-</td>
@@ -1067,7 +1093,7 @@ const NutriDietHero = () => {
           <td>Client specific diet</td>
           <td>
             <div className="condition-line">{`Vegan diet, Ketogenic diet,`}</div>
-            <div className="condition-line">{`Lactose intolerant  Gluten free`}</div>
+            <div className="condition-line">{`Lactose intolerant,  Gluten free`}</div>
           </td>
           <td></td>
           <td></td>
@@ -1077,7 +1103,7 @@ const NutriDietHero = () => {
         <tr style={{marginBottom: '60px'}}>
           <td>Neurological Disorders</td>
           <td>
-            <div className="condition-line">{`Alzheimer's Parkinson`}</div>
+            <div className="condition-line">{`Alzheimer's, Parkinson`}</div>
           </td>
           <td></td>
           <td></td>
@@ -1090,12 +1116,13 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Diabetes on insulin IBS,`}</div>
             <div className="condition-line">{`IBD (Crohn's & Ulcerative Colitis),`}</div>
             <div className="condition-line">{`Peptic & Duodenal Ulcers,`}</div>
-            <div className="condition-line">Piles Gall bladderstones, </div>
-            <div className="condition-line">{`Pancreatitis Cancer,`}</div>
+            <div className="condition-line">Piles, Gall bladderstones, </div>
+            <div className="condition-line">{`Pancreatitis, Cancer,`}</div>
             <div className="condition-line">{`COPD, Kidney disorders,`}</div>
             <div className="condition-line">Liver disorders,</div>
             <div className="condition-line">Epilepsy</div>
           </td>
+          <td>-</td>
           <td>Rs 4999/-</td>
           <td>Rs 9999/-</td>
           <td>Rs 14999/-</td>
@@ -1141,7 +1168,7 @@ const NutriDietHero = () => {
                   changeCurrentValue={setProgram}
                   text={'Select Program'}
                   isStyles={selectStyles1}
-                  dates={options1}
+                  dates={programOptions}
                 />
                 <CommonBtn text='Enroll Now' buttonAction={enrollFrom} />
                 <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600', margin:'10px'}}>
@@ -1352,7 +1379,7 @@ const NutriDietHero = () => {
                   changeCurrentValue={setProgram}
                   text={'Select Program'}
                   isStyles={selectStyles1}
-                  dates={options1}
+                  dates={programOptions}
                 />
               </div>
                 <div className="btn_enroll">
