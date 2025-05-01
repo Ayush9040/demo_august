@@ -14,8 +14,10 @@ const MessageReview = ({ message, type, nav, closePopup, button, buttonAction })
         >
           &#10005; 
         </div>
+        <div className='modal-body-wrapper'>
         <h1 className='msg-title'>{type}</h1>
         <h2 className='message' style={{marginTop: '1rem'}}>{message}</h2>
+        </div>
      
       </div>
     </div>

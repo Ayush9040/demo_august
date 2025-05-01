@@ -135,7 +135,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           });
 
           // navigate('/enrollment_thankyou')
-          navigate(`/enrollment_thankyou/${'nutri'}`)
+          navigate('/enrollment_thankyou/nutri')
         } else {
           handleCTEnquireNutriDietCompleted({
             event_name: "Enquire_Nutri_Diet_Payment_Failed",

@@ -141,14 +141,24 @@ const NutriDietHero = () => {
     },
     {
       id: 3,
-      text: "A 35 year old client wanted to improve athletic performance and recovery times.",
-      details: "Through targeted nutrition planning and supplement protocols, we helped reduce recovery time by 40% and improve overall performance metrics within 8 weeks."
+      text: "7 year old kid with Autism, ADHD and Constipation issues ",
+      details: "“I've had such a wonderful experience with Kreena, the nutrition dietician. She is incredibly knowledgeable and has been so supportive throughout my nutrition journey. I truly appreciate her guidance. I will definitely recommend Kreena and the Nutri Diet Clinic to my friends and family, as I believe they would benefit greatly from her expertise too😊”"
     },
     {
       id: 4,
-      text: "A 24 year old client, presented with high bilirubin, Hair fall, and dandruff, came with a goal of fat loss and muscle gain",
-      details: "\"It was great! Inclusion of fiber based foods and changing my meal times played a big role and now my weight has gone down from 83.3 to 79.6 and is still dropping! I've not lost any muscle in the process so that's great as well\""
+      text: "A 32-year-old female client, presented with bloating, acidity, and overweight concerns, enrolled in the Shape Up and Gut Health Program ",
+      details: "“Mujhe Nutri Diet Clinic ka diet plan bahut achha laga meri dietician kreena Nagda Mam thi jinhone mujhe bahut hi achha diet plan diya jisse meri acidity constipation aur bloating me fayda hua mujhe khana kha kar bhi light feel hua.mujhe apke diet plan se knowledge bhi mila😊 meri dietician kreena apne mujhe diet se related achhe se samjhaya aur ap bahut achhe se baat karte ho kreena mam☺️❤️” "
     },
+    {
+      id: 5,
+      text: "A 28-year-old female client, presented with low energy, fatigue, and overweight concerns, joined the one month weight management program ",
+      details: "I had an amazing time in the past month. I’m so happy that I joined this program and I have seen considerable weight loss of 2 kgs in a month. I thought that I ate healthy but was facing a weight plateau. I joined this program without any expectations and it definitely was a great decision.I love that my diet included a lot of tasteful options & was a balanced diet. I didn’t have to compromise on any food group. I’m going to follow this through and if I ever feel lost, then I will come back to you” "
+    },
+    // {
+    //   id: 6,
+    //   text: "A 60-year-old client, presented with weight gain and low energy levels, came with a goal of weight loss and improved vitality through the Shape Up Program ",
+    //   details: "I had gained weight and was feeling stuck for a very very long time.I decided to take the weight loss diet program with The Yoga Institute in the month of November 2022.I met Vinita at the institute who guided me on the importance of food and when and how to consume them. She introduced me to the varieties of millet, vegetables, lentils, spices, seeds and nuts. The first week itself made me feel light, energetic and gave me a happy feeling. Her diet plan with easy to make recipes, links to the recipes and recipes given along with the weekly plan had all the varieties along with nutrients. I found myself thoroughly enjoying the process of eating food with the changes brought about in my diet. Vinita's diet plan made me aware of the importance of food through varieties on a daily basis to meet the nutrient requirements for a healthy mind and body.This whole six months journey amazingly changed my outlook with relation to food and my day-to-day habits. I have lost weight but never once did I feel lost, exhausted or negative towards the changes brought about in my diet. I looked forward to each day with enthusiasm in my weight loss journey with Vinita through the institute. Forever grateful!” "
+    // },
 
   ];
 
@@ -1278,8 +1288,8 @@ const NutriDietHero = () => {
                         <div className="card">
                           <h3>{isLongTitle ? (
                             <>
-                             {review.text.slice(0, 150)}...
-                             <span className="read-more" onClick={() => openModal(review)}> Read More</span>
+                             {review.text.slice(0, 300)} 
+                             <span className="read-more" style={{ color: 'blue', cursor: 'pointer', fontSize: '20px'}} onClick={() => openModal(review)}> ...Read more</span>
                             </>
                           ) : (
                             review.text
@@ -1287,8 +1297,8 @@ const NutriDietHero = () => {
                           <p>
                           {isLongText ? (
                               <>
-                                {review.details.slice(0, 150)}...
-                                <span className="read-more" onClick={() => openModal(review)}> Read More</span>
+                                {review.details.slice(0, 150)} 
+                                <span className="read-more" style={{ color: 'blue', cursor: 'pointer', fontSize: '20px'}}  onClick={() => openModal(review)}> ...Read more</span>
                               </>
                             ) : (
                               review.details

@@ -1,0 +1,1384 @@
+// enrolment form satrt
+
+
+// ********************************* CSS Check ****************************************
+
+
+//thank you page start
+
+#overlay {
+  position: absolute;
+  display: block;
+  height: 80vh;
+  margin: 7rem 10rem;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  // right: 0;
+  // bottom: 0;
+  background-color: rgba(160, 98, 116, 0.8);
+  z-index: 2;
+  width: 90% !important;
+
+  button {
+    float: right;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  cursor: pointer;
+
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    opacity: 1;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    .thankyou {
+      font-size: 5rem;
+      font-weight: 600;
+    }
+
+    .message {
+      padding-top: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.main-div {
+  position: relative;
+  background-image: url('https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/Offerings/7dayscamp.jpg');
+  height: 80vh;
+  margin: 7rem 10rem;
+  width: 90%;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.chip {
+  color: #00000080;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 12px;
+  border: 1px solid #00000080;
+  width: max-content;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #overlay {
+    margin: 2rem 4rem;
+    height: 70vh;
+
+    button {
+      font-size: 2rem;
+    }
+
+    #text {
+      .thankyou {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .main-div {
+    margin: 2rem 4rem;
+    background-size: cover;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1366px) {
+  .main-container {
+    .course-main-container {
+      .course-secondary-container {
+        .upload-section {
+
+          .uploads {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>fieldset {
+              // margin-top: 10px;
+              margin-right: 16rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 1728px) {
+  .main-container {
+    .course-main-container {
+      .course-secondary-container {
+        .upload-section {
+
+          .uploads {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>fieldset {
+              // margin-top: 10px;
+              margin-right: 13rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+.countries_list p {
+  font-size: 12px;
+  margin-top: -6rem;
+}
+
+.pincode_err small {
+  font-size: 12px !important;
+  margin-top: -8rem !important;
+}
+
+@media (max-width: 768px) {
+  .countries_list p {
+    font-size: 12px;
+    margin-top: -7rem;
+  }
+
+  .pincode_err small {
+    font-size: 12px !important;
+    margin-top: -8.5rem !important;
+  }
+}
+
+.main_div .name_err {
+  margin-top: -8.2rem !important;
+}
+
+/* styles.css */
+
+/* Container for the input field */
+.date-input-wrapper {
+  // outline: none;
+  // width: 180% !important;
+  // margin: 26px 0 0 26px;
+  // font-size: 1.8rem;
+  // padding: 1rem 2rem;
+  // border: 1px solid rgba(96, 96, 96, 0.5019607843);
+  // border-radius: 50px;
+  // color: rgba(96, 96, 96, 0.8);
+}
+
+/* Styles for the date input */
+.date-input {
+  margin: 26px 0 0 26px;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(96, 96, 96, 0.5019607843);
+  border-radius: 50px;
+  color: rgba(96, 96, 96, 0.8);
+}
+
+.react-datepicker__input-container input {
+  width: calc(38.2vw) !important;
+  margin: 0 0 0 20px;
+  font-size: 1.8rem !important;
+  padding: 1rem 3rem;
+  border: 1px solid rgba(96, 96, 96, 0.5019607843);
+  border-radius: 50px;
+  color: rgba(96, 96, 96, 0.8);
+
+  @media screen and (max-width: 599px) {
+    margin: -20px 0 0 20px;
+    width: calc(72vw) !important;
+  }
+}
+
+/* Custom CSS for react-datepicker */
+
+.react-datepicker__day {
+  font-size: 1.8rem !important;
+  width: 40px !important;
+  /* Adjust the width as needed */
+  height: 40px !important;
+  /* Adjust the height as needed */
+  line-height: 40px !important;
+  /* Center text vertically */
+  text-align: center !important;
+  /* Center text horizontally */
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--selected {
+  /* Optional: Add some styling for selected days if needed */
+  background-color: #007bff;
+  color: white;
+}
+
+/* Custom CSS for react-datepicker */
+
+/* Adjust the font size of the day names (Sun, Mon, etc.) */
+.react-datepicker__day-name {
+  width: 40px !important;
+  margin-top: 14px !important;
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
+}
+
+/* Adjust the font size of the month name */
+.react-datepicker__current-month {
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
+}
+
+/* Optional: Adjust the font size of the year */
+.react-datepicker__current-year {
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
+}
+
+.check_course_new {
+  width: 100%;
+}
+
+.date_enroll_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.date_enroll_btn_txt {
+  width: 168px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #CA4625;
+  padding: 12px 16px;
+  border: none;
+}
+
+.date_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.style_dates {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 8px;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.wrapper_center {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.item_desc {
+  width: auto;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+}
+
+.item_date {
+  flex-direction: column !important;
+  padding: 10px 16px !important;
+  gap: 0px !important;
+}
+
+.enroll_subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.details_newName {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -16px;
+  // padding-right: 10px;
+  // margin-left: 14px;
+  width: 100%;
+}
+
+.details_duration_info {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.details_lang_info {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.tenure_course {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: end;
+}
+
+.lang_course {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_days_2 {
+  // padding: 8px 0px;
+  margin-bottom: 10px;
+}
+
+.details_personal_box {
+  border-radius: 20px;
+  // height: 200px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.04);
+  // display: flex;
+  // align-items: center;
+  padding: 20px;
+  background-color: rgba(251, 249, 249, 1);
+}
+
+.personal_info_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal_info_wrapper .details_newName {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_name_info {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.fields_alignment {
+  margin-top: 16px;
+}
+
+.fields_alignment_bottom {
+  margin-bottom: 14px;
+}
+
+.wrapper_date_and_course {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 28px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px 0px #0000000A;
+
+  box-shadow: 0px 11.58px 23px 0px #0000000A;
+
+
+}
+
+.course_format_wrapper {
+  display: flex;
+  padding: 22px 24px 0px 24px;
+  gap: 40px;
+}
+
+.details_format_date {
+  width: 70%;
+}
+
+.img_wrapper_date_format {
+  width: 30%;
+  display: flex;
+  align-items: top;
+}
+
+.img_wrapper_date_format img {
+  width: auto;
+  height: 130px;
+  // padding-top: 53%;
+}
+
+.label_format_course {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.details_format_date .check_course {
+  width: 100%;
+}
+
+.details_format_date .check_course .item-label {
+  border-radius: 25px;
+  justify-content: start;
+  padding-left: 30px;
+}
+
+.dates_enroll_wrapper {
+  margin-top: 2rem;
+}
+
+.container_date_enroll .item_date {
+  flex-direction: column !important;
+  padding: 2px 16px !important;
+  gap: 0px !important;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.check_course .item-label {
+  padding: 8px 0.5em;
+}
+
+.check_course .item-input:checked~.item-info .item-name {
+  color: #fff;
+}
+
+.check_course .item-input:checked~.item-price {
+  color: #fff;
+}
+
+.check_course .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1);
+  box-shadow: 0 0 0 2px rgba(202, 70, 37, 1) inset;
+}
+
+.check_date_2 .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1) !important;
+  box-shadow: 0 0 0 2px #CA4625 inset !important;
+}
+
+.check_date_2 .item-input:checked~.item-info .item-name .style_dates {
+  color: #fff !important;
+}
+
+.fees_wrapper {
+  // margin-top: 32px;
+  width: 100%;
+
+  // background-color: rgba(255, 243, 240, 1);
+  // height: 71px;
+  // padding: 22px 24px;
+
+}
+
+.fees_show {
+  margin: 22px 24px;
+  background-color: rgba(255, 243, 240, 1);
+  height: 71px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  align-items: center;
+}
+
+.fees_left_wrapper {
+  width: 105px;
+  height: 45px;
+}
+
+.fees_left_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.fees_label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  top: -3px !important
+}
+
+.price_select {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.bottom_container_btn {
+  background-color: #fff;
+  // margin-top: -47px;
+  padding: 2.875rem 22px 22px 22px;
+  // margin-left: 15px;
+  // margin-right: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: start;
+  // width: 52.6%;
+  // position: absolute;
+  // right: 3vw;
+  gap: 14px;
+}
+
+.terms label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.button_box .next_button {
+  cursor: pointer;
+  border: 1px solid rgba(202, 70, 37, 1);
+  height: 4.5rem;
+  width: 40rem;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  // margin-left: 3%;
+  background-color: rgba(202, 70, 37, 1);
+}
+
+.upcoming_dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upcoming_dates span {
+  color: rgba(202, 70, 37, 1);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.item-info {
+  display: flex;
+}
+
+.details_format_date .check_course .item-label:hover {
+  background-color: #FFF8F6;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+
+
+.check_course .item-label:has(.item-input:checked):hover {
+  background-color: rgb(202, 70, 37);
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset;
+}
+
+input[type=checkbox]:checked {
+  background-color: #FA9E57;
+}
+
+#myCheckbox {
+  /* setting the checkbox input HTML element accent color to `green` */
+  accent-color: rgb(202, 70, 37);
+  ;
+  background-color: white;
+}
+
+input[type=checkbox]:checked+label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked+label:before {
+  background-color: #ED820A;
+  border-color: #ED820A;
+  color: #fff;
+}
+
+.details_wrapper_duration {
+  // border-radius: 8px;
+  // border: 1px solid rgba(96, 96, 96, 0.3);
+  // min-width: 180px;
+  // width: 100%;
+  // padding: -4px 0 0 12px;
+  // text-align: center;
+}
+
+.time_header {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.6);
+}
+
+.time_days_wrapper {
+  // display: none;
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  width: 96%;
+  text-align: center;
+  margin-top: 12px;
+  margin: 0 10px 8px 10px;
+  padding: 10px 10px;
+}
+
+.times_fixed {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 8px;
+}
+
+.details_wrapper_duration_2 {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  // width: 40%;
+  padding: 4px 12px 8px 12px;
+  // text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.btn_mode_date_wrapper {
+  margin: 0px 21px 17px 18px;
+  border-top: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 15px 0px 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.btn_mode_date_regular {
+  margin: 20px 21px 17px 18px;
+  border-top: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 15px 0px 0 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.first_wrapper_regular_btn {
+  display: flex;
+  gap: 15px;
+}
+
+.second_wrapper_regular_btn {
+  display: flex;
+  gap: 20px;
+}
+
+.details_wrapper_duration_3 {
+  border-radius: 8px;
+  border: 1px solid rgba(52, 199, 89, 1);
+  // width: 40%;
+  padding: 4px 12px 8px 12px;
+  // text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(52, 199, 89, 0.03);
+}
+
+.selected_date_popup {
+  background-color: rgb(202, 70, 37);
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset !important;
+  color: #fff !important;
+}
+
+.selected_date_popup .style_dates {
+  color: #fff !important;
+}
+
+.date_btn {
+  // width: 48.9%;
+}
+
+.accordian_holder {
+  display: none;
+}
+
+.terms_text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+  margin: 0 0 0 0px;
+  font-size: 15px !important;
+  padding: 8px 30px;
+  // border: 1px solid rgba(96, 96, 96, 0.5);
+  box-shadow: 0 0 0 1px hsl(233, 10%, 80%) inset;
+  border-radius: 50px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.date-input-wrapper {
+  margin-top: 16px;
+}
+
+.label_duration {
+  display: flex;
+  align-items: center;
+}
+
+.msg_duration {
+  display: flex;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 4px;
+  justify-content: center;
+  background: linear-gradient(to right, #F7F7F7, #FFF7E2);
+  color: #EFCA6C;
+}
+
+.remove_mb {
+  margin-bottom: 0px !important;
+}
+
+.mobile_view {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .web_view {
+    display: none;
+  }
+
+  .flower {
+    svg {
+      height: 64px !important;
+    }
+  }
+
+  .mobile_view {
+    display: block;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(249, 249, 249, 1);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: -20px;
+    background-color: rgba(249, 249, 249, 1);
+
+    .head_m {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+      align-items: start;
+    }
+
+    .detail_m {
+      margin-top: 8px;
+      border: 1px solid rgba(96, 96, 96, 0.3);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+  }
+
+  .times_fixed {
+    font-size: 12px;
+  }
+
+  .time_header {
+    font-size: 12px;
+  }
+
+  .enrollment_container .header {
+    grid-column: 1 / 7;
+    margin-left: 15px;
+    margin-top: 0px;
+    font-size: 2.6rem;
+    cursor: pointer;
+  }
+
+  .close_label {
+    display: none;
+  }
+
+  .enrollment_container .header .x {
+    display: flex;
+    float: right;
+    color: black;
+    background: transparent;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-right: 3rem;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 0px;
+    margin-top: 22px;
+    // margin-right: 100px;
+    cursor: pointer;
+  }
+
+  .enrollment_container .student {
+    // font-weight: 600;
+    // font-size: 16px;
+    // margin-bottom: 15px;
+    display: none;
+  }
+
+  .enroll_subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+
+  .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+    width: auto;
+    height: auto;
+    min-width: auto;
+  }
+
+  .main-container .course-main-container .course-secondary-container .details_box {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .main_div .grid_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  .main-container .course-main-container .course-secondary-container .details_box {
+    border: 1px solid rgba(96, 96, 96, 0.5019607843);
+    border-radius: 20px;
+    width: 330px;
+    /* height: 200px; */
+    height: auto;
+    margin-left: 0px;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+  }
+
+  .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+    height: auto;
+    width: 100%;
+
+    // height: 285px;
+    // min-width: auto;
+    // object-fit: fill;
+  }
+
+
+  .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+    margin-right: 0px;
+  }
+
+  .main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+    /* flex-wrap: wrap; */
+    padding: 0px 20px 20px 20px;
+  }
+
+  .details_wrapper_duration {
+    border-radius: 8px;
+    // border: 1px solid rgba(96, 96, 96, 0.3);
+    width: 100%;
+    display: flex;
+    padding: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details_newName {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+  }
+
+  .details_duration_info {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(129, 129, 132);
+  }
+
+  .details_lang_info {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(129, 129, 132);
+  }
+
+  .details_desc_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-right: 6px;
+  }
+
+  .btn_mode_date_wrapper {
+    margin: 0px 21px 17px 18px;
+    border-top: 1px solid rgba(96, 96, 96, 0.3);
+    padding: 15px 0px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img_wrapper_date_format {
+    display: none;
+  }
+
+  .details_format_date {
+    width: 100%;
+  }
+
+  .item-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(96, 96, 96, 0.5);
+  }
+
+  .item-price {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(96, 96, 96, 0.5);
+  }
+
+  .date_btn {
+    width: 100%;
+  }
+
+  .style_dates {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 8px;
+    color: rgba(96, 96, 96, 0.5);
+    text-align: left;
+  }
+
+  .fees_label {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .price_select {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+  }
+
+  .fees_price_wrapper {
+    width: 50%;
+    text-align: center;
+  }
+
+  .bottom_container_btn {
+    display: none;
+  }
+
+  .main_div .grid_box .left_grid {
+    display: none;
+  }
+
+  .check_course .item-label {
+    align-items: start !important;
+  }
+
+  .container_date_enroll .item_date {
+    flex-direction: column !important;
+    padding: 2px 2px !important;
+    gap: 0px !important;
+  }
+
+  .details_format_date .check_course .item_format {
+    border-radius: 20px;
+    justify-content: left;
+    padding-left: 10px !important;
+  }
+
+  .details_wrapper_duration_2 {
+    border-radius: 8px;
+    border: 1px solid rgba(96, 96, 96, 0.3);
+    padding: 8px 9px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+  }
+
+  .details_wrapper_duration_3 {
+    border-radius: 8px;
+    border: 1px solid rgb(52, 199, 89);
+    padding: 8px 9px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(52, 199, 89, 0.03);
+    text-align: left;
+  }
+
+  .time_days_wrapper {
+    border-radius: 8px;
+    border: 1px solid rgba(96, 96, 96, 0.3);
+    width: 95%;
+    margin-top: 12px;
+    padding: 12px 9px;
+  }
+
+  .accordian_holder {
+    display: block;
+  }
+
+  .accordian_holder {
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    // margin: 5px;
+    border-radius: 20px;
+    margin-top: 28px;
+    margin-bottom: 120px;
+
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .accordian_holder .desc {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s;
+  }
+
+  .detail_image_box {
+    width: 100% !important; //320px;
+    height: 100% !important; //240px;
+    // min-width: 250px;
+
+    img {
+      border-radius: 30px;
+      height: 100% !important; //240px;
+      width: 100% !important; //320px;
+    }
+  }
+
+  .accordian_holder .show {
+    margin-top: 15px;
+    grid-template-rows: 1fr;
+  }
+
+  .accordian_holder .desc .hidden {
+    overflow: hidden;
+  }
+
+  .accordian_title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .accordian_sub-title {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  .main_div .grid_box {
+    background-image: none;
+  }
+
+  .edit_show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .edit_show div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+  }
+
+  .edit_show div span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .edit_show div div {
+    margin-left: 4px;
+  }
+
+  .inp-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    position: relative;
+    width: 100% !important;
+
+
+  }
+
+  .rotate_icon_arrow {
+    transform: rotate(180deg);
+  }
+
+  .wrapper_date_and_course {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 28px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+  }
+
+  .label_format_course {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .bottom_container_btn {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(255, 243, 240);
+    margin-left: -28px;
+    padding-top: 18px;
+    // left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .enrollment_container {
+    margin: 23px 20px 36% 20px;
+    border-radius: 20px;
+    width: 90%;
+  }
+
+  .terms label {
+    font-size: 12px !important;
+  }
+
+  .terms_text {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .first_wrapper_regular_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .second_wrapper_regular_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dates_enroll_wrapper {
+    margin-top: 12px;
+  }
+}
+
+.row-web {
+  display: flex;
+  gap: 2rem;
+  width: 160%;
+}
+
+@media (max-width: '480px') {
+  .row-web {
+    flex-direction: column;
+    width: 100%;
+
+    .mb-30 {
+      margin-bottom: -12px;
+    }
+  }
+
+  .dmy-cntr {
+    height: 12px;
+  }
+
+  .details_desc_info {
+    justify-content: space-between;
+    margin: 6px 0 0 -26px !important;
+    width: 110% !important;
+
+    .details_wrapper_duration {
+      // padding: 12px 12px;
+      // min-width: 160px !important;
+    }
+  }
+}
+
+@media(max-width: 376px) {
+  .course_format_wrapper {
+    display: flex;
+    padding: 22px 9px 0px 9px;
+    gap: 40px;
+  }
+
+  .fees_show {
+    margin: 22px 9px;
+    background-color: rgb(255, 243, 240);
+    height: 71px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    align-items: center;
+  }
+
+  .main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+    /* flex-wrap: wrap; */
+    padding: 0px 9px 20px 9px;
+  }
+
+  .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box img {
+    border-radius: 30px;
+    // height: 100%;
+    // width: 320px;
+    padding: 17px 17px 17px 9px;
+    aspect-ratio: 16 / 13.2;
+    object-fit: cover;
+  }
+
+  .dates_enroll_wrapper {
+    margin-top: 12px;
+  }
+}
+
+.selected_date_popup:hover {
+  background-color: rgb(202, 70, 37) !important;
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset !important;
+  color: #fff !important;
+}
+
+.css-1jqq78o-placeholder {
+  font-size: 14px;
+}
+
+.stnd-detls {
+  width: 40%;
+
+  .card {
+    background-color: rgba(251, 249, 249, 1);
+    margin-top: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  @media(max-width: 768px) {
+    width: 102%;
+
+    .card {
+      display: none;
+    }
+  }
+}
+
+.crs-wrap {
+  width: 60%;
+  // margin-left: 30px !important;
+  margin-top: -30px;
+
+  .ex-width {
+    width: 150%;
+  }
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-left: 0 !important;
+
+    .ex-width {
+      width: 100%;
+    }
+  }
+
+
+}
+
+@media(min-width:1490px) {
+  .lang_course {
+    margin-right: 4px;
+  }
+}

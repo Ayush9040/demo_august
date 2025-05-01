@@ -42,23 +42,33 @@
 }
 
 .msg-title {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .message {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 // body {
 //   background: #00000080;
 // }
 
-.message {
+.modal-body-wrapper {
   overflow: scroll;
 
 }
 
-.message::-webkit-scrollbar {
+.modal-body-wrapper::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+@media(max-width: 768px) {
+  .messsage-modal .modal-body {
+    width: 90%;
+  }
+
+  .msg-title {
+    font-size: 19px;
+  }
 }
