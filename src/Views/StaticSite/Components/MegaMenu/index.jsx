@@ -283,9 +283,9 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => { setNav(false) }} to="/weekend-teacher-training-course">
                   <li>Batch 5 - 3 Months Weekend TTC-Online-English</li>
                 </Link>
-                {/* <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-english-batch-6">
+                <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-batch-6">
                   <li>Batch 6 - 2 Months TTC-Online-English</li>
-                </Link> */}
+                </Link>
 
                 <li className="text-bold">
                   Intermediate TTC (500 Hour Courses)

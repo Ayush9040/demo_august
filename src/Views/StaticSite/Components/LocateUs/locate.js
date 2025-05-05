@@ -138,15 +138,15 @@ export const locateData = [
         phone: ['+91-9833864964'],
         toRedirect: true,
       },
-      {
-        state: 'Malad, Mumbai',
-        notstate:
-          "The Yoga Institute, Malad Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai, Maharashtra 400064.",
-        email: 'malad@theyogainstitute.in',
-        url: 'malad',
-        phone: ['+91 9343517490'],
-        toRedirect: false,
-      },
+      // {
+      //   state: 'Malad, Mumbai',
+      //   notstate:
+      //     "The Yoga Institute, Malad Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai, Maharashtra 400064.",
+      //   email: 'malad@theyogainstitute.in',
+      //   url: 'malad',
+      //   phone: ['+91 9343517490'],
+      //   toRedirect: false,
+      // },
       {
         state: 'Vikhroli, Mumbai',
         notstate:

@@ -406,14 +406,16 @@ const Enrollment = () => {
                     await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
 
                   }
-                  console.log(courseFee);
+                  // console.log('sssssssss',currentCourse?.courseName);
+
+                  
 
                   handleCTPaymentCompletedCourse({
                     // cost,
                     // centre,
                     // modeOfPayment,
                     paymentStatus: "Success",
-                    courseName: formData.courseName,
+                    courseName: currentCourse?.courseName,
                     courseCategory: currentCourse?.courseCategory,
                     startDate: formData.sdate,
                     endDate: formData.sdate,

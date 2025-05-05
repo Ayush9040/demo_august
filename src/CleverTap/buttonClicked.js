@@ -558,6 +558,9 @@ export const handleCTPaymentCompletedCourse = ({
     }
   }
 
+  const url = pageName;
+const courseKey = url.split('/').pop();
+
 
   // Determine the course location
   let courseLocation = "NA";
@@ -581,7 +584,7 @@ export const handleCTPaymentCompletedCourse = ({
       "Centre": centre,
       "Mode of Payment": modeOfPayment,
       "Payment status": paymentStatus,
-      "Course_name": courseName,
+      "Course_name": courseKey,
       "Course Category": courseCategory,
       "Start_Date": startDate1,
       "End_date": endDate1,
