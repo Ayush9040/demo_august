@@ -624,7 +624,7 @@ const ttc200hr = {
       // '7th Oct – 30th Nov 2024',
       // '9th Dec – 1st Feb 2025',
       // '10th Feb - 5th Apr 2025',
-      '14th Apr - 7th Jun 2025',
+      // '14th Apr - 7th Jun 2025',
       '16th Jun - 9th Aug 2025',
       '18th Aug - 11th Oct 2025',
       '21st Oct - 13th Dec 2025',
@@ -5029,7 +5029,7 @@ const ttc900hr = {
     dates: [
       // '3rd Aug 2024',
       // '7th Dec 2024',
-      '5th Apr 2025',
+      // '5th Apr 2025',
       '2nd Aug 2025',
       '6th Dec 2025'
     ],
@@ -8643,7 +8643,7 @@ const camps = {
       // '20th Jan & 21st Jan 2025',
       // '15th Feb & 16th Feb 2025',
       // '17th Mar & 18th Mar 2025',
-      '19th Apr & 20th Apr 2025',
+      // '19th Apr & 20th Apr 2025',
       '19th May & 20th May 2025',
       '21st Jun & 22nd Jun 2025',
       '21st Jul & 22nd Jul 2025',
@@ -9769,7 +9769,8 @@ const camps = {
     dates: [
       // '23rd Feb 2025',
       // '23rd Mar 2025', 
-      '27th Apr 2025', '25th May 2025',
+      // '27th Apr 2025', 
+      '25th May 2025',
       '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
     mostPopular: false,
@@ -10346,7 +10347,7 @@ const camps = {
       // '25th Jan to 31st Jan 2025',
       // '22nd Feb to 28th Feb 2025',
       // '22nd Mar to 28th Mar 2025',
-      '26th Apr to 2nd May 2025',
+      // '26th Apr to 2nd May 2025',
       '24th May to 30th May 2025',
       '28th Jun to 4th Jul 2025',
       '26th Jul to 1st Aug 2025',
@@ -11571,7 +11572,7 @@ const camps = {
       // '10th Nov to 30th Nov 2024',
       // '8th Dec to 28th Dec 2024',
       // '9th Feb to 1st Mar 2025',
-      '13th Apr to 3rd May 2025',
+      // '13th Apr to 3rd May 2025',
       '8th Jun to 28th Jun 2025',
       '10th Aug to 30th Aug 2025',
       '12th Oct to 1st Nov 2025',
@@ -12280,7 +12281,8 @@ const camps = {
     },
     dates: [
       // '22nd Feb 2025', 
-      '26th Apr 2025', '15th Jun 2025'
+      // '26th Apr 2025', 
+      '15th Jun 2025'
       , '17th Aug 2025', '19th Oct 2025', '21st Dec 2025'],
     online: false,
     onCampus: true,
@@ -14917,8 +14919,8 @@ const classes = {
       // '30th Mar 2025', 
       // '6th Apr 2025', 
       // '13th Apr 2025', 
-      '20th Apr 2025', 
-      '27th Apr 2025',
+      // '20th Apr 2025', 
+      // '27th Apr 2025',
       '4th May 2025', 
       '11th May 2025', 
       '18th May 2025', 
@@ -15440,8 +15442,8 @@ const classes = {
       // '29th Mar 2025',
       // '5th Apr 2025',
       // '12th Apr 2025', 
-      '19th Apr 2025', 
-      '26th Apr 2025', 
+      // '19th Apr 2025', 
+      // '26th Apr 2025', 
       '3rd May 2025', 
       '10th May 2025', 
       '17th May 2025', 
@@ -18267,7 +18269,7 @@ const certificate = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: '',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: 'GENERAL_AUTO_EMAIL',
@@ -18282,9 +18284,9 @@ const certificate = {
       '',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: '9:00 am - 6:00 pm - On Campus & Online',
+    timing: '9:00 am - 6:00 pm - On Campus',
     fees: {
-      onlineFee: 5000,
+      onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 5000 },
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
@@ -18301,7 +18303,7 @@ const certificate = {
       'Dec 20th – Dec 21th 2025',
       
     ],
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: true,
     residential: false,
@@ -18371,6 +18373,127 @@ const certificate = {
     ],
   },
   8: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Emo-Energy Rebalancing',
+    key: 'emo-energy-rebalancing-online',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${Emo_energy}`,
+    cardImage: `${Emo_energy}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Morning 10:00 am – 1:00 pm, Evening 5:30 - 8:30 PM - online',
+    fees: {
+      onlineFee: 4000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      // 'April 19th – April 20th 2025',
+      'May 5th – May 9th 2025 Morning',
+      'June 2nd – June 6th 2025 Evening',
+      'July 7th – July 11th 2025 Morning',
+      'Aug 4th – Aug 8th 2025 Evening',
+      'Sept 1st – Sept 5th 2025 Morning',
+      'Oct 6th – Oct 10th 2025 Evening',
+      'Nov 3rd – Nov 7th 2025 Morning',
+      'Dec 1st – Dec 5th 2025 Evening',
+      
+    ],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'About The Class:',
+      //     text: [
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            '● Understand and learn the fundamentals of emotional management, energy balancing and master the practical ways to achieve emotional and energy balance.',
+            '● This 5 day Emo Energy Balancing Workshop is designed to prepare the ground for introspection. It helps you to go inwards, connect with your own self, and learn and understand the techniques used to interact with the outside world.',
+            '● The course is well-equipped with games, guided activities, and homework for experiencing first hand the effects of these simple emotion and energy balancing techniques.',
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Learn',
+          text: [
+            '● Yogic concepts like the Pancha koshas, Bhavas, Parikarmas',
+            '● The sequential stages of stress',
+            '● How to create internal silence',
+            '● Identify your need for communication',
+            '● Patterns of communication as energy exchanges',
+            '● Yogic techniques like Nishpanda bhava and Pratipaksha bhavana',
+            '● The 4 pillars of yogic life',
+            '● An Introduction to chakra healing',
+            '● Asana practice',
+            '● Pranayama practice',
+            '● Guided meditations',
+            
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'WHO IS THIS COURSE FOR ?',
+          text: ['This program is ideal for beginners as well as those who are already on the path of yoga. All you need is a willingness to question your beliefs, openness to exploring a new perspective on stress and anxiety, and an inclination to jumpstart your journey towards a happier and healthier self.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pre – Requisite',
+          text: [
+            '● You don’t have to do Swadhyay (Level 1) to Join Emo-Energy Balancing workshop.',
+            '● IF you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay',
+            '(Level 1) both courses are mandatory.',
+            
+          ],
+        },
+      },
+     
+    ],
+  },
+  9: {
     id: '',
     textdescription6: '',
     textdescription7: '',
@@ -18462,7 +18585,7 @@ const certificate = {
       
     ],
   },
-  9: {
+  10: {
     id: '',
     textdescription6: '',
     textdescription7: '',
@@ -18553,7 +18676,7 @@ const certificate = {
       
     ],
   },
-  10: {
+  11: {
     id: '',
     textdescription6: '',
     textdescription7: '',

@@ -371,7 +371,7 @@ const NutriDietHero = () => {
         default:
           break
       }
-      if (program === 'Clinical Plans') {
+      if (program === 'Clinical Plans' || program === 'Auto-Immune Disorders') {
         enrollForm2()
       }
 
@@ -404,7 +404,7 @@ const NutriDietHero = () => {
         default:
           break
       }
-      if (program === 'Clinical Plans') {
+      if (program === 'Clinical Plans' || program === 'Auto-Immune Disorders') {
         belowenrollForm2()
       }
 

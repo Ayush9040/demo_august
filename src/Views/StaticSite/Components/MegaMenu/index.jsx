@@ -341,11 +341,16 @@ const MegaMenu = ({ setNav }) => {
                 <li className="text-bold">
                   Personal Development Programs
                 </li>
-                {/* <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing">
+                <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing">
                   <li >
-                  Emo-Energy Rebalancing Workshop
+                  Emo-Energy Rebalancing Workshop - on Campus
                   </li>
-                </Link> */}
+                </Link>
+                <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing-online">
+                  <li >
+                  Emo-Energy Rebalancing Workshop - online
+                  </li>
+                </Link>
                 <Link onClick={() => {setNav(false)}}  to="/swadhyay">
                   <li >
                   Swadhyay - on Campus
