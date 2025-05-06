@@ -130,6 +130,19 @@ body {
   }
 }
 
+.global_home_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #000;
+  padding: 0 !important;
+  padding-bottom: 4px !important;
+}
+
+
+
 .enroll-btn {
   width: max-content;
   background-color: #FFFFFF;

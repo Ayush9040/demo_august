@@ -532,6 +532,12 @@
   }
 }
 
+.slick-dots {
+  display: flex !important;
+  align-items: center;
+  justify-content: center !important;
+}
+
 // .apply_this {
 //   display: block;
 //   height: 370px;

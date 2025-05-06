@@ -14,6 +14,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
 import month_ttc from './images/3_month_ttc.jpg'
+import Arrow_Right from './images/Arrow_Right.svg'
+import Arrow_Left from './images/Arrow_Left.svg'
 
 const OurOfferings = () => {
 
@@ -127,7 +129,24 @@ const OurOfferings = () => {
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)
     },
-    beforeChange: (current, next) => setActiveSlide(next)
+    beforeChange: (current, next) => setActiveSlide(next),
+    appendDots: dots => (
+      <div className="custom-arrow-dots-wrapper">
+        <img
+          src={Arrow_Left}
+          alt="Previous"
+          onClick={() => sliderRef.current?.slickPrev()}
+          style={{ cursor: 'pointer', width: 18, height: 18 }}
+        />
+        <ul style={{ margin: 0, display: 'flex', justifyContent: 'center' }}>{dots}</ul>
+        <img
+          src={Arrow_Right}
+          alt="Next"
+          onClick={() => sliderRef.current?.slickNext()}
+          style={{ cursor: 'pointer', width: 18, height: 18 }}
+        />
+      </div>
+    )
   }
 
   const handleDotClick = (index) => {
