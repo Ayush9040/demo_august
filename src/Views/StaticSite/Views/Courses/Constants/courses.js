@@ -18838,7 +18838,7 @@ const certificate = {
     cardImage: `${Emo_energy}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '9:00 am - 6:00 pm - On Campus',
@@ -18959,7 +18959,7 @@ const certificate = {
     cardImage: `${Emo_energy}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: 'Morning 10:00 am – 1:00 pm, Evening 5:30 - 8:30 PM - online',
@@ -19263,7 +19263,7 @@ const certificate = {
     cardImage: `${integral_chakra}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'Heal your 7 chakras by studying its behaviour patterns, know its potential and live a life you always wanted to',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '9:00 am – 6:00 pm - Online',
