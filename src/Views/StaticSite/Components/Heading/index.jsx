@@ -2,8 +2,11 @@ import React from 'react'
 import './style.scss'
 
 const Heading = ({ logo, smallText, largeText }) => {
+
+  const isHome = location.pathname === '/';
+
   return (
-    <div className="heading-container">
+    <div className={isHome ? "heading-container head-home" : "heading-container"}>
       <div className="heading-content">
         <div className="heading-logo">{logo}</div>
         <div className="heading-text">

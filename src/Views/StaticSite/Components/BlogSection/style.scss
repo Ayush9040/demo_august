@@ -1,13 +1,14 @@
 .blog-container {
-  padding: 5rem 15rem 0rem;
+  padding: 5rem 60px 0rem;
   .blog-content {
     background-color: #f4f4f4;
-    width: 85%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     border-radius: 0 200px 0 200px;
     display: grid;
     padding: 10rem 4rem 5rem 7rem;
     grid-template-columns: 20% 80%;
+    overflow: hidden;
     .blog-header {
       p {
         margin-top: 2rem;

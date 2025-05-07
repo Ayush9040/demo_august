@@ -12,7 +12,7 @@ const CommonBtn = ({ text, isColor, buttonAction }) => {
   return (
     <>
       <div id="enrollButton" className={isHome ? "global-common-btn global_home_btn" : "global-common-btn"} style={isColor ? { background: isColor, color: 'white' } : {}} onClick={buttonAction}>
-        <div className="global-common-btn-content">{text}</div> 
+        <div className={isHome ? "global-common-btn-content global_home_content" : "global-common-btn-content"}>{text}</div> 
         { isNutriDietLanding && text != 'Continue' && (
           <div className='fixes_des_footer_img'>
             <img src={nutri_diet_mobile_footer_arrow} alt="" />

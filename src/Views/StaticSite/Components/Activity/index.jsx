@@ -10,6 +10,8 @@ import Slider from 'react-slick'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
+import Arrow_Left from './images/Arrow_Left.svg'
+import Arrow_Right from './images/Arrow_Right.svg'
 
 const Activity = () => {
   const activityRef = useRef(null)
@@ -61,6 +63,23 @@ const Activity = () => {
         },
       },
     ],
+    appendDots: dots => (
+      <div className="custom-arrow-dots-wrapper">
+        <img
+          src={Arrow_Left}
+          alt="Previous"
+          onClick={() => activitySliderRef.current?.slickPrev()}
+          style={{ cursor: 'pointer', width: 18, height: 18 }}
+        />
+        <ul style={{ margin: 0, display: 'flex', justifyContent: 'center' }}>{dots}</ul>
+        <img
+          src={Arrow_Right}
+          alt="Next"
+          onClick={() => activitySliderRef.current?.slickNext()}
+          style={{ cursor: 'pointer', width: 18, height: 18, marginLeft: '3px' }}
+        />
+      </div>
+    )
   }
 
   return (
@@ -103,7 +122,7 @@ const Activity = () => {
           <div className="activity-wrapper">
             <Heading
               logo={highlights}
-              smallText=""
+              smallText="Our"
               largeText="Highlight"
             />
             <div className="activity-text">

@@ -82,7 +82,7 @@ const NewsLetter = () => {
         <div className="images">
           <div className="image">
             {/* <Link to="/yogasattva"> */}
-              {
+              {/* {
                 width > 768 && (
                   <div className="row">
                 {yogsattvaData.slice(0,3).map((image, i) => (
@@ -97,7 +97,7 @@ const NewsLetter = () => {
                 ))}
               </div>
                 )
-              }
+              } */}
             {/* </Link> */}
           </div>
 
@@ -107,8 +107,7 @@ const NewsLetter = () => {
 
         </div>
 
-        {
-          width < 768 && (
+         
             <div className="experience-container" ref={expRef}>
                 <Slider
                   {...settings}
@@ -179,8 +178,8 @@ const NewsLetter = () => {
 
                 </Slider>
               </div>
-          )
-        }
+          
+        
 
 
         <div className="description">

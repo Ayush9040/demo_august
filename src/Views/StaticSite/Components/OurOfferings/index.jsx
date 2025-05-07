@@ -143,7 +143,7 @@ const OurOfferings = () => {
           src={Arrow_Right}
           alt="Next"
           onClick={() => sliderRef.current?.slickNext()}
-          style={{ cursor: 'pointer', width: 18, height: 18 }}
+          style={{ cursor: 'pointer', width: 18, height: 18, marginLeft: '3px' }}
         />
       </div>
     )
@@ -170,7 +170,7 @@ const OurOfferings = () => {
             </p>
           </div>
 
-          <Link to="/courses">
+          <Link to="/courses" className='btn_offer'>
             <CommonBtn text="Explore More" />
           </Link>
         </div>

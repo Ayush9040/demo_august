@@ -9,6 +9,8 @@ import CommonBtn from '../commonbtn'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
+import Arrow_Right from './images/Arrow_Right.svg'
+import Arrow_Left from './images/Arrow_Left.svg'
 
 const Experience = () => {
   const expRef = useRef(null)
@@ -34,6 +36,23 @@ const Experience = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoPlaySpeed: 500,
+    appendDots: dots => (
+      <div className="custom-arrow-dots-wrapper">
+        <img
+          src={Arrow_Left}
+          alt="Previous"
+          onClick={() => sliderRef.current?.slickPrev()}
+          style={{ cursor: 'pointer', width: 18, height: 18 }}
+        />
+        <ul style={{ margin: 0, display: 'flex', justifyContent: 'center' }}>{dots}</ul>
+        <img
+          src={Arrow_Right}
+          alt="Next"
+          onClick={() => sliderRef.current?.slickNext()}
+          style={{ cursor: 'pointer', width: 18, height: 18, marginLeft: '3px' }}
+        />
+      </div>
+    )
   }
 
   return (

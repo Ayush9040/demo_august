@@ -23,10 +23,10 @@
     position: absolute;
     bottom: 0;
     text-align: center;
-    width: 96%;
+    width: 100%;
     // margin: 0.8rem;
     // padding: 0.8rem;
-    margin: 0.8rem;
+    margin: 0rem;
     background-color: #EBB38AEB;
     height: 45%;
     min-height: 20%;
@@ -190,4 +190,8 @@ h4{
     .activity-container .activity-content .activity-text p{
         text-align: justify;
     }
+}
+
+.activity-text {
+    // margin: 3rem 0rem !important;
 }
