@@ -22,19 +22,19 @@ export const socialPageData = [
     psychological and physical ailments.`,
     image: `${baseDomain}${socialResponsibilityAssets.police}`,
   },
-  {
-    title: 'Police',
-    description: `We understand the holistic health requirements for those
-    who deal with terror, anti-social elements, and other
-    disturbing situations on a daily basis. Paying tribute to
-    their indomitable spirit, we have provided these special
-    task forces with free yoga sessions for over a decade. We
-    have trained over 10,000 personnel in yoga techniques
-    through these programmes to enhance their ability to
-    manage and eventually overcome PTSD and similar
-    psychological and physical ailments.`,
-    image: `${baseDomain}${socialResponsibilityAssets.police}`,
-  },
+  // {
+  //   title: 'Police',
+  //   description: `We understand the holistic health requirements for those
+  //   who deal with terror, anti-social elements, and other
+  //   disturbing situations on a daily basis. Paying tribute to
+  //   their indomitable spirit, we have provided these special
+  //   task forces with free yoga sessions for over a decade. We
+  //   have trained over 10,000 personnel in yoga techniques
+  //   through these programmes to enhance their ability to
+  //   manage and eventually overcome PTSD and similar
+  //   psychological and physical ailments.`,
+  //   image: `${baseDomain}${socialResponsibilityAssets.police}`,
+  // },
   {
     title: 'Truckasana',
     description: `The trucking industry is the backbone of our nation’s
