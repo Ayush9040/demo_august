@@ -195,3 +195,61 @@ h4{
 .activity-text {
     // margin: 3rem 0rem !important;
 }
+
+.activity-container .slick-dots li button::before {
+    color: rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    font-size: 12px !important;
+  }
+  
+  // .magezines .experience-container .slick-dots li .slick-active button::before {
+  //   font-size: 66px;
+  // }
+    
+  .activity-container .slick-dots li.slick-active button::before {
+    font-size: 16px !important;
+  }
+
+  @media(max-width: 768px) {
+    .activity-container .activity-content .activity-text p {
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center !important;
+    }
+
+    .activity-container .activity-content .global-common-btn {
+        margin-top: 1rem;
+       
+    }
+
+    .activity-container .activity-content .global-common-btn .global_home_content {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .style_mob {
+        display: flex;
+        justify-content: center;
+    }
+
+    .activity-container .slick-dots {
+        gap: 8px;
+    }
+
+    .activity-container .slick-dots li button::before {
+        color: rgba(188, 79, 49, 0.5);
+        opacity: 1;
+        font-size: 10px !important;
+      }
+
+      .activity-container .slick-dots li.slick-active button::before {
+        font-size: 12px !important;
+        color: rgba(188, 79, 49, 1);
+      }
+
+      .activity-container .slick-dots li {
+        width: 15px !important;
+        height: 15px !important;
+        margin: 0 1px !important;
+    }
+  }

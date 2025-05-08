@@ -83,10 +83,10 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt="Modiji" />
-            <div style={{ float: 'right' }}>
+            {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
-              </Link></div>
+              </Link></div> */}
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -110,11 +110,11 @@ const Experience = () => {
               src={`${baseDomain}${homeAssets.homeAsset55}`}
               alt="Shri Ramnath Kovid"
             />
-            <div style={{ float: 'right' }}>
+            {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -137,11 +137,11 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
-            <div style={{ float: 'right' }}>
+            {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
-              </Link></div>
-          </div>
+              </Link></div>*/}
+          </div> 
         </div>
         <div className="experience-carousel global-padding">
           <div className="carousel-content">
@@ -166,14 +166,20 @@ const Experience = () => {
               src={`${baseDomain}${homeAssets.homeAsset58}`}
               alt="Amitabh Bachchan"
             />
-            <div style={{ float: 'right' }}>
+            {/* <div style={{ float: 'right' }}>
+              <Link to="/testimonials">
+                <CommonBtn text={'View All'} />
+              </Link>
+            </div> */}
+          </div>
+        </div>
+      </Slider>
+
+      <div className='view_all_exp'>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
               </Link>
             </div>
-          </div>
-        </div>
-      </Slider>
     </div>
   )
 }

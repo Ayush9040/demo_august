@@ -296,7 +296,15 @@ const OurOfferings = () => {
           </Slider>
 
           <div>
+          
             <div className="slider-dots">
+            <img
+      src={Arrow_Left}
+      alt="Previous"
+      className="mobile-arrow"
+      style={{ width: '16px', height: '16px'}}
+      onClick={() => sliderRef.current?.slickPrev()}
+    />
               {
                 carouselData.map((content, index) => (
                   <div
@@ -306,7 +314,16 @@ const OurOfferings = () => {
                   ></div>
                 ))
               }
+
+<img
+      src={Arrow_Right}
+      alt="Next"
+      className="mobile-arrow"
+      style={{ width: '16px', height: '16px'}}
+      onClick={() => sliderRef.current?.slickNext()}
+    />
             </div>
+           
 
           </div>
 

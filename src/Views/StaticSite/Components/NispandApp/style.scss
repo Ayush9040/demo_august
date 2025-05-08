@@ -131,3 +131,28 @@
         margin: 5rem 10%;
     }
 }
+
+@media(max-width: 768px) {
+    .nispand-app-container .nispand-content .app-description {
+        text-align: center !important;
+    }
+
+    .nispand-app-container .nispand-content .app-description p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .style_mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nispand-app-container .global-common-btn .global_home_content {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .nispand-app-container .nispand-content .global-common-btn {
+        margin-top: 1rem;
+    }
+}

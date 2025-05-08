@@ -34,6 +34,8 @@
         width: 60%;
         img{
             width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
         }
     }
     .custom-border{
@@ -107,3 +109,80 @@
     margin-bottom: 5rem;
 }
 }
+
+.experience-container .slick-dots li button::before {
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    font-size: 12px !important;
+  }
+  
+  // .magezines .experience-container .slick-dots li .slick-active button::before {
+  //   font-size: 66px;
+  // }
+    
+  .experience-container .slick-dots li.slick-active button::before {
+    font-size: 16px !important;
+  }
+
+  .view_all_exp {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  .view_all_exp .global_home_btn {
+    margin-top: 0px;
+  }
+
+  @media(max-width: 768px) {
+    .experience-container .experience-carousel .carousel-content .name-status {
+        text-align: center !important;
+    }
+
+    .experience-container .experience-carousel .carousel-content .name-status h4 {
+        height: 100% !important;
+        margin-bottom: 12px;
+    }
+
+    .experience-container .experience-carousel .carousel-content .name-status p {
+        text-align: center !important;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 28px;
+    }
+
+    .experience-container .slick-dots li button::before {
+        color: rgba(255, 255, 255, 1);
+        opacity: 1;
+        font-size: 12px !important;
+      }
+      
+      // .magezines .experience-container .slick-dots li .slick-active button::before {
+      //   font-size: 66px;
+      // }
+        
+      .experience-container .slick-dots li.slick-active button::before {
+        font-size: 16px !important;
+      }
+
+      .experience-container .global-common-btn .global_home_content {
+        font-size: 14px;
+        font-weight: 600;
+    }
+  }
+
+  
+
+  
+
+  @media(max-width: 2080px) {
+    .experience-container .experience-carousel {
+        padding-bottom: 50px !important;
+    }
+  }
+
+  @media(max-width: 1380px) {
+    .experience-container .experience-carousel {
+        padding-bottom: 1rem !important;
+    }
+  }

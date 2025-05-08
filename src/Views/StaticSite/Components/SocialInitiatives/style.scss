@@ -291,3 +291,59 @@ padding-top: 10rem;
     gap: 20px;
     justify-content: start !important;
 }
+
+.social-initiative-carousel .slick-dots li button::before {
+    color: rgba(188, 79, 49, 0.5);
+    opacity: 1;
+    font-size: 12px !important;
+  }
+  
+  // .magezines .experience-container .slick-dots li .slick-active button::before {
+  //   font-size: 66px;
+  // }
+    
+  .social-initiative-carousel .slick-dots li.slick-active button::before {
+    font-size: 16px !important;
+  }
+
+  @media(max-width: 768px) {
+    .social-initiative-container .social-initiative-content {
+        margin-top: 4rem;
+    }
+
+    .social-initiative-carousel .slick-initialized .slick-dots {
+        justify-content: center !important;
+        margin-top: 2rem;
+    }
+
+    .social-initiative-carousel .slick-initialized .slick-dots {
+        gap: 1px;
+    }
+
+    .social-initiative-container .social-initiative-carousel .slick-dots li {
+        margin: 0 4px !important;
+    }
+
+    .social-initiative-carousel .slick-dots li button::before {
+        // color: rgba(188, 79, 49, 0.5);
+        opacity: 1;
+        font-size: 10px !important;
+      }
+      
+      // .magezines .experience-container .slick-dots li .slick-active button::before {
+      //   font-size: 66px;
+      // }
+        
+      .social-initiative-carousel .slick-dots li.slick-active button::before {
+        font-size: 14px !important;
+      }
+
+      .social-initiative-content .global-common-btn .global_home_content {
+        font-size: 14px;
+        font-weight: 600;
+    }
+  }
+
+  .social-initiative-container .social-initiative-carousel .slick-dots li {
+    margin-right: 5px !important;
+  }

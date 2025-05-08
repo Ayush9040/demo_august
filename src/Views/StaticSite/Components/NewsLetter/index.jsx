@@ -14,8 +14,9 @@ import { authBaseDomain } from '../../../../Constants/appSettings'
 import { getByYearYogsattva } from '../../Views/Publication/Views/Api'
 import { handleCTSubscribeNewsletterClicked } from '../../../../CleverTap/subscribeNewsLetter'
 const NewsLetter = () => {
+  const [name, setName] = useState('');
   const [mail, setMail] = useState('')
-  const [err, setErr] = useState(false)
+  const [err, setErr] = useState({ name: false, email: false });
   const [sucess, setSuccess] = useState(false)
   const [yogsattvaData, setYogsattvaData] = useState([])
   const [width, setWidth] = useState(window.innerWidth);
@@ -32,8 +33,15 @@ const NewsLetter = () => {
     getByYearYogsattvaData(2025)
   }, [])
   const checkMail = async() => {
-    if (!validateEmail(mail)) {
-      setErr(true)
+    const isValidEmail = validateEmail(mail);
+    const isValidName = name.trim() !== '';
+  
+    if (!isValidEmail || !isValidName) {
+      setErr({
+        name: !isValidName,
+        email: !isValidEmail
+      });
+      return;
     } else {
       const response = await axios.post(`${authBaseDomain}/ali/newslettermail`, { email: mail })
       if (response.data.success === true) {
@@ -115,7 +123,7 @@ const NewsLetter = () => {
                     sliderRef.current = slider
                   }}
                 >
-                  <div className="experience-carousel global-padding">
+                  <div className="experience-carousel">
                     
                     <div className="carousel-image" >
                     
@@ -129,7 +137,7 @@ const NewsLetter = () => {
                   </div>
 
 
-                  <div className="experience-carousel global-padding">
+                  <div className="experience-carousel">
                     
                     <div className="carousel-image">
                     <img src={yogsattvaData[1]?.imageUrl} alt={yogsattvaData[1]?.title} style={{ marginBottom: '10px'}} onClick={
@@ -142,7 +150,7 @@ const NewsLetter = () => {
                   </div>
 
 
-                  <div className="experience-carousel global-padding">
+                  <div className="experience-carousel">
                  
                   <div className="carousel-image">
                     <img src={yogsattvaData[2]?.imageUrl} alt={yogsattvaData[2]?.title} style={{ marginBottom: '10px'}} onClick={
@@ -154,7 +162,7 @@ const NewsLetter = () => {
                     </div>
                   </div>
 
-                  <div className="experience-carousel global-padding">
+                  <div className="experience-carousel">
                     
                     <div className="carousel-image">
                     <img src={yogsattvaData[3]?.imageUrl} alt={yogsattvaData[3]?.title} style={{ marginBottom: '10px'}} onClick={
@@ -200,8 +208,36 @@ const NewsLetter = () => {
           largeText={'Newsletter'}
         />
         <div className="subscription-form">
-          {sucess === false ? <input type={'email'} onChange={(e) => { setMail(e.target.value); setErr(false) }} placeholder="Enter Your Email Id" /> : <p>Thank You for subscribing</p>}
-          {err && <small>Please Enter Valid Email</small>}
+          {sucess === false ? (
+            <div className="subs_wrapper">
+            <div className="name_wrapper">
+              <p className="email_label">Name</p>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setErr((prev) => ({ ...prev, name: false }));
+                }}
+                placeholder="Enter your name"
+              />
+              {err.name && <small>Please enter your name</small>}
+            </div>
+      
+            <div className="email_wrapper">
+              <p className="email_label">Email Address</p>
+              <input
+                type="email"
+                onChange={(e) => {
+                  setMail(e.target.value);
+                  setErr((prev) => ({ ...prev, email: false }));
+                }}
+                placeholder="Enter your email address"
+              />
+              {err.email && <small>Please enter a valid email</small>}
+            </div>
+          </div>
+            ) : <p>Thank You for subscribing</p>}
+          {/* {err && <small>Please Enter Valid Email</small>} */}
         </div>
         {sucess === false && <div onClick={checkMail} >
           <CommonBtn text={'Subscribe Now'} />

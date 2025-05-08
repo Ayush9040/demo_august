@@ -1,13 +1,18 @@
 .newsletter-container {
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  // grid-template-columns: 60% 40%;
   justify-content: center;
   //align-items: center;
-  background: #F4F4F4;
+  background: rgba(244, 244, 244, 1);
+  align-items: center;
+  margin-top: 80px;
+  gap: 100px;
   .magezines {
     margin-right: 0px;
+    display: flex;
+    align-items: center;
     .images {
-      display: flex;
+      display: none;
       justify-content: space-between;
       flex-wrap: wrap;
       .row {
@@ -50,6 +55,9 @@
     p {
       margin-bottom: 2rem;
       padding-left: 2rem;
+      width: 294px;
+      font-size: 25px;
+      font-weight: 400;
     }
     width: 80%;
     margin: 5rem 0;
@@ -65,18 +73,26 @@
   }
 }
 .subscription {
-  width: 80%;
-  margin-top: 7rem;
-  margin-left: 5rem;
+  width: 33%;
+  border: 1px solid rgba(202, 70, 37, 1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 0px rgba(202, 70, 37, 0.2);
+  border-radius: 20px;
+  padding: 28px;
+  // margin-top: 7rem;
+  // margin-left: 5rem;
   .subscription-form {
     padding: 2rem 0 0;
     input {
       display: block;
-      width: 80%;
-      padding: 2rem 4rem 1rem 0rem;
+      width: 90%;
+      padding: 1rem 4rem 1rem 0rem;
       font-size: 1.5rem;
-      border: none;
-      border-bottom: 2px solid gray;
+      border: 1px solid rgba(96, 96, 96, 0.5);
+      color:rgba(96, 96, 96, 0.5);
+      padding: 14px;
+      // border-bottom: 2px solid gray;
+      border-radius: 30px;
       background: transparent;
       &:focus {
         border-bottom: 2px solid gray;
@@ -100,8 +116,8 @@
 }
 @media (min-width: 1920px) {
   .newsletter-container .magezines {
-    width: 80%;
-    margin: 0 auto;
+    width: 50%;
+    // margin: 0 auto;
     .images {
       justify-content: left;
       grid-gap: 1rem;
@@ -113,8 +129,8 @@
 }
 @media (max-width: 1920px) {
   .newsletter-container .magezines {
-    width: 80%;
-    margin: 0 auto;
+    width: 50%;
+    // margin: 0 auto;
     .images {
       justify-content: left;
       grid-gap: 1rem;
@@ -126,8 +142,8 @@
 }
 @media (max-width: 1800px) {
   .newsletter-container .magezines {
-    width: 90%;
-    margin: 0 auto;
+    width: 50%;
+    // margin: 0 auto;
     .images {
       // justify-content: center;
       grid-gap: 2rem;
@@ -136,7 +152,7 @@
       }
     }
     .description {
-      margin: 5rem auto;
+      // margin: 5rem auto;
       margin-left: 0;
     }
   }
@@ -199,7 +215,7 @@
       .subscription-form {
         padding: 2rem;
         input {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
         }
       }
@@ -222,6 +238,8 @@
   .newsletter-container .magezines .description p {
     text-align: justify;
   }
+
+
 }
 
 
@@ -269,6 +287,7 @@
       width: 60%;
       img{
           width: 100%;
+          border-radius: 8px;
       }
   }
   .custom-border{
@@ -277,6 +296,7 @@
 }
 .slick-dots{
   bottom: 0px!important;
+  gap: 12px;
   li{
       button{
           &::before{
@@ -337,3 +357,153 @@
       margin-bottom: 5rem;
   }
   }
+
+  .newsletter-container .magezines .experience-container .experience-carousel {
+    grid-template-columns: 100%;
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .newsletter-container .magezines  .experience-container {
+    width: 50%;
+    background-color: transparent;
+  }
+
+  .newsletter-container .description {
+    width: 50%;
+    margin: 0;
+  }
+
+  .experience-container .experience-carousel .carousel-image {
+    width: 65%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.magezines .experience-container .slick-dots li button::before {
+  color: rgba(188, 79, 49, 0.5);
+  opacity: 1;
+  font-size: 12px;
+}
+
+
+
+.magezines .experience-container .slick-dots li {
+  font-size: 12px;
+}
+
+
+
+.email_label {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.subs_wrapper {
+  padding-top: 12px;
+}
+
+.name_wrapper {
+  margin-bottom: 40px;
+}
+
+.email_wrapper {
+  margin-bottom: 28px;
+}
+
+.subscription div .global_home_btn {
+  background-color: rgb(202, 70, 37);
+    width: 90%;
+    border-radius: 8px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.subscription div .global_home_btn  .global_home_content {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.subscription div .global_home_btn .fixes_des_footer_img {
+  display: none !important;
+}
+
+.magezines .experience-container .slick-dots li button::before {
+  color: rgba(188, 79, 49, 0.5);
+  opacity: 1;
+  font-size: 12px !important;
+}
+
+// .magezines .experience-container .slick-dots li .slick-active button::before {
+//   font-size: 66px;
+// }
+  
+.magezines .experience-container .slick-dots li.slick-active button::before {
+  font-size: 16px !important;
+}
+
+@media(max-width: 768px) {
+  .magezines {
+    flex-direction: column;
+  }
+
+  .magezines .experience-container {
+    width: 100% !important;
+  }
+
+  .magezines .description {
+    width: 100%;
+  }
+
+  .subscription {
+    width: 100%;
+    padding: 0px 15px;
+  }
+
+  .newsletter-container .experience-container .experience-carousel .carousel-image {
+    width: 78%;
+  }
+
+  .newsletter-container .magezines .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .newsletter-container .description p {
+    font-size: 12px;
+    text-align: center !important;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .newsletter-container .magezines .description {
+    margin: 3rem auto;
+  }
+
+  .videos-container .video-background .featured-videos {
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 5px;
+  }
+
+  .newsletter-container .global-common-btn .global_home_content {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subscription div .global_home_btn .global_home_content {
+  font-size: 14px;
+}
+
+.email_label {
+  font-size: 12px;
+}
+}

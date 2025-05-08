@@ -30,7 +30,7 @@ const Nispand = () => {
             monitor.
           </p>
         </div>
-        <a href='https://nispand.com/' rel="noreferrer"  target='_blank' >
+        <a href='https://nispand.com/' rel="noreferrer"  target='_blank' className="style_mobile" >
           <CommonBtn text={'Explore More'} />
         </a>
         <div className='download-options'>

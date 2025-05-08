@@ -132,7 +132,7 @@ const Activity = () => {
                 them now!
               </p>
             </div>
-            <Link to="/courses/browse/most-popular">
+            <Link to="/courses/browse/most-popular" className='style_mob'>
               <CommonBtn text={'Explore more'} />
             </Link>
           </div>

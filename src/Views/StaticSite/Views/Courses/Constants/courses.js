@@ -2723,7 +2723,7 @@ const ttc200hr = {
     rating: 5,
     colorCode: '#E38F73',
     timing:
-      'Monday to Saturday 5.30 am - 7.30 am (IST)',
+      'Monday to Saturday 5:00 am to 7:30 am (IST)',
     fees: {
       onlineFee: 27500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -2745,7 +2745,8 @@ const ttc200hr = {
       // '26th May - 19th Jul 2025',
       // '28th Jul - 20th Sep 2025',
       // '29th Sep - 22nd Nov 2025',
-      '19th May - 9th August 2025',
+      // '19th May - 9th August 2025',
+      '9th June - 30th August 2025'
     ],
     online: true,
     onCampus: false,
@@ -2765,7 +2766,7 @@ const ttc200hr = {
     ],
     time:
       [
-        '5.30 am - 7.30 am (IST)',
+        '5:00 am to 7:30 am (IST)',
         
       ],
 
@@ -2774,7 +2775,7 @@ const ttc200hr = {
       timings: [
         {
           day: "Monday to Saturday",
-          time: "5.30 am - 7.30 am (IST)"
+          time: "5:00 am to 7:30 am (IST)"
         },
         // {
         //   day: "Monday to Saturday",
@@ -2851,7 +2852,7 @@ const ttc200hr = {
         content: {
           title: 'Timings',
           text: [
-            '5.30 am - 7.30 am (IST)',
+            '5:00 am to 7:30 am (IST)',
           ],
         },
       },
@@ -3244,7 +3245,7 @@ const ttc200hr = {
       duration: "02 Months",
       mode: "Online",
       language: "English",
-      timing: "5.30 am - 7.30 am (IST)",
+      timing: "5:00 am to 7:30 am (IST)",
       days: "Monday - Saturday",
       navigate: "/200-hrs-part-time-ttc-online-batch-6",
     },
@@ -19080,7 +19081,7 @@ const certificate = {
     cardImage: `${swadhyay}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '9:00 am - 6:00 pm - On Campus',
@@ -19172,7 +19173,7 @@ const certificate = {
     cardImage: `${swadhyay}`,
     mostPopular: false,
     metaDescription:
-      '',
+      'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '10.00 am to 1.00 pm, 5.30 pm to 8.30 pm (Join any one batch time) - Online',

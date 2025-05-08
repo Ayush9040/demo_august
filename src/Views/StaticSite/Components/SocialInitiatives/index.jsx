@@ -82,7 +82,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
 
                   {item.url ? <Link to={item.url}><h1>{item.title}</h1></Link> : <h1>{item.title}</h1>}
 
-                  <p>{item.description}</p>
+                  <p style={{marginTop: '12px'}}>{item.description}</p>
                   {/* {item.url} */}
                 </div>
               )

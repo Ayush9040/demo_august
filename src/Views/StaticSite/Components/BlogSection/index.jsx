@@ -95,7 +95,7 @@ const Blog = () => {
             </p>
           </div>
           <div className="blog_view_button">
-            <Link to="/blogs">
+            <Link to="/blogs" className='style_mobile'>
               <CommonBtn text={'View All'} />
             </Link>
           </div>
