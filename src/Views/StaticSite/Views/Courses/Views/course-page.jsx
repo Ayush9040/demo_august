@@ -1101,6 +1101,16 @@ const Courses = () => {
                 </AccordionItemHeading>
               </AccordionItem>
 
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/personal-development-programs">
+                      <p>Continues Personal Development Program</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
               {/* <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
