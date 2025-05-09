@@ -271,7 +271,7 @@ const CourseCard = ({
       >
         {/* <h4>{courseTitle?.slice(0, 55)}...</h4> */}
         <h4>{courseTitle}</h4>
-        <h3>{description?.slice(0, 100)}{description?.length > 100 && <>...</>}</h3>
+        <h3>{description?.slice(0, 70)}{description?.length > 70 && <>...</>}</h3>
 
         <div style={{ marginTop: '-32px' }}></div>
         {(dates.length > 0 && !isRegular(courseTitle)) &&

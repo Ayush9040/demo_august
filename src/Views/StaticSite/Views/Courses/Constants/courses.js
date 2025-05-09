@@ -70,7 +70,7 @@ const ttc200hr = {
       // '1st Feb to 28th Feb 2025',
       // '1st Mar to 31st Mar 2025',
       // '1st Apr to 30th Apr 2025',
-      '1st May to 31st May 2025',
+      // '1st May to 31st May 2025',
       '2nd Jun to 30th Jun 2025',
       '1st Jul to 31st Jul 2025',
       '1st Aug to 30th Aug 2025',
@@ -2746,7 +2746,7 @@ const ttc200hr = {
       // '28th Jul - 20th Sep 2025',
       // '29th Sep - 22nd Nov 2025',
       // '19th May - 9th August 2025',
-      '9th June - 30th August 2025'
+      '9th Jun  - 30th August 2025'
     ],
     online: true,
     onCampus: false,
@@ -2775,7 +2775,7 @@ const ttc200hr = {
       timings: [
         {
           day: "Monday to Saturday",
-          time: "5:00 am to 7:30 am (IST)"
+          time: "5:00 am to 7:30 am"
         },
         // {
         //   day: "Monday to Saturday",
@@ -4246,7 +4246,7 @@ const ttc900hr = {
       // '27th Jul to 20th Oct 2024',
       // '26th Oct to 20th Jan 2025',
       // '25th Jan to 20th Apr 2025',
-      '26th Apr to 20th Jul 2025',
+      // '26th Apr to 20th Jul 2025',
       '26th Jul to 19th Oct 2025',
       '25th Oct to 18th Jan 2026',
 
@@ -4840,7 +4840,7 @@ const ttc900hr = {
       // '3rd Feb 2025',
       // '3rd Mar 2025',
       // '1st Apr 2025',
-      '1st May 2025',
+      // '1st May 2025',
       '2nd Jun 2025',
       '1st Jul 2025',
       '1st Aug 2025',
@@ -7879,7 +7879,9 @@ const camps = {
       'Specialized yoga camp for heart health & hypertension management.',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: [ '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
+    dates: [ 
+      // '4th May 2025', 
+      '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -9951,7 +9953,8 @@ const camps = {
     },
     dates: [
       // '5th Apr 2025', 
-      '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
+      // '3rd May 2025', 
+      '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -11298,7 +11301,7 @@ const camps = {
       // '2nd Feb to 22nd Feb 2025',
       // '2nd Mar to 22nd Mar 2025',
       // '6th Apr to 26th Apr 2025',
-      '4th May to 24th May 2025',
+      // '4th May to 24th May 2025',
       '1st Jun to 21st Jun 2025',
       '6th Jul to 26th Jul 2025',
       '3rd Aug to 23rd Aug 2025',
@@ -11728,7 +11731,7 @@ const camps = {
       // '2nd Feb to 22nd Feb 2025',
       // '2nd Mar to 22nd Mar 2025',
       // '6th Apr to 26th Apr 2025',
-      '4th May to 24th May 2025',
+      // '4th May to 24th May 2025',
       '1st Jun to 21st Jun 2025',
       '6th Jul to 26th Jul 2025',
       '3rd Aug to 23rd Aug 2025',
@@ -15133,7 +15136,7 @@ const classes = {
       // '3rd Feb to 28th Feb 2025',
       // '3rd Mar to 28th Mar 2025',
       // '7th Apr to 2nd May 2025',
-      '5th May to 30th May 2025',
+      // '5th May to 30th May 2025',
       '2nd Jun to 12th Jun 2025',
       '7th Jul to 1st Aug 2025',
       '4th Aug to 29th Aug 2025',
@@ -15479,7 +15482,7 @@ const classes = {
       // '13th Apr 2025', 
       // '20th Apr 2025', 
       // '27th Apr 2025',
-      '4th May 2025', 
+      // '4th May 2025', 
       '11th May 2025', 
       '18th May 2025', 
       '25th May 2025', 
@@ -16002,7 +16005,7 @@ const classes = {
       // '12th Apr 2025', 
       // '19th Apr 2025', 
       // '26th Apr 2025', 
-      '3rd May 2025', 
+      // '3rd May 2025', 
       '10th May 2025', 
       '17th May 2025', 
       '24th May 2025', 
@@ -17592,8 +17595,8 @@ const certificate = {
       // '6th November 2024 to 28th December 2024· Evening',
       // '11th Nov 2024 to 2nd Jan 2025· Morning',
       // '3rd February to 27th March 2025· Morning',
-      '5th May to 26th June 2025· Morning',
-      '7th May to 28th June 2025· Evening',
+      // '5th May to 26th June 2025· Morning',
+      // '7th May to 28th June 2025· Evening',
       '4th August to 25th September 2025· Morning',
       '3rd November to 25th December 2025· Morning',
     ],
@@ -17925,7 +17928,7 @@ const certificate = {
       // '2nd Aug to 7th Sep 2024',
       // '15th Nov - 21st Dec 2024',
       // '7th Feb to 15th Mar 2025',
-      '2nd May to 7th Jun 2025',
+      // '2nd May to 7th Jun 2025',
       '1st Aug to 6th Sep 2025',
       '7th Nov  to 13th Dec 2025'
     ],
@@ -18850,7 +18853,7 @@ const certificate = {
     },
     category: 'classes',
     dates: [
-      'April 19th – April 20th 2025',
+      // 'April 19th – April 20th 2025',
       'May 17th – May 18th 2025',
       'June 21th – June 22th 2025',
       'July 19th – July 20th 2025',
@@ -18972,7 +18975,7 @@ const certificate = {
     category: 'classes',
     dates: [
       // 'April 19th – April 20th 2025',
-      'May 5th – May 9th 2025 Morning',
+      // 'May 5th – May 9th 2025 Morning',
       'June 2nd – June 6th 2025 Evening',
       'July 7th – July 11th 2025 Morning',
       'Aug 4th – Aug 8th 2025 Evening',
