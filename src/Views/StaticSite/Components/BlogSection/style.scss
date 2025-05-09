@@ -200,6 +200,18 @@
     font-weight: 600;
 }
 
+.blog-carousel .slick-dots li {
+  margin: 0 2px !important;
+}
+
+.blog-container .blog-content .blog-carousel {
+  padding: 0rem;
+}
+
+.blog-carousel .slick-dots {
+  gap: 5px;
+}
+
 .style_mobile {
   display: flex;
   justify-content: center;
