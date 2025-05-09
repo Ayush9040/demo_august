@@ -241,6 +241,38 @@ const Enrollment = () => {
       "/7-days-camp-english",
       "/7-days-camp",
     ]
+
+    const isOneMonthTTC = () => {
+      return window.location.pathname.includes('/one-month-ttc');
+    }
+
+    const isPartTimeTTCOnCampusEnglish = () => {
+      return window.location.pathname.includes('/200-hrs-part-time-ttc-on-campus-english');
+    }
+
+    const isPartTimeTTCOnlineEnglish = () => {
+      return window.location.pathname.includes('/200-hrs-part-time-ttc-online-english');
+    }
+
+
+    const isPartTimeTTCOnline = () => {
+      return window.location.pathname.includes('/200-hrs-part-time-ttc-online');
+    }
+
+    const isWeekendTeacherTraining = () => {
+      return window.location.pathname.includes('/weekend-teacher-training-course');
+    }
+
+    const isTwoYearTTC = () => {
+      return window.location.pathname.includes('/two-year-ttc');
+    }
+
+    const isOneYearTTC = () => {
+      return window.location.pathname.includes('/one-year-ttc');
+    }
+
+
+    
     
     // Function to check if the current URL includes any allowed URL
     const shouldTriggerEvent = () => {
@@ -353,15 +385,220 @@ const Enrollment = () => {
       console.log(mail)
 
 
-      let mailTemplate = {
-        type: 'INFO_TYI',
-        HTMLTemplate: pickMail(),
-        subject: 'Enrollment Confirmation',
-        data: {
-          name: formData.name
-        },
-        receivers: [formData.email, 'info@theyogainstitute.org']
-      }
+      // let mailTemplate = {
+      //   type: 'INFO_TYI',
+      //   HTMLTemplate: pickMail(),
+      //   subject: 'Enrollment Confirmation',
+      //   data: {
+      //     name: formData.name
+      //   },
+      //   receivers: [formData.email, 'info@theyogainstitute.org']
+      // }
+
+      const identityKey2 = `+${user.data.dialCode}${user.data.phoneNumber}`;
+
+      const identityVerified2 = identityKey2.includes('++')
+  ? `+${user.data.dialCode}${user.data.phoneNumber}`
+  : `+${user.data.dialCode}${user.data.phoneNumber}`;
+
+
+
+      let mailTemplate;
+
+if (isOneMonthTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE200_1M_ONLINE_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "10:00 am to 6:00 pm ",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+
+  
+} else if (isPartTimeTTCOnCampusEnglish()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200 Hours Yoga Teacher Training Course - 2 Months Yoga TTC Online and On Campus - English - Batch 2",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Friday",
+        time: "12:00 noon - 4:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if (isPartTimeTTCOnlineEnglish()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE200_2M_ONLINE_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Friday",
+        time: "Morning: 7:00 am - 8:30 am and Evening : 6:30 pm - 8:30 pm ",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if (isPartTimeTTCOnline()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE200_2M_ONLINE_HINDI_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "1:00 pm - 4:30 pm ",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if (isWeekendTeacherTraining()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE200_WEEKEND_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 5",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Saturday & Sunday",
+        saturdayTime: "10:00 am – 8:30 pm ",
+        sundayTime: "10:00 am – 1:30 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+ 
+} else if (isTwoYearTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE900_2Y_ON_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"900 Hours YTTC - 2 Years Advanced Yoga Teacher Training Certificate Course Online & On Campus - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Saturday & Sunday",
+        saturdayTime: "4:30 pm – 7.30 pm ",
+        sundayTime: "9:30 am – 1:30 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if (isOneYearTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE900_1Y_ON_HINDI_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"900 Hours Yoga TTC - 1 Year Advanced Yoga Teacher Training Course Online & On-Campus - Hindi",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Friday",
+        time: "1:30 pm - 4:00 pm ",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+ 
+} else {
+
+  mailTemplate = {
+    type: 'INFO_TYI',
+    HTMLTemplate: pickMail(),
+    subject: 'Enrollment Confirmation',
+    data: {
+      name: formData.name
+    },
+    receivers: [formData.email, 'info@theyogainstitute.org']
+  }
+
+}
+
+
+      
 
       try {
         let response
