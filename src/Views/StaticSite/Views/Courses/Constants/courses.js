@@ -1661,7 +1661,7 @@ const ttc200hr = {
       // '14th Oct to 7th Dec 2024',
       // '25th Nov to 18th Jan 2025'
       // '17th Feb to 12th Apr 2025',
-      '5th May to 28th Jun 2025',
+      // '5th May to 28th Jun 2025',
       '7th Jul to 30th Aug 2025',
       '6th Oct to 29th Nov 2025',
 
@@ -19095,7 +19095,7 @@ const certificate = {
     },
     category: 'classes',
     dates: [
-      'May 7th – May 11th 2025',
+      // 'May 7th – May 11th 2025',
       'July 9th – July 13th 2025',
       'Sept 10th – Sept 14th 2025',
       'Nov 5th – Nov 9th 2025'
