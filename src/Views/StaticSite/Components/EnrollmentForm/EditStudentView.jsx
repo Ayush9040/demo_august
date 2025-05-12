@@ -406,13 +406,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   const genderOptions = [
     { value: 'MALE', label: 'Male' },
-    { value: 'FEMALE', label: 'Female' }
+    { value: 'FEMALE', label: 'Female' },
+    { value: 'OTHER', label: 'Others' }
   ];
 
   useEffect(() => {
     if (genderFromRedux) {
       const upperCaseGender = genderFromRedux.toUpperCase();
-      setFormData2((prev) => ({ ...prev, gender: formData.gender }));
+      const val = upperCaseGender === 'OTHERS' ? 'OTHER' : upperCaseGender;
+      setFormData2((prev) => ({ ...prev, gender: val }));
     }
     if (nationalityFromRedux) {
       setFormData2((prev) => ({ ...prev, nationality: nationalityFromRedux }));
@@ -655,36 +657,36 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     }
   };
 
-  // Function to generate state options based on selected country
-  const getUpdatedStates = (countryIsoCode) => {
-    if (!countryIsoCode) return [];
-    return State.getStatesOfCountry(countryIsoCode).map((state) => ({
-      value: state.isoCode,
-      label: state.name,
-    }));
-  };
+  // // Function to generate state options based on selected country
+  // const getUpdatedStates = (countryIsoCode) => {
+  //   if (!countryIsoCode) return [];
+  //   return State.getStatesOfCountry(countryIsoCode).map((state) => ({
+  //     value: state.isoCode,
+  //     label: state.name,
+  //   }));
+  // };
 
-  // Function to generate city options based on selected state
-  const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
-    console.log(countryIsoCode, stateIsoCode);
+  // // Function to generate city options based on selected state
+  // const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
+  //   console.log(countryIsoCode, stateIsoCode);
 
-    if (!countryIsoCode || !stateIsoCode) return [];
-    else {
-      let cities = City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
-        value: city.name,
-        label: city.name,
-      }));
-      if (cities.length > 0) {
-        return cities;
-      }
-      else {
-        return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
-          value: city.name,
-          label: city.name,
-        }));
-      }
-    }
-  };
+  //   if (!countryIsoCode || !stateIsoCode) return [];
+  //   else {
+  //     let cities = City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+  //       value: city.name,
+  //       label: city.name,
+  //     }));
+  //     if (cities.length > 0) {
+  //       return cities;
+  //     }
+  //     else {
+  //       return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
+  //         value: city.name,
+  //         label: city.name,
+  //       }));
+  //     }
+  //   }
+  // };
 
 
 
@@ -786,11 +788,11 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   //   return errors;
   // };
 
-  const updatedCountries = countries.map((country) => ({
-    label: country.name,
-    value: country.id,
-    ...country,
-  }))
+  // const updatedCountries = countries.map((country) => ({
+  //   label: country.name,
+  //   value: country.id,
+  //   ...country,
+  // }))
 
   // const handlePhoneChange = (value) => {
   //   setPhoneValue(value);
@@ -920,25 +922,42 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   //   // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
   // }, [isChecked])
 
-  const updatedStates = (countryId) => {
-    return State.getStatesOfCountry(countryId).map((state) => ({
-      label: state.name,
-      value: state.id,
-      ...state,
-    }))
-  }
+  // const updatedStates = (countryId) => {
+  //   return State.getStatesOfCountry(countryId).map((state) => ({
+  //     label: state.name,
+  //     value: state.id,
+  //     ...state,
+  //   }))
+  // }
 
-  const updatedCities = (countryId, stateId) => {
-    // console.log(countryId,stateId,'stateId')
-    return City.getCitiesOfState(countryId, stateId).map((city) => {
-      // console.log(city,'city')
-      return {
+  // const updatedCities = (countryId, stateId) => {
+  //   // console.log(countryId,stateId,'stateId')
+  //   return City.getCitiesOfState(countryId, stateId).map((city) => {
+  //     // console.log(city,'city')
+  //     return {
+  //       label: city.name,
+  //       value: city.id,
+  //       ...city,
+  //     }
+  //   })
+  // }
+
+   const updatedStates = (countryId) => {
+      console.log(countryId)
+      return State.getStatesOfCountry(countryId).map((state) => ({
+        label: state.name,
+        value: state.id,
+        ...state,
+      }))
+    }
+  
+    const updatedCities = (countryIsoCode, stateIsoCode) => {
+      if (!countryIsoCode || !stateIsoCode) return [];
+      return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+        value: city.name,
         label: city.name,
-        value: city.id,
-        ...city,
-      }
-    })
-  }
+      }));
+    }
 
 
   const selectStyles = {
@@ -1279,9 +1298,19 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   // let termsAndCondition =
   //   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ve centuries, but also the leap into elec- tronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+
+  const countries2 = Country.getAllCountries()
+  
+    const updatedCountries = countries2.map((country) => ({
+      label: country.name,
+      value: country.id,
+      ...country,
+    }))
   return (
     <>
       <div className='terms-container'>
+
+       
         {/* <InnerNavComponent abc={tnc} /> */}
         {/* <div className='banner-heading' style={{ textAlign: 'left', margin: '0px' }}>
             Upcoming Dates
@@ -1292,6 +1321,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       <form className='edit_popup' onClick={() => SetIsCountryContainer(false)}>
         <div className='inp-group'>
           <div className='inp-label'>First Name <span>*</span></div>
+          {formData2.gender}
           <div className="form_error">
 
             <InputComponent
@@ -1481,7 +1511,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         <div className='inp-group'>
           <div className='inp-label'>Country<span>*</span></div>
           <div className="form_error countries_list">
-            <Select
+            {/* <Select
               styles={customStyles}
               id="country"
               name="country"
@@ -1493,7 +1523,25 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setValues({ country: value, state: null, city: null });
                 setFormData2((prev) => ({ ...prev, country: value.label, state: null, city: null }));
               }}
-            />
+            /> */}
+             <Select
+                          styles={customStyles}
+                          id="country"
+                          name="country"
+                          label="country"
+                          placeholder="Select Country*"
+                          className="select"
+                          options={updatedCountries}
+                          value={values.country}
+                          errorCheck={setEmpty}
+                          onChange={(value) => {
+                            setValues({ country: value, state: null, city: null }, false)
+                            // setFormData((prev) => {
+                            //   return { ...prev, country: value.name }
+                            // })
+                            setFormData2((prev) => ({ ...prev, country: value.label, state: null, city: null }));
+                          }}
+                        />
             {empty === 5 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your country</small>}
           </div>
         </div>
@@ -1501,7 +1549,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         <div className='inp-group'>
           <div className='inp-label'>State<span>*</span></div>
           <div className="form_error">
-            <Select
+            {/* <Select
               styles={customStyles}
               id="state"
               name="state"
@@ -1513,7 +1561,31 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setValues({ ...values, state: value, city: null });
                 setFormData2((prev) => ({ ...prev, state: value.label, city: null }));
               }}
-            />
+            /> */}
+
+            <Select
+                          styles={customStyles}
+                          id="city"
+                          name="city"
+                          placeholder="Select state*"
+                          className="select"
+                          errorCheck={setEmpty}
+                          options={updatedStates(
+                            values?.country?.isoCode ? values?.country?.isoCode :
+                              isoCode
+                          )}
+                          value={values.state}
+                          onChange={(value) => {
+                            setValues(
+                              { country: values.country, state: value, city: null },
+                              false
+                            )
+                            // setFormData((prev) => {
+                            //   return { ...prev, state: value.name }
+                            // })
+                            setFormData2((prev) => ({ ...prev, state: value.label, city: null }));
+                          }}
+                        />
             {empty === 22 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your State</small>}
           </div>
         </div>
@@ -1523,7 +1595,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           <div className='inp-label'>City<span>*</span></div>
           <div className="form_error">
 
-            <Select
+            {/* <Select
               styles={customStyles}
               id="city"
               name="city"
@@ -1535,7 +1607,32 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setValues({ ...values, city: value });
                 setFormData2((prev) => ({ ...prev, city: value.label }));
               }}
-            />
+            /> */}
+
+             <Select
+                          styles={customStyles}
+                          id="city"
+                          name="city"
+                          placeholder="Select city*"
+                          className="select"
+                          errorCheck={setEmpty}
+                          options={updatedCities(
+                            values?.country?.isoCode ? values?.country?.isoCode :
+                              isoCode,
+                            values?.state?.isoCode
+                          )}
+                          value={values.city}
+                          onChange={(value) => {
+                            setValues(
+                              { country: values.country, state: values.state, city: value },
+                              false
+                            )
+                            // setFormData((prev) => {
+                            //   return { ...prev, city: value.name }
+                            // })
+                            setFormData2((prev) => ({ ...prev, city: value.label }));
+                          }}
+                        />
             {empty === 44 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your city</small>}
           </div>
         </div>
@@ -1723,7 +1820,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               options={genderOptions}
               value={genderOptions.find(option => option.value === formData2.gender)}
               onChange={(selectedOption) => {
-                setFormData2(prev => ({ ...prev, gender: selectedOption.value }));
+                const value2 = selectedOption.value === 'OTHERS' ? 'OTHER' : selectedOption.value;
+
+                setFormData2(prev => ({ ...prev, gender: value2 }));
                 setEmpty(0);
               }}
             />
