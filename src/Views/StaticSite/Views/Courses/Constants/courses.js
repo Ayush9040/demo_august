@@ -2707,7 +2707,7 @@ const ttc200hr = {
     key: '200-hrs-part-time-ttc-online-batch-6',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
-      templateOnline: 'COURSE200_2M_ONLINE_TTC',
+      templateOnline: 'COURSE200_2M_ONLINE_TTC_BATCH_6',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
@@ -2729,7 +2729,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 6',
+    title: '200-Hour Yoga Teacher Training Online Course - 3 Months TTC Online - English - Batch 6',
     dates: [
       // '8th Jan – 2nd Mar 2024',
       // '11th Mar – 4th May 2024',
@@ -2754,7 +2754,7 @@ const ttc200hr = {
     residential: false,
     certficate: false,
 
-    tenure: '2 month',
+    tenure: '3 month',
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
@@ -2771,7 +2771,7 @@ const ttc200hr = {
       ],
 
     enrollInfo: {
-      duration: "2 months",
+      duration: "3 months",
       timings: [
         {
           day: "Monday to Saturday",
@@ -2830,7 +2830,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs Yoga TTC Batch 6 - 2 Months TTC Online - English'],
+          text: ['200 hrs Yoga TTC Batch 6 - 3 Months TTC Online - English'],
         },
       },
       // {
@@ -3242,7 +3242,7 @@ const ttc200hr = {
     regsitraion: [],
     faq: [],
     moreInfo: {
-      duration: "02 Months",
+      duration: "03 Months",
       mode: "Online",
       language: "English",
       timing: "5:00 am to 7:30 am (IST)",

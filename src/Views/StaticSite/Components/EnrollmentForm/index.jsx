@@ -341,6 +341,10 @@ const Enrollment = () => {
       return list7DaysCourse.some(path => window.location.pathname.includes(path));
     };
 
+    const isBatchSix = () => {
+      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online-batch-6';
+    }
+
     // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
     if (!isNaN(courseFee)) {
@@ -438,6 +442,7 @@ const Enrollment = () => {
 
       console.log(mail)
 
+      let mailTemplate;
 
       // let mailTemplate = {
       //   type: 'INFO_TYI',
@@ -456,8 +461,6 @@ const Enrollment = () => {
   : `+${user.data.dialCode}${user.data.phoneNumber}`;
 
 
-
-      let mailTemplate;
 
 if (isOneMonthTTC()) {
 
@@ -937,6 +940,31 @@ if (isOneMonthTTC()) {
     ]
 }
 
+} else if(isBatchSix()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE200_2M_ONLINE_TTC_BATCH_6",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"200-Hour Yoga Teacher Training Online Course - 3 Months TTC Online - English - Batch 6",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "5:00 am to 7:30 am", 
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+
 }
  else {
 
@@ -954,6 +982,18 @@ if (isOneMonthTTC()) {
 
 
       
+      
+
+
+      // let mailTemplate = {
+      //   type: 'INFO_TYI',
+      //   HTMLTemplate: pickMail(),
+      //   subject: 'Enrollment Confirmation',
+      //   data: {
+      //     name: formData.name
+      //   },
+      //   receivers: [formData.email, 'info@theyogainstitute.org']
+      // }
 
       try {
         let response
