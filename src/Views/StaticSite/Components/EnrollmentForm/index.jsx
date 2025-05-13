@@ -271,6 +271,32 @@ const Enrollment = () => {
       return window.location.pathname.includes('/one-year-ttc');
     }
 
+    const isThreeMonthAdvanceTTC = () => {
+      return window.location.pathname.includes('/3-months-advanced-teacher-training-course');
+    }
+
+    
+
+    const isNineHundredHourAdvanceTTC = () => {
+      return window.location.pathname.includes('/900-hours-advanced-teacher-training-course');
+    }
+
+    const isSevenMonthTTC = () => {
+      return window.location.pathname.includes('/seven-month-ttc');
+    }
+
+    const isFiveOnlineTTC = () => {
+      return window.location.pathname.includes('/500-hrs-online-yoga-teacher-training-course-intermediate-level');
+    }
+
+    const isChildRegular = () => {
+      return window.location.pathname.includes('/childrens-regular-classes');
+    }
+
+    const isWeekendAsanaClasses = () => {
+      return window.location.pathname.includes('/childrens-weekend-classes-on-campus');
+    }
+
 
     
     
@@ -583,7 +609,158 @@ if (isOneMonthTTC()) {
     ]
 }
  
-} else {
+} else if(isThreeMonthAdvanceTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE900_3M_ONLINE_NONRES_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"900 Hours Yoga TTC - 3 Months Teacher Training Course On Campus - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "6:30 am to 8:00 pm ",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+
+} else if(isNineHundredHourAdvanceTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE900_4M_ON_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"900 Hours Yoga TTC - 4 Months Online Yoga Teacher Training Course - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "7:00 am to 9:00 am ",
+        eveningTime: "4:30 pm to 8:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isSevenMonthTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE900_7M_ON_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"900 Hours Yoga TTC - 7 Months Yoga Teacher Training Course Online & On Campus - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "5:00 p.m. - 8:00 p.m.",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isFiveOnlineTTC()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE500_3M_ON_TTC",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"500-Hour Yoga Teacher Training Online Course - 3 Months Yoga TTC - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday to Saturday",
+        time: "7:00 am - 8:30 am ",
+        eveningTime: "4:30 pm - 8:30 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isChildRegular()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE_ADVANCED_CHILDREN",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"Children\'s Yoga Classes (Regular) - On Campus",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Mon, Tues, Thurs, Fri",
+        time: "4:00 pm -5:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isWeekendAsanaClasses()) {
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "COURSE_ADVANCED_CHILDREN_WEEKEND",
+    subject: "Enrollment Confirmation",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"Children\'s Weekend Yoga Class - On Campus",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Saturday & Sunday",
+        time: "8:00 am - 9:30 am",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+} 
+ else {
 
   mailTemplate = {
     type: 'INFO_TYI',

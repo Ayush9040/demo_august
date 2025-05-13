@@ -4215,10 +4215,10 @@ const ttc900hr = {
     key: '3-months-advanced-teacher-training-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'COURSE900_3M_ONLINE_NONRES_TTC',
       templateOffline: {
-        templateResidential: 'COURSE900_3M_ONLINE_RES_TTC',
-        templateNonResidential: 'COURSE900_3M_ONLINE_NONRES_TTC',
+        templateResidential: '',
+        templateNonResidential: '',
       },
     },
     batch: 1,
@@ -14902,7 +14902,7 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'COURSE_ADVANCED_CHILDREN',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
@@ -15010,7 +15010,7 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'COURSE_ADVANCED_CHILDREN_WEEKEND',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
