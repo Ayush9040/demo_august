@@ -1321,7 +1321,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       <form className='edit_popup' onClick={() => SetIsCountryContainer(false)}>
         <div className='inp-group'>
           <div className='inp-label'>First Name <span>*</span></div>
-          {formData2.gender}
+      
           <div className="form_error">
 
             <InputComponent
