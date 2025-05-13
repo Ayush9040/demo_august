@@ -10,7 +10,7 @@ const Activitycard = ({ id, title, description, images,url }) => {
     <>
       <div className="card-container">
         <div className="card-image">
-          <img src={images} alt={id===1 ? '7 rules to reset your mind and body book cover' : '' }  />
+          <img src={images} alt={id===1 ? '7 rules to reset your mind and body book cover' : title }  />
         </div>
         <div className="card-content-activity">
           <h1>{title}</h1>

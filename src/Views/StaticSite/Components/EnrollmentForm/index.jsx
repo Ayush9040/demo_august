@@ -297,6 +297,34 @@ const Enrollment = () => {
       return window.location.pathname.includes('/childrens-weekend-classes-on-campus');
     }
 
+    const isAdvanceRegular = () => {
+      return window.location.pathname === '/enrollment/advanced-regular-yoga-classes';
+    }
+
+    const isSevenDayCamp = () => {
+      return window.location.pathname === '/enrollment/7-days-camp';
+    }
+
+    const isSevenDayEnglish = () => {
+      return window.location.pathname === '/enrollment/7-days-camp-english';
+    }
+
+    const isTwentyOneBetterLiving = () => {
+      return window.location.pathname === '/enrollment/21-days-better-living-course';
+    }
+
+    const isTwentyOneBetterLivingBatchTwo = () => {
+      return window.location.pathname === '/enrollment/21-days-better-living-course-batch-2';
+    }
+
+    const isTwentyOneBetterLivingBatchThree = () => {
+      return window.location.pathname === '/enrollment/21-days-better-living-course-batch-3';
+    }
+
+    
+
+    
+
 
     
     
@@ -436,7 +464,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE200_1M_ONLINE_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -462,7 +490,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -487,7 +515,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE200_2M_ONLINE_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -512,7 +540,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE200_2M_ONLINE_HINDI_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -537,7 +565,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE200_WEEKEND_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -563,7 +591,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE900_2Y_ON_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -589,7 +617,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE900_1Y_ON_HINDI_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -614,7 +642,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE900_3M_ONLINE_NONRES_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -639,7 +667,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE900_4M_ON_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -665,7 +693,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE900_7M_ON_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -690,7 +718,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE500_3M_ON_TTC",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -716,7 +744,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE_ADVANCED_CHILDREN",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -740,7 +768,7 @@ if (isOneMonthTTC()) {
   mailTemplate = {
     type: "INFO_TYI",
     HTMLTemplate: "COURSE_ADVANCED_CHILDREN_WEEKEND",
-    subject: "Enrollment Confirmation",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,
         emailId: formData.email,
@@ -759,7 +787,157 @@ if (isOneMonthTTC()) {
       formData.email
     ]
 }
-} 
+} else if(isAdvanceRegular()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "ADVANCED_REGULAR_YOGA_CLASS-1",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Monday, Wednesday, Friday, Tuesday, Thursday & Saturday",
+        time: "Morning: 6:30 am - 8:00 am, Evening: 5:30 pm - 7:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+
+} else if(isSevenDayCamp()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "CAMP_FOR_7_DAYS_HEALTH_HINDI",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"7 Days Health Camp - On Campus - Yoga Camp - Hindi",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Saturday to Friday",
+        time: "7:00 am - 7:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isSevenDayEnglish()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "CAMP_FOR_7_DAYS_HEALTH",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"7 Days Health Camp - On Campus - Yoga Camp - English",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Saturday to Friday",
+        time: "7:00 am - 7:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isTwentyOneBetterLiving()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "CAMP_FOR_21_DAYS_BATCH_1",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"21-Days Better Living Yoga Course - Morning Online and On Campus – English - Batch 1",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Sunday to Saturday",
+        time: "Morning: 7:00 am – 8:30 am",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isTwentyOneBetterLivingBatchTwo()) {
+
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "CAMP_FOR_21_DAYS_BATCH_2",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"21-Days Better Living Yoga Course - Evening - Online & On Campus – English - Batch 2",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Sunday to Saturday",
+        time: "Evening 6:30 pm – 8:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+  
+} else if(isTwentyOneBetterLivingBatchThree()) {
+  
+  mailTemplate = {
+    type: "INFO_TYI",
+    HTMLTemplate: "CAMP_FOR_21_DAYS_BATCH_3",
+    subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+    data: {
+      fullName: formData.name,
+        emailId: formData.email,
+        phoneNumber:identityVerified2,
+        gender: formData.gender?.toUpperCase(),
+        country:formData.country,
+        courseName:"21-Days Better Living Yoga Course - Evening - Online & On Campus – Hindi - Batch 3",
+        modeOfAttending:formData.mode,
+        batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
+        days:"Sunday to Saturday",
+        time: "Evening 6:30 pm – 8:00 pm",
+        timeZone:'IST'
+
+    },
+    receivers: [
+      formData.email
+    ]
+}
+
+}
  else {
 
   mailTemplate = {

@@ -10512,10 +10512,10 @@ const camps = {
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
-      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
+      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH_HINDI',
       templateOffline: {
-        templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
-        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+        templateResidential: '',
+        templateNonResidential: '',
       },
     },
     dates: [
@@ -10892,8 +10892,8 @@ const camps = {
     templateId: {
       templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
       templateOffline: {
-        templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
-        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+        templateResidential: '',
+        templateNonResidential: '',
       },
     },
     dates: [
@@ -11281,10 +11281,10 @@ const camps = {
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'CAMP_FOR_21_DAYS_BATCH_1',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+        templateNonResidential: '',
       },
     },
     batch: 1,
@@ -11713,10 +11713,10 @@ const camps = {
     batch: 2,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'CAMP_FOR_21_DAYS_BATCH_2',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+        templateNonResidential: '',
       },
     },
     dates: [
@@ -12120,10 +12120,10 @@ const camps = {
     batch: 3,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'CAMP_FOR_21_DAYS_BATCH_3',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+        templateNonResidential: '',
       },
     },
     dates: [
@@ -13995,7 +13995,7 @@ const classes = {
     ],
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'ADVANCED_REGULAR_YOGA_CLASS-1',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
