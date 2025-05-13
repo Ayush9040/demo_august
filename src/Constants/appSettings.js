@@ -24,3 +24,4 @@ export const authBaseDomain = 'https://tyi-test.theyogainstitute.org/auth-api/v2
 export const ecomBaseDomain = 'https://tyi-test.theyogainstitute.org/ecom-api/v1'
 export const razorPayKey = 'rzp_test_hWMewRlYQKgJIk'
 export const ga4Id = 'G-3CVNLSTNS8'
+

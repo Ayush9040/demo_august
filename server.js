@@ -291,7 +291,8 @@ const redirectPage = async (path) => {//used to redirected non existing links
     "https://theyogainstitute.org/product/online-swadhyay",
     "https://theyogainstitute.org/asana-regular-classes-on",
     "https://theyogainstitute.org/qwertyqwerty",
-    "https://theyogainstitute.org/yoga"
+    "https://theyogainstitute.org/yoga",
+    "https://theyogainstitute.org/yoga-halls"
   ]
 
   let links301 = [

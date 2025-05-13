@@ -247,16 +247,16 @@ const Enrollment = () => {
     }
 
     const isPartTimeTTCOnCampusEnglish = () => {
-      return window.location.pathname.includes('/200-hrs-part-time-ttc-on-campus-english');
+      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-on-campus-english';
     }
 
     const isPartTimeTTCOnlineEnglish = () => {
-      return window.location.pathname.includes('/200-hrs-part-time-ttc-online-english');
+      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online-english';
     }
 
 
     const isPartTimeTTCOnline = () => {
-      return window.location.pathname.includes('/200-hrs-part-time-ttc-online');
+      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online';
     }
 
     const isWeekendTeacherTraining = () => {
@@ -290,11 +290,11 @@ const Enrollment = () => {
     }
 
     const isChildRegular = () => {
-      return window.location.pathname.includes('/childrens-regular-classes');
+      return window.location.pathname === '/enrollment/childrens-regular-classes';
     }
 
     const isWeekendAsanaClasses = () => {
-      return window.location.pathname.includes('/childrens-weekend-classes-on-campus');
+      return window.location.pathname === '/enrollment/childrens-weekend-classes-on-campus';
     }
 
     const isAdvanceRegular = () => {
@@ -321,6 +321,10 @@ const Enrollment = () => {
       return window.location.pathname === '/enrollment/21-days-better-living-course-batch-3';
     }
 
+    const isBatchSix = () => {
+      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online-batch-6';
+    }
+
     
 
     
@@ -341,9 +345,7 @@ const Enrollment = () => {
       return list7DaysCourse.some(path => window.location.pathname.includes(path));
     };
 
-    const isBatchSix = () => {
-      return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online-batch-6';
-    }
+    
 
     // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
