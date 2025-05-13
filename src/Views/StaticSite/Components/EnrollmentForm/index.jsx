@@ -359,8 +359,10 @@ const Enrollment = () => {
       let mailTemplate;
 
       const identityKey2 = `+${user.data.dialCode}${user.data.phoneNumber}`;
-      // const identityKey = '++919035435720';
+
       const identityVerified2 = identityKey2.includes('++')
+  ? `+${user.data.dialCode}${user.data.phoneNumber}`
+  : `+${user.data.dialCode}${user.data.phoneNumber}`;
 
       if(isBatchSix()) {
 
@@ -374,11 +376,11 @@ const Enrollment = () => {
               phoneNumber:identityVerified2,
               gender: formData.gender?.toUpperCase(),
               country:formData.country,
-              courseName:"200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 6",
+              courseName:"200-Hour Yoga Teacher Training Online Course - 3 Months TTC Online - English - Batch 6",
               modeOfAttending:formData.mode,
               batchStartDate:formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
               days:"Monday to Saturday",
-              time: "5:00 am to 7:30 am",
+              time: "5:00 am to 7:30 am", 
               timeZone:'IST'
       
           },
