@@ -132,10 +132,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Nutridiet,
-    path: '/nutri-diet_landing',
+    path: '/nutri-diet',
     exact: true,
     id: 'statisSiteCoursesBrowse',
-    routePath: '/nutri-diet_landing',
+    routePath: '/nutri-diet',
     name: 'Nutri Diet',
   },
   {
@@ -754,13 +754,13 @@ const staticSiteRoutes = [
     routePath: '/search',
     name: 'Search'
   },
-  {
-    Component: NutriDiet,
-    path: '/nutri-diet',
-    id: 'staticNutriDiet',
-    routePath: '/nutri-diet',
-    name: 'NutriDiet'
-  },
+  // {
+  //   Component: NutriDiet,
+  //   path: '/nutri-diet',
+  //   id: 'staticNutriDiet',
+  //   routePath: '/nutri-diet',
+  //   name: 'NutriDiet'
+  // },
   {
     Component: IBYcourse,
     path: '/IBY-course',

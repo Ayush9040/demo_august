@@ -3,7 +3,7 @@ import nutri_diet_mobile_footer_arrow from '../../Views/Courses/Views/images/nut
 
 const CommonBtn = ({ text, isColor, buttonAction }) => {
 
-  const isNutriDietLanding = location.pathname.includes("/nutri-diet_landing");
+  const isNutriDietLanding = location.pathname.includes("/nutri-diet");
   // const isHome = location.pathname.includes("/");
   const isHome = location.pathname === "/";
 

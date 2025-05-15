@@ -34,7 +34,7 @@ export const activityData = [
     title: 'Nutri Diet Clinic',
     description:'Our team of nutritional health experts will support and guide you on your health concerns. Get our customized plans and incorporate holistic changes.',
     image: `${baseDomain}${nutriDiet.nutriDietMain}`,
-    url: '/nutri-diet_landing',
+    url: '/nutri-diet',
   },
   {
     id: 9,

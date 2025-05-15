@@ -796,7 +796,7 @@ if (isOneMonthTTC()) {
 
   mailTemplate = {
     type: "INFO_TYI",
-    HTMLTemplate: "ADVANCED_REGULAR_YOGA_CLASS-1",
+    HTMLTemplate: "ADVANCED_REGULAR_YOGA_CLASS_1",
     subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
     data: {
       fullName: formData.name,

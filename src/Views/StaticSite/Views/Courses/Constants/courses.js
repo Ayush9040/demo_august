@@ -13995,7 +13995,7 @@ const classes = {
     ],
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'ADVANCED_REGULAR_YOGA_CLASS-1',
+      templateOnline: 'ADVANCED_REGULAR_YOGA_CLASS_1',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',

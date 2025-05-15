@@ -74,7 +74,7 @@ const InnerNavComponent = ({ abc }) => {
   
   
 
-  const isNutriDietLanding = location.pathname.includes("/nutri-diet_landing");
+  const isNutriDietLanding = location.pathname.includes("/nutri-diet");
   useEffect(() => {
       if (location.pathname === '/blogs') {
         setShowSearch(true)
