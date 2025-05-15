@@ -20027,7 +20027,7 @@ const specialEvents = {
       // '13th Mar 2025',
       // '13th Apr 2025',
       // '12th Apr 2025',
-      '12th May 2025',
+      // '12th May 2025',
        '11th Jun 2025',
        
        
