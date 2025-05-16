@@ -4,6 +4,38 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <script async type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "the yoga institute",
+  "alternateName": "the yoga institute",
+  "url": "https://theyogainstitute.org/",
+  "logo": "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/tyi.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+91-7738155500",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "areaServed": "IN",
+    "availableLanguage": "en"
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+91-22-26110506",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "areaServed": "IN",
+    "availableLanguage": "en"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/theyogainstituteofficial/",
+    "https://twitter.com/tyi_official?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+    "https://www.instagram.com/theyogainstituteofficial/",
+    "https://www.youtube.com/channel/UCHTjc5zq3Bl6agGQQf7_Xeg",
+    "https://www.linkedin.com/company/theyogainstituteofficial/"
+  ]
+}
+</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76029695-1"></script>
   <script async>
     (function (w, d, s, l, i) {
@@ -47,7 +79,7 @@
   <script type="text/javascript">
     var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
     // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-    clevertap.account.push({ "id": "TEST-96Z-ZZ9-9Z7Z" }, "eu1");
+    clevertap.account.push({ "id": "86Z-ZZ9-9Z7Z" }, "eu1");
     clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
     clevertap.privacy.push({ useIP: true }); //set the flag to true, if the user agrees to share their IP data
     (function () {
@@ -89,7 +121,7 @@
     // Function to check is_enabled froms admin panel API
     const checkPushNotificationStatus = async () => {
       try {
-        const response = await fetch('https://tyi-test.theyogainstitute.org/auth-api/v2/system-config/clevertap-webpush');
+        const response = await fetch('https://authserver-prod-be.theyogainstitute.org/v2/system-config/clevertap-webpush');
 
 
 
