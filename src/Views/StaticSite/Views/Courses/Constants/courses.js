@@ -14345,7 +14345,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes. Whether you want to perfect your headstand or work on your splits or if you are looking for a place to begin, we have you covered. If you are goal-oriented and are looking to lose the few extra kilos or get your emotions under control or become more flexible; we can get you there as well. Join now for an exciting journey in yoga asanas, pranayamas, yogic-lifestyle techniques and mindful living.'
+            'Step into the world of authentic yoga practice from the comfort of your home with our Online Yoga Asana Regular Classes for men and women. Whether you’re a beginner taking your first step or an experienced practitioner working towards advanced postures, our expert-led sessions will support your journey every step of the way. These classes are not just about fitness — they’re about holistic transformation. Whether your goal is to improve flexibility, manage stress, lose weight, or develop emotional balance, our integrated approach with asanas, pranayamas, and yogic lifestyle techniques will guide you there.'
           ],
         },
       },
@@ -14355,51 +14355,51 @@ const classes = {
           title: '',
           points: [
             {
-              listItem: 'Join on any date.',
+              listItem: 'Join on any date – start your practice when you’re ready',
               subItems: [],
             },
             {
               listItem:
-                'Payments are valid for a month from the date of payment.',
+                'Validity: 1 month from the date of payment',
               subItems: [],
             },
             {
               listItem:
-                'Yoga',
+                'Live interactive sessions via Zoom',
               subItems: [],
             },
             {
-              listItem: 'Online yoga classes are conducted via live Zoom sessions.',
+              listItem: 'Class links will be shared via Email and WhatsApp',
               subItems: [],
             },
-            {
-              listItem: 'Class links will be sent via email and WhatsApp',
-              subItems: [],
-            },
+            // {
+            //   listItem: 'Class links will be sent via email and WhatsApp',
+            //   subItems: [],
+            // },
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Rules and Regulations',
+          title: 'Important Guidelines',
           points: [
             {
               listItem:
-                'Missed online yoga classes cannot be compensated in other classes.',
+                'Missed classes cannot be adjusted in other batches',
               subItems: [],
             },
             {
-              listItem: 'Batch changes are not permitted.',
+              listItem: 'Batch transfers are not permitted',
               subItems: [],
             },
             {
               listItem:
-                'Any form of recording of these yoga sessions is prohibited.',
+                'Recording the sessions is strictly prohibited',
               subItems: [],
             },
             {
-              listItem: 'Fees once paid will be non-refundable.',
+              listItem: 'Fees are non-refundable',
               subItems: [],
             },
           ],
@@ -15141,7 +15141,7 @@ const classes = {
       // '3rd Mar to 28th Mar 2025',
       // '7th Apr to 2nd May 2025',
       // '5th May to 30th May 2025',
-      '2nd Jun to 12th Jun 2025',
+      '2nd Jun to 27th Jun 2025',
       '7th Jul to 1st Aug 2025',
       '4th Aug to 29th Aug 2025',
       '1st Sep to 26th Sep 2025',
@@ -16410,7 +16410,8 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga asana class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Asana Regular Class is an excellent course for daily yoga practice. Yoga Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these weekend yoga classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.'
+            'Busy weekdays making it hard to stick to your yoga routine? We’ve got the perfect solution. We offer Weekend Online Yoga Asana Classes designed especially for those who can’t attend during the week due to work or personal commitments.',
+            'These classes provide a complete and consistent yoga practice, covering asanas, pranayamas, kriyas, and practical guidance on yogic diet and lifestyle. Participants are thoughtfully grouped based on their health conditions, ensuring safe and personalized instruction. Every individual receives the attention they need to progress mindfully.'
           ],
         },
       },
@@ -17566,7 +17567,7 @@ const certificate = {
     textdescription9: '',
     textdescription10: '',
     textdescription1: 'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-    textdescription2: 'Evening batch (Only May Month) :  Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
+    // textdescription2: 'Evening batch (Only May Month) :  Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
@@ -17638,10 +17639,10 @@ const certificate = {
           day: "Morning batch : Mondays, Tuesdays & Thursdays",
           time: "11:30 am - 12:30 pm (IST)"
         },
-        {
-          day: "Evening batch (Only May Month) : Wednesday, Friday & Saturday",
-          time: "6:00 pm - 7:00 pm (IST)"
-        }
+        // {
+        //   day: "Evening batch (Only May Month) : Wednesday, Friday & Saturday",
+        //   time: "6:00 pm - 7:00 pm (IST)"
+        // }
       ]
     }
     ,
@@ -17714,9 +17715,9 @@ const certificate = {
           text: [
             'The morning sessions take place on Mondays, Tuesdays, and Thursdays from 11:30am to 12:30pm.',
 
-            'We also have one evening batch which is held only once a year. In 2025 the evening batch will be in the month of May',
+            // 'We also have one evening batch which is held only once a year. In 2025 the evening batch will be in the month of May' ,
 
-            'Evening batch timings : Wednesdays, Fridays, and Saturdays from 6:00pm to 7:00pm',
+            // 'Evening batch timings : Wednesdays, Fridays, and Saturdays from 6:00pm to 7:00pm',
 
             // '24 sessions of one hour each',
           ],
@@ -17937,7 +17938,7 @@ const certificate = {
       '7th Nov  to 13th Dec 2025'
     ],
     online: true,
-    onCampus: true,
+    onCampus: false,
     nonResidential: false,
     residential: false,
     certficate: true,
@@ -18928,9 +18929,9 @@ const certificate = {
         content: {
           title: 'Pre – Requisite',
           text: [
-            '● You don’t have to do Swadhyay (Level 1) to Join Emo-Energy Balancing workshop.',
+            '● The only pre-requisite for joining this program is a high sense of Responsibility Motivation towards Self-Growth',
             '● IF you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay',
-            '(Level 1) both courses are mandatory.',
+            '(Level 1) both courses are mandatory',
             
           ],
         },
@@ -19049,9 +19050,9 @@ const certificate = {
         content: {
           title: 'Pre – Requisite',
           text: [
-            '● You don’t have to do Swadhyay (Level 1) to Join Emo-Energy Balancing workshop.',
+            '● The only pre-requisite for joining this program is a high sense of Responsibility Motivation towards Self-Growth',
             '● IF you plan to join Chakra Healing (Level 2) then Emo-Energy Balancing workshop and Swadhyay',
-            '(Level 1) both courses are mandatory.',
+            '(Level 1) both courses are mandatory',
             
           ],
         },

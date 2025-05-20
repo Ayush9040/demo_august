@@ -1105,7 +1105,7 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/personal-development-programs">
-                      <p>Continues Personal Development Program</p>
+                      <p>Yoga - Continuing Personal Development</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

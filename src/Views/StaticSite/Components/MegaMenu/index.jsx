@@ -339,26 +339,29 @@ const MegaMenu = ({ setNav }) => {
                   </li>
                 </Link>
                 <li className="text-bold">
-                  Personal Development Programs
+                  Yoga - Continuing Personal Development
+                </li>
+                <li className="text-bold">
+                  Yoga Psychotherapy Curriculum
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing">
                   <li >
-                  Emo-Energy Rebalancing Workshop - on Campus
+                  Emo-Energy Rebalancing Workshop - On Campus
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing-online">
                   <li >
-                  Emo-Energy Rebalancing Workshop - online
+                  Emo-Energy Rebalancing Workshop - Online
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/swadhyay">
                   <li >
-                  Swadhyay - on Campus
+                  Swadhyay - On Campus
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/swadhyay-online">
                   <li >
-                  Swadhyay - online
+                  Swadhyay - Online
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/integral-chakra-psychology">

@@ -71,7 +71,7 @@ const BrowseCourses = () => {
       setBreadcrumbs('Additional Certificate Courses')
     } else if (type === 'personal-development-programs') {
       setCategory([certificateArr[5], certificateArr[6], certificateArr[7], certificateArr[8], certificateArr[9]])
-      setBreadcrumbs('Continues Personal Development Program')
+      setBreadcrumbs('Yoga - Continuing Personal Development')
     }
     return breadcrumbs
   }
@@ -311,13 +311,13 @@ const BrowseCourses = () => {
               </AccordionItem>
 
               <AccordionItem style={{
-                border: breadcrumbs == 'Continues Personal Development Program' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Continues Personal Development Program' && '8px'
+                border: breadcrumbs == 'Yoga - Continuing Personal Development' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Yoga - Continuing Personal Development' && '8px'
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/personal-development-programs">
-                      <p>Continues Personal Development Program</p>
+                      <p>Yoga - Continuing Personal Development</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
