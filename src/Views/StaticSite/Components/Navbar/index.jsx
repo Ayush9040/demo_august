@@ -115,7 +115,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                 <li>{Cart}</li>
               </Link> */}
 
-              {hasItems && (
+              {hasItems == true && (
                 <Link to='/shop/cart'>
                   <li>{abc.color === 'white' ? Cart : abc.color === 'orange' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></li></Link>
               )}

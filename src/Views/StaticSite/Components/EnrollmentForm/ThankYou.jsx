@@ -126,7 +126,7 @@ const Thankyou = () => {
       return (
         <p className="message">
           Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for <b>200-Hours 2 Month Yoga Teacher Training Course (Hindi)- Batch 4</b>  ({localStorage.getItem('courseStartDate')}).
-          For any further queries, you can connect with your Course Coordinator Madhuji (Email: <b>1mttchindityi@gmail.com</b> or send a WhatsApp message on <b>+91 9820560142</b>).
+          For any further queries, you can connect with your Course Coordinator Madhuji (Email: <b>1mttchindityi@gmail.com</b> or send a WhatsApp message on <b>+91 9869722620</b>).
         </p>
       );
     } else if (currentPath.includes("/enrollment_thankyou/weekend-teacher-training-course")) {

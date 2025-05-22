@@ -29,7 +29,8 @@ const Shop = () => {
   const navigate = useNavigate()
   const { activeCartId } = useSelector(state => state.shop)
   const { isLoggedIn } = useSelector(state => state.auth)
-  const [Params] = useSearchParams()
+  // const [Params] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 12 })
   const [count, setCount] = useState(0)
@@ -46,37 +47,81 @@ const Shop = () => {
     setCategories(data.data)
   }
 
-  const getAllProducts = async (page, limit) => {
-    if (Params.get('category')) {
-      const { data } = await getProductByCategory(Params.get('category'), page, limit)
-      setProducts(data.data)
-      setCount(data.count)
-      if (data?.data?.length <= 24 && data?.data?.length >= 12) {
-        setPage(2)
-      } else if (data?.data?.length < 12) { setPage(1) }
-      else { setPage(3) }
-      return
-    }
+  // const getAllProducts = async (page, limit) => {
+  //   if (Params.get('category')) {
+  //     const { data } = await getProductByCategory(Params.get('category'), page, limit)
+  //     setProducts(data.data)
+  //     setCount(data.count)
+  //     if (data?.data?.length <= 24 && data?.data?.length >= 12) {
+  //       setPage(2)
+  //     } else if (data?.data?.length < 12) { setPage(1) }
+  //     else { setPage(3) }
+  //     return
+  //   }
 
+  //   const { data } = await fetchAllProductsAPI(page, limit)
+  //   setProducts(data.data)
+  //   console.log(data, 'cat')
+  //   setCount(data.count)
+  //   setPage(3)
+  // }
+
+  // Replace the existing getAllProducts with:
+const getAllProducts = async (page, limit) => {
+  try {
     const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
     console.log(data, 'cat')
     setCount(data.count)
     setPage(3)
+  } catch (error) {
+    console.error('Error fetching products:', error)
   }
+}
 
-  const productByCategory = async (category) => {
-
-    if (category === 'all') {
-      getAllProducts()
-      navigate('/shop')
+// Add this new function:
+const getProductsByCategory = async (categoryId, page, limit) => {
+  try {
+    const { data } = await getProductByCategory(categoryId, page, limit)
+    setProducts(data.data)
+    setCount(data.count)
+    if (data?.data?.length <= 24 && data?.data?.length >= 12) {
+      setPage(2)
+    } else if (data?.data?.length < 12) { 
+      setPage(1) 
+    } else { 
+      setPage(3) 
     }
-    else {
-      navigate(`/shop/?category=${categories?.find(item => item._id === category)?._id}`)
-      const { data } = await getProductByCategory(category)
-      setProducts(data.data)
-    }
+  } catch (error) {
+    console.error('Error fetching products by category:', error)
   }
+}
+
+  // const productByCategory = async (category) => {
+
+  //   if (category === 'all') {
+  //     getAllProducts()
+  //     navigate('/shop')
+  //   }
+  //   else {
+  //     navigate(`/shop/?category=${categories?.find(item => item._id === category)?._id}`)
+  //     const { data } = await getProductByCategory(category)
+  //     setProducts(data.data)
+  //   }
+  // }
+
+  // Replace the existing productByCategory function with:
+const productByCategory = async (category) => {
+  if (category === 'all') {
+    setSearchParams({}) // Clear all query params
+    setPagination({ page: 1, limit: 12 })
+    isSearched(false)
+  } else {
+    setSearchParams({ category }) // Set the category param
+    setPagination({ page: 1, limit: 12 }) // Reset to first page
+    isSearched(false)
+  }
+}
 
   const shopPagination = (num) => {
     setPagination({ ...pagination, page: num, limit: 12 })
@@ -105,26 +150,48 @@ const Shop = () => {
     console.log(data.data, 'banner')
   }
 
+  // useEffect(() => {
+  //   fetchAllCategories()
+  //   getAllProducts(pagination.page, pagination.limit)
+  //   if (localStorage.getItem('cart')) {
+  //     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+  //   }
+  //   window.scrollTo(0, 0)
+  // }, [pagination, Params.get('category')])
+
+
+  // useEffect(() => {
+  //   console.log('test')
+  // }, [categories])
+
+  // useEffect(() => { getAllBanner() }, [])
+
   useEffect(() => {
-    fetchAllCategories()
+  fetchAllCategories()
+  getAllBanner()
+  if (localStorage.getItem('cart')) {
+    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+  }
+  window.scrollTo(0, 0)
+}, [])
+
+useEffect(() => {
+  const category = searchParams.get('category')
+  if (category) {
+    getProductsByCategory(category, pagination.page, pagination.limit)
+  } else {
     getAllProducts(pagination.page, pagination.limit)
-    if (localStorage.getItem('cart')) {
-      dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    }
-    window.scrollTo(0, 0)
-  }, [pagination, Params.get('category')])
-
-
-  useEffect(() => {
-    console.log('test')
-  }, [categories])
-
-  useEffect(() => { getAllBanner() }, [])
+  }
+}, [pagination, searchParams])
 
   // const gtag = window.google_tag_manager;
 
   const addCart = async (idx, e) => {
     e.stopPropagation()
+    if (!isLoggedIn) {
+        navigate('/user/sign-in?location=shop');
+        return; // Exit the function to prevent further execution
+    }
     localStorage.setItem('cart', JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     isLoggedIn ? activeCartId ? await updateCart(activeCartId, { items: JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items: JSON.parse(localStorage.getItem('cart')) }) : null
@@ -217,6 +284,10 @@ const Shop = () => {
   }
   const buyProduct = async (idx, e) => {
     e.stopPropagation()
+    if (!isLoggedIn) {
+        navigate('/user/sign-in?location=shop');
+        return; // Exit the function to prevent further execution
+    }
     localStorage.setItem('cart', JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     isLoggedIn ? activeCartId ? await updateCart(activeCartId, { items: JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items: JSON.parse(localStorage.getItem('cart')) }) : null
@@ -296,10 +367,16 @@ const Shop = () => {
         <InnerNavComponent abc={shopNav} />
         <div className="shop-page">
           <div className="category-search">
-            <select onChange={(e) => { productByCategory(e.target.value) }} className="shop_categories">
-              <option value='all' >All Categories</option>
-              {categories.map((item, i) => <option key={i} selected={item._id === Params.get('category')} value={item._id} >{item.name}</option>)}
-            </select>
+            <select 
+                onChange={(e) => { productByCategory(e.target.value) }} 
+                className="shop_categories"
+                value={searchParams.get('category') || 'all'}
+              >
+                <option value='all'>All Categories</option>
+                {categories.map((item, i) => (
+                  <option key={i} value={item._id}>{item.name}</option>
+                ))}
+              </select>
             <div className="shop_search" onKeyDown={(e) => { onEnter(e) }} >
               <label>
                 <input type={'text'} value={search} onChange={(e) => { setSearch(e.target.value) }} placeholder="Search" />
@@ -310,7 +387,7 @@ const Shop = () => {
             </div>
           </div>
           <div className="products-section">
-            <div className="banner-section">
+            {/* <div className="banner-section">
               <Slider {...settings}>
                 {banner.map((item, idx) => {
                   return (
@@ -329,7 +406,32 @@ const Shop = () => {
                     </>)
                 })}
               </Slider>
-            </div>
+            </div> */}
+            <div className="banner-section">
+  <Slider {...settings}>
+    {banner.map((item, idx) => {
+      if (item.type === 'CATEGORY') {
+        return (
+          <div key={idx} onClick={() => {
+            setSearchParams({ category: item.categoryId });
+            setPagination({ page: 1, limit: 12 });
+            isSearched(false);
+            window.scrollTo(0, 0);
+          }}>
+            <img className='banner-img' src={item.imageLink} loading='lazy' />
+          </div>
+        )
+      } else if (item.type === 'PRODUCT') {
+        return (
+          <Link key={idx} to={`/shop/product/${item.productId}`}>
+            <img className='banner-img' src={item.imageLink} loading='lazy' />
+          </Link>
+        )
+      }
+      return null;
+    })}
+  </Slider>
+</div>
             {!searched && <div className="products-tray">
               {products.map((item, i) => (
                 <Fragment key={i}>

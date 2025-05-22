@@ -1047,6 +1047,8 @@ const NutriDietHero = () => {
   <div className="health-plan-header">
     <h2 className="health-plan-title"><span className='meet-our'>check our</span><span className='plantitle'>Health plan Investments </span></h2>
   </div>
+  <p className='heading_plain-container'>Have Multiple Health Concerns?</p>
+  <p className='heading_plain-below_container'>Select the program that matches your primary issue. Other conditions will still be addressed during your consultation for a complete, personalized plan.</p>
   <div className="health-plan-table-container">
     <table className="health-plan-table">
       <thead>

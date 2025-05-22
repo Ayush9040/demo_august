@@ -29,15 +29,28 @@ export const getActiveCart = ()=>{
   }
 
   
-  return axios.get(`${ ecomBaseDomain }/cart/activeCart`,{
+  return axios.get(`${ ecomBaseDomain }/cart/activeCart`,
+    {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  }
+)
+}
+
+export const createCart = (payload)=>{
+   const token = localStorage.getItem("authorizationToken");
+
+  if (token && !axios.defaults.headers?.Authorization) {
+    console.log('Current Request Headers: 2', axios.defaults.headers);
+    axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+    delete axios.defaults.headers.common['authorization'];
+  }
+  return axios.post(`${ ecomBaseDomain }/cart/`,payload, {
     headers: {
       'Authorization': `Bearer ${token}`
     }
   })
-}
-
-export const createCart = (payload)=>{
-  return axios.post(`${ ecomBaseDomain }/cart/`,payload)
 }
 
 export const updateCart = ( cartId,payload )=>{

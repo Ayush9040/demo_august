@@ -608,7 +608,18 @@ const SignIn = () => {
           //   phone: userDetails?.phoneNumber
           // })
           await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
-          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+          // Get current URL parameters
+          const searchParams = new URLSearchParams(window.location.search);
+          const redirectLocation = searchParams.get('location');
+
+          // Check for shop redirect first
+          if (redirectLocation === 'shop') {
+            navigate('/shop');
+          } 
+          // Then apply existing logic
+          else {
+            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+          }
         }
         setOtp(new Array(4).fill(""))//clear OTP
       }
@@ -654,7 +665,18 @@ const SignIn = () => {
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
           await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
-          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+          // Get current URL parameters
+          const searchParams = new URLSearchParams(window.location.search);
+          const redirectLocation = searchParams.get('location');
+
+          // Check for shop redirect first
+          if (redirectLocation === 'shop') {
+            navigate('/shop');
+          } 
+          // Then apply existing logic
+          else {
+            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+          }
         }
         setOtp(new Array(4).fill(""))//clear OTP
         // setFormData({ ...formData, otp: '' });
@@ -831,7 +853,18 @@ const SignIn = () => {
 
                 await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
                 callCTEvent(payload)
-                page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+                // Get current URL parameters
+                const searchParams = new URLSearchParams(window.location.search);
+                const redirectLocation = searchParams.get('location');
+
+                // Check for shop redirect first
+                if (redirectLocation === 'shop') {
+                  navigate('/shop');
+                } 
+                // Then apply existing logic
+                else {
+                  page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                }
               }
               else {
                 // alert('failed')
@@ -872,7 +905,18 @@ const SignIn = () => {
                 await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
                 callCTEvent(payload)
                 // console.log('user details 2 ', userDetails);
-                page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+                // Get current URL parameters
+                const searchParams = new URLSearchParams(window.location.search);
+                const redirectLocation = searchParams.get('location');
+
+                // Check for shop redirect first
+                if (redirectLocation === 'shop') {
+                  navigate('/shop');
+                } 
+                // Then apply existing logic
+                else {
+                  page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                }
               }
             }
             catch (err) {
@@ -1013,7 +1057,18 @@ const SignIn = () => {
             callCTEvent(payload)
             setIsBtnLoad(false)
             // console.log('user details 2 ', userDetails);
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+           // Get current URL parameters
+            const searchParams = new URLSearchParams(window.location.search);
+            const redirectLocation = searchParams.get('location');
+
+            // Check for shop redirect first
+            if (redirectLocation === 'shop') {
+              navigate('/shop');
+            } 
+            // Then apply existing logic
+            else {
+              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            }
           }
           else {
             // alert('failed')
@@ -1159,7 +1214,18 @@ const SignIn = () => {
             callCTEvent(payload)
             setErrorOTP('')
             // console.log('user details 2 ', userDetails);
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+             // Get current URL parameters
+            const searchParams = new URLSearchParams(window.location.search);
+            const redirectLocation = searchParams.get('location');
+
+            // Check for shop redirect first
+            if (redirectLocation === 'shop') {
+              navigate('/shop');
+            } 
+            // Then apply existing logic
+            else {
+              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            }
           }
           else {
             // SetIsAlreadyRegistered(true)
@@ -1700,7 +1766,18 @@ const SignIn = () => {
         await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
         console.log(response?.data)
 
-        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        // Get current URL parameters
+          const searchParams = new URLSearchParams(window.location.search);
+          const redirectLocation = searchParams.get('location');
+
+          // Check for shop redirect first
+          if (redirectLocation === 'shop') {
+            navigate('/shop');
+          } 
+          // Then apply existing logic
+          else {
+            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+          }
       }
     } else {
       console.error('No credential found');
