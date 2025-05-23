@@ -360,11 +360,11 @@ const Enrollment = () => {
       setEmpty(19);
     } else {
       setIsLoad(true);
-      const identityKey = `+${user.data.dialCode}${user.data.phoneNumber}`;
+      const identityKey = `+${formData.phone.replace(/^\+/, '')}`;
+      // alert(JSON.stringify(identityKey))
       // const identityKey = '++919035435720';
-      const identityVerified = identityKey.includes('++')
-  ? `+${user.data.dialCode}${user.data.phoneNumber}`
-  : `+${user.data.dialCode}${user.data.phoneNumber}`;
+      const identityVerified = `+${formData.phone.replace(/^\+/, '')}`;
+  // alert(JSON.stringify(identityVerified))
       let body = {
         personalDetails: {
           name: formData.name,
@@ -456,11 +456,9 @@ const Enrollment = () => {
       //   receivers: [formData.email, 'info@theyogainstitute.org']
       // }
 
-      const identityKey2 = `+${user.data.dialCode}${user.data.phoneNumber}`;
+      const identityKey2 = `+${formData.phone.replace(/^\+/, '')}`;
 
-      const identityVerified2 = identityKey2.includes('++')
-  ? `+${user.data.dialCode}${user.data.phoneNumber}`
-  : `+${user.data.dialCode}${user.data.phoneNumber}`;
+      const identityVerified2 = `+${formData.phone.replace(/^\+/, '')}`;
 
 
 
@@ -1316,6 +1314,7 @@ if (isOneMonthTTC()) {
     ) {
       // alert("3")
       setEmpty(3)
+      setEditStudentOpen(true);
 
     } else if (formData.address1 === '') {
       // alert("4")
