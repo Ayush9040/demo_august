@@ -286,3 +286,9 @@
   height: 420px;
   overflow: auto;
 }
+
+@media(max-width: 768px) {
+  .course-section .course-cards .course-card {
+    width: 270px !important;
+  }
+}

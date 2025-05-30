@@ -5,10 +5,23 @@ import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
 import { Link } from 'react-router-dom'
+import SliderCourses from './SliderCourses'
 
 const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, selectedFilters }) => {
 
   const [customVal, setCustomVal] = useState(1)
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   console.log('Course Clicked Data ', data)
   const [anyFilterActive, setAnyFilterActive] = useState()
@@ -260,12 +273,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       {
         url: '/certificate-program-on-yoga-for-cancer',
         text: 'Certificate Program on Yoga for Cancer – Online & On Campus',
-        onCampus: true, online: true, weekDays: true
+        onCampus: true, online: true, weekDays: true, days2: true
       },
       {
         url: '/certification-program-on-yoga-for-lung-cancer-online',
         text: 'Certificate Program on Yoga for Lung Cancer - Online',
-        online: true, weekDays: true
+        online: true, weekDays: true, days2: true
       },
       {
         url: '/certificate-course-on-advanced-pranayama-techniques',
@@ -307,7 +320,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/childrens-weekend-classes-on-campus',
       text: "Children's Weekend Class - On Campus",
-      onCampus: true, weekends: true, isRegular: true
+      onCampus: true, weekends: true, isRegular: true, days2: true
     },
     {
       url: '/advanced-regular-yoga-classes',
@@ -538,12 +551,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       {
         url: '/certificate-program-on-yoga-for-cancer',
         text: 'Certificate Program on Yoga for Cancer - Online',
-        onCampus: false, online: true, weekends: true, weekDays: true
+        onCampus: false, online: true, weekends: true, weekDays: true, days2: true
       },
       {
         url: '/certification-program-on-yoga-for-lung-cancer-online',
         text: 'Certificate Program on Yoga for Lung Cancer - Online',
-        onCampus: false, online: true, weekends: true, weekDays: true
+        onCampus: false, online: true, weekends: true, weekDays: true, days2: true
       },
       {
         url: '/certificate-course-on-advanced-pranayama-techniques',
@@ -811,7 +824,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     else if (title == 'Camps & Workshops') { return '#ce9b51' }
     else if (title == 'Special Certificate Courses (For Yoga Teachers)') { return '#ba7e7e' }
     else if (title == 'Special Events') { return '#c8705f' }
-    else if (title == 'Additional Certifications') { return '#c8705f' }
+    else if (title == 'Additional Certifications') { return 'rgba(117, 159, 128, 1)' }
     else { return '' }
     // if (i === 0) { return '#94B1B2' }
     // else if (i === 1) { return '#7C999B' }
@@ -854,6 +867,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       <div className="course-cards">
 
         {
+          isMobile ? (
+            <SliderCourses data={data} title={title} />
+          ) : (
+            <>
+            
+            {
           title === 'Most Popular Yoga Courses' ?
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
@@ -942,6 +961,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               // }
               // return
             })
+        }
+            
+            </>
+          )
         }
       </div>
     </div>

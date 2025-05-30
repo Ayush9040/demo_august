@@ -13,16 +13,16 @@
         margin: 0 auto 11px auto;
 
         h1::after {
-            display: inline-block;
-            content: '\25BC';
-            height: 5px;
-            width: 5px;
-            margin-right: 12px;
-            color: var(--brick-red);
-            transform: rotate(-90deg);
-            vertical-align: middle;
-            margin-top: 2.5rem;
-            font-size: 3rem;
+            // display: inline-block;
+            // content: '\25BC';
+            // height: 5px;
+            // width: 5px;
+            // margin-right: 12px;
+            // color: var(--brick-red);
+            // transform: rotate(-90deg);
+            // vertical-align: middle;
+            // margin-top: 2.5rem;
+            // font-size: 3rem;
         }
 
         .search-bar {
@@ -73,7 +73,7 @@
                 color: rgba(202, 70, 37, 1);
                 font-size: 16px;
                 font-weight: 500;
-                margin-left: 2vw;
+                // margin-left: 2vw;
                 cursor: pointer;
 
                 .count-badge {
@@ -97,6 +97,7 @@
                 padding: 18px;
                 height: max-content;
                 width: max-content;
+                z-index: 99;
 
                 .filter-data {
                     color: #818184;
@@ -329,6 +330,7 @@
             background-color: #EBB38A;
             margin-bottom: 2px;
             padding: 0.5rem;
+            border-radius: 8px;
 
             //padding-bottom: 0;
             // &:nth-child(2) {
@@ -352,9 +354,9 @@
             // }
         }
 
-        .accordion__button p:after {
-            content: '';
-        }
+        // .accordion__button p:after {
+        //     content: '';
+        // }
 
         .accordion__panel {
             width: 100%;
@@ -430,9 +432,10 @@
         }
 
         .accordion__item {
-            background-color: #EBB38A;
+            background-color: rgba(247, 214, 190, 0.8);
             padding: 0.5rem;
             margin-bottom: 2px;
+            border-radius: 8px;
         }
 
     }
@@ -464,9 +467,10 @@
             }
 
             .accordion__item {
-                background-color: #EBB38A;
+                background-color: rgba(247, 214, 190, 0.8);
                 padding: 0.5rem;
                 margin-bottom: 2px;
+                border-radius: 8px;
             }
 
         }
@@ -551,3 +555,379 @@
         }
     }
 }
+
+.wrapper_courses-dropdown {
+    width: 100%;
+}
+
+.yoga-page-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // background-color: #f5f5f5;
+    // padding: 20px;
+  }
+
+  .yoga-nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    // background-color: #fff;
+    border-radius: 8px;
+    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    // max-width: 1000px;
+    // margin: 0 auto;
+  }
+
+  .yoga-nav-item {
+    position: relative;
+    margin-right:15px;
+  }
+
+  .yoga-nav-trigger {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 18px;
+    // padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    background: none;
+    border: none;
+  }
+
+  .yoga-nav-trigger:hover {
+    background-color: #f0f0f0;
+  }
+
+  .yoga-dropdown-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+
+  }
+
+  .yoga-dropdown-panel.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .yoga-dropdown-option {
+    display: block;
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    // transition: all 0.2s ease;
+    // border-bottom: 1px solid #eee;
+  }
+
+  .yoga-dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .yoga-dropdown-option:hover {
+    color: #000;
+    // padding-left: 5px;
+  }
+
+  .yoga-stats-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #666;
+  }
+
+  .yoga-stats-number {
+    font-weight: bold;
+    color: #333;
+    margin: 0 5px;
+  }
+
+
+  .yoga-dropdown-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+.yoga-dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.yoga-section-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.yoga-dropdown-items {
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.yoga-dropdown-option {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #555;
+//   transition: all 0.2s ease;
+}
+
+.yoga-dropdown-option:hover {
+  color: #000;
+//   background-color: #fff;
+}
+
+
+/* For all dropdown panels */
+.yoga-dropdown-panel {
+  position: absolute;
+  background: white;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 100;
+  padding: 38px !important;
+  min-width: 500px;
+  max-height: 70vh;
+//   overflow-y: auto;
+//   overscroll-behavior: contain;
+}
+
+/* Special styling for YTTC dropdown */
+.yoga-dropdown-panel.yttc-dropdown {
+  min-width: 600px; /* Fixed width for YTTC dropdown */
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.yoga-dropdown-grid {
+  display: flex;
+  width: 100%;
+  gap: 80px;
+}
+
+.yoga-dropdown-column {
+  flex: 1;
+  padding: 45px 16px;
+}
+
+.yoga-dropdown-column:first-child {
+//   border-right: 1px solid #eee;
+  padding-left: 0px;
+}
+
+.yoga-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+.yoga-section-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.yoga-dropdown-option {
+  padding: 4px 0;
+  color: #555;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-family: 'Open Sans';
+//   transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.yoga-dropdown-option:hover {
+  color: #000;
+}
+
+/* Regular dropdown items */
+.yoga-dropdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.course_dropdown_title {
+    font-family: 'Open Sans';
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.yoga-dropdown-grid .yttc-column {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 100%; /* Constrain to parent */
+}
+
+/* Scrollbar styling */
+.yoga-dropdown-grid .yttc-column::-webkit-scrollbar {
+  width: 6px;
+}
+.yoga-dropdown-grid .yttc-column::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* Hide scrollbar but keep functionality */
+// .yoga-dropdown-panel,
+// .yttc-column {
+//   scrollbar-width: none; /* For Firefox */
+//   -ms-overflow-style: none; /* For IE/Edge */
+// }
+
+// .yoga-dropdown-panel::-webkit-scrollbar,
+// .yttc-column::-webkit-scrollbar {
+//   display: none; /* For Chrome/Safari/Opera */
+// }
+
+// /* Ensure scrolling still works */
+// .yoga-dropdown-panel,
+// .yttc-column {
+//   overflow-y: scroll;
+//   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+// }
+
+
+.specify_rules {
+    right: 320px;
+}
+
+.yoga-dropdown-grid {
+    overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  height: 50vh;
+}
+
+.course_dropdown_title:hover {
+    color: #CA4625;
+}
+
+.yoga-dropdown-option:hover {
+    padding-left: 0px !important;
+}
+
+.yoga-dropdown-items {
+    overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  height: 50vh;
+}
+
+.yoga-dropdown-panel_popular {
+    left: unset !important;
+     right: 0 !important;
+}
+
+.no_desktop {
+    display: none;
+}
+
+.browse-courses .popular-courses .accordion__item {
+    background-color: rgba(247, 214, 190, 0.8) !important;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.courses-container .certifications h2 {
+    font-size: 27px;
+}
+
+.courses-container .certifications .certificates {
+    gap: 30px;
+}
+
+.courses-container .certifications .certificates .certificate {
+    width: 23%;
+}
+
+.courses-container .certifications .certificates .certificate .certificate-logo {
+    width: 48%;
+}
+
+.courses-container .certifications .certificates .certificate p {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+@media(max-width: 768px) {
+    .wrapper_courses-dropdown {
+        display: none;
+    }
+    .no_desktop {
+    display: block;
+}
+    .arrow_course_new {
+    display: flex;
+    justify-content: space-between;
+}
+
+.courses-container .certifications {
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.courses-container .certifications h2 {
+    font-size: 18px;
+}
+
+.courses-container .certifications .certificates {
+    margin-top: 42px;
+    padding: 0 28px;
+}
+
+// .courses-container .certifications {
+//     padding: 0 10rem 5rem;
+//     padding-top: 7rem;
+// }
+
+.courses-container .certifications .certificates .certificate {
+    width: 100%;
+    margin-bottom: 68px;
+}
+
+.alumni-main-div .alumini-carousel-heading {
+    padding-left: 0px !important;
+}
+
+
+}
+
+.course_dropdown_title a:hover {
+    color: #CA4625;
+}
+
+// .yoga-nav-trigger:hover {
+//     background-color: #f7cbc1;
+// }
+
+
+
+
+

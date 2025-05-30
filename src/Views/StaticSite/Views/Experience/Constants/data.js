@@ -196,7 +196,7 @@ export const listData2 = [
   {
     name:'Rohan Singh',
     designation:'Student from 7 months TTC',
-    image:`${baseDomain}${studentExperienceAssests.Rohan}`,
+    image:`https://nispand.s3.ap-south-1.amazonaws.com/files/Rohan+Singh.jpg`,
     message:'My life has completely changed ever since I have been associated with The Yoga Institute. I have started to be more present, more mindful in all my tasks and relationships. The pace of my life has slowed down; I can appreciate the little things and the small details of life. My many thanks to Hansama and the Institute.'
   },
   {
@@ -214,7 +214,7 @@ export const listData2 = [
   {
     name:'Tanvi Jain',
     designation:'200 hrs TTC Student',
-    image:`${baseDomain}${studentExperienceAssests.Tanvi}`,
+    image:`https://nispand.s3.ap-south-1.amazonaws.com/files/Tanvi+Jain.jpg`,
     message:'Enrolling myself for the BTTC program at TYI has been my best decision so far. I have learnt a lot, not just about Yoga but about LIFE. Teachers &amp; Coordinators are knowledgeable and inspiring. They gave their best and answered queries with patience. Along with that, I got to learn from my classmates. The whole ambience of the class was so positive. Being a new mother, I was not sure that I will be able to fully dedicate to the classes but I didn`t miss out on any class. I looked forward to them every day. It was such a great learning experience. And its not the end but just the beginning. I want to Thank everyone for their continuous support in this journey. Grateful'
   },
   {
@@ -232,7 +232,7 @@ export const listData2 = [
   {
     name:'Vaidehi Ajit Kale',
     designation:'Student from 2 Months Teachers Training Course',
-    image:`${baseDomain}${studentExperienceAssests.Vaidehi}`,
+    image:`https://nispand.s3.ap-south-1.amazonaws.com/files/Vaidehi+Ajit+Kale.jpg`,
     message:'The Yoga Institute has helped me with deep learning, compassion and joy. In today`s world with so many options to learn yoga, finding the Institute was the best decision I took to discover what my body needs. The teachers at the Institute touch the spirit of what yoga means and are extremely generous in imparting the knowledge with us. The real transformation for me is that I feel calmer and more peaceful. I wish I had taken up an offline class rather than an online class. Looking forward to joining an offline class or visiting the Institute someday to experience the tranquillity. The journey for me towards self growth has just begun and I intend to grow more with the Yogic path. I am happily in my best physical and mental state ever. Gratitude towards all the teachers for being kind, helpful, guiding us and making us feel a part of the yoga community'
   },
   {
@@ -262,7 +262,7 @@ export const listData2 = [
   {
     name:'Deepti Panjabi',
     designation:'Student from North Carolina, United States',
-    image:`${baseDomain}${studentExperienceAssests.Deepti}`,
+    image:`https://nispand.s3.ap-south-1.amazonaws.com/files/Deepti+Punjabi.jpg`,
     message:'When I started my TTC, I knew I was exactly where I was supposed to be. The images that I placed on my vision board started to come to life - meditation, asana pictures, words written: pure joy, devoted, grounded, and awaken your senses. Each teacher guided me to go inward and improve, opened my eyes, and created space for me to grow. Grateful to be able to join the program!'
   },
   {

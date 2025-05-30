@@ -8068,7 +8068,7 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '1 Day',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -10162,7 +10162,7 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '1 Day',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -14022,7 +14022,7 @@ const classes = {
     residential: false,
     certficate: true,
 
-    tenure: '',
+    tenure: '6 Days',
     courseType: '',
     language: 'English',
     preRequisite: 'None',
@@ -14288,7 +14288,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: 'Weekly 4 Days',
     courseType: 'Regular Asana Classes 1/ Online',
     language: 'English',
     preRequisite: 'None',
@@ -14574,7 +14574,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: 'Weekly 4 Days',
     courseType: 'Regular Asana Classes 1/ on campus',
     language: 'English',
     preRequisite: 'None',
@@ -14749,7 +14749,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: 'Weekly 4 Days',
     courseType: 'Regular Asana Classes 1/ on campus',
     language: 'English',
     preRequisite: 'None',
@@ -14927,6 +14927,8 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+    tenure: 'Weekly 4 Days',
+    language: 'English ',
     newName: 'Childrens Regular Classes',
     days: [
       'Mon',
@@ -15036,6 +15038,8 @@ const classes = {
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
+    tenure: '2 Days',
+    language: 'English',
     metaDescription:
       'Weekend yoga for kids to build focus, discipline & mindfulness.',
     rating: 5,
@@ -15155,7 +15159,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '3 Days',
     courseType: 'Regular Meditation Foundation Course',
     language: 'English',
     preRequisite: 'None',
@@ -15300,7 +15304,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '3 Days',
     courseType: 'Regular Class - 2 Regular Meditation Class',
     language: 'English',
     preRequisite: 'None',
@@ -15647,6 +15651,8 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+    tenure: 'Weekly 2 Days',
+    language: 'English ',
     details: [
       {
         type: 'paragraph',
@@ -16022,7 +16028,7 @@ const classes = {
     category: 'classes',
 
     online: false,
-    onCampus: false,//true
+    onCampus: true,//true
     nonResidential: false,//true
     residential: false,
     certficate: false,
@@ -16391,6 +16397,8 @@ const classes = {
     metaDescription:
       'Weekend online yoga to enhance flexibility, strength & inner calm.',
     rating: 5,
+    tenure: 'Weekly 2 Days',
+    language: 'English ',
     colorCode: '#C48E8C',
     timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
     fees: {
@@ -16531,7 +16539,7 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '3 Days',
     courseType: 'Regular Meditation Foundation Course',
     language: 'English',
     preRequisite: 'None',
@@ -16687,7 +16695,7 @@ const classes = {
     metaDescription:
       'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
     rating: 5,
-    colorCode: '#C48E8C',
+    colorCode: '#759F80',
     timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) - On Campus 9:00 am to 3:00 pm (Saturday) - Online',
     fees: {
       // onlineFee: 1500,
@@ -16695,6 +16703,8 @@ const classes = {
       internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    language: 'English ',
+    tenure:'2 Years',
     dates: ['16th June 2025 - MA'],
     online: false,
     onCampus: true,
@@ -17282,7 +17292,7 @@ const classes = {
     metaDescription:
       'Comprehensive 4-year B.A. in Yogashastra covering theory & practice.',
     rating: 5,
-    colorCode: '#C48E8C',
+    colorCode: '#759F80',
     timing: '10:00 am - 2:00 pm (Monday to Friday) - On Campus',
     fees: {
       // onlineFee: 1500,
@@ -17298,6 +17308,8 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    language: 'English ',
+    tenure: '4 Years',
     details: [
       // {
       //   type: 'paragraph',
@@ -17587,7 +17599,7 @@ const certificate = {
     metaDescription: 'Deepen pranayama practice with advanced breathwork techniques for teachers.',
     mostPopular: true,
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#759F80',
     timing: ' ',
     fees: {
       onlineFee: 24000,
@@ -17612,7 +17624,7 @@ const certificate = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: 'Weekly 3 Days',
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: 'None',
@@ -17922,7 +17934,7 @@ const certificate = {
       'Equip yourself with yogic tools to support cancer patients effectively.',
     mostPopular: true,
     rating: 5,
-    colorCode: '#C48E8C',
+    colorCode: '#759F80',
     timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
     fees: {
       onlineFee: 24000,
@@ -17943,7 +17955,7 @@ const certificate = {
     residential: false,
     certficate: true,
 
-    tenure: '',
+    tenure: 'Weekly 2 Days',
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: '200 Hour Teacher Training Course',
@@ -18089,7 +18101,7 @@ const certificate = {
     metaDescription:
       'Master therapeutic yoga tools to aid lung cancer care & well-being.',
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#759F80',
     timing: 'Tuesdays to Saturday: 5:00 p.m. - 7:00 p.m. (IST)',
     fees: {
       onlineFee: 10000,
@@ -18106,7 +18118,7 @@ const certificate = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: 'Weekly 2 Days',
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
@@ -18211,10 +18223,11 @@ const certificate = {
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: true,
+    duration: 'Weekly 3 Days',
     metaDescription:
       'Comprehensive yoga therapy training for 110+ diseases and conditions.',
     rating: 5,
-    colorCode: '#D3A29D',
+    colorCode: '#759F80',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
     fees: {
       onlineFee: 38500,
@@ -18239,7 +18252,7 @@ const certificate = {
     residential: false,
     certficate: true,
 
-    tenure: '',
+    tenure: 'Weekly 3 Days',
     courseType: 'Certificate Yoga Therapy Course - Online & On Campus',
     language: 'English',
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
@@ -18847,6 +18860,7 @@ const certificate = {
     image: `${Emo_energy}`,
     cardImage: `${Emo_energy}`,
     mostPopular: false,
+    language: 'English',
     metaDescription:
       'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
     rating: 5,
@@ -18979,6 +18993,7 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    language: 'English',
     dates: [
       // 'April 19th – April 20th 2025',
       // 'May 5th – May 9th 2025 Morning',
@@ -19100,6 +19115,7 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    language: 'English',
     dates: [
       // 'May 7th – May 11th 2025',
       'July 9th – July 13th 2025',
@@ -19181,6 +19197,7 @@ const certificate = {
     image: `${swadhyay}`,
     cardImage: `${swadhyay}`,
     mostPopular: false,
+    language: 'English',
     metaDescription:
       'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
     rating: 5,
@@ -19276,6 +19293,7 @@ const certificate = {
       'Heal your 7 chakras by studying its behaviour patterns, know its potential and live a life you always wanted to',
     rating: 5,
     colorCode: '#C48E8C',
+    language: 'English',
     timing: '9:00 am – 6:00 pm - Online',
     fees: {
       onlineFee: 30000,

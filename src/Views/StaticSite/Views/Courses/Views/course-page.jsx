@@ -16,6 +16,7 @@ import {
   AccordionItemHeading,
   AccordionItemButton,
 } from 'react-accessible-accordion'
+import Arrowup_right from './images/Arrowup_right.png'
 
 // import {
 //   courseArray,
@@ -29,6 +30,7 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
+import Icon from './images/Icon.png';
 
 const CourseSection = lazy(() => import('../../../Components/CourseSections'))
 // const courseCardData = lazy(() =>
@@ -49,6 +51,408 @@ const Courses = () => {
     , { label: '4 Months', value: 'month4' }
     , { label: '7 Months', value: 'month7' }
   ]
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const navRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = (id) => {
+    setActiveDropdown(activeDropdown === id ? null : id);
+  };
+
+  // const navItems = [
+  //   {
+  //     id: 'yttc',
+  //     title: 'Yoga Teacher Training Courses (YTTC)',
+  //     items: [
+  //       c200hr[0],
+  //       c500hr[0],
+  //       '500-Hour YTTC',
+  //       'Advanced YTTC'
+  //     ]
+  //   },
+  //   {
+  //     id: 'certifications',
+  //     title: 'Additional Certifications',
+  //     items: [
+  //       'Yin Yoga Certification',
+  //       'Prenatal Yoga Certification',
+  //       'Kids Yoga Certification',
+  //       'Meditation Teacher Training'
+  //     ]
+  //   },
+  //   {
+  //     id: 'classes',
+  //     title: 'Regular Yoga Classes',
+  //     items: [
+  //       'Hatha Yoga',
+  //       'Vinyasa Flow',
+  //       'Ashtanga Yoga',
+  //       'Restorative Yoga'
+  //     ]
+  //   },
+  //   {
+  //     id: 'popular',
+  //     title: 'Most Popular Yoga Courses',
+  //     items: [
+  //       'Beginners Yoga Course',
+  //       'Yoga for Weight Loss',
+  //       'Yoga for Stress Relief',
+  //       'Corporate Yoga Programs'
+  //     ]
+  //   },
+  //   {
+  //     id: 'camps',
+  //     title: 'Camps & Workshops',
+  //     items: [
+  //       'Weekend Yoga Retreats',
+  //       'Yoga & Meditation Camps',
+  //       'Special Workshops',
+  //       'International Yoga Retreats'
+  //     ]
+  //   }
+  // ];
+
+  const navItems = [
+  {
+    id: 'yttc',
+    title: 'Yoga Teacher Training Courses (YTTC)',
+    url: '/courses/browse/ttc?type=200',
+    sections: [
+      {
+        title: '200 hours YTTC (Basic)',
+        url: '#',
+        items: [
+          {
+            name: '1 Month YTTC Online & On Campus - English - Batch 1',
+            url: '/one-month-ttc'
+          },
+          {
+            name: '2 Months YTTC Online & On Campus - English - Batch 2',
+            url: '/200-hrs-part-time-ttc-on-campus-english'
+          },
+          {
+            name: '2 Months YTTC Online - English - Batch 3',
+            url: '/200-hrs-part-time-ttc-online-english'
+          },
+          {
+            name: '2 Months YTTC Online - Hindi - Batch 4',
+            url: '/200-hrs-part-time-ttc-online'
+          },
+          {
+            name: '3 Months Weekend YTTC Online - English - Batch 5',
+            url: '/weekend-teacher-training-course'
+          },
+          {
+            name: '3 Months YTTC Online - English - Batch 6',
+            url: '/200-hrs-part-time-ttc-online-batch-6'
+          },
+          {
+            name: 'View all 200 hours YTTC (Basic)',
+            url: '/courses/browse/ttc?type=200'
+          }
+        ]
+      },
+      {
+        title: '500 Hours YTTC (Intermediate)',
+        url: '#',
+        items: [
+          {
+            name: '3 Months YTTC - Online - English',
+            url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level'
+          },
+          {
+            name: 'View all 500 Hours YTTC (Intermediate)',
+            url: '/courses/browse/ttc?type=500'
+          }
+        ]
+      },
+      {
+        title: '900 Hours YTTC (Advanced)',
+        url: '#',
+        items: [
+          {
+            name: '3 Months YTTC-On Campus-English',
+            url: '/3-months-advanced-teacher-training-course'
+          },
+          {
+            name: '4 Months YTTC-Online-English',
+            url: '/900-hours-advanced-teacher-training-course'
+          },
+          {
+            name: '7 Months YTTC-Online & On Campus-English',
+            url: '/seven-month-ttc'
+          },
+          {
+            name: '1 Year YTTC-Online & On Campus-Hindi',
+            url: '/one-year-ttc'
+          },
+          {
+            name: '2 Years YTTC-Online & On Campus-English',
+            url: '/two-year-ttc'
+          },
+          {
+            name: 'View all 900 Hours YTTC (Advanced)',
+            url: '/courses/browse/ttc?type=900'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'certifications',
+    title: 'Additional Certifications',
+    url: '/courses/browse/additional-certificates',
+    items: [
+      {
+        url: '/certificate-yoga-therapy-course-online',
+        name: 'Certificate Yoga Therapy Course - Online & On Campus',
+      },
+      {
+        url: '/certificate-program-on-yoga-for-cancer',
+        name: 'Certificate Program on Yoga for Cancer – Online & On Campus',
+      },
+      {
+        url: '/certification-program-on-yoga-for-lung-cancer-online',
+        name: 'Certificate Program on Yoga for Lung Cancer - Online',
+      },
+      {
+        url: '/certificate-course-on-advanced-pranayama-techniques',
+        name: 'Certificate Course on Advanced Pranayama Techniques - Online',
+      },
+      {
+        url: '/ma-yoga-shastra',
+        name: 'MA Yogashastra',
+      },
+      {
+        url: '/ba-yoga-shastra',
+        name: 'BA Yogashastra',
+      }
+    ]
+  },
+  {
+    id: 'classes',
+    title: 'Regular Yoga Classes',
+    url: '/courses/browse/classes',
+    items: [
+     {
+          url: '/asana-regular-classes-on-campus',
+          name: 'Asana Regular Classes for Men On Campus',
+        },
+        {
+          url: '/asana-regular-classes-on-campus-women',
+          name: 'Asana Regular Classes for Women On Campus',
+        },
+        {
+          url: '/asana-regular-classes-online',
+          name: 'Asana Regular Classes (Men & Women) - Online'
+        },
+        {
+          url: '/weekend-classes',
+          name: 'Weekend Asana Classes - (Men & Women) On Campus',
+  
+        },
+        {
+          url: '/weekend-classes-online',
+          name: 'Weekend Asana Classes - (Men & Women) Online',
+        },
+        {
+          url: '/childrens-regular-classes',
+          name: "Children's Regular Class - On Campus",
+        },
+        {
+          url: '/childrens-weekend-classes-on-campus',
+          name: "Children's Weekend Class - On Campus",
+  
+        },
+        {
+          url: '/advanced-regular-yoga-classes',
+          name: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
+        },
+        {
+          url: '/regular-pregnacy-classes',
+          name: 'Regular Pregnancy Class',
+        },
+        {
+          url: '/department-of-rehabilitation-and-physiotherapy',
+          name: 'Department of Rehabilitation and Physiotherapy',
+        },
+        {
+          url: '/IBY-course',
+          name: 'IBY classes - On Campus & Online',
+        },
+        {
+          url: '/meditation-foundation-course-online',
+          name: 'Online Meditation Course (Foundation Course)',
+        },
+        {
+          url: '/regular-meditation-classes-online',
+          name: 'Regular Online Meditation Classes',
+        },
+        {
+          url: '/couples-classes',
+          name: 'Couples Classes - Online',
+        }
+    ]
+  },
+  {
+    id: 'popular',
+    title: 'Most Popular Yoga Courses',
+    url: '/courses/browse/most-popular',
+    sections: [
+      {
+        title: '7 Days Health Camp',
+        url: '#',
+        items: [
+          {
+            name: '7 Days Health Camp - On Campus - Hindi',
+            url: '/7-days-camp'
+          },
+          {
+            name: '7 Days Health Camp - On Campus - English',
+            url: '/7-days-camp-english'
+          },
+         
+        ]
+      },
+      {
+        title: '21 Days Better Living Course',
+        url: '#',
+        items: [
+          {
+            name: 'Morning Online & On Campus – English - Batch 1',
+            url: '/21-days-better-living-course'
+          },
+           {
+            name: 'Evening - Online & On Campus – English - Batch 2',
+            url: '/21-days-better-living-course-batch-2'
+          },
+           {
+            name: 'Evening - Online & On Campus – Hindi - Batch 3',
+            url: '/21-days-better-living-course-batch-3'
+          }
+        ]
+      },
+      {
+        title: 'Samattvam',
+        url: '/samattvam',
+        items: [
+          // {
+          //   name: '3 Months YTTC-On Campus-English',
+          //   url: '/3-months-advanced-teacher-training-course'
+          // },
+          // {
+          //   name: '4 Months YTTC-Online-English',
+          //   url: '/900-hours-advanced-teacher-training-course'
+          // },
+          // {
+          //   name: '7 Months YTTC-Online & On Campus-English',
+          //   url: '/seven-month-ttc'
+          // },
+          // {
+          //   name: '1 Year YTTC-Online & On Campus-Hindi',
+          //   url: '/one-year-ttc'
+          // },
+          // {
+          //   name: '2 Years YTTC-Online & On Campus-English',
+          //   url: '/two-year-ttc'
+          // }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'camps',
+    title: 'Camps & Workshops',
+    url: '/courses/browse/camps-workshops',
+    items: [
+      {
+      url: '/corporate-workshops',
+      name: 'Corporate Workshop - On Campus',
+    },
+
+    {
+      url: '/couples-classes',
+      name: "Couple's classes - Online",
+    },
+    // {
+    //   url: '/home-tuitions',
+    //   text: 'Home Tuitions',
+    //   online: true, weekDays: true
+    // },
+    {
+      url: '/stress-management-camp',
+      name: 'Stress Management Camp - On Campus',
+    },
+    {
+      url: '/weight-management-workshop',
+      name: 'Weight Loss Workshop - On Campus',
+    },
+    {
+      url: '/pregnancy-camp-for-ante-post-natal',
+      name: 'Pregnancy Camp for Ante & Post Natal - On Campus',
+    },
+    {
+      url: '/cardiac-hypertension-workshop',
+      name: 'Cardiac & Hypertension Workshop - On Campus',
+    },
+    {
+      url: '/back-joint-disorder-workshop',
+      name: 'Back & Joint Disorder Workshop - On Campus',
+    },
+    {
+      url: '/pranayama-workshop',
+      name: 'Pranayama Workshop',
+    },
+    {
+      url: '/deep-sleep-workshop',
+      name: 'Deep Sleep Workshop',
+    },
+    {
+      url: '/emotional-wellness-workshop',
+      name: 'Emotional Wellness Workshop',
+    },
+    {
+      url: '/gut-health-workshop',
+      name: 'Gut Health Workshop',
+    },
+    {
+      url: '/healthy-sattvik-cooking-workshop',
+      name: 'Healthy & Sattvik Cooking Workshop',
+    },
+    {
+      url: '/menopause-wellness-workshop',
+      name: 'Menopause Wellness Workshop',
+    },
+    {
+      url: '/pcod-pcos-wellness-workshop',
+      name: 'PCOD & PCOS Wellness Workshop',
+    },
+    {
+      url: '/total-body-detox-workshop',
+      name: 'Total Body Detox Workshop',
+    },
+    {
+      url: '/diabetes-camp',
+      name: 'Diabetes Yoga Camp - On Campus',
+    }
+    ]
+  }
+];
+
+
   const clearFilters = () => {
     setIsFilterOpened(false)
     setFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
@@ -477,7 +881,8 @@ const Courses = () => {
         ]
       }
       else if (index == 2) {
-        points = [{
+        points = [
+          {
           url: '/asana-regular-classes-on-campus',
           text: 'Asana Regular Classes for Men On Campus',
           onCampus: true, weekDays: true, isRegular: true
@@ -510,7 +915,7 @@ const Courses = () => {
         {
           url: '/childrens-weekend-classes-on-campus',
           text: "Children's Weekend Class - On Campus",
-          onCampus: true, weekends: true, isRegular: true
+          onCampus: true, weekends: true, isRegular: true, days2: true
         },
         {
           url: '/advanced-regular-yoga-classes',
@@ -526,7 +931,8 @@ const Courses = () => {
           url: '/IBY-course',
           text: 'IBY classes - On Campus & Online',
           onCampus: true, online: true, weekDays: true, isRegular: true
-        }]
+        }
+      ]
       }
       else if (index == 3) {
         points = [
@@ -623,12 +1029,12 @@ const Courses = () => {
         {
           url: '/certificate-program-on-yoga-for-cancer',
           text: 'Certificate Program on Yoga for Cancer – Online & On Campus',
-          onCampus: true, online: true, weekDays: true
+          onCampus: true, online: true, weekDays: true, days2: true
         },
         {
           url: '/certification-program-on-yoga-for-lung-cancer-online',
           text: 'Certificate Program on Yoga for Lung Cancer - Online',
-          online: true, weekDays: true
+          online: true, weekDays: true, days2: true
         },
         {
           url: '/certificate-course-on-advanced-pranayama-techniques',
@@ -668,12 +1074,12 @@ const Courses = () => {
           {
             url: '/certificate-program-on-yoga-for-cancer',
             text: 'Certificate Program on Yoga for Cancer - Online',
-            onCampus: false, online: true, weekends: true, weekDays: true
+            onCampus: false, online: true, weekends: true, weekDays: true, days2: true
           },
           {
             url: '/certification-program-on-yoga-for-lung-cancer-online',
             text: 'Certificate Program on Yoga for Lung Cancer - Online',
-            onCampus: false, online: true, weekends: true, weekDays: true
+            onCampus: false, online: true, weekends: true, weekDays: true, days2: true
           },
           {
             url: '/certificate-course-on-advanced-pranayama-techniques',
@@ -987,7 +1393,12 @@ const Courses = () => {
                   </div>
                 </div>}
 
+                
+
             </div>
+
+            
+
             <div className='list-sele-filters'> {filtersToloop.map(fil => (
               <>
                 {selectedFilters[fil.value] && <div key={fil.label}>{fil.label}
@@ -998,6 +1409,117 @@ const Courses = () => {
                   </span></div>}
               </>
             ))}</div>
+
+            <div className='wrapper_courses-dropdown'>
+               <div className="yoga-page-container">
+      <div className="yoga-nav-container" ref={navRef}>
+        {/* {navItems.map((item) => (
+          <div className="yoga-nav-item" key={item.id}>
+            <button
+              className="yoga-nav-trigger"
+              onClick={() => toggleDropdown(item.id)}
+              aria-expanded={activeDropdown === item.id}
+              aria-controls={`dropdown-${item.id}`}
+              style={{ display: 'flex'}}
+            >
+              {item.title}
+              <div style={{ width: '8px', height: '5px', margin: ' 0 10px'}}>
+                <img src={Icon} style={{ width: '100%', height: '100%'}} alt="" />
+              </div>
+            </button>
+            <div
+              id={`dropdown-${item.id}`}
+              className={`yoga-dropdown-panel ${activeDropdown === item.id ? 'is-visible' : ''}`}
+            >
+              {item.items.map((dropdownItem, index) => (
+                <a href="#" className="yoga-dropdown-option" key={index}>
+                  {dropdownItem}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))} */}
+       {navItems.map((item) => (
+  <div className="yoga-nav-item" key={item.id}>
+    <button
+      className="yoga-nav-trigger"
+      onClick={() => toggleDropdown(item.id)}
+      aria-expanded={activeDropdown === item.id}
+      aria-controls={`dropdown-${item.id}`}
+      style={{ display: 'flex', alignItems: 'center' }}
+    >
+      {item.title}
+      <div style={{ width: '8px', height: '5px', margin: '0 10px', display: 'flex' }}>
+        <img src={Icon} style={{ width: '100%', height: '100%' }} alt="" />
+      </div>
+    </button>
+    <div
+      id={`dropdown-${item.id}`}
+      className={`yoga-dropdown-panel ${activeDropdown === item.id ? 'is-visible' : ''} ${
+  item.id === 'yttc' ? 'yttc-dropdown' : ''
+} ${
+  item.id === 'popular' ? 'yoga-dropdown-panel_popular' : ''
+} ${
+  item.id === 'camps' ? 'yoga-dropdown-panel_popular' : ''
+}`}
+      style={{
+  // maxHeight: activeDropdown === item.id ? '80vh' : '0',
+  // overflowY: 'auto'
+}}
+    >
+      <h1 className='course_dropdown_title'><a href={item.url}>{item.title}</a></h1>
+      {item.sections ? (
+        <div className="yoga-dropdown-grid">
+          {/* Left column - 200hr + 500hr */}
+          <div className="yoga-dropdown-column">
+            {item.sections.slice(0, 2).map((section, sectionIndex) => (
+              <div key={sectionIndex} className="yoga-dropdown-section" style={{marginBottom: '45px'}}>
+                <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
+                <div className="yoga-section-items">
+                  {section.items.map((dropdownItem, itemIndex) => (
+                    <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
+                      {dropdownItem.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+      
+          <div className="yoga-dropdown-column">
+            {item.sections.slice(2).map((section, sectionIndex) => (
+              <div key={sectionIndex + 2} className="yoga-dropdown-section">
+                <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
+                <div className="yoga-section-items">
+                  {section.items.map((dropdownItem, itemIndex) => (
+                    <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
+                      {dropdownItem.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+       
+        <div className="yoga-dropdown-items">
+          {item.items.map((dropdownItem, index) => (
+            <a href={dropdownItem.url} className="yoga-dropdown-option" key={index}>
+              {dropdownItem.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+))}
+      </div>
+      
+      
+    </div>
+                </div>
 
             {/* <div className="search-bar">
           <label>
@@ -1025,7 +1547,12 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc?type=200">
-                      <p>200 hours YTTC (Basic)</p>
+                      <p className='arrow_course_new'>200 hours YTTC (Basic) 
+
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                          </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1034,7 +1561,11 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc?type=500">
-                      <p>500 Hours YTTC (Intermediate)</p>
+                      <p className='arrow_course_new'>500 Hours YTTC (Intermediate)
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1043,7 +1574,11 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc?type=900">
-                      <p>900 Hours YTTC (Advanced)</p>
+                      <p className='arrow_course_new'>900 Hours YTTC (Advanced)
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1063,7 +1598,11 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/additional-certificates">
-                      <p>Additional Certifications</p>
+                      <p className='arrow_course_new'>Additional Certifications
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1073,7 +1612,12 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
-                      <p>Regular Yoga Classes</p>
+                      <p className='arrow_course_new'>Regular Yoga Classes
+
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1083,7 +1627,12 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/most-popular">
-                      <p> Most Popular Yoga Courses</p>
+                      <p className='arrow_course_new'> Most Popular Yoga Courses
+
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1095,7 +1644,12 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/camps-workshops">
-                      <p>Camps & Workshop</p>
+                      <p className='arrow_course_new'>Camps & Workshop
+
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1105,7 +1659,12 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/personal-development-programs">
-                      <p>Yoga - Continuing Personal Development</p>
+                      <p className='arrow_course_new'>Yoga - Continuing Personal Development
+
+                         <div className='no_desktop'>
+                                                <img src={Arrowup_right} alt="" />
+                                              </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

@@ -1,11 +1,12 @@
 import React from 'react'
 import nutri_diet_mobile_footer_arrow from '../../Views/Courses/Views/images/nutri_diet_mobile_footer_arrow.svg'
 
-const CommonBtn = ({ text, isColor, buttonAction }) => {
+const CommonBtn = ({ text, isColor, buttonAction, isCourse }) => {
 
   const isNutriDietLanding = location.pathname.includes("/nutri-diet");
   // const isHome = location.pathname.includes("/");
   const isHome = location.pathname === "/";
+  // const isCourse = location.pathname === "/courses";
 
 
 
@@ -19,7 +20,7 @@ const CommonBtn = ({ text, isColor, buttonAction }) => {
           </div>
         )}
         {
-          isHome &&  (
+          (isHome || isCourse === 'yes') &&  (
             <div className='fixes_des_footer_img' style={{display: 'flex', marginLeft: '4px'}}>
               <img src={nutri_diet_mobile_footer_arrow} alt="" />
             </div>

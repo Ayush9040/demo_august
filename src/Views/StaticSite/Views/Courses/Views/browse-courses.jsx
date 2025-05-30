@@ -9,6 +9,7 @@ import {
 } from 'react-accessible-accordion'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
+import Arrowup_right from './images/Arrowup_right.png'
 // import { courseArray } from '../../../Constants/courses/c200hr'
 import {
   AllCourses,
@@ -200,14 +201,23 @@ const BrowseCourses = () => {
 
               <AccordionItem style={{
                 border: breadcrumbs == '200 hours YTTC (Basic)' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == '200 hours YTTC (Basic)' && '8px'
+                borderRadius: breadcrumbs == '200 hours YTTC (Basic)' && '8px',
+                textAlign: breadcrumbs == '200 hours YTTC (Basic)' && 'center',
+                fontSize: breadcrumbs == '200 hours YTTC (Basic)' && '16px',
+                color: breadcrumbs == '200 hours YTTC (Basic)' && 'rgba(202, 70, 37, 1)',
+                fontWeight: breadcrumbs == '200 hours YTTC (Basic)' && '700',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc">
-                      <p onClick={() => {
+                      <p className='arrow_course_new' onClick={() => {
                         setBreadcrumbs('200 hours YTTC (Basic)'), setCategory([...c200hr])
-                      }}>200 Hours YTTC (Basic)</p>
+                      }}>200 Hours YTTC (Basic) 
+                      
+                      <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -215,28 +225,40 @@ const BrowseCourses = () => {
 
               <AccordionItem style={{
                 border: breadcrumbs == '500 hours YTTC (Intermediate)' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == '500 hours YTTC (Intermediate)' && '8px'
+                borderRadius: breadcrumbs == '500 hours YTTC (Intermediate)' && '8px',
+                color: breadcrumbs == '500 hours YTTC (Intermediate)' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc">
-                      <p onClick={() => {
+                      <p className='arrow_course_new' onClick={() => {
                         setBreadcrumbs('500 hours YTTC (Intermediate)'), setCategory([...c500hr])
-                      }}>500 Hours YTTC (Intermediate)</p>
+                      }}>500 Hours YTTC (Intermediate) 
+                      
+                      <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
               </AccordionItem>
               <AccordionItem style={{
                 border: breadcrumbs == '900 hours YTTC (Advanced)' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == '900 hours YTTC (Advanced)' && '8px'
+                borderRadius: breadcrumbs == '900 hours YTTC (Advanced)' && '8px',
+                color: breadcrumbs == '900 hours YTTC (Advanced)' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/ttc">
-                      <p onClick={() => {
+                      <p className='arrow_course_new' onClick={() => {
                         setBreadcrumbs('900 hours YTTC (Advanced)'), setCategory([...c900hr])
-                      }}>900 Hours YTTC (Advanced)</p>
+                      }}>900 Hours YTTC (Advanced)
+                      
+                       <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -245,13 +267,19 @@ const BrowseCourses = () => {
               <AccordionItem
                 style={{
                   border: breadcrumbs == 'Additional Certificate Courses' && '2px solid #CA4625',
-                  borderRadius: breadcrumbs == 'Additional Certificate Courses' && '8px'
+                  borderRadius: breadcrumbs == 'Additional Certificate Courses' && '8px',
+                  color: breadcrumbs == 'Additional Certificate Courses' && 'rgba(202, 70, 37, 1)',
                 }}
               >
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/additional-certificates">
-                      <p>Additional Certificates</p>
+                      <p className='arrow_course_new'>Additional Certificates
+
+                         <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -271,12 +299,18 @@ const BrowseCourses = () => {
               </AccordionItem> */}
               <AccordionItem style={{
                 border: breadcrumbs == 'Regular Yoga Classes' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Regular Yoga Classes' && '8px'
+                borderRadius: breadcrumbs == 'Regular Yoga Classes' && '8px',
+                color: breadcrumbs == 'Regular Yoga Classes' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
-                      <p>Regular Yoga Classes</p>
+                      <p className='arrow_course_new'>Regular Yoga Classes
+
+                         <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -284,12 +318,18 @@ const BrowseCourses = () => {
 
               <AccordionItem style={{
                 border: breadcrumbs == 'Most Popular Yoga Courses' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Most Popular Yoga Courses' && '8px'
+                borderRadius: breadcrumbs == 'Most Popular Yoga Courses' && '8px',
+                color: breadcrumbs == 'Most Popular Yoga Courses' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/most-popular">
-                      <p> Most Popular Yoga Courses</p>
+                      <p className='arrow_course_new'> Most Popular Yoga Courses
+
+                         <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -299,12 +339,18 @@ const BrowseCourses = () => {
 
               <AccordionItem style={{
                 border: breadcrumbs == 'Camps & Workshops' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Camps & Workshops' && '8px'
+                borderRadius: breadcrumbs == 'Camps & Workshops' && '8px',
+                color: breadcrumbs == 'Camps & Workshops' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/camps-workshops">
-                      <p>Camps & Workshop</p>
+                      <p className='arrow_course_new'>Camps & Workshop
+
+                         <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -312,12 +358,18 @@ const BrowseCourses = () => {
 
               <AccordionItem style={{
                 border: breadcrumbs == 'Yoga - Continuing Personal Development' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Yoga - Continuing Personal Development' && '8px'
+                borderRadius: breadcrumbs == 'Yoga - Continuing Personal Development' && '8px',
+                color: breadcrumbs == 'Yoga - Continuing Personal Development' && 'rgba(202, 70, 37, 1)',
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/personal-development-programs">
-                      <p>Yoga - Continuing Personal Development</p>
+                      <p className='arrow_course_new'>Yoga - Continuing Personal Development
+
+                         <div className='no_desktop'>
+                        <img src={Arrowup_right} alt="" />
+                      </div>
+                      </p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -345,35 +397,33 @@ const BrowseCourses = () => {
             {category?.slice(0, 50).map((item, i) => (
 
               item.title &&
-              <CourseCard
-                key={i}
-                color={item.colorCode}
-                index={i}
-                courseTitle={item.title}
-                description={item.metaDescription}
-                path={item.key}
-                img={item.cardImage}
-                rating={item.rating}
-                dates={item.dates}
-                fees={item?.fees}
-                timing={item?.timing}
-                tenure={item?.tenure}
-                pageName={item?.key}
-                courseCategory={item?.courseCategory}
-                courseSubType={item?.courseSubType}
-                onlineMode={item?.onlineInfo?.courseMode}
-                residentialMode={item?.residentialInfo?.courseMode}
-                nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                residentialLocation={item?.residentialInfo?.residentialMode}
-                nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                courseType={item?.courseType}
-                language={item?.language}
-                category={item?.category}
-                batch={item?.batch}
-                nonResidential={item?.nonResidential}
-                residential={item?.residential}
-                online={item?.online}
-              />
+               <CourseCard
+                                  key={i}
+                                  color={item?.colorCode}
+                                  index={i}
+                                  courseTitle={item?.title}
+                                  pageName={item?.key}
+                                  tenure={item?.tenure}
+                                  courseCategory={item?.courseCategory}
+                                  courseSubType={item?.courseSubType}
+                                  onlineMode={item?.onlineInfo?.courseMode}
+                                  residentialMode={item?.residentialInfo?.courseMode}
+                                  nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                                  residentialLocation={item?.residentialInfo?.residentialMode}
+                                  nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                                  courseType={item?.courseType}
+                                  language={item?.language}
+                                  description={item?.metaDescription}
+                                  path={item?.key}
+                                  img={item?.cardImage}
+                                  rating={item?.rating}
+                                  dates={item?.dates}
+                                  online={item?.online}
+                                  onCampus={item?.onCampus}
+                                  residential={item?.residential}
+                                  nonResidential={item?.nonResidential}
+                                  weekends={item?.weekends}
+                                />
 
             ))}
           </div>
