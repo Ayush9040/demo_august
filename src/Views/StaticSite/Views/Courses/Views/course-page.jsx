@@ -290,7 +290,7 @@ const Courses = () => {
           name: 'Department of Rehabilitation and Physiotherapy',
         },
         {
-          url: '/IBY-course',
+          url: '/iby-course',
           name: 'IBY classes - On Campus & Online',
         },
         {
@@ -928,7 +928,7 @@ const Courses = () => {
           onCampus: true, online: true, weekDays: true, isRegular: true
         },
         {
-          url: '/IBY-course',
+          url: '/iby-course',
           text: 'IBY classes - On Campus & Online',
           onCampus: true, online: true, weekDays: true, isRegular: true
         }
@@ -1456,54 +1456,71 @@ const Courses = () => {
     <div
       id={`dropdown-${item.id}`}
       className={`yoga-dropdown-panel ${activeDropdown === item.id ? 'is-visible' : ''} ${
-  item.id === 'yttc' ? 'yttc-dropdown' : ''
-} ${
-  item.id === 'popular' ? 'yoga-dropdown-panel_popular' : ''
-} ${
-  item.id === 'camps' ? 'yoga-dropdown-panel_popular' : ''
-}`}
-      style={{
-  // maxHeight: activeDropdown === item.id ? '80vh' : '0',
-  // overflowY: 'auto'
-}}
+        item.id === 'yttc' ? 'yttc-dropdown' : ''
+      } ${
+        item.id === 'popular' ? 'yoga-dropdown-panel_popular' : ''
+      } ${
+        item.id === 'camps' ? 'yoga-dropdown-panel_popular' : ''
+      }`}
     >
       <h1 className='course_dropdown_title'><a href={item.url}>{item.title}</a></h1>
       {item.sections ? (
-        <div className="yoga-dropdown-grid">
-          {/* Left column - 200hr + 500hr */}
-          <div className="yoga-dropdown-column">
-            {item.sections.slice(0, 2).map((section, sectionIndex) => (
-              <div key={sectionIndex} className="yoga-dropdown-section" style={{marginBottom: '45px'}}>
-                <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
-                <div className="yoga-section-items">
-                  {section.items.map((dropdownItem, itemIndex) => (
-                    <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
-                      {dropdownItem.name}
-                    </a>
-                  ))}
+        <div className={`yoga-dropdown-grid ${item.id === 'popular' ? 'single-column' : ''}`}>
+          {/* For 'popular' id, render all sections in one column */}
+          {item.id === 'popular' ? (
+            <div className="yoga-dropdown-column">
+              {item.sections.map((section, sectionIndex) => (
+                <div key={sectionIndex} className="yoga-dropdown-section">
+                  <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
+                  {section.items.length > 0 && (
+                    <div className="yoga-section-items">
+                      {section.items.map((dropdownItem, itemIndex) => (
+                        <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
+                          {dropdownItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              {/* Left column - 200hr + 500hr (for other items with sections) */}
+              <div className="yoga-dropdown-column">
+                {item.sections.slice(0, 2).map((section, sectionIndex) => (
+                  <div key={sectionIndex} className="yoga-dropdown-section" style={{marginBottom: '45px'}}>
+                    <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
+                    <div className="yoga-section-items">
+                      {section.items.map((dropdownItem, itemIndex) => (
+                        <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
+                          {dropdownItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          
-      
-          <div className="yoga-dropdown-column">
-            {item.sections.slice(2).map((section, sectionIndex) => (
-              <div key={sectionIndex + 2} className="yoga-dropdown-section">
-                <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
-                <div className="yoga-section-items">
-                  {section.items.map((dropdownItem, itemIndex) => (
-                    <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
-                      {dropdownItem.name}
-                    </a>
-                  ))}
-                </div>
+              
+              {/* Right column - 900hr (for other items with sections) */}
+              <div className="yoga-dropdown-column">
+                {item.sections.slice(2).map((section, sectionIndex) => (
+                  <div key={sectionIndex + 2} className="yoga-dropdown-section">
+                    <h4 className="yoga-section-title"><a href={section.url}>{section.title}</a></h4>
+                    <div className="yoga-section-items">
+                      {section.items.map((dropdownItem, itemIndex) => (
+                        <a href={dropdownItem.url} className="yoga-dropdown-option" key={itemIndex}>
+                          {dropdownItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       ) : (
-       
         <div className="yoga-dropdown-items">
           {item.items.map((dropdownItem, index) => (
             <a href={dropdownItem.url} className="yoga-dropdown-option" key={index}>

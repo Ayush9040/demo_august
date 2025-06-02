@@ -270,10 +270,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Facilities,
-    path: '/Rules-and-Regulations',
+    path: '/rules-and-regulations',
     exact: true,
     id: 'statisSiteRulesAndRegulations',
-    routePath: '/Rules-and-Regulations',
+    routePath: '/rules-and-regulations',
     name: 'Rules and Regulations',
   },
   //Museum
@@ -763,9 +763,9 @@ const staticSiteRoutes = [
   // },
   {
     Component: IBYcourse,
-    path: '/IBY-course',
+    path: '/iby-course',
     id: 'staticIYBcourse',
-    routePath: '/IBY-course',
+    routePath: '/iby-course',
     name: 'IYBcourse'
   },
 

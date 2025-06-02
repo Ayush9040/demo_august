@@ -79,7 +79,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Nature Trail', link: '/nature-trail/#nature-trail' },
       { menu: 'Gazebo', link: '/gazebo/#gazebo' },
       { menu: 'Kailashpati Tree', link: '/kailaspati-tree/#kailaspati-tree' },
-      { menu: 'Rules and Regulations', link: '/Rules-and-Regulations/#information' },
+      { menu: 'Rules and Regulations', link: '/rules-and-regulations/#information' },
       { menu: 'Museum', link: '/museum-of-classical-yoga' },
     ],
     SHOP: [
@@ -441,7 +441,7 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => { setNav(false) }} to="/couples-classes">
                     <li>Couples&apos; Classes - Online</li>
                   </Link>
-                  <Link onClick={() => { setNav(false) }} to="/IBY-course">
+                  <Link onClick={() => { setNav(false) }} to="/iby-course">
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
                   <Link onClick={() => { setNav(false) }} to='/regular-pregnacy-classes'><li>Regular Pregnancy Yoga Class - Online & On Campus</li></Link>

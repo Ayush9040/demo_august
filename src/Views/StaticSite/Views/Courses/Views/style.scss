@@ -923,6 +923,18 @@
     color: #CA4625;
 }
 
+.yoga-dropdown-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.yoga-dropdown-grid.single-column .yoga-dropdown-column {
+  width: 100%;
+}
+
+.yoga-dropdown-section {
+    margin-bottom: 45px;
+}
+
 // .yoga-nav-trigger:hover {
 //     background-color: #f7cbc1;
 // }

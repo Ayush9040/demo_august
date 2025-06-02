@@ -16696,7 +16696,7 @@ const classes = {
       'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
     rating: 5,
     colorCode: '#759F80',
-    timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) - On Campus 9:00 am to 3:00 pm (Saturday) - Online',
+    timing: 'Lectures will be contucted On Campus - Tuesday, Thursday, Friday - 3pm to 8pm And Online only on Saturday - 9am - 1pm',
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
@@ -16795,7 +16795,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 31st May 2025 to 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -17408,7 +17408,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 31st May 2025 to 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
