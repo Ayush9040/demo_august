@@ -585,32 +585,32 @@ const Courses = () => {
         },
         {
           url: '/stress-management-camp',
-          text: 'Stress Management Camp - On Campus',
-          onCampus: true, weekDays: true, days1: true
+          text: 'Stress Management Camp - Online & On Campus',
+          onCampus: true, weekDays: true, days1: true, online: true
         },
         {
           url: '/weight-management-workshop',
-          text: 'Weight Loss Workshop - On Campus',
-          onCampus: true, weekDays: true, days1: true
+          text: 'Weight Loss Workshop - Online & On Campus',
+          onCampus: true, weekDays: true, days1: true, online: true
         },
         {
           url: '/pregnancy-camp-for-ante-post-natal',
-          text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
-          onCampus: true, weekDays: true, days2: true
+          text: 'Pregnancy Camp for Ante & Post Natal - Online & On Campus',
+          onCampus: true, weekDays: true, days2: true, online: true
         },
         {
           url: '/cardiac-hypertension-workshop',
-          text: 'Cardiac & Hypertension Workshop - On Campus',
-          onCampus: true, weekDays: true, days1: true
+          text: 'Cardiac & Hypertension Workshop - Online & On Campus',
+          onCampus: true, weekDays: true, days1: true, online: true
         },
         {
           url: '/back-joint-disorder-workshop',
-          text: 'Back & Joint Disorder Workshop - On Campus',
-          onCampus: true, weekDays: true, days1: true
+          text: 'Back & Joint Disorder Workshop - Online & On Campus',
+          onCampus: true, weekDays: true, days1: true, online: true
         },
         {
           url: '/pranayama-workshop',
-          text: 'Pranayama Workshop',
+          text: 'Pranayama Workshop - Online & On Campus',
           onCampus: true, online: true, weekDays: true, days1: true
         }]
       }
