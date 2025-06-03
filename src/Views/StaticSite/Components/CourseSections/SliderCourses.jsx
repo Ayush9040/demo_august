@@ -43,28 +43,28 @@ const SliderCourses = ({ data, title }) => {
     autoPlaySpeed: 500,
     initialSlide: 0,
     pauseOnHover: true,
-    centerPadding: '10px',
+    centerPadding: '5px',
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          centerPadding: '10px'
+          centerPadding: '5px'
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
           slidesToScroll: 1,
-          centerPadding: '10px'
+          centerPadding: '5px'
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
           slidesToScroll: 1,
           centerPadding: '5px'
         }
@@ -103,6 +103,20 @@ const SliderCourses = ({ data, title }) => {
     else { return '' }
   }
 
+  useEffect(() => {
+  if (activitySliderRef.current) {
+    const track = activitySliderRef.current.innerSlider.list.querySelector('.slick-track');
+    if (track) {
+      track.style.transition = 'none';
+      track.style.transform = 'translate3d(0,0,0)';
+      setTimeout(() => {
+        track.style.transition = '';
+        track.style.transform = '';
+      }, 50);
+    }
+  }
+}, []);
+
   return (
     <div className='slider_course'>
       <div className="activity-card-container" ref={activityRef}>
@@ -115,11 +129,6 @@ const SliderCourses = ({ data, title }) => {
           {data.map((item, i) => {
             const isFirstSlide = i === 0;
             return (
-              <div
-               key={i}
-              className={
-                isFirstSlide ? 'first-slide all_slide' : 'all_slide'
-              }>
                 <CourseCard
                 key={i}
                 color={selectColor(i, title)}
@@ -151,7 +160,6 @@ const SliderCourses = ({ data, title }) => {
                 weekends={item?.weekends}
                 onCampus={item?.onCampus}
               />
-              </div>
             )
           })}
         </Slider>

@@ -40,7 +40,7 @@ const ttc200hr = {
     metaDescription:
       'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
@@ -605,7 +605,7 @@ const ttc200hr = {
     batch: 2,
     metaDescription: 'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#E38F73',
@@ -1085,7 +1085,7 @@ const ttc200hr = {
       'Comprehensive training to build a strong foundation in yoga teaching.',
     textDescription: 'You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#E38F73',
@@ -1641,7 +1641,7 @@ const ttc200hr = {
     batch: 4,
     metaDescription: 'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#E38F73',
@@ -2166,7 +2166,7 @@ const ttc200hr = {
     metaDescription:
       'Comprehensive training to build a strong foundation in yoga teaching.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
@@ -2718,7 +2718,7 @@ const ttc200hr = {
       'Comprehensive training to build a strong foundation in yoga teaching.',
     textDescription: 'You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/200-hour-yoga-teacher-training-course_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#E38F73',
@@ -3830,7 +3830,7 @@ const ttc500hr = {
     category: 'ttc',
     title: '500-Hour Yoga Teacher Training Online Course - 3 Months Yoga TTC - English',
     image: `${deailsPage_3_ttc}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/500-Hour+Yoga+Teacher+Training+Online+Course+-+3+Months+Yoga+TTC+-+English.jpg`,
     dates: [
       // '12th Feb  - 4th May 2024',
       // '13th May - 3rd Aug 2024',
@@ -4228,7 +4228,7 @@ const ttc900hr = {
     title: '900 Hours Yoga TTC - 3 Months Teacher Training Course On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/900hrs_246+X+135.jpg`,
 
     mostPopular: false,
     rating: 5,
@@ -4812,7 +4812,7 @@ const ttc900hr = {
       'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 1 Year Advanced Yoga Teacher Training Course Online & On-Campus - Hindi',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/900hrs_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#C9705F',
@@ -5572,7 +5572,7 @@ const ttc900hr = {
     title: '900 Hours YTTC - 2 Years Advanced Yoga Teacher Training Certificate Course Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/900hrs_246+X+135.jpg`,
 
     mostPopular: false,
     rating: 5,
@@ -6306,7 +6306,7 @@ const ttc900hr = {
       'Master-level training to achieve profound expertise in yoga & teaching.',
     title: '900 Hours Yoga TTC - 4 Months Online Yoga Teacher Training Course - English',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/900hrs_246+X+135.jpg`,
     mostPopular: false,
     rating: 5,
     colorCode: '#C9705F',
@@ -6992,7 +6992,7 @@ const ttc900hr = {
     title: '900 Hours Yoga TTC - 7 Months Yoga Teacher Training Course Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/900hrs_246+X+135.jpg`,
 
     mostPopular: true,
     rating: 5,
@@ -7878,7 +7878,7 @@ const camps = {
     metaDescription:
       'Specialized yoga camp for heart health & hypertension management.',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/cardiac-_-hypertension-yoga-camp-the-yoga-institute_+246+X+135.jpg`,
     dates: [ 
       // '4th May 2025', 
       '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
@@ -8061,7 +8061,7 @@ const camps = {
     metaDescription:
       'Specialized yoga camp to manage diabetes with guided practices.',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset105}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/0A8A4816+_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -9027,7 +9027,7 @@ const camps = {
     metaDescription:
       'Deepen your breathwork practice with guided pranayama training.',
     image: `${baseDomain}${courseAssets.courseAsset37}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset37}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/pranayama-workshop-the-yoga-institute_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -9226,7 +9226,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Expert-guided yoga for prenatal care, childbirth & postnatal healing.',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset11}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/pregnancy-yoga-camp-for-ante-post+_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -9785,7 +9785,7 @@ const camps = {
     metaDescription:
       'Master pranayama, asanas & relaxation techniques to manage stress effectively.',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset13}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/stress-management-yoga-camp_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -9969,7 +9969,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Lose weight naturally with yoga techniques that energize & restore.',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset15}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/weight-management-the-yoga-institute_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -10348,7 +10348,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Ease back & joint pain with targeted yoga therapy & mobility practices.',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/orthopaedic-yoga-camp-for-back-and-joint-disorders+_+246+X+135.jpg`,
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -10585,7 +10585,7 @@ const camps = {
     metaDescription:
       'Experience TYI’s signature 7-day health camp for total mind-body wellness.',
     image: `${baseDomain}${courseAssets.courseAsset35}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/0A8A2720+1_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -10977,7 +10977,7 @@ const camps = {
     metaDescription:
       'Experience TYI’s signature 7-day health camp for total mind-body wellness.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/0A8A2720+1_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -11386,7 +11386,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Embrace a healthier lifestyle in 21 days with our signature program. ',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/21-days+-better-living-course_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -11794,7 +11794,7 @@ const camps = {
     metaDescription:
       `Embrace a healthier lifestyle in 21 days with our signature program.`,
     image: `${baseDomain}${courseAssets.courseAsset35}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/21-days+-better-living-course_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -12195,7 +12195,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Embrace a healthier lifestyle in 21 days with our signature program. ',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/21-days+-better-living-course_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -12587,7 +12587,7 @@ const camps = {
     category: 'camps',
     metaDescription: 'Unlock deep, restful sleep with yoga, breathwork & guided meditation.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/life-management-yoga-camp_++246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -12901,7 +12901,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Improve digestion, reduce bloating & boost gut health with yoga.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/0A8A2575_++246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -13379,7 +13379,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Improve hormonal health & well-being with yoga for PCOD/PCOS.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/DSC05426_+246+X+135.jpg`,
     details: [
       {
         type: 'paragraph',
@@ -14014,7 +14014,7 @@ const classes = {
     category: 'classes',
     metaDescription: 'Dedicated advanced asana sessions for TYI teachers post-TTC.',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/advance-yoga-asana-regular-class-online-(only-for-tYI-teachers)_+246+X+135.jpg`,
     dates: ['6:30 a.m. to 8:00 a.m', '5:30 p.m. to 7:00 p.m'],
     online: true,
     onCampus: false,
@@ -14547,7 +14547,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset70}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/yoga-asana-regular-classes-for-men_+246+X+135+(1).jpg`,
     mostPopular: true,
     metaDescription:
       'Regular yoga sessions for men with asanas, kriyas, breathwork & health tips.',
@@ -14909,7 +14909,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/children-camp-the-yoga-institute_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Yoga for kids to enhance mindfulness, focus, discipline & well-being.',
@@ -15118,7 +15118,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/0A8A2637_+246+X+135.jpg`,
     mostPopular: true,
     metaDescription: '12-session course to build a strong foundation in meditation practice.',
     rating: 5,
@@ -15468,7 +15468,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset80}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/Satsang_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Experience life lessons through skits, discourse & wisdom by Dr. Hansaji.',
@@ -15617,7 +15617,7 @@ const classes = {
       'Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)'
     ],
     image: `${baseDomain}${courseAssets.courseAsset77}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/weekend-yoga-Asana-Classes_-Men-Women)_+246+X+135.jpg`,
     mostPopular: true,
     metaDescription:
       'Weekend yoga to boost strength, flexibility & inner balance.',
@@ -15994,7 +15994,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
-    cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/satvam_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Free yoga OPD & health checkups for holistic healing & well-being.',
@@ -16520,7 +16520,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAssets115}`,
-    cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/pregnancy-yoga-camp_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Holistic prenatal yoga for a smooth & joyful pregnancy journey.',
@@ -16690,7 +16690,7 @@ const classes = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${extraImage.mayogaImg}`,
-    cardImage: `${Ma_New_card}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/MA+Yogashastra+2025+_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
@@ -16997,7 +16997,7 @@ const classes = {
       },
     },
     image: courseAssets.courseAssetPhysio,
-    cardImage: courseAssets.courseAssetPhysio,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/Department+of+Rehabilitation+and+Physiotherapy+_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Personalized physiotherapy & rehab solutions for better recovery. ',
@@ -17287,7 +17287,7 @@ const classes = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${BA_yoga_1}`,
-    cardImage: `${card_ba}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/BA+Yogashastra+2025+_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Comprehensive 4-year B.A. in Yogashastra covering theory & practice.',
@@ -17929,7 +17929,7 @@ const certificate = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/certificate-program-on-yoga-for-cancer-online_+246+X+135.jpg`,
     metaDescription:
       'Equip yourself with yogic tools to support cancer patients effectively.',
     mostPopular: true,
@@ -18096,7 +18096,7 @@ const certificate = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset113}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/yoga-certificate-program-for-lung-Cancer-Online_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Master therapeutic yoga tools to aid lung cancer care & well-being.',
@@ -18221,7 +18221,7 @@ const certificate = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset75}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/certificate-yoga-therapy_course-online_+246+X+135.jpg`,
     mostPopular: true,
     duration: 'Weekly 3 Days',
     metaDescription:
@@ -18858,7 +18858,7 @@ const certificate = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${Emo_energy}`,
-    cardImage: `${Emo_energy}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/Emo_energy+_+246+X+135.jpg`,
     mostPopular: false,
     language: 'English',
     metaDescription:
@@ -18980,7 +18980,7 @@ const certificate = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${Emo_energy}`,
-    cardImage: `${Emo_energy}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/Emo_energy+_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
@@ -19102,7 +19102,7 @@ const certificate = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${swadhyay}`,
-    cardImage: `${swadhyay}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/swadhyay_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
       'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
@@ -19195,7 +19195,7 @@ const certificate = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${swadhyay}`,
-    cardImage: `${swadhyay}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/swadhyay_+246+X+135.jpg`,
     mostPopular: false,
     language: 'English',
     metaDescription:
@@ -19287,7 +19287,7 @@ const certificate = {
     // image: `${baseDomain}${courseAssets.courseAssets115}`,
     // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     image: `${integral_chakra}`,
-    cardImage: `${integral_chakra}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/integral_chakra_+246+X+135.png`,
     mostPopular: false,
     metaDescription:
       'Heal your 7 chakras by studying its behaviour patterns, know its potential and live a life you always wanted to',
