@@ -370,11 +370,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       onCampus: true
     },
 
-    {
-      url: '/couples-classes',
-      text: "Couple's classes - Online",
-      online: true, weekends: true, days1: true
-    },
+    // {
+    //   url: '/couples-classes',
+    //   text: "Couple's classes - Online",
+    //   online: true, weekends: true, days1: true
+    // },
     // {
     //   url: '/home-tuitions',
     //   text: 'Home Tuitions',
