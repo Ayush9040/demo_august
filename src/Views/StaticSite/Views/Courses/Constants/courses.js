@@ -16785,7 +16785,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025 to 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -17396,7 +17396,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025 to 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
