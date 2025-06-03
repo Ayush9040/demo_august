@@ -57,7 +57,7 @@ const VideosSection = () => {
         <a
           href="https://www.youtube.com/c/theyogainstituteofficial"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <CommonBtn text={'Explore More'} />
         </a>

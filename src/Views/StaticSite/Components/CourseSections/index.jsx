@@ -382,73 +382,73 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     // },
     {
       url: '/stress-management-camp',
-      text: 'Stress Management Camp - On Campus',
-      onCampus: true, weekDays: true, days1: true
+      text: 'Stress Management Camp - Online & On Campus',
+      onCampus: true, weekDays: true, days1: true, online: true
     },
     {
       url: '/weight-management-workshop',
-      text: 'Weight Loss Workshop - On Campus',
-      onCampus: true, weekDays: true, days1: true
+      text: 'Weight Loss Workshop - Online & On Campus',
+      onCampus: true, weekDays: true, days1: true, online: true
     },
     {
       url: '/pregnancy-camp-for-ante-post-natal',
-      text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
-      onCampus: true, weekDays: true, days2: true
+      text: 'Pregnancy Camp for Ante & Post Natal - Online & On Campus',
+      onCampus: true, weekDays: true, days2: true, online: true
     },
     {
       url: '/cardiac-hypertension-workshop',
-      text: 'Cardiac & Hypertension Workshop - On Campus',
-      onCampus: true, weekDays: true, days1: true
+      text: 'Cardiac & Hypertension Workshop - Online & On Campus',
+      onCampus: true, weekDays: true, days1: true, online: true
     },
     {
       url: '/back-joint-disorder-workshop',
-      text: 'Back & Joint Disorder Workshop - On Campus',
-      onCampus: true, weekDays: true, days1: true
+      text: 'Back & Joint Disorder Workshop - Online & On Campus',
+      onCampus: true, weekDays: true, days1: true, online: true
     },
     {
       url: '/pranayama-workshop',
-      text: 'Pranayama Workshop',
+      text: 'Pranayama Workshop - Online & On Campus',
       onCampus: true, online: true, weekDays: true, days1: true
     },
     {
       url: '/deep-sleep-workshop',
-      text: 'Deep Sleep Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Deep Sleep Workshop - Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/emotional-wellness-workshop',
-      text: 'Emotional Wellness Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Emotional Wellness Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/gut-health-workshop',
-      text: 'Gut Health Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Gut Health Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/healthy-sattvik-cooking-workshop',
-      text: 'Healthy & Sattvik Cooking Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Healthy & Sattvik Cooking Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/menopause-wellness-workshop',
-      text: 'Menopause Wellness Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Menopause Wellness Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/pcod-pcos-wellness-workshop',
-      text: 'PCOD & PCOS Wellness Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'PCOD & PCOS Wellness Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/total-body-detox-workshop',
-      text: 'Total Body Detox Workshop',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Total Body Detox Workshop Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     },
     {
       url: '/diabetes-camp',
-      text: 'Diabetes Yoga Camp - On Campus',
-      onCampus: true, weekDays: false, weekends: true, days1: true
+      text: 'Diabetes Yoga Camp - Online & On Campus',
+      onCampus: true, weekDays: false, weekends: true, days1: true, online: true
     }
   ]
 

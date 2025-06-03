@@ -62,7 +62,7 @@ const PrintMedia = () => {
                 {item.media.map((image, idx) => {
                   if (image.url !== '') {
                     return (
-                      <a key={idx} href={`${image.url}`} target='_blank' rel='noreferrer'>
+                      <a key={idx} href={`${image.url}`} target='_blank' rel='noopener noreferrer'>
                         <div className='news-card'>
                           <img src={image.img} alt={image.alt} />
                           <div className='news-details'>

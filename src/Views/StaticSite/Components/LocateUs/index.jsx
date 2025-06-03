@@ -221,7 +221,7 @@ const LocateUs = () => {
                             <a
                               href={`${items?.url}`}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               <button className="country-details-btn" onClick={() => handleCTLocateUsDetails({
                                 instituteName: items?.state,

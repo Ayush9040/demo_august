@@ -498,7 +498,7 @@ const Yogasattva = () => {
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
                       <a href={image.pdfUrl} download>
-                        <img src={image.imageUrl} target='_blank' rel='noreferrer' alt={image.title} />
+                        <img src={image.imageUrl} target='_blank' rel='noopener noreferrer' alt={image.title} />
                       </a>
                     </div>
                   ))}
@@ -507,7 +507,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -517,7 +517,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -527,7 +527,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -537,7 +537,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -547,7 +547,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -557,7 +557,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>
@@ -567,7 +567,7 @@ const Yogasattva = () => {
                 <>
                   {yogsattvaData.map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <a href={image.pdfUrl} target='_blank' rel='noreferrer' download>
+                      <a href={image.pdfUrl} target='_blank' rel='noopener noreferrer' download>
                         <img src={image.imageUrl} alt={image.title} />
                       </a>
                     </div>

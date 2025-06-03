@@ -142,14 +142,14 @@ const YogaTotalHealth = () => {
           <p>
             {'To subscribe to ‘Yoga & Total Health Monthly Magazine’ click here.'}
           </p>
-          <a href='https://www.magzter.com/IN/The_Yoga_Institute/Yoga_and_Total_Health/Health/' rel='noreferrer' target="_blank" >
+          <a href='https://www.magzter.com/IN/The_Yoga_Institute/Yoga_and_Total_Health/Health/' rel='noopener noreferrer' target="_blank" >
             <CommonBtn text={'Subscribe Now (E-Mag)'} buttonAction={handleSubscribe}/>
           </a>
           <div className='hard-copy' >
-            <a href="https://rzp.io/l/zMFTO9F0l3" rel='noreferrer' target="_blank">
+            <a href="https://rzp.io/l/zMFTO9F0l3" rel='noopener noreferrer' target="_blank">
               <CommonBtn text={'Hard Copy (India)'} buttonAction={handleHardCopyIndia} />
             </a>
-            <a href="https://rzp.io/l/MMLnvukYe" rel='noreferrer' target="_blank">
+            <a href="https://rzp.io/l/MMLnvukYe" rel='noopener noreferrer' target="_blank">
               <CommonBtn text={'Hard Copy (International)'} buttonAction={handleHardCopyInternational} />
             </a>
           </div>

@@ -1575,6 +1575,7 @@ input[type='radio']:checked::before {
       .last_radio_button-cols {
         display: flex;
         flex-direction: column;
+        // margin-bottom: 10px;
 
         .course_details_text {
           color: rgba(96, 96, 96, 0.502);

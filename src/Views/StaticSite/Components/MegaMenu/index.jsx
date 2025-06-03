@@ -227,7 +227,7 @@ const MegaMenu = ({ setNav }) => {
                   <a
                     href={item.link}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
@@ -459,25 +459,25 @@ const MegaMenu = ({ setNav }) => {
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
-                <Link onClick={() => { setNav(false) }} to='/stress-management-camp'><li>Stress Management Yoga Camp - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/weight-management-workshop'><li>Weight Loss Yoga Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Yoga Camp For Ante & Post Natal - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Yoga Workshop - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/stress-management-camp'><li>Stress Management Yoga Camp - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/weight-management-workshop'><li>Weight Loss Yoga Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Yoga Camp For Ante & Post Natal - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Yoga Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/pranayama-workshop'><li>Prayanama Workshop - Online & On Campus</li></Link>
                 {/* <Link onClick={() => { setNav(false) }} to='/womens-camp'><li>Women&apos;s Yoga Camp</li></Link> */}
                 {/* below 7 are new courses */}
-                <Link onClick={() => { setNav(false) }} to='/deep-sleep-workshop'><li>Deep Sleep Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/emotional-wellness-workshop'><li>Emotional Wellness Workshop </li></Link>
-                <Link onClick={() => { setNav(false) }} to='/gut-health-workshop'><li>Gut Health Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/healthy-sattvik-cooking-workshop'><li>Healthy & Sattvik Cooking Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/menopause-wellness-workshop'><li>Menopause Wellness Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/pcod-pcos-wellness-workshop'><li>PCOD & PCOS Wellness Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/total-body-detox-workshop'><li>Total Body Detox Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/deep-sleep-workshop'><li>Deep Sleep Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/emotional-wellness-workshop'><li>Emotional Wellness Workshop - Online & On Campus </li></Link>
+                <Link onClick={() => { setNav(false) }} to='/gut-health-workshop'><li>Gut Health Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/healthy-sattvik-cooking-workshop'><li>Healthy & Sattvik Cooking Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/menopause-wellness-workshop'><li>Menopause Wellness Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/pcod-pcos-wellness-workshop'><li>PCOD & PCOS Wellness Workshop - Online & On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/total-body-detox-workshop'><li>Total Body Detox Workshop - Online & On Campus</li></Link>
                 {/* <Link onClick={() => { setNav(false) }} to='/respiratory-workshop'><li>Respiratory Yoga Workshop - On Campus</li></Link> */}
                 {/* <Link onClick={() => { setNav(false) }} to='/life-management-camp'><li>Life Management Yoga Camp - On Campus</li></Link> */}
                 {/* <Link onClick={() => { setNav(false) }} to='/senior-citizen-workshop'><li>Senior Citizen Yoga Workshop - On Campus</li></Link> */}
-                <Link onClick={() => { setNav(false) }} to='/diabetes-camp'><li>Diabetes Yoga Camp - On Campus</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/diabetes-camp'><li>Diabetes Yoga Camp - Online & On Campus</li></Link>
               </ul>
               <Link onClick={() => { setNav(false) }} to='/nutri-diet'>
                 <h3 style={{ marginTop: '0.75rem' }} >NUTRI DIET CLINIC</h3></Link>

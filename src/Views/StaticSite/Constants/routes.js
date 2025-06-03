@@ -274,7 +274,7 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteRulesAndRegulations',
     routePath: '/rules-and-regulations',
-    name: 'Rules and Regulations',
+    name: 'rules and regulations',
   },
   //Museum
   {

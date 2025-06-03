@@ -507,7 +507,7 @@ const Hours200 = () => {
 
                 <div className='footer-200'>
                     <img src="/icons/200-hours/social1.svg" alt="" className='brn-logo' />
-                    <div className='privacy-policy'> &copy; 2024 The Yoga Institute | <a target="_blank" rel="noreferrer" href='https://www.theyogainstitute.org/privacy-policy'>Privacy Policy</a>  </div>
+                    <div className='privacy-policy'> &copy; 2024 The Yoga Institute | <a target="_blank" rel="noopener noreferrer" href='https://www.theyogainstitute.org/privacy-policy'>Privacy Policy</a>  </div>
                     <div className="icons">
                         <img onClick={() => openLink('https://www.facebook.com/share/feyc4ub1tcBAFZsc/?mibextid=LQQJ4d')} src="/icons/200-hours/social5.svg" alt="fb" />
                         <img onClick={() => openLink('https://www.instagram.com/theyogainstituteofficial?igsh=b3Nsb3F4ODZkNjJj&utm_source=qr')} src="/icons/200-hours/social4.svg" alt="insta" />

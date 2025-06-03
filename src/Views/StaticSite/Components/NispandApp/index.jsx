@@ -30,18 +30,18 @@ const Nispand = () => {
             monitor.
           </p>
         </div>
-        <a href='https://nispand.com/' rel="noreferrer"  target='_blank' className="style_mobile" >
+        <a href='https://nispand.com/' rel="noopener noreferrer"  target='_blank' className="style_mobile" >
           <CommonBtn text={'Explore More'} />
         </a>
         <div className='download-options'>
           <h4>GET IT NOW!</h4>
           <div className='google-app-store'>
-            <a href='https://play.google.com/store/apps/details?id=com.nispand.com' rel='noreferrer' target="_blank"  >
+            <a href='https://play.google.com/store/apps/details?id=com.nispand.com' rel='noopener noreferrer' target="_blank"  >
               <div className='google'>
                 <img src={`${baseDomain}${homeAssets.homeAsset22}`} alt='google-play' />
               </div>
             </a>
-            <a href='https://apps.apple.com/in/app/nispand-meditation-and-sleep/id1609608907' rel='noreferrer' target="_blank" >
+            <a href='https://apps.apple.com/in/app/nispand-meditation-and-sleep/id1609608907' rel='noopener noreferrer' target="_blank" >
               <div className='apple'>
                 <img width={'93%'} src={`${baseDomain}${homeAssets.homeAsset23}`} alt='app-store' />
               </div>

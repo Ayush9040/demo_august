@@ -76,7 +76,7 @@ const MuseumPage = () => {
           Want to see what the Shri Yogendra Museum looks like from the inside?
           Here’s your chance to take on a virtual tour
         </p>
-        <a href="https://artsandculture.google.com/story/QgVhfXAZr-CxIA" rel='noreferrer' target='_blank' >
+        <a href="https://artsandculture.google.com/story/QgVhfXAZr-CxIA" rel='noopener noreferrer' target='_blank' >
           <CommonBtn text={'Take a virtual tour'} />
         </a>
       </div>
