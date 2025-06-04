@@ -41,7 +41,7 @@ export const activityData = [
     title: 'Best Selling books',
     description:
       'Explore 500+ books and national bestsellers that guide you to a happy, balanced, and disease-free life—rooted in timeless yogic wisdom. ',
-    image: `${sattvik_img}`,
+    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/best-selling-booksb135ad63-4943-40d4-a667-5011fe28cf7d.jpg`,
     url: '/shop',
   },
   {
