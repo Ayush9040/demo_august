@@ -289,10 +289,12 @@
 
 @media(max-width: 768px) {
   .course-section .course-cards .course-card {
-    width: 270px !important;
+    width: 97% !important;
+    margin-right: 5px;
   }
 
   .course-section {
     padding: 3rem 5rem;
+    gap: 4rem;
   }
 }

@@ -56,7 +56,7 @@ const SliderCourses = ({ data, title }) => {
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 1.1,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: '5px'
         },
@@ -64,7 +64,7 @@ const SliderCourses = ({ data, title }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.1,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: '5px'
         }
@@ -103,19 +103,19 @@ const SliderCourses = ({ data, title }) => {
     else { return '' }
   }
 
-  useEffect(() => {
-  if (activitySliderRef.current) {
-    const track = activitySliderRef.current.innerSlider.list.querySelector('.slick-track');
-    if (track) {
-      track.style.transition = 'none';
-      track.style.transform = 'translate3d(0,0,0)';
-      setTimeout(() => {
-        track.style.transition = '';
-        track.style.transform = '';
-      }, 50);
-    }
-  }
-}, []);
+//   useEffect(() => {
+//   if (activitySliderRef.current) {
+//     const track = activitySliderRef.current.innerSlider.list.querySelector('.slick-track');
+//     if (track) {
+//       track.style.transition = 'none';
+//       track.style.transform = 'translate3d(0,0,0)';
+//       setTimeout(() => {
+//         track.style.transition = '';
+//         track.style.transform = '';
+//       }, 50);
+//     }
+//   }
+// }, []);
 
   return (
     <div className='slider_course'>

@@ -33,3 +33,13 @@
   }
   
 }
+
+@media(max-width: 768px) {
+  .accordian_contanier {
+    padding-bottom: 0px;
+  }
+
+  .accordian_contanier .accordian_div .accordian_ans {
+    // margin-bottom: 0px;
+  }
+}

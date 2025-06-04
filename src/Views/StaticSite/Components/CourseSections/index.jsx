@@ -777,7 +777,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       case 'Special Events':
         return (
           <>
-            <div style={{ marginTop: '40px' }} id="mobileDiv">
+            <div style={{ marginTop: '1.75rem' }} id="mobileDiv">
               <ul>
                 {/*  id='therapy-course'  */}
                 {specialEventsStatic.map((item, i) => (
@@ -795,7 +795,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         case 'Additional Certifications':
         return (
           <>
-            <div style={{ marginTop: '40px' }} id="mobileDiv">
+            <div style={{ marginTop: '1.75rem' }} id="mobileDiv">
               <ul>
                 {/*  id='therapy-course'  */}
                 {additionalCertifications.map((item, i) => (

@@ -1205,7 +1205,7 @@ const Courses = () => {
           position: 'sticky',
           top: 0,
           backgroundColor: '#fff',
-          padding: '10px',
+          padding: '4px',
           boxShadow: '0px 10px 15px -4px rgba(0,0,0,0.1)', // Smoother, softer shadow
           zIndex: 1, // Makes sure it stays above the content
         }}>
