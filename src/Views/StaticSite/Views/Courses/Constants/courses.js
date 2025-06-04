@@ -16688,7 +16688,7 @@ const classes = {
       'Pursue higher learning in yoga’s wisdom with an M.A. in Yogashastra.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Lectures will be contucted On Campus - Tuesday, Thursday, Friday - 3pm to 8pm And Online only on Saturday - 9am - 1pm',
+    timing: 'Lectures will be conducted On Campus - Tuesday, Thursday, Friday - 3pm to 8pm And Online only on Saturday - 9am - 1pm',
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
@@ -19187,7 +19187,7 @@ const certificate = {
     colorCode: '#C48E8C',
     timing: '10.00 am to 1.00 pm, 5.30 pm to 8.30 pm (Join any one batch time) - Online',
     fees: {
-      onlineFee: 14000,
+      onlineFee: 15000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
