@@ -352,8 +352,8 @@ const NutriDietHero = () => {
     } else {
       switch (plan) {
         case '1 week':
-          setPrice(1000); setErr(false); setOpenForm1(true)
-          updateGA4(1000, program)
+          setPrice(1999); setErr(false); setOpenForm1(true)
+          updateGA4(1999, program)
           // console.log('programs ', program)
           break
         case '1 month':
@@ -386,8 +386,8 @@ const NutriDietHero = () => {
     } else {
       switch (plan) {
         case '1 week':
-          setPrice(1000); setErr(false); setOpenForm2(true)
-          updateGA4(1000, program)
+          setPrice(1999); setErr(false); setOpenForm2(true)
+          updateGA4(1999, program)
           break
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm2(true)
@@ -1069,7 +1069,7 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Weight gain/ Muscle gain
 `}</div>
           </td>
-          <td>Rs 1000/-</td>
+          <td>Rs 1999/-</td>
           <td>Rs 3999/-</td>
           <td>Rs 8999/-</td>
           <td>Rs 13999/-</td>
@@ -1205,7 +1205,7 @@ const NutriDietHero = () => {
                 <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600', margin:'10px'}}>
                 {err && <small> Please select package/program* </small>}
                 </div>
-                {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm1} />}
+                {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} selectedPackageName={program} closeForm={setOpenForm1} />}
               </div>
             </div>
           </div> 
@@ -1461,7 +1461,7 @@ const NutriDietHero = () => {
 
             </div>
 
-          {openForm2 && <SubcriptionForm packageName={plan} packagePrice={price} closeForm={setOpenForm2} />}
+          {openForm2 && <SubcriptionForm packageName={plan} selectedPackageName={program} packagePrice={price} closeForm={setOpenForm2} />}
 
         </div>
       </div>

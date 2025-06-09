@@ -11,7 +11,7 @@ import { handleCTEnquireNutriDietInitiated, handleCTEnquireNutriDietCompleted } 
 import { useSelector } from 'react-redux'
 import ReactGA from 'react-ga4';
 
-const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
+const SubcriptionForm = ({ packageName, packagePrice, selectedPackageName, closeForm }) => {
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -236,7 +236,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
         &#10005;
       </div>
       <h2>Course Duration:{packageName}</h2>
-      <h4>Fees: Rs. {packagePrice}</h4>
+      <h4>{selectedPackageName} Fees: Rs. {packagePrice}</h4>
       <form>
         <div className='form-field'>
           <InputComponent
