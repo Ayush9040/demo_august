@@ -59,8 +59,8 @@ const SubcriptionForm = ({ packageName, packagePrice, selectedPackageName, close
     const { data } = await enrollPlan({
       personalDetails: formData,
       courseDetails: {
-        cousreId: `${packageName}_${packagePrice}`,
-        cousreName: 'Nutri Diet Clinic',
+        courseId: `${packageName}_${packagePrice}`,
+        courseName: 'Nutri Diet Clinic',
         plan: packageName,
       },
     })

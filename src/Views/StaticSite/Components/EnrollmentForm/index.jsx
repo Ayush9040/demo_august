@@ -325,6 +325,14 @@ const Enrollment = () => {
       return window.location.pathname === '/enrollment/200-hrs-part-time-ttc-online-batch-6';
     }
 
+    const isForest = () => {
+      return window.location.pathname === '/enrollment/forest-yoga-retreat';
+    }
+
+    const isHealthy = () => {
+      return window.location.pathname === '/enrollment/healthy-weightloss-wellness-retreat';
+    }
+
     
 
     
@@ -966,6 +974,35 @@ if (isOneMonthTTC()) {
 }
 
 }
+//  else if(isForest()) {
+//    mailTemplate = {
+//   type: "INFO_TYI",
+//   HTMLTemplate: "FOREST_YOGA_RETREAT_ONE",
+//   subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+//   data: {
+//     fullName: formData?.name,
+//     dates:currentCourse?.dates,
+//     checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
+//   },
+//   receivers: [
+//     formData.email
+//   ]
+// }
+// } else if(isHealthy()) {
+//   mailTemplate = {
+//   type: "INFO_TYI",
+//   HTMLTemplate: "HEALTHY_WEIGHT_LOSS_WELLNESS_RETREAT_ONE",
+//   subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+//   data: {
+//     fullName: formData?.name,
+//     dates:currentCourse?.dates,
+//     checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
+//   },
+//   receivers: [
+//     formData.email
+//   ]
+// }
+// }
  else {
 
   mailTemplate = {
@@ -1034,7 +1071,7 @@ if (isOneMonthTTC()) {
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  if (currentCourse.key !== 'detox-cleanse-yoga-retreat' && currentCourse.key !== 'deep-dive-yoga-meditation-retreat' && currentCourse.key !== 'forest-yoga-retreat' && currentCourse.key !== 'healthy-weightloss-wellness-retreat' && currentCourse.key != '2-days-relax-restore-yoga-retreat') {//no need to send mail 
+                  if (currentCourse.key !== 'detox-cleanse-yoga-retreat' && currentCourse.key !== 'deep-dive-yoga-meditation-retreat' && currentCourse.key != '2-days-relax-restore-yoga-retreat') {//no need to send mail 
                     await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
 
                   }
@@ -1473,6 +1510,7 @@ if (isOneMonthTTC()) {
   return (
     <>
       <div className="enrollment_container ">
+        
         {bold < 5 && (
           <div className="header">
             <Link to="/courses">
@@ -1483,7 +1521,9 @@ if (isOneMonthTTC()) {
             </Link>
             <span className="flower">{legacy2}</span>
 
+
             <div className="student">Your Selected Yoga Course Details<br />
+            {/* {currentCourse.courseDate} */}
             </div>
 
           </div>
