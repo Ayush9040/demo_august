@@ -142,18 +142,27 @@ export const locateData = [
         state: 'Malad, Mumbai',
         notstate:
           "The Yoga Institute, Malad Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai, Maharashtra 400064.",
-        email: 'malad@theyogainstitute.in',
-        url: 'malad',
-        phone: ['+91 9343517490'],
-        toRedirect: false,
+        email: 'juhuandheri@theyogainstitute.in',
+        url: 'https://juhuandheri.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
       },
+      // {
+      //   state: 'Vikhroli, Mumbai',
+      //   notstate:
+      //     'The Yoga Institute, Vikhroli Unit-1, Mahajan Silk Compound, Lal Bahadur Shastri Marg,Surya Nagar, HMPL Surya Nagar,Vikhroli West. Mumbai - 400079',
+      //   email: 'tyivikhroli@gmail.com',
+      //   url: 'https://theyogainstitutevikhroli.com/',
+      //   phone: ['+91-9820696800'],
+      //   toRedirect: true,
+      // },
       {
-        state: 'Vikhroli, Mumbai',
+        state: 'Andheri East',
         notstate:
-          'The Yoga Institute, Vikhroli Unit-1, Mahajan Silk Compound, Lal Bahadur Shastri Marg,Surya Nagar, HMPL Surya Nagar,Vikhroli West. Mumbai - 400079',
-        email: 'tyivikhroli@gmail.com',
-        url: 'https://theyogainstitutevikhroli.com/',
-        phone: ['+91-9820696800'],
+          "The Yoga Institute Andheri East, Studio Tranquility, A-209, Shree Nityanand CHS, SN Patil Lane, Sahar Road, next to Andheri flyover, Andheri East, Mumbai.",
+        email: 'juhuandheri@theyogainstitute.in',
+        url: 'https://juhuandheri.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
         toRedirect: true,
       },
       {
@@ -166,6 +175,7 @@ export const locateData = [
         phone: ['+91-8369667701'],
         toRedirect: true,
       },
+      
 
       // {
       //   state:'Andheri (W)',
