@@ -50,6 +50,14 @@ const ttc200hr = {
       onlineFee: 27500,
       offlineFee: { residentialFee: 60000, nonResidentialFee: 33000 },
     },
+    clevertapData: {
+      name: '200 hours Yoga TTC Batch - 1 english - 1 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1',
     dates: [
@@ -616,6 +624,14 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga Teacher Training Course - 2 Months Yoga TTC Online and On Campus - English - Batch 2',
+    clevertapData: {
+      name: '200 hours Yoga TTC Batch - 2 - english - 2 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     dates: [
       // '12th Feb – 6th Apr 2024',
       // '15th Apr – 8th Jun 2024',
@@ -1097,6 +1113,14 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3',
+    clevertapData: {
+      name: '200 hours Yoga TTC Batch - 3 - english - 2 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     dates: [
       // '8th Jan – 2nd Mar 2024',
       // '11th Mar – 4th May 2024',
@@ -1652,6 +1676,14 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
+    clevertapData: {
+      name: '200 hours Yoga TTC Batch - 4 - hindi - 2 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     dates: [
       // '15th Jan to 9th Mar 2024',
       // '18th Mar to 11th May 2024',
@@ -2178,6 +2210,14 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 5',
+    clevertapData: {
+      name: '200 hours Yoga TTC weekebd Batch - 5 - english - 3 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     dates: [
       // '20th Jan to 7th Apr 2024',
       // '13th Apr to 30th Jun 2024',
@@ -2730,6 +2770,14 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 3 Months TTC Online - English - Batch 6',
+    clevertapData: {
+      name: '200 hours Yoga TTC Batch - 6- english - 2 month',
+      courseType: 'TTC',
+      courseSubType: '200 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: '(RYT 200- Basic)'
+    },
     dates: [
       // '8th Jan – 2nd Mar 2024',
       // '11th Mar – 4th May 2024',
@@ -2746,7 +2794,8 @@ const ttc200hr = {
       // '28th Jul - 20th Sep 2025',
       // '29th Sep - 22nd Nov 2025',
       // '19th May - 9th August 2025',
-      '9th Jun  - 30th August 2025'
+      // '9th Jun  - 30th August 2025'
+      '8th Sept to 29th Nov'
     ],
     online: true,
     onCampus: false,
@@ -3829,6 +3878,14 @@ const ttc500hr = {
     },
     category: 'ttc',
     title: '500-Hour Yoga Teacher Training Online Course - 3 Months Yoga TTC - English',
+     clevertapData: {
+      name: '500 hours Yoga TTC - english - 3 month',
+      courseType: 'TTC',
+      courseSubType: '500 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Intermediate TTC (500 Hour Courses)'
+    },
     image: `${deailsPage_3_ttc}`,
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/500-Hour+Yoga+Teacher+Training+Online+Course+-+3+Months+Yoga+TTC+-+English.jpg`,
     dates: [
@@ -4240,6 +4297,14 @@ const ttc900hr = {
       offlineFee: { residentialFee: 190000, nonResidentialFee: 110000 },
     },
     category: 'ttc',
+    clevertapData: {
+      name: '900 hours Yoga TTC - english - 3 month',
+      courseType: 'TTC',
+      courseSubType: '900 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+    },
     dates: [
       // '27th Jan to 21st Apr 2024',
       // '27th Apr to 21st Jul 2024',
@@ -4822,6 +4887,14 @@ const ttc900hr = {
       offlineFee: { residentialFee: 60000, nonResidentialFee: 60000 },
     },
     category: 'ttc',
+    clevertapData: {
+      name: '900 Hours 1 year advance Yoga TTC - hindi',
+      courseType: 'TTC',
+      courseSubType: '900 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+    },
     dates: [
 
       // '1st Jan 2024',
@@ -4841,7 +4914,7 @@ const ttc900hr = {
       // '3rd Mar 2025',
       // '1st Apr 2025',
       // '1st May 2025',
-      '2nd Jun 2025',
+      // '2nd Jun 2025',
       '1st Jul 2025',
       '1st Aug 2025',
       '1st Sep 2025',
@@ -5584,6 +5657,14 @@ const ttc900hr = {
       offlineFee: { residentialFee: 60000, nonResidentialFee: 60000 },
     },
     category: 'ttc',
+    clevertapData: {
+      name: '900 Hour 2 year advance Yoga TTC - english',
+      courseType: 'TTC',
+      courseSubType: '900 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+    },
     dates: [
       // '3rd Aug 2024',
       // '7th Dec 2024',
@@ -6317,6 +6398,14 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
+    clevertapData: {
+      name: '900 hours Yoga TTC - english - 4 month',
+      courseType: 'TTC',
+      courseSubType: '900 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+    },
     dates: [
       // '17th Jun - 5th Oct 2024', 
       // '14th Oct 2024 - 1st Feb 2025',
@@ -7003,6 +7092,14 @@ const ttc900hr = {
       offlineFee: { residentialFee: 60000, nonResidentialFee: 60000 },
     },
     category: 'ttc',
+    clevertapData: {
+      name: '900 hours Yoga TTC - english - 7 month',
+      courseType: 'TTC',
+      courseSubType: '900 Hour Yoga Teacher Training',
+      courseCategory: 'Educational',
+      courseCertificate: 'TTC/Certificate',
+      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+    },
     dates: [
       // '1st Jan 2024',
       // '1st Feb 2024',
@@ -7021,7 +7118,7 @@ const ttc900hr = {
       // '1st Mar 2025',
       // '1st Apr 2025',
       // '1st May 2025',
-      '2nd Jun 2025',
+      // '2nd Jun 2025',
       '1st Jul 2025',
       '1st Aug 2025',
       '1st Sep 2025',
@@ -10158,7 +10255,7 @@ const camps = {
     metaDescription:
       'Specific yoga asana, pranayama, and relaxation techniques to enhance your health',
     image: `${baseDomain}${courseAssets.courseAsset84}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset84}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/bc95ab72-0a1e-4a68-be50-4e395227358e_+270+x+148.jpg`,
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -12140,7 +12237,7 @@ const camps = {
       // '8th Dec to 28th Dec 2024',
       // '9th Feb to 1st Mar 2025',
       // '13th Apr to 3rd May 2025',
-      '8th Jun to 28th Jun 2025',
+      // '8th Jun to 28th Jun 2025',
       '10th Aug to 30th Aug 2025',
       '12th Oct to 1st Nov 2025',
       '14th Dec to 3rd Jan 2026'
@@ -12746,7 +12843,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Balance your mind & emotions with proven yogic tools & practices.  ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/21-days%2B-better-living-course+_+270+x+148.webp`,
     details: [
       {
         type: 'paragraph',
@@ -13065,7 +13162,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Learn to cook nourishing sattvik meals for health, balance & vitality.",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/21-days%2B-better-living-course+_+270+x+148.webp`,
     details: [
       {
         type: 'paragraph',
@@ -13227,7 +13324,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Relieve hot flashes, stress & fatigue with yoga for menopause care. ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/21-days%2B-better-living-course+_+270+x+148.webp`,
     details: [
       {
         type: 'paragraph',
@@ -13490,8 +13587,8 @@ const camps = {
     },
     dates: [
       // '12th Apr 2025', 
-      '14th Jun 2025'
-      , '10th Aug 2025', '11th Oct 2025', '13th Dec 2025'],
+      // '14th Jun 2025',
+     '10th Aug 2025', '11th Oct 2025', '13th Dec 2025'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -13544,7 +13641,7 @@ const camps = {
     category: 'camps',
     metaDescription: "Detox naturally with powerful yogic techniques for total well-being. ",
     image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/21-days%2B-better-living-course+_+270+x+148.webp`,
     details: [
       {
         type: 'paragraph',
@@ -14263,7 +14360,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset81}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/weekend-yoga-Asana-Classes_-Men-Women+(1).webp`,
     mostPopular: true,
     metaDescription:
       'Daily online yoga classes to enhance flexibility, strength & well-being.',
@@ -14718,7 +14815,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset71}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/asana-regular-classes_for-women_+270+x+148.jpg`,
     mostPopular: true,
     metaDescription:
       'Regular yoga sessions for women with asanas, kriyas, breathwork & health tips.',
@@ -15040,7 +15137,7 @@ const classes = {
     }
     ,
     image: `${baseDomain}${courseAssets.courseAsset76}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/children-camp-the-yoga-institute_+246+X+135.jpg`,
     mostPopular: false,
     tenure: '2 Days',
     language: 'English',
@@ -15287,7 +15384,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/270x148.jpg`,
     mostPopular: true,
     metaDescription:
       'Join expert-led live meditation classes for daily practice & growth.',
@@ -15499,10 +15596,11 @@ const classes = {
       // '18th May 2025', 
       // '25th May 2025', 
       // '1st Jun 2025', 
-      '8th Jun 2025', 
+      // '8th Jun 2025', 
       '15th Jun 2025', 
       '22nd Jun 2025', 
-      '29th Jun 2025'
+      '29th Jun 2025',
+      '6th Jul 2025', '13th Jul 2025', '20th Jul 2025', '27th Jul 2025'
     ],
     online: true,
     onCampus: true,
@@ -16024,10 +16122,11 @@ const classes = {
       // '17th May 2025', 
       // '24th May 2025', 
       // '31st May 2025', 
-      '7th June 2025', 
+      // '7th June 2025', 
       '14th Jun 2025', 
       '21st Jun 2025', 
-      '28th Jun 2025'
+      '28th Jun 2025',
+      '5th Jul 2025', '12th Jul 2025', '19th Jul 2025', '26th Jul 2025'
     ],
     category: 'classes',
 
@@ -16162,7 +16261,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/270x148-2.jpg`,
     mostPopular: false,
     metaDescription:
       'Yoga for couples—grow together in love, balance & mindful partnership.',
@@ -16396,7 +16495,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
-    cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/270+x+148.jpg`,
     mostPopular: true,
     metaDescription:
       'Weekend online yoga to enhance flexibility, strength & inner calm.',
@@ -16524,7 +16623,7 @@ const classes = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAssets115}`,
-    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/pregnancy-yoga-camp_+246+X+135.jpg`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/pregnancy-yoga-camp_270+x+148.jpg`,
     mostPopular: false,
     metaDescription:
       'Holistic prenatal yoga for a smooth & joyful pregnancy journey.',
@@ -16799,7 +16898,9 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 30th June 2025',
+            //  'Course Commencement Date: 16th June 2025', 
+             'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -17412,7 +17513,9 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 15th June 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
+          text: ['Application Deadline: 30th June 2025', 
+            // 'Course Commencement Date: 16th June 2025', 
+            'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -17599,7 +17702,7 @@ const certificate = {
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
+    cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/yoga-certificate-course-advanced-pranayama-techniques-online+_+270+x148.jpg`,
     metaDescription: 'Deepen pranayama practice with advanced breathwork techniques for teachers.',
     mostPopular: true,
     rating: 5,
@@ -18866,7 +18969,7 @@ const certificate = {
     mostPopular: false,
     language: 'English',
     metaDescription:
-      'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
+      'A program designed to prepare the ground for introspection',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '9:00 am - 6:00 pm - On Campus',
@@ -18987,7 +19090,7 @@ const certificate = {
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/Emo_energy+_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
-      'A program designed to prepare the ground for introspection. It is developed to help you go inwards, connect with the silence within.',
+      'A program designed to prepare the ground for introspection',
     rating: 5,
     colorCode: '#C48E8C',
     timing: 'Morning 10:00 am – 1:00 pm, Evening 5:30 - 8:30 PM - online',
@@ -19109,7 +19212,7 @@ const certificate = {
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/swadhyay_+246+X+135.jpg`,
     mostPopular: false,
     metaDescription:
-      'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
+      'Learn how to self-introspect to break free from your limiting beliefs which hold',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '9:00 am - 6:00 pm - On Campus',
@@ -19122,7 +19225,8 @@ const certificate = {
     language: 'English',
     dates: [
       // 'May 7th – May 11th 2025',
-      'July 9th – July 13th 2025',
+      '9th July – 13th July 2025',
+      '16th July to 20th July 2025',
       'Sept 10th – Sept 14th 2025',
       'Nov 5th – Nov 9th 2025'
     ],
@@ -19203,7 +19307,7 @@ const certificate = {
     mostPopular: false,
     language: 'English',
     metaDescription:
-      'Learn how to self-introspect to break free from your limiting beliefs which holds you back in life Witness the profound changes that occur when you consciously restructure your belief system',
+      'Learn how to self-introspect to break free from your limiting beliefs which hold',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '10.00 am to 1.00 pm, 5.30 pm to 8.30 pm (Join any one batch time) - Online',
@@ -19214,7 +19318,8 @@ const certificate = {
     },
     category: 'classes',
     dates: [
-      'June 9th – June 20th 2025',
+      // 'June 9th – June 20th 2025',
+      'June 30th - July 11th 2025',
       'Oct 6th – Oct 17th 2025',
       'Dec 8th – Dec 19th 2025',
     ],
@@ -19294,7 +19399,7 @@ const certificate = {
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/integral_chakra_+246+X+135.png`,
     mostPopular: false,
     metaDescription:
-      'Heal your 7 chakras by studying its behaviour patterns, know its potential and live a life you always wanted to',
+      'Heal your 7 chakras by studying its behaviour patterns, know its potential',
     rating: 5,
     colorCode: '#C48E8C',
     language: 'English',
@@ -19663,6 +19768,21 @@ const alibaug = {
       '5th July 2025 to 6th July 2025',
       '12th July 2025 to 13th July 2025',
       '26th July 2025 to 27th July 2025',
+      '2nd Aug 2025 to 3rd Aug 2025',
+                '9th Aug 2025 to 10th Aug 2025',
+                '30th Aug 2025 to 31th Aug 2025',
+              '6th Sept 2025 to 7th Sept 2025',
+                '13th Sept 2025 to 14th Sept 2025',
+                '27th Sept 2025 to 28th Sept 2025',
+                '4th Oct 2025 to 5th Oct 2025',
+                '11th Oct 2025 to 12th Oct 2025',
+                '25th Oct 2025 to 26th Oct 2025',
+                '1st Nov 2025 to 2nd Nov 2025',
+                '8th Nov 2025 to 9th Nov 2025',
+                '22th Nov 2025 to 23th Nov 2025',
+                '29th Nov 2025 to 30th Nov 2025',
+                '6th Dec 2025 to 7th Dec 2025',
+                '20th Dec 2025 to 21th Dec 2025 '
     ],
     online: false,
     onCampus: false,
@@ -19795,7 +19915,13 @@ const alibaug = {
       // '26th Apr 2025 to 27th Apr 2025',
       // '17th May 2025 to 18th May 2025',
       // '21th June 2025 to 22th June 2025',
-      '19th July 2025 to 20th July 2025'
+      '19th July 2025 to 20th July 2025',
+      '16th Aug 2025 to 17th Aug 2025',
+                '20th Sept 2025 to 21th Sept 2025',
+                '18th Oct 2025 to 19th Oct 2025',
+                '15th Nov 2025 to 16th Nov 2025',
+                '13th Dec 2025 to 14th Dec 2025',
+                '27th Dec 2025 to 28th Dec 2025'
     ],
     online: false,
     onCampus: false,
@@ -20053,6 +20179,8 @@ const specialEvents = {
       // '12th Apr 2025',
       // '12th May 2025',
        '11th Jun 2025',
+       '10th Jul 2025', '9th Aug 2025', '7th Sept 2025',
+'6th Oct 2025', '5th Nov 2025', '4th Dec 2025'
        
        
     ],

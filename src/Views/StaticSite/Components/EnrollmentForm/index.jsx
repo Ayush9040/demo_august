@@ -1452,12 +1452,15 @@ if (isOneMonthTTC()) {
           delete axios.defaults.headers.common['authorization'];
         }
 
+        const identityVerified2 = `+${formData.phone.replace(/^\+/, '')}`;
+
         let payload = {
           firstName: formData?.name, lastName: formData?.lname,
           addressLine1: formData?.address1, addressLine2: formData?.address2,
           country: formData?.country, state: formData?.state,
           city: formData?.city, pincode: formData?.pincode,
-          gender: formData?.gender
+          gender: formData?.gender,
+          identity: identityVerified2
         }
         // alert(JSON.stringify(payload))
         await axios.put(`${authBaseDomain}/user/update`, payload, {

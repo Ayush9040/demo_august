@@ -165,6 +165,7 @@ const CourseDetails = ({
   const [selectedMode, setSelectedMode] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [openDates, setOpenDates] = useState(false)
+   const [openterms, setOpenterms] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [minDate, setMinDate] = useState('');
   const [onClickFormatRegular, setOnClickFormatRegular] = useState(false);
@@ -327,6 +328,14 @@ const CourseDetails = ({
   const handleOpen = () => {
     setOpenDates(true);
     setTimeout(() => { scrollToDiv() }, 100)
+  }
+
+  const handleOpenTerms = () => {
+    setOpenterms(true);
+  }
+
+  const handleCloseTerms = () => {
+    setOpenterms(false);
   }
 
   const handleOpenDuration = () => {
@@ -1428,15 +1437,15 @@ const CourseDetails = ({
                     </label>
 
                     <a
-                      onClick={handleOpen}
+                      onClick={handleOpenTerms}
                       className='terms_text'
                       style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
                       rel="noopener noreferrer">
                       terms and conditions
                     </a>
 
-                    {open && (
-                      <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+                    {openterms && (
+                      <CustomModal isShippingModalOpen={handleOpenTerms} setIsShipppingModalOpen={handleCloseTerms} />
                     )}
 
                     {isChecked === false ? empty === 19 && (

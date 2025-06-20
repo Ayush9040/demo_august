@@ -560,7 +560,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       },
       {
         url: '/certificate-course-on-advanced-pranayama-techniques',
-        text: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
+        text: 'Certificate Course on Advanced Pranayama Techniques - Online',
         onCampus: false, online: true, weekends: true, weekDays: true
       },
       {

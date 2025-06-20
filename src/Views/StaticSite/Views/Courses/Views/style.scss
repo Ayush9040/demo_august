@@ -9,7 +9,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 1rem;
-        width: 90%;
+        width: 91%;
         margin: 0 auto 11px auto;
 
         h1::after {
@@ -575,7 +575,7 @@
     // background-color: #fff;
     border-radius: 8px;
     // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+    padding: 15px 5px;
     // max-width: 1000px;
     // margin: 0 auto;
   }
@@ -589,7 +589,8 @@
     text-decoration: none;
     color: #333;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: left;
     // padding: 10px 15px;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -600,7 +601,7 @@
   }
 
   .yoga-nav-trigger:hover {
-    background-color: #f0f0f0;
+    // background-color: #f0f0f0;
   }
 
   .yoga-dropdown-panel {
@@ -876,6 +877,13 @@
     font-weight: 400;
 }
 
+.browse_text {
+     font-family: 'Open Sans';
+     font-size: 28px;
+     font-weight: 700;
+     margin-bottom: 35px;
+}
+
 @media(max-width: 768px) {
     .wrapper_courses-dropdown {
         display: none;
@@ -886,6 +894,11 @@
     .arrow_course_new {
     display: flex;
     justify-content: space-between;
+    text-align: left;
+}
+
+.mob_breadcrumb {
+    text-align: center;
 }
 
 .courses-container .certifications {
@@ -919,6 +932,17 @@
 .courses-container .certifications {
     padding-top: 3rem;
     padding-bottom: 1rem;
+}
+
+@media((min-width:1250px) and (max-width: 1380px )){
+    .yoga-nav-container {
+        padding: 15px 0px !important;
+    }
+
+    .yoga-nav-trigger {
+        font-size: 16px !important;
+        text-align: left !important;
+    }
 }
 
 

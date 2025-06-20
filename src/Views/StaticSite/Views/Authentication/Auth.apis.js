@@ -40,7 +40,7 @@ export const fetchUserDataAPI = () => {
   
   return axios.get(`${ authBaseDomain }/user/me`, {
     headers: {
-        //  'Authorization': `Bearer ${token}`
+         'Authorization': `Bearer ${token}`
     }
   })
 

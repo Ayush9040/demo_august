@@ -100,28 +100,28 @@ const NutriDietHero = () => {
   const highlightsData = [
     {
       category: 'Ahar',
-      img: Ahar,
+      img: 'https://nispand.s3.ap-south-1.amazonaws.com/files/AAHAR-removebg-preview.png',
       subcategory: '(Diet & Nutrition)',
       title: '"Fuel for the Soul"',
       description: 'Emphasizing food as nourishment beyond just the body'
     },
     {
       category: 'Vihar',
-      img: Vihar,
+      img: 'https://nispand.s3.ap-south-1.amazonaws.com/files/VIHAR-removebg-preview.png',
       subcategory: '(Lifestyle & Routine)',
       title: '"Flow of Life"',
       description: 'Capturing the essence of movement, relaxation, and daily habits'
     },
     {
       category: 'Aachar',
-      img: ACHAAR,
+      img: `https://nispand.s3.ap-south-1.amazonaws.com/files/AACHAR-removebg-preview.png`,
       subcategory: '(Discipline & Conduct)',
       title: '"Rhythm of Actions"',
       description: 'Highlighting the impact of daily behavior and ethics'
     },
     {
       category: 'Vichar',
-      img: VICHAR,
+      img: 'https://nispand.s3.ap-south-1.amazonaws.com/files/VICHAR-removebg-preview.png',
       subcategory: '(Thoughts & Mindset)',
       title: '"Echoes of the Mind"',
       description: 'Reflecting on how thoughts shape our reality'

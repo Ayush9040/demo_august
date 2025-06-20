@@ -116,10 +116,11 @@ const BrowseCourses = () => {
       <div className="browse-courses">
         <InnerNavComponent abc={browseCourse} />
         <div className="breadcrumbs">
-          <p>Browse &gt; {breadcrumbs}</p>
+          {/* <p>Browse &gt; {breadcrumbs}</p> */}
         </div>
         <div className="popular-courses">
           <div className="course-accordian">
+            <p className='browse_text'>Browse category</p>
             {/* <Accordion allowZeroExpanded>
               <AccordionItem>
                 <AccordionItemHeading>
@@ -393,7 +394,10 @@ const BrowseCourses = () => {
               
             </Accordion>
           </div>
+          <div>
+            <p className='browse_text mob_breadcrumb'>{breadcrumbs}</p>
           <div className="course-grid">
+            
             {category?.slice(0, 50).map((item, i) => (
 
               item.title &&
@@ -426,6 +430,7 @@ const BrowseCourses = () => {
                                 />
 
             ))}
+          </div>
           </div>
         </div>
       </div>

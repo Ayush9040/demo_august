@@ -1188,12 +1188,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           delete axios.defaults.headers.common['authorization'];
         }
 
+        const identityVerified2 = `+${formData2.phone.replace(/^\+/, '')}`;
+
         let payload = {
           firstName: formData2?.name, lastName: formData2?.lname,
           addressLine1: formData2?.address1, addressLine2: formData2?.address2,
           country: formData2?.country, state: formData2?.state,
           city: formData2?.city, pincode: formData2?.pincode,
-          gender: formData2?.gender
+          gender: formData2?.gender,
+          identity: identityVerified2,
         }
         // alert(JSON.stringify(payload))
         await axios.put(`${authBaseDomain}/user/update`, payload, {
