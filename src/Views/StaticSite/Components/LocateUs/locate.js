@@ -141,7 +141,7 @@ export const locateData = [
       {
         state: 'Malad, Mumbai',
         notstate:
-          "The Yoga Institute, Malad Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai, Maharashtra 400064.",
+          "The Yoga Institute Malad, Rejoice International School, Next to Bhujavale Talav,  Bhandarwada Marg, Off Zakeria Road, Malad (W).",
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://juhuandheri.theyogainstitute.org/',
         phone: ['+91-9833864964'],

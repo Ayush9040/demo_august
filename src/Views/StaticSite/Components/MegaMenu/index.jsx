@@ -338,10 +338,12 @@ const MegaMenu = ({ setNav }) => {
                     Certificate Course on Advanced Pranayama Techniques
                   </li>
                 </Link>
+                <Link onClick={() => {setNav(false)}}  to="/personal-development">
                 <li className="text-bold">
                   Yoga - Continuing Personal Development
                 </li>
-                <li className="text-bold">
+                </Link>
+                {/* <li className="text-bold">
                   Yoga Psychotherapy Curriculum
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/emo-energy-rebalancing">
@@ -368,7 +370,7 @@ const MegaMenu = ({ setNav }) => {
                   <li >
                   Integral Chakra Psychology
                   </li>
-                </Link>
+                </Link> */}
               </ul>
             </div>
             <div className="single-menu">

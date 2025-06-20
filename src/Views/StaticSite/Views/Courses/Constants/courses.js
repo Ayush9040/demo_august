@@ -641,7 +641,7 @@ const ttc200hr = {
       // '9th Dec – 1st Feb 2025',
       // '10th Feb - 5th Apr 2025',
       // '14th Apr - 7th Jun 2025',
-      '16th Jun - 9th Aug 2025',
+      // '16th Jun - 9th Aug 2025',
       '18th Aug - 11th Oct 2025',
       '21st Oct - 13th Dec 2025',
       '22nd Dec - 14th Feb 2026',
@@ -6410,7 +6410,7 @@ const ttc900hr = {
       // '17th Jun - 5th Oct 2024', 
       // '14th Oct 2024 - 1st Feb 2025',
       // '10th Feb - 31st May 2025',
-      '9th Jun - 27th Sep 2025',
+      // '9th Jun - 27th Sep 2025',
       '6th Oct - 24th Jan 2026'
     ]
     ,
@@ -12947,8 +12947,8 @@ const camps = {
     dates: [
       // '22nd Feb 2025', 
       // '26th Apr 2025', 
-      '15th Jun 2025'
-      , '17th Aug 2025', '19th Oct 2025', '21st Dec 2025'],
+      // '15th Jun 2025', 
+      '17th Aug 2025', '19th Oct 2025', '21st Dec 2025'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -15597,7 +15597,7 @@ const classes = {
       // '25th May 2025', 
       // '1st Jun 2025', 
       // '8th Jun 2025', 
-      '15th Jun 2025', 
+      // '15th Jun 2025', 
       '22nd Jun 2025', 
       '29th Jun 2025',
       '6th Jul 2025', '13th Jul 2025', '20th Jul 2025', '27th Jul 2025'
@@ -16123,7 +16123,7 @@ const classes = {
       // '24th May 2025', 
       // '31st May 2025', 
       // '7th June 2025', 
-      '14th Jun 2025', 
+      // '14th Jun 2025', 
       '21st Jun 2025', 
       '28th Jun 2025',
       '5th Jul 2025', '12th Jul 2025', '19th Jul 2025', '26th Jul 2025'
