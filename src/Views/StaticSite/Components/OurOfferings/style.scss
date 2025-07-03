@@ -640,3 +640,25 @@
   background-color: rgba(188, 79, 49, 1);
 }
 }
+
+@media(min-width: 1930px) {
+  .our-offerings-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.our-offerings-container .our-offerings-carousel {
+  margin: 0;
+}
+
+.offering-overview {
+  width: 35%;
+}
+
+.our-offerings-container .our-offerings-carousel {
+  width: 44%;
+}
+}

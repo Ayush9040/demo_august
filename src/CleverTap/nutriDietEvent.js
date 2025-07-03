@@ -51,6 +51,12 @@ Amount,
         "Program_Type": programType,
         "Status": status,
         "Amount": amount,
+        "course_name": 'Nutri Diet Clinic',
+        "course_type": 'Nutri Diet',
+        'courseTopCategory': 'Nutri Diet Clinic',
+        "courseCertificate": "NO",
+        "courseSubType": 'Nutri Diet Program',
+        "courseCategory": 'Self Help',
       });
   
       console.log("Enquire_Nutri_Diet_Completed event tracked", window.clevertap);

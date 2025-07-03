@@ -175,6 +175,16 @@ export const locateData = [
         phone: ['+91-8369667701'],
         toRedirect: true,
       },
+      {
+        state: 'Andheri(W), Mumbai',
+        notstate:
+          'D.N. Nagar, Andheri (W), Mumbai, A/604, Winspace Amelio, Barfiwala College Road, Next to Joeys Pizza, D.N. Nagar, Andheri (W), Mumbai - 400053',
+        email: 'juhuandheri@theyogainstitute.in',
+        website: '',
+        url: 'https://juhuandheri.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
       
 
       // {

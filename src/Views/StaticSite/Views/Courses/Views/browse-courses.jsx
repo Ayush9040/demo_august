@@ -364,7 +364,7 @@ const BrowseCourses = () => {
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/personal-development-programs">
+                    <Link to="/personal-development">
                       <p className='arrow_course_new'>Yoga - Continuing Personal Development
 
                          <div className='no_desktop'>

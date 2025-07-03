@@ -156,3 +156,10 @@
         margin-top: 1rem;
     }
 }
+
+@media(min-width: 1930px) {
+    .nispand-app-container .nispand-content .download-options {
+        margin: 3rem auto 3rem;
+        width: 70%;
+    }
+}

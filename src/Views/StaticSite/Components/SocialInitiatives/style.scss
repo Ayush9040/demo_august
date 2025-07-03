@@ -347,3 +347,11 @@ padding-top: 10rem;
   .social-initiative-container .social-initiative-carousel .slick-dots li {
     margin-right: 5px !important;
   }
+
+  @media(min-width: 1900px) {
+    .social-initiative-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  }

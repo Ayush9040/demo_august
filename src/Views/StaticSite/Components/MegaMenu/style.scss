@@ -245,3 +245,55 @@ display: none;
     display: none;
   }
 }
+
+@media(min-width: 1900px) {
+  .mega-menu-container .left-menu ul li {
+    font-size: 2rem;
+  }
+
+  .mega-menu-container .sub-menu .single-menu .navigation-ul li {
+    font-size: 1.5rem;
+  }
+
+  .mega-menu-container .right-menu .single-menu h3 {
+    font-size: 1.3rem;
+    margin: 1.2rem 0;
+  }
+
+  .mega-menu-container .right-menu .single-menu ul li {
+    font-size: 1.3rem;
+    margin: 1.1rem 0;
+  }
+
+  .mega-menu-container .right-menu .single-menu .text-bold {
+    font-size: 1.3rem;
+  }
+
+
+}
+
+@media(min-width: 2000px) {
+  .mega-menu-container .left-menu ul li {
+    font-size: 2rem;
+  }
+
+  .mega-menu-container .sub-menu .single-menu .navigation-ul li {
+    font-size: 1.7rem;
+  }
+
+  .mega-menu-container .right-menu .single-menu h3 {
+    font-size: 1.5rem;
+    margin: 1.4rem 0;
+  }
+
+  .mega-menu-container .right-menu .single-menu ul li {
+    font-size: 1.5rem;
+    margin: 1.4rem 0;
+  }
+
+  .mega-menu-container .right-menu .single-menu .text-bold {
+    font-size: 1.5rem;
+  }
+
+
+}

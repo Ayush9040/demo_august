@@ -1,7 +1,10 @@
 import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
-import BA_yoga_1 from './images/Ba_new.jpg'
+import BA_yoga_1 from './images/B_A_Yogashastra_new.jpg'
 import sattvik_img from './images/bestselling.jpg'
-import MA from './images/Ma_BA.jpg'
+import MA from './images/M_A_Yogashastra_new.jpg'
+import fullmoon_new from './images/fullmoon_new.jpg';
+import nutri_diet_new from './images/nutri_diet_new.jpg';
+import satvam_new from './images/satvam_new.webp'
 
 export const activityData = [
 
@@ -33,7 +36,7 @@ export const activityData = [
     id: 2,
     title: 'Nutri Diet Clinic',
     description:'Our team of nutritional health experts will support and guide you on your health concerns. Get our customized plans and incorporate holistic changes.',
-    image: `${baseDomain}${nutriDiet.nutriDietMain}`,
+    image: `${nutri_diet_new}`,
     url: '/nutri-diet',
   },
   {
@@ -49,7 +52,7 @@ export const activityData = [
     title: 'Samattvam',
     description:
       'This personalized well-being program provides individual guidance for life management from leading health experts and yoga practitioners. ',
-    image: `${baseDomain}${homeAssets.homeAsset16}`,
+    image: `${satvam_new}`,
     url: '/samattvam',
   },
   {
@@ -57,7 +60,7 @@ export const activityData = [
     title: 'Full Moon Meditation',
     description:
       'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
-    image: `${baseDomain}${homeAssets.homeAsset14}`,
+    image: `${fullmoon_new}`,
     url: '/fullmoon-meditation',
   },
   // {

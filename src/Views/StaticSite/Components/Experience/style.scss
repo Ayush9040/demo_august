@@ -186,3 +186,23 @@
         padding-bottom: 1rem !important;
     }
   }
+
+  @media(min-width: 1930px) {
+    .experience-container .experience-carousel {
+    display: grid !important;
+    grid-template-columns: 30% 25% !important;
+    margin-bottom: 20px;
+    
+    justify-content: center !important;
+    /* gap: 1rem; */
+    // align-items: flex-start;   
+}
+
+    // .carousel-content {
+    //     width: 44%;
+    // }
+
+    // .experience-container .experience-carousel .carousel-image {
+    // width: 34% !important;
+    // }
+  }

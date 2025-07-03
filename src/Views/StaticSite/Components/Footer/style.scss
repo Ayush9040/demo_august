@@ -157,7 +157,7 @@
 @media (max-width: 1400px) {
   .footer-container {
     .logo-description {
-      margin-left: 0;
+      margin-left: 25px;
     }
     .contact {
       margin-left: 1rem;
@@ -325,4 +325,18 @@
       grid-template-columns: 100%;
     }
   }
+}
+
+@media(min-width: 1900px) {
+      .footer-container .logo-description {
+        margin-left: 11rem;
+      }
+
+      .footer-container .heading-footer-container {
+        margin-left: 11rem;
+      }
+
+      .footer-container .contact {
+        margin-left: 11rem;
+      }
 }

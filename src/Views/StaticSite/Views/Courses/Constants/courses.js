@@ -56,7 +56,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1',
@@ -630,7 +631,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     dates: [
       // '12th Feb – 6th Apr 2024',
@@ -1119,7 +1121,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     dates: [
       // '8th Jan – 2nd Mar 2024',
@@ -1682,7 +1685,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     dates: [
       // '15th Jan to 9th Mar 2024',
@@ -2216,7 +2220,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     dates: [
       // '20th Jan to 7th Apr 2024',
@@ -2225,7 +2230,7 @@ const ttc200hr = {
       // '28th Sep to 15th Dec 2024 ',
       // '5th Oct to 22nd Dec 2024 ',
       // "22nd Mar to 8th Jun 2025",
-      "14th Jun to 31st Aug 2025",
+      // "14th Jun to 31st Aug 2025",
       "6th Sep to 23rd Nov 2025",
       "29th Nov to 15th Feb 2026",
       // '15th Mar to 1st Jun 2025',
@@ -2776,7 +2781,8 @@ const ttc200hr = {
       courseSubType: '200 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: '(RYT 200- Basic)'
+      courseTopCategory: '(RYT 200- Basic)',
+      coursePreRequisite: ''
     },
     dates: [
       // '8th Jan – 2nd Mar 2024',
@@ -3884,7 +3890,8 @@ const ttc500hr = {
       courseSubType: '500 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Intermediate TTC (500 Hour Courses)'
+      courseTopCategory: 'Intermediate TTC (500 Hour Courses)',
+      coursePreRequisite: ''
     },
     image: `${deailsPage_3_ttc}`,
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/500-Hour+Yoga+Teacher+Training+Online+Course+-+3+Months+Yoga+TTC+-+English.jpg`,
@@ -4303,7 +4310,8 @@ const ttc900hr = {
       courseSubType: '900 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+      courseTopCategory: 'Advance TTC (900 Hour Courses)',
+      coursePreRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course'
     },
     dates: [
       // '27th Jan to 21st Apr 2024',
@@ -4893,7 +4901,8 @@ const ttc900hr = {
       courseSubType: '900 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+      courseTopCategory: 'Advance TTC (900 Hour Courses)',
+      coursePreRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course'
     },
     dates: [
 
@@ -5663,7 +5672,8 @@ const ttc900hr = {
       courseSubType: '900 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+      courseTopCategory: 'Advance TTC (900 Hour Courses)',
+      coursePreRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course'
     },
     dates: [
       // '3rd Aug 2024',
@@ -6404,7 +6414,8 @@ const ttc900hr = {
       courseSubType: '900 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+      courseTopCategory: 'Advance TTC (900 Hour Courses)',
+      coursePreRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course'
     },
     dates: [
       // '17th Jun - 5th Oct 2024', 
@@ -7098,7 +7109,8 @@ const ttc900hr = {
       courseSubType: '900 Hour Yoga Teacher Training',
       courseCategory: 'Educational',
       courseCertificate: 'TTC/Certificate',
-      courseTopCategory: 'Advance TTC (900 Hour Courses)'
+      courseTopCategory: 'Advance TTC (900 Hour Courses)',
+      coursePreRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course'
     },
     dates: [
       // '1st Jan 2024',
@@ -7972,6 +7984,15 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
+    clevertapData: {
+      name: 'Cardiac & Hypertension Yoga Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     metaDescription:
       'Specialized yoga camp for heart health & hypertension management.',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
@@ -8151,6 +8172,15 @@ const camps = {
     rating: 5,
     colorCode: '#CE9B51',
     timing: '9:30 am – 5:30 pm (IST)',
+    clevertapData: {
+      name: 'Diabetes Yoga Camp - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -9110,6 +9140,15 @@ const camps = {
         templateNonResidential: '',
       },
     },
+    clevertapData: {
+      name: 'Pranayama Workshop - On Campus & Online',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     dates: [
       // '11th May 2025', 
       '13th Jul 2025', '14th Sep 2025', '9th Nov 2025'],
@@ -9298,6 +9337,15 @@ const camps = {
         templateNonResidential: '',
       },
     },
+    clevertapData: {
+      name: 'Pregnancy Yoga Camp For Ante & Post Natal - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     dates: [
       // '14th Dec & 15th Dec 2024',
       // '20th Jan & 21st Jan 2025',
@@ -9305,7 +9353,7 @@ const camps = {
       // '17th Mar & 18th Mar 2025',
       // '19th Apr & 20th Apr 2025',
       // '19th May & 20th May 2025',
-      '21st Jun & 22nd Jun 2025',
+      // '21st Jun & 22nd Jun 2025',
       '21st Jul & 22nd Jul 2025',
       '16th Aug & 17th Aug 2025',
       '15th Sep & 16th Sep 2025',
@@ -9867,6 +9915,15 @@ const camps = {
         templateNonResidential: '',
       },
     },
+    clevertapData: {
+      name: 'Stress Management Yoga Camp - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     dates: [
       // '13th Apr 2025', 
       // '11th May 2025', 
@@ -10065,6 +10122,15 @@ const camps = {
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+    },
+    clevertapData: {
+      name: 'Weight Loss Yoga Workshop - Online & On campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
     },
     category: 'camps',
     metaDescription: 'Lose weight naturally with yoga techniques that energize & restore.',
@@ -10435,8 +10501,18 @@ const camps = {
       // '23rd Mar 2025', 
       // '27th Apr 2025', 
       // '25th May 2025',
-      '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
+      // '22nd Jun 2025', 
+      '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
+    clevertapData: {
+      name: 'Back & Joint Disorder Yoga Workshop Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -10630,6 +10706,15 @@ const camps = {
       '8th Nov to 14th Nov 2025',
 
     ],
+    clevertapData: {
+      name: '7 Days Health Camp - On Campus - Yoga Camp - Hindi',
+      courseType: '7 Day',
+      courseSubType: '7 Days Health Camp',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: '7 DAYS HEALTH CAMP',
+      coursePreRequisite: ''
+    },
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -11013,7 +11098,7 @@ const camps = {
       // '22nd Mar to 28th Mar 2025',
       // '26th Apr to 2nd May 2025',
       // '24th May to 30th May 2025',
-      '28th Jun to 4th Jul 2025',
+      // '28th Jun to 4th Jul 2025',
       '26th Jul to 1st Aug 2025',
       '23rd Aug to 29th Aug 2025',
       '27th Sep to 3rd Oct 2025',
@@ -11021,6 +11106,15 @@ const camps = {
       '22nd Nov to 28th Nov 2025',
       '27th Dec to 2nd Jan 2026'
     ],
+    clevertapData: {
+      name: '7 Days Health Camp - On Campus - Yoga Camp - English',
+      courseType: '7 Day',
+      courseSubType: '7 Days Health Camp',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: '7 DAYS HEALTH CAMP',
+      coursePreRequisite: ''
+    },
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -11413,6 +11507,15 @@ const camps = {
       '2nd Nov to 22nd Nov 2025',
       '7th Dec to 27th Dec 2025'
     ],
+    clevertapData: {
+      name: '21 Days Better Living Course ( Morning Batch )',
+      courseType: '21 Day',
+      courseSubType: '21 Days Better Living',
+      courseCategory: 'Self Help',
+      courseCertificate: 'certificate Of Participation',
+      courseTopCategory: '21-Days Better living Course',
+      coursePreRequisite: ''
+    },
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -11818,6 +11921,15 @@ const camps = {
         templateResidential: '',
         templateNonResidential: '',
       },
+    },
+    clevertapData: {
+      name: '21 Days Better Living Course ( Evening Batch )',
+      courseType: '21 Day',
+      courseSubType: '21 Days Better Living',
+      courseCategory: 'Self Help',
+      courseCertificate: 'certificate Of Participation',
+      courseTopCategory: '21-Days Better living Course',
+      coursePreRequisite: ''
     },
     dates: [
       // '3rd Mar to 23rd Mar 2024',
@@ -12225,6 +12337,15 @@ const camps = {
         templateResidential: '',
         templateNonResidential: '',
       },
+    },
+    clevertapData: {
+      name: '21 Days Hindi Course',
+      courseType: '21 Day',
+      courseSubType: '21 Days Better Living',
+      courseCategory: 'Self Help',
+      courseCertificate: 'certificate Of Participation',
+      courseTopCategory: '21-Days Better living Course',
+      coursePreRequisite: ''
     },
     dates: [
 
@@ -12640,6 +12761,15 @@ const camps = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Deep Sleep Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
 
     tenure: '1 day',
     courseType: 'Deep Sleep Workshop',
@@ -12790,12 +12920,22 @@ const camps = {
     },
     dates: [
       // '16th Feb 2025', 
-      '29th Jun 2025', '19th Oct 2025'],
+      // '29th Jun 2025', 
+      '19th Oct 2025'],
     online: true,
     onCampus: true,
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Emotional Wellness Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
 
     tenure: '1 day',
     courseType: 'Emotional Wellness Workshop',
@@ -12954,6 +13094,15 @@ const camps = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Gut Health Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
 
     tenure: '1 day',
     courseType: 'Gut Health Workshop',
@@ -13115,6 +13264,15 @@ const camps = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Healthy & Sattvik Cooking Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
 
     tenure: '1 day',
     courseType: 'Healthy & Sattvik Cooking Workshop',
@@ -13266,6 +13424,15 @@ const camps = {
         templateResidential: '',
         templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
+    },
+    clevertapData: {
+      name: 'Menopause Wellness Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
     },
     dates: [
       // '15th Feb 2025', 
@@ -13433,7 +13600,15 @@ const camps = {
     nonResidential: true,
     residential: false,
     certficate: false,
-
+    clevertapData: {
+      name: 'PCOD & PCOS Wellness Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    },
     tenure: '1 day',
     courseType: 'PCOD & PCOS Wellness Workshop',
     language: 'Hindi',
@@ -13594,6 +13769,15 @@ const camps = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Total Body Detox Workshop - Online & On Campus',
+      courseType: 'Camps & Workshops',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Camps & Workshop',
+      coursePreRequisite: ''
+    }, 
 
     tenure: '1 day',
     courseType: 'Total Body Detox Workshop',
@@ -14113,6 +14297,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
+      courseType: 'Regular Asana Classes for Teachers ',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Asana Classes for Teachers ',
+      coursePreRequisite: ''
+    },
     metaDescription: 'Dedicated advanced asana sessions for TYI teachers post-TTC.',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/advance-yoga-asana-regular-class-online-(only-for-tYI-teachers)_+246+X+135.jpg`,
@@ -14374,6 +14567,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
+      courseType: 'Regular Asana Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Asana Men &  Women online',
+      coursePreRequisite: ''
+    },
     dates: [
       '6:30 a.m. to 7:30 a.m.',
       '7:30 a.m. to 8:30 a.m.',
@@ -14662,6 +14864,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Yoga Classes for Men (Regular Asana) - On Campus',
+      courseType: 'Regular Asana Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Asana Classes Men',
+      coursePreRequisite: ''
+    },
     dates: [
       '6:30 a.m to 7:30 p.m.',
       '7:30 a.m. to 8:30 a.m.',
@@ -14829,6 +15040,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Yoga Classes for Women (Regular Asana) - On Campus',
+      courseType: 'Regular Asana Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Asana Classes Women',
+      coursePreRequisite: ''
+    },
     dates: [
       '6:30 a.m to 7:30 a.m.',
       '7:30 a.m. to 8:30 a.m.',
@@ -15022,6 +15242,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Children\'s Yoga Classes (Regular) - On Campus',
+      courseType: 'Children Regular Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Children Regular Classes',
+      coursePreRequisite: ''
+    },
     dates: ['4:00 p.m to 5:00 p.m.'],
     online: false,
     onCampus: true,
@@ -15152,6 +15381,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Children\'s Weekend Yoga Class - On Campus',
+      courseType: 'Children Weekend Regular Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Children Weekend Regular Classes',
+      coursePreRequisite: ''
+    },
     dates: ['8:00 a.m. to 9:30 a.m.'],
     online: false,
     onCampus: true,
@@ -15230,6 +15468,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Online Meditation Course (Foundation Course)',
+      courseType: 'Meditation course',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Meditation Foundation Course',
+      coursePreRequisite: ''
+    },
     dates: [
       // '4th Mar to 29th Mar 2024',
       // '8th Apr to 3rd May 2024',
@@ -15398,6 +15645,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Regular Online Meditation Classes',
+      courseType: 'Regular Online Meditation Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Online Meditation Classes',
+      coursePreRequisite: ''
+    },
     dates: ['7:00 a.m. to 7:45 a.m.'],
     online: true,
     onCampus: false,
@@ -15598,7 +15854,7 @@ const classes = {
       // '1st Jun 2025', 
       // '8th Jun 2025', 
       // '15th Jun 2025', 
-      '22nd Jun 2025', 
+      // '22nd Jun 2025', 
       '29th Jun 2025',
       '6th Jul 2025', '13th Jul 2025', '20th Jul 2025', '27th Jul 2025'
     ],
@@ -15733,6 +15989,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
+      courseType: 'Weekend Regular Asana Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Weekend Regular Asana',
+      coursePreRequisite: ''
+    },
     dates: ['Saturday', 'Sunday'],
     enrollInfo: {
       duration: "Upto 12 months",
@@ -16124,12 +16389,20 @@ const classes = {
       // '31st May 2025', 
       // '7th June 2025', 
       // '14th Jun 2025', 
-      '21st Jun 2025', 
+      // '21st Jun 2025', 
       '28th Jun 2025',
       '5th Jul 2025', '12th Jul 2025', '19th Jul 2025', '26th Jul 2025'
     ],
     category: 'classes',
-
+    clevertapData: {
+      name: 'Samattvam (Health Checkup) - On Campus',
+      courseType: 'Health Check Up ',
+      courseSubType: 'Camps & Workshops',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Health Check Up ',
+      coursePreRequisite: ''
+    },
     online: false,
     onCampus: true,//true
     nonResidential: false,//true
@@ -16273,6 +16546,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Couples’ Yoga Classes - Online',
+      courseType: 'Couple Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Couple Classes',
+      coursePreRequisite: ''
+    },
     dates: [
       // '21st Jan 2024',
       '19th Jan 2025',
@@ -16509,6 +16791,15 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
+      courseType: 'Weekend Regular Asana Classes',
+      courseSubType: 'Regular Asana Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Weekend Regular Asana',
+      coursePreRequisite: ''
+    },
     dates: ['7:30 am to 9:00 am', ''],
     online: true,
     onCampus: false,
@@ -16641,6 +16932,15 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    clevertapData: {
+      name: 'Regular Pregnancy Yoga Classes - Online & On Campus',
+      courseType: 'Regular Pregnancy Classes',
+      courseSubType: 'Regular Pregnancy Classes',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Regular Pregnancy Classes',
+      coursePreRequisite: ''
+    },
 
     tenure: '3 Days',
     courseType: 'Regular Meditation Foundation Course',
@@ -16898,7 +17198,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 30th June 2025',
+          text: ['Application Deadline: 15th July 2025',
             //  'Course Commencement Date: 16th June 2025', 
              'Selection Criteria: Based on merit and timely registration'],
         },
@@ -17712,6 +18012,15 @@ const certificate = {
       onlineFee: 24000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
+    clevertapData: {
+      name: 'Certificate Course on Advanced Pranayama Techniques',
+      courseType: 'Certificate',
+      courseSubType: 'Special Course - Pranayama',
+      courseCategory: 'Educational',
+      courseCertificate: 'Certificate',
+      courseTopCategory: 'Certificate Yoga Therapy Course - Online',
+      coursePreRequisite: ''
+    },
     category: 'certificate-course',
     dates: [
       // '5th Aug to 26th Sep 2024· Morning', 
@@ -18035,6 +18344,15 @@ const certificate = {
         templateNonResidential: '',
       },
     },
+    clevertapData: {
+      name: 'Certificate Program on Yoga for Cancer',
+      courseType: 'Certificate',
+      courseSubType: 'Special Course - Cancer',
+      courseCategory: 'Educational',
+      courseCertificate: 'Certificate',
+      courseTopCategory: 'Certificate Yoga Therapy Course - Online',
+      coursePreRequisite: '200 Hour Teacher Training Course'
+    },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `https://nispand.s3.ap-south-1.amazonaws.com/files/TYI+image+Folder+/certificate-program-on-yoga-for-cancer-online_+246+X+135.jpg`,
     metaDescription:
@@ -18214,6 +18532,15 @@ const certificate = {
       onlineFee: 10000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
+    clevertapData: {
+      name: 'Certificate Program on Yoga for Lung Cancer',
+      courseType: 'Certificate',
+      courseSubType: 'Special Course - Cancer',
+      courseCategory: 'Educational',
+      courseCertificate: 'Certificate',
+      courseTopCategory: 'Certificate Yoga Therapy Course - Online',
+      coursePreRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course '
+    },
     category: 'certificate-course',
     dates: [
       // '2nd July to 6th July 2024',
@@ -18339,6 +18666,15 @@ const certificate = {
     fees: {
       onlineFee: 38500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+     clevertapData: {
+      name: 'Yoga Therapy Course',
+      courseType: 'Certificate',
+      courseSubType: 'Special Course - Therapy',
+      courseCategory: 'Educational',
+      courseCertificate: 'Certificate',
+      courseTopCategory: 'Certificate Yoga Therapy Course - Online & On Campus',
+      coursePreRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course '
     },
     category: 'certificate-course',
     dates: [
@@ -18979,11 +19315,21 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Emo-Energy Rebalancing Workshop - On Campus',
+      courseType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseSubType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      coursePreRequisite: ''
+    },
     dates: [
       // 'April 19th – April 20th 2025',
       // 'May 17th – May 18th 2025',
-      'June 21th – June 22th 2025',
-      'July 19th – July 20th 2025',
+      // 'June 21th – June 22th 2025',
+      // 'July 19th – July 20th 2025',
+      'July 26th – July 27th 2025',
       'Aug 16th – Aug 17th 2025',
       'Sept 20th – Sept 21th 2025',
       'Oct 18th – Oct 19th 2025',
@@ -19100,6 +19446,15 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Emo-Energy Rebalancing Workshop - Online',
+      courseType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseSubType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      coursePreRequisite: ''
+    },
     language: 'English',
     dates: [
       // 'April 19th – April 20th 2025',
@@ -19222,10 +19577,19 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Swadhyay - On Campus',
+      courseType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseSubType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      coursePreRequisite: ''
+    },
     language: 'English',
     dates: [
       // 'May 7th – May 11th 2025',
-      '9th July – 13th July 2025',
+      // '9th July – 13th July 2025',
       '16th July to 20th July 2025',
       'Sept 10th – Sept 14th 2025',
       'Nov 5th – Nov 9th 2025'
@@ -19317,9 +19681,18 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Swadhyay - Online',
+      courseType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseSubType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      coursePreRequisite: ''
+    },
     dates: [
       // 'June 9th – June 20th 2025',
-      'June 30th - July 11th 2025',
+      // 'June 30th - July 11th 2025',
       'Oct 6th – Oct 17th 2025',
       'Dec 8th – Dec 19th 2025',
     ],
@@ -19410,6 +19783,15 @@ const certificate = {
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Integral Chakra Psychology',
+      courseType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseSubType: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'YOGA - CONTINUING PERSONAL DEVELOPMENT',
+      coursePreRequisite: ''
+    },
     dates: [
       'July 21st – August 22nd 2025',
       'Nov 10th – Dec 12th 2025'
@@ -19751,6 +20133,15 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Aibaug - Forest Yoga',
+      courseType: 'Yoga Retreats',
+      courseSubType: 'Yoga Retreats',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Yoga Retreats',
+      coursePreRequisite: ''
+    },
     dates: [
       // '1st Feb 2025 to 2nd Feb 2025', 
       // '22nd Feb 2025 to 23rd Feb 2025', 
@@ -19906,6 +20297,15 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
+    clevertapData: {
+      name: 'Aibaug - Heathy Weight Loss',
+      courseType: 'Yoga Retreats',
+      courseSubType: 'Yoga Retreats',
+      courseCategory: 'Self Help',
+      courseCertificate: 'NO',
+      courseTopCategory: 'Yoga Retreats',
+      coursePreRequisite: ''
+    },
     dates: [
       // '25th Jan 2025 to 26th Jan 2025', 
       // '8th Feb 2025 to 9th Feb 2025', 
@@ -20178,7 +20578,7 @@ const specialEvents = {
       // '13th Apr 2025',
       // '12th Apr 2025',
       // '12th May 2025',
-       '11th Jun 2025',
+      //  '11th Jun 2025',
        '10th Jul 2025', '9th Aug 2025', '7th Sept 2025',
 '6th Oct 2025', '5th Nov 2025', '4th Dec 2025'
        

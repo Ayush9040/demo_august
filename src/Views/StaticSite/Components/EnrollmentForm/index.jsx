@@ -243,7 +243,7 @@ const Enrollment = () => {
     ]
 
     const isOneMonthTTC = () => {
-      return window.location.pathname.includes('/one-month-ttc');
+      return window.location.pathname === '/enrollment/one-month-ttc';
     }
 
     const isPartTimeTTCOnCampusEnglish = () => {
@@ -260,33 +260,33 @@ const Enrollment = () => {
     }
 
     const isWeekendTeacherTraining = () => {
-      return window.location.pathname.includes('/weekend-teacher-training-course');
+      return window.location.pathname === '/enrollment/weekend-teacher-training-course';
     }
 
     const isTwoYearTTC = () => {
-      return window.location.pathname.includes('/two-year-ttc');
+      return window.location.pathname === '/enrollment/two-year-ttc';
     }
 
     const isOneYearTTC = () => {
-      return window.location.pathname.includes('/one-year-ttc');
+      return window.location.pathname === '/enrollment/one-year-ttc';
     }
 
     const isThreeMonthAdvanceTTC = () => {
-      return window.location.pathname.includes('/3-months-advanced-teacher-training-course');
+      return window.location.pathname === '/enrollment/3-months-advanced-teacher-training-course';
     }
 
     
 
     const isNineHundredHourAdvanceTTC = () => {
-      return window.location.pathname.includes('/900-hours-advanced-teacher-training-course');
+      return window.location.pathname === '/enrollment/900-hours-advanced-teacher-training-course';
     }
 
     const isSevenMonthTTC = () => {
-      return window.location.pathname.includes('/seven-month-ttc');
+      return window.location.pathname === '/enrollment/seven-month-ttc';
     }
 
     const isFiveOnlineTTC = () => {
-      return window.location.pathname.includes('/500-hrs-online-yoga-teacher-training-course-intermediate-level');
+      return window.location.pathname === '/enrollment/500-hrs-online-yoga-teacher-training-course-intermediate-level';
     }
 
     const isChildRegular = () => {
@@ -974,35 +974,35 @@ if (isOneMonthTTC()) {
 }
 
 }
-//  else if(isForest()) {
-//    mailTemplate = {
-//   type: "INFO_TYI",
-//   HTMLTemplate: "FOREST_YOGA_RETREAT_ONE",
-//   subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
-//   data: {
-//     fullName: formData?.name,
-//     dates:currentCourse?.dates,
-//     checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
-//   },
-//   receivers: [
-//     formData.email
-//   ]
-// }
-// } else if(isHealthy()) {
-//   mailTemplate = {
-//   type: "INFO_TYI",
-//   HTMLTemplate: "HEALTHY_WEIGHT_LOSS_WELLNESS_RETREAT_ONE",
-//   subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
-//   data: {
-//     fullName: formData?.name,
-//     dates:currentCourse?.dates,
-//     checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
-//   },
-//   receivers: [
-//     formData.email
-//   ]
-// }
-// }
+ else if(isForest()) {
+   mailTemplate = {
+  type: "INFO_TYI",
+  HTMLTemplate: "FOREST_YOGA_RETREAT_ONE",
+  subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+  data: {
+    fullName: formData?.name,
+    dates:currentCourse?.dates,
+    checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
+  },
+  receivers: [
+    formData.email
+  ]
+}
+} else if(isHealthy()) {
+  mailTemplate = {
+  type: "INFO_TYI",
+  HTMLTemplate: "HEALTHY_WEIGHT_LOSS_WELLNESS_RETREAT_ONE",
+  subject: "🧘‍♂️ Your Yogic Journey Begins Here – The Yoga Institute Welcomes You 🌿",
+  data: {
+    fullName: formData?.name,
+    dates:currentCourse?.dates,
+    checkInDate:formData?.sdate != 'No date Selected' ? formData?.sdate : formData?.startDate
+  },
+  receivers: [
+    formData.email
+  ]
+}
+}
  else {
 
   mailTemplate = {
@@ -1084,9 +1084,9 @@ if (isOneMonthTTC()) {
                     // centre,
                     // modeOfPayment,
                     paymentStatus: "Success",
-                    courseName: currentCourse?.courseName,
-                    courseCategory: currentCourse?.courseCategory,
-                    startDate: formData.sdate,
+                    courseName: currentCourse?.clevertapData?.name,
+                    courseCategory: currentCourse?.clevertapData?.courseCategory,
+                    startDate: formData.startDate,
                     endDate: formData.sdate,
                     date: formData.sdate,
                     pageName: window.location.href,
@@ -1103,14 +1103,16 @@ if (isOneMonthTTC()) {
                     nonResidentialMode: currentCourse?.nonResidentialInfo?.courseMode,
                     residentialLocation: currentCourse?.residentialInfo?.residentialMode,
                     nonResidentialLocation: currentCourse?.nonResidentialInfo?.nonResidentialMode,
-                    courseType: currentCourse?.courseType,
-                    courseSubType: currentCourse?.courseSubType,
+                    courseType: currentCourse?.clevertapData?.courseType,
+                    courseCertificate: currentCourse?.clevertapData?.courseCertificate,
+                    courseSubType: currentCourse?.clevertapData?.courseSubType,
                     language: currentCourse?.language,
+                    courseTopCategory: currentCourse?.clevertapData?.courseTopCategory,
                     mode: formData.mode,
                     // dayType,
                     batchNo: currentCourse.batch,
                     // dateTimeTimestamp,
-                    preRequisite: currentCourse?.preRequisite,
+                    preRequisite: currentCourse?.clevertapData?.coursePreRequisite,
                     status: "Success",
                     name: formData.name,
                     emailId: formData.email,
@@ -1398,23 +1400,25 @@ if (isOneMonthTTC()) {
       }
       handleSubmit1();
       handleCTProccedToPayment({
-        courseTitle: currentCourse?.title,
+        courseTitle: currentCourse?.clevertapData?.name,
         date: formData.sdate,
         fees: currentCourse?.fees,
         courseFee: courseFee,
         mode: formData.mode,
         timing: currentCourse?.timing,
         tenure: currentCourse?.tenure,
-        courseCategory: currentCourse?.courseCategory,
-        courseSubType: currentCourse?.courseSubType,
+        courseCategory: currentCourse?.clevertapData?.courseCategory,
+        courseSubType: currentCourse?.clevertapData?.courseSubType,
         onlineMode: currentCourse?.onlineInfo?.courseMode,
         residentialMode: currentCourse?.residentialInfo?.courseMode,
         nonResidentialMode: currentCourse?.nonResidentialInfo?.courseMode,
         residentialLocation: currentCourse?.residentialInfo?.residentialMode,
         nonResidentialLocation: currentCourse?.nonResidentialInfo?.nonResidentialMode,
-        courseType: currentCourse?.courseType,
+         courseCertificate: currentCourse?.clevertapData?.courseCertificate,
+        courseType: currentCourse?.clevertapData?.courseType,
         language: currentCourse?.language,
-        PreRequisite: currentCourse?.preRequisite,
+        PreRequisite: currentCourse?.clevertapData?.coursePreRequisite,
+        courseTopCategory: currentCourse?.clevertapData?.courseTopCategory,
         category: currentCourse?.category,
         batch: currentCourse?.batch,
         nonResidential: currentCourse?.nonResidential,

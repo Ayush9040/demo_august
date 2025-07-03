@@ -261,3 +261,12 @@
         padding: 30px 0px;
     }
 }
+
+@media(min-width: 1930px) {
+    .photo-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}

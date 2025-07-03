@@ -31,6 +31,7 @@ import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
 import Icon from './images/Icon.png';
+import Footer from '../../../Components/Footer'
 
 const CourseSection = lazy(() => import('../../../Components/CourseSections'))
 // const courseCardData = lazy(() =>
@@ -1207,7 +1208,7 @@ const Courses = () => {
           backgroundColor: '#fff',
           padding: '4px',
           boxShadow: '0px 10px 15px -4px rgba(0,0,0,0.1)', // Smoother, softer shadow
-          zIndex: 1, // Makes sure it stays above the content
+          zIndex: 100, // Makes sure it stays above the content
         }}>
           <div className="search">
             <h1>Courses</h1>
@@ -1675,7 +1676,7 @@ const Courses = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/personal-development-programs">
+                    <Link to="/personal-development">
                       <p className='arrow_course_new'>Yoga - Continuing Personal Development
 
                          <div className='no_desktop'>
@@ -1725,7 +1726,9 @@ const Courses = () => {
           </div>
         </div> */}
         <div></div>
-        {courseCardData && courseCardData.map((item, i) => {
+        <div className='course_wrapper_xl_screen'>
+          <div className='inner_xl'>
+            {courseCardData && courseCardData.map((item, i) => {
           // setPathParam(item.title)
           return (
             <>
@@ -1746,6 +1749,8 @@ const Courses = () => {
 
         })
         }
+          </div>
+        </div>
 
         <div className="certifications">
           <h2>
@@ -1803,6 +1808,8 @@ const Courses = () => {
           </div>
         </div>
         <AlumniCarousel />
+
+        <Footer />
       </div >
     </>
   )

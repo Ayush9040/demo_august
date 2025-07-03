@@ -217,3 +217,9 @@
   justify-content: center;
 }
 }
+
+@media(min-width: 1930px) {
+  .blog-container .blog-content .blog-header .blog_view_button {
+    margin-top: 0px;
+  }
+}

@@ -507,3 +507,17 @@
   font-size: 12px;
 }
 }
+
+@media(min-width: 1930px) {
+  .subscription .subscription-form input {
+    width: 100%;
+  }
+
+  .subscription div .global_home_btn {
+    width: 100%;
+  }
+
+  .newsletter-container .description p {
+    width: 100%;
+  }
+}

@@ -81,3 +81,9 @@
     margin: 0 auto;
   }
 }
+
+@media(min-width: 1930px) {
+  .blog-card .blog-card-text {
+    height: 170px;
+  }
+}
