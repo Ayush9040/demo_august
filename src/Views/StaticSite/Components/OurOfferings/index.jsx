@@ -37,7 +37,7 @@ const OurOfferings = () => {
 
   const carouselData = [
     {
-      name: '3-Month TTC',
+      name: '900 Hours - 3 Months Advanced TTC',
       description:
         'Learn and witness marked improvement in your life, relationships, and work',
       redirect: '/3-months-advanced-teacher-training-course',
@@ -83,7 +83,7 @@ const OurOfferings = () => {
       imgSrc: baseDomain + courseAssets.courseAsset115,
     },
     {
-      name: 'One Month TTC',
+      name: '200 Hours - 1 Month Basic TTC',
       description:
         'Comprehensive training to build a strong foundation in yoga teaching.',
       redirect: '/one-month-ttc',
