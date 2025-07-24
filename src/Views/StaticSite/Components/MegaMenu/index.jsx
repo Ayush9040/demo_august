@@ -27,8 +27,9 @@ const MegaMenu = ({ setNav }) => {
     // { name: 'NEWS, EVENTS & MEDIA', link: '/image-gallery', id: 12, key: 'NEWS', },
     // { name: 'ALUMNI', link: '/alumni-gallery', id: 13, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 14, key: 'VOLUNTEER' },
-    // { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
-    { name: 'CONTACT US', link: '/contact', id: 16, key: 'CONTACT' },
+    
+    { name: 'CONTACT US', link: '/contact', id: 15, key: 'CONTACT' },
+    { name: 'LOCATE US', link: '/our-branches', id: 16, key: 'LOCATE' },
     
   ]
 
