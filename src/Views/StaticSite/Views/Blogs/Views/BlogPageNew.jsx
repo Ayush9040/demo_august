@@ -68,9 +68,9 @@ const BlogPageNew = () => {
       <div className="blog-hero-section">
         <div className="blog-hero-overlay">
           <h1 className="blog-hero-title">Yoga Resources and insights</h1>
-          <p className="blog-hero-desc">
-            Explore insightful articles, timeless practices, and wellness wisdom to elevate your daily life.
-          </p>
+          <div className="blog-hero-desc">
+            <p>Explore insightful articles, timeless practices, and wellness wisdom to elevate your daily life.</p>
+          </div>
         </div>
       </div>
       <div className="blog-page-new">
