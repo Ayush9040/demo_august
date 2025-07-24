@@ -40,10 +40,10 @@ const OurOfferings = () => {
       name: '3-Month TTC',
       description:
         'Learn and witness marked improvement in your life, relationships, and work',
-      redirect: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
+      redirect: '/3-months-advanced-teacher-training-course',
       timeline: '3-month',
-      price: '40,000',
-      imgSrc: month_ttc,
+      price: '1,10,000',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/dsc08073-%281%2966282a71-f9a1-4c5e-b6df-6afae042d8cf.webp',
       height: '376px',
     },
     {
@@ -83,19 +83,19 @@ const OurOfferings = () => {
       imgSrc: baseDomain + courseAssets.courseAsset115,
     },
     {
-      name: 'Children’s Regular Classes',
+      name: 'One Month TTC',
       description:
-        'This asana class will help children develop their focus, memory, discipline, determination, and value system.',
-      redirect: '/childrens-regular-classes',
-      timeline: 'Any Day',
-      price: '1100',
-      imgSrc: baseDomain + homeAssets.homeAsset10,
+        'Comprehensive training to build a strong foundation in yoga teaching.',
+      redirect: '/one-month-ttc',
+      timeline: '1 Month',
+      price: '33,000',
+      imgSrc: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/course/200-hour-yoga-teacher-training-course.webp',
     },
     
   ]
 
   const [smallDescription, setSmallDescription] = useState(
-    carouselData[0].description.substring(0, 120) + '...'
+    carouselData[0].description.substring(0, 120)
   )
 
   const [redirect, setRedirect] = useState(carouselData[0].redirect)
