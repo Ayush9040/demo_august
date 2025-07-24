@@ -41,6 +41,7 @@ const YogaTotalHealth = lazy(() => import('../Views/Publication/Views/yoga-healt
 const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
+const BlogPageNew = lazy(() => import('../Views/Blogs/Views/BlogPageNew'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
 const SocialResponsibility = lazy(() => import('../Views/SocialPage/Views/social-responsibility'))
 const VolunteerPage = lazy(() => import('../Views/Volunteer/Views/volunteer'))
@@ -372,7 +373,7 @@ const staticSiteRoutes = [
   },
   //Blogs
   {
-    Component: BlogPage,
+    Component: BlogPageNew,
     path: '/blogs',
     exact: true,
     id: 'statisSiteBlog',

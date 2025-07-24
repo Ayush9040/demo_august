@@ -1,9 +1,10 @@
 import BlogAnother from '../Views/Blog'
 import BlogPage from '../Views/blog-page'
+import BlogPageNew from '../Views/BlogPageNew'
 
 const blogRoutes = [
   {
-    Component: BlogPage,
+    Component: BlogPageNew,
     path: '/',
     exact: true,
     id: 'statisSiteUnderBlogs',
