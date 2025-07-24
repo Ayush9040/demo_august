@@ -59,7 +59,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
         className="social-initiative-image"
         id={alumni ? 'support-page' : ''}
       >
-        <img src={image} alt={alt} />
+        <Link to='https://www.annambrahma.org/' target='_blank'><img src={image} alt={alt} /></Link>
       </div>
       <div className="social-initiative-content">
         <Heading
@@ -80,7 +80,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
               return (
                 <div key={i} className="social-initiative-wrap">
 
-                  {item.url ? <Link to={item.url}><h1>{item.title}</h1></Link> : <h1>{item.title}</h1>}
+                  {item.url ? <Link to={item.url} target='_blank'><h1>{item.title}</h1></Link> : <h1>{item.title}</h1>}
 
                   <p style={{marginTop: '12px'}}>{item.description}</p>
                   {/* {item.url} */}
