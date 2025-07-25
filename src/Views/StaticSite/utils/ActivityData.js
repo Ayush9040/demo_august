@@ -18,11 +18,11 @@ export const activityData = [
   },
   {
     id: 11,
-    title: 'BA Yoga Shastra',
+    title: 'Alibaug Retreat',
     description:
-        'A comprehensive four-year undergraduate program designed to build a strong foundation in the philosophy, science, and practice of yoga.',
-    image:`${BA_yoga_1}`,
-    url: '/ba-yoga-shastra'
+        'The Yoga Institute’s Alibaug retreat offers serene getaways where nature heals and yoga restores body, mind, and spirit.',
+    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/alibaug-highlight-section-%281%29d851ab52-c13d-4880-b3a8-5668ef701204.webp`,
+    url: '/alibaug'
   },
   // {
   //   id: 10,
