@@ -42,6 +42,7 @@ const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
 const BlogPageNew = lazy(() => import('../Views/Blogs/Views/BlogPageNew'))
+const latestResearches = lazy(() => import('../Views/Blogs/Views/latestResearches'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
 const SocialResponsibility = lazy(() => import('../Views/SocialPage/Views/social-responsibility'))
 const VolunteerPage = lazy(() => import('../Views/Volunteer/Views/volunteer'))
@@ -378,6 +379,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteBlog',
     routePath: '/blogs',
+    name: 'Blog',
+  },
+  {
+    Component: latestResearches,
+    path: '/latest-researches',
+    exact: true,
+    id: 'statisSiteBlog',
+    routePath: '/latest-researches',
     name: 'Blog',
   },
   //Experiences/Testimonials
@@ -863,14 +872,15 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/seven-days-landing-page',
     name: 'SevenDays',
-  }, {
-    Component: BlogsByTag,
-    path: '/tag/:tagId',
-    exact: true,
-    id: 'statisSiteBlogsByTag',
-    routePath: '/tag/:tagId',
-    name: 'Blogs By Tag'
-  },
+  }, 
+  // {
+  //   Component: BlogsByTag,
+  //   path: '/tag/:tagId',
+  //   exact: true,
+  //   id: 'statisSiteBlogsByTag',
+  //   routePath: '/tag/:tagId',
+  //   name: 'Blogs By Tag'
+  // },
   {
     Component: corporateWellness,
     path: '/corporate-workshops',

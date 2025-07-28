@@ -14,10 +14,11 @@ import metaDataObj from '../../../../../Constants/metaData.json'
 import './BlogPageNew.css'
 import Footer from '../../../Components/Footer'
 import dropdown_blog from './images/dropdown_blog.svg'
+import img_readArticle from './images/img_readArticle.svg'
 
 const BlogPageNew = () => {
 
-  const [ pagination,setPagination ] = useState({ page:1,limit:10 })
+  const [ pagination,setPagination ] = useState({ page:1,limit:1000 })
   //const [ pageRange,setPageRange] = useState(5)
 
   const { blogs, count, blog }=useSelector(state=>state.blogs)
@@ -33,6 +34,12 @@ const BlogPageNew = () => {
   const [activeMenuSub, setActiveMenuSub] = useState(null);
   const [activeMenuLeaf, setActiveMenuLeaf] = useState(null);
   const [dropdownAlignRight, setDropdownAlignRight] = useState({}); // { [catId]: true/false }
+  
+  // Mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileMenuView, setMobileMenuView] = useState('categories'); // 'categories', 'subcategories', 'blogs'
+  const [selectedMobileCategory, setSelectedMobileCategory] = useState(null);
+  const [selectedMobileSubcategory, setSelectedMobileSubcategory] = useState(null);
 
   const menuBtnRefs = useRef([]); // Array of refs for menu buttons
 
@@ -60,53 +67,97 @@ const BlogPageNew = () => {
         }
       });
     });
-    // Convert to array structure
-    return Array.from(catMap.values()).map(cat => ({
+    // Convert to array structure and sort with Philosophy first, then reverse the rest
+    const categoriesArray = Array.from(catMap.values()).map(cat => ({
       ...cat,
       subcategories: Array.from(cat.subcategories.values()).map(sub => ({
         ...sub,
         leafcategories: Array.from(sub.leafcategories.values())
       }))
-    })).reverse();
+    }));
+    
+    // Sort to put Philosophy first, Latest Researches last, then reverse the rest
+    const sortedArray = categoriesArray.sort((a, b) => {
+      if (a.name === 'Philosophy') return -1;
+      if (b.name === 'Philosophy') return 1;
+      if (a.name === 'Latest Researches') return 1;
+      if (b.name === 'Latest Researches') return -1;
+      return 0;
+    });
+    
+    // Reverse everything except Philosophy and Latest Researches
+    const philosophy = sortedArray.find(cat => cat.name === 'Philosophy');
+    const latestResearches = sortedArray.find(cat => cat.name === 'Latest Researches');
+    const otherCategories = sortedArray.filter(cat => cat.name !== 'Philosophy' && cat.name !== 'Latest Researches').reverse();
+    
+    return [philosophy, ...otherCategories, latestResearches].filter(Boolean);
   }, [blogs]);
 
-  // Extract blogs for a given leafcategory id
-  const getBlogsForLeaf = (leafId) =>
-    (blogs || []).filter(blog =>
-      (blog.leafcategories || []).some(leaf => leaf._id === leafId)
-    );
+  // Extract blogs for a given leafcategory id with complete hierarchy filtering
+  const getBlogsForLeaf = (leafId, categoryId, subcategoryId) =>
+    (blogs || []).filter(blog => {
+      // Check if blog has the selected category
+      const hasCategory = (blog.categories || []).some(cat => cat._id === categoryId);
+      
+      // Check if blog has the selected subcategory
+      const hasSubcategory = (blog.subcategories || []).some(sub => sub._id === subcategoryId);
+      
+      // Check if blog has the selected leaf category
+      const hasLeafCategory = (blog.leafcategories || []).some(leaf => leaf._id === leafId);
+      
+      // Return true only if blog has ALL three: category, subcategory, and leaf category
+      return hasCategory && hasSubcategory && hasLeafCategory;
+    });
 
+  // Extract unique categories for blog tags (no dropdowns)
+  const uniqueCategories = React.useMemo(() => {
+    const map = new Map();
+    (blogs || []).forEach(blog => {
+      (blog.categories || []).forEach(cat => {
+        if (cat && cat._id && !map.has(cat._id)) {
+          map.set(cat._id, cat);
+        }
+      });
+    });
+    return Array.from(map.values());
+  }, [blogs]);
+
+  // Only call fetchBlogsData on mount or pagination change
   useEffect(() => {
     dispatch(fetchBlogsData(pagination));
     // Only scroll to top on pagination change, not on category change
-    // window.scrollTo(0, 0); // Remove or comment this out to prevent scroll on category change
-  }, [pagination]);
+  }, [dispatch, pagination]);
 
-  // Filter blogs by selected category
+  // Featured and Popular always use the full blogs array
+  const featuredStories = blogs?.slice(0, 5) || [];
+  const popularArticles = blogs?.slice(5, 8) || [];
+
+  // Recent Articles uses filteredBlogs - show only 12 items per page
   const filteredBlogs = selectedCategory === 'all'
     ? blogs
     : blogs.filter(blog =>
         (blog.categories || []).some(cat => cat._id === selectedCategory)
       );
-
-  // Pagination for filtered blogs
-  const paginatedBlogs = selectedCategory === 'all'
-    ? filteredBlogs.slice((pagination.page - 1) * pagination.limit, pagination.page * pagination.limit)
-    : filteredBlogs;
+  const paginatedBlogs = filteredBlogs.slice((pagination.page - 1) * 12, pagination.page * 12);
 
   // useEffect(()=>{
   //   window.innerWidth<900 ? setPageRange(1):setPageRange(5)
   // },[ window.innerWidth ])
 
-  const viewBlog = {
-    title: 'Blogs',
+  const innerNavProps = {
+    title: 'blogs',
     color: 'orange',
     menuColor: 'orange',
-    menuItems: [],
+    menuItems: menuData.map(cat => ({
+      name: cat.name,
+      url: cat.name === "Latest Researches" ? "/blogs/latest-researches" : `/blogs/category/${cat.slug || cat._id}`,
+      innerTitle: cat.name.toLowerCase(),
+      title: cat.name
+    }))
   }
 
   const handlePageChange = (pageNumber) => {
-    pageNumber!==1 ? setPagination({ ...pagination,page:pageNumber, limit:9 }):setPagination({ ...pagination,page:pageNumber, limit:10 })
+    setPagination({ ...pagination, page: pageNumber, limit: 1000 })
   }
   
   // Helper to format date
@@ -118,10 +169,6 @@ const BlogPageNew = () => {
   };
 
   // Split blogs for sections (mock logic, adjust as needed)
-  const featuredStories = blogs?.slice(0, 5) || [];
-  const popularArticles = blogs?.slice(5, 8) || [];
-  const recentArticles = blogs || [];
-
   // Helper to check if dropdown should align right
   const handleDropdownOpen = (catId, btnRef) => {
     setOpenMenuCatId(openMenuCatId === catId ? null : catId);
@@ -140,102 +187,231 @@ const BlogPageNew = () => {
     }, 0);
   };
 
+  // Mobile menu handlers
+  const handleMobileMenuOpen = () => {
+    setIsMobileMenuOpen(true);
+    setMobileMenuView('categories');
+    setSelectedMobileCategory(null);
+    setSelectedMobileSubcategory(null);
+  };
+
+  const handleMobileMenuClose = () => {
+    setIsMobileMenuOpen(false);
+    setMobileMenuView('categories');
+    setSelectedMobileCategory(null);
+    setSelectedMobileSubcategory(null);
+  };
+
+  const handleMobileCategoryClick = (category) => {
+    setSelectedMobileCategory(category);
+    setMobileMenuView('subcategories');
+  };
+
+  const handleMobileSubcategoryClick = (subcategory) => {
+    setSelectedMobileSubcategory(subcategory);
+    setMobileMenuView('blogs');
+  };
+
+  const handleMobileBackClick = () => {
+    if (mobileMenuView === 'blogs') {
+      setMobileMenuView('subcategories');
+      setSelectedMobileSubcategory(null);
+    } else if (mobileMenuView === 'subcategories') {
+      setMobileMenuView('categories');
+      setSelectedMobileCategory(null);
+    }
+  };
+
   return (
     <>
       {metaDataObj[location.pathname] && (
         <Helmet title={metaDataObj[location.pathname || '']?.title || ''} />
       )}
       <div>
-      <InnerNavComponent abc={viewBlog}/>
+      <InnerNavComponent abc={innerNavProps}/>
       <div></div>
       </div>
-      {/* Header Menu Bar */}
-      <div className="blog-header-menu-bar-centered">
-        <div className="blog-header-menu-bar-inner">
-          {menuData.map((cat, idx) => (
-            cat.name === 'Latest Researches' ? (
-              <button
-                key={cat._id}
-                className="blog-header-menu-btn"
-                onClick={() => window.location.href = '/latest-researches'}
-              >
-                {cat.name}
-              </button>
-            ) : (
-              <div
-                className={`blog-header-menu-dropdown${dropdownAlignRight[cat._id] ? ' open-right' : ''}`}
-                key={cat._id}
-              >
-                <button
-                  ref={el => menuBtnRefs.current[idx] = el}
-                  className={`blog-header-menu-btn${openMenuCatId === cat._id ? ' active' : ''}`}
-                  onClick={e => {
-                    e.preventDefault();
-                    handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
-                  }}
-                >
-                  {cat.name} <span className="dropdown-arrow"><img src={dropdown_blog} alt="arrow-down" /></span>
-                </button>
-                {openMenuCatId === cat._id && cat.subcategories.length > 0 && (
-                  <div
-                    className="blog-header-menu-dropdown-content-centered"
-                  >
-                    <div className="blog-header-menu-dropdown-content-inner">
-                      {/* Subcategories column */}
-                      <div className="blog-header-menu-subcat-col">
-                        {cat.subcategories.map(sub => (
-                          <div
-                            key={sub._id}
-                            className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
-                            onClick={e => {
-                              e.stopPropagation();
-                              setActiveMenuSub(sub._id);
-                              setActiveMenuLeaf(null);
-                            }}
-                          >
-                            <div className="blog-header-menu-sub-title">{sub.name}</div>
-                            <div className="blog-header-menu-sub-desc">{sub.desc}</div>
+             {/* Header Menu Bar */}
+       <div className="blog-header-menu-bar-centered">
+         <div className="blog-header-menu-bar-inner">
+           {/* Desktop Navigation (above 768px) */}
+           <div className="blog-header-menu-desktop">
+             {menuData.map((cat, idx) => (
+               <div
+                 className={`blog-header-menu-dropdown${dropdownAlignRight[cat._id] ? ' open-right' : ''}`}
+                 key={cat._id}
+               >
+                 <button
+                   ref={el => menuBtnRefs.current[idx] = el}
+                   className={`blog-header-menu-btn${openMenuCatId === cat._id ? ' active' : ''}${cat.name !== 'Latest Researches' ? ' has-dropdown' : ''}`}
+                   onClick={e => {
+                     e.preventDefault();
+                     cat.name === 'Latest Researches' 
+                       ? window.location.href = '/latest-researches'
+                       : handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
+                   }}
+                 >
+                   {cat.name} {cat.name !== 'Latest Researches' && <span className="dropdown-arrow"><img src={dropdown_blog} alt="arrow-down" /></span>}
+                 </button>
+                 {openMenuCatId === cat._id && cat.subcategories.length > 0 && (
+                   <div className="blog-header-menu-dropdown-content-centered">
+                     <div className="blog-header-menu-dropdown-content-inner">
+                       {/* Subcategories column */}
+                       <div className="blog-header-menu-subcat-col">
+                         {cat.subcategories.slice().reverse().map(sub => (
+                           <div
+                             key={sub._id}
+                             className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
+                             onClick={e => {
+                               e.stopPropagation();
+                               setActiveMenuSub(sub._id);
+                               setActiveMenuLeaf(null);
+                             }}
+                           >
+                             <div className="blog-header-menu-sub-title">{sub.name}</div>
+                             <div className="blog-header-menu-sub-desc">{sub.desc}</div>
+                           </div>
+                         ))}
+                       </div>
+                                                {/* Leafcategories column */}
+                        {activeMenuSub && cat.subcategories.find(s => s._id === activeMenuSub)?.leafcategories.length > 0 && (
+                          <div className="blog-header-menu-leafcat-col">
+                            <div className="blog-header-menu-leafcat-title">
+                              {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
+                            </div>
+                            {cat.subcategories.find(s => s._id === activeMenuSub).leafcategories.slice().reverse().map(leaf => (
+                              <div
+                                key={leaf._id}
+                                className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
+                                onClick={e => {
+                                  e.stopPropagation();
+                                  setActiveMenuLeaf(leaf._id);
+                                }}
+                              >
+                                {leaf.name}
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                      {/* Leafcategories column */}
-                      {activeMenuSub && cat.subcategories.find(s => s._id === activeMenuSub)?.leafcategories.length > 0 && (
-                        <div className="blog-header-menu-leafcat-col">
-                          {cat.subcategories.find(s => s._id === activeMenuSub).leafcategories.map(leaf => (
-                            <div
-                              key={leaf._id}
-                              className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
-                              onClick={e => {
-                                e.stopPropagation();
-                                setActiveMenuLeaf(leaf._id);
-                              }}
-                            >
-                              {leaf.name}
+                        )}
+                                                {/* Blogs column */}
+                        {activeMenuLeaf && (
+                          <div className="blog-header-menu-blogs-col">
+                            <div className="blog-header-menu-blogs-title">
+                              {cat.subcategories.find(s => s._id === activeMenuSub)?.leafcategories.find(l => l._id === activeMenuLeaf)?.name}
                             </div>
-                          ))}
-                        </div>
-                      )}
-                      {/* Blogs column */}
-                      {activeMenuLeaf && (
-                        <div className="blog-header-menu-blogs-col">
-                          {getBlogsForLeaf(activeMenuLeaf).map(blog => (
-                            <div key={blog._id} className="blog-header-menu-blog-item">
-                              <div className="blog-header-menu-blog-title">{blog.title}</div>
-                              <div className="blog-header-menu-blog-excerpt">{blog.excerpt}</div>
-                            </div>
-                          ))}
-                          <div className="blog-header-menu-seeall">See all Blogs &rarr;</div>
-                        </div>
-                      )}
-                    </div>
+                            {getBlogsForLeaf(activeMenuLeaf, cat._id, activeMenuSub).slice().reverse().map(blog => (
+                              <div key={blog._id} className="blog-header-menu-blog-item">
+                                <div className="blog-header-menu-blog-title">{blog.title}</div>
+                                <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
+                              </div>
+                            ))}
+                            <div className="blog-header-menu-seeall">See all Blogs &rarr;</div>
+                          </div>
+                        )}
+                     </div>
+                   </div>
+                 )}
+                 </div>
+               )
+             )}
+           </div>
+           
+                       {/* Mobile Navigation (below 768px) */}
+            <div className="blog-header-menu-mobile">
+              <button className="blog-header-menu-mobile-btn" onClick={handleMobileMenuOpen}>
+                All category <span className="dropdown-arrow"><img src={dropdown_blog} alt="arrow-down" /></span>
+              </button>
+            </div>
                   </div>
-                )}
-              </div>
-            )
-          ))}
-        </div>
-      </div>
-      <div className="blog-hero-section">
+       </div>
+       
+       {/* Mobile Menu Modal/Drawer */}
+       {isMobileMenuOpen && (
+         <div className="mobile-menu-overlay" onClick={handleMobileMenuClose}>
+           <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+             {/* Back Button (not in categories view) */}
+             {mobileMenuView !== 'categories' && (
+               <button className="mobile-menu-back" onClick={handleMobileBackClick}>
+                 ← Back
+               </button>
+             )}
+             
+             {/* Header */}
+             <div className="mobile-menu-header">
+               <div className="mobile-menu-title">
+                 {mobileMenuView === 'categories' && 'All category'}
+                 {mobileMenuView === 'subcategories' && selectedMobileCategory?.name}
+                 {mobileMenuView === 'blogs' && selectedMobileSubcategory?.name}
+               </div>
+               <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
+                 ✕
+               </button>
+             </div>
+             
+             {/* Search Bar (only in categories view) */}
+             {mobileMenuView === 'categories' && (
+               <div className="mobile-menu-search">
+                 <input type="text" placeholder="Search blogs" className="mobile-search-input" />
+                 <button className="mobile-search-btn">Search</button>
+               </div>
+             )}
+             
+             {/* Content */}
+             <div className="mobile-menu-content">
+               {mobileMenuView === 'categories' && (
+                 <div className="mobile-categories-list">
+                   {menuData.map(cat => (
+                     <div 
+                       key={cat._id} 
+                       className="mobile-category-item"
+                       onClick={() => cat.name === 'Latest Researches' 
+                         ? window.location.href = '/latest-researches'
+                         : handleMobileCategoryClick(cat)
+                       }
+                     >
+                       <span className="mobile-category-name">{cat.name}</span>
+                       {cat.name !== 'Latest Researches' && (
+                         <span className="mobile-category-arrow">→</span>
+                       )}
+                     </div>
+                   ))}
+                 </div>
+               )}
+               
+               {mobileMenuView === 'subcategories' && selectedMobileCategory && (
+                 <div className="mobile-subcategories-list">
+                   {selectedMobileCategory.subcategories.map(sub => (
+                     <div 
+                       key={sub._id} 
+                       className="mobile-subcategory-item"
+                       onClick={() => handleMobileSubcategoryClick(sub)}
+                     >
+                       <span className="mobile-subcategory-name">{sub.name}</span>
+                       <span className="mobile-subcategory-arrow">→</span>
+                     </div>
+                   ))}
+                 </div>
+               )}
+               
+               {mobileMenuView === 'blogs' && selectedMobileSubcategory && (
+                 <div className="mobile-blogs-list">
+                   {selectedMobileCategory.subcategories.find(sub => sub._id === selectedMobileSubcategory._id)?.leafcategories?.map(leaf => 
+                     getBlogsForLeaf(leaf._id, selectedMobileCategory._id, selectedMobileSubcategory._id).map(blog => (
+                       <div key={blog._id} className="mobile-blog-item">
+                         <div className="mobile-blog-title">{blog.title}</div>
+                         <div className="mobile-blog-link">Read Article →</div>
+                       </div>
+                     ))
+                   ).flat() || []}
+                   <div className="mobile-see-all-blogs">See all Blogs →</div>
+                 </div>
+               )}
+             </div>
+           </div>
+         </div>
+       )}
+       
+       <div className="blog-hero-section">
         <div className="blog-hero-overlay">
           <h1 className="blog-hero-title">Yoga Resources and insights</h1>
           <div className="blog-hero-desc">
@@ -312,32 +488,28 @@ const BlogPageNew = () => {
           <div className="blog-tags">
             <button
               className={`blog-tag${selectedCategory === 'all' ? ' active' : ''}`}
-              onClick={e => { e.preventDefault(); setSelectedCategory('all'); setPagination({ ...pagination, page: 1 }); }}
+              type="button"
+              onClick={e => {
+                e.preventDefault();
+                setSelectedCategory('all');
+                setPagination({ ...pagination, page: 1 });
+              }}
             >
               All
             </button>
-            {menuData.map(cat => (
-              <div key={cat._id} className="blog-tag-dropdown">
-                <button
-                  className={`blog-tag${selectedCategory === cat._id ? ' active' : ''}`}
-                  onClick={e => { e.preventDefault(); setSelectedCategory(cat._id); setPagination({ ...pagination, page: 1 }); }}
-                >
-                  {cat.name} <span className="dropdown-arrow">▼</span>
-                </button>
-                {openMenuCatId === cat._id && cat.subcategories.length > 0 && (
-                  <div className="blog-tag-dropdown-content">
-                    {cat.subcategories.map(sub => (
-                      <div
-                        key={sub._id}
-                        className={`blog-tag-sub-item${selectedCategory === sub._id ? ' active' : ''}`}
-                        onClick={e => { e.preventDefault(); setSelectedCategory(sub._id); setPagination({ ...pagination, page: 1 }); }}
-                      >
-                        {sub.name}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+            {uniqueCategories.slice().reverse().map(cat => (
+              <button
+                key={cat._id}
+                className={`blog-tag${selectedCategory === cat._id ? ' active' : ''}`}
+                type="button"
+                onClick={e => {
+                  e.preventDefault();
+                  setSelectedCategory(cat._id);
+                  setPagination({ ...pagination, page: 1 });
+                }}
+              >
+                {cat.name}
+              </button>
             ))}
           </div>
           <div className="blog-recent-list">
@@ -359,21 +531,19 @@ const BlogPageNew = () => {
               </div>
             ))}
           </div>
-          {/* Pagination only for 'All' */}
-          {selectedCategory === 'all' && (
-            <div className="blog-pagination">
-              <Pagination
-                activePage={pagination.page}
-                itemsCountPerPage={pagination.limit}
-                totalItemsCount={filteredBlogs.length}
-                pageRangeDisplayed={5}
-                onChange={pageNumber => setPagination({ ...pagination, page: pageNumber })}
-                innerClass="pagination-list"
-                itemClass="pagination-item"
-                linkClass="pagination-link"
-              />
-            </div>
-          )}
+          {/* Pagination for all categories */}
+          <div className="blog-pagination">
+            <Pagination
+              activePage={pagination.page}
+              itemsCountPerPage={12}
+              totalItemsCount={filteredBlogs.length}
+              pageRangeDisplayed={5}
+              onChange={handlePageChange}
+              innerClass="pagination-list"
+              itemClass="pagination-item"
+              linkClass="pagination-link"
+            />
+          </div>
         </div>
 
         {/* Newsletter Signup */}
