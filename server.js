@@ -1238,6 +1238,9 @@ app.get('*', async (req, res) => {
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
   const metaData = await getMetaData(correctPath)
 
+  // Check if page exists - if metaData is null/undefined, it's a 404
+  const is404Page = !metaData || (!metaData.title && !metaData.h1Tag)
+
   let titleTag = null
   let metaArray = []
   let linkArray = []
@@ -1251,38 +1254,61 @@ app.get('*', async (req, res) => {
   let pTag = ''
   let pTagBlog = ''
 
-  if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
-  if (metaData && metaData.links) {
-    linkArray = metaData.links.map((link) => {
-      if (link.rel) return `<link class="meta-heading" rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
-    })
-  }
-  if (metaData && metaData.metaData) {
-    metaArray = metaData.metaData.map((meta) => {
-      if (meta.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
-      if (meta.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
-      return null
-    })
-  }
-  if (metaData && metaData.script) script = metaData.script
+  if (is404Page) {
+    // For 404 pages, inject specific meta tags including noindex
+    titleTag = `<title>404 Error - Page Not Found | The Yoga Institute</title>`
+    metaArray = [
+      `<meta name="robots" content="noindex, nofollow" data-react-helmet="true" />`,
+      `<meta name="description" content="The page you are looking for does not exist." data-react-helmet="true" />`,
+      `<meta property="og:title" content="404 Error - Page Not Found" data-react-helmet="true" />`,
+      `<meta property="og:description" content="The page you are looking for does not exist." data-react-helmet="true" />`,
+      `<meta property="og:type" content="website" data-react-helmet="true" />`,
+      `<meta name="twitter:card" content="summary" data-react-helmet="true" />`,
+      `<meta name="twitter:title" content="404 Error - Page Not Found" data-react-helmet="true" />`,
+      `<meta name="twitter:description" content="The page you are looking for does not exist." data-react-helmet="true" />`
+    ]
+  } else {
+    // Normal page meta tags
+    if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
+    
+    // Add canonical link for non-404 pages
+    const canonicalUrl = `https://theyogainstitute.org${correctPath}`
+    linkArray.push(`<link rel="canonical" href="${canonicalUrl}" data-react-helmet="true" />`)
+    
+    if (metaData && metaData.links) {
+      const existingLinks = metaData.links.map((link) => {
+        if (link.rel) return `<link class="meta-heading" rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
+      })
+      linkArray.push(...existingLinks)
+    }
+    if (metaData && metaData.metaData) {
+      metaArray = metaData.metaData.map((meta) => {
+        if (meta.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
+        if (meta.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
+        return null
+      })
+    }
+    if (metaData && metaData.script) script = metaData.script
 
-  if (metaData && metaData.h1Tag) h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>`
-  if (metaData && metaData.h2Tags) {
-    h2Tags = metaData.h2Tags.map((string) => `<h2 class="meta-heading">${string}</h2>`)
+    if (metaData && metaData.h1Tag) h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>`
+    if (metaData && metaData.h2Tags) {
+      h2Tags = metaData.h2Tags.map((string) => `<h2 class="meta-heading">${string}</h2>`)
+    }
+    if (metaData && metaData.aTags) {
+      aTags = metaData.aTags.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
+      blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
+    }
+    if (metaData && metaData.pTag) {
+      pTag = `<p class="meta-heading">${metaData.pTag}</p>`
+    }
+    if (metaData && metaData.pTagBlog) {
+      pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`
+    }
+    if (metaData && metaData.aTag) {//added to test related courses as anchor tags
+      courseaTags = metaData.aTag.map((url) => `<a  class="meta-heading" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
+    }
   }
-  if (metaData && metaData.aTags) {
-    aTags = metaData.aTags.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
-    blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
-  }
-  if (metaData && metaData.pTag) {
-    pTag = `<p class="meta-heading">${metaData.pTag}</p>`
-  }
-  if (metaData && metaData.pTagBlog) {
-    pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`
-  }
-  if (metaData && metaData.aTag) {//added to test related courses as anchor tags
-    courseaTags = metaData.aTag.map((url) => `<a  class="meta-heading" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
-  }
+
   let fbMeta = null
   if (reqPath == '/') {
     fbMeta='<meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" />'
@@ -1290,8 +1316,17 @@ app.get('*', async (req, res) => {
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta])
   $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags])
-  res.status(200).send($.html())
+  
+  // Return 301 status for 404 pages as requested
+  if (is404Page) {
+    res.status(301).send($.html())
+  } else {
+    res.status(200).send($.html())
+  }
 })
+
+
+
 
 app.listen(PORT, () => {
   console.log('SERVER Started at port: ' + PORT)

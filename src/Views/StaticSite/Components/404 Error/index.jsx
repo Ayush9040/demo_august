@@ -4,7 +4,6 @@ import { legacy1 } from '../../assets/icons/icon'
 import './styles.scss'
 
 const Pagenotfound = () => {
-
   const navigate = useNavigate()
 
   return(

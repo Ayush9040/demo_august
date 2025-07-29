@@ -59,6 +59,8 @@ const MetaTags = () => {
     }
   }
 
+
+
   return metaDataObj[location.pathname] ? (
     <Helmet
       title={metaDataObj[location.pathname || '']?.title || ''}
