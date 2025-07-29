@@ -872,8 +872,8 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/seven-days-landing-page',
     name: 'SevenDays',
-  }, 
-  // {
+  },
+  //  {
   //   Component: BlogsByTag,
   //   path: '/tag/:tagId',
   //   exact: true,
