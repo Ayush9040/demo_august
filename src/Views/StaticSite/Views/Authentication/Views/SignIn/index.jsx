@@ -611,6 +611,11 @@ const SignIn = () => {
           // Get current URL parameters
           const searchParams = new URLSearchParams(window.location.search);
           const redirectLocation = searchParams.get('location');
+          // alert('redirectLocation1 ', redirectLocation)
+
+           if (redirectLocation === 'blog_comment') {
+                  navigate('/blogs');
+                } 
 
           // Check for shop redirect first
           if (redirectLocation === 'shop') {
@@ -618,7 +623,7 @@ const SignIn = () => {
           } 
           // Then apply existing logic
           else {
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -669,13 +674,19 @@ const SignIn = () => {
           const searchParams = new URLSearchParams(window.location.search);
           const redirectLocation = searchParams.get('location');
 
+          // alert('redirectLocation2 ', redirectLocation)
+
+          //  if (redirectLocation === 'blog_comment') {
+          //         navigate('/blogs');
+          //       } 
+
           // Check for shop redirect first
           if (redirectLocation === 'shop') {
             navigate('/shop');
           } 
           // Then apply existing logic
           else {
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -857,13 +868,19 @@ const SignIn = () => {
                 const searchParams = new URLSearchParams(window.location.search);
                 const redirectLocation = searchParams.get('location');
 
+                // alert('redirectLocation 3', redirectLocation)
+
+                //  if (redirectLocation === 'blog_comment') {
+                //   navigate('/blogs');
+                // } 
+
                 // Check for shop redirect first
                 if (redirectLocation === 'shop') {
                   navigate('/shop');
                 } 
                 // Then apply existing logic
                 else {
-                  page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                  page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
                 }
               }
               else {
@@ -909,13 +926,19 @@ const SignIn = () => {
                 const searchParams = new URLSearchParams(window.location.search);
                 const redirectLocation = searchParams.get('location');
 
+                // alert('redirectLocation4 ', redirectLocation)
+
+                //  if (redirectLocation === 'blog_comment') {
+                //   navigate('/blogs');
+                // } 
+
                 // Check for shop redirect first
                 if (redirectLocation === 'shop') {
                   navigate('/shop');
                 } 
                 // Then apply existing logic
                 else {
-                  page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                  page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
                 }
               }
             }
@@ -1061,13 +1084,19 @@ const SignIn = () => {
             const searchParams = new URLSearchParams(window.location.search);
             const redirectLocation = searchParams.get('location');
 
+            // alert('redirectLocation 5', redirectLocation)
+
+            // if (redirectLocation === 'blog_comment') {
+            //   navigate('/blogs');
+            // } 
+
             // Check for shop redirect first
             if (redirectLocation === 'shop') {
               navigate('/shop');
             } 
             // Then apply existing logic
             else {
-              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+              page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
             }
           }
           else {
@@ -1218,13 +1247,19 @@ const SignIn = () => {
             const searchParams = new URLSearchParams(window.location.search);
             const redirectLocation = searchParams.get('location');
 
+            // alert('redirectLocation6 ', redirectLocation)
+
+            // if (redirectLocation === 'blog_comment') {
+            //   navigate('/blogs');
+            // } 
+
             // Check for shop redirect first
             if (redirectLocation === 'shop') {
               navigate('/shop');
             } 
             // Then apply existing logic
             else {
-              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+              page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
             }
           }
           else {
@@ -1768,7 +1803,18 @@ const SignIn = () => {
 
         // Get current URL parameters
           const searchParams = new URLSearchParams(window.location.search);
+          // alert('searchParams7 ', JSON.stringify(searchParams))
+          // console.log('searchParams7 ', searchParams)
           const redirectLocation = searchParams.get('location');
+
+          // alert('redirectLocation7 ', JSON.stringify(redirectLocation))
+          // console.log('redirectLocation7 ', redirectLocation)
+
+          //  if (redirectLocation === 'blog_comment') {
+          //   navigate('/blogs');
+          // } 
+
+          // console.log('page7 ', page)
 
           // Check for shop redirect first
           if (redirectLocation === 'shop') {
@@ -1776,7 +1822,7 @@ const SignIn = () => {
           } 
           // Then apply existing logic
           else {
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
       }
     } else {
@@ -1835,9 +1881,19 @@ const SignIn = () => {
 
         const url2 = "/user/sign-in/?location=cart";
 
+        const url3 = "user/sign-in?location=blog_comment";
+
+        // alert('redirectLocation8 ', (lastPageUrl && lastPageUrl.includes(url3)))
+
+        
+
+
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
           navigate(`/shop`); // Redirect to the course page if previous page was a course
+
+        } else if (lastPageUrl && lastPageUrl.includes(url3)) {
+          navigate(`/blogs`); // Redirect to the course page if previous page was a course
 
         } else {
           navigate(`/courses`);

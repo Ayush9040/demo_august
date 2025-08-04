@@ -387,3 +387,9 @@
   //   }
   // }
 }
+
+@media (max-width: 620px) {
+    .course-card {
+       width: 250px !important;
+    }
+}

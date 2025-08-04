@@ -7,7 +7,8 @@ export const courseCardData = [
     color: '#C9705F',
     cardData: [{ title: '200 hour 3 Months Online Weekend - 18th Dec 2021' },//no use with cardDate
     { title: '500 Hour 6 Months Online Weekend - 18th Dec 2021' },
-    { title: '900 hour 3 Months Online Weekend - 18th Dec 2021' }]
+    { title: '900 hour 3 Months Online Weekend - 18th Dec 2021' },
+      ]
   },
   {
     title: 'Additional Certifications',

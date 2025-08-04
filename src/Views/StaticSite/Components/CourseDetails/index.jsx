@@ -256,13 +256,13 @@ const CourseDetails = ({ pageDate }) => {
 
       // Trigger the CleverTap event
       clevertap.event.push("course_viewed", {
-        "course_name": pageDate.title,
+        "course_name": pageDate?.title,
         "Page_name": extractedKey,
         "Fees_Residential": pageDate?.fees?.offlineFee?.residentialFee,
         "Fees_Non_Residential": pageDate?.fees?.offlineFee?.nonResidentialFee,
         "Fees_Online": pageDate?.fees?.onlineFee,
         "timing": pageDate?.timing,
-        "Page_Url": window.location.href,
+        "Page_Url": window?.location?.href,
         "Tenure": tenure,
         "Course Category": pageDate?.courseCategory,
         "Course-SubType": pageDate?.courseSubType,

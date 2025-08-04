@@ -80,9 +80,11 @@ const Blog = () => {
   useEffect(() => {
     dispatch(fetchBlogsData({ page: 1, limit: 10 }))
   }, [])
+  
 
   return (
-    <div className="blog-container global-padding">
+    <div className='custom_blog_home'>
+       <div className="blog-container global-padding ">
       <div className="blog-content">
         <div className="blog-header">
           <Heading logo={blog} smallText={'Latest'} largeText={'Blog'} />
@@ -120,6 +122,7 @@ const Blog = () => {
           </Slider>
         </div>
       </div>
+    </div>
     </div>
   )
 }

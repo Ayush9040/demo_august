@@ -14,10 +14,12 @@ import './latestResearches.css'
 import Footer from '../../../Components/Footer'
 import dropdown_blog from './images/dropdown_blog.svg'
 import img_readArticle from './images/img_readArticle.svg'
-import axios from 'axios'
+import axios from 'axios';
 import { cmsBaseDomain } from '../../../../../Constants/appSettings'
 import Arrow_Left from './images/Arrow_Left.svg'
 import Arrow_Right from './images/Arrow_Right.svg'
+import blog_icon_inner from './images/blog_icon_inner.svg'
+import Icon_mob_menu from './images/Icon_mob_menu.svg'
 
 const BlogPageNew = () => {
   const [pagination, setPagination] = useState({ page: 1, limit: 10 }); // page 1 = 10 items
@@ -52,9 +54,12 @@ const BlogPageNew = () => {
   const [selectedMobileSubcategory, setSelectedMobileSubcategory] = useState(null);
 
   const menuBtnRefs = useRef([]);
+  const dropdownRefs = useRef({});
   const scrollRef = useRef();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [leafCategoryBlogs, setLeafCategoryBlogs] = useState([]);
+const [leafCategoryBlogsLoading, setLeafCategoryBlogsLoading] = useState(false);
 
   // Add state for recent articles blogs and loading
   const [recentBlogs, setRecentBlogs] = useState([]);
@@ -69,6 +74,153 @@ const BlogPageNew = () => {
   // Add state for popular articles
   const [popularArticles, setPopularArticles] = useState([]);
   const [popularArticlesLoading, setPopularArticlesLoading] = useState(false);
+
+  // Add state for latest researches pagination
+  const [latestResearchesBlogs, setLatestResearchesBlogs] = useState([]);
+  const [latestResearchesTotal, setLatestResearchesTotal] = useState(0);
+  const [latestResearchesPage, setLatestResearchesPage] = useState(1);
+  const [latestResearchesLoading, setLatestResearchesLoading] = useState(false);
+
+  // State for mobile menu
+const [selectedMobileLeafCategory, setSelectedMobileLeafCategory] = useState(null);
+const [mobileBlogs, setMobileBlogs] = useState([]);
+const [mobileBlogsLoading, setMobileBlogsLoading] = useState(false);
+const [searchQuery, setSearchQuery] = useState('');
+const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  
+  // State for frontend search results
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  // Add useEffect to handle clicking outside dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if click is outside any dropdown
+      const isOutsideAllDropdowns = !Object.values(dropdownRefs.current).some(ref => 
+        ref && ref.contains(event.target)
+      );
+      
+      // Check if click is outside any menu button
+      const isOutsideAllButtons = !menuBtnRefs.current.some(ref => 
+        ref && ref.contains(event.target)
+      );
+      
+      if (isOutsideAllDropdowns && isOutsideAllButtons && openMenuCatId) {
+        setOpenMenuCatId(null);
+        setActiveMenuSub(null);
+        setActiveMenuLeaf(null);
+      }
+    };
+
+    // Add event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Cleanup
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [openMenuCatId]);
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const handleSubmitSubscribe = async (e) => {
+    e.preventDefault();
+    setError('');
+    
+    // Validate email
+    if (!email) {
+      setError('Please enter your email');
+      return;
+    }
+    
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const response = await axios.post(
+        'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
+        { email },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      );
+
+      if (response.data.success) {
+        setSuccess(true);
+        setEmail('');
+      } else {
+        setError(response.data.message || 'Subscription failed. Please try again.');
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || 'An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+// Function to fetch blogs for mobile subcategory
+const fetchMobileSubcategoryBlogs2 = async (categoryId, subCategoryId) => {
+  setMobileBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}`
+    );
+    setMobileBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching mobile subcategory blogs:', error);
+    setMobileBlogs([]);
+  } finally {
+    setMobileBlogsLoading(false);
+  }
+};
+
+// Function to fetch blogs for mobile leaf category
+const fetchMobileLeafCategoryBlogs2 = async (categoryId, subCategoryId, leafCategoryId) => {
+  setMobileBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}&leafCategory=${leafCategoryId}`
+    );
+    setMobileBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching mobile leaf category blogs:', error);
+    setMobileBlogs([]);
+  } finally {
+    setMobileBlogsLoading(false);
+  }
+};
+
+// Function to handle search
+const handleMobileSearch2 = async (query) => {
+  setSearchQuery(query);
+  if (query.length > 2) {
+    setMobileBlogsLoading(true);
+    try {
+      const response = await axios.get(
+        `https://tyi-test.theyogainstitute.org/cms-api/v1/post/search?query=${query}`
+      );
+      setMobileBlogs(response.data.data || []);
+      setMobileMenuView('blogs');
+    } catch (error) {
+      console.error('Error searching blogs:', error);
+      setMobileBlogs([]);
+    } finally {
+      setMobileBlogsLoading(false);
+    }
+  }
+};
 
   // Extract unique categories, subcategories, and leafcategories from API data
   const menuData = React.useMemo(() => {
@@ -98,21 +250,45 @@ const BlogPageNew = () => {
     return category.subcategories.some(sub => sub && sub.name);
   };
 
+  // Function to fetch blogs for "Latest Researches" with pagination
+  const fetchLatestResearches = async (page = 1, limit = 10, categoryId = null) => {
+    setLatestResearchesLoading(true);
+    try {
+      // Use the passed categoryId or fall back to selectedCategoryData
+      const categoryToUse = categoryId || selectedCategoryData?._id || '';
+      const response = await axios.get(
+        `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=${page}&limit=${limit}&category=${categoryToUse}`
+      );
+      setLatestResearchesBlogs(response.data.data || []);
+      setLatestResearchesTotal(response.data.total || 0);
+    } catch (error) {
+      setLatestResearchesBlogs([]);
+      setLatestResearchesTotal(0);
+    } finally {
+      setLatestResearchesLoading(false);
+    }
+  };
+
   // Function to fetch blogs for a specific category
-  const fetchCategoryBlogs = async (categoryId, page = 1) => {
+  const fetchCategoryBlogs = async (categoryId, page = 1, limit = 10) => {
     setCategoryBlogsLoading(true);
     try {
-      // Calculate progressive limit: page 1 = 10, page 2 = 20, page 3 = 30, etc.
-      const response = await axios.get(`${cmsBaseDomain}/cms-api/v1/post?page=${page}&limit=${page * 10}&category=${categoryId}`);
+      const response = await axios.get(
+        `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=${page}&limit=${limit}&category=${categoryId}`
+      );
       setCategoryBlogs(response.data.data || []);
-      setCategoryBlogsPagination({ 
-        page, 
-        limit: page * 10,
-        total: response.data.total || 0
+      setCategoryBlogsPagination({
+        page,
+        limit,
+        total: response.data.total || 0,
       });
     } catch (error) {
-      console.error('Error fetching category blogs:', error);
       setCategoryBlogs([]);
+      setCategoryBlogsPagination({
+        page,
+        limit,
+        total: 0,
+      });
     } finally {
       setCategoryBlogsLoading(false);
     }
@@ -129,7 +305,7 @@ const BlogPageNew = () => {
   // Handle pagination for category-specific blogs
   const handleCategoryPageChange = (pageNumber) => {
     if (selectedCategoryData) {
-      fetchCategoryBlogs(selectedCategoryData._id, pageNumber);
+      fetchCategoryBlogs(selectedCategoryData._id, pageNumber, 10);
     }
   };
 
@@ -331,6 +507,21 @@ const BlogPageNew = () => {
     return date.toLocaleDateString('en-US', options);
   };
 
+  const fetchLeafCategoryBlogs = async (categoryId, subCategoryId, leafCategoryId) => {
+  setLeafCategoryBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}&leafCategory=${leafCategoryId}`
+    );
+    setLeafCategoryBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching leaf category blogs:', error);
+    setLeafCategoryBlogs([]);
+  } finally {
+    setLeafCategoryBlogsLoading(false);
+  }
+};
+
   const handleDropdownOpen = (catId, btnRef) => {
     setOpenMenuCatId(openMenuCatId === catId ? null : catId);
     setActiveMenuSub(null);
@@ -379,8 +570,214 @@ const BlogPageNew = () => {
     } else if (mobileMenuView === 'subcategories') {
       setMobileMenuView('categories');
       setSelectedMobileCategory(null);
+    } else if (mobileMenuView === 'search-results' || mobileMenuView === 'no-results') {
+      setMobileMenuView('categories');
+      setSearchQuery('');
+      setSearchResults([]);
     }
   };
+
+  // Add this function before your return statement:
+  const handleLatestResearchesPageChange = (pageNumber) => {
+    setLatestResearchesPage(pageNumber);
+    // If you want to fetch on page change, call fetchLatestResearches here:
+    fetchLatestResearches(pageNumber, 10, selectedCategoryData?._id);
+  };
+
+  // Add this function to handle category click for categories without subcategories
+  const handleCategoryClick = async (category) => {
+    // If category has no subcategories, fetch blogs for that category
+    if (!category.subcategories || category.subcategories.length === 0) {
+      setContentType('category-specific');
+      setSelectedCategoryData(category);
+      setSelectedCategory(category._id);
+      setCategoryBlogsLoading(true);
+      try {
+        const response = await axios.get(
+          `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${category._id}`
+        );
+        setCategoryBlogs(response.data.data || []);
+        setCategoryBlogsPagination({
+          page: 1,
+          limit: 10,
+          total: response.data.total || 0,
+        });
+      } catch (error) {
+        setCategoryBlogs([]);
+        setCategoryBlogsPagination({
+          page: 1,
+          limit: 10,
+          total: 0,
+        });
+      } finally {
+        setCategoryBlogsLoading(false);
+      }
+    }
+    // If category has subcategories, keep existing logic (dropdown etc)
+    else {
+      // Existing dropdown logic here if needed
+    }
+  };
+
+  const handleCategoryClickSeeAll = async (category) => {
+    // If category has no subcategories, fetch blogs for that category
+    if (category) {
+      setContentType('category-specific');
+      setSelectedCategoryData(category);
+      setSelectedCategory(category._id);
+      setCategoryBlogsLoading(true);
+      try {
+        const response = await axios.get(
+          `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${category._id}`
+        );
+        setCategoryBlogs(response.data.data || []);
+        setCategoryBlogsPagination({
+          page: 1,
+          limit: 10,
+          total: response.data.total || 0,
+        });
+      } catch (error) {
+        setCategoryBlogs([]);
+        setCategoryBlogsPagination({
+          page: 1,
+          limit: 10,
+          total: 0,
+        });
+      } finally {
+        setCategoryBlogsLoading(false);
+      }
+    }
+    // If category has subcategories, keep existing logic (dropdown etc)
+    else {
+      // Existing dropdown logic here if needed
+    }
+  };
+
+  // Function to fetch blogs for mobile category
+const fetchMobileCategoryBlogs = async (categoryId) => {
+  setMobileBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}`
+    );
+    setMobileBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching mobile category blogs:', error);
+    setMobileBlogs([]);
+  } finally {
+    setMobileBlogsLoading(false);
+  }
+};
+
+// Function to fetch blogs for mobile subcategory
+const fetchMobileSubcategoryBlogs = async (categoryId, subCategoryId) => {
+  setMobileBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}`
+    );
+    setMobileBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching mobile subcategory blogs:', error);
+    setMobileBlogs([]);
+  } finally {
+    setMobileBlogsLoading(false);
+  }
+};
+
+// Function to fetch blogs for mobile leaf category
+const fetchMobileLeafCategoryBlogs = async (categoryId, subCategoryId, leafCategoryId) => {
+  setMobileBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}&leafCategory=${leafCategoryId}`
+    );
+    setMobileBlogs(response.data.data || []);
+  } catch (error) {
+    console.error('Error fetching mobile leaf category blogs:', error);
+    setMobileBlogs([]);
+  } finally {
+    setMobileBlogsLoading(false);
+  }
+};
+
+// Function to handle frontend-only search
+const handleMobileSearch = (query) => {
+  setSearchQuery(query);
+  
+  if (query.length === 0) {
+    setSearchResults([]);
+    setIsSearching(false);
+    setMobileMenuView('categories');
+    return;
+  }
+  
+  if (query.length < 2) {
+    setSearchResults([]);
+    setIsSearching(false);
+    return;
+  }
+  
+  setIsSearching(true);
+  
+  // Create a flat structure of all searchable items
+  const searchableItems = [];
+  
+  // Add categories
+  menuData.forEach(category => {
+    searchableItems.push({
+      type: 'category',
+      id: category._id,
+      name: category.name,
+      category: category
+    });
+    
+    // Add subcategories
+    if (category.subcategories && category.subcategories.length > 0) {
+      category.subcategories.forEach(subcategory => {
+        if (subcategory && subcategory.name) {
+          searchableItems.push({
+            type: 'subcategory',
+            id: subcategory._id,
+            name: subcategory.name,
+            category: category,
+            subcategory: subcategory
+          });
+          
+          // Add leaf categories
+          if (subcategory.leafCategories && subcategory.leafCategories.length > 0) {
+            subcategory.leafCategories.forEach(leafCategory => {
+              if (leafCategory && leafCategory.name) {
+                searchableItems.push({
+                  type: 'leafcategory',
+                  id: leafCategory._id,
+                  name: leafCategory.name,
+                  category: category,
+                  subcategory: subcategory,
+                  leafCategory: leafCategory
+                });
+              }
+            });
+          }
+        }
+      });
+    }
+  });
+  
+  // Filter items based on search query
+  const filteredItems = searchableItems.filter(item => 
+    item.name.toLowerCase().includes(query.toLowerCase())
+  );
+  
+  setSearchResults(filteredItems);
+  setIsSearching(false);
+  
+  if (filteredItems.length > 0) {
+    setMobileMenuView('search-results');
+  } else {
+    setMobileMenuView('no-results');
+  }
+};
 
   return (
     <>
@@ -394,122 +791,146 @@ const BlogPageNew = () => {
       
       {/* Header Menu Bar */}
       <div className="blog-header-menu-bar-centered">
-        <div className="blog-header-menu-bar-inner">
-          <button
-            className="blog-header-menu-scroll-btn left"
-            onClick={() => scrollByOne('left')}
-            aria-label="Scroll left"
-            style={{ display: canScrollLeft && menuData.length > 0 ? 'inline-flex' : 'none' }}
-          >
-            <img src={Arrow_Left} alt="arrow-left" />
-          </button>
-          <div className="blog-header-menu-desktop-scroll" ref={scrollRef}>
-            <div className="blog-header-menu-desktop">
-              {categoriesLoading ? (
-                <div className="blog-header-menu-loading">Loading categories...</div>
-              ) : (
-                menuData.map((cat, idx) => (
-                  <div
-                    className={`blog-header-menu-dropdown${dropdownAlignRight[cat._id] ? ' open-right' : ''}`}
-                    key={cat._id}
-                  >
-                    <button
-                      ref={el => menuBtnRefs.current[idx] = el}
-                      className={`blog-header-menu-btn${openMenuCatId === cat._id ? ' active' : ''}${cat.subcategories && cat.subcategories.length > 0 ? ' has-dropdown' : ''}`}
-                      onClick={e => {
-                        e.preventDefault();
-                        if (cat.name === 'Latest Researches') {
-                          if (cat.subcategories && cat.subcategories.length > 0) {
-                            handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
-                          } else {
-                            setContentType('latest-researches');
-                            setSelectedCategoryData(cat);
-                            setOpenMenuCatId(null);
-                          }
-                        } else if (cat.subcategories && cat.subcategories.length > 0) {
-                          handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
-                        } else {
-                          handleCategorySelection(cat);
-                        }
-                      }}
-                    >
-                      {cat.name}
-                      {cat.subcategories && cat.subcategories.length > 0 && (
-                        <span className="dropdown-arrow">
-                          <img src={dropdown_blog} alt="arrow-down" />
-                        </span>
-                      )}
-                    </button>
-                    {openMenuCatId === cat._id && cat.subcategories && cat.subcategories.length > 0 && (
-                      <div className="blog-header-menu-dropdown-content-centered">
-                        <div className="blog-header-menu-dropdown-content-inner">
-                          <div className="blog-header-menu-subcat-col">
-                            {cat.subcategories.filter(sub => sub && sub.name).slice().reverse().map(sub => (
-                              <div
-                                key={sub._id}
-                                className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
-                                onClick={e => {
-                                  e.stopPropagation();
-                                  setActiveMenuSub(sub._id);
-                                  setActiveMenuLeaf(null);
-                                }}
-                              >
-                                <div className="blog-header-menu-sub-title">{sub.name}</div>
-                                <div className="blog-header-menu-sub-desc">{sub.desc}</div>
-                              </div>
-                            ))}
-                          </div>
-                          {activeMenuSub && cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories?.length > 0 && (
-                            <div className="blog-header-menu-leafcat-col">
-                              <div className="blog-header-menu-leafcat-title">
-                                {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
-                              </div>
-                              {cat.subcategories.find(s => s._id === activeMenuSub).leafCategories.slice().reverse().map(leaf => (
-                                <div
-                                  key={leaf._id}
-                                  className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
-                                  onClick={e => {
-                                    e.stopPropagation();
-                                    setActiveMenuLeaf(leaf._id);
-                                  }}
-                                >
-                                  {leaf.name}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                          {activeMenuLeaf && (
-                            <div className="blog-header-menu-blogs-col">
-                              <div className="blog-header-menu-blogs-title">
-                                {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories.find(l => l._id === activeMenuLeaf)?.name}
-                              </div>
-                              {getBlogsForLeaf(activeMenuLeaf, cat._id, activeMenuSub).slice().reverse().map(blog => (
-                                <div key={blog._id} className="blog-header-menu-blog-item">
-                                  <div className="blog-header-menu-blog-title">{blog.title}</div>
-                                  <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
-                                </div>
-                              ))}
-                              <div className="blog-header-menu-seeall">See all Blogs <img src={Arrow_Right} /></div>
-                            </div>
-                          )}
+  <div className="blog-header-menu-bar-inner">
+    <button
+      className="blog-header-menu-scroll-btn left"
+      onClick={() => scrollByOne('left')}
+      aria-label="Scroll left"
+      style={{ display: canScrollLeft && menuData.length > 0 ? 'inline-flex' : 'none' }}
+    >
+      <img src={Arrow_Left} alt="arrow-left" />
+    </button>
+    <div className="blog-header-menu-desktop-scroll" ref={scrollRef}>
+      <div className="blog-header-menu-desktop">
+        {categoriesLoading ? (
+          <div className="blog-header-menu-loading">Loading categories...</div>
+        ) : (
+          menuData.map((cat, idx) => (
+            <div
+              className={`blog-header-menu-dropdown${dropdownAlignRight[cat._id] ? ' open-right' : ''}`}
+              key={cat._id}
+            >
+              <button
+                ref={el => menuBtnRefs.current[idx] = el}
+                className={`blog-header-menu-btn${openMenuCatId === cat._id ? ' active' : ''}${cat.subcategories && cat.subcategories.length > 0 ? ' has-dropdown' : ''}`}
+                onClick={e => {
+                  e.preventDefault();
+                  if (!cat.subcategories || cat.subcategories.length === 0) {
+                    handleCategoryClick(cat);
+                  } else if (cat.name === 'Latest Researches') {
+                    if (cat.subcategories && cat.subcategories.length > 0) {
+                      handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
+                    } else {
+                      setContentType('latest-researches');
+                      setSelectedCategoryData(cat);
+                      setOpenMenuCatId(null);
+                    }
+                  } else if (cat.subcategories && cat.subcategories.length > 0) {
+                    handleDropdownOpen(cat._id, { current: menuBtnRefs.current[idx] });
+                  } else {
+                    handleCategorySelection(cat);
+                  }
+                }}
+              >
+                {cat.name}
+                {cat.subcategories && cat.subcategories.length > 0 && (
+                  <span className="dropdown-arrow">
+                    <img src={dropdown_blog} alt="arrow-down" />
+                  </span>
+                )}
+              </button>
+              {openMenuCatId === cat._id && cat.subcategories && cat.subcategories.length > 0 && (
+                <div 
+                  className="blog-header-menu-dropdown-content-centered"
+                  ref={el => dropdownRefs.current[cat._id] = el}
+                >
+                  <div className="blog-header-menu-dropdown-content-inner">
+                    <div className="blog-header-menu-subcat-col">
+                      {cat.subcategories.filter(sub => sub && sub.name).slice().reverse().map(sub => (
+                        <div
+                          key={sub._id}
+                          className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
+                          onClick={e => {
+                            e.stopPropagation();
+                            setActiveMenuSub(sub._id);
+                            setActiveMenuLeaf(null);
+                            setLeafCategoryBlogs([]); // Clear previous leaf category blogs
+                          }}
+                        >
+                          <div className="blog-header-menu-sub-title">{sub.name}</div>
+                          <div className="blog-header-menu-sub-desc">{sub.desc}</div>
                         </div>
+                      ))}
+                    </div>
+                    {activeMenuSub && cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories?.length > 0 && (
+                      <div className="blog-header-menu-leafcat-col">
+                        <div className="blog-header-menu-leafcat-title">
+                          {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
+                        </div>
+                        {cat.subcategories.find(s => s._id === activeMenuSub).leafCategories.slice().reverse().map(leaf => (
+                          <div
+                            key={leaf._id}
+                            className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
+                            onClick={e => {
+                              e.stopPropagation();
+                              setActiveMenuLeaf(leaf._id);
+                              fetchLeafCategoryBlogs(cat._id, activeMenuSub, leaf._id);
+                            }}
+                          >
+                            {leaf.name}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {activeMenuLeaf && (
+                      <div className="blog-header-menu-blogs-col">
+                        <div className="blog-header-menu-blogs-title">
+                          {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories.find(l => l._id === activeMenuLeaf)?.name}
+                        </div>
+                        {leafCategoryBlogsLoading ? (
+                          <div className="blog-header-menu-loading">Loading blogs...</div>
+                        ) : (
+                          leafCategoryBlogs.slice().reverse().map(blog => (
+                            <Link to={`/${blog.slug}`} key={blog._id} className="blog-header-menu-blog-item">
+                              <div className="blog-header-menu-blog-title">{blog.title}</div>
+                              <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
+                            </Link>
+                          ))
+                        )}
+                        {leafCategoryBlogs.length > 0 && (
+                          <span 
+                            onClick={e => {
+                            e.preventDefault();
+                           
+                              handleCategoryClickSeeAll(cat);
+                            
+                           
+                          }}
+                            className="blog-header-menu-seeall"
+                          >
+                            See all Blogs <img src={Arrow_Right} />
+                          </span>
+                        )}
                       </div>
                     )}
                   </div>
-                ))
+                </div>
               )}
             </div>
-          </div>
-          <button
-            className="blog-header-menu-scroll-btn right"
-            onClick={() => scrollByOne('right')}
-            aria-label="Scroll right"
-            style={{ display: canScrollRight && menuData.length > 0 ? 'inline-flex' : 'none' }}
-          >
-            <img src={Arrow_Right} alt="arrow-right" />
-          </button>
-        </div>
+          ))
+        )}
       </div>
+    </div>
+    <button
+      className="blog-header-menu-scroll-btn right"
+      onClick={() => scrollByOne('right')}
+      aria-label="Scroll right"
+      style={{ display: canScrollRight && menuData.length > 0 ? 'inline-flex' : 'none' }}
+    >
+      <img src={Arrow_Right} alt="arrow-right" />
+    </button>
+  </div>
+</div>
       
       {/* Mobile Navigation */}
       <div className="blog-header-menu-mobile">
@@ -519,103 +940,438 @@ const BlogPageNew = () => {
       </div>
       
       {/* Mobile Menu Modal/Drawer */}
-      {isMobileMenuOpen && (
-        <div className="mobile-menu-overlay" onClick={handleMobileMenuClose}>
-          <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
-            {mobileMenuView !== 'categories' && (
-              <button className="mobile-menu-back" onClick={handleMobileBackClick}>
-                ← Back
-              </button>
-            )}
-            
-            <div className="mobile-menu-header">
-              <div className="mobile-menu-title">
-                {mobileMenuView === 'categories' && 'All category'}
-                {mobileMenuView === 'subcategories' && selectedMobileCategory?.name}
-                {mobileMenuView === 'blogs' && selectedMobileSubcategory?.name}
-              </div>
-              <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
-                ✕
-              </button>
-            </div>
-            
-            {mobileMenuView === 'categories' && (
-              <div className="mobile-menu-search">
-                <input type="text" placeholder="Search blogs" className="mobile-search-input" />
-                <button className="mobile-search-btn">Search</button>
-              </div>
-            )}
-            
-            <div className="mobile-menu-content">
-              {mobileMenuView === 'categories' && (
-                <div className="mobile-categories-list">
-                  {categoriesLoading ? (
-                    <div className="mobile-menu-loading">Loading categories...</div>
-                  ) : (
-                    menuData.map(cat => (
-                      <div 
-                        key={cat._id} 
-                        className="mobile-category-item"
-                        onClick={() => {
-                          if (cat.name === 'Latest Researches') {
-                            if (cat.subcategories && cat.subcategories.length > 0) {
-                              handleMobileCategoryClick(cat);
-                            } else {
-                              window.location.href = '/latest-researches';
-                            }
-                          } else if (cat.subcategories && cat.subcategories.length > 0) {
-                            handleMobileCategoryClick(cat);
-                          } else {
-                            handleCategorySelection(cat);
-                            setIsMobileMenuOpen(false);
-                          }
-                        }}
-                      >
-                        <span className="mobile-category-name">{cat.name}</span>
-                        {cat.name !== 'Latest Researches' && cat.subcategories && cat.subcategories.length > 0 && (
-                          <span className="mobile-category-arrow">→</span>
-                        )}
-                        {cat.name === 'Latest Researches' && cat.subcategories && cat.subcategories.length > 0 && (
-                          <span className="mobile-category-arrow">→</span>
-                        )}
-                      </div>
-                    ))
-                  )}
-                </div>
-              )}
-              
-                             {mobileMenuView === 'subcategories' && selectedMobileCategory && (
-                 <div className="mobile-subcategories-list">
-                   {selectedMobileCategory.subcategories.filter(sub => sub && sub.name).map(sub => (
-                    <div 
-                      key={sub._id} 
-                      className="mobile-subcategory-item"
-                      onClick={() => handleMobileSubcategoryClick(sub)}
-                    >
-                      <span className="mobile-subcategory-name">{sub.name}</span>
-                      <span className="mobile-subcategory-arrow">→</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-              
-              {mobileMenuView === 'blogs' && selectedMobileSubcategory && (
-                <div className="mobile-blogs-list">
-                  {selectedMobileCategory.subcategories.find(sub => sub._id === selectedMobileSubcategory._id)?.leafCategories?.map(leaf => 
-                    getBlogsForLeaf(leaf._id, selectedMobileCategory._id, selectedMobileSubcategory._id).map(blog => (
-                      <div key={blog._id} className="mobile-blog-item">
-                        <div className="mobile-blog-title">{blog.title}</div>
-                        <div className="mobile-blog-link">Read Article →</div>
-                      </div>
-                    ))
-                  ).flat() || []}
-                  <div className="mobile-see-all-blogs">See all Blogs →</div>
-                </div>
-              )}
-            </div>
-          </div>
+     {/* Mobile Menu Modal/Drawer */}
+{/* {isMobileMenuOpen && (
+  <div className="mobile-menu-overlay" onClick={handleMobileMenuClose}>
+    <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+      {mobileMenuView !== 'categories' && (
+        <button className="mobile-menu-back" onClick={handleMobileBackClick}>
+          ← Back
+        </button>
+      )}
+      
+      <div className="mobile-menu-header">
+        <div className="mobile-menu-title">
+          {mobileMenuView === 'categories' && 'All category'}
+          {mobileMenuView === 'subcategories' && selectedMobileCategory?.name}
+          {mobileMenuView === 'blogs' && selectedMobileSubcategory?.name}
+          {mobileMenuView === 'leafcategories' && selectedMobileLeafCategory?.name}
+        </div>
+        <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
+          ✕
+        </button>
+      </div>
+      
+      {mobileMenuView === 'categories' && (
+        <div className="mobile-menu-search">
+          <input 
+            type="text" 
+            placeholder="Search blogs" 
+            className="mobile-search-input" 
+            onChange={(e) => handleMobileSearch(e.target.value)}
+          />
+          <button className="mobile-search-btn">Search</button>
         </div>
       )}
+      
+      <div className="mobile-menu-content">
+        {mobileMenuView === 'categories' && (
+          <div className="mobile-categories-list">
+            {categoriesLoading ? (
+              <div className="mobile-menu-loading">Loading categories...</div>
+            ) : (
+              menuData.map(cat => (
+                <div 
+                  key={cat._id} 
+                  className="mobile-category-item"
+                  onClick={() => {
+                    if (cat.name === 'Latest Researches') {
+                      if (cat.subcategories && cat.subcategories.length > 0) {
+                        handleMobileCategoryClick(cat);
+                      } else {
+                        setContentType('latest-researches');
+                        setSelectedCategoryData(cat);
+                        setIsMobileMenuOpen(false);
+                      }
+                    } else if (cat.subcategories && cat.subcategories.length > 0) {
+                      handleMobileCategoryClick(cat);
+                    } else {
+                      handleCategorySelection(cat);
+                      setIsMobileMenuOpen(false);
+                    }
+                  }}
+                >
+                  <span className="mobile-category-name">{cat.name}</span>
+                  {cat.subcategories && cat.subcategories.length > 0 && (
+                    <span className="mobile-category-arrow">→</span>
+                  )}
+                </div>
+              ))
+            )}
+          </div>
+        )}
+        
+        {mobileMenuView === 'subcategories' && selectedMobileCategory && (
+          <div className="mobile-subcategories-list">
+            {selectedMobileCategory.subcategories.filter(sub => sub && sub.name).map(sub => (
+              <div 
+                key={sub._id} 
+                className="mobile-subcategory-item"
+                onClick={() => {
+                  if (sub.leafCategories && sub.leafCategories.length > 0) {
+                    setSelectedMobileSubcategory(sub);
+                    setMobileMenuView('leafcategories');
+                  } else {
+                    // If no leaf categories, fetch blogs directly for this subcategory
+                    fetchMobileSubcategoryBlogs(selectedMobileCategory._id, sub._id);
+                    setMobileMenuView('blogs');
+                  }
+                }}
+              >
+                <span className="mobile-subcategory-name">{sub.name}</span>
+                {sub.leafCategories && sub.leafCategories.length > 0 && (
+                  <span className="mobile-subcategory-arrow">→</span>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {mobileMenuView === 'leafcategories' && selectedMobileSubcategory && (
+          <div className="mobile-leafcategories-list">
+            {selectedMobileSubcategory.leafCategories.map(leaf => (
+              <div
+                key={leaf._id}
+                className="mobile-leafcategory-item"
+                onClick={() => {
+                  fetchMobileLeafCategoryBlogs(selectedMobileCategory._id, selectedMobileSubcategory._id, leaf._id);
+                  setSelectedMobileLeafCategory(leaf);
+                  setMobileMenuView('blogs');
+                }}
+              >
+                <span className="mobile-leafcategory-name">{leaf.name}</span>
+                <span className="mobile-leafcategory-arrow">→</span>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {mobileMenuView === 'blogs' && (
+          <div className="mobile-blogs-list">
+            {mobileBlogsLoading ? (
+              <div className="mobile-menu-loading">Loading blogs...</div>
+            ) : mobileBlogs.length === 0 ? (
+              <div className="mobile-no-blogs">No blogs found</div>
+            ) : (
+              mobileBlogs.map(blog => (
+                <Link 
+                  to={`/${blog.slug}`} 
+                  key={blog._id} 
+                  className="mobile-blog-item"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="mobile-blog-title">{blog.title}</div>
+                  <div className="mobile-blog-link">Read Article →</div>
+                </Link>
+              ))
+            )}
+            {mobileBlogs.length > 0 && (
+              <Link 
+                to={
+                  selectedMobileLeafCategory 
+                    ? `/blogs?category=${selectedMobileCategory._id}&subCategory=${selectedMobileSubcategory._id}&leafCategory=${selectedMobileLeafCategory._id}`
+                    : selectedMobileSubcategory
+                      ? `/blogs?category=${selectedMobileCategory._id}&subCategory=${selectedMobileSubcategory._id}`
+                      : `/blogs?category=${selectedMobileCategory._id}`
+                } 
+                className="mobile-see-all-blogs"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                See all Blogs →
+              </Link>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+)} */}
+
+        {/* Mobile Menu Modal/Drawer */}
+{isMobileMenuOpen && (
+  <div className="mobile-menu-overlay" onClick={handleMobileMenuClose}>
+    <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+      {(mobileMenuView !== 'categories' && mobileMenuView !== 'search-results' && mobileMenuView !== 'no-results') && (
+        <button className="mobile-menu-back" onClick={handleMobileBackClick}>
+          ← Back
+        </button>
+      )}
+      
+      {(mobileMenuView === 'search-results' || mobileMenuView === 'no-results') && (
+        <button className="mobile-menu-back" onClick={handleMobileBackClick}>
+          ← Back to Categories
+        </button>
+      )}
+      
+      <div className="mobile-menu-header">
+        <div className="mobile-menu-title">
+          {mobileMenuView === 'categories' && 'All category'}
+          {mobileMenuView === 'subcategories' && selectedMobileCategory?.name}
+          {mobileMenuView === 'blogs' && (
+            selectedMobileLeafCategory?.name || 
+            selectedMobileSubcategory?.name || 
+            selectedMobileCategory?.name
+          )}
+          {mobileMenuView === 'leafcategories' && selectedMobileLeafCategory?.name}
+          {mobileMenuView === 'search-results' && 'Search Results'}
+          {mobileMenuView === 'no-results' && 'No Results Found'}
+        </div>
+        <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
+          ✕
+        </button>
+      </div>
+      
+      {mobileMenuView === 'categories' && (
+        <div className="mobile-menu-search">
+          <input 
+            type="text" 
+            placeholder="Search blogs" 
+            className="mobile-search-input" 
+            onChange={(e) => handleMobileSearch(e.target.value)}
+          />
+          <button className="mobile-search-btn">Search</button>
+        </div>
+      )}
+      
+      <div className="mobile-menu-content">
+        {mobileMenuView === 'categories' && (
+          <div className="mobile-categories-list">
+            {categoriesLoading ? (
+              <div className="mobile-menu-loading">Loading categories...</div>
+            ) : (
+              menuData.map(cat => (
+                <div 
+                  key={cat._id} 
+                  className="mobile-category-item"
+                  onClick={() => {
+                    if (cat.name === 'Latest Researches') {
+                      if (cat.subcategories && cat.subcategories.length > 0) {
+                        handleMobileCategoryClick(cat);
+                      } else {
+                        // For Latest Researches without subcategories, fetch blogs and show them
+                        fetchLatestResearches(1, 10, cat._id);
+                        setContentType('latest-researches');
+                        setSelectedCategoryData(cat);
+                        setIsMobileMenuOpen(false);
+                      }
+                    } else if (cat.subcategories && cat.subcategories.length > 0) {
+                      handleMobileCategoryClick(cat);
+                    } else {
+                      // Directly fetch blogs for this category
+                      fetchMobileCategoryBlogs(cat._id);
+                      setSelectedMobileCategory(cat);
+                      setMobileMenuView('blogs');
+                    }
+                  }}
+                >
+                  <span className="mobile-category-name">{cat.name}</span>
+                  {cat.subcategories && cat.subcategories.length > 0 && (
+                    <span className="mobile-category-arrow"><img src={Icon_mob_menu} alt="" /></span>
+                  )}
+                </div>
+              ))
+            )}
+          </div>
+        )}
+        
+        {mobileMenuView === 'subcategories' && selectedMobileCategory && (
+          <div className="mobile-subcategories-list">
+            {selectedMobileCategory.subcategories.filter(sub => sub && sub.name).map(sub => (
+              <div 
+                key={sub._id} 
+                className="mobile-subcategory-item"
+                onClick={() => {
+                  if (sub.leafCategories && sub.leafCategories.length > 0) {
+                    setSelectedMobileSubcategory(sub);
+                    setMobileMenuView('leafcategories');
+                  } else {
+                    // If no leaf categories, fetch blogs directly for this subcategory
+                    fetchMobileSubcategoryBlogs(selectedMobileCategory._id, sub._id);
+                    setSelectedMobileSubcategory(sub);
+                    setMobileMenuView('blogs');
+                  }
+                }}
+              >
+                <span className="mobile-subcategory-name">{sub.name}</span>
+                {sub.leafCategories && sub.leafCategories.length > 0 && (
+                  <span className="mobile-subcategory-arrow"><img src={Icon_mob_menu} alt="" /></span>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {mobileMenuView === 'leafcategories' && selectedMobileSubcategory && (
+          <div className="mobile-leafcategories-list">
+            {selectedMobileSubcategory.leafCategories.map(leaf => (
+              <div
+                key={leaf._id}
+                className="mobile-leafcategory-item"
+                onClick={() => {
+                  fetchMobileLeafCategoryBlogs(
+                    selectedMobileCategory._id, 
+                    selectedMobileSubcategory._id, 
+                    leaf._id
+                  );
+                  setSelectedMobileLeafCategory(leaf);
+                  setMobileMenuView('blogs');
+                }}
+              >
+                <span className="mobile-leafcategory-name">{leaf.name}</span>
+                <span className="mobile-leafcategory-arrow"><img src={Icon_mob_menu} alt="" /></span>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {mobileMenuView === 'blogs' && (
+          <div className="mobile-blogs-list">
+            {mobileBlogsLoading ? (
+              <div className="mobile-menu-loading">Loading blogs...</div>
+            ) : mobileBlogs.length === 0 ? (
+              <div className="mobile-no-blogs">No blogs found</div>
+            ) : (
+              mobileBlogs.map(blog => (
+                <Link 
+                  to={`/${blog.slug}`} 
+                  key={blog._id} 
+                  className="mobile-blog-item"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="mobile-blog-title">{blog.title}</div>
+                  <div className="mobile-blog-link">Read Article</div>
+                </Link>
+              ))
+            )}
+            {mobileBlogs.length > 0 && (
+              <div 
+                className="mobile-see-all-blogs"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  // Set the appropriate content type based on what's selected
+                  if (selectedMobileLeafCategory) {
+                    setContentType('category-specific');
+                    setSelectedCategoryData(selectedMobileCategory);
+                    fetchLeafCategoryBlogs(
+                      selectedMobileCategory._id,
+                      selectedMobileSubcategory._id,
+                      selectedMobileLeafCategory._id
+                    );
+                  } else if (selectedMobileSubcategory) {
+                    setContentType('category-specific');
+                    setSelectedCategoryData(selectedMobileCategory);
+                    fetchMobileSubcategoryBlogs(
+                      selectedMobileCategory._id,
+                      selectedMobileSubcategory._id
+                    );
+                  } else if (selectedMobileCategory) {
+                    setContentType('category-specific');
+                    setSelectedCategoryData(selectedMobileCategory);
+                    fetchMobileCategoryBlogs(selectedMobileCategory._id);
+                  }
+                }}
+              >
+                <span 
+                            onClick={e => {
+                            e.preventDefault();
+                           
+                              handleCategoryClickSeeAll(selectedMobileCategory);
+                            
+                           
+                          }}>See all Blogs <img src={Icon_mob_menu} alt="" /></span>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {mobileMenuView === 'search-results' && (
+          <div className="mobile-search-results-list">
+            {isSearching ? (
+              <div className="mobile-menu-loading">Searching...</div>
+            ) : searchResults.length === 0 ? (
+              <div className="mobile-no-results">No results found</div>
+            ) : (
+              searchResults.map((item, index) => (
+                <div
+                  key={`${item.type}-${item.id}-${index}`}
+                  className="mobile-search-result-item"
+                  onClick={() => {
+                    if (item.type === 'category') {
+                      if (item.category.subcategories && item.category.subcategories.length > 0) {
+                        setSelectedMobileCategory(item.category);
+                        setMobileMenuView('subcategories');
+                      } else {
+                        // Directly fetch blogs for this category
+                        fetchMobileCategoryBlogs(item.category._id);
+                        setSelectedMobileCategory(item.category);
+                        setMobileMenuView('blogs');
+                      }
+                    } else if (item.type === 'subcategory') {
+                      if (item.subcategory.leafCategories && item.subcategory.leafCategories.length > 0) {
+                        setSelectedMobileCategory(item.category);
+                        setSelectedMobileSubcategory(item.subcategory);
+                        setMobileMenuView('leafcategories');
+                      } else {
+                        // If no leaf categories, fetch blogs directly for this subcategory
+                        fetchMobileSubcategoryBlogs(item.category._id, item.subcategory._id);
+                        setSelectedMobileCategory(item.category);
+                        setSelectedMobileSubcategory(item.subcategory);
+                        setMobileMenuView('blogs');
+                      }
+                    } else if (item.type === 'leafcategory') {
+                      fetchMobileLeafCategoryBlogs(
+                        item.category._id,
+                        item.subcategory._id,
+                        item.leafCategory._id
+                      );
+                      setSelectedMobileCategory(item.category);
+                      setSelectedMobileSubcategory(item.subcategory);
+                      setSelectedMobileLeafCategory(item.leafCategory);
+                      setMobileMenuView('blogs');
+                    }
+                  }}
+                >
+                  <div className="mobile-search-result-content">
+                    <div className="mobile-search-result-name">{item.name}</div>
+                    <div className="mobile-search-result-type">
+                      {item.type === 'category' && 'Category'}
+                      {item.type === 'subcategory' && `${item.category.name} > Subcategory`}
+                      {item.type === 'leafcategory' && `${item.category.name} > ${item.subcategory.name} > Leaf Category`}
+                    </div>
+                  </div>
+                  <div className="mobile-search-result-arrow">
+                    <img src={Icon_mob_menu} alt="" />
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+        
+        {mobileMenuView === 'no-results' && (
+          <div className="mobile-no-results-container">
+            <div className="mobile-no-results-message">
+              No results found for {searchQuery}
+            </div>
+            <div className="mobile-no-results-suggestion">
+              Try searching with different keywords or browse categories below
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+)}
       
       {/* Hero Section: Only show on main blog home page */}
       {contentType === 'regular' && (
@@ -638,40 +1394,42 @@ const BlogPageNew = () => {
         <div className="blog-page-new">
           {/* Featured Stories Section */}
           <div className="blog-featured-section">
-            <h2 className="blog-section-title">Featured Stories</h2>
-            <div className="blog-featured-grid">
-              <div className="blog-featured-main-card">
-                {featuredStories[0] && (
-                  <>
-                    <img className="blog-featured-main-img" src={featuredStories[0].coverImage} alt={featuredStories[0].title} />
-                    <div className="blog-featured-main-content">
-                      <h3 className="blog-featured-main-title">{featuredStories[0].title}</h3>
-                      <p className="blog-featured-main-excerpt">{featuredStories[0].excerpt}</p>
-                      <div className="blog-featured-main-meta">
-                        <span>{formatDate(featuredStories[0].createdAt)}</span>
-                        {featuredStories[0].timeDuration && <span> • {featuredStories[0].timeDuration} mins</span>}
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-              <div className="blog-featured-side-list">
-                {featuredStories.slice(1, 5).map((item, idx) => (
-                  <div className="blog-featured-side-card" key={item._id || idx}>
-                    <img className="blog-featured-side-img" src={item.coverImage} alt={item.title} />
-                    <div className="blog-featured-side-content">
-                      <h4 className="blog-featured-side-title">{item.title}</h4>
-                      <p className="blog-featured-side-desc">{item.excerpt}</p>
-                      <div className="blog-featured-side-meta">
-                        <span>{formatDate(item.createdAt)}</span>
-                        {item.timeDuration && <span> • {item.timeDuration} mins</span>}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+  <h2 className="blog-section-title">Featured Stories</h2>
+  <div className="blog-featured-grid">
+    {/* First column: Main Card */}
+    <div className="blog-featured-main-card">
+      {featuredStories[0] && (
+        <Link to={`/${featuredStories[0].slug}`}>
+          <img className="blog-featured-main-img" src={featuredStories[0].coverImage} alt={featuredStories[0].title} />
+          <div className="blog-featured-main-content">
+            <h3 className="blog-featured-main-title">{featuredStories[0].title}</h3>
+            <p className="blog-featured-main-excerpt">{featuredStories[0].excerpt}</p>
+            <div className="blog-featured-main-meta">
+              <span>{formatDate(featuredStories[0].createdAt)}</span>
+              {featuredStories[0].timeDuration && <span> • {featuredStories[0].timeDuration} mins</span>}
             </div>
           </div>
+        </Link>
+      )}
+    </div>
+    {/* Second column: Side List */}
+    <div className="blog-featured-side-list">
+      {featuredStories.slice(1, 5).map((item, idx) => (
+        <Link to={`/${item.slug}`} className="blog-featured-side-card" key={item._id || idx}>
+          <img className="blog-featured-side-img" src={item.coverImage} alt={item.title} />
+          <div className="blog-featured-side-content">
+            <h4 className="blog-featured-side-title">{item.title}</h4>
+            <p className="blog-featured-side-desc">{item.excerpt}</p>
+            <div className="blog-featured-side-meta">
+              <span>{formatDate(item.createdAt)}</span>
+              {item.timeDuration && <span> • {item.timeDuration} mins</span>}
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  </div>
+</div>
           
           {/* Popular Articles Section */}
           <div className="blog-popular-section">
@@ -681,7 +1439,7 @@ const BlogPageNew = () => {
                 <div>Loading...</div>
               ) : (
                 popularArticles.map((item, idx) => (
-                  <div className="blog-card blog-popular-card" key={item._id || idx}>
+                  <Link to={`/${item.slug}`} className="blog-card blog-popular-card" key={item._id || idx}>
                     <img className="blog-card-img" src={item.coverImage} alt={item.title} />
                     <div className="blog-card-content">
                       {item.categories && item.categories[0] && (
@@ -694,7 +1452,7 @@ const BlogPageNew = () => {
                         {item.timeDuration && <span> • {item.timeDuration} mins</span>}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))
               )}
             </div>
@@ -727,7 +1485,7 @@ const BlogPageNew = () => {
                 <div>No articles found for this category.</div>
               ) : (
                 recentBlogs.map((item, idx) => (
-                  <div className="blog-card blog-recent-card" key={item._id || idx}>
+                  <Link to={`/${item.slug}`} className="blog-card blog-recent-card" key={item._id || idx}>
                     <img className="blog-card-img" src={item.coverImage} alt={item.title} />
                     <div className="blog-card-content">
                       {item.categories && item.categories[0] && (
@@ -740,7 +1498,7 @@ const BlogPageNew = () => {
                         {item.timeDuration && <span> • {item.timeDuration} mins</span>}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))
               )}
             </div>
@@ -760,24 +1518,48 @@ const BlogPageNew = () => {
           </div>
           
           {/* Newsletter Signup */}
-          <div className="blog-newsletter-section">
-            <div className="newsletter-box">
-              <h3>Join Our Yoga Community</h3>
-              <div className="newsletter-box-desc">
-                <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
-              </div>
-              <div className="newsletter-form">
-                <input type="email" className="newsletter-input" placeholder="Enter your email address" />
-                <button className="newsletter-btn">Subscribe</button>
-              </div>
-            </div>
+           <div className="blog-newsletter-section">
+      <div className="newsletter-box">
+        <h3>Join Our Yoga Community</h3>
+        <div className="newsletter-box-desc">
+          <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
+        </div>
+        {success ? (
+          <div className="newsletter-success">
+            Thank you for subscribing to our newsletter!
           </div>
+        ) : (
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
+            <input 
+              type="email" 
+              className="newsletter-input" 
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button 
+              className="newsletter-btn" 
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+            </button>
+            {error && <div className="newsletter-error">{error}</div>}
+          </form>
+        )}
+      </div>
+    </div>
         </div>
       )}
       
       {/* Category-specific content */}
       {contentType === 'category-specific' && (
         <div className="latest-researches-container">
+          <div className='Heading_guide'>
+            <span>Home</span>
+            <img src={blog_icon_inner} alt="" />
+            <span>{selectedCategoryData?.name}</span>
+          </div>
           <div className="latest-researches-header">
             <h1 className="latest-researches-title">{selectedCategoryData?.name}</h1>
           </div>
@@ -790,11 +1572,104 @@ const BlogPageNew = () => {
               <div className="latest-researches-no-blogs">No articles found for this category.</div>
             ) : (
               categoryBlogs.map((blog) => (
-                <div className="latest-research-card" key={blog._id}>
+                <Link to={`/${blog?.slug}`} key={blog._id} className="latest-research-card">
                   <div className="latest-research-image">
-                    <div className="latest-research-category">
-                      {blog.categories && blog.categories[0] ? blog.categories[0].name : selectedCategoryData?.name}
+                    <img
+                      src={blog.coverImage || `https://source.unsplash.com/random/600x400/?yoga,${blog._id}`}
+                      alt={blog.title}
+                    />
+                  </div>
+                  <div className="latest-research-content">
+                    <h3 className="latest-research-title">{blog.title}</h3>
+                    <p className="latest-research-excerpt">{blog.excerpt}</p>
+                    <div className="latest-research-meta">
+                      <div className="latest-research-date">
+                        {formatDate(blog.createdAt || new Date())}
+                      </div>
+                      <div className="latest-research-read-time">
+                        . {blog.meta ? blog.meta.match(/content="(\d+) minutes"/)?.[1] || '10' : '10'} min
+                      </div>
                     </div>
+                  </div>
+                </Link>
+              ))
+            )}
+          </div>
+          
+          {/* Pagination */}
+          {categoryBlogsPagination.total > 10 && (
+            <div className="pagination-container">
+              <Pagination
+                activePage={categoryBlogsPagination.page}
+                itemsCountPerPage={10}
+                totalItemsCount={categoryBlogsPagination.total}
+                pageRangeDisplayed={5}
+                onChange={handleCategoryPageChange}
+                itemClass="page-item"
+                linkClass="page-link"
+                activeClass="active"
+                activeLinkClass="active-link"
+              />
+            </div>
+          )}
+          
+          {/* Newsletter Subscription */}
+           <div className="blog-newsletter-section">
+      <div className="newsletter-box">
+        <h3>Join Our Yoga Community</h3>
+        <div className="newsletter-box-desc">
+          <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
+        </div>
+        {success ? (
+          <div className="newsletter-success">
+            Thank you for subscribing to our newsletter!
+          </div>
+        ) : (
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
+            <input 
+              type="email" 
+              className="newsletter-input" 
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button 
+              className="newsletter-btn" 
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+            </button>
+            {error && <div className="newsletter-error">{error}</div>}
+          </form>
+        )}
+      </div>
+    </div>
+        </div>
+      )}
+
+      {/* Latest Researches content */}
+      {contentType === 'latest-researches' && (
+        <div className="latest-researches-container">
+          <div className='Heading_guide'>
+            <span>Home</span>
+            <img src={blog_icon_inner} alt="" />
+            <span>{selectedCategoryData?.name}</span>
+          </div>
+          <div className="latest-researches-header">
+            <h1 className="latest-researches-title">Latest Researches</h1>
+          </div>
+          
+          {/* Research Cards Grid */}
+          <div className="latest-researches-grid">
+            {latestResearchesLoading ? (
+              <div className="latest-researches-loading">Loading articles...</div>
+            ) : latestResearchesBlogs.length === 0 ? (
+              <div className="latest-researches-no-blogs">No articles found for this category.</div>
+            ) : (
+              latestResearchesBlogs.map((blog) => (
+                <Link to={`/${blog?.slug}`} key={blog._id} className="latest-research-card">
+                  <div className="latest-research-image">
                     <img
                       src={blog.coverImage || `https://source.unsplash.com/random/600x400/?yoga,${blog._id}`}
                       alt={blog.title}
@@ -812,20 +1687,19 @@ const BlogPageNew = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))
             )}
           </div>
-          
           {/* Pagination */}
-          {categoryBlogsPagination.total > categoryBlogsPagination.limit && (
+          {latestResearchesTotal > 10 && (
             <div className="pagination-container">
               <Pagination
-                activePage={categoryBlogsPagination.page}
-                itemsCountPerPage={categoryBlogsPagination.limit}
-                totalItemsCount={categoryBlogsPagination.total}
+                activePage={latestResearchesPage}
+                itemsCountPerPage={10}
+                totalItemsCount={latestResearchesTotal}
                 pageRangeDisplayed={5}
-                onChange={handleCategoryPageChange}
+                onChange={handleLatestResearchesPageChange}
                 itemClass="page-item"
                 linkClass="page-link"
                 activeClass="active"
@@ -833,93 +1707,38 @@ const BlogPageNew = () => {
               />
             </div>
           )}
-          
           {/* Newsletter Subscription */}
-          <div className="newsletter-section">
-            <h2 className="newsletter-title">Join Our Yoga Community</h2>
-            <p className="newsletter-description">
-              Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.
-            </p>
-            <div className="newsletter-form">
-              <input
-                type="email"
-                className="newsletter-input"
-                placeholder="Enter your email address"
-              />
-              <button className="newsletter-button">Subscribe</button>
-            </div>
-          </div>
+           <div className="blog-newsletter-section">
+      <div className="newsletter-box">
+        <h3>Join Our Yoga Community</h3>
+        <div className="newsletter-box-desc">
+          <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
         </div>
-      )}
-      
-      {/* Latest Researches content */}
-      {contentType === 'latest-researches' && (
-        <div className="latest-researches-container">
-          <div className="latest-researches-header">
-            <h1 className="latest-researches-title">Latest Researches</h1>
+        {success ? (
+          <div className="newsletter-success">
+            Thank you for subscribing to our newsletter!
           </div>
-          
-          {/* Research Cards Grid */}
-          <div className="latest-researches-grid">
-            {paginatedBlogs.map((blog) => (
-              <div className="latest-research-card" key={blog._id}>
-                <div className="latest-research-image">
-                  <div className="latest-research-category">
-                    {blog.categories && blog.categories[0] ? blog.categories[0].name : 'Research'}
-                  </div>
-                  <img
-                    src={`https://source.unsplash.com/random/600x400/?yoga,${blog._id}`}
-                    alt={blog.title}
-                  />
-                </div>
-                <div className="latest-research-content">
-                  <h3 className="latest-research-title">{blog.title}</h3>
-                  <p className="latest-research-excerpt">{blog.excerpt}</p>
-                  <div className="latest-research-meta">
-                    <div className="latest-research-date">
-                      {formatDate(blog.createdAt || new Date())}
-                    </div>
-                    <div className="latest-research-read-time">
-                      {blog.meta ? blog.meta.match(/content="(\d+) minutes"/)?.[1] || '10' : '10'} min read
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Pagination */}
-          {filteredBlogs.length > pagination.limit && (
-            <div className="pagination-container">
-              <Pagination
-                activePage={pagination.page}
-                itemsCountPerPage={pagination.limit}
-                totalItemsCount={filteredBlogs.length}
-                pageRangeDisplayed={5}
-                onChange={handlePageChange}
-                itemClass="page-item"
-                linkClass="page-link"
-                activeClass="active"
-                activeLinkClass="active-link"
-              />
-            </div>
-          )}
-          
-          {/* Newsletter Subscription */}
-          <div className="newsletter-section">
-            <h2 className="newsletter-title">Join Our Yoga Community</h2>
-            <p className="newsletter-description">
-              Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.
-            </p>
-            <div className="newsletter-form">
-              <input
-                type="email"
-                className="newsletter-input"
-                placeholder="Enter your email address"
-              />
-              <button className="newsletter-button">Subscribe</button>
-            </div>
-          </div>
+        ) : (
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
+            <input 
+              type="email" 
+              className="newsletter-input" 
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button 
+              className="newsletter-btn" 
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+            </button>
+            {error && <div className="newsletter-error">{error}</div>}
+          </form>
+        )}
+      </div>
+    </div>
         </div>
       )}
       

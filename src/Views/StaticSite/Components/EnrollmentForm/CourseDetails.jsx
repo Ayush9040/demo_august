@@ -152,9 +152,9 @@ const CourseDetails = ({
   }, [formData.mode])
 
   useEffect(() => {
-    if (currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' && formData?.residental === 'NONRESIDENTIAL') {
+    if (currentCourse?.key === 'ma-yoga-shastra' && formData?.country !== 'India' && formData?.residental === 'NONRESIDENTIAL') {
       setCourseFee(currentCourse?.fees?.internationalFee?.nonResidentialFee)
-    } else if (currentCourse.key === 'ma-yoga-shastra' && formData?.residental === 'NONRESIDENTIAL') {
+    } else if (currentCourse?.key === 'ma-yoga-shastra' && formData?.residental === 'NONRESIDENTIAL') {
       setCourseFee(currentCourse?.fees?.offlineFee?.nonResidentialFee)
     }
   }, [formData])
@@ -367,21 +367,21 @@ const CourseDetails = ({
 
   const shouldShowOnlineOption = () => {
 
-    return currentCourse.online;
+    return currentCourse?.online;
   };
 
   const shouldShowResidentialOption = () => {
 
-    return currentCourse.residential;
+    return currentCourse?.residential;
   };
 
   const shouldShowNonResidentialOption = () => {
 
-    return currentCourse.nonResidential;
+    return currentCourse?.nonResidential;
   };
 
   const shouldShowOfflineOption = () => {
-    const result = (currentCourse.online === false && currentCourse.residential === false && currentCourse.nonResidential === false) ? true : false;
+    const result = (currentCourse?.online === false && currentCourse?.residential === false && currentCourse?.nonResidential === false) ? true : false;
     return result;
   };
   const handleFocus = (e) => {
