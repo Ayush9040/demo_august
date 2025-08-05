@@ -82,7 +82,7 @@ const ttc200hr = {
       // '1st May to 31st May 2025',
       // '2nd Jun to 30th Jun 2025',
       // '1st Jul to 31st Jul 2025',
-      '1st Aug to 30th Aug 2025',
+      // '1st Aug to 30th Aug 2025',
       '1st Sep to 30th Sep 2025',
       '1st Oct to 31st Oct 2025',
       '1st Nov to 29th Nov 2025',
@@ -1137,7 +1137,7 @@ const ttc200hr = {
       // '20th Jan - 15th Mar 2025',
       // '24th Mar - 17th May 2025',
       // '26th May - 19th Jul 2025',
-      '28th Jul - 20th Sep 2025',
+      // '28th Jul - 20th Sep 2025',
       '29th Sep - 22nd Nov 2025',
       '25th Nov - 18th Jan 2026',
     ],
@@ -8168,7 +8168,8 @@ const camps = {
     dates: [
       // '6th Apr 2025',
       //  '1st Jun 2025', 
-       '3rd Aug 2025', '5th Oct 2025', '7th Dec 2025'],
+      //  '3rd Aug 2025', 
+       '5th Oct 2025', '7th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -10118,7 +10119,8 @@ const camps = {
       // '3rd May 2025', 
       // '7th Jun 2025', 
       // '5th Jul 2025', 
-      '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
+      // '2nd Aug 2025', 
+      '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -10506,7 +10508,8 @@ const camps = {
       // '27th Apr 2025', 
       // '25th May 2025',
       // '22nd Jun 2025', 
-      '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
+      // '27th Jul 2025', 
+      '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
     clevertapData: {
       name: 'Back & Joint Disorder Yoga Workshop Online & On Campus',
@@ -11103,7 +11106,7 @@ const camps = {
       // '26th Apr to 2nd May 2025',
       // '24th May to 30th May 2025',
       // '28th Jun to 4th Jul 2025',
-      '26th Jul to 1st Aug 2025',
+      // '26th Jul to 1st Aug 2025',
       '23rd Aug to 29th Aug 2025',
       '27th Sep to 3rd Oct 2025',
       '25th Oct to 31st Oct 2025',
@@ -13263,7 +13266,8 @@ const camps = {
     dates: [
       // '22nd Mar 2025', 
       // '24th May 2025',
-      '26th Jul 2025', '27th Sep 2025', '22nd Nov 2025'],
+      // '26th Jul 2025', 
+      '27th Sep 2025', '22nd Nov 2025'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -15865,8 +15869,8 @@ const classes = {
       // '6th Jul 2025', 
       // '13th Jul 2025', 
       // '20th Jul 2025', 
-      '27th Jul 2025',
-      '3rd Aug 2025', 
+      // '27th Jul 2025',
+      // '3rd Aug 2025', 
       '10th Aug 2025', 
       '17th Aug 2025', 
       '24th Aug 2025', 
@@ -16425,8 +16429,8 @@ const classes = {
       // '5th Jul 2025', 
       // '12th Jul 2025', 
       // '19th Jul 2025', 
-      '26th Jul 2025',
-      '2nd Aug 2025', 
+      // '26th Jul 2025',
+      // '2nd Aug 2025', 
       '9th Aug 2025', 
       '16th Aug 2025', 
       '23rd Aug 2025', 
@@ -17164,7 +17168,10 @@ const classes = {
     category: 'classes',
     language: 'English ',
     tenure:'2 Years',
-    dates: ['16th June 2025 - MA'],
+    dates: [
+      '15th July 2025 - MA'
+
+    ],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -17762,7 +17769,7 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '16th June 2025 - BA'
+      // '16th June 2025 - BA'
     ],
     online: false,
     onCampus: true,
@@ -18086,7 +18093,7 @@ const certificate = {
       // '3rd February to 27th March 2025· Morning',
       // '5th May to 26th June 2025· Morning',
       // '7th May to 28th June 2025· Evening',
-      '4th August to 25th September 2025· Morning',
+      // '4th August to 25th September 2025· Morning',
       '3rd November to 25th December 2025· Morning',
     ],
 
@@ -18427,7 +18434,7 @@ const certificate = {
       // '15th Nov - 21st Dec 2024',
       // '7th Feb to 15th Mar 2025',
       // '2nd May to 7th Jun 2025',
-      '1st Aug to 6th Sep 2025',
+      // '1st Aug to 6th Sep 2025',
       '7th Nov  to 13th Dec 2025'
     ],
     online: true,
@@ -19385,7 +19392,7 @@ const certificate = {
       // 'May 17th – May 18th 2025',
       // 'June 21th – June 22th 2025',
       // 'July 19th – July 20th 2025',
-      'July 26th – July 27th 2025',
+      // 'July 26th – July 27th 2025',
       'Aug 16th – Aug 17th 2025',
       'Sept 20th – Sept 21th 2025',
       'Oct 18th – Oct 19th 2025',
@@ -19517,7 +19524,7 @@ const certificate = {
       // 'May 5th – May 9th 2025 Morning',
       // 'June 2nd – June 6th 2025 Evening',
       // 'July 7th – July 11th 2025 Morning',
-      'Aug 4th – Aug 8th 2025 Evening',
+      // 'Aug 4th – Aug 8th 2025 Evening',
       'Sept 1st – Sept 5th 2025 Morning',
       'Oct 6th – Oct 10th 2025 Evening',
       'Nov 3rd – Nov 7th 2025 Morning',
@@ -19646,7 +19653,7 @@ const certificate = {
     dates: [
       // 'May 7th – May 11th 2025',
       // '9th July – 13th July 2025',
-      '16th July to 20th July 2025',
+      // '16th July to 20th July 2025',
       'Sept 10th – Sept 14th 2025',
       'Nov 5th – Nov 9th 2025'
     ],
@@ -19849,7 +19856,7 @@ const certificate = {
       coursePreRequisite: ''
     },
     dates: [
-      'July 21st – August 22nd 2025',
+      // 'July 21st – August 22nd 2025',
       'Nov 10th – Dec 12th 2025'
     ],
     online: true,
