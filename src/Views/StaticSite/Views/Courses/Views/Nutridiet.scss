@@ -1145,7 +1145,7 @@
     // border-bottom: 1px solid #e0e0d1;
   }
 
-  .health-plan-table tbody tr:nth-child(7) {
+  .health-plan-table tbody tr:nth-child(8) {
     border-bottom: 2px solid #19978c;
   }
 
@@ -1218,6 +1218,344 @@
     }
   }
 
+  /* Mobile Pricing Table Styles */
+  .health-plan-table-showing_plans_onSelect_mobile {
+    display: none;
+  }
+
+  /* Mobile Accordion Table Styles - Hidden by default on desktop */
+  .mobile_health_table._Programs {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .health-plan-table-container {
+      display: none !important;
+    }
+    
+    .health-plan-table-showing_plans_onSelect_mobile {
+      display: block;
+      margin: 20px 0;
+      padding: 12px;
+      background-color: #1E9688;
+      border-radius: 16px;
+      border: 2px solid #E8F5E8;
+      box-shadow: 0 4px 12px rgba(30, 150, 136, 0.08);
+    }
+
+    .mobile-pricing-header {
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      // flex-wrap: wrap;
+    }
+
+    .mobile-pricing-label {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      // white-space: nowrap;
+      // width: 40%;
+    }
+
+    .mobile-dropdowns-container {
+      display: flex;
+      gap: 12px;
+      width: 60%;
+    }
+
+    .mobile-duration-select {
+      // min-width: 160px;
+      padding: 14px 10px;
+      border: 2px solid #1E9688;
+      width: 60%;
+      border-radius: 10px;
+      background-color: #03393F;
+      color: #FFFFFF;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .mobile-currency-select {
+      padding: 14px 10px;
+      border: 2px solid #1E9688;
+      width: 40%;
+      border-radius: 10px;
+      background-color: #03393F;
+      color: #FFFFFF;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-currency-select:focus {
+      border-color: #19978c;
+      box-shadow: 0 0 0 3px rgba(30, 150, 136, 0.15);
+      background-color: #03393F;
+    }
+
+    .mobile-currency-select:hover {
+      background-color: #03393F;
+      border-color: #19978c;
+    }
+
+    .mobile-duration-select:focus {
+      border-color: #19978c;
+      box-shadow: 0 0 0 3px rgba(30, 150, 136, 0.15);
+      background-color: #03393F;
+    }
+
+    .mobile-duration-select:hover {
+      background-color: #03393F;
+      border-color: #19978c;
+      width: 100%;
+    }
+
+    .mobile-courses-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-course-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding: 18px;
+      background-color: #1E9688;
+      border-radius: 12px;
+      // border: 1px solid #E8F5E8;
+      transition: all 0.3s ease;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .mobile-course-item:hover {
+      border-color: #1E9688;
+      background-color: #1E9688;
+      box-shadow: 0 4px 12px rgba(30, 150, 136, 0.12);
+    }
+
+    .mobile_view_all_pricing_highlighter {
+      margin-top: 12px;
+      border-top: 1px solid #fff;
+    }
+
+    .mobile_view_all_pricing_highlighter p {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5px;
+      color: #FFFFFF;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .mobile-course-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: #CBEA7B;
+      color: #000;
+      border-radius: 50%;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .mobile-course-name {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      flex: 1;
+    }
+
+    .mobile-course-pricing {
+      display: flex;
+      // flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .mobile-price-inr {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .mobile-price-usd {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .mobile-price-placeholder {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #999999;
+      font-style: italic;
+    }
+
+    /* Mobile Accordion Table Styles */
+    .mobile_health_table._Programs {
+      display: block !important; /* Show on mobile with higher specificity */
+    }
+
+    .mobile-table-container {
+      background-color: #F8FDF8;
+      border-radius: 12px;
+      border: 1px solid #1E9688;
+      overflow-x: auto;
+      margin: 20px 0;
+      // padding: 5px 0px;
+    }
+
+    .mobile-table {
+      width: 100%;
+      min-width: 600px; /* Ensure horizontal scroll */
+      border-collapse: collapse;
+      background-color: white;
+      // border: 1px solid #1E9688;
+    }
+
+    .mobile-table-header-cell {
+      background-color: #1E9688;
+      color: white;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 16px 12px;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+    }
+
+    .mobile-table-header-cell:first-child {
+      text-align: left;
+      width: 40%;
+    }
+
+    .mobile-table-header-cell:last-child {
+      border-right: none;
+    }
+
+    .mobile-table-row {
+      // border-bottom: 1px solid #E8F5E8;
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobile-table-row:hover {
+      background-color: #F0F9F0;
+    }
+
+    .mobile-table-row:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-table-program-cell {
+      padding: 12px 12px;
+      border-right: 0;
+      background-color: white;
+      width: 40%;
+      vertical-align: top;
+      border-right: 1px solid #1E9688;
+    }
+
+    .mobile-table-price-cell {
+      padding: 16px 12px;
+      
+      text-align: center;
+      border-right: 0;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+      vertical-align: middle;
+      border-right: 1px solid #1E9688;
+    }
+
+    .mobile-table-row.separator-after {
+      border-bottom: 1px solid #1E9688;
+    }
+
+    .program-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      padding: 4px 0;
+      gap: 4px;
+    }
+
+    .program-name {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+      flex: 1;
+    }
+
+    .accordion-arrow {
+      font-size: 12px;
+      color: #1E9688;
+      transition: transform 0.3s ease;
+      order: -1;
+    }
+
+    .accordion-arrow.expanded {
+      transform: rotate(180deg);
+    }
+
+    .health-conditions-list {
+      margin-top: 4px;
+      padding: 12px;
+      background-color: #F8FDF8;
+      border-radius: 8px;
+      // border-left: 3px solid #1E9688;
+    }
+
+    .conditions-label {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1E9688;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .condition-item {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      color: #000;
+      font-weight: 400;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .condition-item:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   /* NutritionistCards.css */
   .diet-container {
@@ -4220,6 +4558,94 @@
       padding: 8px;
     }
 
+    .timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-step {
+  display: flex;
+  /* align-items: flex-start; /* REMOVE THIS to allow the column to stretch */
+}
+
+/* The left column containing the circle and line */
+.timeline-left {
+  position: relative; /* Needed for positioning the line */
+  margin-right: 1rem;
+}
+
+.timeline-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  border-left: 3px dotted #CBEA7B;
+  z-index: 1; 
+}
+
+/* Stop the line on the last step */
+/* .timeline-step:last-child .timeline-left::before {
+  height: 1.5rem; 
+} */
+
+.timeline-circle {
+  /* Circle styling */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #CBEA7B;
+  z-index: 2; /* Keeps the circle on top of the line */
+  position: relative; 
+  
+  /* ADD THIS: A border that matches the background to "erase" the line */
+  border: 4px solid #f7f7f7;
+  
+  /* Centering the number inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Number styling */
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* The right column with the content box */
+.timeline-right {
+  flex: 1; /* Takes up the remaining space */
+  padding-bottom: 20px;
+}
+
+.timeline-content {
+  background-color: #F6FBE9;
+  border-radius: 12px;
+  border: 1px solid #E5F5BD;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 1rem;
+  min-height: 4rem; /* Ensures even small content boxes have some height */
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #262626;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.timeline-content p {
+  margin: 0.5rem 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Urbanist', sans-serif;
+  color: #333;
+}
+
     .btn_enroll .global-common-btn {
       margin-left: 0px;
       font-weight: 600;
@@ -4246,6 +4672,16 @@
     // bottom: -1.2%;
     left: 0;
     width: 100%;
+  }
+
+  .mobile_health_table_Programs {
+    display: none;
+  }
+
+  @media(max-width: 768px){
+    .mobile_health_table_Programs {
+      display: block;
+    }
   }
 
   
@@ -5480,5 +5916,16 @@
       z-index: 2;
       width: 310px;
      
+  }
+}
+
+@media(max-width: 768px) {
+  .health-journey-container1 img {
+    position: absolute;
+    bottom: -9%;
+  }
+
+  .nutri-subscription-form .global-common-btn {
+    margin-top: 1rem;
   }
 }

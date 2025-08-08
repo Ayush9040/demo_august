@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -52,6 +50,8 @@ import frame_left_client from './images/frame_left_client.png'
 import copy from './images/copy.svg'
 import nutri_diet_mobile_footer_arrow from './images/nutri_diet_mobile_footer_arrow.svg'
 import MessageReview from './MessageReview';
+import ne_mobile_table from './images/ne_mobile_table.svg'
+import mobile_arrow_down_line from './images/mobile_arrow_down_line.svg';
 
 
 
@@ -72,6 +72,9 @@ const NutriDietHero = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedReview, setSelectedReview] = useState(null);
+  const [selectedDuration, setSelectedDuration] = useState('1 week');
+  const [selectedCurrency, setSelectedCurrency] = useState('INR');
+  const [expandedPrograms, setExpandedPrograms] = useState({});
 
   const openModal = (review) => {
     setSelectedReview(review);
@@ -81,6 +84,43 @@ const NutriDietHero = () => {
   const closeModal = () => {
     setShowModal(false);
     setSelectedReview(null);
+  };
+
+  const toggleAccordion = (programName) => {
+    setExpandedPrograms(prev => ({
+      ...prev,
+      [programName]: !prev[programName]
+    }));
+  };
+
+  // Function to get pricing based on selected currency
+  const getPricingForCurrency = (duration, currency, program = null) => {
+    // Special pricing for Clinical Plans
+    if (program === "Clinical Plans") {
+      const clinicalPricing = {
+        '1 week': { inr: 0, usd: 0 },
+        '1 month': { inr: 4999, usd: 50 },
+        '3 months': { inr: 9999, usd: 80 },
+        '6 months': { inr: 14999, usd: 150 }
+      };
+      
+      if (duration === '1 week') {
+        return "-";
+      }
+      
+      if (currency === 'INR') {
+        return `₹ ${clinicalPricing[duration].inr.toLocaleString()}`;
+      } else {
+        return `USD ${clinicalPricing[duration].usd}`;
+      }
+    }
+    
+    // Default pricing for other programs
+    if (currency === 'INR') {
+      return `₹ ${mobilePricing[duration].inr.toLocaleString()}`;
+    } else {
+      return `USD ${mobilePricing[duration].usd}`;
+    }
   };
 
 
@@ -142,22 +182,22 @@ const NutriDietHero = () => {
     {
       id: 3,
       text: "7 year old kid with Autism, ADHD and Constipation issues ",
-      details: "“I've had such a wonderful experience with Kreena, the nutrition dietician. She is incredibly knowledgeable and has been so supportive throughout my nutrition journey. I truly appreciate her guidance. I will definitely recommend Kreena and the Nutri Diet Clinic to my friends and family, as I believe they would benefit greatly from her expertise too😊”"
+      details: "\"I've had such a wonderful experience with Kreena, the nutrition dietician. She is incredibly knowledgeable and has been so supportive throughout my nutrition journey. I truly appreciate her guidance. I will definitely recommend Kreena and the Nutri Diet Clinic to my friends and family, as I believe they would benefit greatly from her expertise too😊\" "
     },
     {
       id: 4,
       text: "A 32-year-old female client, presented with bloating, acidity, and overweight concerns, enrolled in the Shape Up and Gut Health Program ",
-      details: "“Mujhe Nutri Diet Clinic ka diet plan bahut achha laga meri dietician kreena Nagda Mam thi jinhone mujhe bahut hi achha diet plan diya jisse meri acidity constipation aur bloating me fayda hua mujhe khana kha kar bhi light feel hua.mujhe apke diet plan se knowledge bhi mila😊 meri dietician kreena apne mujhe diet se related achhe se samjhaya aur ap bahut achhe se baat karte ho kreena mam☺️❤️” "
+      details: "\"Mujhe Nutri Diet Clinic ka diet plan bahut achha laga meri dietician kreena Nagda Mam thi jinhone mujhe bahut hi achha diet plan diya jisse meri acidity constipation aur bloating me fayda hua mujhe khana kha kar bhi light feel hua.mujhe apke diet plan se knowledge bhi mila😊 meri dietician kreena apne mujhe diet se related achhe se samjhaya aur ap bahut achhe se baat karte ho kreena mam☺️❤️\" "
     },
     {
       id: 5,
       text: "A 28-year-old female client, presented with low energy, fatigue, and overweight concerns, joined the one month weight management program ",
-      details: "I had an amazing time in the past month. I’m so happy that I joined this program and I have seen considerable weight loss of 2 kgs in a month. I thought that I ate healthy but was facing a weight plateau. I joined this program without any expectations and it definitely was a great decision.I love that my diet included a lot of tasteful options & was a balanced diet. I didn’t have to compromise on any food group. I’m going to follow this through and if I ever feel lost, then I will come back to you” "
+      details: "I had an amazing time in the past month. I'm so happy that I joined this program and I have seen considerable weight loss of 2 kgs in a month. I thought that I ate healthy but was facing a weight plateau. I joined this program without any expectations and it definitely was a great decision.I love that my diet included a lot of tasteful options & was a balanced diet. I didn't have to compromise on any food group. I'm going to follow this through and if I ever feel lost, then I will come back to you"
     },
     // {
     //   id: 6,
     //   text: "A 60-year-old client, presented with weight gain and low energy levels, came with a goal of weight loss and improved vitality through the Shape Up Program ",
-    //   details: "I had gained weight and was feeling stuck for a very very long time.I decided to take the weight loss diet program with The Yoga Institute in the month of November 2022.I met Vinita at the institute who guided me on the importance of food and when and how to consume them. She introduced me to the varieties of millet, vegetables, lentils, spices, seeds and nuts. The first week itself made me feel light, energetic and gave me a happy feeling. Her diet plan with easy to make recipes, links to the recipes and recipes given along with the weekly plan had all the varieties along with nutrients. I found myself thoroughly enjoying the process of eating food with the changes brought about in my diet. Vinita's diet plan made me aware of the importance of food through varieties on a daily basis to meet the nutrient requirements for a healthy mind and body.This whole six months journey amazingly changed my outlook with relation to food and my day-to-day habits. I have lost weight but never once did I feel lost, exhausted or negative towards the changes brought about in my diet. I looked forward to each day with enthusiasm in my weight loss journey with Vinita through the institute. Forever grateful!” "
+    //   details: "I had gained weight and was feeling stuck for a very very long time.I decided to take the weight loss diet program with The Yoga Institute in the month of November 2022.I met Vinita at the institute who guided me on the importance of food and when and how to consume them. She introduced me to the varieties of millet, vegetables, lentils, spices, seeds and nuts. The first week itself made me feel light, energetic and gave me a happy feeling. Her diet plan with easy to make recipes, links to the recipes and recipes given along with the weekly plan had all the varieties along with nutrients. I found myself thoroughly enjoying the process of eating food with the changes brought about in my diet. Vinita's diet plan made me aware of the importance of food through varieties on a daily basis to meet the nutrient requirements for a healthy mind and body.This whole six months journey amazingly changed my outlook with relation to food and my day-to-day habits. I have lost weight but never once did I feel lost, exhausted or negative towards the changes brought about in my diet. I looked forward to each day with enthusiasm in my weight loss journey with Vinita through the institute. Forever grateful! "
     // },
 
   ];
@@ -215,11 +255,133 @@ const NutriDietHero = () => {
     }
   ];
 
+  // Mobile pricing data structure
+  const mobileCourses = [
+    'Shape up program',
+    'Hormonal imbalance', 
+    'Gut health program',
+    'Metabolic disorder',
+    'Maternal program',
+    'Client specific diet',
+    'Neurological Disorders',
+    'Clinical Plans',
+    'Auto-Immune Disorders'
+  ];
 
+  const mobilePricing = {
+    '1 week': { inr: 1999, usd: 29 },
+    '1 month': { inr: 3999, usd: 59 },
+    '3 months': { inr: 8999, usd: 129 },
+    '6 months': { inr: 13999, usd: 199 }
+  };
 
   const options = ['1 week','1 month', '3 months', '6 months']
-  const options1 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Client specific diet', 'Neurological Disorders', 'Clinical Plans', 'Auto-Immune Disorders']
-  const options2 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Client specific diet', 'Neurological Disorders'];
+  const options1 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Kids Nutrition', 'Client specific diet', 'Neurological Disorders', 'Clinical Plans', 'Auto-Immune Disorders']
+  const options2 = ['Shape up program', 'Hormonal imbalance program', 'Gut health program', 'Metabolic disorder program', 'Maternal program', 'Kids Nutrition', 'Client specific diet', 'Neurological Disorders'];
+
+  // Mobile accordion table data structure
+  const mobileTableData = [
+    {
+      program: "Shape up program",
+      healthConditions: ["Weight loss", "Weight gain/ Muscle gain"],
+      pricing: {
+        "1 week": "Rs 1999/- USD 29",
+        "1 month": "Rs 3999/- USD 59", 
+        "3 months": "Rs 8999/- USD 129",
+        "6 months": "Rs 13999/- USD 199"
+      }
+    },
+    {
+      program: "Hormonal imbalance program",
+      healthConditions: ["PCOS / PCOD", "Infertility, Thyroid"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "", 
+        "6 months": ""
+      }
+    },
+    {
+      program: "Gut Health program",
+      healthConditions: ["GERD, Heartburn, Acidity", "Digestion issues, Constipation", "Bloating, Gas & Flatulence"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Metabolic disorder program", 
+      healthConditions: ["Type 2 Diabetes Mellitus", "Cholesterol, Hypertension"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Maternal Program",
+      healthConditions: ["Pregnancy, Lactation", "Pregnancy induced diabetes"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Kids Nutrition",
+      healthConditions: ["Weight gain/loss, Autism", "Growth & Development", "ADHD"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Client specific diet",
+      healthConditions: ["Vegan diet, Ketogenic diet", "Lactose intolerant, Gluten free"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Neurological Disorders",
+      healthConditions: ["Alzheimer's, Parkinson"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    },
+    {
+      program: "Clinical Plans",
+      healthConditions: ["Diabetes on insulin IBS, IBD (Crohn's & Ulcerative Colitis)", "Peptic & Duodenal Ulcers, Piles", "Gallbladder stones, Pancreatitis", "Cancer, COPD", "Kidney disorders, Liver disorders", "Epilepsy"],
+      pricing: {
+        "1 week": "-",
+        "1 month": "Rs 4999/- USD 69",
+        "3 months": "Rs 9999/- USD 149",
+        "6 months": "Rs 15999/- USD 219"
+      }
+    },
+    {
+      program: "Auto-Immune Disorders",
+      healthConditions: ["Rheumatoid Arthritis, Ankylosing Spondylitis", "Psoriasis, Lupus", "Sjogren's syndrome, Multiple Sclerosis (MS)"],
+      pricing: {
+        "1 week": "",
+        "1 month": "",
+        "3 months": "",
+        "6 months": ""
+      }
+    }
+  ];
 
   const [programOptions, setProgramOptions] = useState(options1);
 
@@ -270,15 +432,30 @@ const NutriDietHero = () => {
     if (plan === '' || program === '') {
       setErr(true)
     } else {
+      let priceValue;
+      if (program === 'Clinical Plans') {
+        const clinicalPricing = {
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
+      } else if (program === 'Auto-Immune Disorders') {
+        const autoImmunePricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
+      } else {
+        priceValue = selectedCurrency === 'INR' ? mobilePricing[plan]?.inr : mobilePricing[plan]?.usd;
+      }
       switch (plan) {
         case '1 month':
-          setPrice(4999); setErr(false); setOpenForm1(true)
-          break
         case '3 months':
-          setPrice(9999); setErr(false); setOpenForm1(true)
-          break
         case '6 months':
-          setPrice(14999); setErr(false); setOpenForm1(true)
+          setPrice(priceValue); setErr(false); setOpenForm1(true)
           break
         default:
           break
@@ -290,17 +467,30 @@ const NutriDietHero = () => {
     if (plan === '' || program === '') {
       setErr(true)
     } else {
+      let priceValue;
+      if (program === 'Clinical Plans') {
+        const clinicalPricing = {
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
+      } else if (program === 'Auto-Immune Disorders') {
+        const autoImmunePricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
+      } else {
+        priceValue = selectedCurrency === 'INR' ? mobilePricing[plan]?.inr : mobilePricing[plan]?.usd;
+      }
       switch (plan) {
         case '1 month':
-          setPrice(4999); setErr(false);
-          setOpenForm2(true)
-          break
         case '3 months':
-          setPrice(9999); setErr(false);
-          setOpenForm2(true)
-          break
         case '6 months':
-          setPrice(14999); setErr(false);
+          setPrice(priceValue); setErr(false);
           setOpenForm2(true)
           break
         default:
@@ -308,18 +498,9 @@ const NutriDietHero = () => {
       }
     }
   }
+
   const updateGA4 = (amnt, program) => {
     ReactGA.event('add_to_cart', {
-      currency: 'INR',
-      value: amnt,
-      items: [{
-        item_name: 'Nutri Diet Clinic',
-        item_id: program,
-        price: amnt,
-        quantity: 1
-      }]
-    });
-    console.log('add_to_cart', {
       currency: 'INR',
       value: amnt,
       items: [{
@@ -338,35 +519,46 @@ const NutriDietHero = () => {
         "date_time_timestamp": new Date().toISOString()
       });
 
-      console.log("Course_Clicked event tracked", window.clevertap);
+
     } else {
       console.error("CleverTap is not initialized.");
     }
 
 
   }
+
   const enrollFrom = () => {
-    
     if (plan === '' || program === '') {
       setErr(true)
     } else {
+      let priceValue;
+      if (program === 'Clinical Plans') {
+        const clinicalPricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
+      } else if (program === 'Auto-Immune Disorders') {
+        const autoImmunePricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        // alert("Hi")
+        priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
+      } else {
+        priceValue = selectedCurrency === 'INR' ? mobilePricing[plan]?.inr : mobilePricing[plan]?.usd;
+      }
       switch (plan) {
         case '1 week':
-          setPrice(1999); setErr(false); setOpenForm1(true)
-          updateGA4(1999, program)
-          // console.log('programs ', program)
-          break
         case '1 month':
-          setPrice(3999); setErr(false); setOpenForm1(true)
-          updateGA4(3999, program)
-          break
         case '3 months':
-          setPrice(8999); setErr(false); setOpenForm1(true)
-          updateGA4(8999, program)
-          break
         case '6 months':
-          setPrice(13999); setErr(false); setOpenForm1(true)
-          updateGA4(13999, program)
+          setPrice(priceValue); setErr(false); setOpenForm1(true)
+          updateGA4(priceValue, program)
           break
         default:
           break
@@ -374,7 +566,6 @@ const NutriDietHero = () => {
       if (program === 'Clinical Plans' || program === 'Auto-Immune Disorders') {
         enrollForm2()
       }
-
     }
   }
 
@@ -384,22 +575,33 @@ const NutriDietHero = () => {
     if (plan === '' || program === '') {
       setErr(true)
     } else {
+      let priceValue;
+      if (program === 'Clinical Plans') {
+        const clinicalPricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
+      } else if (program === 'Auto-Immune Disorders') {
+        const autoImmunePricing = {
+          '1 week': { inr: 0, usd: 0 },
+          '1 month': { inr: 4999, usd: 69 },
+          '3 months': { inr: 9999, usd: 149 },
+          '6 months': { inr: 15999, usd: 219 }
+        };
+        priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
+      } else{
+        priceValue = selectedCurrency === 'INR' ? mobilePricing[plan]?.inr : mobilePricing[plan]?.usd;
+      }
       switch (plan) {
         case '1 week':
-          setPrice(1999); setErr(false); setOpenForm2(true)
-          updateGA4(1999, program)
-          break
         case '1 month':
-          setPrice(3999); setErr(false); setOpenForm2(true)
-          updateGA4(3999, program)
-          break
         case '3 months':
-          setPrice(8999); setErr(false); setOpenForm2(true)
-          updateGA4(8999, program)
-          break
         case '6 months':
-          setPrice(13999); setErr(false); setOpenForm2(true)
-          updateGA4(13999, program)
+          setPrice(priceValue); setErr(false); setOpenForm2(true)
+          updateGA4(priceValue, program)
           break
         default:
           break
@@ -407,7 +609,6 @@ const NutriDietHero = () => {
       if (program === 'Clinical Plans' || program === 'Auto-Immune Disorders') {
         belowenrollForm2()
       }
-
     }
   }
 
@@ -494,6 +695,9 @@ const NutriDietHero = () => {
   setSelectedReview(null);
   }
 
+  // Add currency options for dropdown
+  const currencyOptions = ['INR', 'USD'];
+
   return (
     <div className="diet_whole_wrapper">
       <div className="nutri-diet-wrapper">
@@ -556,7 +760,7 @@ const NutriDietHero = () => {
                 <h3 className='benefit-card_spacing'>Holistic Approach:</h3>
 
                 <span className='benefitp'>
-                TYI’s 105-year legacy of holistic health meets contemporary nutrition practices, focusing on the well-being of your body, mind, and spirit.
+                TYIs 105-year legacy of holistic health meets contemporary nutrition practices, focusing on the well-being of your body, mind, and spirit.
 
                 </span>
               </div>
@@ -593,7 +797,7 @@ const NutriDietHero = () => {
                 </div>
                 <h3 className='benefit-card_spacing'>Affordable for All:</h3>
                 <span className='benefitp'>
-                  {` Good health shouldn’t be a luxury. Our budget-friendly plans ensure wellness is accessible to everyone. `}
+                  {` Good health shouldn't be a luxury. Our budget-friendly plans ensure wellness is accessible to everyone. `}
                 </span>
               </div>
 
@@ -789,107 +993,173 @@ const NutriDietHero = () => {
               <div className="health-journey-container1">
                 {/* <img src={TYI_Mobile_v2} alt="Journey TImeline" /> */}
 
-                <div className="health-timeline-cards">
-                  <div className="timeline-card step-1">
-                    <div className="card-content">
-                      <h3>Enrollment</h3>
-                      <p>Enrollment and Appointment Scheduling </p>
+               <div class="timeline">
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Enrollment</h3>
+        <p>Enrollment and Appointment Scheduling</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Consultation Call</h3>
+      <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health</p>
+                    <span className='card_p'><strong>(Mode: Offline | Online)</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Body Analysis</h3>
+        <span className='card_p'><p><strong>For offline consultations:</strong></p></span>
+                    <div style={{marginLeft: '0px', fontSize: '16px', fontWeight:'500', marginBottom: '10px'}}>
+                    <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more</li></p>
                     </div>
+                    <span className='card_p'><p><strong>For online clients:</strong></p></span>
+                    <div style={{marginLeft: '0px', fontSize: '16px', fontWeight:'500'}}>
+                    <p><li>Body measurements- height, weight, waist, and hip circumference, BMI</li></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+         <h3>Biomedical Insights</h3>
+                    <p>Review medical reports, including CBC, Lipid Profile, Kidney Function, Thyroid Profile, Liver Function Tests, Vitamin D, and Vitamin B12 levels.
+                    </p>
+                    <p>If necessary, recommend additional tests for a clearer health picture (reports should ideally be recent, within three to six months).</p>
+                    <p>(Disclaimer: Pathological tests are not included in our services and must be conducted independently by clients.)
+                    </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+         <h3>Detailed Client History</h3>
+                    <p>Health Background, Medical history (e.g., past illnesses, surgeries, or chronic conditions), Present issues, Family history & Nutrient Deficiencies 
+                    </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">6</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Holistic Health Assessment</h3>
+                    <p>Lifestyle Factors: Sleep patterns, Stress levels, Mindset, Emotions, Hydration, Eating habits and food preferences.
+                    </p>
+    </div>
+  </div>
+</div>
+
+<div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">7</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Dietary Habits Analysis</h3>
+                    <p>Detailed recall of dietary intake and assessing meal timing, portion sizes, and frequency of nutrient-dense versus processed foods to identify gaps and areas for improvement.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">8</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+       <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
+                    <div style={{marginLeft: '0px', fontSize: '16px', fontWeight:'500', color: '#333333'}}>
+                    <p><li>Customized diet plan based on your nutritional needs, health goals, and food preferences.</li></p> <br/>
+                    <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
                   </div>
+      </div>
+    </div>
+  </div>
 
-                  <div className="timeline-card step-2">
-                    <div className="card-content">
-                      <h3>Consultation Call</h3>
-                      <p>Detailed 1 hour long comprehensive consultation call to understand your Physical, Mental and Emotional aspect for holistic health 
-                      <br /> <span className='cardmobile'>(Mode: Offline / Online)</span></p>
-                    </div>
-                  </div>
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">9</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Restaurant and Travel Guide</h3>
+                    <p> We will provide a curated guide to healthy dining options across all cuisines, along with practical travel tips and flight-friendly recommendations to help you stay on track wherever you go.</p>
+    </div>
+  </div>
+</div>
 
-                  <div className="timeline-card step-3">
-                    <div className="card-content">
-                      <h3>Body Analysis</h3>
-                      <span className='card_p'><p><strong>For offline consultations:</strong> </p></span>
-                      <p><li>Body composition analysis to understand the Weight, Muscle mass %, Fat mass %, Visceral fat, Body age and more</li></p> <br />
-                      <span className='card_p'><p><strong>For online consultations:</strong></p></span>
-                      <p><li>Body measurements- height, weight, waist, and hip circumference, BMI           </li> </p>
-                    </div>
-                  </div>
+<div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">10</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Exercise Recommendations</h3>
+                    <p> Resources of exercises suited to  your fitness level and health objectives will be shared.  </p>
+      </div>
+    </div>
+  </div>
 
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">11</div>
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Daily WhatsApp Support & Real-Time Guidance</h3>
+                    <p> Daily support for addressing queries, providing feedback and ongoing motivation ensuring you stay on track to achieve your goals. </p>
+      </div>
+    </div>
+  </div>
 
-
-                  <div className="timeline-card step-4">
-                    <div className="card-content">
-                      <h3>Biomedical Insights</h3>
-                      <p>Review medical reports, including CBC, Lipid Profile, Kidney Function, Thyroid Profile, Liver Function Tests, Vitamin D, and Vitamin B12 levels.</p> <br />
-                      <p>If necessary, recommend additional tests for a clearer health picture (reports should ideally be recent, within three to six months).</p> <br />
-                      <p>(Disclaimer: Pathological tests are not included in our services and must be conducted independently by clients.)
-                      </p>
-                    </div>
-                  </div>
-
-
-
-                  <div className="timeline-card step-5">
-                    <div className="card-content">
-                      <h3>Detailed Client History</h3>
-                      <p>Health Background, Medical history (e.g., past illnesses, surgeries, or chronic conditions), Present issues, Family history & Nutrient Deficiencies</p>
-                    </div>
-                  </div>
-
-                  <div className="timeline-card step-6">
-                    <div className="card-content">
-                      <h3>Holistic Health Assessment</h3>
-                      <p>Lifestyle Factors: Sleep patterns, Stress levels, Mindset, Emotions, Hydration, Eating habits and food preferences.</p>
-                    </div>
-                  </div>
-
-                  <div className="timeline-card step-7">
-                    <div className="card-content">
-                      <h3>Dietary Habits Analysis</h3>
-                      <p>Detailed recall of dietary intake and assessing meal timing, portion sizes, and frequency of nutrient-dense versus processed foods to identify gaps and areas for improvement.</p>
-                    </div>
-                  </div>
+  <div class="timeline-step">
+    <div class="timeline-left">
+      <div class="timeline-circle">12</div>
+      <img src={mobile_arrow_down_line} alt="" />
+    </div>
+    <div class="timeline-right">
+      <div class="timeline-content">
+        <h3>Follow-ups & Progress Monitoring</h3>
+                    <p> Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being. 
 
 
-                  <div className="timeline-card step-8">
-                    <div className="card-content">
-                      <h3>Personalized Dietary Recommendations & Tailored Meal Plan</h3>
-                      <p><li>Customized diet plan based on your nutritional needs, health goals, and food preferences.</li></p>  <br />
-                      <p><li>Focusing on balanced meals, using sustainable and locally available food options in such a way that it fits seamlessly into your cultural, professional, and personal lifestyle requirements.</li></p>
-                    </div>
-                  </div>
-
-                  <div className="timeline-card step-9">
-                    <div className="card-content">
-                      <h3>Restaurant and Travel Guide</h3>
-                      <p>We will provide a curated guide to healthy dining options across all cuisines, along with practical travel tips and flight-friendly recommendations to help you stay on track wherever you go.</p>
-                    </div>
-                  </div>
-
-                  <div className="timeline-card step-10">
-                    <div className="card-content">
-                      <h3>Exercise Recommendations</h3>
-                      <p>Resources of exercises suited to  your fitness level and health objectives will be shared.</p>
-                    </div>
-                  </div>
-
-
-                  <div className="timeline-card step-11">
-                    <div className="card-content">
-                      <h3>Daily WhatsApp Support & Real-Time Guidance</h3>
-                      <p>Daily support for addressing queries, providing feedback and ongoing motivation ensuring you stay on track to achieve your goals.</p>
-                    </div>
-                  </div>
-
-
-                  <div className="timeline-card step-12">
-                    <div className="card-content">
-                      <h3>Follow-ups & Progress Monitoring</h3>
-                      <p>Every 15 days and at the end of your plan, we conduct a thorough review of your body composition, measurements, and weight, alongside tracking improvements in your symptoms, energy levels, and overall well-being. </p> <br />
-                      <p> These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
-                    </div>
-                  </div>
-                </div>
+                    </p>
+                    <p>These insights empower us to fine-tune your diet and exercise plan, ensuring you overcome challenges, stay motivated, and achieve lasting results!</p>
+    </div>
+  </div>
+</div>
+              </div>
               </div>
             </main>
           </section>
@@ -1049,6 +1319,182 @@ const NutriDietHero = () => {
   </div>
   <p className='heading_plain-container'>Have Multiple Health Concerns?</p>
   <p className='heading_plain-below_container'>Select the program that matches your primary issue. Other conditions will still be addressed during your consultation for a complete, personalized plan.</p>
+
+{/* <div className="health-plan-table-showing_plans_onSelect_mobile">
+  <div className="mobile-pricing-header">
+    <div className="mobile-pricing-label">Quick summary for 
+    your Health Plan</div>
+    <div className="mobile-dropdowns-container">
+      <select 
+        value={selectedDuration} 
+        onChange={(e) => setSelectedDuration(e.target.value)}
+        className="mobile-duration-select"
+      >
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+  
+  <div className="mobile-courses-list">
+    {mobileCourses
+      .filter(course => {
+        // For 1 week, exclude Clinical Plans and Auto-Immune Disorders
+        if (selectedDuration === '1 week') {
+          return course !== 'Clinical Plans' && course !== 'Auto-Immune Disorders';
+        }
+        // For all other durations, show all courses
+        return true;
+      })
+      .map((course, index) => (
+        <div key={index} className="mobile-course-item">
+          <div className="mobile-course-number">{index + 1}</div>
+          <div className="mobile-course-name">{course}</div>
+          <div className="mobile-course-pricing">
+            <span className="mobile-price-inr">₹ {mobilePricing[selectedDuration].inr.toLocaleString()}</span>
+            <span className="mobile-price-usd">/ USD {mobilePricing[selectedDuration].usd}</span>
+          </div>
+        </div>
+      ))}
+  </div>
+
+  <div className="mobile_view_all_pricing_highlighter">
+        <p>View full pricing & details below</p>
+  </div>
+</div> */}
+
+<div className="health-plan-table-showing_plans_onSelect_mobile">
+  <div className="mobile-pricing-header">
+    <div className="mobile-pricing-label">Quick summary for your Health Plan</div>
+    <div className="mobile-dropdowns-container">
+      <select 
+        value={selectedDuration} 
+        onChange={(e) => setSelectedDuration(e.target.value)}
+        className="mobile-duration-select"
+      >
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+  
+  <div className="mobile-courses-list">
+    {mobileCourses
+      .filter(course => {
+        // For 1 week, exclude Clinical Plans and Auto-Immune Disorders
+        if (selectedDuration === '1 week') {
+          return course !== 'Clinical Plans' && course !== 'Auto-Immune Disorders';
+        }
+        return true;
+      })
+      .map((course, index) => {
+        // Special pricing for Clinical Plans and Auto-Immune Disorders
+        const isSpecialCourse = course === 'Clinical Plans' || course === 'Auto-Immune Disorders';
+        let priceInr = mobilePricing[selectedDuration].inr;
+        let priceUsd = mobilePricing[selectedDuration].usd;
+        
+        if (isSpecialCourse) {
+          switch(selectedDuration) {
+            case '1 month':
+              priceInr = 4999;
+              priceUsd = 69;
+              break;
+            case '3 months':
+              priceInr = 9999;
+              priceUsd = 149;
+              break;
+            case '6 months':
+              priceInr = 15999;
+              priceUsd = 219;
+              break;
+            default:
+              // Keep default pricing for other durations
+              break;
+          }
+        }
+
+        return (
+          <div key={index} className="mobile-course-item">
+            <div className="mobile-course-number">{index + 1}</div>
+            <div className="mobile-course-name">{course}</div>
+            <div className="mobile-course-pricing">
+              <span className="mobile-price-inr">₹ {priceInr.toLocaleString()}</span>
+              <span className="mobile-price-usd">/ USD {priceUsd}</span>
+            </div>
+          </div>
+        );
+      })}
+  </div>
+
+  <div className="mobile_view_all_pricing_highlighter">
+    <p>View full pricing & details below</p>
+  </div>
+</div>
+
+
+<div className='mobile_health_table_Programs'>
+  <div className="mobile-table-container">
+    <table className="mobile-table">
+      <thead>
+        <tr>
+          <th className="mobile-table-header-cell">Programs</th>
+          <th className="mobile-table-header-cell">1 Week</th>
+          <th className="mobile-table-header-cell">1 Month</th>
+          <th className="mobile-table-header-cell">3 Months</th>
+          <th className="mobile-table-header-cell">6 Months</th>
+        </tr>
+      </thead>
+      <tbody>
+        {mobileTableData.map((item, index) => (
+          <tr key={index} className={`mobile-table-row ${item.program === "Neurological Disorders" ? 'separator-after' : ''}`}>
+            <td className="mobile-table-program-cell">
+              <div className="program-header" onClick={() => toggleAccordion(item.program)}>
+                <span className={`accordion-arrow ${expandedPrograms[item.program] ? 'expanded' : ''}`}>
+                  <img src={ne_mobile_table} alt="" />
+                </span>
+                <span className="program-name">{item.program}</span>
+              </div>
+              {expandedPrograms[item.program] && (
+                <div className="health-conditions-list">
+                  <div className="conditions-label">Health Conditions:</div>
+                  {item.healthConditions.map((condition, condIndex) => (
+                    <div key={condIndex} className="condition-item">
+                      {condition}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </td>
+            <td className="mobile-table-price-cell">
+              {item.program === "Shape up program" ? item.pricing["1 week"] : 
+               item.program === "Clinical Plans" ? item.pricing["1 week"] : ""}
+            </td>
+            <td className="mobile-table-price-cell">
+              {item.program === "Shape up program" ? item.pricing["1 month"] : 
+               item.program === "Clinical Plans" ? item.pricing["1 month"] : ""}
+            </td>
+            <td className="mobile-table-price-cell">
+              {item.program === "Shape up program" ? item.pricing["3 months"] : 
+               item.program === "Clinical Plans" ? item.pricing["3 months"] : ""}
+            </td>
+            <td className="mobile-table-price-cell">
+              {item.program === "Shape up program" ? item.pricing["6 months"] : 
+               item.program === "Clinical Plans" ? item.pricing["6 months"] : ""}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
   <div className="health-plan-table-container">
     <table className="health-plan-table">
       <thead>
@@ -1069,10 +1515,7 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Weight gain/ Muscle gain
 `}</div>
           </td>
-          <td>Rs 1999/-</td>
-          <td>Rs 3999/-</td>
-          <td>Rs 8999/-</td>
-          <td>Rs 13999/-</td>
+          <td colSpan={4} style={{ backgroundColor: '#1E96881A', position: 'relative', left: '0', top: '0'}}><span style={{position:'absolute', top:'50%', left: '50%', transform: 'translate(-50%, -50%)', fontFamily: 'Urbanist', fontSize: '28px', fontWeight: '500'}}>Clients Residing in India</span></td>
         </tr>
         
         <tr style={{marginBottom: '60px'}}>
@@ -1081,9 +1524,10 @@ const NutriDietHero = () => {
             <div className="condition-line">{`PCOS / PCOD`}</div>
             <div className="condition-line">{`Infertility, Thyroid`}</div>
           </td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>Rs 1999/-</td>
+          <td>Rs 3999/-</td>
+          <td>Rs 8999/-</td>
+          <td>Rs 13999/-</td>
         </tr>
         
         <tr style={{marginBottom: '60px'}}>
@@ -1115,9 +1559,19 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Pregnancy, Lactation,`}</div>
             <div className="condition-line">{`Pregnancy induced diabetes`}</div>
           </td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td colSpan={4} style={{ backgroundColor: '#1E96881A', position: 'relative', left: '0', top: '0'}}><span style={{position:'absolute', top:'50%', left: '50%', transform: 'translate(-50%, -50%)', fontFamily: 'Urbanist', fontSize: '28px', fontWeight: '500'}}>Clients Residing in Abroad</span></td>
+        </tr>
+
+        <tr style={{marginBottom: '60px'}}>
+          <td>Kids Nutrition</td>
+          <td>
+            <div className="condition-line">{`Weight gain/loss, Autism,`}</div>
+            <div className="condition-line">{`Growth & Development, ADHD`}</div>
+          </td>
+          <td>USD 29</td>
+          <td>USD 59</td>
+          <td>USD 129</td>
+          <td>USD 199</td>
         </tr>
         
         <tr style={{marginBottom: '60px'}}>
@@ -1126,6 +1580,7 @@ const NutriDietHero = () => {
             <div className="condition-line">{`Vegan diet, Ketogenic diet,`}</div>
             <div className="condition-line">{`Lactose intolerant,  Gluten free`}</div>
           </td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -1141,25 +1596,72 @@ const NutriDietHero = () => {
           <td></td>
         </tr>
         
-        <tr style={{marginBottom: '60px'}}>
-          <td>Clinical Plans</td>
-          <td>
-            <div className="condition-line">{`Diabetes on insulin IBS,`}</div>
-            <div className="condition-line">{`IBD (Crohn's & Ulcerative Colitis),`}</div>
-            <div className="condition-line">{`Peptic & Duodenal Ulcers,`}</div>
-            <div className="condition-line">Piles, Gall bladderstones, </div>
-            <div className="condition-line">{`Pancreatitis, Cancer,`}</div>
-            <div className="condition-line">{`COPD, Kidney disorders,`}</div>
-            <div className="condition-line">Liver disorders,</div>
-            <div className="condition-line">Epilepsy</div>
-          </td>
-          <td>-</td>
-          <td>Rs 4999/-</td>
-          <td>Rs 9999/-</td>
-          <td>Rs 14999/-</td>
+      <tr style={{ marginBottom: '60px' }}>
+  <td style={{ verticalAlign: 'top', width: '20%' }}>Clinical Plans</td>
+  <td style={{ verticalAlign: 'top', width: '30%' }}>
+    <div className="condition-line">{`Diabetes on insulin IBS,`}</div>
+    <div className="condition-line">{`IBD (Crohn's & Ulcerative Colitis),`}</div>
+    <div className="condition-line">{`Peptic & Duodenal Ulcers,`}</div>
+    <div className="condition-line">Piles, Gall bladderstones,</div>
+    <div className="condition-line">{`Pancreatitis, Cancer,`}</div>
+    <div className="condition-line">{`COPD, Kidney disorders,`}</div>
+    <div className="condition-line">Liver disorders,</div>
+    <div className="condition-line">Epilepsy</div>
+  </td>
+  <td colSpan={4} style={{ padding: 0, width: '50%' }}>
+    {/* Header row */}
+    <div style={{
+      backgroundColor: '#1E96881A',
+      padding: '40px 0',
+      textAlign: 'center',
+      fontFamily: 'Urbanist',
+      fontSize: '28px',
+      fontWeight: '500',
+      boxSizing: 'border-box'
+    }}>
+      Clients Residing in India
+    </div>
+    
+    {/* Price row - using table for perfect alignment */}
+    <table style={{ 
+      width: '100%', 
+      borderCollapse: 'collapse',
+      tableLayout: 'fixed',
+      height: '100%',
+    }}>
+      <tbody>
+        <tr>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>-</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>Rs 4999/-</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>Rs 9999/-</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>Rs 15999/-</td>
         </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
         
-        <tr style={{marginBottom: '60px'}}>
+        {/* <tr style={{marginBottom: '60px'}}>
           <td>Auto-Immune Disorders</td>
           <td>
             <div className="condition-line">Rheumatoid Arthritis,</div>
@@ -1171,7 +1673,70 @@ const NutriDietHero = () => {
           <td></td>
           <td></td>
           <td></td>
+        </tr> */}
+
+        <tr style={{ marginBottom: '60px' }}>
+  <td style={{ verticalAlign: 'top', width: '20%' }}>Auto-Immune Disorders</td>
+  <td style={{ verticalAlign: 'top', width: '30%' }}>
+    <div className="condition-line">Rheumatoid Arthritis,</div>
+            <div className="condition-line">Ankylosing Spondylitis,</div>
+            <div className="condition-line">{`Psoriasis, Lupus`}</div>
+            <div className="condition-line">{`Sjogren's syndrome,`}</div>
+            <div className="condition-line">{`Multiple Sclerosis (MS)`}</div>
+  </td>
+  <td colSpan={4} style={{ padding: 0, width: '50%' }}>
+    {/* Header row */}
+    <div style={{
+      backgroundColor: '#1E96881A',
+      padding: '40px 0',
+      textAlign: 'center',
+      fontFamily: 'Urbanist',
+      fontSize: '28px',
+      fontWeight: '500',
+      boxSizing: 'border-box'
+    }}>
+      Clients Residing in Abroad
+    </div>
+    
+    {/* Price row - using table for perfect alignment */}
+    <table style={{ 
+      width: '100%', 
+      borderCollapse: 'collapse',
+      tableLayout: 'fixed',
+      height: '49%',
+    }}>
+      <tbody>
+        <tr>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>-</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>USD 69</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>USD 149</td>
+          <td style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderRight: '1px solid #1E9688',
+            boxSizing: 'border-box'
+          }}>USD 219</td>
         </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+        
       </tbody>
     </table>
   </div>
@@ -1187,6 +1752,27 @@ const NutriDietHero = () => {
                 id="date-select-mobile"
                 style={{ display: 'flex', alignItems: 'center' }}
               >
+                <select
+                  value={selectedCurrency}
+                  onChange={e => setSelectedCurrency(e.target.value)}
+                  style={{ 
+                    ...selectStyles1, 
+                    minWidth: '90px', 
+                    marginRight: '10px', 
+                    color: '#fff', 
+                    background: 'rgba(255, 255, 254, 0.3)', 
+                    padding: '14px',
+                    '& option': {
+                      backgroundColor: '#000',
+                      color: '#fff'
+                    }
+                  }}
+                  className="currency-dropdown"
+                >
+                  {currencyOptions.map(option => (
+                    <option key={option} value={option} style={{ backgroundColor: '#000', color: '#fff' }}>{option}</option>
+                  ))}
+                </select>
                 <SelectDropDown
                   currentValue={plan}
                   changeCurrentValue={setPlan}
@@ -1205,7 +1791,7 @@ const NutriDietHero = () => {
                 <div style={{ color: '#FF3B30', fontSize: '14px', fontWeight:'600', margin:'10px'}}>
                 {err && <small> Please select package/program* </small>}
                 </div>
-                {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} selectedPackageName={program} closeForm={setOpenForm1} />}
+                {openForm1 && <SubcriptionForm packageName={plan} packagePrice={price} selectedPackageName={program} currency={selectedCurrency} closeForm={setOpenForm1} />}
               </div>
             </div>
           </div> 
@@ -1434,7 +2020,28 @@ const NutriDietHero = () => {
               style={{ display: 'flex' }}
               className='select_wrapper'
             >
-              <div className='fixes_mobile'>
+              <div className='fixes_mobile' style={{ display: 'flex', alignItems: 'center' }}>
+                <select
+                  value={selectedCurrency}
+                  onChange={e => setSelectedCurrency(e.target.value)}
+                  style={{ 
+                    ...selectStyles1, 
+                    minWidth: '90px', 
+                    marginRight: '10px', 
+                    color: '#fff', 
+                    background: 'rgba(255, 255, 254, 0.3)', 
+                    padding: '8px',
+                    '& option': {
+                      backgroundColor: '#000',
+                      color: '#fff'
+                    }
+                  }}
+                  className="currency-dropdown"
+                >
+                  {currencyOptions.map(option => (
+                    <option key={option} value={option} style={{ backgroundColor: '#000', color: '#fff' }}>{option}</option>
+                  ))}
+                </select>
                 <SelectDropDown
                   currentValue={plan}
                   changeCurrentValue={setPlan}
@@ -1452,7 +2059,6 @@ const NutriDietHero = () => {
               </div>
                 <div className="btn_enroll">
                   <CommonBtn text='Enroll Now' buttonAction={belowEnrollFrom} />
-                  {/* <img src={nutri_diet_mobile_footer_arrow} alt="" /> */}
                 </div>
               <div style={{ justifyContent: 'end', display: 'flex', margin: '0px', color: '#FF3B30', fontSize:'14px', fontWeight:'600', }}>
                 {err && <small> Please select package/program* </small>}
@@ -1461,7 +2067,7 @@ const NutriDietHero = () => {
 
             </div>
 
-          {openForm2 && <SubcriptionForm packageName={plan} selectedPackageName={program} packagePrice={price} closeForm={setOpenForm2} />}
+          {openForm2 && <SubcriptionForm packageName={plan} selectedPackageName={program} packagePrice={price} currency={selectedCurrency} closeForm={setOpenForm2} />}
 
         </div>
       </div>
