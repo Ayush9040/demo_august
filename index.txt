@@ -1,0 +1,115 @@
+web_dev = Frontend + Backend + Database
+
+
+Website is nothing collection of web pages.
+Frontend = Whatever you are seeing on web page. 
+Backend = Backend includes Business logics and Management of Data.
+Database = Database its a place where we store data electronically and in a structured manner.
+
+(HTML + CSS) -> Frontend Heavy + (JS) -> Control Frontend as well and in case Backend we had to use JS fully.
+
+Q. What is HTML ??
+
+Ans. 1. Hyper text Markup language.
+     2. HTML is Skeleton or provides a structure for a web Page.
+     3. Using this we create a user Interface.
+     4. Set of Tags or Elements 
+
+HTML Tags
+Components used to design structure of a website are called HTML Tags.
+eg -> span, div, article, section, html, head, body, form, a, ul, ol etc.
+
+So, whenever we try to put something inside a web page so we use container for that that can also be considered as HTML.
+
+
+<!DOCTYPE html> -> tells browser you are using HTML Document and it is version 5.
+<html> -> root of an html Document.
+<meta> -> It is not visible on web page but this is an Extra information for browser.
+
+<title> -> title tag is used to give a title to your tab.
+<haed> -> Contains all the information which is required by browser to rank your web page and also we use head tag to put links of css so we can connect our external files with html file.
+
+<body> - > Inside this tag we give all the contents that we want to display ona web page.
+
+Q What is a HTML Element??
+
+Ans. Opening Tag + Content + Closing Tag
+E.G -> <span>Ayush Aggarwal</span>
+
+=> We can differentiate tags on the basis of scope. If I differentiate tags on the basis of scope then there is two types of tags:
+
+1. Inline tag -> Takes only the required width by content.
+2. Block tag -> Takes full width.
+
+=> Generally tags are also has two types:
+
+1. Normal tags -> These tags have opening tag as well as closing tags.
+2. Self closing tags -> These tags dont have closing tags.
+
+
+Heading Tag - > It is used to give headings inside your web page.
+
+H1 -> Most Important Heading
+H2
+H3
+H4
+H5
+H6 -> Least Important Heading 
+
+
+H.W
+Q. Difference between Relative Path and Absolute Path??
+
+
+What are attributes in html ??
+
+Ans. They provides an additional information to a tag.
+
+Syntax:
+Attribute="value"
+
+E.G -> href="./about.html"
+
+
+Q. Create a Portfolio website for your self having 3 pages
+
+Home Page
+Requirements:
+H1, H2 tags you will use to give name.
+Image of yours
+Detailed Description about you
+
+Experiences
+Your Experience in two Paragraphs
+Ul -> unordered list
+ol -> Ordered list
+
+
+Education
+Ul -> unordered list
+ol -> Ordered list
+
+
+
+How to push a code to github??
+
+1. Check git is installed in your local system or not using basic command
+   i.e git -v
+
+2. If git is not there then insall it
+
+3. Initalise git in the directory
+   i.e git init
+
+4. 
+
+
+
+
+
+
+
+
+
+
+
