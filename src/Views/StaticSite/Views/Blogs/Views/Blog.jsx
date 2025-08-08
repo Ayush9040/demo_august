@@ -327,13 +327,17 @@ const BlogAnother = () => {
             
 <div className="blog-header-section">
   <div className="author-info-container">
-    {blogData?.author?.[0]?.profilePicture && (
-      <img 
-        src={blogData.author[0].profilePicture} 
-        alt={blogData.author[0].name} 
-        className="author-avatar"
-      />
-    )}
+   {blogData?.author?.[0]?.profilePicture ? (
+        <img 
+          src={blogData.author[0].profilePicture} 
+          alt={blogData.author[0].name} 
+          className="author-avatar"
+        />
+      ) : (
+        <div className="author-avatar-placeholder">
+          {blogData?.author?.[0]?.name?.charAt(0) || 'A'}
+        </div>
+      )}
     <div>
       <div className="author-name">
         {blogData?.author?.[0]?.name || 'Unknown Author'}
