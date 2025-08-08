@@ -101,7 +101,7 @@ How to push a code to github??
 3. Initalise git in the directory
    i.e git init
 
-4. 
+4. Git added remote url
 
 
 
