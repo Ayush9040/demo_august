@@ -368,7 +368,7 @@ const NutriDietHero = () => {
         "1 week": "-",
         "1 month": "Rs 4999/- USD 69",
         "3 months": "Rs 9999/- USD 149",
-        "6 months": "Rs 15999/- USD 219"
+        "6 months": "Rs 14999/- USD 219"
       }
     },
     {
@@ -437,7 +437,7 @@ const NutriDietHero = () => {
         const clinicalPricing = {
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
       } else if (program === 'Auto-Immune Disorders') {
@@ -445,7 +445,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
       } else {
@@ -472,7 +472,7 @@ const NutriDietHero = () => {
         const clinicalPricing = {
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
       } else if (program === 'Auto-Immune Disorders') {
@@ -480,7 +480,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
       } else {
@@ -537,7 +537,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
       } else if (program === 'Auto-Immune Disorders') {
@@ -545,7 +545,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         // alert("Hi")
         priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
@@ -581,7 +581,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? clinicalPricing[plan]?.inr : clinicalPricing[plan]?.usd;
       } else if (program === 'Auto-Immune Disorders') {
@@ -589,7 +589,7 @@ const NutriDietHero = () => {
           '1 week': { inr: 0, usd: 0 },
           '1 month': { inr: 4999, usd: 69 },
           '3 months': { inr: 9999, usd: 149 },
-          '6 months': { inr: 15999, usd: 219 }
+          '6 months': { inr: 14999, usd: 219 }
         };
         priceValue = selectedCurrency === 'INR' ? autoImmunePricing[plan]?.inr : autoImmunePricing[plan]?.usd;
       } else{
@@ -1410,7 +1410,7 @@ const NutriDietHero = () => {
               priceUsd = 149;
               break;
             case '6 months':
-              priceInr = 15999;
+              priceInr = 14999;
               priceUsd = 219;
               break;
             default:
@@ -1654,7 +1654,7 @@ const NutriDietHero = () => {
             padding: '12px 0',
             borderRight: '1px solid #1E9688',
             boxSizing: 'border-box'
-          }}>Rs 15999/-</td>
+          }}>Rs 14999/-</td>
         </tr>
       </tbody>
     </table>
