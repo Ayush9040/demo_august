@@ -207,6 +207,18 @@
   &:not(.slick-initialized) {
     // transform: translate3d(0,0,0) !important;
   }
+
+  .course-sections-slider .custom-arrow-left {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+}
+
+.course-sections-slider .custom-arrow-right {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+}
 }
 
   // .slider_course .slick-slider .slick-track {
@@ -230,13 +242,13 @@
 
 .custom-arrow-left {
   position: absolute;
-  left: 0;
+  left: 5%;
   top: 50%;
 }
 
 .custom-arrow-right {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 50%;
 }
 
@@ -256,5 +268,7 @@
     .slick-dots li {
         margin: 0 4px !important;
     }
+
+    
 }
 

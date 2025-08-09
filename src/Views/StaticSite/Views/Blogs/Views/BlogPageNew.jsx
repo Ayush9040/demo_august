@@ -20,6 +20,11 @@ import Arrow_Left from './images/Arrow_Left.svg'
 import Arrow_Right from './images/Arrow_Right.svg'
 import blog_icon_inner from './images/blog_icon_inner.svg'
 import Icon_mob_menu from './images/Icon_mob_menu.svg'
+import icon_mob_back_custom from './images/icon_mob_back_custom.svg'
+import read_article_mobile_icon from './images/read_article_mobile_icon.svg'
+
+
+
 
 const BlogPageNew = () => {
   const [pagination, setPagination] = useState({ page: 1, limit: 10 }); // page 1 = 10 items
@@ -744,82 +749,170 @@ const fetchMobileLeafCategoryBlogs = async (categoryId, subCategoryId, leafCateg
 };
 
 // Function to handle frontend-only search
-const handleMobileSearch = (query) => {
-  setSearchQuery(query);
+// const handleMobileSearch = (query) => {
+//   setSearchQuery(query);
   
-  if (query.length === 0) {
-    setSearchResults([]);
-    setIsSearching(false);
+//   if (query.length === 0) {
+//     setSearchResults([]);
+//     setIsSearching(false);
+//     setMobileMenuView('categories');
+//     return;
+//   }
+  
+//   if (query.length < 2) {
+//     setSearchResults([]);
+//     setIsSearching(false);
+//     return;
+//   }
+  
+//   setIsSearching(true);
+  
+//   // Create a flat structure of all searchable items
+//   const searchableItems = [];
+  
+//   // Add categories
+//   menuData.forEach(category => {
+//     searchableItems.push({
+//       type: 'category',
+//       id: category._id,
+//       name: category.name,
+//       category: category
+//     });
+    
+//     // Add subcategories
+//     if (category.subcategories && category.subcategories.length > 0) {
+//       category.subcategories.forEach(subcategory => {
+//         if (subcategory && subcategory.name) {
+//           searchableItems.push({
+//             type: 'subcategory',
+//             id: subcategory._id,
+//             name: subcategory.name,
+//             category: category,
+//             subcategory: subcategory
+//           });
+          
+//           // Add leaf categories
+//           if (subcategory.leafCategories && subcategory.leafCategories.length > 0) {
+//             subcategory.leafCategories.forEach(leafCategory => {
+//               if (leafCategory && leafCategory.name) {
+//                 searchableItems.push({
+//                   type: 'leafcategory',
+//                   id: leafCategory._id,
+//                   name: leafCategory.name,
+//                   category: category,
+//                   subcategory: subcategory,
+//                   leafCategory: leafCategory
+//                 });
+//               }
+//             });
+//           }
+//         }
+//       });
+//     }
+//   });
+  
+//   // Filter items based on search query
+//   const filteredItems = searchableItems.filter(item => 
+//     item.name.toLowerCase().includes(query.toLowerCase())
+//   );
+  
+//   setSearchResults(filteredItems);
+//   setIsSearching(false);
+  
+//   if (filteredItems.length > 0) {
+//     setMobileMenuView('search-results');
+//   } else {
+//     setMobileMenuView('no-results');
+//   }
+// };
+
+const [allBlogs, setAllBlogs] = useState([]);
+
+// Fetch all blogs when component mounts
+useEffect(() => {
+  const fetchAllBlogs = async () => {
+    try {
+      const response = await axios.get(
+        'https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=100' // Increased limit to get more results
+      );
+      setAllBlogs(response.data.data || []);
+    } catch (error) {
+      console.error('Error fetching blogs:', error);
+      setAllBlogs([]);
+    }
+  };
+  
+  fetchAllBlogs();
+}, []);
+
+const handleMobileSearch = (query) => {
+  if (query.trim().length === 0) {
+    setMobileBlogs([]);
     setMobileMenuView('categories');
     return;
   }
   
-  if (query.length < 2) {
-    setSearchResults([]);
-    setIsSearching(false);
-    return;
-  }
+  setMobileBlogsLoading(true);
   
-  setIsSearching(true);
-  
-  // Create a flat structure of all searchable items
-  const searchableItems = [];
-  
-  // Add categories
-  menuData.forEach(category => {
-    searchableItems.push({
-      type: 'category',
-      id: category._id,
-      name: category.name,
-      category: category
-    });
+  try {
+    // Perform case-insensitive search on blog titles
+    const filteredBlogs = allBlogs.filter(blog =>
+      blog.title.toLowerCase().includes(query.toLowerCase())
+    );
     
-    // Add subcategories
-    if (category.subcategories && category.subcategories.length > 0) {
-      category.subcategories.forEach(subcategory => {
-        if (subcategory && subcategory.name) {
-          searchableItems.push({
-            type: 'subcategory',
-            id: subcategory._id,
-            name: subcategory.name,
-            category: category,
-            subcategory: subcategory
-          });
-          
-          // Add leaf categories
-          if (subcategory.leafCategories && subcategory.leafCategories.length > 0) {
-            subcategory.leafCategories.forEach(leafCategory => {
-              if (leafCategory && leafCategory.name) {
-                searchableItems.push({
-                  type: 'leafcategory',
-                  id: leafCategory._id,
-                  name: leafCategory.name,
-                  category: category,
-                  subcategory: subcategory,
-                  leafCategory: leafCategory
-                });
-              }
-            });
-          }
-        }
-      });
-    }
-  });
-  
-  // Filter items based on search query
-  const filteredItems = searchableItems.filter(item => 
-    item.name.toLowerCase().includes(query.toLowerCase())
-  );
-  
-  setSearchResults(filteredItems);
-  setIsSearching(false);
-  
-  if (filteredItems.length > 0) {
-    setMobileMenuView('search-results');
-  } else {
+    setMobileBlogs(filteredBlogs);
+    setMobileMenuView(filteredBlogs.length ? 'blogs' : 'no-results');
+  } catch (error) {
+    console.error('Search error:', error);
+    setMobileBlogs([]);
     setMobileMenuView('no-results');
+  } finally {
+    setMobileBlogsLoading(false);
   }
 };
+
+useEffect(() => {
+  if (location.state) {
+    const { selectedCategory, contentType, selectedCategoryData } = location.state;
+    if (selectedCategory && contentType && selectedCategoryData) {
+      setSelectedCategory(selectedCategory);
+      setContentType(contentType);
+      setSelectedCategoryData(selectedCategoryData);
+      fetchCategoryBlogs(selectedCategoryData._id);
+    }
+  }
+}, [location.state]);
+
+// Add these state variables at the top of your component with other state declarations
+const [selectedSubcategoryData, setSelectedSubcategoryData] = useState(null);
+
+// Add this function with your other API call functions
+const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit = 10) => {
+  setCategoryBlogsLoading(true);
+  try {
+    const response = await axios.get(
+      `${cmsBaseDomain}/post?page=${page}&limit=${limit}&category=${categoryId}&subCategory=${subcategoryId}`
+    );
+    setCategoryBlogs(response.data.data || []);
+    setCategoryBlogsPagination({
+      page,
+      limit,
+      total: response.data.total || 0,
+    });
+  } catch (error) {
+    setCategoryBlogs([]);
+    setCategoryBlogsPagination({
+      page: 1,
+      limit: 10,
+      total: 0,
+    });
+  } finally {
+    setCategoryBlogsLoading(false);
+  }
+};
+
+// Then modify the subcategory click handler to use these:
+
 
   return (
     <>
@@ -834,6 +927,7 @@ const handleMobileSearch = (query) => {
       {/* Header Menu Bar */}
       <div className="blog-header-menu-bar-centered">
   <div className="blog-header-menu-bar-inner">
+    {/* Left scroll button */}
     <button
       className="blog-header-menu-scroll-btn left"
       onClick={() => scrollByOne('left')}
@@ -842,6 +936,7 @@ const handleMobileSearch = (query) => {
     >
       <img src={Arrow_Left} alt="arrow-left" />
     </button>
+    
     <div className="blog-header-menu-desktop-scroll" ref={scrollRef}>
       <div className="blog-header-menu-desktop">
         {categoriesLoading ? (
@@ -881,157 +976,166 @@ const handleMobileSearch = (query) => {
                   </span>
                 )}
               </button>
-           {openMenuCatId === cat._id && cat.subcategories && cat.subcategories.length > 0 && (
-  <div 
-    className="blog-header-menu-dropdown-content-centered"
-    ref={el => dropdownRefs.current[cat._id] = el}
-  >
-    <div className="blog-header-menu-dropdown-content-inner">
-      <div className="blog-header-menu-subcat-col">
-        {cat.subcategories.filter(sub => sub && sub.name).slice().reverse().map(sub => {
-          const hasLeafCategories = sub.leafCategories && sub.leafCategories.length > 0;
-          
-          return (
-            <div
-              key={sub._id}
-              className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
-              onClick={async (e) => {
-                e.stopPropagation();
-                setActiveMenuSub(sub._id);
-                setActiveMenuLeaf(null);
-                
-                // If subcategory has no leaf categories, fetch blogs directly
-                if (!hasLeafCategories) {
-                  try {
-                    const response = await axios.get(
-                      `${cmsBaseDomain}/post?page=1&limit=10&category=${cat._id}&subCategory=${sub._id}`
-                    );
-                    setLeafCategoryBlogs(response.data.data || []);
-                  } catch (error) {
-                    console.error('Error fetching subcategory blogs:', error);
-                    setLeafCategoryBlogs([]);
-                  }
-                } else {
-                  setLeafCategoryBlogs([]);
-                }
-              }}
-            >
-              <div className="blog-header-menu-sub-title">{sub.name}</div>
-              <div className="blog-header-menu-sub-desc">{sub.desc}</div>
-            </div>
-          );
-        })}
-      </div>
-      
-      {/* Show either leaf categories or blogs directly */}
-      {activeMenuSub && (
-        <>
-          {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories?.length > 0 ? (
-            <div className="blog-header-menu-leafcat-col">
-              <div className="blog-header-menu-leafcat-title">
-                {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
-              </div>
-              {cat.subcategories.find(s => s._id === activeMenuSub).leafCategories.slice().reverse().map(leaf => (
-                <div
-                  key={leaf._id}
-                  className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
-                  onClick={e => {
-                    e.stopPropagation();
-                    setActiveMenuLeaf(leaf._id);
-                    fetchLeafCategoryBlogs(cat._id, activeMenuSub, leaf._id);
-                  }}
-                >
-                  {leaf.name}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="blog-header-menu-blogs-col">
-              <div className="blog-header-menu-blogs-title">
-                {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
-              </div>
-              {leafCategoryBlogsLoading ? (
-                <div className="blog-header-menu-loading">Loading blogs...</div>
-              ) : (
-                leafCategoryBlogs.slice().reverse().map(blog => (
-                  <Link 
-                    to={`/${blog.slug}`} 
-                    key={blog._id} 
-                    className="blog-header-menu-blog-item"
-                    onClick={() => {
-                      setOpenMenuCatId(null);
-                      setActiveMenuSub(null);
-                      setActiveMenuLeaf(null);
-                    }}
-                  >
-                    <div className="blog-header-menu-blog-title">{blog.title}</div>
-                    <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
-                  </Link>
-                ))
-              )}
-              {leafCategoryBlogs.length > 0 && (
+              
+              {openMenuCatId === cat._id && cat.subcategories && cat.subcategories.length > 0 && (
                 <div 
-                  className="blog-header-menu-seeall"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleCategoryClickSeeAll(cat);
-                  }}
+                  className="blog-header-menu-dropdown-content-centered"
+                  ref={el => dropdownRefs.current[cat._id] = el}
                 >
-                  See all Blogs <img src={Arrow_Right} />
+                  <div className="blog-header-menu-dropdown-content-inner">
+                    <div className="blog-header-menu-subcat-col">
+                      {cat.subcategories.filter(sub => sub && sub.name).slice().reverse().map(sub => {
+                        const hasLeafCategories = sub.leafCategories && sub.leafCategories.length > 0;
+                        
+                        return (
+                          <div
+                            key={sub._id}
+                            className={`blog-header-menu-sub-item${activeMenuSub === sub._id ? ' active' : ''}`}
+                          onClick={async (e) => {
+  e.stopPropagation();
+  setActiveMenuSub(sub._id);
+  setActiveMenuLeaf(null);
+  
+  // If subcategory has no leaf categories, fetch blogs directly and close dropdown
+  if (!hasLeafCategories) {
+    try {
+      const response = await axios.get(
+        `${cmsBaseDomain}/post?page=1&limit=10&category=${cat._id}&subCategory=${sub._id}`
+      );
+      setLeafCategoryBlogs(response.data.data || []);
+      
+      // Close dropdown and show category-specific view
+      setOpenMenuCatId(null);
+      setContentType('category-specific');
+      setSelectedCategoryData(cat);
+      setSelectedSubcategoryData(sub);
+      fetchSubcategoryBlogs(cat._id, sub._id);
+    } catch (error) {
+      console.error('Error fetching subcategory blogs:', error);
+      setLeafCategoryBlogs([]);
+    }
+  } else {
+    setLeafCategoryBlogs([]);
+  }
+}}
+                          >
+                            <div className="blog-header-menu-sub-title">{sub.name}</div>
+                            <div className="blog-header-menu-sub-desc">{sub.desc}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    
+                    {/* Show either leaf categories or blogs directly */}
+                    {activeMenuSub && (
+                      <>
+                        {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories?.length > 0 ? (
+                          <div className="blog-header-menu-leafcat-col">
+                            <div className="blog-header-menu-leafcat-title">
+                              {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
+                            </div>
+                            {cat.subcategories.find(s => s._id === activeMenuSub).leafCategories.slice().reverse().map(leaf => (
+                              <div
+                                key={leaf._id}
+                                className={`blog-header-menu-leaf-item${activeMenuLeaf === leaf._id ? ' active' : ''}`}
+                                onClick={e => {
+                                  e.stopPropagation();
+                                  setActiveMenuLeaf(leaf._id);
+                                  fetchLeafCategoryBlogs(cat._id, activeMenuSub, leaf._id);
+                                }}
+                              >
+                                {leaf.name}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="blog-header-menu-blogs-col">
+                            <div className="blog-header-menu-blogs-title">
+                              {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
+                            </div>
+                            {leafCategoryBlogsLoading ? (
+                              <div className="blog-header-menu-loading">Loading blogs...</div>
+                            ) : (
+                              leafCategoryBlogs.slice().reverse().map(blog => (
+                                <Link 
+                                  to={`/${blog.slug}`} 
+                                  key={blog._id} 
+                                  className="blog-header-menu-blog-item"
+                                  onClick={() => {
+                                    setOpenMenuCatId(null);
+                                    setActiveMenuSub(null);
+                                    setActiveMenuLeaf(null);
+                                  }}
+                                >
+                                  <div className="blog-header-menu-blog-title">{blog.title}</div>
+                                  <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
+                                </Link>
+                              ))
+                            )}
+                            {leafCategoryBlogs.length > 0 && (
+                              <div 
+                                className="blog-header-menu-seeall"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleCategoryClickSeeAll(cat);
+                                }}
+                              >
+                                See all Blogs <img src={Arrow_Right} />
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </>
+                    )}
+                    
+                    {/* Show blogs for leaf categories */}
+                    {activeMenuLeaf && (
+                      <div className="blog-header-menu-blogs-col">
+                        <div className="blog-header-menu-blogs-title">
+                          {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories.find(l => l._id === activeMenuLeaf)?.name}
+                        </div>
+                        {leafCategoryBlogsLoading ? (
+                          <div className="blog-header-menu-loading">Loading blogs...</div>
+                        ) : (
+                          leafCategoryBlogs.slice().reverse().map(blog => (
+                            <Link 
+                              to={`/${blog.slug}`} 
+                              key={blog._id} 
+                              className="blog-header-menu-blog-item"
+                              onClick={() => {
+                                setOpenMenuCatId(null);
+                                setActiveMenuSub(null);
+                                setActiveMenuLeaf(null);
+                              }}
+                            >
+                              <div className="blog-header-menu-blog-title">{blog.title}</div>
+                              <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
+                            </Link>
+                          ))
+                        )}
+                        {leafCategoryBlogs.length > 0 && (
+                          <div 
+                            className="blog-header-menu-seeall"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleCategoryClickSeeAll(cat);
+                            }}
+                          >
+                            See all Blogs <img src={Arrow_Right} />
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
-            </div>
-          )}
-        </>
-      )}
-      
-      {/* Show blogs for leaf categories */}
-      {activeMenuLeaf && (
-        <div className="blog-header-menu-blogs-col">
-          <div className="blog-header-menu-blogs-title">
-            {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories.find(l => l._id === activeMenuLeaf)?.name}
-          </div>
-          {leafCategoryBlogsLoading ? (
-            <div className="blog-header-menu-loading">Loading blogs...</div>
-          ) : (
-            leafCategoryBlogs.slice().reverse().map(blog => (
-              <Link 
-                to={`/${blog.slug}`} 
-                key={blog._id} 
-                className="blog-header-menu-blog-item"
-                onClick={() => {
-                  setOpenMenuCatId(null);
-                  setActiveMenuSub(null);
-                  setActiveMenuLeaf(null);
-                }}
-              >
-                <div className="blog-header-menu-blog-title">{blog.title}</div>
-                <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
-              </Link>
-            ))
-          )}
-          {leafCategoryBlogs.length > 0 && (
-            <div 
-              className="blog-header-menu-seeall"
-              onClick={(e) => {
-                e.preventDefault();
-                handleCategoryClickSeeAll(cat);
-              }}
-            >
-              See all Blogs <img src={Arrow_Right} />
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  </div>
-)}
-
             </div>
           ))
         )}
       </div>
     </div>
+    
+    {/* Right scroll button */}
     <button
       className="blog-header-menu-scroll-btn right"
       onClick={() => scrollByOne('right')}
@@ -1212,49 +1316,71 @@ const handleMobileSearch = (query) => {
 {isMobileMenuOpen && (
   <div className="mobile-menu-overlay" onClick={handleMobileMenuClose}>
     <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
-      {(mobileMenuView !== 'categories' && mobileMenuView !== 'search-results' && mobileMenuView !== 'no-results') && (
-        <button className="mobile-menu-back" onClick={handleMobileBackClick}>
-          ← Back
+      {/* Back button - show on all views except categories */}
+      {mobileMenuView !== 'categories' && (
+        <button 
+          className="mobile-menu-back" 
+          onClick={handleMobileBackClick}
+          style={{
+            marginBottom: mobileMenuView === 'leafcategories' ? '10px' : '0'
+          }}
+        >
+          <img 
+            src={icon_mob_back_custom} 
+            alt="Back" 
+            className="mobile-menu-back-icon"
+          />
         </button>
       )}
-      
-      {(mobileMenuView === 'search-results' || mobileMenuView === 'no-results') && (
-        <button className="mobile-menu-back" onClick={handleMobileBackClick}>
-          ← Back to Categories
-        </button>
-      )}
-      
+
+      {/* Header with title and close button (only on categories view) */}
       <div className="mobile-menu-header">
         <div className="mobile-menu-title">
-          {mobileMenuView === 'categories' && 'All category'}
+          {mobileMenuView === 'categories' && 'All Categories'}
           {mobileMenuView === 'subcategories' && selectedMobileCategory?.name}
+          {mobileMenuView === 'leafcategories' && selectedMobileSubcategory?.name}
           {mobileMenuView === 'blogs' && (
-            selectedMobileLeafCategory?.name || 
-            selectedMobileSubcategory?.name || 
-            selectedMobileCategory?.name
+            selectedMobileLeafCategory?.name || selectedMobileSubcategory?.name || selectedMobileCategory?.name
           )}
-          {mobileMenuView === 'leafcategories' && selectedMobileLeafCategory?.name}
           {mobileMenuView === 'search-results' && 'Search Results'}
           {mobileMenuView === 'no-results' && 'No Results Found'}
         </div>
-        <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
-          ✕
-        </button>
+        
+        {/* Close button - only shown on categories view */}
+        {mobileMenuView === 'categories' && (
+          <button className="mobile-menu-close" onClick={handleMobileMenuClose}>
+            ✕
+          </button>
+        )}
       </div>
-      
+
+      {/* Search input with search button - only shown on categories view */}
       {mobileMenuView === 'categories' && (
         <div className="mobile-menu-search">
           <input 
             type="text" 
-            placeholder="Search blogs" 
+            placeholder="Search blogs..." 
             className="mobile-search-input" 
-            onChange={(e) => handleMobileSearch(e.target.value)}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                handleMobileSearch(searchQuery);
+              }
+            }}
           />
-          <button className="mobile-search-btn">Search</button>
+          <button 
+            className="mobile-search-btn"
+            onClick={() => handleMobileSearch(searchQuery)}
+          >
+            Search
+          </button>
         </div>
       )}
-      
-      <div className="mobile-menu-content">
+
+      {/* Content area */}
+      <div className="mobile-menu-content other_leaf_one">
+        {/* Categories view */}
         {mobileMenuView === 'categories' && (
           <div className="mobile-categories-list">
             {categoriesLoading ? (
@@ -1266,19 +1392,17 @@ const handleMobileSearch = (query) => {
                   className="mobile-category-item"
                   onClick={() => {
                     if (cat.name === 'Latest Researches') {
-                      if (cat.subcategories && cat.subcategories.length > 0) {
+                      if (cat.subcategories?.length > 0) {
                         handleMobileCategoryClick(cat);
                       } else {
-                        // For Latest Researches without subcategories, fetch blogs and show them
                         fetchLatestResearches(1, 10, cat._id);
                         setContentType('latest-researches');
                         setSelectedCategoryData(cat);
                         setIsMobileMenuOpen(false);
                       }
-                    } else if (cat.subcategories && cat.subcategories.length > 0) {
+                    } else if (cat.subcategories?.length > 0) {
                       handleMobileCategoryClick(cat);
                     } else {
-                      // Directly fetch blogs for this category
                       fetchMobileCategoryBlogs(cat._id);
                       setSelectedMobileCategory(cat);
                       setMobileMenuView('blogs');
@@ -1286,44 +1410,54 @@ const handleMobileSearch = (query) => {
                   }}
                 >
                   <span className="mobile-category-name">{cat.name}</span>
-                  {cat.subcategories && cat.subcategories.length > 0 && (
-                    <span className="mobile-category-arrow"><img src={Icon_mob_menu} alt="" /></span>
+                  {cat.subcategories?.length > 0 && (
+                    <span className="mobile-category-arrow">
+                      <img src={Icon_mob_menu} alt=">" />
+                    </span>
                   )}
                 </div>
               ))
             )}
           </div>
         )}
-        
+
+        {/* Subcategories view */}
         {mobileMenuView === 'subcategories' && selectedMobileCategory && (
           <div className="mobile-subcategories-list">
-            {selectedMobileCategory.subcategories.filter(sub => sub && sub.name).map(sub => (
-              <div 
-                key={sub._id} 
-                className="mobile-subcategory-item"
-                onClick={() => {
-                  if (sub.leafCategories && sub.leafCategories.length > 0) {
-                    setSelectedMobileSubcategory(sub);
-                    setMobileMenuView('leafcategories');
-                  } else {
-                    // If no leaf categories, fetch blogs directly for this subcategory
-                    fetchMobileSubcategoryBlogs(selectedMobileCategory._id, sub._id);
-                    setSelectedMobileSubcategory(sub);
-                    setMobileMenuView('blogs');
-                  }
-                }}
-              >
-                <span className="mobile-subcategory-name">{sub.name}</span>
-                {sub.leafCategories && sub.leafCategories.length > 0 && (
-                  <span className="mobile-subcategory-arrow"><img src={Icon_mob_menu} alt="" /></span>
-                )}
-              </div>
-            ))}
+            {selectedMobileCategory.subcategories
+              .filter(sub => sub && sub.name)
+              .map(sub => (
+                <div 
+                  key={sub._id} 
+                  className="mobile-subcategory-item"
+                  onClick={() => {
+                    if (sub.leafCategories?.length > 0) {
+                      setSelectedMobileSubcategory(sub);
+                      setMobileMenuView('leafcategories');
+                    } else {
+                      fetchMobileSubcategoryBlogs(selectedMobileCategory._id, sub._id);
+                      setSelectedMobileSubcategory(sub);
+                      setMobileMenuView('blogs');
+                    }
+                  }}
+                >
+                  <span className="mobile-subcategory-name">{sub.name}</span>
+                  {sub.leafCategories?.length > 0 && (
+                    <span className="mobile-subcategory-arrow">
+                      <img src={Icon_mob_menu} alt=">" />
+                    </span>
+                  )}
+                </div>
+              ))}
           </div>
         )}
-        
+
+        {/* Leaf categories view */}
         {mobileMenuView === 'leafcategories' && selectedMobileSubcategory && (
           <div className="mobile-leafcategories-list">
+            {/* <div className="mobile-leafcategories-header">
+              {selectedMobileSubcategory.name}
+            </div> */}
             {selectedMobileSubcategory.leafCategories.map(leaf => (
               <div
                 key={leaf._id}
@@ -1339,13 +1473,16 @@ const handleMobileSearch = (query) => {
                 }}
               >
                 <span className="mobile-leafcategory-name">{leaf.name}</span>
-                <span className="mobile-leafcategory-arrow"><img src={Icon_mob_menu} alt="" /></span>
+                <span className="mobile-leafcategory-arrow">
+                  <img src={Icon_mob_menu} alt=">" />
+                </span>
               </div>
             ))}
           </div>
         )}
-        
-        {mobileMenuView === 'blogs' && (
+
+        {/* Blogs view (used for both category blogs and search results) */}
+        {(mobileMenuView === 'blogs' || mobileMenuView === 'search-results') && (
           <div className="mobile-blogs-list">
             {mobileBlogsLoading ? (
               <div className="mobile-menu-loading">Loading blogs...</div>
@@ -1360,122 +1497,21 @@ const handleMobileSearch = (query) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <div className="mobile-blog-title">{blog.title}</div>
-                  <div className="mobile-blog-link">Read Article</div>
+                  <div className="mobile-blog-link">Read Article <img src={read_article_mobile_icon} alt="" /></div>
                 </Link>
               ))
             )}
-            {mobileBlogs.length > 0 && (
-              <div 
-                className="mobile-see-all-blogs"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  // Set the appropriate content type based on what's selected
-                  if (selectedMobileLeafCategory) {
-                    setContentType('category-specific');
-                    setSelectedCategoryData(selectedMobileCategory);
-                    fetchLeafCategoryBlogs(
-                      selectedMobileCategory._id,
-                      selectedMobileSubcategory._id,
-                      selectedMobileLeafCategory._id
-                    );
-                  } else if (selectedMobileSubcategory) {
-                    setContentType('category-specific');
-                    setSelectedCategoryData(selectedMobileCategory);
-                    fetchMobileSubcategoryBlogs(
-                      selectedMobileCategory._id,
-                      selectedMobileSubcategory._id
-                    );
-                  } else if (selectedMobileCategory) {
-                    setContentType('category-specific');
-                    setSelectedCategoryData(selectedMobileCategory);
-                    fetchMobileCategoryBlogs(selectedMobileCategory._id);
-                  }
-                }}
-              >
-                <span 
-                            onClick={e => {
-                            e.preventDefault();
-                           
-                              handleCategoryClickSeeAll(selectedMobileCategory);
-                            
-                           
-                          }}>See all Blogs <img src={Icon_mob_menu} alt="" /></span>
-              </div>
-            )}
           </div>
         )}
-        
-        {mobileMenuView === 'search-results' && (
-          <div className="mobile-search-results-list">
-            {isSearching ? (
-              <div className="mobile-menu-loading">Searching...</div>
-            ) : searchResults.length === 0 ? (
-              <div className="mobile-no-results">No results found</div>
-            ) : (
-              searchResults.map((item, index) => (
-                <div
-                  key={`${item.type}-${item.id}-${index}`}
-                  className="mobile-search-result-item"
-                  onClick={() => {
-                    if (item.type === 'category') {
-                      if (item.category.subcategories && item.category.subcategories.length > 0) {
-                        setSelectedMobileCategory(item.category);
-                        setMobileMenuView('subcategories');
-                      } else {
-                        // Directly fetch blogs for this category
-                        fetchMobileCategoryBlogs(item.category._id);
-                        setSelectedMobileCategory(item.category);
-                        setMobileMenuView('blogs');
-                      }
-                    } else if (item.type === 'subcategory') {
-                      if (item.subcategory.leafCategories && item.subcategory.leafCategories.length > 0) {
-                        setSelectedMobileCategory(item.category);
-                        setSelectedMobileSubcategory(item.subcategory);
-                        setMobileMenuView('leafcategories');
-                      } else {
-                        // If no leaf categories, fetch blogs directly for this subcategory
-                        fetchMobileSubcategoryBlogs(item.category._id, item.subcategory._id);
-                        setSelectedMobileCategory(item.category);
-                        setSelectedMobileSubcategory(item.subcategory);
-                        setMobileMenuView('blogs');
-                      }
-                    } else if (item.type === 'leafcategory') {
-                      fetchMobileLeafCategoryBlogs(
-                        item.category._id,
-                        item.subcategory._id,
-                        item.leafCategory._id
-                      );
-                      setSelectedMobileCategory(item.category);
-                      setSelectedMobileSubcategory(item.subcategory);
-                      setSelectedMobileLeafCategory(item.leafCategory);
-                      setMobileMenuView('blogs');
-                    }
-                  }}
-                >
-                  <div className="mobile-search-result-content">
-                    <div className="mobile-search-result-name">{item.name}</div>
-                    <div className="mobile-search-result-type">
-                      {item.type === 'category' && 'Category'}
-                      {item.type === 'subcategory' && `${item.category.name} > Subcategory`}
-                      {item.type === 'leafcategory' && `${item.category.name} > ${item.subcategory.name} > Leaf Category`}
-                    </div>
-                  </div>
-                  <div className="mobile-search-result-arrow">
-                    <img src={Icon_mob_menu} alt="" />
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        )}
-        
+
+        {/* No results view */}
         {mobileMenuView === 'no-results' && (
           <div className="mobile-no-results-container">
             <div className="mobile-no-results-message">
               No results found for {searchQuery}
             </div>
             <div className="mobile-no-results-suggestion">
-              Try searching with different keywords or browse categories below
+              Try searching with different keywords
             </div>
           </div>
         )}

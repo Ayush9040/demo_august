@@ -47,6 +47,49 @@ const BlogAnother = () => {
   const [saveDetails, setSaveDetails] = useState(false);
   const activeButtonRef = useRef(null)
   const navigate = useNavigate(); // <-- initialize useNavigate
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState({ text: '', type: '' });
+  const [loginModalMessage, setLoginModalMessage] = useState('');
+
+  const SubscribeHandle = async (e) => {
+    e.preventDefault();
+    
+    if (!email) {
+      setMessage({ text: 'Please enter your email', type: 'error' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setMessage({ text: '', type: '' });
+
+    try {
+      const response = await axios.post(
+        'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
+        { email },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      );
+
+      if (response.data.success) {
+        setMessage({ text: 'Subscription successful!', type: 'success' });
+        setEmail('');
+      } else {
+        setMessage({ text: response.data.message || 'Subscription failed', type: 'error' });
+      }
+    } catch (error) {
+      setMessage({ 
+        text: error.response?.data?.message || 'An error occurred. Please try again.', 
+        type: 'error' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   // Social sharing functions
   const handleFacebookShare = () => {
@@ -143,7 +186,7 @@ const BlogAnother = () => {
   // Like comment handler
   const handleLikeComment = async (commentId) => {
     if (!isLoggedIn) {
-      navigate('/user/sign-in?location=blog_comment');
+      setShowLoginModal(true);
       return;
     }
     const token = localStorage.getItem('authorizationToken') || '';
@@ -177,6 +220,38 @@ const BlogAnother = () => {
       // Optionally handle error
     }
   };
+
+  //  const [likedComments, setLikedComments] = useState({});
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  // const handleLikeComment = async (commentId) => {
+  //   if (!isLoggedIn) {
+  //     setShowLoginModal(true);
+  //     return;
+  //   }
+
+  //   const token = localStorage.getItem('authorizationToken') || '';
+  //   try {
+  //     if (likedComments[commentId]) {
+  //       await axios.put(
+  //         `https://tyi-test.theyogainstitute.org/cms-api/v1/comment/unlikeComment/${commentId}`,
+  //         {},
+  //         { headers: { 'Authorization': `Bearer ${token}` } }
+  //       );
+  //       setLikedComments(prev => ({ ...prev, [commentId]: false }));
+  //     } else {
+  //       await axios.put(
+  //         `https://tyi-test.theyogainstitute.org/cms-api/v1/comment/likeComment/${commentId}`,
+  //         {},
+  //         { headers: { 'Authorization': `Bearer ${token}` } }
+  //       );
+  //       setLikedComments(prev => ({ ...prev, [commentId]: true }));
+  //     }
+  //   } catch (err) {
+  //     console.error('Error liking comment:', err);
+  //   }
+  // };
+
 
   // Form validation
   const validateForm = () => {
@@ -279,22 +354,32 @@ const BlogAnother = () => {
           }))
         }}/>
       </div>
-      {/* Category Scroll Bar */}
+    <div className='blog_align_top_bottom'>
+        {/* Category Scroll Bar */}
       <div className="category-scroll-container">
         <div className="category-scroll-wrapper">
           <h3 className='heading_tyi_category'>TYI Blog Category</h3>
-         <div className='category-scroll-buttons'>
-           {categories.map(cat => (
-            <button
-              key={cat._id}
-              ref={activeCategoryId === cat._id ? activeButtonRef : null}
-              disabled={activeCategoryId === cat._id}
-              className={`category-scroll-btn${activeCategoryId === cat._id ? ' active' : ''}`}
-            >
-              {cat.name}
-            </button>
-          ))}
-         </div>
+        <div className='category-scroll-buttons'>
+  {categories.map(cat => (
+    <button
+      key={cat._id}
+      ref={activeCategoryId === cat._id ? activeButtonRef : null}
+      disabled={activeCategoryId === cat._id}
+      className={`category-scroll-btn${activeCategoryId === cat._id ? ' active' : ''}`}
+      onClick={() => {
+        navigate('/blogs', {
+          state: {
+            selectedCategory: cat._id,
+            contentType: 'category-specific',
+            selectedCategoryData: cat
+          }
+        });
+      }}
+    >
+      {cat.name}
+    </button>
+  ))}
+</div>
         </div>
       </div>
       
@@ -489,9 +574,19 @@ const BlogAnother = () => {
       <h2 className="section-heading">
         {blogData?.comments?.length || 0} Comments
       </h2>
-      <button className="add-comment-btn" onClick={() => setShowCommentModal(true)}>
-        <span className='plus_comment'>+</span> Add a Comment
-      </button>
+     <button 
+    className="add-comment-btn" 
+    onClick={() => {
+      if (!isLoggedIn) {
+        setShowLoginModal(true);
+        // setLoginModalMessage("Before adding a comment, you need to Sign In");
+      } else {
+        setShowCommentModal(true);
+      }
+    }}
+  >
+    <span className='plus_comment'>+</span> Add a Comment
+  </button>
     </div>
 
     {blogData?.comments?.length > 0 ? (
@@ -549,6 +644,38 @@ const BlogAnother = () => {
           </button>
         </div>
       )}
+         {/* Login Modal */}
+    {showLoginModal && (
+      <div className="login-modal-overlay">
+        <div className="login-modal-content">
+          <div 
+            className="login-modal-close" 
+            onClick={() => setShowLoginModal(false)}
+          >
+            ×
+          </div>
+          
+          <p className="login-modal-message">
+            Before liking or Adding the comment, you need to Sign In
+          </p>
+          
+          <div className="login-modal-buttons">
+            <button
+              className="login-modal-button secondary"
+              onClick={() => setShowLoginModal(false)}
+            >
+              Cancel
+            </button>
+            <button
+              className="login-modal-button primary"
+              onClick={() => navigate('/user/sign-in?location=blog_comment')}
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
       </>
     ) : (
       <p className="no-comments">No comments yet. Be the first to comment!</p>
@@ -561,7 +688,7 @@ const BlogAnother = () => {
         <div className="blog-sidebar">
           {/* Table of Contents */}
           <div className="toc-section">
-            <h3 className="sidebar-heading">Table of contents</h3>
+            <h3 className="sidebar-heading table_text">Table of contents</h3>
             <ul className="toc-list">
              {Array.isArray(blogData.content) && blogData.content.map((section, idx) =>
         section.title ? (
@@ -574,56 +701,89 @@ const BlogAnother = () => {
           </div>
 
            {/* Newsletter */}
-          <div className="newsletter-section">
-            <p className='newsletter_quote'>Feel Better Every Day with Yoga Tips</p>
-            <h3 className="sidebar-heading">Get Our Weekly Yoga & Wellness Newsletter</h3>
-            <p className="newsletter-description">
-              Discover the transformative power of yoga and holistic living. Our weekly newsletter is crafted for yoga lovers, wellness seekers, and anyone on a journey toward better mind-body balance.
-            </p>
-            <form className="newsletter-form">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="newsletter-input"
-              />
-              <button type="submit" className="newsletter-button">Subscribe</button>
-            </form>
+           <div className='newsletter-section_wrapper'>
+      <div className="newsletter-section">
+        <p className='newsletter_quote'>Feel Better Every Day with Yoga Tips</p>
+        <h3 className="sidebar-heading">Get Our Weekly Yoga & Wellness Newsletter</h3>
+        <p className="newsletter-description">
+          Discover the transformative power of yoga and holistic living. Our weekly newsletter is crafted for yoga lovers, wellness seekers, and anyone on a journey toward better mind-body balance.
+        </p>
+        
+        <form className="newsletter-form" onSubmit={SubscribeHandle}>
+          <div>
+            <input 
+            type="email" 
+            placeholder="Enter your email" 
+            className="newsletter-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {message.text && (
+          <p className={`newsletter-message ${message.type}`}>
+            {message.text}
+          </p>
+        )}
           </div>
+          <button 
+            type="submit" 
+            className="newsletter-button"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          </button>
+        </form>
+
+        
+      </div>
+    </div>
 
 
           {/* Related Articles */}
-          <div className="related-articles">
-            <h3 className="sidebar-heading">Related Article</h3>
-            <div className="related-list">
-              {relatedBlogs.length === 0 ? (
+          {/* Related Articles */}
+{/* Related Articles */}
+<div className="related-articles">
+  <h3 className="sidebar-heading related_text">Related Article</h3>
+  <div className="related-list">
+    {relatedBlogs.length === 0 ? (
       <div style={{ padding: 12, color: '#888' }}>No related articles found.</div>
     ) : (
-      relatedBlogs.map(blog => (
-        <Link to={`/${blog.slug}`} className="related-card" key={blog._id}>
-          <img
-            src={blog.coverImage || 'https://via.placeholder.com/100'}
-            alt={blog.title}
-            className="related-image"
-          />
-          <div className="related-content">
-            <h4 className="related-title">
-  {blog.title.length > 30 ? blog.title.slice(0, 30) + '...' : blog.title}
-</h4>
-            <p className="related-meta">
-              {formatDate(blog.createdAt)}{blog.timeDuration ? ` • ${blog.timeDuration} mins` : ''}
-            </p>
-          </div>
-        </Link>
-      ))
-    )}
+      relatedBlogs.map(blog => {
+        // Get the raw content text (with HTML tags)
+        const rawContent = blog.content[0]?.content || '';
+        // Strip HTML tags and get first 30 characters
+        const plainText = rawContent.replace(/<[^>]*>/g, '');
+        const shortDesc = plainText.trim().substring(0, 40);
+        const displayDesc = shortDesc.length === 40 ? `${shortDesc}...` : shortDesc;
+
+        return (
+          <Link to={`/${blog.slug}`} className="related-card" key={blog._id}>
+            <img
+              src={blog.coverImage || 'https://via.placeholder.com/100'}
+              alt={blog.title}
+              className="related-image"
+            />
+            <div className="related-content">
+              <h4 className="related-title">
+                {blog.title.length > 30 ? blog.title.slice(0, 30) + '...' : blog.title}
+              </h4>
+              <p className="related-desc">{displayDesc}</p>
+              <p className="related-meta">
+                {formatDate(blog.createdAt)}{blog.timeDuration ? ` • ${blog.timeDuration} mins` : ''}
+              </p>
             </div>
-          </div>
+          </Link>
+        );
+      })
+    )}
+  </div>
+</div>
 
          
         </div>
 
         
       </div>
+    </div>
 
       {/* Course Sections Slider - New Addition */}
           <div className='course_section_slider_wrapper'>
@@ -670,50 +830,83 @@ const BlogAnother = () => {
           </div> */}
 
            {/* Newsletter */}
-          <div className="newsletter-section">
-            <p className='newsletter_quote'>Feel Better Every Day with Yoga Tips</p>
-            <h3 className="sidebar-heading">Get Our Weekly Yoga & Wellness Newsletter</h3>
-            <p className="newsletter-description">
-              Discover the transformative power of yoga and holistic living. Our weekly newsletter is crafted for yoga lovers, wellness seekers, and anyone on a journey toward better mind-body balance.
-            </p>
-            <form className="newsletter-form">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="newsletter-input"
-              />
-              <button type="submit" className="newsletter-button">Subscribe</button>
-            </form>
+            <div className='newsletter-section_wrapper'>
+      <div className="newsletter-section">
+        <p className='newsletter_quote'>Feel Better Every Day with Yoga Tips</p>
+        <h3 className="sidebar-heading">Get Our Weekly Yoga & Wellness Newsletter</h3>
+        <p className="newsletter-description">
+          Discover the transformative power of yoga and holistic living. Our weekly newsletter is crafted for yoga lovers, wellness seekers, and anyone on a journey toward better mind-body balance.
+        </p>
+        
+        <form className="newsletter-form" onSubmit={SubscribeHandle}>
+          <div>
+            <input 
+            type="email" 
+            placeholder="Enter your email" 
+            className="newsletter-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+           {message.text && (
+          <p className={`newsletter-message ${message.type}`}>
+            {message.text}
+          </p>
+        )}
           </div>
+          
+                   <button 
+            type="submit" 
+            className="newsletter-button"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          </button>
+        </form>
+
+       
+      </div>
+    </div>
 
 
           {/* Related Articles */}
-          <div className="related-articles">
-            <h3 className="sidebar-heading">Related Article</h3>
-            <div className="related-list">
-              {relatedBlogs.length === 0 ? (
+          {/* Related Articles */}
+{/* Related Articles */}
+<div className="related-articles">
+  <h3 className="sidebar-heading related_text">Related Article</h3>
+  <div className="related-list">
+    {relatedBlogs.length === 0 ? (
       <div style={{ padding: 12, color: '#888' }}>No related articles found.</div>
     ) : (
-      relatedBlogs.map(blog => (
-        <Link to={`/${blog.slug}`} className="related-card" key={blog._id}>
-          <img
-            src={blog.coverImage || 'https://via.placeholder.com/100'}
-            alt={blog.title}
-            className="related-image"
-          />
-          <div className="related-content">
-            <h4 className="related-title">
-  {blog.title.length > 30 ? blog.title.slice(0, 30) + '...' : blog.title}
-</h4>
-            <p className="related-meta">
-              {formatDate(blog.createdAt)}{blog.timeDuration ? ` • ${blog.timeDuration} mins` : ''}
-            </p>
-          </div>
-        </Link>
-      ))
-    )}
+      relatedBlogs.map(blog => {
+        // Get the raw content text (with HTML tags)
+        const rawContent = blog.content[0]?.content || '';
+        // Strip HTML tags and get first 30 characters
+        const plainText = rawContent.replace(/<[^>]*>/g, '');
+        const shortDesc = plainText.trim().substring(0, 40);
+        const displayDesc = shortDesc.length === 40 ? `${shortDesc}...` : shortDesc;
+
+        return (
+          <Link to={`/${blog.slug}`} className="related-card" key={blog._id}>
+            <img
+              src={blog.coverImage || 'https://via.placeholder.com/100'}
+              alt={blog.title}
+              className="related-image"
+            />
+            <div className="related-content">
+              <h4 className="related-title">
+                {blog.title.length > 30 ? blog.title.slice(0, 30) + '...' : blog.title}
+              </h4>
+              <p className="related-desc">{displayDesc}</p>
+              <p className="related-meta">
+                {formatDate(blog.createdAt)}{blog.timeDuration ? ` • ${blog.timeDuration} mins` : ''}
+              </p>
             </div>
-          </div>
+          </Link>
+        );
+      })
+    )}
+  </div>
+</div>
 
          
         </div>
@@ -735,7 +928,7 @@ const BlogAnother = () => {
             background: '#fff',
             padding: 32,
             borderRadius: 20,
-            maxWidth: 500,
+            maxWidth: '500px',
             width: '95vw',
             position: 'absolute',
             top: '50%',
