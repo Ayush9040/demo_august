@@ -52,43 +52,54 @@ const BlogAnother = () => {
   const [message, setMessage] = useState({ text: '', type: '' });
   const [loginModalMessage, setLoginModalMessage] = useState('');
 
-  const SubscribeHandle = async (e) => {
-    e.preventDefault();
-    
-    if (!email) {
-      setMessage({ text: 'Please enter your email', type: 'error' });
-      return;
-    }
+  // Updated handler function
+const SubscribeHandle = async (e) => {
+  e.preventDefault();
+  
+  // Clear previous messages
+  setMessage({ text: '', type: '' });
 
-    setIsSubmitting(true);
-    setMessage({ text: '', type: '' });
+  // Check if email is empty
+  if (!email) {
+    setMessage({ text: 'Please enter your email', type: 'error' });
+    return;
+  }
 
-    try {
-      const response = await axios.post(
-        'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
-        { email },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          }
+  // Validate email format (case-insensitive)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    setMessage({ text: 'Please enter a valid email address', type: 'error' });
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await axios.post(
+      'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
+      { email: email.toLowerCase() }, // Convert to lowercase before sending
+      {
+        headers: {
+          'Content-Type': 'application/json',
         }
-      );
-
-      if (response.data.success) {
-        setMessage({ text: 'Subscription successful!', type: 'success' });
-        setEmail('');
-      } else {
-        setMessage({ text: response.data.message || 'Subscription failed', type: 'error' });
       }
-    } catch (error) {
-      setMessage({ 
-        text: error.response?.data?.message || 'An error occurred. Please try again.', 
-        type: 'error' 
-      });
-    } finally {
-      setIsSubmitting(false);
+    );
+
+    if (response.data.success) {
+      setMessage({ text: 'Subscription successful!', type: 'success' });
+      setEmail(''); // Clear the input field on successful subscription
+    } else {
+      setMessage({ text: response.data.message || 'Subscription failed', type: 'error' });
     }
-  };
+  } catch (error) {
+    setMessage({ 
+      text: error.response?.data?.message || 'An error occurred. Please try again.', 
+      type: 'error' 
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
 
   // Social sharing functions
@@ -578,6 +589,7 @@ const BlogAnother = () => {
     className="add-comment-btn" 
     onClick={() => {
       if (!isLoggedIn) {
+        // alert('clicked comment')
         setShowLoginModal(true);
         // setLoginModalMessage("Before adding a comment, you need to Sign In");
       } else {
@@ -645,7 +657,15 @@ const BlogAnother = () => {
         </div>
       )}
          {/* Login Modal */}
-    {showLoginModal && (
+   
+      </>
+    ) : (
+      <p className="no-comments">No comments yet. Be the first to comment!</p>
+    )}
+  </div>
+</div>
+
+ {showLoginModal && (
       <div className="login-modal-overlay">
         <div className="login-modal-content">
           <div 
@@ -668,7 +688,8 @@ const BlogAnother = () => {
             </button>
             <button
               className="login-modal-button primary"
-              onClick={() => navigate('/user/sign-in?location=blog_comment')}
+              onClick={() => navigate(`/user/sign-in?location=blog_comment&returnUrl=${encodeURIComponent(window.location.pathname)}`)
+}
             >
               Sign In
             </button>
@@ -676,12 +697,6 @@ const BlogAnother = () => {
         </div>
       </div>
     )}
-      </>
-    ) : (
-      <p className="no-comments">No comments yet. Be the first to comment!</p>
-    )}
-  </div>
-</div>
           
         </div>
         {/* Right Sidebar */}
@@ -709,29 +724,31 @@ const BlogAnother = () => {
           Discover the transformative power of yoga and holistic living. Our weekly newsletter is crafted for yoga lovers, wellness seekers, and anyone on a journey toward better mind-body balance.
         </p>
         
-        <form className="newsletter-form" onSubmit={SubscribeHandle}>
-          <div>
-            <input 
-            type="email" 
-            placeholder="Enter your email" 
-            className="newsletter-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          {message.text && (
-          <p className={`newsletter-message ${message.type}`}>
-            {message.text}
-          </p>
-        )}
-          </div>
-          <button 
-            type="submit" 
-            className="newsletter-button"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-          </button>
-        </form>
+      <form className="newsletter-form form_detail" onSubmit={SubscribeHandle}>
+  <div>
+    <input 
+      type="text"  // Changed back to type="email" for better mobile keyboard support
+      placeholder="Enter your email" 
+      className="newsletter-input"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      noValidate
+    />
+    {message.text && (
+      <p className={`newsletter-message ${message.type}`}>
+        {message.text}
+      </p>
+    )}
+  </div>
+  
+  <button 
+    type="submit" 
+    className="newsletter-button"
+    disabled={isSubmitting}
+  >
+    {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+  </button>
+</form>
 
         
       </div>
@@ -839,29 +856,30 @@ const BlogAnother = () => {
         </p>
         
         <form className="newsletter-form" onSubmit={SubscribeHandle}>
-          <div>
-            <input 
-            type="email" 
-            placeholder="Enter your email" 
-            className="newsletter-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-           {message.text && (
-          <p className={`newsletter-message ${message.type}`}>
-            {message.text}
-          </p>
-        )}
-          </div>
-          
-                   <button 
-            type="submit" 
-            className="newsletter-button"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-          </button>
-        </form>
+  <div>
+    <input 
+      type="text"  // Changed back to type="email" for better mobile keyboard support
+      placeholder="Enter your email" 
+      className="newsletter-input"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      noValidate
+    />
+    {message.text && (
+      <p className={`newsletter-message ${message.type}`}>
+        {message.text}
+      </p>
+    )}
+  </div>
+  
+  <button 
+    type="submit" 
+    className="newsletter-button"
+    disabled={isSubmitting}
+  >
+    {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+  </button>
+</form>
 
        
       </div>
@@ -1029,7 +1047,7 @@ const BlogAnother = () => {
               className="submit-comment-btn"
               disabled={submitting}
               style={{
-                width: '40%',
+                width: window.innerWidth <= 768 ? '100%' : '40%',
                 padding: '10px 0',
                 background: '#67A1ED',
                 color: '#fff',

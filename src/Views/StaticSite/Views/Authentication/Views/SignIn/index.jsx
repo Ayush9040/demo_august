@@ -296,6 +296,8 @@ const SignIn = () => {
       setIsAnyInputFocused(false);
     }
   };
+
+  
   // Function to get query parameters from URL
   const checkLocationInURL = () => {
     const queryParams = new URLSearchParams(window.location.search); // Get the query params from URL
@@ -623,7 +625,9 @@ const SignIn = () => {
           } 
           // Then apply existing logic
           else {
-            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -686,7 +690,9 @@ const SignIn = () => {
           } 
           // Then apply existing logic
           else {
-            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -880,7 +886,9 @@ const SignIn = () => {
                 } 
                 // Then apply existing logic
                 else {
-                  page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                  page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
                 }
               }
               else {
@@ -938,7 +946,9 @@ const SignIn = () => {
                 } 
                 // Then apply existing logic
                 else {
-                  page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+                  page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
                 }
               }
             }
@@ -1096,7 +1106,9 @@ const SignIn = () => {
             } 
             // Then apply existing logic
             else {
-              page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+              page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
             }
           }
           else {
@@ -1259,7 +1271,9 @@ const SignIn = () => {
             } 
             // Then apply existing logic
             else {
-              page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+              page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
             }
           }
           else {
@@ -1822,7 +1836,9 @@ const SignIn = () => {
           } 
           // Then apply existing logic
           else {
-            page ? page === 'blog_comment' ? navigate('/blogs') : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+            page ? page === 'blog_comment' ? (searchParams.get('returnUrl')
+          ? navigate(searchParams.get('returnUrl'))
+          : navigate('/blogs')) : page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
           }
       }
     } else {

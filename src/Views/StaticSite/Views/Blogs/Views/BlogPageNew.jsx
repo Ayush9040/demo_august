@@ -100,6 +100,9 @@ const [email, setEmail] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
 
+  const blogGridRef = useRef(null);
+
+
   // Add useEffect to handle clicking outside dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -130,50 +133,52 @@ const [email, setEmail] = useState('');
   }, [openMenuCatId]);
 
   const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+};
 
   const handleSubmitSubscribe = async (e) => {
-    e.preventDefault();
-    setError('');
-    
-    // Validate email
-    if (!email) {
-      setError('Please enter your email');
-      return;
-    }
-    
-    if (!validateEmail(email)) {
-      setError('Please enter a valid email address');
-      return;
-    }
+  e.preventDefault();
+  setError('');
+  setSuccess(false);
+  
+  // Validate email exists
+  if (!email.trim()) {
+    setError('Please enter your email');
+    return;
+  }
+  
+  // Validate email format
+  if (!validateEmail(email)) {
+    setError('Please enter a valid email address');
+    return;
+  }
 
-    setIsSubmitting(true);
-    
-    try {
-      const response = await axios.post(
-        'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
-        { email },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          }
+  setIsSubmitting(true);
+  
+  try {
+    const response = await axios.post(
+      'https://tyi-test.theyogainstitute.org/auth-api/v2/ali/newslettermail',
+      { email: email.toLowerCase() }, // Convert to lowercase before sending
+      {
+        headers: {
+          'Content-Type': 'application/json',
         }
-      );
-
-      if (response.data.success) {
-        setSuccess(true);
-        setEmail('');
-      } else {
-        setError(response.data.message || 'Subscription failed. Please try again.');
       }
-    } catch (err) {
-      setError(err.response?.data?.message || 'An error occurred. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
+    );
+
+    if (response.data.success) {
+      setSuccess(true);
+      setEmail(''); // Clear input on success
+    } else {
+      setError(response.data.message || 'Subscription failed. Please try again.');
     }
-  };
+  } catch (err) {
+    setError(err.response?.data?.message || 'An error occurred. Please try again later.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
 // Function to fetch blogs for mobile subcategory
 const fetchMobileSubcategoryBlogs2 = async (categoryId, subCategoryId) => {
@@ -387,12 +392,20 @@ const handleMobileSearch2 = async (query) => {
 
   useEffect(() => {
     const checkScroll = () => {
-      if (!scrollRef.current) return;
-      setCanScrollLeft(scrollRef.current.scrollLeft > 0);
-      setCanScrollRight(
-        scrollRef.current.scrollLeft + scrollRef.current.offsetWidth < scrollRef.current.scrollWidth
-      );
-    };
+  if (!scrollRef.current) return;
+
+  if (scrollRef.current.scrollWidth <= scrollRef.current.offsetWidth) {
+    setCanScrollLeft(false);
+    setCanScrollRight(false);
+    return;
+  }
+
+  setCanScrollLeft(scrollRef.current.scrollLeft > 0);
+  const maxScrollLeft = scrollRef.current.scrollWidth - scrollRef.current.offsetWidth;
+  setCanScrollRight(scrollRef.current.scrollLeft < maxScrollLeft - 1); // add a small margin
+};
+
+
     checkScroll();
     scrollRef.current?.addEventListener('scroll', checkScroll);
     window.addEventListener('resize', checkScroll);
@@ -403,22 +416,26 @@ const handleMobileSearch2 = async (query) => {
   }, [menuData]);
 
   const scrollByOne = (dir) => {
-    if (!scrollRef.current) return;
-    const btns = scrollRef.current.querySelectorAll('.blog-header-menu-btn');
-    if (!btns.length) return;
-    
-    const container = scrollRef.current;
-    const currentScroll = container.scrollLeft;
-    const itemWidth = btns[0]?.offsetWidth || 0;
-    const gapWidth = 32;
-    const scrollAmount = (itemWidth + gapWidth) * 6;
-    
-    if (dir === 'right') {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    }
-  };
+  if (!scrollRef.current) return;
+
+  // Get all the visible category buttons
+  const btns = scrollRef.current.querySelectorAll('.blog-header-menu-btn');
+  if (!btns.length) return;
+
+  // Calculate the width of a single category button (+gap if needed)
+  const itemWidth = btns[0]?.offsetWidth || 0;
+  const gapWidth = 17; // If you have gap between buttons, set here. If using grid/flex gap, adjust as needed.
+
+  // Scroll one item at a time (+gap so alignment stays perfect)
+  const scrollAmount = itemWidth + gapWidth;
+
+  if (dir === 'right') {
+    scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  } else {
+    scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  }
+};
+
 
   const fetchCategories = async () => {
     try {
@@ -522,16 +539,28 @@ const handleMobileSearch2 = async (query) => {
     const response = await axios.get(
       `${cmsBaseDomain}/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}&leafCategory=${leafCategoryId}`
     );
-    
-    // If no blogs found for leaf category, fetch all blogs for the parent category
+
     if (!response.data.data || response.data.data.length === 0) {
-      const categoryResponse = await axios.get(
-        `${cmsBaseDomain}/post?page=1&limit=10&category=${categoryId}`
+      // No blogs — close dropdown and show category blogs below
+      setOpenMenuCatId(null);
+      setActiveMenuSub(null);
+      setActiveMenuLeaf(null);
+      setContentType('category-specific');
+
+      // store selected category/subcategory for below page rendering
+      setSelectedCategoryData(categoriesData.find(cat => cat._id === categoryId));
+      setSelectedSubcategoryData(
+        categoriesData
+          .find(cat => cat._id === categoryId)
+          ?.subcategories.find(sub => sub._id === subCategoryId)
       );
-      setLeafCategoryBlogs(categoryResponse.data.data || []);
-    } else {
-      setLeafCategoryBlogs(response.data.data || []);
+
+      // fetch and render category-level blogs
+      fetchCategoryBlogs(categoryId, 1);
+      return;
     }
+
+    setLeafCategoryBlogs(response.data.data || []);
   } catch (error) {
     console.error('Error fetching leaf category blogs:', error);
     setLeafCategoryBlogs([]);
@@ -539,6 +568,7 @@ const handleMobileSearch2 = async (query) => {
     setLeafCategoryBlogsLoading(false);
   }
 };
+
 
   // const handleDropdownOpen = (catId, btnRef) => {
   //   setOpenMenuCatId(openMenuCatId === catId ? null : catId);
@@ -603,24 +633,44 @@ const handleMobileSearch2 = async (query) => {
     setMobileMenuView('subcategories');
   };
 
-  const handleMobileSubcategoryClick = (subcategory) => {
-    setSelectedMobileSubcategory(subcategory);
-    setMobileMenuView('blogs');
-  };
+ const handleMobileSubcategoryClick = (subcategory) => {
+  setSelectedMobileSubcategory(subcategory);
+
+  if (subcategory.leafCategories?.length > 0) {
+    setMobileMenuView('leafcategories');
+  } else {
+    // No leaf categories → close menu and load blogs in main page
+    setIsMobileMenuOpen(false);
+    setContentType('category-specific');
+    setSelectedCategoryData(selectedMobileCategory);
+    setSelectedSubcategoryData(subcategory);
+    fetchSubcategoryBlogs(selectedMobileCategory._id, subcategory._id, 1, 10);
+  }
+};
+
 
   const handleMobileBackClick = () => {
-    if (mobileMenuView === 'blogs') {
+  if (mobileMenuView === 'blogs') {
+    if (selectedMobileLeafCategory) {
+      setMobileMenuView('leafcategories');
+      setSelectedMobileLeafCategory(null);
+    } else {
       setMobileMenuView('subcategories');
       setSelectedMobileSubcategory(null);
-    } else if (mobileMenuView === 'subcategories') {
-      setMobileMenuView('categories');
-      setSelectedMobileCategory(null);
-    } else if (mobileMenuView === 'search-results' || mobileMenuView === 'no-results') {
-      setMobileMenuView('categories');
-      setSearchQuery('');
-      setSearchResults([]);
     }
-  };
+  } else if (mobileMenuView === 'leafcategories') {
+    setMobileMenuView('subcategories');
+    setSelectedMobileLeafCategory(null);
+  } else if (mobileMenuView === 'subcategories') {
+    setMobileMenuView('categories');
+    setSelectedMobileCategory(null);
+  } else if (mobileMenuView === 'search-results' || mobileMenuView === 'no-results') {
+    setMobileMenuView('categories');
+    setSearchQuery('');
+    setSearchResults([]);
+  }
+};
+
 
   // Add this function before your return statement:
   const handleLatestResearchesPageChange = (pageNumber) => {
@@ -739,6 +789,23 @@ const fetchMobileLeafCategoryBlogs = async (categoryId, subCategoryId, leafCateg
     const response = await axios.get(
       `https://tyi-test.theyogainstitute.org/cms-api/v1/post?page=1&limit=10&category=${categoryId}&subCategory=${subCategoryId}&leafCategory=${leafCategoryId}`
     );
+
+    if (!response.data.data || response.data.data.length === 0) {
+      // Close mobile drawer and load category blogs in below page
+      setIsMobileMenuOpen(false);
+      setContentType('category-specific');
+
+      setSelectedCategoryData(categoriesData.find(cat => cat._id === categoryId));
+      setSelectedSubcategoryData(
+        categoriesData
+          .find(cat => cat._id === categoryId)
+          ?.subcategories.find(sub => sub._id === subCategoryId)
+      );
+
+      fetchSubcategoryBlogs(categoryId, subCategoryId, 1);
+      return;
+    }
+
     setMobileBlogs(response.data.data || []);
   } catch (error) {
     console.error('Error fetching mobile leaf category blogs:', error);
@@ -747,6 +814,7 @@ const fetchMobileLeafCategoryBlogs = async (categoryId, subCategoryId, leafCateg
     setMobileBlogsLoading(false);
   }
 };
+
 
 // Function to handle frontend-only search
 // const handleMobileSearch = (query) => {
@@ -845,31 +913,33 @@ useEffect(() => {
   fetchAllBlogs();
 }, []);
 
+
+
+// Filter categories, subcategories, and leaf categories from already loaded categoriesData
 const handleMobileSearch = (query) => {
-  if (query.trim().length === 0) {
-    setMobileBlogs([]);
+  setSearchQuery(query);
+
+  // Trim and lower-case the query
+  const trimmedQuery = query.trim().toLowerCase();
+
+  // If search is empty → reset view
+  if (!trimmedQuery) {
+    setSearchResults([]);
     setMobileMenuView('categories');
     return;
   }
-  
-  setMobileBlogsLoading(true);
-  
-  try {
-    // Perform case-insensitive search on blog titles
-    const filteredBlogs = allBlogs.filter(blog =>
-      blog.title.toLowerCase().includes(query.toLowerCase())
-    );
-    
-    setMobileBlogs(filteredBlogs);
-    setMobileMenuView(filteredBlogs.length ? 'blogs' : 'no-results');
-  } catch (error) {
-    console.error('Search error:', error);
-    setMobileBlogs([]);
-    setMobileMenuView('no-results');
-  } finally {
-    setMobileBlogsLoading(false);
-  }
+
+  // Filter categories only (no subcategories/leaf/blogs)
+  const matches = categoriesData.filter(
+    (cat) => cat && typeof cat.name === 'string' && cat.name.toLowerCase().includes(trimmedQuery)
+  );
+
+  // Update results + menu view
+  setSearchResults(matches);
+  setMobileMenuView(matches.length > 0 ? 'search-results' : 'no-results');
 };
+
+
 
 useEffect(() => {
   if (location.state) {
@@ -911,7 +981,10 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
   }
 };
 
-// Then modify the subcategory click handler to use these:
+
+
+
+
 
 
   return (
@@ -1020,7 +1093,7 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
 }}
                           >
                             <div className="blog-header-menu-sub-title">{sub.name}</div>
-                            <div className="blog-header-menu-sub-desc">{sub.desc}</div>
+                            <div className="blog-header-menu-sub-desc">{sub.desc.length > 35 ? `${sub.desc.substring(0, 35)}...` : sub.desc}</div>
                           </div>
                         );
                       })}
@@ -1054,35 +1127,58 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
                               {cat.subcategories.find(s => s._id === activeMenuSub)?.name}
                             </div>
                             {leafCategoryBlogsLoading ? (
-                              <div className="blog-header-menu-loading">Loading blogs...</div>
-                            ) : (
-                              leafCategoryBlogs.slice().reverse().map(blog => (
-                                <Link 
-                                  to={`/${blog.slug}`} 
-                                  key={blog._id} 
-                                  className="blog-header-menu-blog-item"
-                                  onClick={() => {
-                                    setOpenMenuCatId(null);
-                                    setActiveMenuSub(null);
-                                    setActiveMenuLeaf(null);
-                                  }}
-                                >
-                                  <div className="blog-header-menu-blog-title">{blog.title}</div>
-                                  <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
-                                </Link>
-                              ))
-                            )}
-                            {leafCategoryBlogs.length > 0 && (
-                              <div 
-                                className="blog-header-menu-seeall"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handleCategoryClickSeeAll(cat);
-                                }}
-                              >
-                                See all Blogs <img src={Arrow_Right} />
-                              </div>
-                            )}
+  <div className="blog-header-menu-loading">Loading blogs...</div>
+) : leafCategoryBlogs.length === 0 ? (
+  // No blogs → close dropdown and show category-specific
+  (() => {
+    setOpenMenuCatId(null);
+    setActiveMenuSub(null);
+    setActiveMenuLeaf(null);
+    setContentType('category-specific');
+    setSelectedCategoryData(cat);
+    // set subcategory/leaf data accordingly here if needed
+    return null;
+  })()
+) : (
+  <>
+    {leafCategoryBlogs.slice(0, 3).map(blog => (
+      <Link
+        to={`/${blog.slug}`}
+        key={blog._id}
+        className="blog-header-menu-blog-item"
+        onClick={() => {
+          setOpenMenuCatId(null);
+          setActiveMenuSub(null);
+          setActiveMenuLeaf(null);
+        }}
+      >
+        <div className="blog-header-menu-blog-title">{truncateText(blog.title, 40)}</div>
+        <div className="blog-header-menu-blog-excerpt">
+          Read Article <img src={img_readArticle} style={{ marginLeft: '5px' }} alt="" />
+        </div>
+      </Link>
+    ))}
+
+    <div
+      className="blog-header-menu-seeall"
+      onClick={async e => {
+        e.preventDefault();
+        setOpenMenuCatId(null);
+        setActiveMenuSub(null);
+        setActiveMenuLeaf(null);
+        setContentType('category-specific');
+        setSelectedCategoryData(cat);
+        // if this is subcategory level:
+        setSelectedSubcategoryData(cat.subcategories.find(s => s._id === activeMenuSub));
+        await fetchSubcategoryBlogs(cat._id, activeMenuSub, 1, 10);
+        // if this is leaf category level, replace above with fetchLeafCategoryBlogs(...)
+      }}
+    >
+      See all Blogs <img src={Arrow_Right} alt="" />
+    </div>
+  </>
+)}
+
                           </div>
                         )}
                       </>
@@ -1095,35 +1191,58 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
                           {cat.subcategories.find(s => s._id === activeMenuSub)?.leafCategories.find(l => l._id === activeMenuLeaf)?.name}
                         </div>
                         {leafCategoryBlogsLoading ? (
-                          <div className="blog-header-menu-loading">Loading blogs...</div>
-                        ) : (
-                          leafCategoryBlogs.slice().reverse().map(blog => (
-                            <Link 
-                              to={`/${blog.slug}`} 
-                              key={blog._id} 
-                              className="blog-header-menu-blog-item"
-                              onClick={() => {
-                                setOpenMenuCatId(null);
-                                setActiveMenuSub(null);
-                                setActiveMenuLeaf(null);
-                              }}
-                            >
-                              <div className="blog-header-menu-blog-title">{blog.title}</div>
-                              <div className="blog-header-menu-blog-excerpt">Read Article<img src={img_readArticle} style={{marginLeft: '5px'}} /></div>
-                            </Link>
-                          ))
-                        )}
-                        {leafCategoryBlogs.length > 0 && (
-                          <div 
-                            className="blog-header-menu-seeall"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleCategoryClickSeeAll(cat);
-                            }}
-                          >
-                            See all Blogs <img src={Arrow_Right} />
-                          </div>
-                        )}
+  <div className="blog-header-menu-loading">Loading blogs...</div>
+) : leafCategoryBlogs.length === 0 ? (
+  // No blogs → close dropdown and show category-specific
+  (() => {
+    setOpenMenuCatId(null);
+    setActiveMenuSub(null);
+    setActiveMenuLeaf(null);
+    setContentType('category-specific');
+    setSelectedCategoryData(cat);
+    // set subcategory/leaf data accordingly here if needed
+    return null;
+  })()
+) : (
+  <>
+    {leafCategoryBlogs.slice(0, 3).map(blog => (
+      <Link
+        to={`/${blog.slug}`}
+        key={blog._id}
+        className="blog-header-menu-blog-item"
+        onClick={() => {
+          setOpenMenuCatId(null);
+          setActiveMenuSub(null);
+          setActiveMenuLeaf(null);
+        }}
+      >
+        <div className="blog-header-menu-blog-title">{truncateText(blog.title, 40)}</div>
+        <div className="blog-header-menu-blog-excerpt">
+          Read Article <img src={img_readArticle} style={{ marginLeft: '5px' }} alt="" />
+        </div>
+      </Link>
+    ))}
+
+    <div
+      className="blog-header-menu-seeall"
+      onClick={async e => {
+        e.preventDefault();
+        setOpenMenuCatId(null);
+        setActiveMenuSub(null);
+        setActiveMenuLeaf(null);
+        setContentType('category-specific');
+        setSelectedCategoryData(cat);
+        // if this is subcategory level:
+        setSelectedSubcategoryData(cat.subcategories.find(s => s._id === activeMenuSub));
+        await fetchSubcategoryBlogs(cat._id, activeMenuSub, 1, 10);
+        // if this is leaf category level, replace above with fetchLeafCategoryBlogs(...)
+      }}
+    >
+      See all Blogs <img src={Arrow_Right} alt="" />
+    </div>
+  </>
+)}
+
                       </div>
                     )}
                   </div>
@@ -1403,9 +1522,11 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
                     } else if (cat.subcategories?.length > 0) {
                       handleMobileCategoryClick(cat);
                     } else {
-                      fetchMobileCategoryBlogs(cat._id);
-                      setSelectedMobileCategory(cat);
-                      setMobileMenuView('blogs');
+                       setIsMobileMenuOpen(false);
+                        setContentType('category-specific');
+                        setSelectedCategoryData(cat);
+                        setSelectedCategory(cat._id);
+                        fetchCategoryBlogs(cat._id, 1, 10);
                     }
                   }}
                 >
@@ -1422,35 +1543,27 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
         )}
 
         {/* Subcategories view */}
-        {mobileMenuView === 'subcategories' && selectedMobileCategory && (
-          <div className="mobile-subcategories-list">
-            {selectedMobileCategory.subcategories
-              .filter(sub => sub && sub.name)
-              .map(sub => (
-                <div 
-                  key={sub._id} 
-                  className="mobile-subcategory-item"
-                  onClick={() => {
-                    if (sub.leafCategories?.length > 0) {
-                      setSelectedMobileSubcategory(sub);
-                      setMobileMenuView('leafcategories');
-                    } else {
-                      fetchMobileSubcategoryBlogs(selectedMobileCategory._id, sub._id);
-                      setSelectedMobileSubcategory(sub);
-                      setMobileMenuView('blogs');
-                    }
-                  }}
-                >
-                  <span className="mobile-subcategory-name">{sub.name}</span>
-                  {sub.leafCategories?.length > 0 && (
-                    <span className="mobile-subcategory-arrow">
-                      <img src={Icon_mob_menu} alt=">" />
-                    </span>
-                  )}
-                </div>
-              ))}
-          </div>
-        )}
+      {mobileMenuView === 'subcategories' && selectedMobileCategory && (
+  <div className="mobile-subcategories-list">
+    {selectedMobileCategory.subcategories
+      .filter(sub => sub && sub.name)
+      .map(sub => (
+        <div 
+          key={sub._id} 
+          className="mobile-subcategory-item"
+          onClick={() => handleMobileSubcategoryClick(sub)}
+        >
+          <span className="mobile-subcategory-name">{sub.name}</span>
+          {sub.leafCategories?.length > 0 && (
+            <span className="mobile-subcategory-arrow">
+              <img src={Icon_mob_menu} alt=">" />
+            </span>
+          )}
+        </div>
+      ))}
+  </div>
+)}
+
 
         {/* Leaf categories view */}
         {mobileMenuView === 'leafcategories' && selectedMobileSubcategory && (
@@ -1482,39 +1595,103 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
         )}
 
         {/* Blogs view (used for both category blogs and search results) */}
-        {(mobileMenuView === 'blogs' || mobileMenuView === 'search-results') && (
-          <div className="mobile-blogs-list">
-            {mobileBlogsLoading ? (
-              <div className="mobile-menu-loading">Loading blogs...</div>
-            ) : mobileBlogs.length === 0 ? (
-              <div className="mobile-no-blogs">No blogs found</div>
-            ) : (
-              mobileBlogs.map(blog => (
-                <Link 
-                  to={`/${blog.slug}`} 
-                  key={blog._id} 
-                  className="mobile-blog-item"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <div className="mobile-blog-title">{blog.title}</div>
-                  <div className="mobile-blog-link">Read Article <img src={read_article_mobile_icon} alt="" /></div>
-                </Link>
-              ))
-            )}
-          </div>
-        )}
+       {(mobileMenuView === 'blogs') && (
+  <div className="mobile-blogs-list">
+    {mobileBlogsLoading ? (
+      <div className="mobile-menu-loading">Loading blogs...</div>
+    ) : mobileBlogs.length === 0 ? (
+      <div className="mobile-no-blogs">No articles found</div>
+    ) : (
+      <>
+        {/* Show only first 3 blogs */}
+        {mobileBlogs.slice(0, 3).map(blog => (
+          <Link 
+            to={`/${blog.slug}`} 
+            key={blog._id} 
+            className="mobile-blog-item"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <div className="mobile-blog-title">{blog.title}</div>
+            <div className="mobile-blog-link">Read Article <img src={read_article_mobile_icon} alt="" /></div>
+          </Link>
+        ))}
+        
+        {/* Show "See all" link if more than 3 blogs */}
+        {mobileBlogs.length > 3 && (
+  <div 
+    className="mobile-see-all-blogs"
+    onClick={() => {
+      setIsMobileMenuOpen(false);
+      setContentType('category-specific');
+
+      if (selectedMobileLeafCategory) {
+        setSelectedCategoryData(selectedMobileCategory);
+        setSelectedSubcategoryData(selectedMobileSubcategory);
+        fetchLeafCategoryBlogs(
+          selectedMobileCategory._id,
+          selectedMobileSubcategory._id,
+          selectedMobileLeafCategory._id
+        );
+      } else if (selectedMobileSubcategory) {
+        setSelectedCategoryData(selectedMobileCategory);
+        setSelectedSubcategoryData(selectedMobileSubcategory);
+        fetchSubcategoryBlogs(
+          selectedMobileCategory._id,
+          selectedMobileSubcategory._id,
+          1
+        );
+      } else if (selectedMobileCategory) {
+        setSelectedCategoryData(selectedMobileCategory);
+        fetchCategoryBlogs(selectedMobileCategory._id, 1);
+      }
+    }}
+  >
+    See all blogs <img src={Arrow_Right} />
+  </div>
+)}
+
+      </>
+    )}
+  </div>
+)}
+
+{mobileMenuView === 'search-results' && (
+  <div className="mobile-search-results-list">
+    {searchResults.map((cat) => (
+      <div
+        key={cat._id}
+        className="mobile-search-result-item"
+        onClick={() => {
+  setIsMobileMenuOpen(false);
+  setContentType('category-specific');
+  setSelectedCategoryData(cat);
+  setSelectedCategory(cat._id);
+  fetchCategoryBlogs(cat._id, 1, 10);
+}}
+
+      >
+        {cat.name}
+      </div>
+    ))}
+  </div>
+)}
+
+
+
+        
 
         {/* No results view */}
         {mobileMenuView === 'no-results' && (
-          <div className="mobile-no-results-container">
-            <div className="mobile-no-results-message">
-              No results found for {searchQuery}
-            </div>
-            <div className="mobile-no-results-suggestion">
-              Try searching with different keywords
-            </div>
-          </div>
-        )}
+  <div className="mobile-no-results-container">
+    <div className="mobile-no-results-message">
+      No category found for {searchQuery}
+    </div>
+    <div className="mobile-no-results-suggestion">
+      Try searching with another category name
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   </div>
@@ -1629,7 +1806,7 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
                 </button>
               ))}
             </div>
-           <div className="blog-recent-list">
+           <div className="blog-recent-list" ref={blogGridRef}>
   {recentBlogsLoading ? (
     <div>Loading...</div>
   ) : recentBlogs.length === 0 ? (
@@ -1675,32 +1852,32 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
         <div className="newsletter-box-desc">
           <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
         </div>
-        {success ? (
-          <div className="newsletter-success">
-            Thank you for subscribing to our newsletter!
-          </div>
-        ) : (
-          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
-           <div>
-             <input 
-              type="email" 
-              className="newsletter-input" 
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button 
-              className="newsletter-btn" 
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-            </button>
-           </div>
-            {error && <div className="newsletter-error">{error}</div>}
-          </form>
+        
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe} noValidate>
+  <div>
+    <input 
+      type="email" 
+      className="newsletter-input" 
+      placeholder="Enter your email address"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      // Prevent default browser validation
+      noValidate
+    />
+    <button 
+      className="newsletter-btn" 
+      type="submit"
+      disabled={isSubmitting}
+    >
+      {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+    </button>
+  </div>
+  {error && <div className="newsletter-error">{error}</div>}
+  {success && <div className="newsletter-success" style={{  fontSize: '14px', color: 'red', textAlign: 'left'}}>Subscription successful!</div>}
+</form>
           
-        )}
+          
+       
       </div>
     </div>
         </div>
@@ -1778,29 +1955,30 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
         <div className="newsletter-box-desc">
           <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
         </div>
-        {success ? (
-          <div className="newsletter-success">
-            Thank you for subscribing to our newsletter!
-          </div>
-        ) : (
-          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
-            <input 
-              type="email" 
-              className="newsletter-input" 
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button 
-              className="newsletter-btn" 
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-            </button>
-            {error && <div className="newsletter-error">{error}</div>}
-          </form>
-        )}
+     
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe} noValidate>
+  <div>
+    <input 
+      type="email" 
+      className="newsletter-input" 
+      placeholder="Enter your email address"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      // Prevent default browser validation
+      noValidate
+    />
+    <button 
+      className="newsletter-btn" 
+      type="submit"
+      disabled={isSubmitting}
+    >
+      {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+    </button>
+  </div>
+  {error && <div className="newsletter-error">{error}</div>}
+  {success && <div className="newsletter-success" style={{textAlign: 'left', color: 'red'}}>Subscription successful!</div>}
+</form>
+       
       </div>
     </div>
         </div>
@@ -1876,29 +2054,30 @@ const fetchSubcategoryBlogs = async (categoryId, subcategoryId, page = 1, limit 
         <div className="newsletter-box-desc">
           <p>Subscribe to our newsletter and get the latest updates on yoga practices, wellness tips, and exclusive content delivered to your inbox.</p>
         </div>
-        {success ? (
-          <div className="newsletter-success">
-            Thank you for subscribing to our newsletter!
-          </div>
-        ) : (
-          <form className="newsletter-form" onSubmit={handleSubmitSubscribe}>
-            <input 
-              type="email" 
-              className="newsletter-input" 
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button 
-              className="newsletter-btn" 
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-            </button>
-            {error && <div className="newsletter-error">{error}</div>}
-          </form>
-        )}
+        
+          <form className="newsletter-form" onSubmit={handleSubmitSubscribe} noValidate>
+  <div>
+    <input 
+      type="email" 
+      className="newsletter-input" 
+      placeholder="Enter your email address"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      // Prevent default browser validation
+      noValidate
+    />
+    <button 
+      className="newsletter-btn" 
+      type="submit"
+      disabled={isSubmitting}
+    >
+      {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+    </button>
+  </div>
+  {error && <div className="newsletter-error">{error}</div>}
+  {success && <div className="newsletter-success" style={{textAlign: 'left', color: 'red'}}>Subscription successful!</div>}
+</form>
+      
       </div>
     </div>
         </div>
