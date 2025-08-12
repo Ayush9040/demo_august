@@ -5,6 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 const axios = require('axios')
+const compression = require('compression');
 const { cmsBaseDomain } = require('./src/Constants/appSettings')
 //import { cmsBaseDomain } from './src/Constants/appSettings' 
 
@@ -12,12 +13,15 @@ const PORT = 5500
 
 const app = express()
 
+const oneYear = 365 * 24 * 60 * 60 * 1000;
+
 const options = {
   dotfiles: 'ignore',
   etag: false,
   extensions: ['htm', 'html', 'js', 'css', 'json', 'ico', 'png', 'jpg', 'txt', 'svg', 'woff', 'woff2', 'webp', 'map'],
   index: false,
-  maxAge: '0',
+   maxAge: oneYear,              // cache for 1 year
+  immutable: true, 
   redirect: 'false',
   setHeaders: (res) => {
     res.set('x-timestamp', Date.now())
@@ -1221,6 +1225,8 @@ const redirectPage = async (path) => {//used to redirected non existing links
   }
 }
 
+app.use(compression());
+
 app.use(express.static('build', options))
 app.get('*', async (req, res) => {
   const { path: reqPath } = req
@@ -1316,6 +1322,21 @@ app.get('*', async (req, res) => {
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta])
   $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags])
+
+  app.get('*', async (req, res) => {
+  // Your existing code to prepare the HTML response
+  // ...
+
+  // Set cache headers for HTML response to disable caching
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  res.set('Surrogate-Control', 'no-store');
+
+  // Send the HTML with meta injections
+  res.status(is404Page ? 301 : 200).send($.html());
+});
+
   
   // Return 301 status for 404 pages as requested
   if (is404Page) {
