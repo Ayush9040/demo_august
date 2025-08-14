@@ -13,7 +13,6 @@ import CommonBtn from '../commonbtn'
 import { Link, useNavigate } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
-import month_ttc from './images/3_month_ttc.jpg'
 import Arrow_Right from './images/Arrow_Right.svg'
 import Arrow_Left from './images/Arrow_Left.svg'
 
@@ -43,7 +42,7 @@ const OurOfferings = () => {
       redirect: '/3-months-advanced-teacher-training-course',
       timeline: '3-month',
       price: '1,10,000',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/dsc08073-%281%2966282a71-f9a1-4c5e-b6df-6afae042d8cf.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/dsc08073-%281%2966282a71-f9a1-4c5e-b6df-6afae042d8cf-%281%29-%281%29-%281%29_11zon3eac0591-5ee6-45d2-83d4-acf783a62669.webp',
       height: '376px',
     },
     {
@@ -53,7 +52,7 @@ const OurOfferings = () => {
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '60,000',
-      imgSrc: baseDomain + homeAssets.homeAsset11,
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/900hrsffb71e9b-2b7d-4f39-afed-cc7204c835b5.webp',
     },
     {
       name: '7-day Yoga Health Camp',
@@ -62,7 +61,7 @@ const OurOfferings = () => {
       redirect: '/7-days-camp',
       timeline: '7 days',
       price: '10000',
-      imgSrc: baseDomain + homeAssets.homeAsset7,
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/7dayscamp_copy75aa408f-4257-432d-878d-8ff3d1172489.webp',
     },
     {
       name: '21-Day Better Living Course',
@@ -71,7 +70,7 @@ const OurOfferings = () => {
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2500',
-      imgSrc: baseDomain + homeAssets.homeAsset8,
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/21days-%281%29d5c08479-ba2b-4d66-bc2f-7dba35fc7a36.webp',
     },
     {
       name: 'Regular Asana Classes',
@@ -80,7 +79,7 @@ const OurOfferings = () => {
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1100',
-      imgSrc: baseDomain + courseAssets.courseAsset115,
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/regular_asana_classbcfaad02-83d4-4756-adbf-9b66d9150395.webp',
     },
     {
       name: '200 Hours - 1 Month Basic TTC',

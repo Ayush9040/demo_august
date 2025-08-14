@@ -31,7 +31,8 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={`${baseDomain}${homeAssets.homeAsset64}`} alt='featured-vedio1' />
+            <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/v1ce562371-309e-40a7-b103-e870c2e4ca83.webp'
+            alt='featured-vedio1' />
           </div>
           <div
             className="image-cont"

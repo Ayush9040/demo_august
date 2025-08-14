@@ -11,7 +11,6 @@ import './style.scss'
 import baseDomain, { socialInitiativeNew } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
-import social_1 from './images/social_1.JPG'
 import social_3 from './images/social_3.JPG'
 
 const SocialInitiatives = ({ alumni, setImageChanger }) => {

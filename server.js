@@ -13,20 +13,25 @@ const PORT = 5500
 
 const app = express()
 
-const oneYear = 365 * 24 * 60 * 60 * 1000;
+const oneYear = 365 * 24 * 60 * 60; // seconds
 
 const options = {
   dotfiles: 'ignore',
   etag: false,
   extensions: ['htm', 'html', 'js', 'css', 'json', 'ico', 'png', 'jpg', 'txt', 'svg', 'woff', 'woff2', 'webp', 'map'],
   index: false,
-   maxAge: oneYear,              // cache for 1 year
-  immutable: true, 
-  redirect: 'false',
-  setHeaders: (res) => {
-    res.set('x-timestamp', Date.now())
-  },
-}
+  maxAge: oneYear * 1000, // milliseconds
+  immutable: true,
+  redirect: false,
+  setHeaders: (res, path) => {
+    if (/\.(jpg|jpeg|png|gif|svg|webp|ico|woff2?|ttf)$/.test(path)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+    res.setHeader('x-timestamp', Date.now().toString());
+  }
+};
+
+
 
 
 

@@ -107,7 +107,7 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img
-              src={`${baseDomain}${homeAssets.homeAsset55}`}
+              src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/shriramnathkovid24ebca3b-b921-4d87-9146-f8d35e46ad41.webp`}
               alt="Shri Ramnath Kovid"
             />
             {/* <div style={{ float: 'right' }}>
@@ -136,7 +136,7 @@ const Experience = () => {
 
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
+            <img src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/naidujifd5cf97c-8a86-40ef-9348-e78ca65b621e.webp`} alt="Naiduji" />
             {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
@@ -163,7 +163,7 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img
-              src={`${baseDomain}${homeAssets.homeAsset58}`}
+              src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/amitabhbachchan_copy357678b8-bbe0-4d6c-9905-8c0066ec966e.webp`}
               alt="Amitabh Bachchan"
             />
             {/* <div style={{ float: 'right' }}>
