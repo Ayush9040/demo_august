@@ -1,0 +1,107 @@
+/* NutriDietHero.css */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+
+.retreat_whole_wrapper {
+  .retreat-inner-wrapper {
+    background-image: url('./images/Background.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    .herosection_content_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+      flex-direction: column;
+      
+
+      .heroSection_heading {
+        font-family: 'Urbanist';
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 60px;
+        margin-bottom: 8px;
+      }
+
+      .heroSection_content_desc {
+        font-family: 'Urbanist';
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 24px;
+        width: 600px;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+  }
+
+  .retreat_second_section {
+   padding: 70px 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12%;
+    flex-direction: column;
+
+    .second_section_heading_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .heading_second {
+        color: #000000;
+        font-family: 'Urbanist';
+        font-weight: 600;
+        font-size: 38px;
+        margin-bottom: 12px;
+      }
+
+      .content_second {
+         color: #000000;
+        font-family: 'Urbanist';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        width: 570px;
+        text-align: center;
+      }
+
+      
+    }
+
+    .second_section_retreat_first {
+        display: flex;
+        padding-top: 70px;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+
+        .spacing_bottom_content {
+          margin-bottom: 30px;
+        }
+
+        .retreat_forest_heading {
+          font-family: 'Urbanist';
+          font-weight: 600;
+          font-size: 24px;
+          color: #568F56;
+          margin-bottom: 10px;
+        }
+
+        .sizing_available {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        .retreat_first_content_desc {
+          font-family: 'Urbanist';
+          font-weight: 500;
+          font-size: 14px;
+          color: #333333;
+        }
+      }
+  }
+}
