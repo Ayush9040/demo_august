@@ -13,6 +13,7 @@ import 'swiper/css/navigation';
 import './YagaretreatNew.scss';
 import InnerNavComponent from '../InnerNavComponent';
 import ForestYogaRetreat from './images/ForestYogaRetreat.svg'
+import AvailableDatesSection from './AvailableDatesSection';
 
 
 
@@ -59,8 +60,7 @@ const AlibaugDetails = () => {
                   </div>
 
                   <div className='retreat_first_forest_yoga_content spacing_bottom_content'>
-                      <h3 className='retreat_forest_heading sizing_available'>Available Dates:</h3>
-                      <p className='retreat_first_content_desc'>Reconnect with nature and find inner peace by practicing asanas, meditation, and refreshing walks in the forest. Participate in beachside classes, take a break from technology, learn deep relaxation methods, and attend workshops on emotional well-being. Evening activities inspired by nature will help improve balance, while providing a refreshing break from daily stress.</p>
+                      <AvailableDatesSection />
                   </div>
 
                   <div className='retreat_first_forest_yoga_content'>

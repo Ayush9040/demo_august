@@ -1,0 +1,170 @@
+.available-dates-wrapper {
+  background: #F6FBF6;
+  // border-radius: 10px;
+  // padding: 20px 20px 13px 20px;
+  // max-width: 480px;
+  // min-width: 340px;
+  // border: 1.5px solid #B7E0B3;
+  // box-shadow: 0 2px 8px 0 rgba(86, 143, 86, 0.05);
+  .available-dates-title {
+    color: #568F56;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Urbanist';
+    margin-bottom: 10px;
+  }
+  .available-dates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  .available-date-row {
+    background: #f2f7f2;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 15px;
+    color: #1E1E1E;
+    font-family: 'Urbanist';
+    display: flex;
+    align-items: center;
+
+    .date-label {
+      color: #398439;
+      font-weight: 600;
+      margin-right: 3px;
+    }
+    .date-range {
+      font-weight: 500;
+      margin-right: 4px;
+      color: #114211;
+    }
+    .date-duration {
+      color: #727272;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .view-all-dates-btn {
+    width: fit-content;
+    margin: 10px auto 0 auto;
+    background: none;
+    border: none;
+    color: #398439;
+    font-size: 16px;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    border-bottom: 2px solid #398439;
+    border-radius: 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 23px;
+      height: 3px;
+      background: #398439;
+      border-radius: 2px;
+      position: absolute;
+      left: 50%;
+      top: 140%;
+      transform: translateX(-50%);
+    }
+    &:hover {
+      color: #205522;
+      border-bottom-color: #205522;
+    }
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  z-index: 2000;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(29, 36, 31, 0.17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dates-modal {
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 0 0 3px #b7e0b389, 0 8px 40px rgba(37, 79, 60, 0.10);
+  padding: 44px 38px 30px 38px;
+  width: 480px;
+  max-width: 93vw;
+  position: relative;
+  .close-btn {
+    position: absolute;
+    top: 20px; right: 26px;
+    border: none; background: none;
+    font-size: 28px; color: #398439;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    &:hover { color: #174114; }
+  }
+  .modal-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #113f0e;
+    text-align: left;
+    font-family: 'Urbanist';
+    letter-spacing: 0.01em;
+  }
+  .modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  .modal-date-row {
+    background: #F6FBF6;
+    border-radius: 9px;
+    padding: 15px 19px;
+    font-size: 15px;
+    color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Urbanist';
+    border: 1.5px solid #B7E0B3;
+    .date-label {
+      color: #398439;
+      font-weight: 600;
+      margin-right: 3px;
+    }
+    .date-range {
+      font-weight: 500;
+      margin-right: 4px;
+      color: #114211;
+    }
+    .date-duration {
+      color: #697b68;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .book-btn {
+      background: #E7F7E4;
+      color: #398439;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Urbanist';
+      font-weight: 700;
+      font-size: 14px;
+      padding: 6px 21px;
+      cursor: pointer;
+      margin-left: 17px;
+      box-shadow: 0 1px 2px 0 #b7e0b360;
+      transition: background 0.18s;
+      &:hover { background: #d5eed7; }
+    }
+  }
+}
