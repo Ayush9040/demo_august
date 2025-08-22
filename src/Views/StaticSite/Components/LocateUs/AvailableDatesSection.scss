@@ -1,5 +1,7 @@
 .available-dates-wrapper {
   background: #F6FBF6;
+  display: flex;
+  flex-direction: column;
   // border-radius: 10px;
   // padding: 20px 20px 13px 20px;
   // max-width: 480px;
@@ -8,7 +10,7 @@
   // box-shadow: 0 2px 8px 0 rgba(86, 143, 86, 0.05);
   .available-dates-title {
     color: #568F56;
-    font-size: 16px;
+    font-size: 18px !important;
     font-weight: 600;
     font-family: 'Urbanist';
     margin-bottom: 10px;
@@ -20,29 +22,30 @@
     margin-bottom: 6px;
   }
   .available-date-row {
-    background: #f2f7f2;
-    border-radius: 5px;
-    padding: 7px 12px;
-    font-size: 15px;
-    color: #1E1E1E;
+    background: #EDF3ED;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
     font-family: 'Urbanist';
-    display: flex;
+    // display: flex;
     align-items: center;
 
     .date-label {
-      color: #398439;
-      font-weight: 600;
-      margin-right: 3px;
+      color: #333333;
+      font-weight: 400;
+      // margin-right: 3px;
     }
     .date-range {
-      font-weight: 500;
-      margin-right: 4px;
-      color: #114211;
+      font-weight: 400;
+      // margin-right: 4px;
+      color: #333333;
     }
     .date-duration {
       color: #727272;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
   .view-all-dates-btn {
@@ -50,29 +53,29 @@
     margin: 10px auto 0 auto;
     background: none;
     border: none;
-    color: #398439;
+    color: #568F56;
     font-size: 16px;
     font-family: 'Urbanist';
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     padding: 0;
-    border-bottom: 2px solid #398439;
+    border-bottom: 1px solid #568F56;
     border-radius: 0;
     position: relative;
 
-    &:after {
-      content: '';
-      display: block;
-      margin: 0 auto;
-      width: 23px;
-      height: 3px;
-      background: #398439;
-      border-radius: 2px;
-      position: absolute;
-      left: 50%;
-      top: 140%;
-      transform: translateX(-50%);
-    }
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   margin: 0 auto;
+    //   width: 23px;
+    //   height: 3px;
+    //   background: #398439;
+    //   border-radius: 2px;
+    //   position: absolute;
+    //   left: 50%;
+    //   top: 140%;
+    //   transform: translateX(-50%);
+    // }
     &:hover {
       color: #205522;
       border-bottom-color: #205522;
