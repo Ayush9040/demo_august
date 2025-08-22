@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import './style.scss'
 import Heading from '../../../Components/Heading'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
@@ -13,6 +13,8 @@ const BlogAnother = () => {
   let text =''
 
   const dispatch = useDispatch()
+  const navigate = useNavigate();
+
 
   const { contentId } = useParams()
   const { blog } = useSelector(state=>state.blogs)
@@ -91,16 +93,44 @@ const BlogAnother = () => {
         <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${blog?.content}` }} >
          
         </div>
-        <div className='tagsInput'>
-          <p style={{ display:'inline-block' }} ><b >Tags:&ensp;</b></p>
-          {
-            blog?.tags?.map((el, i)=>{
-              if(el.objectType!=='CATEGORY'){
-                return <Link to={`/tag/${el._id}` } key={i}>{el.name},&nbsp;</Link>
-              }
-            })
-          }</div>
+        {/* <div className='tagsInput'> */}
+          {/* <p style={{ display:'inline-block' }} ><b >Tags:&ensp;</b></p> */}
+         <div className='tagsInput'>
+  <p style={{ display: 'inline-block' }}><b>Tags:&ensp;</b></p>
+  {blog?.tags
+  ?.filter(el => el.objectType !== 'CATEGORY' && typeof el.name === 'string' && el.name.trim() !== '')
+  .map((el, i, arr) => {
+    const normalizedName = el.name.replace(/\s+/g, ' ').trim().toLowerCase();
+
+    const tagElement =
+      normalizedName === 'the yoga institute' ? (
+        <span
+          key={i}
+          style={{ cursor: 'pointer', textDecoration: 'underline', color: '#ca4625' }}
+          onClick={() => {
+  navigate('/');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}}
+        >
+          {el.name}
+        </span>
+      ) : (
+        <span key={i} style={{cursor: 'pointer', textDecoration: 'underline', color: '#ca4625'}}>{el.name}</span>
+      );
+
+    // Add comma and space after tag, except the last one
+    return (
+      <React.Fragment key={i} style={{cursor: 'pointer', textDecoration: 'underline', color: '#ca4625'}}>
+        {tagElement}
+        {i < arr.length - 1 ? ', ' : ''}
+      </React.Fragment>
+    );
+  })}
+
+{/* </div> */}
+</div>
       </div> }
+  
     </>
   )
 }

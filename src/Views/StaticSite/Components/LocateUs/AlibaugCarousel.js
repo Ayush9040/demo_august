@@ -196,19 +196,20 @@ const AlibaugCarousel = () => {
                 <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 5 - 26th July 2025 to 27th July 2025 ( 1 Night, 2 Days)</span><br />
                  <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 6 - 2nd August 2025 to 3rd August 2025 ( 1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 7 - 9th August 2025 to 10th August 2025 ( 1 Night, 2 Days)</span><br /> */}
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 1 - 30th August 2025 to 31th August 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 6th September 2025 to 7th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 13th September 2025 to 14th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 27th September 2025 to 28th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 5 - 4th October 2025 to 5th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 6 - 11th October 2025 to 12th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 7 - 25th October 2025 to 26th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 8 - 1st November 2025 to 2nd November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 9 - 8th November 2025 to 9th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 10 - 22th November 2025 to 23th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 11 - 29th November 2025 to 30th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 12 - 6th December 2025 to 7th December 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 13 - 20th December 2025 to 21th December 2025 ( 1 Night, 2 Days)</span>
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}>Retreat 1 - 23rd August 2025 to 24th August 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 30th August 2025 to 31th August 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 6th September 2025 to 7th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 13th September 2025 to 14th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 5 - 27th September 2025 to 28th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 6 - 4th October 2025 to 5th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 7 - 11th October 2025 to 12th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 8 - 25th October 2025 to 26th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 9 - 1st November 2025 to 2nd November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 10 - 8th November 2025 to 9th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 11 - 22th November 2025 to 23th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 12 - 29th November 2025 to 30th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 13 - 6th December 2025 to 7th December 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 14 - 20th December 2025 to 21th December 2025 ( 1 Night, 2 Days)</span>
             </h5> :
               <h5>Dates: 
                 {/* <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
@@ -228,19 +229,20 @@ const AlibaugCarousel = () => {
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 5 - 26th July 2025 to 27th July 2025 ( 1 Night, 2 Days)</span><br/>
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 6 - 2nd August 2025 to 3rd August 2025 ( 1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 7 - 9th August 2025 to 10th August 2025 ( 1 Night, 2 Days)</span><br /> */}
-                <span style={{ fontWeight: '400' }}> Retreat 1 - 30th August 2025 to 31th August 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 6th September 2025 to 7th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 13th September 2025 to 14th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 27th September 2025 to 28th September 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 5 - 4th October 2025 to 5th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 6 - 11th October 2025 to 12th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 7 - 25th October 2025 to 26th October 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 8 - 1st November 2025 to 2nd November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 9 - 8th November 2025 to 9th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 10 - 22th November 2025 to 23th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 11 - 29th November 2025 to 30th November 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 12 - 6th December 2025 to 7th December 2025 ( 1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 13 - 20th December 2025 to 21th December 2025 ( 1 Night, 2 Days)</span>
+                <span style={{ fontWeight: '400' }}> Retreat 1 - 23rd August 2025 to 24th August 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 30th August 2025 to 31th August 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 6th September 2025 to 7th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 13th September 2025 to 14th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 5 - 27th September 2025 to 28th September 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 6 - 4th October 2025 to 5th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 7 - 11th October 2025 to 12th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 8 - 25th October 2025 to 26th October 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 9 - 1st November 2025 to 2nd November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 10 - 8th November 2025 to 9th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 11 - 22th November 2025 to 23th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 12 - 29th November 2025 to 30th November 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 13 - 6th December 2025 to 7th December 2025 ( 1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 14 - 20th December 2025 to 21th December 2025 ( 1 Night, 2 Days)</span>
               </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>

@@ -19506,7 +19506,7 @@ const certificate = {
     colorCode: '#C48E8C',
     timing: 'Morning 10:00 am – 1:00 pm, Evening 5:30 - 8:30 PM - online',
     fees: {
-      onlineFee: 4000,
+      onlineFee: 4500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
       // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
@@ -20225,7 +20225,7 @@ const alibaug = {
       // '12th July 2025 to 13th July 2025',
       // '26th July 2025 to 27th July 2025',
       // '2nd Aug 2025 to 3rd Aug 2025',
-      //           '9th Aug 2025 to 10th Aug 2025',
+                '23rd Aug 2025 to 24th Aug 2025',
                 '30th Aug 2025 to 31th Aug 2025',
               '6th Sept 2025 to 7th Sept 2025',
                 '13th Sept 2025 to 14th Sept 2025',
