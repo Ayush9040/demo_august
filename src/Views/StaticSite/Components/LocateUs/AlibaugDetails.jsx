@@ -14,6 +14,8 @@ import './YagaretreatNew.scss';
 import InnerNavComponent from '../InnerNavComponent';
 import ForestYogaRetreat from './images/ForestYogaRetreat.svg'
 import AvailableDatesSection from './AvailableDatesSection';
+import healthy_yoga_new from './images/healthy_yoga_new.svg'
+import garden_img from './images/garden_img.svg'
 
 
 
@@ -178,16 +180,16 @@ const AlibaugDetails = () => {
                
             </div>
 
-             <div className='second_section_retreat_first'>
+             <div className='second_section_retreat_first_second'>
                 <div className='retreat_first_img_wrapper'>
-                  <img src={ForestYogaRetreat} alt="" />
+                  <img src={healthy_yoga_new} alt="" />
                 </div>
 
                 <div className='retreat_first_content_wrapper'>
 
                   <div className='retreat_first_forest_yoga_content spacing_bottom_content'>
-                      <h3 className='retreat_forest_heading'>Forest Yoga Retreat</h3>
-                      <p className='retreat_first_content_desc'>Reconnect with nature and find inner peace by practicing asanas, meditation, and refreshing walks in the forest. Participate in beachside classes, take a break from technology, learn deep relaxation methods, and attend workshops on emotional well-being. Evening activities inspired by nature will help improve balance, while providing a refreshing break from daily stress.</p>
+                      <h3 className='retreat_forest_heading'>Healthy Weight Loss & Wellness Retreat</h3>
+                      <p className='retreat_first_content_desc'>Embark on a transformative journey towards sustainable weight loss and holistic wellness through a balanced approach that combines guided weight-loss focused Yoga sessions, customized pranayama and relaxation techniques, and nutritional workshops on mindful eating and sustainable weight management. Enjoy nourishing, organic, low-calorie Sattvik meals that support detoxification, while rejuvena.. Read More</p>
                   </div>
 
                   <div className='retreat_first_forest_yoga_content spacing_bottom_content'>
@@ -265,6 +267,41 @@ const AlibaugDetails = () => {
                
             </div>
 
+            <div className='question_greenbox'>
+              <div className='greenbox_content'>
+                <div className="greenbox_top">
+                  <h3 className='question_heading'>Still Have Questions?</h3>
+                  <p className='question_description'>Our friendly team is here to help you plan the perfect retreat experience. Get in touch
+for personalized guidance and support.</p>
+                </div>
+
+                <div className="greenbox_bottom">
+                  <p><span className="decorative">Call us:</span> +91 7710969588</p>
+                  <p><span className="decorative">Email:</span>  info@alibagretreat.com</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="accomadation_wrapper">
+            <div className="accomadation_header_wrapper">
+              <h3 className='top_heading_accomadation'>Accommodation</h3>
+              <p className='top_content_desc_accomadation'>Lorem ipsum dolor sit amet consectetur. Aliquam gravida suspendisse tristique sit magna fusce dictumst eu. Malesuada vitae id netus accumsan.</p>
+            </div>
+
+            <div className='accomadation_gallery_wrapper'>
+              <div className="img_gallery">
+                <img src={garden_img} alt="" />
+              </div>
+
+              <div className='gallery_content_container'>
+                <h3>Garden Tented Cottage</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Fringilla elementum porttitor curabitur mi risus arcu sapien. Fermentum pellentesque porttitor aenean malesuada sit mauris mi viverra faucibus. Nisl vitae viverra enim enim.</p>
+                <p>View more about this Accommodation</p>
+              </div>
+
+            </div>
           </div>
         
       </div>

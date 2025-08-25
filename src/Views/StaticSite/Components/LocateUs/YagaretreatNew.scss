@@ -369,6 +369,132 @@
   transform: translateY(-2px);
 }
 
+.second_section_retreat_first_second {
+      display: flex;
+    padding-top: 70px;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.second_section_retreat_first_second .retreat_forest_heading {
+          font-family: 'Urbanist';
+          font-weight: 600;
+          font-size: 24px;
+          color: #568F56;
+          margin-bottom: 10px;
+        }
+
+       .second_section_retreat_first_second .retreat_first_content_desc {
+          font-family: 'Urbanist';
+          font-weight: 500;
+          font-size: 14px;
+          color: #333333;
+        }
+
+        .second_section_retreat_first_second .spacing_bottom_content {
+          margin-bottom: 30px;
+        }
+
+  .question_greenbox {
+    margin: 70px 0px;
+    background-color: #033F26;
+    border-radius: 16px;
+    border: 1px solid #2C5446;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: #fff;
+    width: 100%;
+  }
+
+  .greenbox_content {
+    width: 592px;
+    margin: 0 auto;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .question_heading {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Urbanist';
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .question_description {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Urbanist';
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 150%;
+  }
+
+  .greenbox_bottom {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+  }
+
+   .greenbox_bottom p {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Urbanist';
+   }
+
+  .decorative {
+    color: #568F56;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Urbanist';
+  }
+
+.accomadation_wrapper {
+  padding: 70px 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F6FBE9;
+}
+
+.accomadation_header_wrapper {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: 716px;
+  
+}
+
+.top_heading_accomadation {
+  color: #000000;
+  font-weight: 600;
+    font-size: 38px;
+    font-family: 'Urbanist';
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.top_content_desc_accomadation {
+  font-weight: 500;
+    font-size: 18px;
+    font-family: 'Urbanist';
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+}
+
+.accomadation_gallery_wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-note {
   margin-top: 25px;
   padding: 15px;
