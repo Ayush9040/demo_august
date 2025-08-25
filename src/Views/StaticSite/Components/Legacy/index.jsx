@@ -32,7 +32,7 @@ const Legacy = () => {
         <div className="photo-container global-top-margin">
           <div className="legacy-card">
             <Link to="/our-legacy/paramhamsa-madhavadas-ji">
-              <img src={`${baseDomain}${homeAssets.homeAsset1}`} alt='Madhavdasji the yoga institute' />
+              <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/madhavdasji_11zon3bb21409-743d-4f93-8c1c-3f11244cdf62.webp' alt='Madhavdasji the yoga institute' />
               <div className="legacy-card-content">
                 <h4>Paramhamsa Madhavdasji</h4>
                 <h5>Founder&apos;s Guru</h5>
@@ -52,7 +52,7 @@ const Legacy = () => {
           </div>
           <div className="legacy-card">
             <Link to="/our-legacy/smt-sitadevi-ji">
-              <img src={`${baseDomain}${homeAssets.homeAsset3}`} alt='Sitadevi the yoga institute' />
+              <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/sitadevi_11zone6e5c8a2-f5f2-4b00-b8c2-9638228f3d5e.webp' alt='Sitadevi the yoga institute' />
               <div className="legacy-card-content">
                 <h4>Smt. Sitadevi Yogendra</h4>
                 <h5>Mother</h5>
@@ -62,7 +62,7 @@ const Legacy = () => {
           </div>
           <div className="legacy-card">
             <Link to="/our-legacy/dr-jayadeva-yogendra">
-              <img src={`${baseDomain}${homeAssets.homeAsset4}`} alt='Jayadeva Yogendra the yoga institute' />
+              <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/jayadeva_11zondb0f7d3c-b3d4-41e6-96e1-e42761919a90.webp' alt='Jayadeva Yogendra the yoga institute' />
               <div className="legacy-card-content">
                 <h4>Dr. Jayadeva Yogendra</h4>
                 <h5>President</h5>
@@ -72,7 +72,7 @@ const Legacy = () => {
           </div>
           <div className="legacy-card">
             <Link to="/our-legacy/dr-hansaji-yogendra">
-              <img src={`${baseDomain}${homeAssets.homeAsset5}`} alt='Dr. Hansaji Yogendra the yoga institute' />
+              <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/hansaji_11zond0e40034-9543-4c3b-bbb6-30db89b69a66.webp' alt='Dr. Hansaji Yogendra the yoga institute' />
               <div className="legacy-card-content">
                 <h4>Smt. Hansaji J Yogendra</h4>
                 <h5>Director</h5>

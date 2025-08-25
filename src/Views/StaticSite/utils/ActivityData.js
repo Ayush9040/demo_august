@@ -8,7 +8,7 @@ export const activityData = [
     title: 'MA Yoga Shastra',
     description:
         'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
-    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/m_a_yogashastra_new.797f598764f7303780dc-%281%299f48b858-ec33-4110-a535-acca1c441eaf.webp`,
+    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/m_a_yogashastra_new.797f598764f7303780dc-%281%299f48b858-ec33-4110-a535-acca1c441eaf_11zonc048cdaf-d69e-45e3-8571-2e64c0aeb242.webp`,
     url: '/ma-yoga-shastra'
   },
   {
@@ -39,7 +39,7 @@ export const activityData = [
     title: 'Best Selling books',
     description:
       'Explore 500+ books and national bestsellers that guide you to a happy, balanced, and disease-free life—rooted in timeless yogic wisdom. ',
-    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/best-selling-booksb135ad63-4943-40d4-a667-5011fe28cf7d.jpg`,
+    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/best-selling-booksb135ad63-4943-40d4-a667-5011fe28cf7d6cfe2fbc-43bf-440d-9e18-432f564fcf94.webp`,
     url: '/shop',
   },
   {

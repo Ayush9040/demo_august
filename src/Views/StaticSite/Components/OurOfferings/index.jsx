@@ -42,7 +42,7 @@ const OurOfferings = () => {
       redirect: '/3-months-advanced-teacher-training-course',
       timeline: '3-month',
       price: '1,10,000',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/dsc08073-%281%2966282a71-f9a1-4c5e-b6df-6afae042d8cf-%281%29-%281%29-%281%29_11zon3eac0591-5ee6-45d2-83d4-acf783a62669.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/dsc08073-%281%2966282a71-f9a1-4c5e-b6df-6afae042d8cf-%281%29-%281%29-%281%29_11zon3eac0591-5ee6-45d2-83d4-acf783a62669-%281%29_11zon45d5bbb8-1f13-4728-9288-edd0060681fc.webp',
       height: '376px',
     },
     {
@@ -52,7 +52,7 @@ const OurOfferings = () => {
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '60,000',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/900hrsffb71e9b-2b7d-4f39-afed-cc7204c835b5.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/900hrsffb71e9b-2b7d-4f39-afed-cc7204c835b5_11zonc7333f58-2871-49b3-bba1-e3a2bbbf4d2e.webp',
     },
     {
       name: '7-day Yoga Health Camp',
@@ -61,7 +61,7 @@ const OurOfferings = () => {
       redirect: '/7-days-camp',
       timeline: '7 days',
       price: '10000',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/7dayscamp_copy75aa408f-4257-432d-878d-8ff3d1172489.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/7dayscamp_copy75aa408f-4257-432d-878d-8ff3d1172489_11zonbc3a0cc9-3c45-4ce2-96c0-e6e9638182eb.webp',
     },
     {
       name: '21-Day Better Living Course',
@@ -70,7 +70,7 @@ const OurOfferings = () => {
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2500',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/21days-%281%29d5c08479-ba2b-4d66-bc2f-7dba35fc7a36.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/21days-%281%29d5c08479-ba2b-4d66-bc2f-7dba35fc7a36_11zon81516c90-6247-4c99-8feb-b2b8e0128f9c.webp',
     },
     {
       name: 'Regular Asana Classes',
@@ -79,7 +79,7 @@ const OurOfferings = () => {
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1100',
-      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/regular_asana_classbcfaad02-83d4-4756-adbf-9b66d9150395.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/regular_asana_classbcfaad02-83d4-4756-adbf-9b66d9150395_11zon4ab44faa-e2fa-48cc-bd7c-936ca65a129f.webp',
     },
     {
       name: '200 Hours - 1 Month Basic TTC',
@@ -88,7 +88,7 @@ const OurOfferings = () => {
       redirect: '/one-month-ttc',
       timeline: '1 Month',
       price: '33,000',
-      imgSrc: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/course/200-hour-yoga-teacher-training-course.webp',
+      imgSrc: 'https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/200-hour-yoga-teacher-training-course_11zon172bfad1-d10b-4f72-a544-96d369ef9645.webp',
     },
     
   ]
