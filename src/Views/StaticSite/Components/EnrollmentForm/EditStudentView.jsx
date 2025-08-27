@@ -952,12 +952,25 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     }
   
     const updatedCities = (countryIsoCode, stateIsoCode) => {
-      if (!countryIsoCode || !stateIsoCode) return [];
-      return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
-        value: city.name,
-        label: city.name,
-      }));
-    }
+  if (!countryIsoCode) return [];
+  let byState = [];
+  if (stateIsoCode) {
+    byState = City.getCitiesOfState(countryIsoCode, stateIsoCode).map(city => ({
+      value: city.name,
+      label: city.name,
+    }));
+  }
+  // If byState is empty, use all cities of country as fallback
+  if (byState.length === 0) {
+    return City.getCitiesOfCountry(countryIsoCode).map(city => ({
+      value: city.name,
+      label: city.name,
+    }));
+  } else {
+    return byState;
+  }
+};
+
 
 
   const selectStyles = {

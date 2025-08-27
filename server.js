@@ -1302,8 +1302,26 @@ app.get('*', async (req, res) => {
     if (metaData.title) {
       titleTag = `<title>${metaData.title}</title>`;
     }
-    const canonicalUrl = `https://theyogainstitute.org${correctPath}`;
-    linkArray.push(`<link rel="canonical" href="${canonicalUrl}" data-react-helmet="true" />`);
+    // Check if CMS metadata already contains a canonical link
+// ✅ Always ensure exactly one canonical, placed first in <head>
+// Build canonical URL dynamically from the actual request host and protocol
+const canonicalUrl = `${req.protocol}://${req.get('host')}${correctPath}`;
+
+// Remove any CMS-provided canonical so we don’t get duplicates
+if (metaData.links) {
+  metaData.links = metaData.links.filter(
+    link => link.rel?.toLowerCase() !== 'canonical'
+  );
+}
+
+// Add our canonical FIRST in <head>
+$('head').append(
+  `<link rel="canonical" href="${canonicalUrl}" />`
+);
+
+
+
+
 
     if (metaData.links) {
       const existingLinks = metaData.links.map(link => {
@@ -1357,7 +1375,7 @@ app.get('*', async (req, res) => {
   }
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta]);
-  $('head').prepend([
+  $('head').append([
     `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />`,
     `<link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v43/memvYaGs126MiZpBA-UvWbX2vVnXbB0bj2OVTS-mu0SC55I.woff2" type="font/woff2" crossorigin />`
   ]);
@@ -1370,7 +1388,6 @@ app.get('*', async (req, res) => {
   const minifiedHtml = await minify($.html(), {
     collapseWhitespace: true,
     removeComments: true,
-    removeRedundantAttributes: true,
     removeEmptyAttributes: true,
     minifyJS: true,
     minifyCSS: true

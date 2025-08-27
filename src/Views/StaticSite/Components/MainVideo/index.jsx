@@ -17,7 +17,7 @@ const MainVideo = () => {
   const videoSrc = isInViewport
     ? isInView
       ? "https://nispand.s3.ap-south-1.amazonaws.com/Mobile-Home-Video-Tyi.webm"
-      : "https://nispand.s3.ap-south-1.amazonaws.com/TYI_video.mp4"
+      : "https://nispand.s3.ap-south-1.amazonaws.com/Website+Video+-+4.7+MB.mp4"
     : "";
 
 

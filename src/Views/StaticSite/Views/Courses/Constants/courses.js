@@ -4298,7 +4298,7 @@ const ttc900hr = {
     rating: 5,
 
     colorCode: '#C9705F',
-    timing: 'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
+    timing:'Monday to Saturday:6:30 am to 8:00 pm. Additional Engagements: On certain Sundays, students will be required to participate in scheduled activities or sessions.',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 190000, nonResidentialFee: 110000 },
@@ -4341,7 +4341,7 @@ const ttc900hr = {
       'Monday to Saturday'
     ],
     time: [
-      '6:30 am to 8:00 pm Holiday on all Sundays'
+      '6:30 am to 8:00 pm'
     ],
     enrollInfo: {
       duration: "3 months",
@@ -4430,7 +4430,7 @@ const ttc900hr = {
           title: 'Timings',
 
           text: [
-            'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
+            'Monday to Saturday:6:30 am to 8:00 pm. Additional Engagements: On certain Sundays, students will be required to participate in scheduled activities or sessions.',
           ],
         },
       },
@@ -9358,7 +9358,7 @@ const camps = {
       // '19th May & 20th May 2025',
       // '21st Jun & 22nd Jun 2025',
       // '21st Jul & 22nd Jul 2025',
-      '16th Aug & 17th Aug 2025',
+      // '16th Aug & 17th Aug 2025',
       '15th Sep & 16th Sep 2025',
       '18th Oct & 19th Oct 2025',
       '17th Nov & 18th Nov 2025',
@@ -13097,7 +13097,8 @@ const camps = {
       // '22nd Feb 2025', 
       // '26th Apr 2025', 
       // '15th Jun 2025', 
-      '17th Aug 2025', '19th Oct 2025', '21st Dec 2025'],
+      // '17th Aug 2025', 
+      '19th Oct 2025', '21st Dec 2025'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -15874,7 +15875,7 @@ const classes = {
       // '27th Jul 2025',
       // '3rd Aug 2025', 
       // '10th Aug 2025', 
-      '17th Aug 2025', 
+      // '17th Aug 2025', 
       '24th Aug 2025', 
       '31st Aug 2025', 
       '7th Sep 2025', 
@@ -16434,7 +16435,7 @@ const classes = {
       // '26th Jul 2025',
       // '2nd Aug 2025', 
       // '9th Aug 2025', 
-      '16th Aug 2025', 
+      // '16th Aug 2025', 
       '23rd Aug 2025', 
       '30th Aug 2025', 
       '6th Sep 2025', 
@@ -19395,7 +19396,7 @@ const certificate = {
       // 'June 21th – June 22th 2025',
       // 'July 19th – July 20th 2025',
       // 'July 26th – July 27th 2025',
-      'Aug 16th – Aug 17th 2025',
+      // 'Aug 16th – Aug 17th 2025',
       'Sept 20th – Sept 21th 2025',
       'Oct 18th – Oct 19th 2025',
       'Nov 15th – Nov 16th 2025',

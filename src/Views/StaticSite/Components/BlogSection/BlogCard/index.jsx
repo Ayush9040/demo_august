@@ -14,10 +14,10 @@ const BlogCard = ({ blogs }) => {
       <div className="blog-card-text">
         <p
           className="title"
-          dangerouslySetInnerHTML={{ __html: `${blogs.title}` }}
+          dangerouslySetInnerHTML={{ __html: `${blogs?.title}` }}
         >
         </p>
-        <p className='blogs_meta' dangerouslySetInnerHTML={{ __html: `${blogs.excerpt}` }}>
+        <p className='blogs_meta' dangerouslySetInnerHTML={{ __html: `${blogs?.excerpt}` }}>
         </p>
       </div>
     </div>
