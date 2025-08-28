@@ -298,10 +298,27 @@ for personalized guidance and support.</p>
               <div className='gallery_content_container'>
                 <h3>Garden Tented Cottage</h3>
                 <p>Lorem ipsum dolor sit amet consectetur. Fringilla elementum porttitor curabitur mi risus arcu sapien. Fermentum pellentesque porttitor aenean malesuada sit mauris mi viverra faucibus. Nisl vitae viverra enim enim.</p>
-                <p>View more about this Accommodation</p>
+                <p className='view_gallery'>View more about this Accommodation</p>
               </div>
 
             </div>
+
+            <div className='accomadation_gallery_wrapper_below'>
+              <div className="img_gallery">
+                <img src={garden_img} alt="" />
+              </div>
+
+              <div className='gallery_content_container'>
+                <h3>Suite Cottage</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Fringilla elementum porttitor curabitur mi risus arcu sapien. Fermentum pellentesque porttitor aenean malesuada sit mauris mi viverra faucibus. Nisl vitae viverra enim enim.</p>
+                <p className='view_gallery'>View more about this Accommodation</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className='world_class_wrapper'>
+
           </div>
         
       </div>

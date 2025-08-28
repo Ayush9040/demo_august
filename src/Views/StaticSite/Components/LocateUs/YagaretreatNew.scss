@@ -514,6 +514,44 @@
     margin-bottom: 10px;
   }
 
+  .gallery_content_container h3 {
+    color:#568F56;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: 'Urbanist';
+    margin-bottom: 32px;
+  }
+
+   .gallery_content_container p {
+    color:#333333;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Urbanist';
+    margin-bottom: 25px; 
+  }
+
+  .view_gallery {
+    color:#568F56;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Urbanist';
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .accomadation_gallery_wrapper_below {
+    display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-top: 150px;
+  }
+
+  .img_gallery img {
+    width: 570px;
+  }
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
