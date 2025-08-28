@@ -29,6 +29,7 @@
   overflow-x: auto;
   margin: 24px 0;
   padding-bottom: 8px;
+  scrollbar-width: none;
   /* display: flex;
   justify-content: center; */
   
