@@ -16,7 +16,7 @@ const CommonBtn = ({ text, isColor, buttonAction, isCourse }) => {
         <div className={isHome ? "global-common-btn-content global_home_content" : "global-common-btn-content"}>{text}</div> 
         { isNutriDietLanding && text != 'Continue' && (
           <div className='fixes_des_footer_img'>
-            <img src={nutri_diet_mobile_footer_arrow} alt="" />
+            {/* <img src={nutri_diet_mobile_footer_arrow} alt="" /> */}
           </div>
         )}
         {

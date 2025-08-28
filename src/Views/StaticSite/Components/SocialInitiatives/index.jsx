@@ -11,7 +11,6 @@ import './style.scss'
 import baseDomain, { socialInitiativeNew } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
-import social_1 from './images/social_1.JPG'
 import social_3 from './images/social_3.JPG'
 
 const SocialInitiatives = ({ alumni, setImageChanger }) => {
@@ -31,7 +30,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${socialInitiativeNew.socialNew1}`
   const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
   const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
-  let images = [social_1, social_3, Police]
+  let images = ['https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/social_1.8fd7c69bfca704d5f06e48b00532-9276-4920-9dcc-0f06fb44808b_11zonf04727f6-b255-4311-b5e2-f0092e321494.webp', social_3, Police]
   let ALT = ['Annam Brahma', 'Police', 'BMC']
 
   const [image, setImage] = useState(AnnamBrahma)

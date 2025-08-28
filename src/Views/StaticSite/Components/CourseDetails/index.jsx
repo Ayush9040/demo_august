@@ -719,7 +719,7 @@ const CourseDetails = ({ pageDate }) => {
                       </Link>
                     )
                   ) :
-                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' ? <Link
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
@@ -1033,7 +1033,7 @@ const CourseDetails = ({ pageDate }) => {
                   </Link>
                 )
               ) :
-              (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+              (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' ? <Link
                 to={
                   isLoggedIn
                     ? `/enrollment/${pageDate.key}`///?date=${selectDate}

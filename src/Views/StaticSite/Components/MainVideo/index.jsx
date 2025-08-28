@@ -16,8 +16,8 @@ const MainVideo = () => {
   const isInView = window.innerWidth < 500;
   const videoSrc = isInViewport
     ? isInView
-      ? "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/mobile-home-video-TYI.mp4"
-      : "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/file/desktop-home-video-TYI.mp4"
+      ? "https://nispand.s3.ap-south-1.amazonaws.com/Mobile-Home-Video-Tyi.webm"
+      : "https://nispand.s3.ap-south-1.amazonaws.com/Website+Video+-+4.7+MB.mp4"
     : "";
 
 

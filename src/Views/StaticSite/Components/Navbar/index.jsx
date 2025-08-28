@@ -96,9 +96,10 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
               <img
                 style={{ transition: 'none !important' }}
                 alt='The Yoga Institute'
-                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/tyi.png"
+                src="https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/tyi31f6b294-a040-40c6-b68a-688ded55f9a2.webp"
                 width={'100px'}
                 height={'100px'}
+                fetchpriority="high"
               />
             </div>
             <div className="header-title"></div>

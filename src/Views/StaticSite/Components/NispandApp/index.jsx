@@ -2,7 +2,6 @@ import React from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
-import nispand_1 from './images/nispand_1.png'
 //import { Link } from 'react-router-dom'
 
 const Nispand = () => {
@@ -38,19 +37,19 @@ const Nispand = () => {
           <div className='google-app-store'>
             <a href='https://play.google.com/store/apps/details?id=com.nispand.com' rel='noopener noreferrer' target="_blank"  >
               <div className='google'>
-                <img src={`${baseDomain}${homeAssets.homeAsset22}`} alt='google-play' />
+                <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/google-play-logo-10628_11zonbdc09f26-6df2-470c-a316-71d6be406931.webp' alt='google-play' />
               </div>
             </a>
             <a href='https://apps.apple.com/in/app/nispand-meditation-and-sleep/id1609608907' rel='noopener noreferrer' target="_blank" >
               <div className='apple'>
-                <img width={'93%'} src={`${baseDomain}${homeAssets.homeAsset23}`} alt='app-store' />
+                <img width={'93%'} src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/appstore6e6b1eb4-3b7c-4bd0-929e-930c76f3f1f4.webp' alt='app-store' />
               </div>
             </a>
           </div>
         </div>
       </div>
       <div className='app-preview'>
-        <img src={nispand_1} alt='Nispand-app'/>
+        <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/nispand_1.1d5f4ced6340ccdab228316d6756-246b-43c6-98ea-f1aef764360a_11zon60755be4-89b3-4dea-bacf-54610fd73280.webp' alt='Nispand-app'/>
       </div>
     </div>
   )

@@ -1,9 +1,4 @@
 import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
-import BA_yoga_1 from './images/B_A_Yogashastra_new.jpg'
-import sattvik_img from './images/bestselling.jpg'
-import MA from './images/M_A_Yogashastra_new.jpg'
-import fullmoon_new from './images/fullmoon_new.jpg';
-import nutri_diet_new from './images/nutri_diet_new.jpg';
 import satvam_new from './images/satvam_new.webp'
 
 export const activityData = [
@@ -13,7 +8,7 @@ export const activityData = [
     title: 'MA Yoga Shastra',
     description:
         'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
-    image:`${MA}`,
+    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/m_a_yogashastra_new.797f598764f7303780dc-%281%299f48b858-ec33-4110-a535-acca1c441eaf_11zonc048cdaf-d69e-45e3-8571-2e64c0aeb242.webp`,
     url: '/ma-yoga-shastra'
   },
   {
@@ -21,7 +16,7 @@ export const activityData = [
     title: 'Alibaug Retreat',
     description:
         'The Yoga Institute’s Alibaug retreat offers serene getaways where nature heals and yoga restores body, mind, and spirit.',
-    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/alibaug-highlight-section-%281%29d851ab52-c13d-4880-b3a8-5668ef701204.webp`,
+    image:`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/alibaug-highlight-section-%281%29d851ab52-c13d-4880-b3a8-5668ef701204b00637bd-9b6e-4e02-a49b-f402ed130e1e.webp`,
     url: '/alibaug'
   },
   // {
@@ -36,7 +31,7 @@ export const activityData = [
     id: 2,
     title: 'Nutri Diet Clinic',
     description:'Our team of nutritional health experts will support and guide you on your health concerns. Get our customized plans and incorporate holistic changes.',
-    image: `${nutri_diet_new}`,
+    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/nutri_diet_new.cf4ec9bbac37feaea1e2d1c462db-6660-44fa-a61d-0923da8d21be.webp`, 
     url: '/nutri-diet',
   },
   {
@@ -44,7 +39,7 @@ export const activityData = [
     title: 'Best Selling books',
     description:
       'Explore 500+ books and national bestsellers that guide you to a happy, balanced, and disease-free life—rooted in timeless yogic wisdom. ',
-    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/best-selling-booksb135ad63-4943-40d4-a667-5011fe28cf7d.jpg`,
+    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/best-selling-booksb135ad63-4943-40d4-a667-5011fe28cf7d6cfe2fbc-43bf-440d-9e18-432f564fcf94.webp`,
     url: '/shop',
   },
   {
@@ -60,7 +55,7 @@ export const activityData = [
     title: 'Full Moon Meditation',
     description:
       'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
-    image: `${fullmoon_new}`,
+    image: `https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/fullmoon_new.fcea3fda486dd975d87b2be2364d-4e3c-46f7-bd0e-7d179be1673b.webp`,
     url: '/fullmoon-meditation',
   },
   // {

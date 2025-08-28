@@ -5,69 +5,87 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 const axios = require('axios')
+const compression = require('compression');
 const { cmsBaseDomain } = require('./src/Constants/appSettings')
-//import { cmsBaseDomain } from './src/Constants/appSettings' 
+const { minify } = require('html-minifier-terser');
+const shrinkRay = require('shrink-ray-current');
+
+
 
 const PORT = 5500
-
 const app = express()
+
+const oneYear = 365 * 24 * 60 * 60; // seconds
 
 const options = {
   dotfiles: 'ignore',
   etag: false,
   extensions: ['htm', 'html', 'js', 'css', 'json', 'ico', 'png', 'jpg', 'txt', 'svg', 'woff', 'woff2', 'webp', 'map'],
   index: false,
-  maxAge: '0',
-  redirect: 'false',
-  setHeaders: (res) => {
-    res.set('x-timestamp', Date.now())
-  },
-}
+  maxAge: oneYear * 1000, // milliseconds
+  immutable: true,
+  redirect: false,
+  setHeaders: (res, path) => {
+    if (/\.(jpg|jpeg|png|gif|svg|webp|ico|woff2?|ttf)$/.test(path)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+    res.setHeader('x-timestamp', Date.now().toString());
+  }
+};
 
-
-
-//metaDataObj[correctPath] || await getBlogsMeta(correctPath)
+// Simple in-memory cache to reduce API calls (optional, tweak TTL or use Redis for production)
+const metaDataCache = new Map();
+const blogLinksCache = { data: null, lastFetch: 0 };
+const CACHE_TTL = 1000 * 60 * 10; // 10 minutes
 
 const getMetaData = async (path) => {
-  let pathName = path.slice(1)
+  if (metaDataCache.has(path)) return metaDataCache.get(path);
+  let pathName = path.slice(1);
   try {
-    const res = await axios.get(
-      `${cmsBaseDomain}/seometatags/?pagePath=${pathName}`
-    )
-    let data = res.data.data.meta
+    const res = await axios.get(`${cmsBaseDomain}/seometatags/?pagePath=${pathName}`);
+    let data = res.data.data.meta;
     let headers = {
       title: '',
       links: [],
       metaData: [],
       script: '',
-    }
+    };
 
-    data = data.replace(/\\n/g, '')
-    data = data.split('\n')
+    data = data.replace(/\\n/g, '');
+    data = data.split('\n');
     data.forEach((el) => {
       if (el.includes('<meta') || el.includes('<link')) {
-        let obj = {}
-        let regExp = /(\S+)="[^"]*/g
-        let regexMatches = el.match(regExp)
+        let obj = {};
+        let regExp = /(\S+)="[^"]*/g;
+        let regexMatches = el.match(regExp) || [];
 
-        regexMatches.map((el) => {
-          let partition = el.split('="')
-          obj[partition[0]] = partition[1].replace(/"/g, '')
-        })
+        regexMatches.forEach((el) => {
+          let partition = el.split('="');
+          obj[partition[0]] = partition[1].replace(/"/g, '');
+        });
 
-        if (el.includes('<meta')) headers.metaData.push(obj)
-        if (el.includes('<link')) headers.links.push(obj)
+        if (el.includes('<meta')) headers.metaData.push(obj);
+        if (el.includes('<link')) headers.links.push(obj);
       } else if (el.includes('<title')) {
-        headers.title = el.replace('<title>', '').replace('</title>', '')
-      }
-      else if (el.includes('<script')) headers.script = el
-    })
-    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag, aTags: res.data.data?.relatedCourses }
+        headers.title = el.replace('<title>', '').replace('</title>', '');
+      } else if (el.includes('<script')) headers.script = el;
+    });
+
+    const fullData = { 
+      ...headers, 
+      h1Tag: metaDataObj?.[path]?.h1Tag, 
+      h2Tags: metaDataObj?.[path]?.h2Tags, 
+      pTag: res.data.data?.pTag, 
+      aTags: res.data.data?.relatedCourses
+    };
+
+    metaDataCache.set(path, fullData);
+    return fullData;
   } catch (err) {
     if (metaDataObj[path]) return metaDataObj[path]
     try {
-      const res = await axios.get(`${cmsBaseDomain}/post${path}`)
-      let data = res.data.data.meta
+      const res = await axios.get(`${cmsBaseDomain}/post${path}`);
+      let data = res.data.data.meta;
       let headers = {
         title: '',
         links: [],
@@ -75,50 +93,58 @@ const getMetaData = async (path) => {
         script: '',
         h1Tag: '',
         pTagBlog: res.data.data.content
-      }
-      headers.h1Tag = res.data.data.title
-      data = data.replace(/\\n/g, '')
-      data = data.split('\n')
-      data.forEach((el) => {
+      };
+      headers.h1Tag = res.data.data.title;
+
+      data = data.replace(/\\n/g, '');
+      data = data.split('\n');
+      data.forEach(el => {
         if (el.includes('<meta') || el.includes('<link')) {
-          let obj = {}
-          let regExp = /(\S+)="[^"]*/g
-          let regexMatches = el.match(regExp)
+          let obj = {};
+          let regExp = /(\S+)="[^"]*/g;
+          let regexMatches = el.match(regExp) || [];
 
-          regexMatches.map(el => {
-            let partition = el.split('="')
-            obj[partition[0]] = partition[1].replace(/"/g, '')
-          })
+          regexMatches.forEach(el => {
+            let partition = el.split('="');
+            obj[partition[0]] = partition[1].replace(/"/g, '');
+          });
 
-          if (el.includes('<meta'))
-            headers.metaData.push(obj)
-          if (el.includes('<link'))
-            headers.links.push(obj)
+          if (el.includes('<meta')) headers.metaData.push(obj);
+          if (el.includes('<link')) headers.links.push(obj);
+        } else if (el.includes('<title')) {
+          headers.title = el.replace('<title>', '').replace('</title>', '');
+        } else if (el.includes('<script')) {
+          headers.script = el;
         }
-        else if (el.includes('<title')) {
-          headers.title = el.replace('<title>', '').replace('</title>', '')
-        }
-        else if (el.includes('<script'))
-          headers.script = el
-
-      })
-      return headers
+      });
+      metaDataCache.set(path, headers);
+      return headers;
     } catch (err) {
-      // console.log(err)
+      // Log error if needed
+      return null;
     }
   }
 }
+
 const getBogLinks = async () => {
-  const { data } = await axios.get(`${cmsBaseDomain}/misc/urlsarray`)
-  return data.data
-}
-const RemoveTrailingSlash = (url) => {
-
-  if (url.endsWith("/") && url !== "/") {
-    const newPath = url.slice(0, -1);
-    return newPath;
+  const now = Date.now();
+  if (blogLinksCache.data && (now - blogLinksCache.lastFetch) < CACHE_TTL) {
+    return blogLinksCache.data;
   }
+  try {
+    const { data } = await axios.get(`${cmsBaseDomain}/misc/urlsarray`);
+    blogLinksCache.data = data.data;
+    blogLinksCache.lastFetch = now;
+    return blogLinksCache.data;
+  } catch {
+    return [];
+  }
+}
 
+const RemoveTrailingSlash = (url) => {
+  if (url.endsWith("/") && url !== "/") {
+    return url.slice(0, -1);
+  }
   return url;
 };
 
@@ -1221,42 +1247,47 @@ const redirectPage = async (path) => {//used to redirected non existing links
   }
 }
 
-app.use(express.static('build', options))
+app.use(compression());
+app.use(shrinkRay());
+app.use(express.static('build', options));
+
 app.get('*', async (req, res) => {
-  const { path: reqPath } = req
+  const { path: reqPath } = req;
   console.log(reqPath);
 
   const navigationRes = await redirectPage(reqPath);
   if (navigationRes?.isNavigate === true) {
-    return res.redirect(301, navigationRes?.path)
+    return res.redirect(301, navigationRes?.path);
   }
 
-  let correctPath = reqPath
-  const indexHtmlPath = path.resolve(__dirname, './build/index.html')
-  const indexHtml = fs.readFileSync(indexHtmlPath)
-  const $ = cheerio.load(indexHtml)
-  if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
-  const metaData = await getMetaData(correctPath)
+  let correctPath = reqPath;
+  if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) {
+    correctPath = reqPath.slice(0, -1);
+  }
 
-  // Check if page exists - if metaData is null/undefined, it's a 404
-  const is404Page = !metaData || (!metaData.title && !metaData.h1Tag)
+  const indexHtmlPath = path.resolve(__dirname, './build/index.html');
+  const indexHtml = fs.readFileSync(indexHtmlPath);
+  const $ = cheerio.load(indexHtml);
 
-  let titleTag = null
-  let metaArray = []
-  let linkArray = []
-  let linkArryBlogs = await getBogLinks()
-  let script = ''
-  let h1Tag = null
-  let h2Tags = []
-  let aTags = []
-  let courseaTags = []
-  let blogATags = []
-  let pTag = ''
-  let pTagBlog = ''
+  // Fetch metadata and blog links in parallel to reduce wait time
+  const [metaData, linkArryBlogs] = await Promise.all([getMetaData(correctPath), getBogLinks()]);
+
+  const is404Page = !metaData || (!metaData.title && !metaData.h1Tag);
+
+  let titleTag = null;
+  let metaArray = [];
+  let linkArray = [];
+  let script = '';
+  let h1Tag = null;
+  let h2Tags = [];
+  let aTags = [];
+  let courseaTags = [];
+  let blogATags = [];
+  let pTag = '';
+  let pTagBlog = '';
 
   if (is404Page) {
-    // For 404 pages, inject specific meta tags including noindex
-    titleTag = `<title>404 Error - Page Not Found | The Yoga Institute</title>`
+    titleTag = `<title>404 Error - Page Not Found | The Yoga Institute</title>`;
     metaArray = [
       `<meta name="robots" content="noindex, nofollow" data-react-helmet="true" />`,
       `<meta name="description" content="The page you are looking for does not exist." data-react-helmet="true" />`,
@@ -1266,68 +1297,111 @@ app.get('*', async (req, res) => {
       `<meta name="twitter:card" content="summary" data-react-helmet="true" />`,
       `<meta name="twitter:title" content="404 Error - Page Not Found" data-react-helmet="true" />`,
       `<meta name="twitter:description" content="The page you are looking for does not exist." data-react-helmet="true" />`
-    ]
+    ];
   } else {
-    // Normal page meta tags
-    if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
-    
-    // Add canonical link for non-404 pages
-    const canonicalUrl = `https://theyogainstitute.org${correctPath}`
-    linkArray.push(`<link rel="canonical" href="${canonicalUrl}" data-react-helmet="true" />`)
-    
-    if (metaData && metaData.links) {
-      const existingLinks = metaData.links.map((link) => {
-        if (link.rel) return `<link class="meta-heading" rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
-      })
-      linkArray.push(...existingLinks)
+    if (metaData.title) {
+      titleTag = `<title>${metaData.title}</title>`;
     }
-    if (metaData && metaData.metaData) {
-      metaArray = metaData.metaData.map((meta) => {
-        if (meta.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
-        if (meta.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
-        return null
-      })
-    }
-    if (metaData && metaData.script) script = metaData.script
+    // Check if CMS metadata already contains a canonical link
+// ✅ Always ensure exactly one canonical, placed first in <head>
+// Build canonical URL dynamically from the actual request host and protocol
+const canonicalUrl = `${req.protocol}://${req.get('host')}${correctPath}`;
 
-    if (metaData && metaData.h1Tag) h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>`
-    if (metaData && metaData.h2Tags) {
-      h2Tags = metaData.h2Tags.map((string) => `<h2 class="meta-heading">${string}</h2>`)
+// Remove any CMS-provided canonical so we don’t get duplicates
+if (metaData.links) {
+  metaData.links = metaData.links.filter(
+    link => link.rel?.toLowerCase() !== 'canonical'
+  );
+}
+
+// Add our canonical FIRST in <head>
+$('head').append(
+  `<link rel="canonical" href="${canonicalUrl}" />`
+);
+
+
+
+
+
+    if (metaData.links) {
+      const existingLinks = metaData.links.map(link => {
+        if (link.rel) return `<link class="meta-heading" rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`;
+        return null;
+      }).filter(Boolean);
+      linkArray.push(...existingLinks);
     }
-    if (metaData && metaData.aTags) {
-      aTags = metaData.aTags.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
-      blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
+
+    if (metaData.metaData) {
+      metaArray = metaData.metaData.map(meta => {
+        if (meta.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`;
+        if (meta.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`;
+        return null;
+      }).filter(Boolean);
     }
-    if (metaData && metaData.pTag) {
-      pTag = `<p class="meta-heading">${metaData.pTag}</p>`
+
+    if (metaData.script) {
+      script = metaData.script;
     }
-    if (metaData && metaData.pTagBlog) {
-      pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`
+
+    if (metaData.h1Tag) {
+      h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>`;
     }
-    if (metaData && metaData.aTag) {//added to test related courses as anchor tags
-      courseaTags = metaData.aTag.map((url) => `<a  class="meta-heading" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
+
+    if (metaData.h2Tags) {
+      h2Tags = metaData.h2Tags.map(string => `<h2 class="meta-heading">${string}</h2>`);
+    }
+
+    if (metaData.aTags) {
+      aTags = metaData.aTags.map(url => `<a class="meta-heading" href=${url}>${url}</a>`);
+      blogATags = linkArryBlogs.map(url => `<a class="meta-heading" href=${url}>${url}</a>`);
+    }
+
+    if (metaData.pTag) {
+      pTag = `<p class="meta-heading">${metaData.pTag}</p>`;
+    }
+
+    if (metaData.pTagBlog) {
+      pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`;
+    }
+
+    if (metaData.aTag) {
+      courseaTags = metaData.aTag.map(url => `<a class="meta-heading" href=https://theyogainstitute.org/${url}>https://theyogainstitute.org/${url}</a>`);
     }
   }
 
-  let fbMeta = null
-  if (reqPath == '/') {
-    fbMeta='<meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" />'
+  let fbMeta = null;
+  if (reqPath === '/') {
+    fbMeta = `<meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" />`;
   }
 
-  $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta])
-  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags])
+  $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta]);
+  $('head').append([
+    `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />`,
+    `<link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v43/memvYaGs126MiZpBA-UvWbX2vVnXbB0bj2OVTS-mu0SC55I.woff2" type="font/woff2" crossorigin />`
+  ]);
   
-  // Return 301 status for 404 pages as requested
-  if (is404Page) {
-    res.status(301).send($.html())
-  } else {
-    res.status(200).send($.html())
-  }
-})
+  // Append filtered tags to body
+  $('body').append(
+    [h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags].filter(Boolean)
+  );
 
+  const minifiedHtml = await minify($.html(), {
+    collapseWhitespace: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    minifyJS: true,
+    minifyCSS: true
+  });
 
+  // Disable cache for HTML response
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  res.set('Surrogate-Control', 'no-store');
 
+  res.status(is404Page ? 404 : 200).send(minifiedHtml);
+});
 
 app.listen(PORT, () => {
   console.log('SERVER Started at port: ' + PORT)
-})
+});

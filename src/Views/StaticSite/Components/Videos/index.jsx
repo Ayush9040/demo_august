@@ -31,7 +31,8 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={`${baseDomain}${homeAssets.homeAsset64}`} alt='featured-vedio1' />
+            <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/v1ce562371-309e-40a7-b103-e870c2e4ca83_11zon859ac867-c895-4ab9-9312-115305f5cb24.webp'
+            alt='featured-vedio1' />
           </div>
           <div
             className="image-cont"
@@ -41,7 +42,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={`${baseDomain}${homeAssets.homeAsset65}`} alt='featured-vedio-2'/>
+            <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/v262700330-7734-448b-b301-4b75f3ec2dce.webp' alt='featured-vedio-2'/>
           </div>
           <div
             className="image-cont"
@@ -51,7 +52,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={`${baseDomain}${homeAssets.homeAsset66}`}alt='featured-vedio-3'/>
+            <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/v3_11zond8def76c-ee44-4a07-94de-3848c34d76c4.webp' alt='featured-vedio-3'/>
           </div>
         </div>
         <a

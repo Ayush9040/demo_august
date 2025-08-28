@@ -82,7 +82,7 @@ const Experience = () => {
 
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt="Modiji" />
+            <img src='https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/modiji_11zon749b0b56-6057-4cd1-9014-c059e8b80ee7.webp' alt="Modiji" />
             {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
@@ -107,7 +107,7 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img
-              src={`${baseDomain}${homeAssets.homeAsset55}`}
+              src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/shriramnathkovid24ebca3b-b921-4d87-9146-f8d35e46ad41_11zon48910c35-91a2-461f-a04a-f2406231c4e7.webp`}
               alt="Shri Ramnath Kovid"
             />
             {/* <div style={{ float: 'right' }}>
@@ -136,7 +136,7 @@ const Experience = () => {
 
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
+            <img src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/naidujifd5cf97c-8a86-40ef-9348-e78ca65b621e_11zon3ad4848c-632f-4607-9348-e5eab2fb4cdf.webp`} alt="Naiduji" />
             {/* <div style={{ float: 'right' }}>
               <Link to="/testimonials">
                 <CommonBtn text={'View All'} />
@@ -163,7 +163,7 @@ const Experience = () => {
           </div>
           <div className="carousel-image">
             <img
-              src={`${baseDomain}${homeAssets.homeAsset58}`}
+              src={`https://ecom-oss-bucket-prod.s3.ap-south-1.amazonaws.com/PG-image/amitabhbachchan_copy357678b8-bbe0-4d6c-9905-8c0066ec966e_11zon7d78333c-d028-4fc7-88fd-13a3698123df.webp`}
               alt="Amitabh Bachchan"
             />
             {/* <div style={{ float: 'right' }}>

@@ -5,6 +5,24 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="preload" as="image" href="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/tyi.png" />
+  <!-- Preconnect to Google Fonts to speed up font fetching -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Load Open Sans font with display=swap -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Urbanist font -->
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Merriweather italic -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+<!-- Poppins weight 600 -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<style>:root{--primary-color:#ebb38a;--brick-red:#ca4625;--brick-red-1:#bc4f31;--ocean-blue:#a2c8d6;--hero:hero;--bebas-neue:bebas-neue;--futura:futura;--anek:Anek}*,html{box-sizing:border-box;margin:0;padding:0}html{font-size:62.5%}body{font-family:Open Sans,sans-serif;overflow-x:hidden}@media (max-width:1920px){html{font-size:80%}}@media (max-width:1800px){html{font-size:62.5%}}@media (max-width:900px){html{font-size:55%}}:root{--PhoneInput-color--focus:#03b2cb;--PhoneInputInternationalIconPhone-opacity:0.8;--PhoneInputInternationalIconGlobe-opacity:0.65;--PhoneInputCountrySelect-marginRight:0.35em;--PhoneInputCountrySelectArrow-width:0.3em;--PhoneInputCountrySelectArrow-marginLeft:var(--PhoneInputCountrySelect-marginRight);--PhoneInputCountrySelectArrow-borderWidth:1px;--PhoneInputCountrySelectArrow-opacity:0.45;--PhoneInputCountrySelectArrow-color:currentColor;--PhoneInputCountrySelectArrow-color--focus:var(--PhoneInput-color--focus);--PhoneInputCountrySelectArrow-transform:rotate(45deg);--PhoneInputCountryFlag-aspectRatio:1.5;--PhoneInputCountryFlag-height:1em;--PhoneInputCountryFlag-borderWidth:1px;--PhoneInputCountryFlag-borderColor:#00000080;--PhoneInputCountryFlag-borderColor--focus:var(--PhoneInput-color--focus);--PhoneInputCountryFlag-backgroundColor--loading:#0000001a}:root{--toastify-color-light:#fff;--toastify-color-dark:#121212;--toastify-color-info:#3498db;--toastify-color-success:#07bc0c;--toastify-color-warning:#f1c40f;--toastify-color-error:#e74c3c;--toastify-color-transparent:#ffffffb3;--toastify-icon-color-info:var(--toastify-color-info);--toastify-icon-color-success:var(--toastify-color-success);--toastify-icon-color-warning:var(--toastify-color-warning);--toastify-icon-color-error:var(--toastify-color-error);--toastify-toast-width:320px;--toastify-toast-background:#fff;--toastify-toast-min-height:64px;--toastify-toast-max-height:800px;--toastify-font-family:sans-serif;--toastify-z-index:9999;--toastify-text-color-light:#757575;--toastify-text-color-dark:#fff;--toastify-text-color-info:#fff;--toastify-text-color-success:#fff;--toastify-text-color-warning:#fff;--toastify-text-color-error:#fff;--toastify-spinner-color:#616161;--toastify-spinner-color-empty-area:#e0e0e0;--toastify-color-progress-light:linear-gradient(90deg,#4cd964,#5ac8fa,#007aff,#34aadc,#5856d6,#ff2d55);--toastify-color-progress-dark:#bb86fc;--toastify-color-progress-info:var(--toastify-color-info);--toastify-color-progress-success:var(--toastify-color-success);--toastify-color-progress-warning:var(--toastify-color-warning);--toastify-color-progress-error:var(--toastify-color-error)}</style>
+
   <script async type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,7 +72,8 @@
       'pageCategory': 'google-tag-manager-tips'
     }];
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/Joe12387/detectIncognito@main/dist/es5/detectIncognito.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Joe12387/detectIncognito@main/dist/es5/detectIncognito.min.js" defer></script>
+
   <!-- <script type="text/javascript">
       var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
       clevertap.account.push({"id": "TEST-96Z-ZZ9-9Z7Z"}); // Replace with your account ID
@@ -77,7 +96,82 @@
       })();
     </script> -->
 
-  <script type="text/javascript">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+</head>
+
+<body>
+  <style>
+    .meta-heading {
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCV83ML" height="0" width="0"
+      style="display: none; visibility: hidden">
+    </iframe>
+  </noscript>
+  <div id="root"></div>
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  defer
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  defer
+></script>
+  <!-- <script async>
+    var url =
+      'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511'
+    var s = document.createElement('script')
+    s.type = 'text/javascript'
+    s.async = true
+    s.src = url
+    var options = {
+      enabled: true,
+      chatButtonSetting: {
+        backgroundColor: '#4dc247',
+        ctaText: '',
+        borderRadius: '25',
+        marginLeft: '0',
+        marginBottom: '85',
+        marginRight: '15',
+        position: 'right',
+      },
+      brandSetting: {
+        brandName: 'The Yoga Institute',
+        brandSubTitle: 'Typically replies within a day',
+        brandImg:
+          'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/mainLogo.jpg',
+        welcomeText: 'Namaste!\nHow can we help you?',
+        messageText: 'Hello, I have a question about {{page_link}}',
+        backgroundColor: '#0a5f54',
+        ctaText: 'Start Chat',
+        borderRadius: '25',
+        autoShow: false,
+        phoneNumber: '917738155500',
+      },
+    }
+    s.onload = function () {
+      CreateWhatsappChatWidget(options)
+    }
+    var x = document.getElementsByTagName('script')[0]
+    setTimeout(() => {
+      x.parentNode.insertBefore(s, x)
+    }, 10000)
+  </script>  -->
+  <script type="text/javascript" defer>
     var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
     // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
     clevertap.account.push({ "id": "TEST-96Z-ZZ9-9Z7Z" }, "eu1");
@@ -93,7 +187,7 @@
     })();
   </script>
 
-  <script>
+  <script defer>
     const requestNotificationPermission = (data) => {
 
       clevertap.notifications.push({
@@ -164,78 +258,6 @@
     checkPushNotificationStatus();
 
   </script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
-  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
-</head>
-
-<body>
-  <style>
-    .meta-heading {
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-  </style>
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCV83ML" height="0" width="0"
-      style="display: none; visibility: hidden">
-    </iframe>
-  </noscript>
-  <div id="root"></div>
-  <script
-  type="module"
-  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-  nomodule
-  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-></script>
-  <!-- <script async>
-    var url =
-      'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511'
-    var s = document.createElement('script')
-    s.type = 'text/javascript'
-    s.async = true
-    s.src = url
-    var options = {
-      enabled: true,
-      chatButtonSetting: {
-        backgroundColor: '#4dc247',
-        ctaText: '',
-        borderRadius: '25',
-        marginLeft: '0',
-        marginBottom: '85',
-        marginRight: '15',
-        position: 'right',
-      },
-      brandSetting: {
-        brandName: 'The Yoga Institute',
-        brandSubTitle: 'Typically replies within a day',
-        brandImg:
-          'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/mainLogo.jpg',
-        welcomeText: 'Namaste!\nHow can we help you?',
-        messageText: 'Hello, I have a question about {{page_link}}',
-        backgroundColor: '#0a5f54',
-        ctaText: 'Start Chat',
-        borderRadius: '25',
-        autoShow: false,
-        phoneNumber: '917738155500',
-      },
-    }
-    s.onload = function () {
-      CreateWhatsappChatWidget(options)
-    }
-    var x = document.getElementsByTagName('script')[0]
-    setTimeout(() => {
-      x.parentNode.insertBefore(s, x)
-    }, 10000)
-  </script>  -->
   <script async>
     (function () {
       var currentUrl = window.location.href;

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams, Link, useNavigate } from 'react-router-dom' // <-- add useNavigate
+=======
+import React, { useEffect } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+>>>>>>> Page_speed_from_latest_prd-12-08-2025
 import './style.scss'
 import Heading from '../../../Components/Heading'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
@@ -28,6 +33,12 @@ import below_wa from './images/below_wa.svg'
 
 const BlogAnother = () => {
   const dispatch = useDispatch()
+<<<<<<< HEAD
+=======
+  const navigate = useNavigate();
+
+
+>>>>>>> Page_speed_from_latest_prd-12-08-2025
   const { contentId } = useParams()
   const { blog } = useSelector(state => state.blogs)
   const [categories, setCategories] = useState([])
@@ -797,6 +808,7 @@ const SubscribeHandle = async (e) => {
 
          
         </div>
+<<<<<<< HEAD
 
         
       </div>
@@ -1066,6 +1078,47 @@ const SubscribeHandle = async (e) => {
       </Modal>
 
     </div>
+=======
+        {/* <div className='tagsInput'> */}
+          {/* <p style={{ display:'inline-block' }} ><b >Tags:&ensp;</b></p> */}
+         <div className='tagsInput'>
+  <p style={{ display: 'inline-block' }}><b>Tags:&ensp;</b></p>
+  {blog?.tags
+  ?.filter(el => el.objectType !== 'CATEGORY' && typeof el.name === 'string' && el.name.trim() !== '')
+  .map((el, i, arr) => {
+    const normalizedName = el.name.replace(/\s+/g, ' ').trim().toLowerCase();
+
+    const tagElement =
+      normalizedName === 'the yoga institute' ? (
+        <span
+          key={i}
+          style={{ cursor: 'pointer', textDecoration: 'underline', color: '#ca4625' }}
+          onClick={() => {
+  navigate('/');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}}
+        >
+          {el.name}
+        </span>
+      ) : (
+        <span key={i} style={{cursor: 'pointer', textDecoration: 'underline', color: '#ca4625'}}>{el.name}</span>
+      );
+
+    // Add comma and space after tag, except the last one
+    return (
+      <React.Fragment key={i} style={{cursor: 'pointer', textDecoration: 'underline', color: '#ca4625'}}>
+        {tagElement}
+        {i < arr.length - 1 ? ', ' : ''}
+      </React.Fragment>
+    );
+  })}
+
+{/* </div> */}
+</div>
+      </div> }
+  
+    </>
+>>>>>>> Page_speed_from_latest_prd-12-08-2025
   )
 }
 
