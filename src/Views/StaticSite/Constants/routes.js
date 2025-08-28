@@ -374,7 +374,7 @@ const staticSiteRoutes = [
   },
   //Blogs
   {
-    Component: BlogPageNew,
+    Component: BlogPage,
     path: '/blogs',
     exact: true,
     id: 'statisSiteBlog',
